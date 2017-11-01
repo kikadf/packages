@@ -4,11 +4,11 @@
 
 buildarch=4
 
-pkgbase=linux-armv7
+pkgbase=linux-armv7-lts
 _srcname=linux-4.9
 _kernelname=${pkgbase#linux}
 _desc="ARMv7 multi-platform"
-pkgver=4.9.58
+pkgver=4.9.59
 pkgrel=1
 rcnrel=armv7-x5
 arch=('armv7h')
@@ -18,7 +18,8 @@ makedepends=('xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'git' 'uboot-tools' '
 options=('!strip')
 source=("http://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         "http://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
-        "http://rcn-ee.com/deb/sid-armhf/v${pkgver}-${rcnrel}/patch-${pkgver%.0}-${rcnrel}.diff.gz"
+#        "http://rcn-ee.com/deb/sid-armhf/v${pkgver}-${rcnrel}/patch-${pkgver%.0}-${rcnrel}.diff.gz"
+        "http://rcn-ee.com/deb/stretch-armhf/v${pkgver}-${rcnrel}/patch-${pkgver%.0}-${rcnrel}.diff.xz"
         '0001-ARM-atags-add-support-for-Marvell-s-u-boot.patch'
         '0002-ARM-atags-fdt-retrieve-MAC-addresses-from-Marvell-bo.patch'
         '0003-SMILE-Plug-device-tree-file.patch'
@@ -28,13 +29,14 @@ source=("http://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         '0007-set-default-cubietruck-led-triggers.patch'
         '0008-exynos4412-odroid-set-higher-minimum-buck2-regulator.patch'
         'config'
-        'cmdline'
         'kernel.its'
         'kernel.keyblock'
-        'kernel_data_key.vbprivk')
+        'kernel_data_key.vbprivk'
+        'linux.preset'
+        '99-linux.hook')
 md5sums=('0a68ef3615c64bd5ee54a3320e46667d'
-         '8f8436ddaf434fc5c73fae9c13892a49'
-         '85156ef923c43d1d5417e3ba455e7631'
+         'c1bc6405ad9a51a2b86a6031f2fcddfd'
+         'be7ba9996dac9bee832f93c8937005c8'
          '7bad9743fd2f1690f479cbbec5a556ab'
          '57998a8dbf42d2237f2f3a650b93ef26'
          '75e392a161842813d0ff3d0beaf68038'
@@ -43,11 +45,12 @@ md5sums=('0a68ef3615c64bd5ee54a3320e46667d'
          'dd1c99be98c43f06a07aa14fc47d6e3e'
          'ef825f8c3563a87bab10f4782e7a0efc'
          'ef5fd8e682fed9dce4bc3d1c821acbd1'
-         '8f06a784da37647e0421d97cbed22a56'
-         '1813b39074d01af6548951764a0f6444'
+         '50c8dd9fbea92476bfcd7fe3bb83de8e'
          '4f2379ed84258050edb858ee8d281678'
          '61c5ff73c136ed07a7aadbf58db3d96a'
-         '584777ae88bce2c5659960151b64c7d8')
+         '584777ae88bce2c5659960151b64c7d8'
+         'fb034fe5f2e28a4cce30ae2d8cf6be3c'
+         '79fa396e3f9a09a85156d6d7c2d34b58')
 
 prepare() {
   cd "${srcdir}/${_srcname}"
@@ -111,6 +114,7 @@ _package() {
   pkgdesc="The Linux Kernel and modules - ${_desc}"
   depends=('coreutils' 'linux-firmware' 'kmod' 'mkinitcpio>=0.7')
   optdepends=('crda: to set the correct wireless channels of your country')
+  backup=("etc/mkinitcpio.d/${pkgbase}.preset")
   provides=('kernel26' "linux=${pkgver}")
   conflicts=('linux')
   replaces=('linux-mvebu' 'linux-udoo' 'linux-sun4i' 'linux-sun5i' 'linux-sun7i' 'linux-usbarmory' 'linux-wandboard')
@@ -135,6 +139,17 @@ _package() {
     -e  "s/KERNEL_NAME=.*/KERNEL_NAME=${_kernelname}/g" \
     -e  "s/KERNEL_VERSION=.*/KERNEL_VERSION=${_kernver}/g" \
     -i "${startdir}/${pkgname}.install"
+
+  # install mkinitcpio preset file for kernel
+  install -D -m644 "${srcdir}/linux.preset" "${pkgdir}/etc/mkinitcpio.d/${pkgbase}.preset"
+  sed \
+    -e "1s|'linux.*'|'${pkgbase}'|" \
+    -e "s|ALL_kver=.*|ALL_kver=\"${_kernver}\"|" \
+    -i "${pkgdir}/etc/mkinitcpio.d/${pkgbase}.preset"
+
+  # install pacman hook for initramfs regeneration
+  sed "s|%PKGBASE%|${pkgbase}|g" "${srcdir}/99-linux.hook" |
+    install -D -m644 /dev/stdin "${pkgdir}/usr/share/libalpm/hooks/99-${pkgbase}.hook"
 
   # remove build and source links
   rm -f "${pkgdir}"/lib/modules/${_kernver}/{source,build}
@@ -356,6 +371,7 @@ _package-chromebook() {
   cp ../kernel.its .
   mkimage -D "-I dts -O dtb -p 2048" -f kernel.its vmlinux.uimg
   dd if=/dev/zero of=bootloader.bin bs=512 count=1
+  echo 'console=tty0 init=/sbin/init root=PARTUUID=%U/PARTNROFF=1 rootwait rw noinitrd' > cmdline
   vbutil_kernel \
     --pack vmlinux.kpart \
     --version 1 \
@@ -363,7 +379,7 @@ _package-chromebook() {
     --arch arm \
     --keyblock ../kernel.keyblock \
     --signprivate ../kernel_data_key.vbprivk \
-    --config ../cmdline \
+    --config cmdline \
     --bootloader bootloader.bin
 
   mkdir -p "${pkgdir}/boot"
