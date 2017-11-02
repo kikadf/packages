@@ -1,0 +1,64 @@
+# U-Boot: Orange Pi PC
+# Maintainer: kikadf <kikadf.01@gmail.com> 
+
+buildarch=4
+
+pkgname=uboot-opipc
+pkgver=2017.01
+pkgrel=3
+pkgdesc="U-Boot for Orange Pi PC"
+arch=('armv7h')
+url='http://www.denx.de/wiki/U-Boot/WebHome'
+license=('GPL')
+backup=('boot/boot.txt' 'boot/boot.scr' 'boot/config.txt')
+makedepends=('bc' 'dtc' 'git')
+source=("ftp://ftp.denx.de/pub/u-boot/u-boot-${pkgver}.tar.bz2"
+        'boot.txt'
+        'mkscr'
+        '0001-sunxi-h3-Fix-PLL1-setup-to-never-use-dividers.patch'
+        '0002-sunxi-Add-clocks-for-DE2-HDMI-TCON.patch'
+        '0003-sunxi-video-Add-video-driver-for-H3-SoC.patch'
+        '0004-sunxi-Enable-H3-video-driver-in-defconfigs.patch')
+md5sums=('ad2d82d5b4fa548b2b95bbc26c9bad79'
+         'c21e440ac74544290cb529f07b8ae8d5'
+         '021623a04afd29ac3f368977140cfbfd'
+         '03b74705356e0071cd3661b2cb931e71'
+         '4910092e2dae6c4a7b5bc192132119f3'
+         'd6bc4efbf16547db870fcb27b96321c0'
+         '9ffe60af8103d3a55804062e3a6e87fb')  
+
+prepare() {
+  cd u-boot-${pkgver}
+  
+  sed -i 's/env python$/&2/' tools/binman/binman{,.py}
+  git apply -v ../0001-sunxi-h3-Fix-PLL1-setup-to-never-use-dividers.patch
+  git apply -v ../0002-sunxi-Add-clocks-for-DE2-HDMI-TCON.patch
+  git apply -v ../0003-sunxi-video-Add-video-driver-for-H3-SoC.patch
+  git apply -v ../0004-sunxi-Enable-H3-video-driver-in-defconfigs.patch
+  echo 'CONFIG_IDENT_STRING=" Arch Linux ARM"' >> configs/orangepi_pc_defconfig
+}
+
+build() {
+  cd u-boot-${pkgver}
+
+  unset CFLAGS
+  unset CXXFLAGS
+  unset CPPFLAGS
+
+  make distclean
+  make orangepi_pc_config
+  make EXTRAVERSION=-${pkgrel}
+
+  tools/mkimage -A arm -O linux -T script -C none -n "U-Boot boot script" -d ../boot.txt ../boot.scr
+}
+
+package() {
+  cd u-boot-${pkgver}
+
+  install -d "${pkgdir}"/boot
+  install -Dm644 u-boot-sunxi-with-spl.bin "${pkgdir}"/boot
+
+  install -Dm644 ../boot.txt "${pkgdir}"/boot/boot.txt
+  install -Dm644 ../boot.scr "${pkgdir}"/boot/boot.scr
+  install -Dm755 ../mkscr "${pkgdir}"/boot/mkscr 
+}
