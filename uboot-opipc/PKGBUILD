@@ -11,7 +11,7 @@ arch=('armv7h')
 url='http://www.denx.de/wiki/U-Boot/WebHome'
 license=('GPL')
 backup=('boot/boot.txt' 'boot/boot.scr' 'boot/config.txt')
-makedepends=('bc' 'dtc' 'git' 'python2')
+makedepends=('bc' 'dtc' 'git' 'python2' 'swig')
 source=("ftp://ftp.denx.de/pub/u-boot/u-boot-${pkgver}.tar.bz2"
         'boot.txt'
         'mkscr'
