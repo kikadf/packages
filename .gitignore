@@ -1,0 +1,11 @@
+*.pkg.tar.xz
+*.tar.gz
+#*.tar.xz
+/*/pkg
+/*/src
+*.log
+*.log.*
+#*.xz
+*.diff.gz
+*.diff.xz
+

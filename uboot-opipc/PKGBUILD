@@ -25,6 +25,8 @@ prepare() {
   cd u-boot-${pkgver}
   
   sed -i 's/env python$/&2/' tools/binman/binman{,.py}
+  sed -i 's/python$/&2/' Makefile
+
   git apply -v ../0001-sunxi-h3-Fix-PLL1-setup-to-never-use-dividers.patch
   echo 'CONFIG_IDENT_STRING=" Arch Linux ARM"' >> configs/orangepi_pc_defconfig
 }
