@@ -2,7 +2,7 @@
 # arg 2:  the old package version
 
 KERNEL_NAME=-armv7-lts
-KERNEL_VERSION=4.9.59-1-ARCH
+KERNEL_VERSION=4.9.0-1-ARCH
 
 post_install () {
   # updating module dependencies
