@@ -1,12 +1,12 @@
 *.pkg.tar.xz
 *.tar.gz
 *.tar.bz2
-#*.tar.xz
+*.tar.xz
 /*/pkg
 /*/src
 *.log
 *.log.*
-#*.xz
+*.xz
 *.diff.gz
 *.diff.xz
 
