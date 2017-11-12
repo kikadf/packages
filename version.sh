@@ -1,0 +1,12 @@
+#!/bin/bash
+
+_WATCH_1=$(lynx -dump -listonly "https://aur.archlinux.org/packages/mantisbt/" | sed -n 's|.*mantisbt-\([0-9].*\).tar.gz|\1|p')
+_WATCH_2=$(lynx -dump -listonly "https://www.kernel.org/" | sed -n 's|.*linux-\(4\.9\.[0-9]*\).tar.xz|\1|p')
+_WATCH_3=$(lynx -dump "https://www.denx.de/wiki/U-Boot/ReleaseCycle" | sed -n 's:.*U-Boot v\([0-9].*\) was.*:\1:p' | head -1)
+
+echo "mantisbt=$_WATCH_1"
+echo "linux-armv7-lts=$_WATCH_2"
+echo "uboot-opipc=$_WATCH_3"
+
+exit 0
+
