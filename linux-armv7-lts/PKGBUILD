@@ -7,19 +7,20 @@ buildarch=4
 pkgbase=linux-armv7-lts
 _srcname=linux-4.9
 _kernelname=${pkgbase#linux}
-_desc="ARMv7 multi-platform"
-pkgver=4.9.60
+_desc="LTS, ARMv7 multi-platform"
+pkgver=4.9.61
 pkgrel=1
+pkgdesc="The Linux Kernel and modules - ${_desc}"
 rcnrel=armv7-x5
 arch=('armv7h')
 url="http://www.kernel.org/"
 license=('GPL2')
-makedepends=('xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'patch' 'uboot-tools' 'vboot-utils' 'dtc')
+makedepends=('xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'patch' 'uboot-tools' 'vboot-utils' 'dtc'
+	     'coreutils' 'linux-firmware' 'mkinitcpio>=0.7' 'bash' 'awk' 'python')
 options=('!strip')
 source=("http://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         "http://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
         "http://rcn-ee.com/deb/sid-armhf/v${pkgver}-${rcnrel}/patch-${pkgver%.0}-${rcnrel}.diff.gz"
-#        "http://rcn-ee.com/deb/stretch-armhf/v${pkgver}-${rcnrel}/patch-${pkgver%.0}-${rcnrel}.diff.xz"
         '0001-ARM-atags-add-support-for-Marvell-s-u-boot.patch'
         '0002-ARM-atags-fdt-retrieve-MAC-addresses-from-Marvell-bo.patch'
         '0003-SMILE-Plug-device-tree-file.patch'
@@ -35,8 +36,8 @@ source=("http://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         'linux.preset'
         '99-linux.hook')
 md5sums=('0a68ef3615c64bd5ee54a3320e46667d'
-         '8d4298e1e2d803df9ea8d535bbb5dde9'
-         '468b3e6be6630a3962f13efe47624f61'
+         'caf41d2fb1d18bdb2cd48e6323209b18'
+         '508357f973dca4f4d7a560132eb3f3a4'
          '7bad9743fd2f1690f479cbbec5a556ab'
          '57998a8dbf42d2237f2f3a650b93ef26'
          '75e392a161842813d0ff3d0beaf68038'
@@ -53,7 +54,7 @@ md5sums=('0a68ef3615c64bd5ee54a3320e46667d'
          '79fa396e3f9a09a85156d6d7c2d34b58')
 
 prepare() {
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   # add upstream patch
   patch -p1 -i ../patch-${pkgver}
@@ -71,7 +72,7 @@ prepare() {
   patch -p1 -i ../0007-set-default-cubietruck-led-triggers.patch
   patch -p1 -i ../0008-exynos4412-odroid-set-higher-minimum-buck2-regulator.patch
 
-  cat "${srcdir}/config" > ./.config
+  cat "../config" > ./.config
 
   # add pkgrel to extraversion
   sed -ri "s|^(EXTRAVERSION =)(.*)|\1 \2-${pkgrel}|" Makefile
@@ -81,7 +82,7 @@ prepare() {
 }
 
 build() {
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   # get kernel version
   make prepare
@@ -111,16 +112,14 @@ build() {
 }
 
 _package() {
-  pkgdesc="The Linux Kernel and modules - ${_desc}"
   depends=('coreutils' 'linux-firmware' 'kmod' 'mkinitcpio>=0.7')
   optdepends=('crda: to set the correct wireless channels of your country')
   backup=("etc/mkinitcpio.d/${pkgbase}.preset")
-  provides=('kernel26' "linux=${pkgver}")
-  conflicts=('linux')
-  replaces=('linux-mvebu' 'linux-udoo' 'linux-sun4i' 'linux-sun5i' 'linux-sun7i' 'linux-usbarmory' 'linux-wandboard')
+  conflicts=('linux-armv7')
+  provides=('linux-armv7')
   install=${pkgname}.install
 
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   KARCH=arm
 
@@ -138,7 +137,7 @@ _package() {
   sed \
     -e  "s/KERNEL_NAME=.*/KERNEL_NAME=${_kernelname}/g" \
     -e  "s/KERNEL_VERSION=.*/KERNEL_VERSION=${_kernver}/g" \
-    -i "${startdir}/${pkgname}.install"
+    -i ../../${pkgname}.install
 
   # install mkinitcpio preset file for kernel
   install -D -m644 "${srcdir}/linux.preset" "${pkgdir}/etc/mkinitcpio.d/${pkgbase}.preset"
@@ -148,7 +147,7 @@ _package() {
     -i "${pkgdir}/etc/mkinitcpio.d/${pkgbase}.preset"
 
   # install pacman hook for initramfs regeneration
-  sed "s|%PKGBASE%|${pkgbase}|g" "${srcdir}/99-linux.hook" |
+  sed "s|%PKGBASE%|${pkgbase}|g" "../99-linux.hook" |
     install -D -m644 /dev/stdin "${pkgdir}/usr/share/libalpm/hooks/99-${pkgbase}.hook"
 
   # remove build and source links
@@ -171,13 +170,13 @@ _package() {
 
 _package-headers() {
   pkgdesc="Header files and scripts for building modules for linux kernel - ${_desc}"
-  provides=("linux-headers=${pkgver}")
-  conflicts=('linux-headers')
-  replaces=('linux-mvebu-headers' 'linux-sun4i-headers' 'linux-sun5i-headers' 'linux-sun7i-headers' 'linux-usbarmory-headers' 'linux-wandboard-headers')
+  depends=('bash' 'awk' 'python')
+  provides=('linux-armv7-headers')
+  conflicts=('linux-armv7-headers')
 
   install -dm755 "${pkgdir}/usr/lib/modules/${_kernver}"
 
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
   install -D -m644 Makefile \
     "${pkgdir}/usr/lib/modules/${_kernver}/build/Makefile"
   install -D -m644 kernel/Makefile \
@@ -293,12 +292,11 @@ _package-headers() {
 
 _package-smileplug() {
   pkgdesc="The Linux Kernel - ${_desc} - Marvell SMILE Plug"
-  depends=('linux-armv7')
-  provides=('linux-armv7-uimage')
-  conflicts=('linux-armv7-uimage')
-  replaces=('linux-mvebu-smileplug')
+  depends=('linux-armv7-lts')
+  conflicts=('linux-armv7-smileplug')
+  provides=('linux-armv7-smileplug')
 
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   mkdir -p "${pkgdir}/boot"
   cat arch/$KARCH/boot/zImage arch/$KARCH/boot/dts/armada-370-smileplug.dtb > myimage
@@ -307,10 +305,9 @@ _package-smileplug() {
 
 _package-mirabox() {
   pkgdesc="The Linux Kernel - ${_desc} - Globalscale Mirabox"
-  depends=('linux-armv7')
-  provides=('linux-armv7-uimage')
-  conflicts=('linux-armv7-uimage')
-  replaces=('linux-mvebu-mirabox')
+  depends=('linux-armv7-lts')
+  provides=('linux-armv7-mirabox')
+  conflicts=('linux-armv7-mirabox')
 
   cd "${srcdir}/${_srcname}"
 
@@ -321,12 +318,11 @@ _package-mirabox() {
 
 _package-ax3() {
   pkgdesc="The Linux Kernel - ${_desc} - OpenBlocks AX3-4"
-  depends=('linux-armv7')
-  provides=('linux-armv7-uimage')
-  conflicts=('linux-armv7-uimage')
-  replaces=('linux-mvebu-ax3')
+  depends=('linux-armv7-lts')
+  conflicts=('linux-armv7-ax3')
+  provides=('linux-armv7-ax3')
 
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   mkdir -p "${pkgdir}/boot"
   cat arch/$KARCH/boot/zImage arch/$KARCH/boot/dts/armada-xp-openblocks-ax3-4.dtb > myimage
@@ -335,12 +331,11 @@ _package-ax3() {
 
 _package-d3plug() {
   pkgdesc="The Linux Kernel - ${_desc} - Globalscale D3Plug"
-  depends=('linux-armv7')
-  provides=('linux-armv7-uimage')
-  conflicts=('linux-armv7-uimage')
-  #replaces=('linux-d3plug')
+  depends=('linux-armv7-lts')
+  conflicts=('linux-armv7-d3plug')
+  provides=('linux-armv7-d3plug')
 
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   mkdir -p "${pkgdir}/boot"
   cat arch/$KARCH/boot/zImage arch/$KARCH/boot/dts/dove-d3plug.dtb > myimage
@@ -349,12 +344,11 @@ _package-d3plug() {
 
 _package-cubox() {
   pkgdesc="The Linux Kernel - ${_desc} - SolidRun Cubox (Marvell)"
-  depends=('linux-armv7')
-  provides=('linux-armv7-uimage')
-  conflicts=('linux-armv7-uimage')
-  #replaces=('linux-cubox')
+  depends=('linux-armv7-lts')
+  conflicts=('linux-armv7-cubox')
+  provides=('linux-armv7-cubox')
 
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   mkdir -p "${pkgdir}/boot"
   cat arch/$KARCH/boot/zImage arch/$KARCH/boot/dts/dove-cubox.dtb > myimage
@@ -363,10 +357,12 @@ _package-cubox() {
 
 _package-chromebook() {
   pkgdesc="The Linux Kernel - ${_desc} - Chromebooks"
-  depends=('linux-armv7')
+  depends=('linux-armv7-lts')
+  conflicts=('linux-armv7-chromebook')
+  provides=('linux-armv7-chromebook')
   install=${pkgname}.install
 
-  cd "${srcdir}/${_srcname}"
+  cd "${_srcname}"
 
   cp ../kernel.its .
   mkimage -D "-I dts -O dtb -p 2048" -f kernel.its vmlinux.uimg
