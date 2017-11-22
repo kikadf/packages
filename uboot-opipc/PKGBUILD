@@ -4,19 +4,20 @@
 buildarch=4
 
 pkgname=uboot-opipc
-pkgver=2017.09
-pkgrel=1
+pkgver=2017.11
+pkgrel=2
 pkgdesc="U-Boot for Orange Pi PC"
 arch=('armv7h')
 url='http://www.denx.de/wiki/U-Boot/WebHome'
 license=('GPL')
 backup=('boot/boot.txt' 'boot/boot.scr' 'boot/config.txt')
 makedepends=('bc' 'dtc' 'patch' 'python2' 'swig')
+install=${pkgname}.install
 source=("ftp://ftp.denx.de/pub/u-boot/u-boot-${pkgver}.tar.bz2"
         'boot.txt'
         'mkscr'
         '0001-sunxi-h3-Fix-PLL1-setup-to-never-use-dividers.patch')
-md5sums=('9f7eb7db4530996a28e86f38f3b3e66f'
+md5sums=('7848f6fd197e2c6ef2eb483dd5bd2858'
          '95f60c0ae1315e986d8a2aee15d5f854'
          '021623a04afd29ac3f368977140cfbfd'
          '03b74705356e0071cd3661b2cb931e71')
