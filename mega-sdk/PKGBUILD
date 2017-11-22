@@ -3,7 +3,7 @@
 buildarch=4
 
 pkgname=mega-sdk
-pkgver=3.2.6
+pkgver=3.2.7
 pkgrel=1
 pkgdesc="Official mega.nz SDK"
 url="https://github.com/meganz/sdk"
@@ -13,7 +13,7 @@ makedepends=('autoconf' 'automake')
 source=("https://github.com/meganz/sdk/archive/v${pkgver}.tar.gz"
         'megasync.conf'
         'megasyncd.service')
-md5sums=('502322689dc2c8149c2c7a6d868d9568'
+md5sums=('3d5ea4035d761178890fc26975a86cd2'
          'a8bcea84ba55c11c6b7117ba390bcf85'
          '405defa31441c84aade548a6e8f3a52f')
 
