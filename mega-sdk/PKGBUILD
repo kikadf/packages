@@ -3,12 +3,14 @@
 buildarch=4
 
 pkgname=mega-sdk
-pkgver=3.2.7
+pkgver=3.3.1
 pkgrel=1
 pkgdesc="Official mega.nz SDK"
 url="https://github.com/meganz/sdk"
 license=('custom:MEGA')
-depends=('c-ares' 'crypto++' 'curl' 'fuse3' 'libsodium' 'libuv' 'sqlite') arch=('armv7h')
+depends=('c-ares' 'crypto++' 'curl' 'fuse3' 'libsodium' 'libuv' 
+         'sqlite' 'readline')
+arch=('armv7h')
 makedepends=('autoconf' 'automake')
 source=("https://github.com/meganz/sdk/archive/v${pkgver}.tar.gz"
         'megasync.conf'
