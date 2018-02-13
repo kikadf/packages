@@ -28,32 +28,16 @@ Replace sdX in the following instructions with the device name for the SD card a
         "bsdtar -xpf ArchLinuxARM-orangepipc-latest.tar.gz -C mnt"
         "sync"
 
-7. Chroot from x86_64:
-        "cp /usr/bin/qemu-arm-static mnt/usr/bin"
-        "sh -c "echo ':arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm-static:'> /proc/sys/fs/binfmt_misc/register""
-        "mount -t proc /proc mnt/proc"
-        "mount -o bind /dev mnt/dev"
-        "mount -o bind /dev/pts mnt/dev/pts"
-        "mount -o bind /sys mnt/sys"
-        "# chroot mnt /bin/bash"
-
-8. Add opipc repo to /etc/pacman.conf:
-        [opipc]
-        Server = http://downloads.sourceforge.net/project/opipc/armv7h
-
-9. Install the lts kernel:
-        "pacman -Sy linux-armv7-lts"
-
-10. Install the U-Boot bootloader:
+7. Install the U-Boot bootloader:
 	"wget http://downloads.sourceforge.net/project/opipc/boot/u-boot-sunxi-with-spl.bin"
 	"dd if=u-boot-sunxi-with-spl.bin of=/dev/sdX bs=1024 seek=8"
 	"wget http://downloads.sourceforge.net/project/opipc/boot/boot.scr -O mnt/boot/boot.scr"
 	"umount mnt"
 	"sync"
 
-11. Insert the micro SD card into the Orange Pi PC, connect ethernet, and apply 5V power.
+8. Insert the micro SD card into the Orange Pi PC, connect ethernet, and apply 5V power.
 
-12. Use the serial console or SSH to the IP address given to the board by your router.
+9. Use the serial console or SSH to the IP address given to the board by your router.
 	Login as the default user alarm with the password alarm.
 	The default root password is root.
 
