@@ -9,25 +9,32 @@ pkgdesc="Official mega.nz SDK"
 url="https://github.com/meganz/sdk"
 license=('custom:MEGA')
 depends=('c-ares' 'crypto++' 'curl' 'fuse3' 'libsodium' 'libuv' 
-         'sqlite' 'readline')
+         'sqlite' 'readline' 'libmediainfo')
 arch=('armv7h')
-makedepends=('autoconf' 'automake')
-source=("https://github.com/meganz/sdk/archive/v${pkgver}.tar.gz"
+makedepends=('autoconf' 'automake' 'git')
+#source=("https://github.com/meganz/sdk/archive/v${pkgver}.tar.gz"
+source=("git+https://github.com/meganz/sdk.git#tag=v${pkgver}"
         'megasync.conf'
         'megasyncd.service')
-md5sums=('3d5ea4035d761178890fc26975a86cd2'
+md5sums=('SKIP'
          'a8bcea84ba55c11c6b7117ba390bcf85'
          '405defa31441c84aade548a6e8f3a52f')
 
+prepare() {
+  cd sdk
+  # Fix crypto++-6 issue
+  git checkout 222594ea17e6fe4fca9b42b28e3cce335c2ca60e
+}
+
 build() {
-  cd sdk-${pkgver}
+  cd sdk
   ./autogen.sh
   ./configure --with-libuv --prefix=/usr --without-freeimage
   make
 }
 
 package() {
-  cd sdk-${pkgver}
+  cd sdk
   make DESTDIR="$pkgdir/" install
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 "${srcdir}/megasyncd.service" "${pkgdir}/usr/lib/systemd/system/megasyncd.service"
