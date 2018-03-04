@@ -1,0 +1,43 @@
+# Maintainer: kikadf <kikadf.01@gmail.com>
+
+buildarch=4
+
+pkgname=mega-sdk
+pkgver=3.3.2
+pkgrel=1
+pkgdesc="Official mega.nz SDK"
+url="https://github.com/meganz/sdk"
+license=('custom:MEGA')
+depends=('c-ares' 'crypto++' 'fuse3' 'libsodium' 'libuv' 'sqlite' 'libmediainfo')
+arch=('armv7h')
+makedepends=('autoconf' 'automake' 'git')
+#source=("https://github.com/meganz/sdk/archive/v${pkgver}.tar.gz"
+source=("git+https://github.com/meganz/sdk.git#tag=v${pkgver}"
+        'megasync.conf'
+        'megasyncd.service')
+md5sums=('SKIP'
+         'a8bcea84ba55c11c6b7117ba390bcf85'
+         '405defa31441c84aade548a6e8f3a52f')
+
+prepare() {
+  cd sdk
+  # Fix crypto++-6 issue
+  git checkout 222594ea17e6fe4fca9b42b28e3cce335c2ca60e
+}
+
+build() {
+  cd sdk
+  ./autogen.sh
+  ./configure --with-libuv --prefix=/usr --without-freeimage
+  make
+}
+
+package() {
+  cd sdk
+  make DESTDIR="$pkgdir/" install
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 "${srcdir}/megasyncd.service" "${pkgdir}/usr/lib/systemd/system/megasyncd.service"
+  install -Dm600 "${srcdir}/megasync.conf" "${pkgdir}/etc/conf.d/megasync.conf"
+  install -d "${pkgdir}/srv/mega"
+  install -dm700 "${pkgdir}/var/mega"
+}
