@@ -4,7 +4,7 @@
 buildarch=4
 
 pkgname=uboot-opipc
-pkgver=2018.01
+pkgver=2018.03
 pkgrel=1
 pkgdesc="U-Boot for Orange Pi PC"
 arch=('armv7h')
@@ -17,7 +17,7 @@ source=("ftp://ftp.denx.de/pub/u-boot/u-boot-${pkgver}.tar.bz2"
         'boot.txt'
         'mkscr'
         '0001-sunxi-h3-Fix-PLL1-setup-to-never-use-dividers.patch')
-md5sums=('b42e45813369f4ae84490a481e531768'
+md5sums=('02922bdf0ee003fe25bfc32749ffdeab'
          '95f60c0ae1315e986d8a2aee15d5f854'
          '021623a04afd29ac3f368977140cfbfd'
          '03b74705356e0071cd3661b2cb931e71')
