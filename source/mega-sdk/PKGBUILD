@@ -3,7 +3,7 @@
 buildarch=4
 
 pkgname=mega-sdk
-pkgver=3.3.3
+pkgver=3.3.7
 pkgrel=1
 pkgdesc="Official mega.nz SDK"
 url="https://github.com/meganz/sdk"
@@ -19,16 +19,14 @@ md5sums=('SKIP'
          'a8bcea84ba55c11c6b7117ba390bcf85'
          '405defa31441c84aade548a6e8f3a52f')
 
-prepare() {
-  cd sdk
-  # Fix crypto++-6 issue
-  git checkout 222594ea17e6fe4fca9b42b28e3cce335c2ca60e
-}
 
 build() {
   cd sdk
   ./autogen.sh
-  ./configure --with-libuv --prefix=/usr --without-freeimage
+  ./configure --with-libuv \
+              --prefix=/usr \
+              --without-freeimage \
+              --without-ffmpeg
   make
 }
 
