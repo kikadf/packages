@@ -2,6 +2,7 @@
 /source/*.tar.gz
 /source/*.tar.bz2
 /source/*.tar.xz
+/source/*/.git
 /*/pkg
 /*/src
 *.log
