@@ -2,7 +2,7 @@
 
 pkgname=network-ups-tools
 _pkgver=2.7.4
-pkgver=2.7.4.4498
+pkgver=2.7.4.4499
 pkgrel=1
 pkgdesc="NUT is a collection of programs for monitoring and administering UPS hardware"
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
