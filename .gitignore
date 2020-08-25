@@ -1,13 +1,13 @@
-/source/*.pkg.tar.xz
-/source/*.tar.gz
-/source/*.tar.bz2
-/source/*.tar.xz
-/source/*/.git
+/makepkg/*.pkg.tar.xz
+/makepkg/*.tar.gz
+/makepkg/*.tar.bz2
+/makepkg/*.tar.xz
+/makepkg/*.xz
+/makepkg/*/.git
 /*/pkg
 /*/src
 *.log
 *.log.*
-/source/*.xz
 *.diff.gz
 *.diff.xz
 
