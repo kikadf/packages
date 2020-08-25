@@ -1,8 +1,8 @@
-makepkg/*.pkg.tar.xz
-makepkg/*.tar.gz
-makepkg/*.tar.bz2
-makepkg/*.tar.xz
-makepkg/*.xz
+makepkg/*/*.pkg.tar.xz
+makepkg/*/*.tar.gz
+makepkg/*/*.tar.bz2
+makepkg/*/*.tar.xz
+makepkg/*/*.xz
 makepkg/*/.git
 */pkg
 */src
