@@ -9,6 +9,7 @@ _WATCH_5=$(lynx -dump -listonly "https://github.com/meganz/MEGAcmd/tags" | sed -
 #_WATCH_7a=$(lynx -dump -listonly "https://github.com/networkupstools/nut/tags" | sed -n 's:.*v\([0-9].*\)\.tar\.gz:\1:p' | head -1)
 #_WATCH_7b=$(lynx -dump "https://github.com/networkupstools/nut" | sed -n 's:.*\[[0-9]*\]\([0-9].*\),\([0-9]*\) commits.*:\1\2:p')
 #_WATCH_8=$(lynx -dump -listonly "https://aur.archlinux.org/packages/plex-media-server/" | sed -n 's|.*plexmediaserver-\([0-9].*\)-.*.rpm.*|\1|p')
+_WATCH_9=$(lynx -dump "https://aur.archlinux.org/packages/sfeed/" | sed -n 's|.*sfeed \([0-9].*-[0-9]*\).*|\1|p')
 
 
 #echo "mantisbt=$_WATCH_1"
@@ -19,6 +20,7 @@ echo "mega-cmd=$_WATCH_5"
 #echo "powerpanel=$_WATCH_6"
 #echo "network-ups-tools=$_WATCH_7a.$_WATCH_7b"
 #echo "plex-media-server=$_WATCH_8"
+echo "sfeed=$_WATCH_9=pkgrel"
 
 exit 0
 
