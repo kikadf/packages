@@ -2,9 +2,9 @@
 
 
 _get_versions() {
-	_PKGSRCVER_1=$(lynx -dump "https://raw.githubusercontent.com/NetBSD/pkgsrc-wip/master/efl-current/Makefile" | sed -n 's|.*efl-\([0-9].*\)|\1|p')
+	_PKGSRCVER_1=$(lynx -dump "https://raw.githubusercontent.com/NetBSD/pkgsrc-wip/master/efl/Makefile" | sed -n 's|.*efl-\([0-9].*\)|\1|p')
 	_REALVER_1=$(lynx -dump -listonly "https://enlightenment.org/download" | sed -n 's|.*/efl-\([0-9].*\)\.tar\.xz.*|\1|p')
-	echo "efl-current=$_PKGSRCVER_1=$_REALVER_1"
+	echo "efl=$_PKGSRCVER_1=$_REALVER_1"
 	_PKGSRCVER_2=$(lynx -dump "https://raw.githubusercontent.com/NetBSD/pkgsrc-wip/master/enlightenment-current/Makefile" | sed -n 's|.*enlightenment-\([0-9].*\)|\1|p')
 	_REALVER_2=$(lynx -dump -listonly "https://enlightenment.org/download" | sed -n 's|.*/enlightenment-\([0-9].*\)\.tar\.xz.*|\1|p')
 	echo "enlightenment-current=$_PKGSRCVER_2=$_REALVER_2"
