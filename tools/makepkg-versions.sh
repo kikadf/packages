@@ -21,7 +21,7 @@ echo "mega-cmd=$_WATCH_5"
 #echo "powerpanel=$_WATCH_6"
 #echo "network-ups-tools=$_WATCH_7a.$_WATCH_7b"
 #echo "plex-media-server=$_WATCH_8"
-echo "sfeed=$_WATCH_9=pkgrel"
+echo "sfeed=$_WATCH_9"
 
 exit 0
 
