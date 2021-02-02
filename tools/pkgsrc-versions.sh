@@ -1,6 +1,10 @@
 #!/bin/bash
 
 _get_pkgsrcver() {
+	lynx -dump "https://raw.githubusercontent.com/NetBSD/pkgsrc/trunk/$1/Makefile" | sed -n "s|^DISTNAME.*-\([0-9].*\)|\1|p"
+}
+
+_get_pkgsrcwipver() {
 	lynx -dump "https://raw.githubusercontent.com/NetBSD/pkgsrc-wip/master/$1/Makefile" | sed -n "s|^DISTNAME.*-\([0-9].*\)|\1|p"
 }
 
@@ -9,10 +13,10 @@ _get_ever() {
 }
 
 _get_versions() {
-	echo "efl=$(_get_pkgsrcver efl)=$(_get_ever efl)"
-	echo "enlightenment-current=$(_get_pkgsrcver enlightenment-current)=$(_get_ever enlightenment)"
-	echo "terminology=$(_get_pkgsrcver terminology)=$(_get_ever terminology)"
-	echo "krusader-kf5=$(_get_pkgsrcver krusader-kf5)=$(lynx -dump "https://download.kde.org/stable/krusader/" | sed -n "s|.*krusader/\([0-9].*\)/|\1|p" | tail -1)"
+	echo "efl=$(_get_pkgsrcwipver efl)=$(_get_ever efl)"
+	echo "enlightenment-current=$(_get_pkgsrcwipver enlightenment-current)=$(_get_ever enlightenment)"
+	echo "terminology=$(_get_pkgsrcwipver terminology)=$(_get_ever terminology)"
+	echo "krusader=$(_get_pkgsrcver sysutils/krusader)=$(lynx -dump "https://download.kde.org/stable/krusader/" | sed -n "s|.*krusader/\([0-9].*\)/|\1|p" | tail -1)"
 }
 
 _START=$(date +"%Y-%m-%d/%H:%M:%S")
