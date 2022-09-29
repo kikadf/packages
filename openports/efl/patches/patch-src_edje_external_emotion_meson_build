@@ -1,0 +1,15 @@
+Index: src/edje_external/emotion/meson.build
+--- src/edje_external/emotion/meson.build.orig
++++ src/edje_external/emotion/meson.build
+@@ -1,4 +1,4 @@
+-ecore_systemd_mod = shared_module('emotion',
++ecore_systemd_mod = shared_module('emotion_module',
+     'emotion.c',
+     dependencies: [edje, emotion],
+     install: true,
+@@ -6,4 +6,4 @@ ecore_systemd_mod = shared_module('emotion',
+     c_args : emotion_package_c_args,
+     name_suffix : sys_mod_extension
+ )
+-module_files += join_paths(mod_install_dir, 'libemotion.' + sys_mod_extension)
++module_files += join_paths(mod_install_dir, 'libemotion_module.' + sys_mod_extension)

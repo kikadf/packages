@@ -1,0 +1,18 @@
+Index: src/edje_external/elementary/meson.build
+--- src/edje_external/elementary/meson.build.orig
++++ src/edje_external/elementary/meson.build
+@@ -40,7 +40,7 @@ edje_external_elementary = [
+   'elm_web.c'
+ ]
+ 
+-ecore_systemd_mod = shared_module('elementary',
++ecore_systemd_mod = shared_module('elementary_module',
+     edje_external_elementary,
+     dependencies: [edje, elementary, elementary_deps],
+     install: true,
+@@ -48,4 +48,4 @@ ecore_systemd_mod = shared_module('elementary',
+     c_args : elm_package_c_args,
+     name_suffix : sys_mod_extension
+ )
+-module_files += join_paths(mod_install_dir, 'libelementary.' + sys_mod_extension)
++module_files += join_paths(mod_install_dir, 'libelementary_module.' + sys_mod_extension)
