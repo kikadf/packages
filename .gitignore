@@ -1,0 +1,13 @@
+makepkg/*/*.pkg.tar.xz
+makepkg/*/*.tar.gz
+makepkg/*/*.tar.bz2
+makepkg/*/*.tar.xz
+makepkg/*/*.xz
+makepkg/*/.git
+*/pkg
+*/src
+*.log
+*.log.*
+*.diff.gz
+*.diff.xz
+

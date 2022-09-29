@@ -1,0 +1,20 @@
+# Maintainer: kikadf <kikadf.01@gmail.com>
+
+pkgname=plex-sub-zero
+pkgver=2.6.5.3268
+pkgrel=1
+pkgdesc='Subtitles for Plex, as good you would expect them to be'
+arch=('any')
+url='https://github.com/pannal/Sub-Zero.bundle'
+license=('MIT')
+options=('!strip')
+depends=('python')
+optdepends=('plex-media-server: run time dependency')
+source=("https://github.com/pannal/Sub-Zero.bundle/archive/${pkgver}.tar.gz")
+md5sums=('0b18eab887ecb4e99af286a400ec614b')
+
+package() {
+	install -D -m644 "${srcdir}/Sub-Zero.bundle-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+	mkdir -p "${pkgdir}/var/lib/plex/Plex Media Server/Plug-ins/Sub-Zero.bundle"
+	cp -r "${srcdir}/Sub-Zero.bundle-${pkgver}"/* "${pkgdir}/var/lib/plex/Plex Media Server/Plug-ins/Sub-Zero.bundle/"
+}

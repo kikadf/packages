@@ -1,0 +1,40 @@
+# Maintainer: kikadf <kikadf.01@gmail.com>
+
+pkgname=mega-cmd
+pkgver=1.5.1
+pkgrel=1
+pkgdesc="CLI and Scripable Application to access MEGA"
+url="https://mega.nz/cmd"
+license=('GPL3' 'BSD')
+depends=('c-ares' 'crypto++' 'fuse3' 'libsodium' 'libuv' 'sqlite' 'libmediainfo')
+makedepends=('autoconf' 'automake' 'git')
+arch=('armv7h')
+source=("$pkgname::git+https://github.com/meganz/MEGAcmd.git#tag="$pkgver"_Linux")
+md5sums=('SKIP')
+
+prepare() {
+	cd $pkgname
+	git submodule update --init --recursive
+}
+
+build() {
+	cd $pkgname
+	./autogen.sh
+	./configure --disable-exmples \
+			--disable-java \
+			--disable-php \
+			--disable-python \
+			--disable-chat \
+			--with-libuv \
+			--prefix=/usr \
+			--sysconfdir=/etc \
+			--without-freeimage \
+			--without-ffmpeg
+	make
+}
+
+package() {
+	cd $pkgname
+	make DESTDIR="$pkgdir" install
+}
+
