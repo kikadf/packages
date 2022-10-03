@@ -1,0 +1,4 @@
+Clipboard is an EFL based simple, basic features clipboard manager
+for the e17/Moksha desktops. It maintains a history of text copied
+to the clipboard from which you can choose with a bare minimum of
+configuration options.

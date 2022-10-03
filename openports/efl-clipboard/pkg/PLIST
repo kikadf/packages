@@ -1,0 +1,9 @@
+lib/enlightenment/modules/clipboard/
+lib/enlightenment/modules/clipboard/e-module-clipboard.edj
+lib/enlightenment/modules/clipboard/module.desktop
+lib/enlightenment/modules/clipboard/openbsd-x86_64-0.25.4/
+@so lib/enlightenment/modules/clipboard/openbsd-x86_64-0.25.4/module.so
+share/locale/es/LC_MESSAGES/clipboard.mo
+share/locale/ja/LC_MESSAGES/clipboard.mo
+share/locale/sk/LC_MESSAGES/clipboard.mo
+share/locale/sl/LC_MESSAGES/clipboard.mo
