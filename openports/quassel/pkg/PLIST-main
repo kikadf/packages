@@ -1,0 +1,5 @@
+@bin bin/quassel
+share/applications/quassel.desktop
+@tag update-desktop-database
+share/knotifications5/
+share/knotifications5/quassel.notifyrc

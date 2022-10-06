@@ -1,0 +1,9 @@
+@newgroup _quassel:875
+@newuser _quassel:875:875:daemon:Quasselcore user:/var/quassel:/sbin/nologin
+@rcscript ${RCDIR}/quasselcore
+@bin bin/quasselcore
+share/doc/pkg-readmes/${PKGSTEM}
+@mode 750
+@owner _quassel
+@group _quassel
+@sample /var/quassel/
