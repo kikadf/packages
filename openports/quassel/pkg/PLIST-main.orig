@@ -1,3 +1,0 @@
-@bin bin/quassel
-share/applications/quassel.desktop
-@tag update-desktop-database
