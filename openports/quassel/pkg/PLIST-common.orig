@@ -4,6 +4,8 @@ share/icons/hicolor/22x22/apps/quassel.png
 share/icons/hicolor/32x32/apps/quassel.png
 share/icons/hicolor/48x48/apps/quassel.png
 share/icons/hicolor/64x64/apps/quassel.png
+share/knotifications5/
+share/knotifications5/quassel.notifyrc
 share/quassel/
 share/quassel/icons/
 share/quassel/icons/breeze/
