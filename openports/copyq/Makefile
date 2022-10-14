@@ -10,9 +10,6 @@ MAINTAINER =		kikadf <kikadf.01@gmail.com>
 # GPLv3+
 PERMIT_PACKAGE =	Yes
 
-# C++17
-COMPILER =		base-clang ports-gcc
-
 WANTLIB += ${COMPILER_LIBCXX} ICE KF5Notifications Qt5Core Qt5DBus
 WANTLIB += Qt5Gui Qt5Network Qt5Qml Qt5Svg Qt5WaylandClient Qt5Widgets
 WANTLIB += Qt5X11Extras Qt5Xml SM X11 Xext Xfixes Xtst c m wayland-client
