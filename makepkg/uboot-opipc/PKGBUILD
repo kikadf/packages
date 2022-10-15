@@ -4,7 +4,7 @@
 buildarch=4
 
 pkgname=uboot-opipc
-pkgver=2022.07
+pkgver=2022.10
 pkgrel=1
 pkgdesc="U-Boot for Orange Pi PC"
 arch=('armv7h')
@@ -16,7 +16,7 @@ install=${pkgname}.install
 source=("ftp://ftp.denx.de/pub/u-boot/u-boot-${pkgver}.tar.bz2"
         'boot.txt'
         'mkscr')
-md5sums=('b41850031d6e1cbc14f973e085469154'
+md5sums=('cb1f3774f5e423b91cff379101c764a3'
          '95f60c0ae1315e986d8a2aee15d5f854'
          '021623a04afd29ac3f368977140cfbfd')
 
