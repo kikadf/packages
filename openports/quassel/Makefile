@@ -1,7 +1,7 @@
-COMMENT-main =		Distributed IRC client (monolithic client)
-COMMENT-client =	Distributed IRC client (client)
-COMMENT-common =	Distributed IRC client (common files)
-COMMENT-core =		Distributed IRC client (core)
+COMMENT-main =		distributed IRC client (monolithic client)
+COMMENT-client =	distributed IRC client (client)
+COMMENT-common =	distributed IRC client (common files)
+COMMENT-core =		distributed IRC client (core)
 
 VER =			0.14.0
 DISTNAME =		quassel-${VER}
@@ -35,7 +35,7 @@ WANTLIB-core += ldap m qca-qt5 z
 
 MODULES =		devel/cmake x11/qt5
 
-BUILD_DEPENDS =		devel/boost \
+BUILD_DEPENDS +=	devel/boost \
 			devel/gettext,-tools
 
 RUN_DEPENDS-main =	devel/desktop-file-utils \
@@ -46,17 +46,20 @@ RUN_DEPENDS-client =	devel/desktop-file-utils \
 
 RUN_DEPENDS-common =	x11/gtk+3,-guic
 
-LIB_DEPENDS-main =	databases/openldap,-main \
+LIB_DEPENDS-main =	${MODQT5_LIB_DEPENDS} \
+			databases/openldap,-main \
 			security/qca-qt5 \
 			x11/dbusmenu-qt \
 			x11/qt5/qtmultimedia \
 			x11/qt5/qtwebengine
 
-LIB_DEPENDS-client =	x11/dbusmenu-qt \
+LIB_DEPENDS-client =	${MODQT5_LIB_DEPENDS} \
+			x11/dbusmenu-qt \
 			x11/qt5/qtmultimedia \
 			x11/qt5/qtwebengine
 
-LIB_DEPENDS-core =	databases/openldap,-main \
+LIB_DEPENDS-core =	${MODQT5_LIB_DEPENDS} \
+			databases/openldap,-main \
 			security/qca-qt5
 
 CONFIGURE_ARGS +=	-DENABLE_SHARED=OFF
