@@ -2,6 +2,11 @@
 | Running ${PKGSTEM} on OpenBSD
 +-----------------------------------------------------------------------
 
+To start quasselcore and enable automatic startup on boot:
+
+    # rcctl start quasselcore
+    # rcctl enable quasselcore
+
 If you want to use the PostgreSQL backend, make sure to install
 qt5-postgresql:
 
