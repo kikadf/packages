@@ -1,4 +1,4 @@
 @bin bin/dhcpcd-gtk
 share/examples/dhcpcd-ui/xdg/autostart/dhcpcd-gtk.desktop
 @sample ${SYSCONFDIR}/xdg/autostart/dhcpcd-gtk.desktop
-@man share/man/man8/dhcpcd-gtk.8
+@man man/man8/dhcpcd-gtk.8

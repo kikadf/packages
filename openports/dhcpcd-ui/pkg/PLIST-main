@@ -1,4 +1,4 @@
 @bin bin/dhcpcd-qt
 share/examples/dhcpcd-ui/xdg/autostart/dhcpcd-qt.desktop
 @sample ${SYSCONFDIR}/xdg/autostart/dhcpcd-qt.desktop
-@man share/man/man8/dhcpcd-qt.8
+@man man/man8/dhcpcd-qt.8

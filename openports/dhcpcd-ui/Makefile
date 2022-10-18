@@ -51,7 +51,8 @@ CONFIGURE_ARGS +=	--with-gtk \
 			--without-curses \
 			--without-dhcpcd-online \
 			--enable-notification \
-			--sysconfdir=${SYSCONFDIR}
+			--sysconfdir=${SYSCONFDIR} \
+			--mandir=${PREFIX}/man
 
 # CFLAGS and LFLAGS need to gettext check of configure script
 CONFIGURE_ENV +=	QMAKE=${MODQT5_QMAKE} \
