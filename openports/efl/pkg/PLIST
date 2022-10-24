@@ -1,3 +1,27 @@
+@conflict e_dbus-*
+@conflict ecore-*
+@conflict edje-*
+@conflict eet-*
+@conflict efreet-*
+@conflict eina-*
+@conflict eio-*
+@conflict elementary-*
+@conflict embryo-*
+@conflict emotion-*
+@conflict ethumb-*
+@conflict evas-*
+@pkgpath x11/e17/e_dbus
+@pkgpath x11/e17/ecore
+@pkgpath x11/e17/edje
+@pkgpath x11/e17/eet
+@pkgpath x11/e17/efreet
+@pkgpath x11/e17/eina
+@pkgpath x11/e17/eio
+@pkgpath x11/e17/elementary
+@pkgpath x11/e17/embryo
+@pkgpath x11/e17/emotion
+@pkgpath x11/e17/ethumb
+@pkgpath x11/e17/evas
 bin/diffeet
 @bin bin/ecore_evas_convert
 @bin bin/edje_cc
@@ -3028,8 +3052,7 @@ share/evas/filters/lua/
 share/evas/filters/lua/color.lua
 share/exactness/
 share/exactness/player_entry.edj
-share/gdb/auto-load/usr/lib/
-share/gdb/auto-load/usr/lib/libeo.so.1.26.3-gdb.py
+share/gdb/auto-load/usr/local/lib/libeo.so.1.26.3-gdb.py
 share/icons/Enlightenment-X/
 share/icons/Enlightenment-X/README
 share/icons/Enlightenment-X/actions/

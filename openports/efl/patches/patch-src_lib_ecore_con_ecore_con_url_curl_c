@@ -1,0 +1,16 @@
+Index: src/lib/ecore_con/ecore_con_url_curl.c
+--- src/lib/ecore_con/ecore_con_url_curl.c.orig
++++ src/lib/ecore_con/ecore_con_url_curl.c
+@@ -278,10 +278,9 @@ _c_init(void)
+    if (!_c->mod)
+      ERR("Could not find libcurl.5.dylib, libcurl.4.dylib, libcurl.so.5, libcurl.so.4");
+ #else
+-   LOAD("libcurl.so.5"); // try only
+-   LOAD("libcurl.so.4"); // try only
++   LOAD("libcurl.so"); // try only
+    if (!_c->mod)
+-     ERR("Could not find libcurl.so.5, libcurl.so.4");
++     ERR("Could not find libcurl.so");
+ #endif
+    if (!_c->mod) goto error;
+ 

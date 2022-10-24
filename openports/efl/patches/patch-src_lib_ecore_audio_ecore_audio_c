@@ -1,0 +1,24 @@
+Index: src/lib/ecore_audio/ecore_audio.c
+--- src/lib/ecore_audio/ecore_audio.c.orig
++++ src/lib/ecore_audio/ecore_audio.c
+@@ -131,9 +131,9 @@ ecore_audio_pulse_lib_load(void)
+    if (!ecore_audio_pulse_lib->mod)
+      ERR("Could not find libpulse.0.dylib, libpulse.0.so, libpulse.so.0");
+ # else
+-   LOAD("libpulse.so.0");
++   LOAD("libpulse.so");
+    if (!ecore_audio_pulse_lib->mod)
+-     ERR("Could not find libpulse.so.0");
++     ERR("Could not find libpulse.so");
+ # endif
+ # undef LOAD
+    if (!ecore_audio_pulse_lib->mod) return EINA_FALSE;
+@@ -219,7 +219,7 @@ ecore_audio_sndfile_lib_load(void)
+    LOAD("libsndfile.1.so");
+    LOAD("libsndfile.so.1");
+ # else
+-   LOAD("libsndfile.so.1");
++   LOAD("libsndfile.so");
+ # endif
+ # undef LOAD
+    if (!ecore_audio_sndfile_lib->mod) return EINA_FALSE;

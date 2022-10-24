@@ -66,12 +66,10 @@ WANTLIB += spectre ssl tiff webp webpdemux z
 
 MODULES =		devel/meson lang/python textproc/intltool
 
-BUILD_DEPENDS +=	inputmethods/scim \
-			audio/pulseaudio \
+BUILD_DEPENDS +=	audio/pulseaudio \
 			net/curl
 
 RUN_DEPENDS =		devel/desktop-file-utils \
-			inputmethods/scim \
 			misc/shared-mime-info \
 			x11/gtk+3,-guic
 
@@ -81,10 +79,12 @@ LIB_DEPENDS +=		converters/libiconv \
 			devel/gettext,-runtime \
 			graphics/libwebp \
 			graphics/libraw \
+			inputmethods/scim \
 			lang/luajit \
 			multimedia/gstreamer1/plugins-base \
 			print/poppler \
-			print/libspectre
+			print/libspectre \
+			x11/gnome/librsvg
 
 CONFIGURE_ARGS =	-Dsystemd=false \
 			-Deeze=false \
@@ -96,8 +96,5 @@ CONFIGURE_ARGS =	-Dsystemd=false \
 CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 			LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib "
 
-post-extract:
-	@cp ${FILESDIR}/libversion-fix.sh ${WRKSRC}
-	@cd ${WRKSRC} && /bin/sh ${WRKSRC}/libversion-fix.sh
 
 .include <bsd.port.mk>
