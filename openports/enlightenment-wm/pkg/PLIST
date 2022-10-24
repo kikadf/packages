@@ -1,3 +1,5 @@
+@conflict e-*
+@pkgpath x11/e17/e
 @bin bin/emixer
 @bin bin/enlightenment
 @bin bin/enlightenment_askpass
@@ -710,8 +712,6 @@ share/examples/enlightenment-wm/sysactions.conf
 @sample ${SYSCONFDIR}/enlightenment/sysactions.conf
 share/examples/enlightenment-wm/system.conf
 @sample ${SYSCONFDIR}/enlightenment/system.conf
-share/examples/login.conf.d/enlightenment
-@sample ${SYSCONFDIR}/login.conf.d/enlightenment
 share/icons/hicolor/128x128/apps/emixer.png
 share/icons/hicolor/128x128/apps/enlightenment_fprint.png
 share/icons/hicolor/128x128/apps/enlightenment_paledit.png

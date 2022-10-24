@@ -2,9 +2,6 @@
 | Running ${PKGSTEM} on OpenBSD
 +-----------------------------------------------------------------------
 
-Enlightenment need to increase resource limits to successfull run. At least:
+Enlightenment need to increase resource limits to successful run. At least:
 -openfiles-max=2048
 -openfiles-cur=1024
-
-Check dedicated enlightenment login class:
-/etc/login.conf.d/enlightenment
