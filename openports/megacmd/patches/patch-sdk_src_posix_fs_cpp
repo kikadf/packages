@@ -1,0 +1,19 @@
+Index: sdk/src/posix/fs.cpp
+--- sdk/src/posix/fs.cpp.orig
++++ sdk/src/posix/fs.cpp
+@@ -1889,11 +1889,13 @@ bool PosixDirNotify::fsstableids() const
+         return true;
+     }
+ 
+-    LOG_info << "Filesystem type: " << statfsbuf.f_type;
++    LOG_info << "Filesystem type: " << statfsbuf.f_fstypename;
+ 
+-#ifdef __APPLE__
++#if defined(__APPLE__)
+     return statfsbuf.f_type != 0x1c // FAT32
+         && statfsbuf.f_type != 0x1d; // exFAT
++#elif defined(__OpenBSD__)
++    return false;
+ #else
+     return statfsbuf.f_type != 0x4d44 // FAT
+         && statfsbuf.f_type != 0x65735546; // FUSE

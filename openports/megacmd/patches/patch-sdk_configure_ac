@@ -1,0 +1,12 @@
+Index: sdk/configure.ac
+--- sdk/configure.ac.orig
++++ sdk/configure.ac
+@@ -1914,7 +1914,7 @@ if test "x$enable_examples" = "xyes" ; then
+         # readline requires termcap (or ncurses)
+         SAVE_LIBS=$LIBS
+         LIBS="$TERMCAP_LIBS $LIBS"
+-        AC_CHECK_LIB([readline], [rl_save_prompt], [RL_LIBS="-lreadline"], [
++        AC_CHECK_LIB([ereadline], [rl_save_prompt], [RL_LIBS="-lereadline"], [
+             AC_MSG_ERROR([readline library is required for the sample client.])])
+         LIBS=$SAVE_LIBS
+       ]

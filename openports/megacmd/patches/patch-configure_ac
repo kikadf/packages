@@ -1,0 +1,12 @@
+Index: configure.ac
+--- configure.ac.orig
++++ configure.ac
+@@ -415,7 +415,7 @@ AC_ARG_WITH(readline,
+     # readline requires termcap (or ncurses)
+     SAVE_LIBS=$LIBS
+     LIBS="$TERMCAP_LIBS $LIBS"
+-    AC_CHECK_LIB([readline], [rl_save_prompt], [RL_LIBS="-lreadline"], [
++    AC_CHECK_LIB([ereadline], [rl_save_prompt], [RL_LIBS="-lereadline"], [
+         AC_MSG_ERROR([readline library is required for the sample client.])])
+     LIBS=$SAVE_LIBS
+   ]
