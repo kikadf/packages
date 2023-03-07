@@ -1,8 +1,8 @@
 # Maintainer: kikadf <kikadf.01@gmail.com>
 
 pkgname=mega-cmd
-pkgver=1.5.1
-pkgrel=2
+pkgver=1.6.0
+pkgrel=1
 pkgdesc="CLI and Scripable Application to access MEGA"
 url="https://mega.nz/cmd"
 license=('GPL3' 'BSD')
@@ -19,6 +19,7 @@ prepare() {
 
 build() {
 	cd $pkgname
+	CXXFLAGS+=" -Wno-narrowing"
 	./autogen.sh
 	./configure --disable-exmples \
 			--disable-java \
