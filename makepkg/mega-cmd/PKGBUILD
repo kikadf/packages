@@ -8,7 +8,7 @@ url="https://mega.nz/cmd"
 license=('GPL3' 'BSD')
 depends=('c-ares' 'crypto++' 'fuse3' 'libsodium' 'libuv' 'sqlite' 'libmediainfo')
 makedepends=('autoconf' 'automake' 'git')
-arch=('armv7h' 'aarch64')
+arch=('armv7h' 'aarch64' 'x86_64')
 source=("$pkgname::git+https://github.com/meganz/MEGAcmd.git#tag="$pkgver"_Linux")
 md5sums=('SKIP')
 
