@@ -1,57 +1,46 @@
-COMMENT =		CLI and scriptable application to access MEGA
-GH_ACCOUNT =		meganz
-GH_PROJECT =		MEGAcmd
-GH_TAGNAME =		1.6.3_Linux
-PKGNAME =		${DISTNAME:S/_Linux//:L}
-CATEGORIES =		net
-DISTFILES =		${DISTNAME}${EXTRACT_SUFX}
+# $NetBSD$
 
-MAINTAINER =		kikadf <kikadf.01@gmail.com>
+DISTNAME=	megacmd-1.6.3
+CATEGORIES=	net
+#PKGREVISION=	1
+MASTER_SITES=	${MASTER_SITE_GITHUB:=meganz/}
+GITHUB_PROJECT=	MEGAcmd
+GITHUB_TAG=	${PKGVERSION_NOREV}_Linux
+SDK_VERSION=	v4.17.1d
 
-MASTER_SITES0 =		https://github.com/meganz/sdk/archive/refs/tags/
-_SDKV =			4.17.1d
-DISTFILES +=		v${_SDKV}${EXTRACT_SUFX}:0
+GITHUB_SUBMODULES=	meganz sdk ${SDK_VERSION} sdk
 
+MAINTAINER=	kikadf.01@gmail.com
+HOMEPAGE=	https://mega.io/
+COMMENT=	CLI and scriptable application to access MEGA
 # MEGAcmd: GPLv3, SDK: BSD 2-clause
-PERMIT_PACKAGE =	Yes
+LICENSE=	gnu-gpl-v3 AND 2-clause-bsd
 
-COMPILER =		base-clang ports-gcc
+USE_LANGUAGES+=	c c++
+# std::filesystem
+GCC_REQD+=	9
+USE_LIBTOOL=	yes
+USE_TOOLS+=	autoreconf autoconf automake
+GNU_CONFIGURE=	yes
 
-WANTLIB += ${COMPILER_LIBCXX} c cares crypto cryptopp curl curses
-WANTLIB += ereadline m nghttp2 nghttp3 ngtcp2 ngtcp2_crypto_openssl
-WANTLIB += pcre pcrecpp sodium sqlite3 ssl uv z
+CONFIGURE_ARGS=	--disable-examples --disable-java --disable-php \
+		--disable-python --disable-chat --without-freeimage \
+		--without-termcap --without-ffmpeg --without-libraw \
+		--without-libzen --without-libmediainfo \
+		--enable-gcc-hardening
 
-LIB_DEPENDS =		databases/sqlite3 \
-			devel/cryptopp \
-			devel/libuv \
-			devel/pcre \
-			devel/readline \
-			net/curl \
-			net/libcares \
-			security/libsodium
-
-CONFIGURE_STYLE =	autoreconf
-AUTORECONF =		${WRKSRC}/autogen.sh
-AUTOCONF_VERSION =	2.69
-AUTOMAKE_VERSION =	1.16
-
-CONFIGURE_ARGS =	--disable-examples --disable-java --disable-php \
-			--disable-python --disable-chat --without-freeimage \
-			--without-termcap --without-ffmpeg --without-libraw \
-			--without-libzen --without-libmediainfo \
-			--enable-gcc-hardening --enable-static
-
-CONFIGURE_ENV +=	CPPFLAGS="-I${LOCALBASE}/include \
-				  -I${LOCALBASE}/include/ereadline" \
-			LDFLAGS="-L${LOCALBASE}/lib"
-
-FAKE_FLAGS= 		sysconfdir=${PREFIX}/share/examples/megacmd/
-
-post-extract:
-	rm -rf ${WRKSRC}/sdk
-	mv ${WRKDIR}/sdk-${_SDKV} ${WRKSRC}/sdk
+CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
 
 pre-configure:
-	sed -i 's,/bin/bash,/bin/sh,' ${WRKSRC}/src/client/mega-*
+	cd ${WRKSRC} && ${SH} autogen.sh
 
-.include <bsd.port.mk>
+
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
+.include "../../security/crypto++/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
