@@ -22,6 +22,14 @@ GCC_REQD+=	9
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoreconf autoconf automake
 GNU_CONFIGURE=	yes
+REPLACE_SH=	src/client/mega-*
+CXXFLAGS+=	-DCRYPTOPP_DISABLE_ASM
+
+EGDIR=		${PREFIX}/share/examples/megacmd
+CONF_FILES=	${EGDIR}/megacmd_completion.sh ${PKG_SYSCONFDIR}/bash_completion.d/megacmd_completion.sh
+
+#INSTALLATION_DIRS=	${EGDIR}
+#MAKE_DIRS=		${PKG_SYSCONFDIR}/bash_completion.d
 
 CONFIGURE_ARGS=	--disable-examples --disable-java --disable-php \
 		--disable-python --disable-chat --without-freeimage \
