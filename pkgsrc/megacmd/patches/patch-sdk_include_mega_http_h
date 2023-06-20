@@ -5,16 +5,12 @@ $NetBSD$
 Index: sdk/include/mega/http.h
 --- sdk/include/mega/http.h.orig	2023-05-02 16:07:05.000000000 +0000
 +++ sdk/include/mega/http.h
-@@ -42,8 +42,11 @@
+@@ -42,7 +42,7 @@
  #pragma warning(pop)
  #endif
  
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
  #include <netinet/in.h>
-+#if defined(__NetBSD__)
-+#define AI_V4MAPPED	0x00000800
-+#endif
  #endif
  
- namespace mega {
