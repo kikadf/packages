@@ -133,3 +133,4 @@ include/megaapi_impl.h
 lib/libmega.la
 @lib lib/libmega.so.${LIBmega_VERSION}
 lib/pkgconfig/libmega.pc
+share/bash-completion/completions/megacmd
