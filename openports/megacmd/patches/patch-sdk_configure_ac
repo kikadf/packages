@@ -1,7 +1,7 @@
 Index: sdk/configure.ac
 --- sdk/configure.ac.orig
 +++ sdk/configure.ac
-@@ -1914,7 +1914,7 @@ if test "x$enable_examples" = "xyes" ; then
+@@ -1932,7 +1932,7 @@ if test "x$enable_examples" = "xyes" ; then
          # readline requires termcap (or ncurses)
          SAVE_LIBS=$LIBS
          LIBS="$TERMCAP_LIBS $LIBS"

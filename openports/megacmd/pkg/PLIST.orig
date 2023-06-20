@@ -130,6 +130,7 @@ include/mega/version.h
 include/mega/waiter.h
 include/megaapi.h
 include/megaapi_impl.h
+@static-lib lib/libmega.a
 lib/libmega.la
-@lib lib/libmega.so.${LIBmega_VERSION}
 lib/pkgconfig/libmega.pc
+share/bash-completion/completions/megacmd

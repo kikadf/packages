@@ -1,4 +1,5 @@
-MEGAcmd provides non UI access to MEGA services.
+MEGAcmd provides scriptable command-line tools and
+an interactive shell to access services from mega.nz.
 It intends to offer all the functionality with your
 MEGA account via commands. It features synchronization,
 backup of local folders into your MEGA account and

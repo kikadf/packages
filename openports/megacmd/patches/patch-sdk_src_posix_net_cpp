@@ -1,7 +1,7 @@
 Index: sdk/src/posix/net.cpp
 --- sdk/src/posix/net.cpp.orig
 +++ sdk/src/posix/net.cpp
-@@ -2802,17 +2802,17 @@ CURLcode CurlHttpIO::ssl_ctx_function(CURL*, void* ssl
+@@ -2862,17 +2862,17 @@ CURLcode CurlHttpIO::ssl_ctx_function(CURL*, void* ssl
      return CURLE_OK;
  }
  
@@ -22,7 +22,7 @@ Index: sdk/src/posix/net.cpp
      return rsa->n;
  #else
      const BIGNUM *result;
-@@ -2823,7 +2823,7 @@ const BIGNUM *RSA_get0_n(const RSA *rsa)
+@@ -2883,7 +2883,7 @@ const BIGNUM *RSA_get0_n(const RSA *rsa)
  
  const BIGNUM *RSA_get0_e(const RSA *rsa)
  {
@@ -31,7 +31,7 @@ Index: sdk/src/posix/net.cpp
      return rsa->e;
  #else
      const BIGNUM *result;
-@@ -2834,7 +2834,7 @@ const BIGNUM *RSA_get0_e(const RSA *rsa)
+@@ -2894,7 +2894,7 @@ const BIGNUM *RSA_get0_e(const RSA *rsa)
  
  const BIGNUM *RSA_get0_d(const RSA *rsa)
  {

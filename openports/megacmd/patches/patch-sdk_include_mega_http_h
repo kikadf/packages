@@ -1,14 +1,12 @@
 Index: sdk/include/mega/http.h
 --- sdk/include/mega/http.h.orig
 +++ sdk/include/mega/http.h
-@@ -42,8 +42,9 @@
+@@ -42,7 +42,7 @@
  #pragma warning(pop)
  #endif
  
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__OpenBSD__)
  #include <netinet/in.h>
-+#define AI_V4MAPPED	0x00000800
  #endif
  
- namespace mega {
