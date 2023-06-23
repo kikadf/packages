@@ -21,7 +21,7 @@ WANTLIB += pcre pcrecpp sodium sqlite3 ssl uv z
 
 MASTER_SITES0 =		https://github.com/meganz/sdk/archive/refs/tags/
 
-DISTFILES +=		${DISTNAME}${EXTRACT_SUFX} \
+DISTFILES +=		${GH_DISTFILE} \
 			meganz-sdk-{}v${_SDKV}${EXTRACT_SUFX}:0
 
 COMPILER =		base-clang ports-gcc
@@ -63,6 +63,8 @@ CONFIGURE_ENV +=	CPPFLAGS="${CPPFLAGS}" \
 post-extract:
 	rm -rf ${WRKSRC}/sdk
 	mv ${WRKDIR}/sdk-${_SDKV} ${WRKSRC}/sdk
+	mv ${WRKSRC}/src/client/megacmd_completion.sh \
+		${WRKSRC}/src/client/megacmd
 
 pre-configure:
 	sed -i 's,/bin/bash,/bin/sh,' ${WRKSRC}/src/client/mega-*

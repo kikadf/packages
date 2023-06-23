@@ -10,3 +10,12 @@ Index: sdk/configure.ac
              AC_MSG_ERROR([readline library is required for the sample client.])])
          LIBS=$SAVE_LIBS
        ]
+@@ -2168,8 +2168,6 @@ if test "x$enable_php" = "xyes" ; then
+ 
+ fi
+ AM_CONDITIONAL([BUILD_PHP], [test "$enable_php" = "yes"])
+-
+-AC_CHECK_LIB([stdc++fs], [main], [LDFLAGS="-lstdc++fs $LDFLAGS"], [] )
+ 
+ dnl #########################################################################
+ dnl Doxygen settings
