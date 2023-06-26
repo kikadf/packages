@@ -66,6 +66,13 @@ post-extract:
 	mv ${WRKSRC}/src/client/megacmd_completion.sh \
 		${WRKSRC}/src/client/megacmd
 
+.include <bsd.port.arch.mk>
+.if ${PROPERTIES:Mclang}
+post-patch:
+	sed -i 's,AC_CHECK_LIB(\[stdc++fs\],#AC_CHECK_LIB(\[stdc++fs\],' \
+		 ${WRKSRC}/sdk/configure.ac
+.endif
+
 pre-configure:
 	sed -i 's,/bin/bash,/bin/sh,' ${WRKSRC}/src/client/mega-*
 
