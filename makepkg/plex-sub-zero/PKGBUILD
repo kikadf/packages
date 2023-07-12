@@ -17,4 +17,5 @@ package() {
 	install -D -m644 "${srcdir}/Sub-Zero.bundle-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	mkdir -p "${pkgdir}/var/lib/plex/Plex Media Server/Plug-ins/Sub-Zero.bundle"
 	cp -r "${srcdir}/Sub-Zero.bundle-${pkgver}"/* "${pkgdir}/var/lib/plex/Plex Media Server/Plug-ins/Sub-Zero.bundle/"
+	chown -R plex:plex "${pkgdir}/var/lib/plex/Plex Media Server/Plug-ins"
 }
