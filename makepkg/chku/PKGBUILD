@@ -1,0 +1,24 @@
+# Maintainer: kikadf <kikadf.01@gmail.com>
+
+pkgname=chku
+pkgver=1.0
+pkgrel=1
+pkgdesc="Check updates on host and guests"
+url="https://github.com/kikadf/chku"
+license=(GPLv3)
+depends=('curl')
+arch=('any')
+source=(file:///home/archer/share/mega/share/${pkgname}-${pkgver}.tar.gz)
+sha256sums=('809facca1575ff765f43b5f528e1e5b976f60547323adb5524d9d8c7559517ed')
+
+build() {
+  cd ${pkgname}-${pkgver}
+  make
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+  install -D -m755 "chku" "${pkgdir}/usr/local/bin/chku"
+  install -D -m644 "chku.conf" "${pkgdir}/usr/local/etc/chku.conf"
+}
+
