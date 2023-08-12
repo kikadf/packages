@@ -2,14 +2,23 @@
 
 pkgname=chku
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Check updates on host and guests"
 url="https://github.com/kikadf/chku"
 license=(GPLv3)
 depends=('curl')
+makedepends=('unzip')
 arch=('any')
-source=(file:///home/archer/share/mega/share/${pkgname}-${pkgver}.tar.gz)
-sha256sums=('809facca1575ff765f43b5f528e1e5b976f60547323adb5524d9d8c7559517ed')
+#source=(file:///home/archer/share/mega/share/${pkgname}-${pkgver}.tar.gz)
+#sha256sums=('809facca1575ff765f43b5f528e1e5b976f60547323adb5524d9d8c7559517ed')
+source=(file:///home/archer/share/mega/share/${pkgname}-main.zip)
+sha256sums=('SKIP')
+noextract=(${pkgname}-main.zip)
+
+prepare() {
+  unzip ${pkgname}-main.zip
+  mv ${pkgname}-main ${pkgname}-${pkgver}
+}
 
 build() {
   cd ${pkgname}-${pkgver}
@@ -19,6 +28,6 @@ build() {
 package() {
   cd ${pkgname}-${pkgver}
   install -D -m755 "chku" "${pkgdir}/usr/local/bin/chku"
-  install -D -m644 "chku.conf" "${pkgdir}/usr/local/etc/chku.conf"
+  install -D -m644 "chku.conf.sample" "${pkgdir}/usr/local/etc/chku.conf"
 }
 
