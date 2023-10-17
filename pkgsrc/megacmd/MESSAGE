@@ -1,0 +1,2 @@
+To use megacmd features need to generate machine-id.
+Run as root: dbus-uuidgen --ensure
