@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Fix build on NetBSD, missing AI_V4MAPPED
+
 --- sdk/src/http.cpp.orig	2023-06-20 16:04:22.829147987 +0000
 +++ sdk/src/http.cpp
 @@ -270,7 +270,7 @@ void HttpIO::getMEGADNSservers(string *d

@@ -16,14 +16,13 @@ COMMENT=	CLI and scriptable application to access MEGA
 # MEGAcmd: GPLv3, SDK: BSD 2-clause
 LICENSE=	gnu-gpl-v3 AND 2-clause-bsd
 
-USE_LANGUAGES+=	c c++
-# std::filesystem
-GCC_REQD+=	9
-USE_LIBTOOL=	yes
-USE_TOOLS+=	autoreconf autoconf automake
-GNU_CONFIGURE=	yes
-REPLACE_SH=	src/client/mega-*
-CXXFLAGS+=	-DCRYPTOPP_DISABLE_ASM
+USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES+=	filesystem
+USE_LIBTOOL=		yes
+USE_TOOLS+=		autoreconf autoconf automake
+GNU_CONFIGURE=		yes
+REPLACE_SH=		src/client/mega-*
+CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM
 
 EGDIR=		${PREFIX}/share/examples/megacmd
 CONF_FILES=	${EGDIR}/megacmd_completion.sh ${PKG_SYSCONFDIR}/bash_completion.d/megacmd_completion.sh
