@@ -1,0 +1,2 @@
+# Override this file with a modified version in /etc/tmpfiles.d/
+Z "/var/lib/plex/Plex Media Server/Plug-ins" - plex plex
