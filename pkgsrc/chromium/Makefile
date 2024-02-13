@@ -1,11 +1,27 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
-DISTNAME=	chromium-85.0.4183.39
+DISTNAME=	chromium-${VERSION}
+VERSION=	121.0.6167.160
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
 
+PROFILE_DISTFILE=	chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
+REGRESS_DISTFILE0=	chromium-${VERSION}-testdata${EXTRACT_SUFX}
+REGRESS_DISTFILE1=	test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz
+
+DISTFILES+=		${PROFILE_DISTFILE} \
+			${REGRESS_DISTFILE0} \
+			${REGRESS_DISTFILE1}
+
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX} \
+			${PROFILE_DISTFILE}
+
+SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
+SITES.${REGRESS_DISTFILE1}=	http://nerd.hu/distfiles/
+
 MAINTAINER=	ryoon@NetBSD.org
+#MAINTAINER+=	kikadf.01@gmail.com
 HOMEPAGE=	https://www.chromium.org/Home
 COMMENT=	Open source web browser
 LICENSE=	modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
@@ -33,7 +49,7 @@ TOOL_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 TOOL_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
 #TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang # clang-format
 
-PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
+#PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
@@ -72,6 +88,7 @@ CFLAGS+=		-isystem${PREFIX}/lib/clang/10.0.0/include # third_party/zlib with cla
 
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
+TEST_ENV+=	FONTCONFIG_SYSROOT=${WRKSRC}/third_party/test_fonts
 
 # Proprietary codecs are enabled.
 GN_ARGS+=	proprietary_codecs=true \
