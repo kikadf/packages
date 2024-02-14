@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
 DISTNAME=	chromium-${VERSION}
-VERSION=	121.0.6167.160
+VERSION=	121.0.6167.184
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
