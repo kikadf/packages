@@ -1,34 +1,34 @@
-# $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
+# $NetBSD:
 
-DISTNAME=	chromium-${VERSION}
-VERSION=	121.0.6167.184
-CATEGORIES=	www
-MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
-EXTRACT_SUFX=	.tar.xz
+DISTNAME=			chromium-${VERSION}
+VERSION=			122.0.6261.69
+CATEGORIES=			www
+MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
+EXTRACT_SUFX=			.tar.xz
 
-PROFILE_DISTFILE=	chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
-REGRESS_DISTFILE0=	chromium-${VERSION}-testdata${EXTRACT_SUFX}
-REGRESS_DISTFILE1=	test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz
+PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
+REGRESS_DISTFILE0=		chromium-${VERSION}-testdata${EXTRACT_SUFX}
+REGRESS_DISTFILE1=		test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz
 
-DISTFILES+=		${PROFILE_DISTFILE} \
-			${REGRESS_DISTFILE0} \
-			${REGRESS_DISTFILE1}
+DISTFILES+=			${PROFILE_DISTFILE} \
+				${REGRESS_DISTFILE0} \
+				${REGRESS_DISTFILE1}
 
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX} \
-			${PROFILE_DISTFILE}
+EXTRACT_ONLY=			${DISTNAME}${EXTRACT_SUFX} \
+				${PROFILE_DISTFILE}
 
 SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
 SITES.${REGRESS_DISTFILE1}=	http://nerd.hu/distfiles/
 
-MAINTAINER=	ryoon@NetBSD.org
-#MAINTAINER+=	kikadf.01@gmail.com
-HOMEPAGE=	https://www.chromium.org/Home
-COMMENT=	Open source web browser
-LICENSE=	modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
+MAINTAINER=			ryoon@NetBSD.org
+#MAINTAINER+=			kikadf.01@gmail.com
+HOMEPAGE=			https://www.chromium.org/Home
+COMMENT=			Open source web browser
+LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
-USE_TOOLS+=		bash bison flex:pkgsrc gmake pax perl pkg-config
-TOOLS_PLATFORM.flex=	# override the platform definition to use pkgsrc's flex.
-USE_LANGUAGES=		c c++
+USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
+TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
+USE_LANGUAGES=			c c++
 
 CHECK_PORTABILITY_SKIP+=	third_party/sqlite/src/configure
 CHECK_PORTABILITY_SKIP+=	third_party/protobuf/post_process_dist.sh
@@ -39,27 +39,27 @@ CHECK_PORTABILITY_SKIP+=	third_party/llvm/flang/tools/f18/flang.sh.in
 CHECK_PORTABILITY_SKIP+=	third_party/llvm/polly/lib/External/isl/configure
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
-TOOL_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
-TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-TOOL_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-TOOL_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-TOOL_DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-TOOL_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
-TOOL_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
-#TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang # clang-format
+TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
+TOOL_DEPENDS+=			yasm-[0-9]*:../../devel/yasm
+TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
+TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
+TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
+TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
 
 #PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 
-DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-#ONLY_FOR_PLATFORM+=	*-*-arm # not yet
-#ONLY_FOR_PLATFORM+=	*-*-aarch64 # not yet
-#ONLY_FOR_PLATFORM+=	*-*-i386 # not yet
-ONLY_FOR_PLATFORM+=	*-*-x86_64
+#ONLY_FOR_PLATFORM+=		*-*-arm # not yet
+#ONLY_FOR_PLATFORM+=		*-*-aarch64 # not yet
+#ONLY_FOR_PLATFORM+=		*-*-i386 # not yet
+ONLY_FOR_PLATFORM+=		*-*-x86_64
 
 # Workaround for brotli and other commands.
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
