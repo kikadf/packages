@@ -8,6 +8,7 @@ SHA512 (meganz-sdk-v4.17.1d.tar.gz) = bc67910b0a5fbbe9bb5d9d6ef9a746f1762dbb9968
 Size (meganz-sdk-v4.17.1d.tar.gz) = 3695020 bytes
 SHA1 (patch-Makefile.am) = e6e092d8da00df3d2d73e542de61bea37336e9df
 SHA1 (patch-sdk_Makefile.am) = 8fedc590e7423e8a32d3cbe47b9503e8b197cf04
+SHA1 (patch-sdk_configure.ac) = 264edd914b05e24221a2fdd1c9890920f3f00521
 SHA1 (patch-sdk_include_mega_http_h) = 6d2acb2bdfe444d94c27ee523c9499f73f2fb5fe
 SHA1 (patch-sdk_include_mega_posix_megafs_h) = 69b099d0e8b5ac54c70808ec825d834d9edac2a9
 SHA1 (patch-sdk_src_http.cpp) = 23ebb74d092c27ed26c34c41c5a812a1ba835933

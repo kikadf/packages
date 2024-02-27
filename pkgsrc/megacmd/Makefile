@@ -22,7 +22,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoreconf autoconf automake
 GNU_CONFIGURE=		yes
 REPLACE_SH=		src/client/mega-*
-CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM
+CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM -std=c++17
+BUILDLINK_TRANSFORM+=	rm:-std=c++11
 
 EGDIR=		${PREFIX}/share/examples/megacmd
 CONF_FILES=	${EGDIR}/megacmd_completion.sh ${PKG_SYSCONFDIR}/bash_completion.d/megacmd_completion.sh
@@ -34,7 +35,7 @@ CONFIGURE_ARGS=	--disable-examples --disable-java --disable-php \
 		--disable-python --disable-chat --without-freeimage \
 		--without-termcap --without-ffmpeg --without-libraw \
 		--without-libzen --without-libmediainfo \
-		--enable-gcc-hardening
+		--without-rt --enable-gcc-hardening
 
 CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
 
