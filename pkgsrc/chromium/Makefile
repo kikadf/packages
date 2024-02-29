@@ -1,7 +1,7 @@
 # $NetBSD:
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			122.0.6261.69
+VERSION=			122.0.6261.94
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
