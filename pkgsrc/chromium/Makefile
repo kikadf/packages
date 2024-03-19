@@ -46,7 +46,7 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
-TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
+#TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
 TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
 
 #PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
@@ -81,8 +81,10 @@ SUBST_FILES.path+=	third_party/pdfium/xfa/fgas/font/cfx_fontsourceenum_file.cpp
 SUBST_FILES.path+=	third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
 SUBST_VARS.path+=	PREFIX X11BASE
 
+.include "../../lang/llvm/version.mk"
+
 CFLAGS+=		-fno-stack-protector
-CFLAGS+=		-isystem${PREFIX}/lib/clang/10.0.0/include # third_party/zlib with clang
+CFLAGS+=		-isystem${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/include # third_party/zlib with clang
 
 .include "options.mk"
 
@@ -150,8 +152,8 @@ pre-configure:
 #		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/clang
 #	${LN} -sf ${PREFIX}/bin/llvm-ar \
 #		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/llvm-ar
-	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
-		${BUILDLINK_DIR}/bin/java
+#	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
+#		${BUILDLINK_DIR}/bin/java
 	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
 		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
 # a wrapper for rpath $ORIGIN removal
@@ -171,9 +173,9 @@ pre-configure:
 
 do-configure:
 	# Create symlink to NetBSD nodejs command.
-	${MKDIR} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node/bin
+	${MKDIR} ${WRKSRC}/third_party/node/node-${LOWER_OPSYS}/node/bin
 	${LN} -sf ${PREFIX}/bin/node \
-		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node/bin/node
+		${WRKSRC}/third_party/node/node-${LOWER_OPSYS}/node/bin/node
 
 	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} \
