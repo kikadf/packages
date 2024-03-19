@@ -1,15 +1,15 @@
 $NetBSD$
 
---- sandbox/linux/services/init_process_reaper.cc.orig	2020-07-15 18:56:01.000000000 +0000
+--- sandbox/linux/services/init_process_reaper.cc.orig	2024-03-06 00:14:57.527417200 +0000
 +++ sandbox/linux/services/init_process_reaper.cc
-@@ -1,6 +1,7 @@
- // Copyright 2013 The Chromium Authors. All rights reserved.
+@@ -2,6 +2,7 @@
  // Use of this source code is governed by a BSD-style license that can be
  // found in the LICENSE file.
-+#if defined(OS_LINUX)
  
++#if 0
  #include "sandbox/linux/services/init_process_reaper.h"
  
+ #include <signal.h>
 @@ -100,3 +101,4 @@ bool CreateInitProcessReaper(base::OnceC
  }
  

@@ -1,13 +1,13 @@
 $NetBSD$
 
---- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2020-07-08 21:40:43.000000000 +0000
+--- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2024-03-06 00:14:52.674996000 +0000
 +++ extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc
-@@ -45,7 +45,7 @@ void ShellRuntimeAPIDelegate::OpenURL(co
+@@ -44,7 +44,7 @@ void ShellRuntimeAPIDelegate::OpenURL(co
  bool ShellRuntimeAPIDelegate::GetPlatformInfo(PlatformInfo* info) {
- #if defined(OS_CHROMEOS)
-   info->os = api::runtime::PLATFORM_OS_CROS;
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
-   info->os = api::runtime::PLATFORM_OS_LINUX;
+ #if BUILDFLAG(IS_CHROMEOS_ASH)
+   info->os = api::runtime::PlatformOs::kCros;
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+   info->os = api::runtime::PlatformOs::kLinux;
  #endif
    return true;

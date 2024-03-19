@@ -1,18 +1,18 @@
 $NetBSD$
 
---- sandbox/linux/services/libc_interceptor.cc.orig	2020-07-15 18:56:01.000000000 +0000
+--- sandbox/linux/services/libc_interceptor.cc.orig	2024-03-06 00:14:57.531417400 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
-@@ -11,7 +11,9 @@
+@@ -12,7 +12,9 @@
  #include <stddef.h>
  #include <stdint.h>
  #include <string.h>
-+#if !defined(OS_BSD)
++#if !BUILDFLAG(IS_BSD)
  #include <sys/prctl.h>
 +#endif
  #include <sys/socket.h>
  #include <sys/types.h>
  #include <time.h>
-@@ -93,7 +95,7 @@ bool ReadTimeStruct(base::PickleIterator
+@@ -167,7 +169,7 @@ bool ReadTimeStruct(base::PickleIterator
    } else {
      base::AutoLock lock(g_timezones_lock.Get());
      auto ret_pair = g_timezones.Get().insert(timezone);

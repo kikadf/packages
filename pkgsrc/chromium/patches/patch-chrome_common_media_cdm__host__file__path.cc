@@ -1,13 +1,13 @@
 $NetBSD$
 
---- chrome/common/media/cdm_host_file_path.cc.orig	2020-07-08 21:40:37.000000000 +0000
+--- chrome/common/media/cdm_host_file_path.cc.orig	2024-03-06 00:14:44.090250500 +0000
 +++ chrome/common/media/cdm_host_file_path.cc
-@@ -95,7 +95,7 @@ void AddCdmHostFilePaths(
+@@ -90,7 +90,7 @@ void AddCdmHostFilePaths(
    cdm_host_file_paths->emplace_back(chrome_framework_path,
                                      chrome_framework_sig_path);
  
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  
    base::FilePath chrome_exe_dir;
    if (!base::PathService::Get(base::DIR_EXE, &chrome_exe_dir))

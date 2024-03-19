@@ -1,13 +1,13 @@
 $NetBSD$
 
---- base/process/process_handle.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- base/process/process_handle.cc.orig	2024-03-06 00:14:37.021637000 +0000
 +++ base/process/process_handle.cc
 @@ -30,7 +30,7 @@ UniqueProcId GetUniqueIdForProcess() {
               : UniqueProcId(GetCurrentProcId());
  }
  
--#if defined(OS_LINUX) || defined(OS_AIX)
-+#if defined(OS_LINUX) || defined(OS_AIX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_AIX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_AIX) || BUILDFLAG(IS_BSD)
  
  void InitUniqueIdForProcessInPidNamespace(ProcessId pid_outside_of_namespace) {
    DCHECK(pid_outside_of_namespace != kNullProcessId);

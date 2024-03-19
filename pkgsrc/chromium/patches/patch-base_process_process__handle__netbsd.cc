@@ -1,57 +1,78 @@
 $NetBSD$
 
---- base/process/process_handle_netbsd.cc.orig	2020-07-09 13:18:47.299833505 +0000
+--- base/process/process_handle_netbsd.cc.orig	2024-03-19 17:04:39.690429013 +0000
 +++ base/process/process_handle_netbsd.cc
-@@ -0,0 +1,52 @@
-+// Copyright (c) 2011 The Chromium Authors. All rights reserved.
+@@ -0,0 +1,73 @@
++// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "base/process/process_handle.h"
-+#include "base/stl_util.h"
++#include "base/files/file_util.h"
 +
 +#include <stddef.h>
++#include <sys/param.h>
++#include <sys/proc.h>
 +#include <sys/sysctl.h>
 +#include <sys/types.h>
 +#include <unistd.h>
-+#include <cstring>
 +
 +namespace base {
 +
 +ProcessId GetParentProcessId(ProcessHandle process) {
-+  struct kinfo_proc2 info;
++  struct kinfo_proc2 *info;
 +  size_t length;
++  pid_t ppid;
 +  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, process,
 +                sizeof(struct kinfo_proc2), 1 };
 +
-+  if (sysctl(mib, base::size(mib), NULL, &length, NULL, 0) < 0)
++  if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) < 0)
 +    return -1;
++
++  info = (struct kinfo_proc2 *)malloc(length);
 +
 +  mib[5] = (length / sizeof(struct kinfo_proc2));
 +
-+  if (sysctl(mib, base::size(mib), &info, &length, NULL, 0) < 0)
-+    return -1;
++  if (sysctl(mib, std::size(mib), info, &length, NULL, 0) < 0) {
++    ppid = -1;
++    goto out;
++  }
 +
-+  return info.p_ppid;
++  ppid = info->p_ppid;
++
++out:
++  free(info);
++  return ppid;
 +}
 +
 +FilePath GetProcessExecutablePath(ProcessHandle process) {
-+  struct kinfo_proc2 kp;
-+  size_t len;
++  struct kinfo_proc2 *info;
++  size_t length;
++  char *path = NULL;
 +  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, process,
 +                sizeof(struct kinfo_proc2), 1 };
 +
-+  if (sysctl(mib, base::size(mib), NULL, &len, NULL, 0) == -1)
++  if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) == -1)
 +    return FilePath();
-+  mib[5] = (len / sizeof(struct kinfo_proc2));
-+  if (sysctl(mib, base::size(mib), &kp, &len, NULL, 0) < 0)
-+    return FilePath();
-+  if ((kp.p_flag & P_SYSTEM) != 0)
-+    return FilePath();
-+  if (strcmp(kp.p_comm, "chrome") == 0)
-+    return FilePath(kp.p_comm);
 +
-+  return FilePath();
++  info = (struct kinfo_proc2 *)malloc(length);
++
++  mib[5] = (length / sizeof(struct kinfo_proc2));
++
++  if (sysctl(mib, std::size(mib), info, &length, NULL, 0) < 0)
++    goto out;
++
++  if ((info->p_flag & P_SYSTEM) != 0)
++    goto out;
++
++  if (strcmp(info->p_comm, "chrome") == 0) {
++    path = info->p_comm;
++    goto out;
++  }
++
++out:
++  free(info);
++  return FilePath(path);
 +}
 +
 +}  // namespace base

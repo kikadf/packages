@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ui/views/examples/widget_example.cc.orig	2020-07-15 18:56:34.000000000 +0000
+--- ui/views/examples/widget_example.cc.orig	2024-03-06 00:15:20.993454200 +0000
 +++ ui/views/examples/widget_example.cc
-@@ -79,7 +79,7 @@ void WidgetExample::CreateExampleView(Vi
-               DIALOG);
-   BuildButton(container, GetStringUTF16(IDS_WIDGET_MODAL_BUTTON_LABEL),
-               MODAL_DIALOG);
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+@@ -49,7 +49,7 @@ void WidgetExample::CreateExampleView(Vi
+   modal_button->SetCallback(
+       base::BindRepeating(&WidgetExample::CreateDialogWidget,
+                           base::Unretained(this), modal_button, true));
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Windows does not support TYPE_CONTROL top-level widgets.
-   BuildButton(container, GetStringUTF16(IDS_WIDGET_CHILD_WIDGET_BUTTON_LABEL),
-               CHILD);
+   LabelButton* control_button = BuildButton(
+       container, GetStringUTF16(IDS_WIDGET_CHILD_WIDGET_BUTTON_LABEL));

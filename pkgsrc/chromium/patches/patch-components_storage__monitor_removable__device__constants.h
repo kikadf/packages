@@ -1,13 +1,13 @@
 $NetBSD$
 
---- components/storage_monitor/removable_device_constants.h.orig	2020-07-08 21:40:41.000000000 +0000
+--- components/storage_monitor/removable_device_constants.h.orig	2024-03-06 00:14:49.086684200 +0000
 +++ components/storage_monitor/removable_device_constants.h
-@@ -15,7 +15,7 @@ namespace storage_monitor {
+@@ -14,7 +14,7 @@ namespace storage_monitor {
  extern const char kFSUniqueIdPrefix[];
  extern const char kVendorModelSerialPrefix[];
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  extern const char kVendorModelVolumeStoragePrefix[];
  #endif
  

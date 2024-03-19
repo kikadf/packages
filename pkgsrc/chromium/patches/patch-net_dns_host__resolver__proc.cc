@@ -1,13 +1,15 @@
 $NetBSD$
 
---- net/dns/host_resolver_proc.cc.orig	2020-07-15 18:56:00.000000000 +0000
+--- net/dns/host_resolver_proc.cc.orig	2024-03-06 00:14:56.603336800 +0000
 +++ net/dns/host_resolver_proc.cc
-@@ -159,7 +159,7 @@ int SystemHostResolverCall(const std::st
-   base::ScopedBlockingCall scoped_blocking_call(FROM_HERE,
-                                                 base::BlockingType::WILL_BLOCK);
+@@ -15,10 +15,6 @@
+ #include "net/base/net_errors.h"
+ #include "net/dns/host_resolver_system_task.h"
  
--#if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_OPENBSD) && \
-+#if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_BSD) && \
-     !defined(OS_ANDROID) && !defined(OS_FUCHSIA)
-   DnsReloaderMaybeReload();
- #endif
+-#if BUILDFLAG(IS_OPENBSD)
+-#define AI_ADDRCONFIG 0
+-#endif
+-
+ namespace net {
+ 
+ HostResolverProc* HostResolverProc::default_proc_ = nullptr;

@@ -1,13 +1,32 @@
 $NetBSD$
 
---- media/media_options.gni.orig	2020-07-15 18:55:59.000000000 +0000
+--- media/media_options.gni.orig	2024-03-06 00:14:55.047201900 +0000
 +++ media/media_options.gni
-@@ -155,7 +155,7 @@ declare_args() {
- # On Fuchsia, this is only enabled to build libclearkeycdm.so, the mojo CDM
- # service is not used.
- enable_library_cdms =
--    (is_linux && !is_chromecast) || is_mac || is_win || is_fuchsia
-+    ((is_linux || is_bsd) && !is_chromecast) || is_mac || is_win || is_fuchsia
+@@ -190,12 +190,15 @@ declare_args() {
+   # Enables runtime selection of ALSA library for audio.
+   use_alsa = false
  
- declare_args() {
-   # When enabled, this feature allows developers to use a runtime flag to
++  # Enable runtime selection of sndio(7)
++  use_sndio = false
++
+   # Alsa should be used on all non-Android, non-Mac POSIX systems - with the
+   # exception of CastOS desktop builds.
+   #
+   # TODO(crbug.com/1336055): Remove legacy target_cpu hack used for targeting
+   # desktop Chromecast builds.
+-  if (is_posix && !is_android && !is_apple &&
++  if (is_posix && !is_android && !is_apple && !is_bsd &&
+       (!is_castos || (target_cpu == "x86" || target_cpu == "x64") ||
+        is_cast_audio_only)) {
+     use_alsa = true
+@@ -212,6 +215,10 @@ declare_args() {
+       use_pulseaudio = true
+     }
+   }
++  if (is_openbsd) {
++    use_sndio = true
++    use_pulseaudio = false
++  }
+ }
+ 
+ # Use another declare_args() to include possible overrides of media_use_ffmpeg

@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ui/compositor/compositor.h.orig	2020-07-15 18:56:34.000000000 +0000
+--- ui/compositor/compositor.h.orig	2024-03-06 00:15:20.497411300 +0000
 +++ ui/compositor/compositor.h
-@@ -370,7 +370,7 @@ class COMPOSITOR_EXPORT Compositor : pub
-   void StopThroughtputTracker(TrackerId tracker_id) override;
-   void CancelThroughtputTracker(TrackerId tracker_id) override;
+@@ -461,7 +461,7 @@ class COMPOSITOR_EXPORT Compositor : pub
+   // base::PowerSuspendObserver:
+   void OnResume() override;
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
    void OnCompleteSwapWithNewSize(const gfx::Size& size);
- #endif
+ #endif  // BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
  

@@ -1,22 +1,14 @@
 $NetBSD$
 
---- components/autofill/core/browser/personal_data_manager.cc.orig	2020-07-08 21:40:39.000000000 +0000
+--- components/autofill/core/browser/personal_data_manager.cc.orig	2024-03-06 00:14:46.726479500 +0000
 +++ components/autofill/core/browser/personal_data_manager.cc
-@@ -1916,7 +1916,7 @@ bool PersonalDataManager::IsServerCard(c
- 
- bool PersonalDataManager::ShouldShowCardsFromAccountOption() const {
- // The feature is only for Linux, Windows and Mac.
--#if (!defined(OS_LINUX) && !defined(OS_WIN) && !defined(OS_MACOSX)) || \
-+#if (!defined(OS_LINUX) && !defined(OS_WIN) && !defined(OS_MACOSX) && !defined(OS_BSD)) || \
-     defined(OS_CHROMEOS)
-   return false;
- #else
-@@ -1940,7 +1940,7 @@ bool PersonalDataManager::ShouldShowCard
- 
-   // The option should only be shown if the user has not already opted-in.
-   return !is_opted_in;
--#endif  // (!defined(OS_LINUX) && !defined(OS_WIN) && !defined(OS_MACOSX)) ||
-+#endif  // (!defined(OS_LINUX) && !defined(OS_WIN) && !defined(OS_MACOSX) && !defined(OS_BSD)) ||
-         // defined(OS_CHROMEOS)
- }
- 
+@@ -2409,7 +2409,8 @@ bool PersonalDataManager::ShouldShowCard
+ // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
+-    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA) || \
++    BUILDFLAG(IS_BSD)
+   // This option should only be shown for users that have not enabled the Sync
+   // Feature and that have server credit cards available.
+   // TODO(crbug.com/1462552): Simplify once ConsentLevel::kSync and

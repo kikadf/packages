@@ -1,6 +1,6 @@
 $NetBSD$
 
---- skia/ext/platform_canvas.h.orig	2020-07-15 18:56:01.000000000 +0000
+--- skia/ext/platform_canvas.h.orig	2024-03-06 00:14:57.851445200 +0000
 +++ skia/ext/platform_canvas.h
 @@ -58,7 +58,7 @@ SK_API HDC GetNativeDrawingContext(SkCan
  

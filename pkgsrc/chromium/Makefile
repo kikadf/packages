@@ -1,3 +1,4 @@
+# $NetBSD$
 # $NetBSD:
 
 DISTNAME=			chromium-${VERSION}
@@ -10,7 +11,8 @@ PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
 REGRESS_DISTFILE0=		chromium-${VERSION}-testdata${EXTRACT_SUFX}
 REGRESS_DISTFILE1=		test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz
 
-DISTFILES+=			${PROFILE_DISTFILE} \
+DISTFILES+=			${DISTNAME}${EXTRACT_SUFX} \
+				${PROFILE_DISTFILE} \
 				${REGRESS_DISTFILE0} \
 				${REGRESS_DISTFILE1}
 
@@ -73,7 +75,7 @@ BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
 REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing pkg path
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
 SUBST_FILES.path+=	third_party/pdfium/core/fxge/fx_ge_linux.cpp
@@ -81,10 +83,11 @@ SUBST_FILES.path+=	third_party/pdfium/xfa/fgas/font/cfx_fontsourceenum_file.cpp
 SUBST_FILES.path+=	third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
 SUBST_VARS.path+=	PREFIX X11BASE
 
-.include "../../lang/llvm/version.mk"
+#.include "../../lang/llvm/version.mk"
 
 CFLAGS+=		-fno-stack-protector
-CFLAGS+=		-isystem${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/include # third_party/zlib with clang
+#CFLAGS+=		-isystem${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/include # third_party/zlib with clang
+CFLAGS+=		-isystem${PREFIX}/lib/clang/16/include # third_party/zlib with clang
 
 .include "options.mk"
 

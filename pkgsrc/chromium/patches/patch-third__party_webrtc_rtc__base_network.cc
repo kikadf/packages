@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/webrtc/rtc_base/network.cc.orig	2020-07-15 19:01:42.000000000 +0000
+--- third_party/webrtc/rtc_base/network.cc.orig	2024-03-06 00:16:10.001708700 +0000
 +++ third_party/webrtc/rtc_base/network.cc
-@@ -244,7 +244,12 @@ AdapterType GetAdapterTypeFromName(const
+@@ -292,7 +292,12 @@ AdapterType GetAdapterTypeFromName(absl:
    }
  #endif
  
@@ -14,4 +14,4 @@ $NetBSD$
 +#endif
  }
  
- NetworkManager::NetworkManager() {}
+ NetworkManager::EnumerationPermission NetworkManager::enumeration_permission()

@@ -1,31 +1,52 @@
 $NetBSD$
 
---- content/public/common/content_features.cc.orig	2020-07-08 21:41:48.000000000 +0000
+--- content/public/common/content_features.cc.orig	2024-03-06 00:14:51.294876000 +0000
 +++ content/public/common/content_features.cc
-@@ -48,7 +48,7 @@ const base::Feature kAudioServiceLaunchO
- const base::Feature kAudioServiceOutOfProcess {
-   "AudioServiceOutOfProcess",
- #if defined(OS_WIN) || defined(OS_MACOSX) || \
--    (defined(OS_LINUX) && !defined(OS_CHROMEOS))
-+    ((defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS))
-       base::FEATURE_ENABLED_BY_DEFAULT
+@@ -40,7 +40,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
+              "AudioServiceOutOfProcess",
+ // TODO(crbug.com/1052397): Remove !IS_CHROMEOS_LACROS once lacros starts being
+ // built with OS_CHROMEOS instead of OS_LINUX.
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD) || \
+     (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS))
+              base::FEATURE_ENABLED_BY_DEFAULT
  #else
-       base::FEATURE_DISABLED_BY_DEFAULT
-@@ -727,7 +727,7 @@ const base::Feature kWebAssemblyThreads 
- };
+@@ -52,7 +52,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
+ // kAudioServiceOutOfProcess feature is enabled.
+ BASE_FEATURE(kAudioServiceSandbox,
+              "AudioServiceSandbox",
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT
+@@ -664,7 +664,7 @@ BASE_FEATURE(kOverscrollHistoryNavigatio
+ // Setting to control overscroll history navigation.
+ BASE_FEATURE(kOverscrollHistoryNavigationSetting,
+              "OverscrollHistoryNavigationSetting",
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT
+@@ -1208,7 +1208,7 @@ BASE_FEATURE(kWebAssemblyTiering,
+ BASE_FEATURE(kWebAssemblyTrapHandler,
+              "WebAssemblyTrapHandler",
+ #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \
+-      BUILDFLAG(IS_MAC)) &&                                                 \
++      BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)) &&                            \
+      defined(ARCH_CPU_X86_64)) ||                                           \
+     (BUILDFLAG(IS_MAC) && defined(ARCH_CPU_ARM64))
+              base::FEATURE_ENABLED_BY_DEFAULT
+@@ -1250,7 +1250,11 @@ BASE_FEATURE(kWebUICodeCache,
  
- // Enable WebAssembly trap handler.
--#if (defined(OS_LINUX) || defined(OS_WIN) || defined(OS_MACOSX)) && \
-+#if (defined(OS_LINUX) || defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_BSD)) && \
-     defined(ARCH_CPU_X86_64)
- const base::Feature kWebAssemblyTrapHandler{"WebAssemblyTrapHandler",
-                                             base::FEATURE_ENABLED_BY_DEFAULT};
-@@ -757,7 +757,7 @@ const base::Feature kWebAuth{"WebAuthent
- // https://w3c.github.io/webauthn
- const base::Feature kWebAuthCable {
-   "WebAuthenticationCable",
--#if !defined(OS_CHROMEOS) && defined(OS_LINUX)
-+#if !defined(OS_CHROMEOS) && (defined(OS_LINUX) || defined(OS_BSD))
-       base::FEATURE_DISABLED_BY_DEFAULT
- #else
-       base::FEATURE_ENABLED_BY_DEFAULT
+ // Controls whether the WebUSB API is enabled:
+ // https://wicg.github.io/webusb
++#if BUILDFLAG(IS_BSD)
++BASE_FEATURE(kWebUsb, "WebUSB", base::FEATURE_DISABLED_BY_DEFAULT);
++#else
+ BASE_FEATURE(kWebUsb, "WebUSB", base::FEATURE_ENABLED_BY_DEFAULT);
++#endif
+ 
+ // Controls whether the WebXR Device API is enabled.
+ BASE_FEATURE(kWebXr, "WebXR", base::FEATURE_ENABLED_BY_DEFAULT);

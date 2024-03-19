@@ -1,13 +1,22 @@
 $NetBSD$
 
---- base/files/file_util_unittest.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- base/files/file_util_unittest.cc.orig	2024-03-06 00:14:36.953631000 +0000
 +++ base/files/file_util_unittest.cc
-@@ -3501,7 +3501,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
+@@ -3869,7 +3869,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }
- #endif  // defined(OS_WIN)
+ #endif  // BUILDFLAG(IS_WIN)
  
--#if defined(OS_POSIX) && !defined(OS_MACOSX)
-+#if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_FREEBSD)
+-#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE)
++#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_BSD)
  TEST_F(FileUtilTest, ReadFileToStringWithProcFileSystem) {
    FilePath file_path("/proc/cpuinfo");
    std::string data = "temp";
+@@ -4592,7 +4592,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
+                 NULL);
+ #else
+     size_t bytes_written =
+-        ::write(::fileno(output_file.get()), content.c_str(), content.length());
++        ::write(fileno(output_file.get()), content.c_str(), content.length());
+ #endif
+     EXPECT_EQ(content.length(), bytes_written);
+     ::fflush(output_file.get());

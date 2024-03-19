@@ -1,57 +1,94 @@
 $NetBSD$
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2020-07-08 21:41:47.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-03-06 00:14:43.794225000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -234,11 +234,11 @@
- #include "chrome/browser/ui/webui/conflicts/conflicts_ui.h"
+@@ -209,7 +209,7 @@
+ #include "chrome/browser/ui/webui/chromeos/chrome_url_disabled/chrome_url_disabled_ui.h"
  #endif
  
--#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/ui/webui/webui_js_error/webui_js_error_ui.h"
+ #endif
+ 
+@@ -235,17 +235,17 @@
+ #endif
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/discards/discards_ui.h"
  #endif
  
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/sandbox/sandbox_internals_ui.h"
  #endif
  
-@@ -382,7 +382,7 @@ bool IsAboutUI(const GURL& url) {
- #if !defined(OS_ANDROID)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS_ASH)
++    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/ui/webui/connectors_internals/connectors_internals_ui.h"
+ #endif
+ 
+@@ -403,7 +403,7 @@ bool IsAboutUI(const GURL& url) {
+ #if !BUILDFLAG(IS_ANDROID)
            || url.host_piece() == chrome::kChromeUITermsHost
  #endif
--#if defined(OS_LINUX) || defined(OS_OPENBSD)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OPENBSD)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
            || url.host_piece() == chrome::kChromeUILinuxProxyConfigHost
  #endif
- #if defined(OS_CHROMEOS)
-@@ -755,7 +755,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+ #if BUILDFLAG(IS_CHROMEOS_ASH)
+@@ -654,7 +654,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+   if (url.host_piece() == chrome::kChromeUIMobileSetupHost)
+     return &NewWebUI<ash::cellular_setup::MobileSetupUI>;
+ #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   if (url.host_piece() == chrome::kChromeUIWebUIJsErrorHost)
+     return &NewWebUI<WebUIJsErrorUI>;
+ #endif
+@@ -710,7 +710,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    if (url.host_piece() == chrome::kChromeUINaClHost)
      return &NewWebUI<NaClUI>;
  #endif
--#if (defined(OS_LINUX) && defined(TOOLKIT_VIEWS)) || defined(USE_AURA)
-+#if ((defined(OS_LINUX) || defined(OS_BSD)) && defined(TOOLKIT_VIEWS)) || defined(USE_AURA)
+-#if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
++#if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && \
+      defined(TOOLKIT_VIEWS)) ||                         \
+     defined(USE_AURA)
    if (url.host_piece() == chrome::kChromeUITabModalConfirmDialogHost)
-     return &NewWebUI<ConstrainedWebDialogUI>;
- #endif
-@@ -803,17 +803,17 @@ WebUIFactoryFunction GetWebUIFactoryFunc
-     return &NewWebUI<media_router::MediaRouterInternalsUI>;
+@@ -771,27 +771,27 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    }
  #endif
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
    if (url.host_piece() == chrome::kChromeUISandboxHost) {
      return &NewWebUI<SandboxInternalsUI>;
    }
  #endif
--#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS_ASH)
++    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+   if (url.host_piece() == chrome::kChromeUIConnectorsInternalsHost)
+     return &NewWebUI<enterprise_connectors::ConnectorsInternalsUI>;
+ #endif
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (url.host_piece() == chrome::kChromeUIDiscardsHost)
      return &NewWebUI<DiscardsUI>;
  #endif
- #if defined(OS_WIN) || defined(OS_MACOSX) || \
--    (defined(OS_LINUX) && !defined(OS_CHROMEOS))
-+    ((defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS))
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (url.host_piece() == chrome::kChromeUIBrowserSwitchHost)
      return &NewWebUI<BrowserSwitchUI>;
+ #endif
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+   if (url.host_piece() == chrome::kChromeUIWebAppSettingsHost)
+     return &NewWebUI<WebAppSettingsUI>;
  #endif

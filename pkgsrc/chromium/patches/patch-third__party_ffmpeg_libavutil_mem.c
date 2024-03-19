@@ -1,14 +1,14 @@
 $NetBSD$
 
---- third_party/ffmpeg/libavutil/mem.c.orig	2020-07-15 19:01:34.000000000 +0000
+--- third_party/ffmpeg/libavutil/mem.c.orig	2024-03-06 00:15:55.236426800 +0000
 +++ third_party/ffmpeg/libavutil/mem.c
-@@ -32,9 +32,6 @@
- #include <stdint.h>
+@@ -33,9 +33,6 @@
  #include <stdlib.h>
+ #include <stdatomic.h>
  #include <string.h>
 -#if HAVE_MALLOC_H
 -#include <malloc.h>
 -#endif
  
+ #include "attributes.h"
  #include "avassert.h"
- #include "avutil.h"

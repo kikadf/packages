@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- sandbox/policy/mojom/sandbox.mojom.orig	2024-03-06 00:14:57.543418400 +0000
++++ sandbox/policy/mojom/sandbox.mojom
+@@ -77,6 +77,15 @@ enum Sandbox {
+   [EnableIf=is_fuchsia]
+   kVideoCapture,
+ 
++  [EnableIf=is_openbsd]
++  kVideoCapture,
++
++  [EnableIf=is_netbsd]
++  kVideoCapture,
++
++  [EnableIf=is_freebsd]
++  kVideoCapture,
++
+   // Allows access to file contents and Windows APIs for parsing icons from PE
+   // files.
+   [EnableIf=is_win]

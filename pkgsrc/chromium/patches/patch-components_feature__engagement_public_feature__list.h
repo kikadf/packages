@@ -1,22 +1,58 @@
 $NetBSD$
 
---- components/feature_engagement/public/feature_list.h.orig	2020-07-08 21:40:39.000000000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2024-03-06 00:14:47.254525200 +0000
 +++ components/feature_engagement/public/feature_list.h
-@@ -116,7 +116,7 @@ DEFINE_VARIATION_PARAM(kIPHBadgedTransla
- #endif  // defined(OS_IOS)
+@@ -288,7 +288,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPromoStayS
+ #endif  // BUILDFLAG(IS_IOS)
  
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
- DEFINE_VARIATION_PARAM(kIPHDesktopTabGroupsNewGroupFeature,
-                        "IPH_DesktopTabGroupsNewGroup");
- DEFINE_VARIATION_PARAM(kIPHFocusModeFeature, "IPH_FocusMode");
-@@ -184,7 +184,7 @@ constexpr flags_ui::FeatureEntry::Featur
-         VARIATION_ENTRY(kIPHBadgedReadingListFeature),
-         VARIATION_ENTRY(kIPHBadgedTranslateManualTriggerFeature),
- #elif defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
-         VARIATION_ENTRY(kIPHDesktopTabGroupsNewGroupFeature),
-         VARIATION_ENTRY(kIPHFocusModeFeature),
-         VARIATION_ENTRY(kIPHGlobalMediaControls),
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+ DEFINE_VARIATION_PARAM(kIPHBatterySaverModeFeature, "IPH_BatterySaverMode");
+ DEFINE_VARIATION_PARAM(kIPHCompanionSidePanelFeature, "IPH_CompanionSidePanel");
+ DEFINE_VARIATION_PARAM(kIPHCompanionSidePanelRegionSearchFeature,
+@@ -386,7 +386,7 @@ DEFINE_VARIATION_PARAM(kIPHBackNavigatio
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
+     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
+ DEFINE_VARIATION_PARAM(kIPHAutofillExternalAccountProfileSuggestionFeature,
+                        "IPH_AutofillExternalAccountProfileSuggestion");
+@@ -470,7 +470,7 @@ DEFINE_VARIATION_PARAM(kIPHScalableIphHe
+ DEFINE_VARIATION_PARAM(kIPHScalableIphGamingFeature, "IPH_ScalableIphGaming");
+ #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunch,
+                        "IPH_DesktopPWAsLinkCapturingLaunch");
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -615,7 +615,7 @@ constexpr flags_ui::FeatureEntry::Featur
+         VARIATION_ENTRY(kIPHiOSPromoMadeForIOSFeature),
+         VARIATION_ENTRY(kIPHiOSPromoStaySafeFeature),
+ #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+         VARIATION_ENTRY(kIPHBatterySaverModeFeature),
+         VARIATION_ENTRY(kIPHCompanionSidePanelFeature),
+         VARIATION_ENTRY(kIPHCompanionSidePanelRegionSearchFeature),
+@@ -672,7 +672,7 @@ constexpr flags_ui::FeatureEntry::Featur
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
+     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
+         VARIATION_ENTRY(kIPHAutofillExternalAccountProfileSuggestionFeature),
+         VARIATION_ENTRY(kIPHAutofillVirtualCardCVCSuggestionFeature),
+@@ -720,7 +720,7 @@ constexpr flags_ui::FeatureEntry::Featur
+         VARIATION_ENTRY(kIPHScalableIphGamingFeature),
+ #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+         VARIATION_ENTRY(kIPHDesktopPWAsLinkCapturingLaunch),
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 

@@ -1,13 +1,13 @@
 $NetBSD$
 
---- base/profiler/stack_sampling_profiler_unittest.cc.orig	2020-07-08 21:41:45.000000000 +0000
+--- base/profiler/stack_sampling_profiler_unittest.cc.orig	2024-03-06 00:14:37.033638000 +0000
 +++ base/profiler/stack_sampling_profiler_unittest.cc
 @@ -41,7 +41,7 @@
  #include <intrin.h>
  #include <malloc.h>
  #include <windows.h>
 -#else
-+#elif defined(OS_LINUX)
++#elif !BUILDFLAG(IS_BSD)
  #include <alloca.h>
  #endif
  

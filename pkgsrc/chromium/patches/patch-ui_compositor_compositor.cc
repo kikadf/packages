@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ui/compositor/compositor.cc.orig	2020-07-15 18:56:34.000000000 +0000
+--- ui/compositor/compositor.cc.orig	2024-03-06 00:15:20.493410800 +0000
 +++ ui/compositor/compositor.cc
-@@ -731,7 +731,7 @@ void Compositor::CancelThroughtputTracke
-   throughput_tracker_map_.erase(tracker_id);
+@@ -894,7 +894,7 @@ void Compositor::OnResume() {
+     obs.ResetIfActive();
  }
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
  void Compositor::OnCompleteSwapWithNewSize(const gfx::Size& size) {
    for (auto& observer : observer_list_)
      observer.OnCompositingCompleteSwapWithNewSize(this, size);

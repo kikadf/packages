@@ -1,13 +1,13 @@
 $NetBSD$
 
---- components/autofill/core/common/autofill_util.cc.orig	2020-07-08 21:40:39.000000000 +0000
+--- components/autofill/core/common/autofill_util.cc.orig	2024-03-06 00:14:46.754481800 +0000
 +++ components/autofill/core/common/autofill_util.cc
-@@ -213,7 +213,7 @@ bool SanitizedFieldIsEmpty(const base::s
- }
+@@ -130,7 +130,7 @@ bool SanitizedFieldIsEmpty(const std::u1
  
  bool ShouldAutoselectFirstSuggestionOnArrowDown() {
--#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    return true;
  #else
    return false;

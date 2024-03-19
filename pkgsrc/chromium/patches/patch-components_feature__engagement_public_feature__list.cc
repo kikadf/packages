@@ -1,13 +1,31 @@
 $NetBSD$
 
---- components/feature_engagement/public/feature_list.cc.orig	2020-07-08 21:40:39.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2024-03-06 00:14:47.254525200 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -62,7 +62,7 @@ const base::Feature* const kAllFeatures[
-     &kIPHBadgedTranslateManualTriggerFeature,
- #endif  // defined(OS_IOS)
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
-     &kIPHDesktopTabGroupsNewGroupFeature,
-     &kIPHFocusModeFeature,
-     &kIPHGlobalMediaControlsFeature,
+@@ -157,7 +157,7 @@ const base::Feature* const kAllFeatures[
+     &kIPHiOSPromoStaySafeFeature,
+ #endif  // BUILDFLAG(IS_IOS)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+     &kIPHBatterySaverModeFeature,
+     &kIPHCompanionSidePanelFeature,
+     &kIPHCompanionSidePanelRegionSearchFeature,
+@@ -214,7 +214,7 @@ const base::Feature* const kAllFeatures[
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
+     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
+     &kIPHAutofillExternalAccountProfileSuggestionFeature,
+     &kIPHAutofillVirtualCardCVCSuggestionFeature,
+@@ -262,7 +262,7 @@ const base::Feature* const kAllFeatures[
+     &kIPHScalableIphGamingFeature,
+ #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     &kIPHDesktopPWAsLinkCapturingLaunch,
+ #endif  // BUILDFLAG(IS_WIN) ||  BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 

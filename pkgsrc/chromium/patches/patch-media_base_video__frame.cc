@@ -1,67 +1,76 @@
 $NetBSD$
 
---- media/base/video_frame.cc.orig	2020-07-08 21:40:45.000000000 +0000
+--- media/base/video_frame.cc.orig	2024-03-06 00:14:54.839183800 +0000
 +++ media/base/video_frame.cc
-@@ -57,7 +57,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -80,7 +80,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
      case VideoFrame::STORAGE_SHMEM:
        return "SHMEM";
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      case VideoFrame::STORAGE_DMABUFS:
        return "DMABUFS";
  #endif
-@@ -74,7 +74,7 @@ std::string VideoFrame::StorageTypeToStr
+@@ -95,7 +95,7 @@ std::string VideoFrame::StorageTypeToStr
  // static
  bool VideoFrame::IsStorageTypeMappable(VideoFrame::StorageType storage_type) {
    return
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
        // This is not strictly needed but makes explicit that, at VideoFrame
        // level, DmaBufs are not mappable from userspace.
        storage_type != VideoFrame::STORAGE_DMABUFS &&
-@@ -259,7 +259,7 @@ static base::Optional<VideoFrameLayout> 
+@@ -306,7 +306,7 @@ static absl::optional<VideoFrameLayout> 
    return VideoFrameLayout::CreateWithPlanes(format, coded_size, planes);
  }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  // This class allows us to embed a vector<ScopedFD> into a scoped_refptr, and
  // thus to have several VideoFrames share the same set of DMABUF FDs.
  class VideoFrame::DmabufHolder
-@@ -589,7 +589,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -636,7 +636,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+   for (size_t i = 0; i < num_planes; ++i)
+     planes[i].stride = gpu_memory_buffer->stride(i);
+   uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   if (gpu_memory_buffer->GetType() == gfx::NATIVE_PIXMAP) {
+     const auto gmb_handle = gpu_memory_buffer->CloneHandle();
+     if (gmb_handle.is_null() ||
+@@ -682,7 +682,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -725,7 +725,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -901,7 +901,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
      }
    }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    DCHECK(frame->dmabuf_fds_);
    // If there are any |dmabuf_fds_| plugged in, we should refer them too.
    wrapping_frame->dmabuf_fds_ = frame->dmabuf_fds_;
-@@ -1058,7 +1058,7 @@ VideoFrame::mailbox_holder(size_t textur
+@@ -1312,7 +1312,7 @@ const gpu::MailboxHolder& VideoFrame::ma
                          : mailbox_holders_[texture_index];
  }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
- const std::vector<base::ScopedFD>& VideoFrame::DmabufFds() const {
-   DCHECK_EQ(storage_type_, STORAGE_DMABUFS);
- 
-@@ -1141,7 +1141,7 @@ VideoFrame::VideoFrame(const VideoFrameL
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ size_t VideoFrame::NumDmabufFds() const {
+   return dmabuf_fds_->size();
+ }
+@@ -1429,7 +1429,7 @@ VideoFrame::VideoFrame(const VideoFrameL
        storage_type_(storage_type),
        visible_rect_(Intersection(visible_rect, gfx::Rect(layout.coded_size()))),
        natural_size_(natural_size),
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
        dmabuf_fds_(base::MakeRefCounted<DmabufHolder>()),
  #endif
        timestamp_(timestamp),

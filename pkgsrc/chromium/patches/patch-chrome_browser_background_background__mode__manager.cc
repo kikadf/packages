@@ -1,13 +1,13 @@
 $NetBSD$
 
---- chrome/browser/background/background_mode_manager.cc.orig	2020-07-08 21:40:33.000000000 +0000
+--- chrome/browser/background/background_mode_manager.cc.orig	2024-03-06 00:14:40.573945300 +0000
 +++ chrome/browser/background/background_mode_manager.cc
-@@ -849,7 +849,7 @@ gfx::ImageSkia GetStatusTrayIcon() {
+@@ -869,7 +869,7 @@ gfx::ImageSkia GetStatusTrayIcon() {
      return gfx::ImageSkia();
  
    return family->CreateExact(size).AsImageSkia();
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    return *ui::ResourceBundle::GetSharedInstance().GetImageSkiaNamed(
        IDR_PRODUCT_LOGO_128);
- #elif defined(OS_MACOSX)
+ #elif BUILDFLAG(IS_MAC)

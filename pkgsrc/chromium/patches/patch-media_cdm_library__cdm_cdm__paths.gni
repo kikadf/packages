@@ -1,8 +1,8 @@
 $NetBSD$
 
---- media/cdm/library_cdm/cdm_paths.gni.orig	2020-07-15 18:55:59.000000000 +0000
+--- media/cdm/library_cdm/cdm_paths.gni.orig	2024-03-06 00:14:54.911190000 +0000
 +++ media/cdm/library_cdm/cdm_paths.gni
-@@ -11,7 +11,7 @@
+@@ -15,7 +15,7 @@ assert(enable_library_cdms)
  # Explicitly define what we use to avoid confusion.
  if (is_chromeos) {
    component_os = "cros"

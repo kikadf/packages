@@ -1,35 +1,40 @@
 $NetBSD$
 
---- content/renderer/render_thread_impl.cc.orig	2020-07-08 21:41:48.000000000 +0000
+--- content/renderer/render_thread_impl.cc.orig	2024-03-06 00:14:51.362882000 +0000
 +++ content/renderer/render_thread_impl.cc
-@@ -177,6 +177,12 @@
+@@ -203,6 +203,8 @@
  
- #if defined(OS_MACOSX)
+ #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
-+#elif defined(OS_BSD)
++#elif BUILDFLAG(IS_BSD)
 +#include <stdlib.h>
-+#include <stddef.h>
-+#include <stdint.h>
-+#include <sys/param.h>
-+#include <sys/sysctl.h>
  #else
  #include <malloc.h>
  #endif
-@@ -752,7 +758,7 @@ void RenderThreadImpl::Init() {
-   DCHECK(parsed_num_raster_threads) << string_value;
-   DCHECK_GT(num_raster_threads, 0);
+@@ -942,7 +944,7 @@ media::GpuVideoAcceleratorFactories* Ren
+                              kGpuStreamIdMedia, kGpuStreamPriorityMedia);
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   categorized_worker_pool_->SetBackgroundingCallback(
-       main_thread_scheduler_->DefaultTaskRunner(),
-       base::BindOnce(
-@@ -775,7 +781,7 @@ void RenderThreadImpl::Init() {
-   base::DiscardableMemoryAllocator::SetInstance(
-       discardable_memory_allocator_.get());
+   const bool enable_video_decode_accelerator =
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       base::FeatureList::IsEnabled(media::kVaapiVideoDecodeLinux) &&
+ #endif  // BUILDFLAG(IS_LINUX)
+       !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoDecode) &&
+@@ -951,7 +953,7 @@ media::GpuVideoAcceleratorFactories* Ren
+        gpu::kGpuFeatureStatusEnabled);
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   if (base::FeatureList::IsEnabled(
-           blink::features::kBlinkCompositorUseDisplayThreadPriority)) {
-     render_message_filter()->SetThreadPriority(
+   const bool enable_video_encode_accelerator =
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       base::FeatureList::IsEnabled(media::kVaapiVideoEncodeLinux) &&
+ #else
+       !cmd_line->HasSwitch(switches::kDisableAcceleratedVideoEncode) &&
+@@ -1740,7 +1742,7 @@ std::unique_ptr<CodecFactory> RenderThre
+     bool enable_video_encode_accelerator) {
+   mojo::PendingRemote<media::mojom::VideoEncodeAcceleratorProvider>
+       vea_provider;
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   if (base::FeatureList::IsEnabled(media::kUseOutOfProcessVideoEncoding)) {
+     BindHostReceiver(vea_provider.InitWithNewPipeAndPassReceiver());
+   } else {

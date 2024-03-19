@@ -1,13 +1,13 @@
 $NetBSD$
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2020-07-08 21:40:41.000000000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2024-03-06 00:14:50.246785200 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
-@@ -157,7 +157,7 @@ class RootCompositorFrameSinkImpl : publ
-   base::TimeDelta preferred_frame_interval_ =
-       FrameRateDecider::UnspecifiedFrameInterval();
+@@ -210,7 +210,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
+   // to actually unref.
+   LocalSurfaceId to_evict_on_next_draw_and_swap_ = LocalSurfaceId();
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
    gfx::Size last_swap_pixel_size_;
- #endif
+ #endif  // BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
  

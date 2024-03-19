@@ -1,10 +1,10 @@
 $NetBSD$
 
---- components/update_client/update_query_params.cc.orig	2020-07-08 21:40:41.000000000 +0000
+--- components/update_client/update_query_params.cc.orig	2024-03-06 00:14:50.110773300 +0000
 +++ components/update_client/update_query_params.cc
-@@ -39,6 +39,10 @@ const char kOs[] =
+@@ -42,6 +42,10 @@ const char kOs[] =
      "fuchsia";
- #elif defined(OS_OPENBSD)
+ #elif BUILDFLAG(IS_OPENBSD)
      "openbsd";
 +#elif defined(OS_FREEBSD)
 +    "freebsd";

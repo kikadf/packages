@@ -1,13 +1,22 @@
 $NetBSD$
 
---- content/public/common/content_switches.cc.orig	2020-07-08 21:41:48.000000000 +0000
+--- content/public/common/content_switches.cc.orig	2024-03-06 00:14:51.294876000 +0000
 +++ content/public/common/content_switches.cc
-@@ -975,7 +975,7 @@ const char kEnableAggressiveDOMStorageFl
- // Enable indication that browser is controlled by automation.
- const char kEnableAutomation[] = "enable-automation";
+@@ -366,6 +366,8 @@ const char kEnableIsolatedWebAppsInRende
+ // builds.
+ const char kEnableLogging[]                 = "enable-logging";
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
++const char kDisableUnveil[]                 = "disable-unveil";
++
+ // Enables the type, downlinkMax attributes of the NetInfo API. Also, enables
+ // triggering of change attribute of the NetInfo API when there is a change in
+ // the connection type.
+@@ -1009,7 +1011,7 @@ const char kPreventResizingContentsForTe
+ 
+ // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  // Allows sending text-to-speech requests to speech-dispatcher, a common
  // Linux speech service. Because it's buggy, the user must explicitly
  // enable it so that visiting a random webpage can't cause instability.

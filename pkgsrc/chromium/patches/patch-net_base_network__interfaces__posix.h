@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/base/network_interfaces_posix.h.orig	2020-07-15 18:56:00.000000000 +0000
+--- net/base/network_interfaces_posix.h.orig	2024-03-06 00:14:56.331313400 +0000
 +++ net/base/network_interfaces_posix.h
 @@ -8,6 +8,8 @@
  // This file provides some basic functionality shared between

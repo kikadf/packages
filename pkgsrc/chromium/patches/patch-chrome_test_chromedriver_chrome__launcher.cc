@@ -1,15 +1,12 @@
 $NetBSD$
 
---- chrome/test/chromedriver/chrome_launcher.cc.orig	2020-07-08 21:41:47.000000000 +0000
+--- chrome/test/chromedriver/chrome_launcher.cc.orig	2024-03-06 00:14:44.294268400 +0000
 +++ chrome/test/chromedriver/chrome_launcher.cc
-@@ -69,6 +69,10 @@
- #include "chrome/test/chromedriver/keycode_text_conversion.h"
- #endif
- 
-+#if defined(OS_BSD)
+@@ -73,6 +73,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
 +#include <sys/wait.h>
-+#endif
-+
- namespace {
- 
- const char* const kCommonSwitches[] = {
+ #include <unistd.h>
+ #elif BUILDFLAG(IS_WIN)
+ #include <windows.h>

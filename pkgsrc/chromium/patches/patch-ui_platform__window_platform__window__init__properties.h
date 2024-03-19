@@ -1,22 +1,22 @@
 $NetBSD$
 
---- ui/platform_window/platform_window_init_properties.h.orig	2020-07-15 18:56:34.000000000 +0000
+--- ui/platform_window/platform_window_init_properties.h.orig	2024-03-06 00:15:20.857442400 +0000
 +++ ui/platform_window/platform_window_init_properties.h
-@@ -41,7 +41,7 @@ enum class PlatformWindowOpacity {
+@@ -56,7 +56,7 @@ class WorkspaceExtensionDelegate;
+ class ScenicWindowDelegate;
+ #endif
  
- class WorkspaceExtensionDelegate;
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  class X11ExtensionDelegate;
  #endif
  
-@@ -82,7 +82,7 @@ struct COMPONENT_EXPORT(PLATFORM_WINDOW)
+@@ -118,7 +118,7 @@ struct COMPONENT_EXPORT(PLATFORM_WINDOW)
  
-   WorkspaceExtensionDelegate* workspace_extension_delegate = nullptr;
+   PlatformWindowShadowType shadow_type = PlatformWindowShadowType::kDefault;
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    bool prefer_dark_theme = false;
-   gfx::ImageSkia* icon = nullptr;
-   base::Optional<int> background_color;
+   raw_ptr<gfx::ImageSkia> icon = nullptr;
+   absl::optional<SkColor> background_color;

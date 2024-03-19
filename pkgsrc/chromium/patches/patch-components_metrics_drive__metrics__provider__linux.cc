@@ -1,12 +1,12 @@
 $NetBSD$
 
---- components/metrics/drive_metrics_provider_linux.cc.orig	2020-07-08 21:40:39.000000000 +0000
+--- components/metrics/drive_metrics_provider_linux.cc.orig	2024-03-06 00:14:47.478544700 +0000
 +++ components/metrics/drive_metrics_provider_linux.cc
 @@ -4,7 +4,13 @@
  
  #include "components/metrics/drive_metrics_provider.h"
  
-+#if defined(OS_BSD)
++#if BUILDFLAG(IS_BSD)
 +#include <sys/types.h>
 +#define MAJOR(dev) major(dev)
 +#define MINOR(dev) minor(dev)

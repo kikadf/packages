@@ -1,12 +1,14 @@
 $NetBSD$
 
---- third_party/perfetto/src/tracing/core/tracing_service_impl.cc.orig	2020-06-25 09:34:48.000000000 +0000
+--- third_party/perfetto/src/tracing/core/tracing_service_impl.cc.orig	2024-03-06 00:16:06.813432000 +0000
 +++ third_party/perfetto/src/tracing/core/tracing_service_impl.cc
-@@ -2458,6 +2458,7 @@ void TracingServiceImpl::SnapshotClocks(
+@@ -3244,7 +3244,8 @@ bool TracingServiceImpl::SnapshotClocks(
  
- #if !PERFETTO_BUILDFLAG(PERFETTO_OS_MACOSX) && \
-     !PERFETTO_BUILDFLAG(PERFETTO_OS_WIN) &&    \
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_NETBSD) &&    \
-     !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL)
+ #if !PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) && \
+     !PERFETTO_BUILDFLAG(PERFETTO_OS_WIN) &&   \
+-    !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL)
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
    struct {
      clockid_t id;
+     protos::pbzero::BuiltinClock type;

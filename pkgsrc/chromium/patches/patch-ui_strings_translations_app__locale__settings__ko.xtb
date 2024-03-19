@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/strings/translations/app_locale_settings_ko.xtb.orig	2024-03-06 00:15:20.877444300 +0000
++++ ui/strings/translations/app_locale_settings_ko.xtb
+@@ -12,7 +12,7 @@
+ <if expr="is_ios">
+   <translation id="IDS_WEB_FONT_FAMILY">Helvetica,Apple SD Gothic Neo,AppleGothic,sans-serif</translation>
+ </if>
+-<if expr="is_linux">
++<if expr="is_posix">
+   <translation id="IDS_WEB_FONT_FAMILY">Noto Sans CJK KR,NanumGothic,UnDotum,Baekmuk Gulim,sans-serif</translation>
+ </if>
+ <if expr="is_chromeos">

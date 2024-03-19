@@ -1,22 +1,13 @@
 $NetBSD$
 
---- content/shell/app/shell_main_delegate.cc.orig	2020-07-08 21:41:48.000000000 +0000
+--- content/shell/app/shell_main_delegate.cc.orig	2024-03-06 00:14:51.394884800 +0000
 +++ content/shell/app/shell_main_delegate.cc
-@@ -181,7 +181,7 @@ bool ShellMainDelegate::BasicStartupComp
- }
- 
- void ShellMainDelegate::PreSandboxStartup() {
--#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || defined(OS_LINUX))
-+#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || (defined(OS_LINUX) || defined(OS_BSD))
-   // Create an instance of the CPU class to parse /proc/cpuinfo and cache
-   // cpu_brand info.
-   base::CPU cpu_info;
-@@ -200,7 +200,7 @@ void ShellMainDelegate::PreSandboxStartu
+@@ -227,7 +227,7 @@ void ShellMainDelegate::PreSandboxStartu
      // Reporting for sub-processes will be initialized in ZygoteForked.
-     if (process_type != service_manager::switches::kZygoteProcess) {
+     if (process_type != switches::kZygoteProcess) {
        crash_reporter::InitializeCrashpad(process_type.empty(), process_type);
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
        crash_reporter::SetFirstChanceExceptionHandler(
            v8::TryHandleWebAssemblyTrapPosix);
  #endif

@@ -1,22 +1,13 @@
 $NetBSD$
 
---- content/renderer/render_process_impl.cc.orig	2020-07-08 21:40:42.000000000 +0000
+--- content/renderer/render_process_impl.cc.orig	2024-03-06 00:14:51.362882000 +0000
 +++ content/renderer/render_process_impl.cc
 @@ -44,7 +44,7 @@
- #if defined(OS_WIN)
- #include "base/win/win_util.h"
- #endif
--#if defined(OS_LINUX) && defined(ARCH_CPU_X86_64)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && defined(ARCH_CPU_X86_64)
- #include "v8/include/v8-wasm-trap-handler-posix.h"
- #endif
- namespace {
-@@ -161,7 +161,7 @@ RenderProcessImpl::RenderProcessImpl()
+ #include "third_party/blink/public/web/web_frame.h"
+ #include "v8/include/v8-initialization.h"
  
-   SetV8FlagIfNotFeature(features::kWebAssemblyTrapHandler,
-                         "--no-wasm-trap-handler");
--#if defined(OS_LINUX) && defined(ARCH_CPU_X86_64)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && defined(ARCH_CPU_X86_64)
-   if (base::FeatureList::IsEnabled(features::kWebAssemblyTrapHandler)) {
-     base::CommandLine* command_line = base::CommandLine::ForCurrentProcess();
-     if (!command_line->HasSwitch(
+-#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && \
+     (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM64))
+ #define ENABLE_WEB_ASSEMBLY_TRAP_HANDLER_LINUX
+ #endif

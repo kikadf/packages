@@ -1,22 +1,22 @@
 $NetBSD$
 
---- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2020-07-08 21:40:35.000000000 +0000
+--- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-03-06 00:14:42.502112600 +0000
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
-@@ -25,7 +25,7 @@
- #endif  // defined(OS_ANDROID)
+@@ -23,7 +23,7 @@
+ #endif  // BUILDFLAG(IS_ANDROID)
  
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/sharing/shared_clipboard/remote_copy_message_handler.h"
- #endif  // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-         // defined(OS_CHROMEOS)
-@@ -74,7 +74,7 @@ SharingHandlerRegistryImpl::SharingHandl
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS_LACROS)) BUILDFLAG(IS_CHROMEOS)
+@@ -78,7 +78,7 @@ SharingHandlerRegistryImpl::SharingHandl
    }
  
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (sharing_device_registration->IsRemoteCopySupported()) {
      AddSharingHandler(
          std::make_unique<RemoteCopyMessageHandler>(profile),

@@ -1,13 +1,13 @@
 $NetBSD$
 
---- device/gamepad/hid_writer_linux.cc.orig	2020-07-08 21:40:43.000000000 +0000
+--- device/gamepad/hid_writer_linux.cc.orig	2024-03-06 00:14:52.078944200 +0000
 +++ device/gamepad/hid_writer_linux.cc
-@@ -4,6 +4,8 @@
- 
- #include "device/gamepad/hid_writer_linux.h"
+@@ -2,6 +2,8 @@
+ // Use of this source code is governed by a BSD-style license that can be
+ // found in the LICENSE file.
  
 +#include <unistd.h>
 +
- #include "base/posix/eintr_wrapper.h"
+ #include "device/gamepad/hid_writer_linux.h"
  
- namespace device {
+ #include <unistd.h>

@@ -1,22 +1,22 @@
 $NetBSD$
 
---- content/browser/renderer_host/pepper/pepper_file_io_host.cc.orig	2020-07-08 21:40:42.000000000 +0000
+--- content/browser/renderer_host/pepper/pepper_file_io_host.cc.orig	2024-03-06 00:14:50.726826700 +0000
 +++ content/browser/renderer_host/pepper/pepper_file_io_host.cc
-@@ -433,7 +433,7 @@ void PepperFileIOHost::OnLocalFileOpened
+@@ -462,7 +462,7 @@ void PepperFileIOHost::OnLocalFileOpened
      ppapi::host::ReplyMessageContext reply_context,
      const base::FilePath& path,
      base::File::Error error_code) {
--#if defined(OS_WIN) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Quarantining a file before its contents are available is only supported on
    // Windows and Linux.
    if (!FileOpenForWrite(open_flags_) || error_code != base::File::FILE_OK) {
-@@ -454,7 +454,7 @@ void PepperFileIOHost::OnLocalFileOpened
+@@ -496,7 +496,7 @@ void PepperFileIOHost::OnLocalFileOpened
  #endif
  }
  
--#if defined(OS_WIN) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  void PepperFileIOHost::OnLocalFileQuarantined(
      ppapi::host::ReplyMessageContext reply_context,
      const base::FilePath& path,

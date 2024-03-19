@@ -1,22 +1,13 @@
 $NetBSD$
 
---- base/base_switches.h.orig	2020-06-25 09:31:18.000000000 +0000
+--- base/base_switches.h.orig	2024-03-06 00:14:36.925628700 +0000
 +++ base/base_switches.h
-@@ -38,7 +38,7 @@ extern const char kDisableHighResTimer[]
- extern const char kDisableUsbKeyboardDetect[];
+@@ -60,7 +60,7 @@ extern const char kPackageVersionName[];
+ extern const char kPackageVersionCode[];
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
- extern const char kDisableDevShmUsage[];
- #endif
- 
-@@ -51,7 +51,7 @@ extern const char kEnableReachedCodeProf
- extern const char kOrderfileMemoryOptimization[];
- #endif
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
- extern const char kEnableThreadInstructionCount[];
- #endif
- 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ // TODO(crbug.com/1176772): Remove kEnableCrashpad and IsCrashpadEnabled() when
+ // Crashpad is fully enabled on Linux.
+ extern const char kEnableCrashpad[];

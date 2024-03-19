@@ -1,27 +1,25 @@
 $NetBSD$
 
---- base/process/process_iterator.h.orig	2020-06-25 09:31:18.000000000 +0000
+--- base/process/process_iterator.h.orig	2024-03-06 00:14:37.021637000 +0000
 +++ base/process/process_iterator.h
 @@ -24,7 +24,7 @@
- #if defined(OS_WIN)
  #include <windows.h>
+ 
  #include <tlhelp32.h>
--#elif defined(OS_MACOSX) || defined(OS_OPENBSD)
-+#elif defined(OS_MACOSX) || defined(OS_OPENBSD) || defined(OS_NETBSD)
+-#elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_OPENBSD)
++#elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_OPENBSD) || defined(OS_NETBSD)
  #include <sys/sysctl.h>
- #elif defined(OS_FREEBSD)
+ #elif BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>
-@@ -111,9 +111,12 @@ class BASE_EXPORT ProcessIterator {
- #if defined(OS_WIN)
+@@ -116,7 +116,11 @@ class BASE_EXPORT ProcessIterator {
    HANDLE snapshot_;
-   bool started_iteration_;
--#elif defined(OS_MACOSX) || defined(OS_BSD)
-+#elif defined(OS_MACOSX) || defined(OS_FREEBSD)
-   std::vector<kinfo_proc> kinfo_procs_;
-   size_t index_of_kinfo_proc_;
-+#elif defined(OS_NETBSD)
+   bool started_iteration_ = false;
+ #elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)
++# if BUILDFLAG(IS_NETBSD)
 +  std::vector<kinfo_proc2> kinfo_procs_;
-+  size_t index_of_kinfo_proc_;
- #elif defined(OS_POSIX) || defined(OS_FUCHSIA)
-   DIR* procfs_dir_;
- #endif
++# else
+   std::vector<kinfo_proc> kinfo_procs_;
++# endif
+   size_t index_of_kinfo_proc_ = 0;
+ #elif BUILDFLAG(IS_POSIX)
+   struct DIRClose {

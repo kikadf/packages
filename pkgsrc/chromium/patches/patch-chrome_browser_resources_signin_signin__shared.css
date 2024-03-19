@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- chrome/browser/resources/signin/signin_shared.css.orig	2024-03-06 00:14:42.350099600 +0000
++++ chrome/browser/resources/signin/signin_shared.css
+@@ -54,7 +54,7 @@ a {
+   border-radius: var(--scrollbar-width);
+ }
+ 
+-<if expr="is_macosx or is_linux or is_chromeos">
++<if expr="is_macosx or is_posix or is_chromeos">
+ .action-container {
+   flex-flow: row-reverse;
+   justify-content: flex-start;

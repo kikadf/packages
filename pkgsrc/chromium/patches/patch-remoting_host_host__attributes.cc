@@ -1,13 +1,13 @@
 $NetBSD$
 
---- remoting/host/host_attributes.cc.orig	2020-07-15 18:56:01.000000000 +0000
+--- remoting/host/host_attributes.cc.orig	2024-03-06 00:14:57.383404500 +0000
 +++ remoting/host/host_attributes.cc
-@@ -120,7 +120,7 @@ std::string GetHostAttributes() {
-       media::InitializeMediaFoundation()) {
+@@ -104,7 +104,7 @@ std::string GetHostAttributes() {
+   if (media::InitializeMediaFoundation()) {
      result.push_back("HWEncoder");
    }
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    result.push_back("HWEncoder");
  #endif
  

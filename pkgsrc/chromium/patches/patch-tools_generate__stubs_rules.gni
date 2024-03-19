@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- tools/generate_stubs/rules.gni.orig	2024-03-06 00:15:19.493324000 +0000
++++ tools/generate_stubs/rules.gni
+@@ -110,7 +110,6 @@ template("generate_stubs") {
+       "${target_gen_dir}/${invoker.output_name}.cc",
+       "${target_gen_dir}/${invoker.output_name}.h",
+     ]
+-    libs = [ "dl" ]
+     include_dirs = [ target_gen_dir ]
+     if (defined(invoker.configs)) {
+       configs += invoker.configs

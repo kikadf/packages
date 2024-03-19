@@ -1,13 +1,21 @@
 $NetBSD$
 
---- content/public/common/content_switches.h.orig	2020-07-08 21:40:42.000000000 +0000
+--- content/public/common/content_switches.h.orig	2024-03-06 00:14:51.294876000 +0000
 +++ content/public/common/content_switches.h
-@@ -267,7 +267,7 @@ CONTENT_EXPORT extern const char kRemote
- CONTENT_EXPORT extern const char kRendererWaitForJavaDebugger[];
- #endif
+@@ -115,6 +115,7 @@ CONTENT_EXPORT extern const char kEnable
+ CONTENT_EXPORT extern const char kEnableIsolatedWebAppsInRenderer[];
+ CONTENT_EXPORT extern const char kEnableLCDText[];
+ CONTENT_EXPORT extern const char kEnableLogging[];
++CONTENT_EXPORT extern const char kDisableUnveil[];
+ CONTENT_EXPORT extern const char kEnableNetworkInformationDownlinkMax[];
+ CONTENT_EXPORT extern const char kEnableCanvas2DLayers[];
+ CONTENT_EXPORT extern const char kEnablePluginPlaceholderTesting[];
+@@ -269,7 +270,7 @@ CONTENT_EXPORT extern const char kPreven
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+ // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  CONTENT_EXPORT extern const char kEnableSpeechDispatcher[];
+ CONTENT_EXPORT extern const char kLLVMProfileFile[];
  #endif
- 

@@ -1,13 +1,13 @@
 $NetBSD$
 
---- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2020-07-24 02:37:47.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_log_uploader.cc.orig	2024-03-06 00:14:41.330011000 +0000
 +++ chrome/browser/media/webrtc/webrtc_log_uploader.cc
-@@ -354,6 +354,8 @@ void WebRtcLogUploader::SetupMultipart(
+@@ -100,7 +100,7 @@ std::string GetLogUploadProduct() {
+   const char product[] = "Chrome_Mac";
+ // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+ #if !defined(ADDRESS_SANITIZER)
+   const char product[] = "Chrome_Linux";
  #else
-   const char product[] = "Chrome_Linux_ASan";
- #endif
-+#elif defined(OS_NETBSD)
-+  const char product[] = "Chrome_NetBSD";
- #elif defined(OS_ANDROID)
-   const char product[] = "Chrome_Android";
- #elif defined(OS_CHROMEOS)

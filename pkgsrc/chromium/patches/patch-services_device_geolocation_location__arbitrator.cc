@@ -1,13 +1,13 @@
 $NetBSD$
 
---- services/device/geolocation/location_arbitrator.cc.orig	2020-07-15 18:56:01.000000000 +0000
+--- services/device/geolocation/location_arbitrator.cc.orig	2024-03-06 00:14:57.619425000 +0000
 +++ services/device/geolocation/location_arbitrator.cc
-@@ -156,7 +156,7 @@ LocationArbitrator::NewNetworkLocationPr
+@@ -194,7 +194,7 @@ LocationArbitrator::NewNetworkLocationPr
  
  std::unique_ptr<LocationProvider>
  LocationArbitrator::NewSystemLocationProvider() {
--#if defined(OS_LINUX) || defined(OS_FUCHSIA)
-+#if defined(OS_LINUX) || defined(OS_FUCHSIA) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    return nullptr;
  #else
-   return device::NewSystemLocationProvider();
+   return device::NewSystemLocationProvider(main_task_runner_,

@@ -1,13 +1,45 @@
 $NetBSD$
 
---- chrome/app/chrome_main.cc.orig	2020-06-25 09:31:20.000000000 +0000
+--- chrome/app/chrome_main.cc.orig	2024-03-06 00:14:38.073728300 +0000
 +++ chrome/app/chrome_main.cc
-@@ -109,7 +109,7 @@ int ChromeMain(int argc, const char** ar
-   MainThreadStackSamplingProfiler scoped_sampling_profiler;
+@@ -29,11 +29,11 @@
+ #include "chrome/app/notification_metrics.h"
+ #endif
  
-   // Chrome-specific process modes.
--#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_WIN)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_WIN) || defined(OS_BSD)
-   if (command_line->HasSwitch(switches::kHeadless)) {
-     return headless::HeadlessShellMain(params);
-   }
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "base/base_switches.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/app/chrome_main_linux.h"
+ #endif
+ 
+@@ -81,7 +81,7 @@ int ChromeMain(int argc, const char** ar
+ #error Unknown platform.
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   PossiblyDetermineFallbackChromeChannel(argv[0]);
+ #endif
+ 
+@@ -142,7 +142,7 @@ int ChromeMain(int argc, const char** ar
+   SetUpBundleOverrides();
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   AppendExtraArgumentsToCommandLine(command_line);
+ #endif
+ 
+@@ -171,7 +171,7 @@ int ChromeMain(int argc, const char** ar
+     headless_mode_handle = headless::InitHeadlessMode();
+   } else {
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+     if (headless::IsOldHeadlessMode()) {
+ #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
+       command_line->AppendSwitch(::headless::switches::kEnableCrashReporter);
