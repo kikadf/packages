@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/command_buffer/service/dawn_context_provider.cc.orig	2024-03-06 00:14:52.835009800 +0000
 +++ gpu/command_buffer/service/dawn_context_provider.cc
 @@ -186,7 +186,7 @@ wgpu::BackendType DawnContextProvider::G

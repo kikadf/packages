@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gl/BUILD.gn.orig	2024-03-06 00:15:20.733431600 +0000
 +++ ui/gl/BUILD.gn
 @@ -154,8 +154,6 @@ component("gl") {

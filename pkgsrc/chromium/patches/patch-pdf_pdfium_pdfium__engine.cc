@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- pdf/pdfium/pdfium_engine.cc.orig	2024-03-06 00:14:57.175386400 +0000
 +++ pdf/pdfium/pdfium_engine.cc
 @@ -85,7 +85,7 @@

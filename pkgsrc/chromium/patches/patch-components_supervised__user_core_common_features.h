@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/supervised_user/core/common/features.h.orig	2024-03-06 00:14:49.402711900 +0000
 +++ components/supervised_user/core/common/features.h
 @@ -24,7 +24,7 @@ BASE_DECLARE_FEATURE(kEnableManagedByPar

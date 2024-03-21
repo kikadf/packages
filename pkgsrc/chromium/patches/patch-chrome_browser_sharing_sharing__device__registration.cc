@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/sharing/sharing_device_registration.cc.orig	2024-03-06 00:14:42.498112400 +0000
 +++ chrome/browser/sharing/sharing_device_registration.cc
 @@ -328,7 +328,7 @@ bool SharingDeviceRegistration::IsSmsFet

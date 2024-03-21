@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2024-03-06 00:14:54.995197300 +0000
 +++ media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc
 @@ -18,12 +18,15 @@

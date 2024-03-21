@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2024-03-06 00:14:52.514982000 +0000
 +++ extensions/browser/api/networking_private/networking_private_delegate_factory.cc
 @@ -14,7 +14,7 @@

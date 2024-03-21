@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2024-03-06 00:14:55.067203500 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
 @@ -22,7 +22,7 @@

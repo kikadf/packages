@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2024-03-06 00:14:40.545942800 +0000
 +++ chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc
 @@ -90,7 +90,7 @@ ChromeAutocompleteSchemeClassifier::GetI

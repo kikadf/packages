@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/compositor/compositor_observer.h.orig	2024-03-06 00:15:20.497411300 +0000
 +++ ui/compositor/compositor_observer.h
 @@ -46,7 +46,7 @@ class COMPOSITOR_EXPORT CompositorObserv

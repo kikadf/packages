@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/commerce/core/commerce_feature_list.cc.orig	2024-03-06 00:14:46.974501000 +0000
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -167,7 +167,7 @@ BASE_FEATURE(kPriceInsights,

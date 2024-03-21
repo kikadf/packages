@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/libusb/src/libusb/os/threads_posix.c.orig	2024-03-06 00:15:15.861008600 +0000
 +++ third_party/libusb/src/libusb/os/threads_posix.c
 @@ -19,9 +19,11 @@

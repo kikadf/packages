@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/x/x11_util.cc.orig	2024-03-06 00:15:20.341397500 +0000
 +++ ui/base/x/x11_util.cc
 @@ -699,4 +699,20 @@ gfx::ImageSkia GetNativeWindowIcon(intpt

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/services/screen_ai/public/cpp/utilities.cc.orig	2024-03-06 00:14:48.994676400 +0000
 +++ components/services/screen_ai/public/cpp/utilities.cc
 @@ -32,7 +32,7 @@ constexpr char kScreenAIDlcRootPath[] =

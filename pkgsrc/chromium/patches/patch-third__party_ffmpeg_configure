@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/ffmpeg/configure.orig	2024-03-06 00:15:31.046326900 +0000
 +++ third_party/ffmpeg/configure
 @@ -5615,6 +5615,7 @@ case $target_os in

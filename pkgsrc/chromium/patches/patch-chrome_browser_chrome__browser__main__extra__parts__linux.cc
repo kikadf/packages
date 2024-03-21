@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/chrome_browser_main_extra_parts_linux.cc.orig	2024-03-06 00:14:40.629950300 +0000
 +++ chrome/browser/chrome_browser_main_extra_parts_linux.cc
 @@ -117,7 +117,7 @@ ChromeBrowserMainExtraPartsLinux::Chrome

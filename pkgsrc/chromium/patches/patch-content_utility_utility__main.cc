@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/utility/utility_main.cc.orig	2024-03-06 00:14:51.906929300 +0000
 +++ content/utility/utility_main.cc
 @@ -37,17 +37,21 @@

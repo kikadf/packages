@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- sandbox/policy/sandbox_type.cc.orig	2024-03-06 00:14:57.543418400 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -38,7 +38,7 @@ bool IsUnsandboxedSandboxType(Sandbox sa

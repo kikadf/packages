@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2024-03-06 00:14:57.647427600 +0000
 +++ services/device/time_zone_monitor/time_zone_monitor_linux.cc
 @@ -131,7 +131,11 @@ class TimeZoneMonitorLinuxImpl
@@ -7,7 +9,7 @@ $NetBSD$
      // reasonable.
      const char* const kFilesToWatch[] = {
 +#if BUILDFLAG(IS_BSD)
-+        "/etc/localtime",
++        "@PKG_SYSCONFBASE@/localtime",
 +#else
          "/etc/localtime", "/etc/timezone", "/etc/TZ",
 +#endif

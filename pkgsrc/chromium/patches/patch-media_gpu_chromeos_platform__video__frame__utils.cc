@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-03-06 00:14:54.979195800 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
 @@ -68,7 +68,7 @@ static std::unique_ptr<ui::GbmDevice> Cr

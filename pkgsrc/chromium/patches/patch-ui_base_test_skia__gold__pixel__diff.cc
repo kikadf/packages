@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/test/skia_gold_pixel_diff.cc.orig	2024-03-06 00:15:20.325396300 +0000
 +++ ui/base/test/skia_gold_pixel_diff.cc
 @@ -115,7 +115,7 @@ const char* GetPlatformName() {

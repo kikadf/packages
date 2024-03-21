@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/eye_dropper/eye_dropper_view.cc.orig	2024-03-06 00:14:47.234523500 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
 @@ -200,7 +200,7 @@ EyeDropperView::EyeDropperView(gfx::Nati

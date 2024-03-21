@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/views/controls/textfield/textfield.cc.orig	2024-03-06 00:15:20.977452800 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -84,7 +84,7 @@

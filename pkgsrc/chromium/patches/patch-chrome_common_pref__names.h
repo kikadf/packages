@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/common/pref_names.h.orig	2024-03-06 00:14:44.094251000 +0000
 +++ chrome/common/pref_names.h
 @@ -1323,7 +1323,7 @@ inline constexpr char kUseAshProxy[] = "

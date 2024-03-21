@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/network_sandbox_hook_linux.cc.orig	2024-03-06 00:14:57.691431300 +0000
 +++ services/network/network_sandbox_hook_linux.cc
 @@ -14,11 +14,14 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/app/chrome_main.cc.orig	2024-03-06 00:14:38.073728300 +0000
 +++ chrome/app/chrome_main.cc
 @@ -29,11 +29,11 @@

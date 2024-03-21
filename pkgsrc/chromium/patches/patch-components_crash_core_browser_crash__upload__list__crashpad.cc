@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/crash/core/browser/crash_upload_list_crashpad.cc.orig	2024-03-06 00:14:47.038506500 +0000
 +++ components/crash/core/browser/crash_upload_list_crashpad.cc
 @@ -38,7 +38,9 @@ CrashUploadListCrashpad::~CrashUploadLis

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-03-06 00:14:42.502112600 +0000
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
 @@ -23,7 +23,7 @@

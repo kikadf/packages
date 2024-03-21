@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/web_contents/web_contents_view_aura.cc.orig	2024-03-06 00:14:51.130861800 +0000
 +++ content/browser/web_contents/web_contents_view_aura.cc
 @@ -174,7 +174,7 @@ class WebDragSourceAura : public content

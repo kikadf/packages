@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/paint_preview/browser/paint_preview_client.cc.orig	2024-03-06 00:14:47.850577000 +0000
 +++ components/paint_preview/browser/paint_preview_client.cc
 @@ -313,8 +313,8 @@ void PaintPreviewClient::CapturePaintPre

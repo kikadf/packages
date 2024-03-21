@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/tab_search_bubble_host.cc.orig	2024-03-06 00:14:43.626210200 +0000
 +++ chrome/browser/ui/views/tab_search_bubble_host.cc
 @@ -285,7 +285,7 @@ bool TabSearchBubbleHost::ShouldTabSearc

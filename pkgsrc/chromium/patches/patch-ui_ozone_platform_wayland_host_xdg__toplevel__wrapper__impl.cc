@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc.orig	2024-03-06 00:15:20.837440700 +0000
 +++ ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc
 @@ -315,7 +315,7 @@ void XDGToplevelWrapperImpl::OnToplevelC

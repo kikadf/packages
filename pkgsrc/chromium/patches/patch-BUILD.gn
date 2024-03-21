@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- BUILD.gn.orig	2024-03-06 00:14:35.425498500 +0000
 +++ BUILD.gn
 @@ -63,7 +63,7 @@ declare_args() {

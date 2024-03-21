@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/base/small-vector.h.orig	2024-03-06 00:16:10.613762000 +0000
 +++ v8/src/base/small-vector.h
 @@ -22,7 +22,7 @@ template <typename T, size_t kSize, type

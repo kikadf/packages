@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/abseil-cpp/absl/base/config.h.orig	2024-03-06 00:14:58.099466800 +0000
 +++ third_party/abseil-cpp/absl/base/config.h
 @@ -450,7 +450,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES

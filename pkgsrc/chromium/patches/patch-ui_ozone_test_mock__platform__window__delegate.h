@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/test/mock_platform_window_delegate.h.orig	2024-03-06 00:15:20.857442400 +0000
 +++ ui/ozone/test/mock_platform_window_delegate.h
 @@ -32,7 +32,7 @@ class MockPlatformWindowDelegate : publi

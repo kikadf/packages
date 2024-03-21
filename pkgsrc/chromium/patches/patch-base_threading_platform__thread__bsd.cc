@@ -1,6 +1,8 @@
 $NetBSD$
 
---- base/threading/platform_thread_bsd.cc.orig	2024-03-19 17:04:39.781844894 +0000
+* Part of patchset to build on NetBSD
+
+--- base/threading/platform_thread_bsd.cc.orig	2024-03-21 18:07:58.348568589 +0000
 +++ base/threading/platform_thread_bsd.cc
 @@ -0,0 +1,31 @@
 +// Copyright 2023 The Chromium Authors

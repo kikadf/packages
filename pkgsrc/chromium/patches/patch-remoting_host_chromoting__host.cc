@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/chromoting_host.cc.orig	2024-03-06 00:14:57.367403300 +0000
 +++ remoting/host/chromoting_host.cc
 @@ -129,7 +129,7 @@ void ChromotingHost::Start(const std::st

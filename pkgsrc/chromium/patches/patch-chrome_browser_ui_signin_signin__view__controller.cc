@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/signin/signin_view_controller.cc.orig	2024-03-06 00:14:43.358187000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller.cc
 @@ -254,7 +254,7 @@ void SigninViewController::ShowModalMana

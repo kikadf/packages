@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/webui/web_ui_util.cc.orig	2024-03-06 00:15:20.329396500 +0000
 +++ ui/base/webui/web_ui_util.cc
 @@ -39,7 +39,7 @@ namespace {

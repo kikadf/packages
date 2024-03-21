@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2024-03-06 00:14:57.815442000 +0000
 +++ services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
 @@ -38,7 +38,7 @@

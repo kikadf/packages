@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/renderer_host/render_process_host_impl.cc.orig	2024-03-06 00:14:50.754829200 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
 @@ -224,7 +224,7 @@

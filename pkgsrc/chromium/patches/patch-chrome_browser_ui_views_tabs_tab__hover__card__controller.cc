@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/tabs/tab_hover_card_controller.cc.orig	2024-03-06 00:14:43.642211700 +0000
 +++ chrome/browser/ui/views/tabs/tab_hover_card_controller.cc
 @@ -82,7 +82,7 @@ void FixWidgetStackOrder(views::Widget* 

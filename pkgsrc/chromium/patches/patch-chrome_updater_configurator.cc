@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/updater/configurator.cc.orig	2024-03-06 00:14:45.722392300 +0000
 +++ chrome/updater/configurator.cc
 @@ -67,7 +67,7 @@ Configurator::Configurator(scoped_refptr

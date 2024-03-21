@@ -76,12 +76,15 @@ REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
-SUBST_MESSAGE.path=	Fixing pkg path
+SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
-SUBST_FILES.path+=	third_party/pdfium/core/fxge/fx_ge_linux.cpp
-SUBST_FILES.path+=	third_party/pdfium/xfa/fgas/font/cfx_fontsourceenum_file.cpp
-SUBST_FILES.path+=	third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
-SUBST_VARS.path+=	PREFIX X11BASE
+SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
+SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
+SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
+SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE
+
+REPLACE_PYTHON+=	v8/tools/run-paxctl.py
 
 #.include "../../lang/llvm/version.mk"
 

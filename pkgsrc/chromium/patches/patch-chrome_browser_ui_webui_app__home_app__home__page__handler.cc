@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/webui/app_home/app_home_page_handler.cc.orig	2024-03-06 00:14:43.706217300 +0000
 +++ chrome/browser/ui/webui/app_home/app_home_page_handler.cc
 @@ -386,7 +386,7 @@ app_home::mojom::AppInfoPtr AppHomePageH

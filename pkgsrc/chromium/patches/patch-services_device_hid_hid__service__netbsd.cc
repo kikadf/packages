@@ -1,6 +1,8 @@
 $NetBSD$
 
---- services/device/hid/hid_service_netbsd.cc.orig	2024-03-19 17:04:41.395452651 +0000
+* Part of patchset to build on NetBSD
+
+--- services/device/hid/hid_service_netbsd.cc.orig	2024-03-21 18:08:01.104916962 +0000
 +++ services/device/hid/hid_service_netbsd.cc
 @@ -0,0 +1,395 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.
@@ -233,7 +235,7 @@ $NetBSD$
 +    struct sockaddr_un sa;
 +
 +    sa.sun_family = AF_UNIX;
-+    strlcpy(sa.sun_path, "/var/run/devd.seqpacket.pipe", sizeof(sa.sun_path));
++    strlcpy(sa.sun_path, "@VARBASE@/run/devd.seqpacket.pipe", sizeof(sa.sun_path));
 +    if (connect(devd_fd, (struct sockaddr *) &sa, sizeof(sa)) < 0) {
 +      close(devd_fd);
 +      return;

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/public/mojom/BUILD.gn.orig	2024-03-06 00:14:57.727434400 +0000
 +++ services/network/public/mojom/BUILD.gn
 @@ -522,11 +522,11 @@ mojom("url_loader_base") {

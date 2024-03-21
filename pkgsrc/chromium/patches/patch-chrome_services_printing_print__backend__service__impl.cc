@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/services/printing/print_backend_service_impl.cc.orig	2024-03-06 00:14:44.230262800 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
 @@ -49,7 +49,7 @@

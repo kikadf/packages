@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/fontconfig/include/config.h.orig	2024-03-06 00:15:15.040937400 +0000
 +++ third_party/fontconfig/include/config.h
 @@ -18,13 +18,13 @@

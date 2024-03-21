@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/ime/linux/linux_input_method_context_factory.cc.orig	2024-03-06 00:15:20.297393800 +0000
 +++ ui/base/ime/linux/linux_input_method_context_factory.cc
 @@ -9,7 +9,7 @@

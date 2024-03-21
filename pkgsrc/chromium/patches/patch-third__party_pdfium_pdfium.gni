@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/pdfium/pdfium.gni.orig	2024-03-06 00:16:04.229207500 +0000
 +++ third_party/pdfium/pdfium.gni
 @@ -42,7 +42,7 @@ declare_args() {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2024-03-06 00:14:41.350012800 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
 @@ -191,7 +191,7 @@

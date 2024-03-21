@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/aura/client/drag_drop_client.h.orig	2024-03-06 00:15:20.245389200 +0000
 +++ ui/aura/client/drag_drop_client.h
 @@ -44,7 +44,7 @@ class AURA_EXPORT DragDropClient {

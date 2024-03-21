@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-03-06 00:14:47.322531200 +0000
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
 @@ -30,7 +30,7 @@

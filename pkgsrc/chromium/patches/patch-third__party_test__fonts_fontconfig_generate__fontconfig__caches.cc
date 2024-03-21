@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2024-03-06 00:15:17.969191800 +0000
 +++ third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc
 @@ -56,7 +56,7 @@ int main() {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h.orig	2024-03-06 00:16:16.082236500 +0000
 +++ v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h
 @@ -505,7 +505,7 @@ void LiftoffAssembler::StoreTaggedPointe

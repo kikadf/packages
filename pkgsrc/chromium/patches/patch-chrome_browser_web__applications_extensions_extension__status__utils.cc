@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-03-06 00:14:43.958239000 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -26,7 +26,7 @@ namespace {

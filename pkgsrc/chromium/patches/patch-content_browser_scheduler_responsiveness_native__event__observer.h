@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/scheduler/responsiveness/native_event_observer.h.orig	2024-03-06 00:14:50.786831900 +0000
 +++ content/browser/scheduler/responsiveness/native_event_observer.h
 @@ -16,7 +16,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-03-06 00:14:48.910669000 +0000
 +++ components/search_engines/search_engine_choice/search_engine_choice_service.cc
 @@ -456,7 +456,7 @@ void SearchEngineChoiceService::Preproce

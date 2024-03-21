@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2024-03-06 00:14:59.787613400 +0000
 +++ third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc
 @@ -150,7 +150,7 @@ bool ScrollbarThemeAura::SupportsDragSna

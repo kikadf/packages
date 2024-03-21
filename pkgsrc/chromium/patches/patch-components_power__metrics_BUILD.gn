@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/power_metrics/BUILD.gn.orig	2024-03-06 00:14:48.714652000 +0000
 +++ components/power_metrics/BUILD.gn
 @@ -41,7 +41,7 @@ static_library("power_metrics") {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/named_mojo_ipc_server/connection_info.h.orig	2024-03-06 00:14:47.526548900 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
 @@ -13,7 +13,7 @@

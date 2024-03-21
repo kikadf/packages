@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- extensions/shell/browser/shell_extensions_api_client.cc.orig	2024-03-06 00:14:52.678996000 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.cc
 @@ -58,7 +58,7 @@ ShellExtensionsAPIClient::CreateDisplayI

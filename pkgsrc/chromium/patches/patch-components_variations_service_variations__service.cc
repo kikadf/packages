@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/variations/service/variations_service.cc.orig	2024-03-06 00:14:50.158777500 +0000
 +++ components/variations/service/variations_service.cc
 @@ -98,7 +98,7 @@ std::string GetPlatformString() {

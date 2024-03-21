@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/renderer_host/render_process_host_impl.h.orig	2024-03-06 00:14:50.754829200 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
 @@ -543,7 +543,7 @@ class CONTENT_EXPORT RenderProcessHostIm

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/libsync/src/sync.c.orig	2024-03-06 00:15:36.606809600 +0000
 +++ third_party/libsync/src/sync.c
 @@ -17,8 +17,8 @@

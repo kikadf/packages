@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- sandbox/linux/services/libc_interceptor.cc.orig	2024-03-06 00:14:57.531417400 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
 @@ -12,7 +12,9 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/public/common/content_features.cc.orig	2024-03-06 00:14:51.294876000 +0000
 +++ content/public/common/content_features.cc
 @@ -40,7 +40,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,

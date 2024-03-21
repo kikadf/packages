@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/common/media/cdm_registration.cc.orig	2024-03-06 00:14:44.090250500 +0000
 +++ chrome/common/media/cdm_registration.cc
 @@ -26,11 +26,11 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/build/scripts/run_with_pythonpath.py.orig	2024-03-06 00:14:59.103554000 +0000
 +++ third_party/blink/renderer/build/scripts/run_with_pythonpath.py
 @@ -22,6 +22,7 @@ def main():

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/traffic_annotation/network_traffic_annotation.h.orig	2024-03-06 00:14:57.139383300 +0000
 +++ net/traffic_annotation/network_traffic_annotation.h
 @@ -373,7 +373,7 @@ struct MutablePartialNetworkTrafficAnnot

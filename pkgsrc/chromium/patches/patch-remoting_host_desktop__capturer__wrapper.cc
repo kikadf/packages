@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/desktop_capturer_wrapper.cc.orig	2024-03-06 00:14:57.375404000 +0000
 +++ remoting/host/desktop_capturer_wrapper.cc
 @@ -13,7 +13,7 @@

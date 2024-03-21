@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/lzma_sdk/C/CpuArch.c.orig	2024-03-06 00:15:16.217039600 +0000
 +++ third_party/lzma_sdk/C/CpuArch.c
 @@ -412,12 +412,40 @@ BoolInt CPU_IsSupported_SHA1(void) { ret

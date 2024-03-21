@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-03-06 00:15:20.281392300 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_non_backed.cc
 @@ -96,7 +96,7 @@ void OSExchangeDataProviderNonBacked::Se

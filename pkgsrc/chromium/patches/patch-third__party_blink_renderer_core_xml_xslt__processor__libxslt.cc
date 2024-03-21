@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc.orig	2024-03-06 00:14:59.931625800 +0000
 +++ third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc
 @@ -66,7 +66,11 @@ void XSLTProcessor::GenericErrorFunc(voi

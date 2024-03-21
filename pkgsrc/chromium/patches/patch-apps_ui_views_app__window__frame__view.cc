@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- apps/ui/views/app_window_frame_view.cc.orig	2024-03-06 00:14:35.605514000 +0000
 +++ apps/ui/views/app_window_frame_view.cc
 @@ -148,7 +148,7 @@ gfx::Rect AppWindowFrameView::GetWindowB

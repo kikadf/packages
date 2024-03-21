@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/download/download_item_model.cc.orig	2024-03-06 00:14:40.805965400 +0000
 +++ chrome/browser/download/download_item_model.cc
 @@ -747,7 +747,7 @@ bool DownloadItemModel::IsCommandChecked

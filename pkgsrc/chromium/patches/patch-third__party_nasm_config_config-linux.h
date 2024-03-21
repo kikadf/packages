@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/nasm/config/config-linux.h.orig	2024-03-06 00:15:34.482625200 +0000
 +++ third_party/nasm/config/config-linux.h
 @@ -160,7 +160,7 @@

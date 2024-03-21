@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/password_manager/core/browser/features/password_features.cc.orig	2024-03-06 00:14:47.874579200 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
 @@ -24,7 +24,7 @@ BASE_FEATURE(kButterOnDesktopFollowup,

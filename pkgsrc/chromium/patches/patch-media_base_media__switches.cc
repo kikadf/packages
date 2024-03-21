@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/base/media_switches.cc.orig	2024-03-06 00:14:54.823182300 +0000
 +++ media/base/media_switches.cc
 @@ -21,7 +21,7 @@

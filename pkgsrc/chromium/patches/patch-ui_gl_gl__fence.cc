@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gl/gl_fence.cc.orig	2024-03-06 00:15:20.749433000 +0000
 +++ ui/gl/gl_fence.cc
 @@ -20,7 +20,7 @@

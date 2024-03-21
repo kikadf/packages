@@ -1,6 +1,8 @@
 $NetBSD$
 
---- build/toolchain/openbsd/BUILD.gn.orig	2024-03-19 17:04:39.841445813 +0000
+* Part of patchset to build on NetBSD
+
+--- build/toolchain/openbsd/BUILD.gn.orig	2024-03-21 18:07:58.423356850 +0000
 +++ build/toolchain/openbsd/BUILD.gn
 @@ -0,0 +1,66 @@
 +# Copyright 2013 The Chromium Authors. All rights reserved.

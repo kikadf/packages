@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/vulkan/vulkan_function_pointers.h.orig	2024-03-06 00:14:52.947019600 +0000
 +++ gpu/vulkan/vulkan_function_pointers.h
 @@ -321,7 +321,7 @@ struct COMPONENT_EXPORT(VULKAN) VulkanFu

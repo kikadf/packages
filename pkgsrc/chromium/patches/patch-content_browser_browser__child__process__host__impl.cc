@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/browser_child_process_host_impl.cc.orig	2024-03-06 00:14:50.426800700 +0000
 +++ content/browser/browser_child_process_host_impl.cc
 @@ -326,6 +326,7 @@ void BrowserChildProcessHostImpl::Launch

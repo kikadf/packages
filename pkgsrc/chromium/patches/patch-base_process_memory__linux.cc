@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/process/memory_linux.cc.orig	2024-03-06 00:14:37.021637000 +0000
 +++ base/process/memory_linux.cc
 @@ -28,6 +28,7 @@ void __libc_free(void*);

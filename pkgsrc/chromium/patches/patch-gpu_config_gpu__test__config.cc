@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/config/gpu_test_config.cc.orig	2024-03-06 00:14:52.919017000 +0000
 +++ gpu/config/gpu_test_config.cc
 @@ -29,7 +29,7 @@ GPUTestConfig::OS GetCurrentOS() {

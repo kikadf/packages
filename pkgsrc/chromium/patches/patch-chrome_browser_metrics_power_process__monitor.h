@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/metrics/power/process_monitor.h.orig	2024-03-06 00:14:41.366014000 +0000
 +++ chrome/browser/metrics/power/process_monitor.h
 @@ -75,7 +75,7 @@ class ProcessMonitor : public content::B

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/component_updater/widevine_cdm_component_installer.cc.orig	2024-03-06 00:14:40.721958200 +0000
 +++ chrome/browser/component_updater/widevine_cdm_component_installer.cc
 @@ -40,7 +40,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/x/x11_cursor_factory.h.orig	2024-03-06 00:15:20.337397300 +0000
 +++ ui/base/x/x11_cursor_factory.h
 @@ -20,7 +20,7 @@ namespace ui {

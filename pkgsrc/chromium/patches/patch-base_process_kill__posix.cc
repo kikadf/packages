@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/process/kill_posix.cc.orig	2024-03-06 00:14:37.021637000 +0000
 +++ base/process/kill_posix.cc
 @@ -157,7 +157,7 @@ void EnsureProcessTerminated(Process pro

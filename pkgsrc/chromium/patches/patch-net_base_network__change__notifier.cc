@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/base/network_change_notifier.cc.orig	2024-03-06 00:14:56.327313000 +0000
 +++ net/base/network_change_notifier.cc
 @@ -37,7 +37,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/gpu_memory_buffer.h.orig	2024-03-06 00:15:20.685427400 +0000
 +++ ui/gfx/gpu_memory_buffer.h
 @@ -15,7 +15,7 @@

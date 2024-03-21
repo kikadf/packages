@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/boringssl/src/util/generate_build_files.py.orig	2024-03-06 00:15:46.827697000 +0000
 +++ third_party/boringssl/src/util/generate_build_files.py
 @@ -794,10 +794,10 @@ def main(platforms):

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/renderer/chrome_render_frame_observer.cc.orig	2024-03-06 00:14:44.194259600 +0000
 +++ chrome/renderer/chrome_render_frame_observer.cc
 @@ -353,7 +353,7 @@ void ChromeRenderFrameObserver::WillDeta

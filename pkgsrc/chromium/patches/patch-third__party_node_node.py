@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/node/node.py.orig	2024-03-06 00:15:16.453060200 +0000
 +++ third_party/node/node.py
 @@ -16,6 +16,9 @@ def GetBinaryPath():

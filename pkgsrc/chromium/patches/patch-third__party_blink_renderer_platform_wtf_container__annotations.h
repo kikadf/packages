@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/wtf/container_annotations.h.orig	2024-03-06 00:15:00.611684800 +0000
 +++ third_party/blink/renderer/platform/wtf/container_annotations.h
 @@ -12,7 +12,7 @@

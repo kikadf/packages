@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-03-06 00:15:57.516625000 +0000
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
 @@ -44505,6 +44505,11 @@ static int unixRandomness(sqlite3_vfs *N

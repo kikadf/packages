@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2024-03-06 00:15:00.283656400 +0000
 +++ third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
 @@ -6364,7 +6364,7 @@ void WebGLRenderingContextBase::TexImage

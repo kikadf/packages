@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/common/webui_url_constants.cc.orig	2024-03-06 00:14:44.102251500 +0000
 +++ chrome/common/webui_url_constants.cc
 @@ -507,18 +507,18 @@ const char kOsUISystemURL[] = "os://syst

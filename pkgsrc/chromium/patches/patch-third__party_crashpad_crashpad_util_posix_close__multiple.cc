@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2024-03-06 00:15:15.004934300 +0000
 +++ third_party/crashpad/crashpad/util/posix/close_multiple.cc
 @@ -73,7 +73,7 @@ void CloseNowOrOnExec(int fd, bool ebadf

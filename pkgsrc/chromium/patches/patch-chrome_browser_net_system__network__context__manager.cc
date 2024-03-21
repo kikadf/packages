@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/net/system_network_context_manager.cc.orig	2024-03-06 00:14:41.422019000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -92,7 +92,7 @@

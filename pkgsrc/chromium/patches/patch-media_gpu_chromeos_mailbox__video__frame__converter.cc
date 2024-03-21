@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/chromeos/mailbox_video_frame_converter.cc.orig	2024-03-06 00:14:54.979195800 +0000
 +++ media/gpu/chromeos/mailbox_video_frame_converter.cc
 @@ -61,7 +61,7 @@ viz::SharedImageFormat GetSharedImageFor

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-03-06 00:14:55.847271200 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
 @@ -803,7 +803,7 @@ void GpuMemoryBufferVideoFramePool::Pool

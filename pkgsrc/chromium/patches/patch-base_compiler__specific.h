@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/compiler_specific.h.orig	2024-03-06 00:14:36.929628800 +0000
 +++ base/compiler_specific.h
 @@ -316,7 +316,7 @@

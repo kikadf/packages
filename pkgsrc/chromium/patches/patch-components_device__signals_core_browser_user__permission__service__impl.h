@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/device_signals/core/browser/user_permission_service_impl.h.orig	2024-03-06 00:14:47.098511700 +0000
 +++ components/device_signals/core/browser/user_permission_service_impl.h
 @@ -39,7 +39,7 @@ class UserPermissionServiceImpl : public

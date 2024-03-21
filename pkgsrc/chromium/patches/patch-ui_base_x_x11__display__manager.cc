@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/x/x11_display_manager.cc.orig	2024-03-06 00:15:20.337397300 +0000
 +++ ui/base/x/x11_display_manager.cc
 @@ -15,7 +15,7 @@

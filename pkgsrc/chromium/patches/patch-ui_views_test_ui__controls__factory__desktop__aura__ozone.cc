@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2024-03-06 00:15:21.013455900 +0000
 +++ ui/views/test/ui_controls_factory_desktop_aura_ozone.cc
 @@ -284,7 +284,7 @@ bool SendTouchEventsNotifyWhenDone(int a

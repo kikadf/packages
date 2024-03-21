@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- device/gamepad/gamepad_provider.cc.orig	2024-03-06 00:14:52.078944200 +0000
 +++ device/gamepad/gamepad_provider.cc
 @@ -219,7 +219,7 @@ void GamepadProvider::Initialize(std::un

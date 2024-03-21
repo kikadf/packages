@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/app/content_main_runner_impl.cc.orig	2024-03-06 00:14:50.342793500 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -143,13 +143,13 @@

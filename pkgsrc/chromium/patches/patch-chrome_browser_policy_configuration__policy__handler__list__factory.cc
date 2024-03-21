@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/policy/configuration_policy_handler_list_factory.cc.orig	2024-03-06 00:14:41.630037000 +0000
 +++ chrome/browser/policy/configuration_policy_handler_list_factory.cc
 @@ -224,19 +224,20 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/http/http_auth_handler_negotiate.cc.orig	2024-03-06 00:14:56.631339300 +0000
 +++ net/http/http_auth_handler_negotiate.cc
 @@ -121,7 +121,7 @@ int HttpAuthHandlerNegotiate::Factory::C

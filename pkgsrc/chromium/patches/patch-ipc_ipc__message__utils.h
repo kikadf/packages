@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ipc/ipc_message_utils.h.orig	2024-03-06 00:14:54.759176700 +0000
 +++ ipc/ipc_message_utils.h
 @@ -214,7 +214,7 @@ struct ParamTraits<unsigned int> {

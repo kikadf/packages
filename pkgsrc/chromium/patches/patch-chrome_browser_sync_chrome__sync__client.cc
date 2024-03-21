@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/sync/chrome_sync_client.cc.orig	2024-03-06 00:14:42.590120300 +0000
 +++ chrome/browser/sync/chrome_sync_client.cc
 @@ -111,7 +111,7 @@

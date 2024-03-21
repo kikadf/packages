@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/BUILD.gn.orig	2024-03-06 00:14:39.637864000 +0000
 +++ chrome/browser/BUILD.gn
 @@ -6477,6 +6477,13 @@ static_library("browser") {

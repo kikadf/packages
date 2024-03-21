@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/platform_font_skia.cc.orig	2024-03-06 00:15:20.705429300 +0000
 +++ ui/gfx/platform_font_skia.cc
 @@ -30,7 +30,7 @@

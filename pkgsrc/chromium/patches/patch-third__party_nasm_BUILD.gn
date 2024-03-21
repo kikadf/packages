@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/nasm/BUILD.gn.orig	2024-03-06 00:15:34.390617400 +0000
 +++ third_party/nasm/BUILD.gn
 @@ -63,6 +63,13 @@ config("nasm_config") {

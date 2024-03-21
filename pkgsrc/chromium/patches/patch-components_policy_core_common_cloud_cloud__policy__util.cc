@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2024-03-06 00:14:48.062595400 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
 @@ -20,7 +20,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2024-03-06 00:14:36.837621000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h
 @@ -38,7 +38,7 @@ AslrMask(uintptr_t bits) {

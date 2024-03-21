@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/me2me_desktop_environment.cc.orig	2024-03-06 00:14:57.415407400 +0000
 +++ remoting/host/me2me_desktop_environment.cc
 @@ -125,7 +125,7 @@ std::string Me2MeDesktopEnvironment::Get

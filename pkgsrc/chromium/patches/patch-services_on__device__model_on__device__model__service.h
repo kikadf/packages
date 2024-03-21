@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/on_device_model/on_device_model_service.h.orig	2024-03-06 00:14:57.767438000 +0000
 +++ services/on_device_model/on_device_model_service.h
 @@ -18,6 +18,10 @@

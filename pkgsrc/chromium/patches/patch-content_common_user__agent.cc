@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/common/user_agent.cc.orig	2024-03-06 00:14:51.202868000 +0000
 +++ content/common/user_agent.cc
 @@ -45,7 +45,7 @@ std::string GetUserAgentPlatform() {

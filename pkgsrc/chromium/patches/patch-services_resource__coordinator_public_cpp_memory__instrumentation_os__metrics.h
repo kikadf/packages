@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2024-03-06 00:14:57.783439400 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h
 @@ -45,7 +45,7 @@ class COMPONENT_EXPORT(

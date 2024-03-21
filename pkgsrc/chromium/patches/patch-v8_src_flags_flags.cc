@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/flags/flags.cc.orig	2024-03-06 00:16:13.069975100 +0000
 +++ v8/src/flags/flags.cc
 @@ -13,6 +13,10 @@

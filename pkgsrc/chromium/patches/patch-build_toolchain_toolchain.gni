@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- build/toolchain/toolchain.gni.orig	2024-03-06 00:14:37.309661900 +0000
 +++ build/toolchain/toolchain.gni
 @@ -72,7 +72,7 @@ if (host_os == "mac") {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-03-06 00:14:50.698824400 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
 @@ -25,7 +25,7 @@

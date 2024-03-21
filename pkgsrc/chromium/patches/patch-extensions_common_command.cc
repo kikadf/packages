@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- extensions/common/command.cc.orig	2024-03-06 00:14:52.606989900 +0000
 +++ extensions/common/command.cc
 @@ -283,7 +283,7 @@ std::string Command::CommandPlatform() {

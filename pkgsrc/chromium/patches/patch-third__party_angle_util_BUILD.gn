@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/angle/util/BUILD.gn.orig	2024-03-06 00:16:08.825606600 +0000
 +++ third_party/angle/util/BUILD.gn
 @@ -311,7 +311,7 @@ foreach(is_shared_library,

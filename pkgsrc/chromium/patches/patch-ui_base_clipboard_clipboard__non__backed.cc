@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/clipboard/clipboard_non_backed.cc.orig	2024-03-06 00:15:20.265391000 +0000
 +++ ui/base/clipboard/clipboard_non_backed.cc
 @@ -460,7 +460,7 @@ ClipboardNonBacked::ClipboardNonBacked()

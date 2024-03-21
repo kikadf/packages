@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc.orig	2024-03-06 00:14:52.895015000 +0000
 +++ gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc
 @@ -212,7 +212,7 @@ bool WrappedSkImageBacking::Initialize(c

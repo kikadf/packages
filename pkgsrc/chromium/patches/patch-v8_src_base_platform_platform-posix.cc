@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/base/platform/platform-posix.cc.orig	2024-03-06 00:16:10.609761500 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -27,6 +27,9 @@

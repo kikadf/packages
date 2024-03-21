@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2024-03-06 00:14:47.266526200 +0000
 +++ components/feed/core/v2/feed_network_impl_unittest.cc
 @@ -781,8 +781,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D

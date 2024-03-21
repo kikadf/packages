@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/chrome_browser_interface_binders.cc.orig	2024-03-06 00:14:40.629950300 +0000
 +++ chrome/browser/chrome_browser_interface_binders.cc
 @@ -128,13 +128,13 @@

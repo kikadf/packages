@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/clipboard/clipboard_constants.h.orig	2024-03-06 00:15:20.265391000 +0000
 +++ ui/base/clipboard/clipboard_constants.h
 @@ -48,7 +48,7 @@ extern const char kMimeTypeDataTransferE

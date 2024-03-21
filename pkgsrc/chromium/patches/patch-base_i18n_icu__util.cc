@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/i18n/icu_util.cc.orig	2024-03-06 00:14:36.969632400 +0000
 +++ base/i18n/icu_util.cc
 @@ -51,7 +51,7 @@

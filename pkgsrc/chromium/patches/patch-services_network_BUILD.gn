@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/BUILD.gn.orig	2024-03-06 00:14:57.671429600 +0000
 +++ services/network/BUILD.gn
 @@ -397,7 +397,6 @@ if (is_linux || is_chromeos) {

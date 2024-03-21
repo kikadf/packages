@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/views/widget/widget.h.orig	2024-03-06 00:15:21.037458000 +0000
 +++ ui/views/widget/widget.h
 @@ -422,7 +422,7 @@ class VIEWS_EXPORT Widget : public inter

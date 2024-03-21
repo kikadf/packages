@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c.orig	2024-03-06 00:15:43.299390600 +0000
 +++ third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c
 @@ -91,10 +91,24 @@ static int arm_get_cpu_caps(void) {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- mojo/public/c/system/thunks.cc.orig	2024-03-06 00:14:55.883274300 +0000
 +++ mojo/public/c/system/thunks.cc
 @@ -24,7 +24,7 @@

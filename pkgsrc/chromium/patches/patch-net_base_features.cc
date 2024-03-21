@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/base/features.cc.orig	2024-03-06 00:14:56.315312000 +0000
 +++ net/base/features.cc
 @@ -500,7 +500,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU

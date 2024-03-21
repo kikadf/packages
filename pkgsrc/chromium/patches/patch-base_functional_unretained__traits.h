@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/functional/unretained_traits.h.orig	2024-03-06 00:14:36.961631800 +0000
 +++ base/functional/unretained_traits.h
 @@ -99,7 +99,7 @@ struct SupportsUnretainedImpl {

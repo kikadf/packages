@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/gwp_asan/client/gwp_asan_features.cc.orig	2024-03-06 00:14:47.318530800 +0000
 +++ components/gwp_asan/client/gwp_asan_features.cc
 @@ -9,7 +9,7 @@

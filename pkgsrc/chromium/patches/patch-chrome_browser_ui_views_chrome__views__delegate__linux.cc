@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/chrome_views_delegate_linux.cc.orig	2024-03-06 00:14:43.438194000 +0000
 +++ chrome/browser/ui/views/chrome_views_delegate_linux.cc
 @@ -23,7 +23,7 @@ bool IsDesktopEnvironmentUnity() {

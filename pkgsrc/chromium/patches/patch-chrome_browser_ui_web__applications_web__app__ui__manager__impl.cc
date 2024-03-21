@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-03-06 00:14:43.702216900 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
 @@ -586,7 +586,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr

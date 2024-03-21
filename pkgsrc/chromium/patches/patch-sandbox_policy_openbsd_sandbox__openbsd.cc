@@ -1,6 +1,8 @@
 $NetBSD$
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2024-03-19 17:04:41.362678627 +0000
+* Part of patchset to build on NetBSD
+
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2024-03-21 18:08:01.052161944 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
 @@ -0,0 +1,420 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -69,11 +71,11 @@ $NetBSD$
 +
 +#define MAXTOKENS	3
 +
-+#define _UNVEIL_MAIN		"/etc/chromium/unveil.main";
-+#define _UNVEIL_GPU		"/etc/chromium/unveil.gpu";
-+#define _UNVEIL_UTILITY_NETWORK	"/etc/chromium/unveil.utility_network";
-+#define _UNVEIL_UTILITY_AUDIO	"/etc/chromium/unveil.utility_audio";
-+#define _UNVEIL_UTILITY_VIDEO	"/etc/chromium/unveil.utility_video";
++#define _UNVEIL_MAIN		"@PKG_SYSCONFBASE@/chromium/unveil.main";
++#define _UNVEIL_GPU		"@PKG_SYSCONFBASE@/chromium/unveil.gpu";
++#define _UNVEIL_UTILITY_NETWORK	"@PKG_SYSCONFBASE@/chromium/unveil.utility_network";
++#define _UNVEIL_UTILITY_AUDIO	"@PKG_SYSCONFBASE@/chromium/unveil.utility_audio";
++#define _UNVEIL_UTILITY_VIDEO	"@PKG_SYSCONFBASE@/chromium/unveil.utility_video";
 +
 +namespace sandbox {
 +namespace policy {
@@ -321,7 +323,7 @@ $NetBSD$
 +
 +  switch(sandbox_type) {
 +    case sandbox::mojom::Sandbox::kNoSandbox:
-+      SetPledge(NULL, "/etc/chromium/pledge.main");
++      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.main");
 +      break;
 +    case sandbox::mojom::Sandbox::kRenderer:
 +      // prot_exec needed by v8
@@ -338,13 +340,13 @@ $NetBSD$
 +      break;
 +#endif
 +    case sandbox::mojom::Sandbox::kAudio:
-+      SetPledge(NULL, "/etc/chromium/pledge.utility_audio");
++      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.utility_audio");
 +      break;
 +    case sandbox::mojom::Sandbox::kNetwork:
-+      SetPledge(NULL, "/etc/chromium/pledge.utility_network");
++      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.utility_network");
 +      break;
 +    case sandbox::mojom::Sandbox::kVideoCapture:
-+      SetPledge(NULL, "/etc/chromium/pledge.utility_video");
++      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.utility_video");
 +      break;
 +    case sandbox::mojom::Sandbox::kUtility:
 +    case sandbox::mojom::Sandbox::kService:

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/webrtc/audio_processor.cc.orig	2024-03-06 00:14:55.855271800 +0000
 +++ media/webrtc/audio_processor.cc
 @@ -513,7 +513,7 @@ absl::optional<double> AudioProcessor::P

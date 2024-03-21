@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/crc32c/BUILD.gn.orig	2024-03-06 00:15:15.016935300 +0000
 +++ third_party/crc32c/BUILD.gn
 @@ -46,7 +46,7 @@ config("crc32c_config") {

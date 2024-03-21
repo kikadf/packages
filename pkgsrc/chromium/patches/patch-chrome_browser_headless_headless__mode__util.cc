@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/headless/headless_mode_util.cc.orig	2024-03-06 00:14:41.181998000 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
 @@ -18,7 +18,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/device/geolocation/location_arbitrator.cc.orig	2024-03-06 00:14:57.619425000 +0000
 +++ services/device/geolocation/location_arbitrator.cc
 @@ -194,7 +194,7 @@ LocationArbitrator::NewNetworkLocationPr

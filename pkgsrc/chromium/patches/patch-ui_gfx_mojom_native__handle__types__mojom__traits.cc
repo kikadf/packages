@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2024-03-06 00:15:20.701429000 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.cc
 @@ -8,11 +8,11 @@

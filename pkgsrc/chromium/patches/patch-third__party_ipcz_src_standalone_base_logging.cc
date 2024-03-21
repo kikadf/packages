@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/ipcz/src/standalone/base/logging.cc.orig	2024-03-06 00:15:15.572983700 +0000
 +++ third_party/ipcz/src/standalone/base/logging.cc
 @@ -50,6 +50,9 @@ LogMessage::LogMessage(const char* file,

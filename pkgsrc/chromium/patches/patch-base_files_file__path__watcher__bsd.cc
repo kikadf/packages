@@ -1,6 +1,8 @@
 $NetBSD$
 
---- base/files/file_path_watcher_bsd.cc.orig	2024-03-19 17:04:39.596137066 +0000
+* Part of patchset to build on NetBSD
+
+--- base/files/file_path_watcher_bsd.cc.orig	2024-03-21 18:07:57.912832290 +0000
 +++ base/files/file_path_watcher_bsd.cc
 @@ -0,0 +1,54 @@
 +// Copyright 2021 The Chromium Authors. All rights reserved.

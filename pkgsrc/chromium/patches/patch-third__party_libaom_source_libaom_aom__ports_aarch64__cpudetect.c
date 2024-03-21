@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-03-06 00:15:31.322351000 +0000
 +++ third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c
 @@ -85,7 +85,7 @@ static int arm_get_cpu_caps(void) {

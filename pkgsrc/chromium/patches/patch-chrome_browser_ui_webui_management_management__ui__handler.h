@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2024-03-06 00:14:43.822227200 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.h
 @@ -24,14 +24,14 @@

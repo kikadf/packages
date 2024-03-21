@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/profiles/profile_impl.cc.orig	2024-03-06 00:14:41.750047400 +0000
 +++ chrome/browser/profiles/profile_impl.cc
 @@ -261,6 +261,10 @@

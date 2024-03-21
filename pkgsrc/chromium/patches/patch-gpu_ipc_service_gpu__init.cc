@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/ipc/service/gpu_init.cc.orig	2024-03-06 00:14:52.939018700 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -354,7 +354,7 @@ bool GpuInit::InitializeAndStartSandbox(

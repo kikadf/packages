@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/base/mock_network_change_notifier.h.orig	2024-03-06 00:14:56.327313000 +0000
 +++ net/base/mock_network_change_notifier.h
 @@ -84,7 +84,7 @@ class MockNetworkChangeNotifier : public

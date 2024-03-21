@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/public/cpp/features.cc.orig	2024-03-06 00:14:57.711433200 +0000
 +++ services/network/public/cpp/features.cc
 @@ -98,7 +98,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso

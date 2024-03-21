@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/audio/audio_service.cc.orig	2024-03-06 00:14:50.402798700 +0000
 +++ content/browser/audio/audio_service.cc
 @@ -34,7 +34,7 @@

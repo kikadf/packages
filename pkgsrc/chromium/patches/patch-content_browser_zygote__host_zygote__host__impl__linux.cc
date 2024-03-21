@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2024-03-06 00:14:51.170865300 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.cc
 @@ -19,8 +19,10 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/password_manager/core/browser/features/password_features.h.orig	2024-03-06 00:14:47.874579200 +0000
 +++ components/password_manager/core/browser/features/password_features.h
 @@ -94,7 +94,7 @@ BASE_DECLARE_FEATURE(kPasswordManagerEna

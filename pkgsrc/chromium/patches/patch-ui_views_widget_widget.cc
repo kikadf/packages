@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/views/widget/widget.cc.orig	2024-03-06 00:15:21.037458000 +0000
 +++ ui/views/widget/widget.cc
 @@ -54,7 +54,7 @@

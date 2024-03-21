@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/task_manager/sampling/task_group_sampler.h.orig	2024-03-06 00:14:42.678128000 +0000
 +++ chrome/browser/task_manager/sampling/task_group_sampler.h
 @@ -31,7 +31,7 @@ class TaskGroupSampler : public base::Re

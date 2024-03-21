@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/browser_process_impl.h.orig	2024-03-06 00:14:40.593947200 +0000
 +++ chrome/browser/browser_process_impl.h
 @@ -389,7 +389,7 @@ class BrowserProcessImpl : public Browse

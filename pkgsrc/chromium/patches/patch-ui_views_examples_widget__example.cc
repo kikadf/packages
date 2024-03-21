@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/views/examples/widget_example.cc.orig	2024-03-06 00:15:20.993454200 +0000
 +++ ui/views/examples/widget_example.cc
 @@ -49,7 +49,7 @@ void WidgetExample::CreateExampleView(Vi

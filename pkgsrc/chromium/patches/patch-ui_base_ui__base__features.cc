@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/ui_base_features.cc.orig	2024-03-06 00:15:20.329396500 +0000
 +++ ui/base/ui_base_features.cc
 @@ -217,7 +217,7 @@ BASE_FEATURE(kExperimentalFlingAnimation

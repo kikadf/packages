@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/about_flags.cc.orig	2024-03-06 00:14:39.641864300 +0000
 +++ chrome/browser/about_flags.cc
 @@ -234,7 +234,7 @@

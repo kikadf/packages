@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- tools/gn/build/gen.py.orig	2024-03-06 00:26:43.684720300 +0000
 +++ tools/gn/build/gen.py
 @@ -94,6 +94,12 @@ class Platform(object):

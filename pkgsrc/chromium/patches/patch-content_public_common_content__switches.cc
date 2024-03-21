@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/public/common/content_switches.cc.orig	2024-03-06 00:14:51.294876000 +0000
 +++ content/public/common/content_switches.cc
 @@ -366,6 +366,8 @@ const char kEnableIsolatedWebAppsInRende

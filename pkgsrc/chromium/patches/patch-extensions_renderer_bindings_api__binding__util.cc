@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- extensions/renderer/bindings/api_binding_util.cc.orig	2024-03-06 00:14:52.646993400 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
 @@ -132,7 +132,7 @@ std::string GetPlatformString() {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gl/gl_implementation.cc.orig	2024-03-06 00:15:20.753433500 +0000
 +++ ui/gl/gl_implementation.cc
 @@ -276,7 +276,7 @@ GetRequestedGLImplementationFromCommandL

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2024-03-06 00:15:00.399666500 +0000
 +++ third_party/blink/renderer/platform/graphics/begin_frame_provider.cc
 @@ -71,8 +71,12 @@ void BeginFrameProvider::CreateComposito

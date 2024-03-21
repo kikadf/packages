@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2024-03-06 00:14:48.058595200 +0000
 +++ components/policy/core/common/cloud/cloud_policy_client.cc
 @@ -554,7 +554,7 @@ void CloudPolicyClient::FetchPolicy(Poli

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc.orig	2024-03-06 00:15:20.813438700 +0000
 +++ ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc
 @@ -38,7 +38,11 @@ bool VulkanImplementationWayland::Initia

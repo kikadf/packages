@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2024-03-06 00:14:52.891014600 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_manager.cc
 @@ -550,7 +550,7 @@ bool SharedImageManager::SupportsScanout

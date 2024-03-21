@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/policy/core/common/policy_paths.cc.orig	2024-03-06 00:14:48.078596800 +0000
 +++ components/policy/core/common/policy_paths.cc
 @@ -17,6 +17,8 @@ namespace policy {

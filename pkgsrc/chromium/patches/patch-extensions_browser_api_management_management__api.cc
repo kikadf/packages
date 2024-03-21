@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- extensions/browser/api/management/management_api.cc.orig	2024-03-06 00:14:52.386970800 +0000
 +++ extensions/browser/api/management/management_api.cc
 @@ -279,7 +279,7 @@ bool PlatformSupportsApprovalFlowForExte

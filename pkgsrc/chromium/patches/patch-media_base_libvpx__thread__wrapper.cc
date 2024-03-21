@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/base/libvpx_thread_wrapper.cc.orig	2024-03-06 00:14:54.819182000 +0000
 +++ media/base/libvpx_thread_wrapper.cc
 @@ -5,17 +5,21 @@

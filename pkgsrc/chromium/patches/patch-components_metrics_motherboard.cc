@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/metrics/motherboard.cc.orig	2024-03-06 00:14:47.486545300 +0000
 +++ components/metrics/motherboard.cc
 @@ -1,6 +1,7 @@

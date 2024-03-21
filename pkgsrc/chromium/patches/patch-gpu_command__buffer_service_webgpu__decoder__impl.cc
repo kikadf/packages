@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-03-06 00:14:52.903015600 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
 @@ -1243,7 +1243,7 @@ void WebGPUDecoderImpl::RequestAdapterIm

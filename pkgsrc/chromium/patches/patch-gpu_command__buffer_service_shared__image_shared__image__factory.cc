@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-03-06 00:14:52.891014600 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
 @@ -143,7 +143,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer

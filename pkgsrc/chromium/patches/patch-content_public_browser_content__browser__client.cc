@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/public/browser/content_browser_client.cc.orig	2024-03-06 00:14:51.258873000 +0000
 +++ content/public/browser/content_browser_client.cc
 @@ -1273,7 +1273,7 @@ bool ContentBrowserClient::ShouldRunOutO

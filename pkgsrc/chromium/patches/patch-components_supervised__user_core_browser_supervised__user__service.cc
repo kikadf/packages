@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/supervised_user/core/browser/supervised_user_service.cc.orig	2024-03-06 00:14:49.398711400 +0000
 +++ components/supervised_user/core/browser/supervised_user_service.cc
 @@ -164,7 +164,7 @@ FirstTimeInterstitialBannerState Supervi

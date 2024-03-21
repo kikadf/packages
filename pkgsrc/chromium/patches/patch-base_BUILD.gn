@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/BUILD.gn.orig	2024-03-06 00:14:36.833620500 +0000
 +++ base/BUILD.gn
 @@ -187,7 +187,7 @@ buildflag_header("ios_cronet_buildflags"

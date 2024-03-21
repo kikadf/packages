@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-03-06 00:14:50.246785200 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc
 @@ -109,7 +109,7 @@ RootCompositorFrameSinkImpl::Create(

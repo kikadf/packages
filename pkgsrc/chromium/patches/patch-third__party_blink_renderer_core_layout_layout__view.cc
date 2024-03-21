@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-03-06 00:14:59.639600500 +0000
 +++ third_party/blink/renderer/core/layout/layout_view.cc
 @@ -72,7 +72,7 @@

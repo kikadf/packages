@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/task_manager/sampling/task_group.cc.orig	2024-03-06 00:14:42.678128000 +0000
 +++ chrome/browser/task_manager/sampling/task_group.cc
 @@ -38,7 +38,7 @@ const int kBackgroundRefreshTypesMask =

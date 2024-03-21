@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2024-03-06 00:15:00.391665700 +0000
 +++ third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc
 @@ -65,7 +65,7 @@ AtomicString ToAtomicString(const SkStri

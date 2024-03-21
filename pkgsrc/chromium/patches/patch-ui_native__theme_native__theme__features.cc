@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/native_theme/native_theme_features.cc.orig	2024-03-06 00:15:20.785436200 +0000
 +++ ui/native_theme/native_theme_features.cc
 @@ -54,7 +54,7 @@ bool IsOverlayScrollbarEnabled() {

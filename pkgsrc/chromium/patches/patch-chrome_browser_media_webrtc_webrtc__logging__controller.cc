@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2024-03-06 00:14:41.330011000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
 @@ -25,10 +25,10 @@

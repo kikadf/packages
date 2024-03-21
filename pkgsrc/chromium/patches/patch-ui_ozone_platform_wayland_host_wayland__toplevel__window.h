@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/platform/wayland/host/wayland_toplevel_window.h.orig	2024-03-06 00:15:20.829439900 +0000
 +++ ui/ozone/platform/wayland/host/wayland_toplevel_window.h
 @@ -260,7 +260,7 @@ class WaylandToplevelWindow : public Way

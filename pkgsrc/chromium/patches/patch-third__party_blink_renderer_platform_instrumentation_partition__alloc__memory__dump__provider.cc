@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc.orig	2024-03-06 00:15:00.467672300 +0000
 +++ third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc
 @@ -24,6 +24,7 @@ PartitionAllocMemoryDumpProvider* Partit

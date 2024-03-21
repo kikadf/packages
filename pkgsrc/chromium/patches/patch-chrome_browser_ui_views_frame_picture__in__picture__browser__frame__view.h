@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2024-03-06 00:14:43.502199600 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h
 @@ -26,7 +26,7 @@

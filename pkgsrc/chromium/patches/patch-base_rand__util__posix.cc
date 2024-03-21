@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/rand_util_posix.cc.orig	2024-03-06 00:14:37.037638400 +0000
 +++ base/rand_util_posix.cc
 @@ -23,7 +23,7 @@

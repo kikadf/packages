@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/synchronization/lock_impl.h.orig	2024-03-06 00:14:37.053639700 +0000
 +++ base/synchronization/lock_impl.h
 @@ -106,6 +106,10 @@ void LockImpl::Unlock() {

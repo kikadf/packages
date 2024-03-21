@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/viz/service/display/skia_renderer.cc.orig	2024-03-06 00:14:50.230783700 +0000
 +++ components/viz/service/display/skia_renderer.cc
 @@ -1346,7 +1346,7 @@ void SkiaRenderer::ClearFramebuffer() {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/events/keycodes/dom/keycode_converter.cc.orig	2024-03-06 00:15:20.553416000 +0000
 +++ ui/events/keycodes/dom/keycode_converter.cc
 @@ -11,7 +11,7 @@

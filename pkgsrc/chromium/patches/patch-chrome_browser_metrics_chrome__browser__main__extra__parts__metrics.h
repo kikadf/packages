@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h.orig	2024-03-06 00:14:41.350012800 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h
 @@ -28,7 +28,7 @@ class PowerMetricsReporter;

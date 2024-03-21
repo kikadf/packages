@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/supervised_user/core/common/features.cc.orig	2024-03-06 00:14:49.402711900 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -66,7 +66,7 @@ bool IsLocalWebApprovalsEnabled() {

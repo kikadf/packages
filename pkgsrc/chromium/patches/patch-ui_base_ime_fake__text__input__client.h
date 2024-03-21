@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/ime/fake_text_input_client.h.orig	2024-03-06 00:15:20.293393400 +0000
 +++ ui/base/ime/fake_text_input_client.h
 @@ -74,7 +74,7 @@ class FakeTextInputClient : public TextI

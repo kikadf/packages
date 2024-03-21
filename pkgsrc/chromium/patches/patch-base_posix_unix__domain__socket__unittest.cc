@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/posix/unix_domain_socket_unittest.cc.orig	2024-03-06 00:14:37.017636500 +0000
 +++ base/posix/unix_domain_socket_unittest.cc
 @@ -10,6 +10,8 @@

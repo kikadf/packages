@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/cursor/cursor_factory.cc.orig	2024-03-06 00:15:20.277392100 +0000
 +++ ui/base/cursor/cursor_factory.cc
 @@ -98,7 +98,7 @@ void CursorFactory::ObserveThemeChanges(

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/display/screen.h.orig	2024-03-06 00:15:20.521413300 +0000
 +++ ui/display/screen.h
 @@ -131,7 +131,7 @@ class DISPLAY_EXPORT Screen {

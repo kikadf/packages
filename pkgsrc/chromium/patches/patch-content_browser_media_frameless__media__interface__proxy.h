@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/media/frameless_media_interface_proxy.h.orig	2024-03-06 00:14:50.598815700 +0000
 +++ content/browser/media/frameless_media_interface_proxy.h
 @@ -19,7 +19,7 @@

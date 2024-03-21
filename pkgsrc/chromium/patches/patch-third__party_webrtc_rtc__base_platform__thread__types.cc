@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2024-03-06 00:16:10.037711900 +0000
 +++ third_party/webrtc/rtc_base/platform_thread_types.cc
 @@ -11,7 +11,9 @@

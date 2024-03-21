@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/leveldatabase/env_chromium.cc.orig	2024-03-06 00:15:15.608986900 +0000
 +++ third_party/leveldatabase/env_chromium.cc
 @@ -326,7 +326,8 @@ ChromiumWritableFile::ChromiumWritableFi

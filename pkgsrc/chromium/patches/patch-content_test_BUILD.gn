@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/test/BUILD.gn.orig	2024-03-06 00:14:51.406885900 +0000
 +++ content/test/BUILD.gn
 @@ -2262,7 +2262,7 @@ static_library("run_all_unittests") {

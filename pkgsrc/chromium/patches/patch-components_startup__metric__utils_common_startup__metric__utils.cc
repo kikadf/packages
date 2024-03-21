@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/startup_metric_utils/common/startup_metric_utils.cc.orig	2024-03-06 00:14:49.082684000 +0000
 +++ components/startup_metric_utils/common/startup_metric_utils.cc
 @@ -85,7 +85,7 @@ base::TimeTicks CommonStartupMetricRecor

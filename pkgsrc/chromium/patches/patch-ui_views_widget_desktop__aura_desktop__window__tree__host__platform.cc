@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-03-06 00:15:21.029457300 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc
 @@ -45,7 +45,7 @@

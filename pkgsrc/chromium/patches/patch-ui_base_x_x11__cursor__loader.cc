@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/x/x11_cursor_loader.cc.orig	2024-03-06 00:15:20.337397300 +0000
 +++ ui/base/x/x11_cursor_loader.cc
 @@ -31,7 +31,7 @@

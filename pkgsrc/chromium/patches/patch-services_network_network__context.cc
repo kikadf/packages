@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/network_context.cc.orig	2024-03-06 00:14:57.687431000 +0000
 +++ services/network/network_context.cc
 @@ -522,7 +522,7 @@ NetworkContext::NetworkContextHttpAuthPr

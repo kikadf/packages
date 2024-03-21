@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/shell/BUILD.gn.orig	2024-03-06 00:14:51.386884000 +0000
 +++ content/shell/BUILD.gn
 @@ -1030,7 +1030,7 @@ group("content_shell_crash_test") {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/zlib/cpu_features.c.orig	2024-03-06 00:15:19.033284000 +0000
 +++ third_party/zlib/cpu_features.c
 @@ -35,7 +35,8 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 

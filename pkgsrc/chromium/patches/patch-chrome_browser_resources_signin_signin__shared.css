@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/resources/signin/signin_shared.css.orig	2024-03-06 00:14:42.350099600 +0000
 +++ chrome/browser/resources/signin/signin_shared.css
 @@ -54,7 +54,7 @@ a {

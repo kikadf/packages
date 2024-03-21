@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/socket/socks5_client_socket.cc.orig	2024-03-06 00:14:57.047375400 +0000
 +++ net/socket/socks5_client_socket.cc
 @@ -19,6 +19,9 @@

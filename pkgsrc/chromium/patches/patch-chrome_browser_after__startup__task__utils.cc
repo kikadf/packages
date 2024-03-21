@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/after_startup_task_utils.cc.orig	2024-03-06 00:14:39.649865200 +0000
 +++ chrome/browser/after_startup_task_utils.cc
 @@ -107,7 +107,7 @@ void SetBrowserStartupIsComplete() {

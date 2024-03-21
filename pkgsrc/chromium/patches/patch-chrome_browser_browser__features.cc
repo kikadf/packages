@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/browser_features.cc.orig	2024-03-06 00:14:40.589946700 +0000
 +++ chrome/browser/browser_features.cc
 @@ -28,7 +28,7 @@ BASE_FEATURE(kClosedTabCache,

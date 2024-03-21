@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/webui/realbox/realbox_handler.cc.orig	2024-03-06 00:14:43.850229700 +0000
 +++ chrome/browser/ui/webui/realbox/realbox_handler.cc
 @@ -148,7 +148,7 @@ const char* kMacShareIconResourceName =

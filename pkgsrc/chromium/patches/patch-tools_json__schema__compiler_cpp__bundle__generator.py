@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2024-03-06 00:15:19.537327800 +0000
 +++ tools/json_schema_compiler/cpp_bundle_generator.py
 @@ -149,7 +149,7 @@ class CppBundleGenerator(object):

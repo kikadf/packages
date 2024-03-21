@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/trace_event/process_memory_dump.cc.orig	2024-03-06 00:14:37.157648800 +0000
 +++ base/trace_event/process_memory_dump.cc
 @@ -112,7 +112,7 @@ absl::optional<size_t> ProcessMemoryDump

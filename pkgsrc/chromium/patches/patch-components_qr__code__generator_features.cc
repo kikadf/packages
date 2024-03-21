@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/qr_code_generator/features.cc.orig	2024-03-06 00:14:48.782657900 +0000
 +++ components/qr_code_generator/features.cc
 @@ -11,6 +11,10 @@ namespace qr_code_generator {

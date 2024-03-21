@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/password_manager/core/browser/password_form_manager.cc.orig	2024-03-06 00:14:47.890580400 +0000
 +++ components/password_manager/core/browser/password_form_manager.cc
 @@ -58,7 +58,7 @@

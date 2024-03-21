@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/perfetto/src/base/test/vm_test_utils.cc.orig	2024-03-06 00:16:02.649070500 +0000
 +++ third_party/perfetto/src/base/test/vm_test_utils.cc
 @@ -91,7 +91,7 @@ bool IsMapped(void* start, size_t size) 

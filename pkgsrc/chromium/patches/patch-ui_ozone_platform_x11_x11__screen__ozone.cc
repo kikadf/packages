@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2024-03-06 00:15:20.849441800 +0000
 +++ ui/ozone/platform/x11/x11_screen_ozone.cc
 @@ -22,7 +22,7 @@

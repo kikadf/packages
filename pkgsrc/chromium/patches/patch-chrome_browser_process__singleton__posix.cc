@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/process_singleton_posix.cc.orig	2024-03-06 00:14:41.734046000 +0000
 +++ chrome/browser/process_singleton_posix.cc
 @@ -97,7 +97,7 @@

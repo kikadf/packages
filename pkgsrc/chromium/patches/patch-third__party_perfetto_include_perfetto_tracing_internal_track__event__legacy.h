@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h.orig	2024-03-06 00:16:01.204945000 +0000
 +++ third_party/perfetto/include/perfetto/tracing/internal/track_event_legacy.h
 @@ -249,7 +249,7 @@ class PERFETTO_EXPORT_COMPONENT LegacyTr

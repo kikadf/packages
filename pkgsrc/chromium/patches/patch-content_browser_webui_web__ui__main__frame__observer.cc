@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/webui/web_ui_main_frame_observer.cc.orig	2024-03-06 00:14:51.158864300 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.cc
 @@ -13,7 +13,7 @@

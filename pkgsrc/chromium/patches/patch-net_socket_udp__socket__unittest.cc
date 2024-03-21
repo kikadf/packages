@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/socket/udp_socket_unittest.cc.orig	2024-03-06 00:14:57.059376500 +0000
 +++ net/socket/udp_socket_unittest.cc
 @@ -344,7 +344,7 @@ TEST_F(UDPSocketTest, PartialRecv) {

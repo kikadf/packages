@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/webrtc/rtc_base/physical_socket_server.cc.orig	2024-03-06 00:16:10.037711900 +0000
 +++ third_party/webrtc/rtc_base/physical_socket_server.cc
 @@ -53,7 +53,7 @@

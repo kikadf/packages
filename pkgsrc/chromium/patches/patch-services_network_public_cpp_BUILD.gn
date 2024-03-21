@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/public/cpp/BUILD.gn.orig	2024-03-06 00:14:57.699432100 +0000
 +++ services/network/public/cpp/BUILD.gn
 @@ -488,7 +488,7 @@ component("cpp_base") {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/gpu_video_encode_accelerator_factory.cc.orig	2024-03-06 00:14:54.983196300 +0000
 +++ media/gpu/gpu_video_encode_accelerator_factory.cc
 @@ -119,7 +119,7 @@ std::vector<VEAFactoryFunction> GetVEAFa

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/qr_code_generator/features.h.orig	2024-03-06 00:14:48.782657900 +0000
 +++ components/qr_code_generator/features.h
 @@ -26,7 +26,11 @@ BASE_DECLARE_FEATURE(kRustyQrCodeGenerat

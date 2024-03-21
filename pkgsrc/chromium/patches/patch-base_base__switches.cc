@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/base_switches.cc.orig	2024-03-06 00:14:36.925628700 +0000
 +++ base/base_switches.cc
 @@ -172,7 +172,7 @@ const char kPackageVersionName[] = "pack

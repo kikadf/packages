@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2024-03-06 00:14:43.682215200 +0000
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
 @@ -466,7 +466,7 @@ std::string GetFileExtension(FileExtensi

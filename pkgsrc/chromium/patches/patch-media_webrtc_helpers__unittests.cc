@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/webrtc/helpers_unittests.cc.orig	2024-03-06 00:14:55.859272200 +0000
 +++ media/webrtc/helpers_unittests.cc
 @@ -39,7 +39,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe

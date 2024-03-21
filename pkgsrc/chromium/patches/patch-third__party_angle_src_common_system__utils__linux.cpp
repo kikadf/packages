@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/angle/src/common/system_utils_linux.cpp.orig	2024-03-06 00:16:06.469402000 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
 @@ -15,8 +15,13 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/security_interstitials/content/utils.cc.orig	2024-03-06 00:14:48.926670600 +0000
 +++ components/security_interstitials/content/utils.cc
 @@ -38,7 +38,7 @@ void LaunchDateAndTimeSettings() {

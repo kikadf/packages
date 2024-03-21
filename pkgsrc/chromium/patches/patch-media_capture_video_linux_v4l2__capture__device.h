@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/capture/video/linux/v4l2_capture_device.h.orig	2024-03-06 00:14:54.867186000 +0000
 +++ media/capture/video/linux/v4l2_capture_device.h
 @@ -21,7 +21,7 @@ class CAPTURE_EXPORT V4L2CaptureDevice

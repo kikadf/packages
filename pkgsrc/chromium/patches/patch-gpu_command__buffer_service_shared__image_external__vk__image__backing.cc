@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2024-03-06 00:14:52.883014000 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing.cc
 @@ -49,7 +49,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2024-03-06 00:14:36.877624500 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
 @@ -17,7 +17,16 @@

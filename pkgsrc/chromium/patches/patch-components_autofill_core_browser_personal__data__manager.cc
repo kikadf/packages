@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/autofill/core/browser/personal_data_manager.cc.orig	2024-03-06 00:14:46.726479500 +0000
 +++ components/autofill/core/browser/personal_data_manager.cc
 @@ -2409,7 +2409,8 @@ bool PersonalDataManager::ShouldShowCard

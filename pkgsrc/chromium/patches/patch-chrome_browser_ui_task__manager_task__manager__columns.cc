@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/task_manager/task_manager_columns.cc.orig	2024-03-06 00:14:43.382189000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_columns.cc
 @@ -93,7 +93,7 @@ const TableColumnData kColumns[] = {

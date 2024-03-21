@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/download/download_prefs.h.orig	2024-03-06 00:14:40.805965400 +0000
 +++ chrome/browser/download/download_prefs.h
 @@ -115,7 +115,7 @@ class DownloadPrefs {

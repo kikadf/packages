@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/client_session.cc.orig	2024-03-06 00:14:57.371403500 +0000
 +++ remoting/host/client_session.cc
 @@ -160,7 +160,7 @@ void ClientSession::NotifyClientResoluti

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/config/gpu_finch_features.cc.orig	2024-03-06 00:14:52.915016700 +0000
 +++ gpu/config/gpu_finch_features.cc
 @@ -63,7 +63,7 @@ bool IsDeviceBlocked(const char* field, 

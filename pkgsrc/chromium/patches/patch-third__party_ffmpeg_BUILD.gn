@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/ffmpeg/BUILD.gn.orig	2024-03-06 00:15:29.694209600 +0000
 +++ third_party/ffmpeg/BUILD.gn
 @@ -349,7 +349,6 @@ target(link_target_type, "ffmpeg_interna

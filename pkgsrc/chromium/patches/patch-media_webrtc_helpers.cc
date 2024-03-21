@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/webrtc/helpers.cc.orig	2024-03-06 00:14:55.855271800 +0000
 +++ media/webrtc/helpers.cc
 @@ -40,7 +40,7 @@ void ConfigAutomaticGainControl(const Au

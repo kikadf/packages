@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/font_util.cc.orig	2024-03-06 00:15:20.673426400 +0000
 +++ ui/gfx/font_util.cc
 @@ -6,7 +6,7 @@

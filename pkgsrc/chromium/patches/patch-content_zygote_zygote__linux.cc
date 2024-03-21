@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/zygote/zygote_linux.cc.orig	2024-03-06 00:14:51.922930500 +0000
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@

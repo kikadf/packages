@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/devtools/protocol/system_info_handler.cc.orig	2024-03-06 00:14:50.478805300 +0000
 +++ content/browser/devtools/protocol/system_info_handler.cc
 @@ -49,7 +49,7 @@ std::unique_ptr<SystemInfo::Size> GfxSiz

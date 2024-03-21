@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/web_applications/web_app_install_info.h.orig	2024-03-06 00:14:44.002243000 +0000
 +++ chrome/browser/web_applications/web_app_install_info.h
 @@ -35,7 +35,7 @@

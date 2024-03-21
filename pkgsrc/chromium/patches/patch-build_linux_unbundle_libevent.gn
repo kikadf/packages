@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- build/linux/unbundle/libevent.gn.orig	2024-03-06 00:14:37.293660600 +0000
 +++ build/linux/unbundle/libevent.gn
 @@ -9,7 +9,12 @@ shim_headers("libevent_shim") {

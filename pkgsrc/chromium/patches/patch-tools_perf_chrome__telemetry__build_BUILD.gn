@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- tools/perf/chrome_telemetry_build/BUILD.gn.orig	2024-03-06 00:15:19.725344200 +0000
 +++ tools/perf/chrome_telemetry_build/BUILD.gn
 @@ -47,7 +47,7 @@ group("telemetry_chrome_test") {

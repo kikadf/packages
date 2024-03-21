@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2024-03-06 00:14:58.123468900 +0000
 +++ third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h
 @@ -34,7 +34,8 @@

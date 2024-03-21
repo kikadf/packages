@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- device/gamepad/hid_writer_linux.cc.orig	2024-03-06 00:14:52.078944200 +0000
 +++ device/gamepad/hid_writer_linux.cc
 @@ -2,6 +2,8 @@

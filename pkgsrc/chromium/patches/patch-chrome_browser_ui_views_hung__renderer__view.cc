@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/hung_renderer_view.cc.orig	2024-03-06 00:14:43.514200700 +0000
 +++ chrome/browser/ui/views/hung_renderer_view.cc
 @@ -406,7 +406,7 @@ void HungRendererDialogView::ForceCrashH

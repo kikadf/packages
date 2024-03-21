@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/linux/dmabuf_uapi.h.orig	2024-03-06 00:15:20.693428300 +0000
 +++ ui/gfx/linux/dmabuf_uapi.h
 @@ -5,12 +5,11 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/switches.h.orig	2024-03-06 00:15:20.713430000 +0000
 +++ ui/gfx/switches.h
 @@ -18,7 +18,7 @@ GFX_SWITCHES_EXPORT extern const char kE

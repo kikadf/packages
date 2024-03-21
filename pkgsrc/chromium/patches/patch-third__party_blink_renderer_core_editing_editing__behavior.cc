@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2024-03-06 00:14:59.315572300 +0000
 +++ third_party/blink/renderer/core/editing/editing_behavior.cc
 @@ -324,7 +324,7 @@ bool EditingBehavior::ShouldInsertCharac

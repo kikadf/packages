@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2024-03-06 00:14:59.107554200 +0000
 +++ third_party/blink/renderer/controller/memory_usage_monitor_posix.cc
 @@ -128,15 +128,17 @@ void MemoryUsageMonitorPosix::ResetFileD

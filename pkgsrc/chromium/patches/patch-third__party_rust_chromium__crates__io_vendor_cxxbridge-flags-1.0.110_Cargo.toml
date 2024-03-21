@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/rust/chromium_crates_io/vendor/cxxbridge-flags-1.0.110/Cargo.toml.orig	2024-03-06 00:15:17.225127000 +0000
 +++ third_party/rust/chromium_crates_io/vendor/cxxbridge-flags-1.0.110/Cargo.toml
 @@ -1,20 +1,34 @@

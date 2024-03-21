@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2024-03-06 00:15:00.379664700 +0000
 +++ third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc
 @@ -9,7 +9,7 @@

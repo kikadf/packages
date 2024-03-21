@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/utility_process_host_receiver_bindings.cc.orig	2024-03-06 00:14:51.118860700 +0000
 +++ content/browser/utility_process_host_receiver_bindings.cc
 @@ -10,12 +10,12 @@

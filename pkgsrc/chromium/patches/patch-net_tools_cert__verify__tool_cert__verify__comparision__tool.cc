@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/tools/cert_verify_tool/cert_verify_comparision_tool.cc.orig	2024-03-06 00:14:57.123382000 +0000
 +++ net/tools/cert_verify_tool/cert_verify_comparision_tool.cc
 @@ -35,7 +35,7 @@

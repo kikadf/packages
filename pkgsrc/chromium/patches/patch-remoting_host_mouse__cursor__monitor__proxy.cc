@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/mouse_cursor_monitor_proxy.cc.orig	2024-03-06 00:14:57.415407400 +0000
 +++ remoting/host/mouse_cursor_monitor_proxy.cc
 @@ -73,7 +73,7 @@ void MouseCursorMonitorProxy::Core::Crea

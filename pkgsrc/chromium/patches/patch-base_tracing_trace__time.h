@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/tracing/trace_time.h.orig	2024-03-06 00:14:37.173650000 +0000
 +++ base/tracing/trace_time.h
 @@ -12,7 +12,7 @@ namespace base {

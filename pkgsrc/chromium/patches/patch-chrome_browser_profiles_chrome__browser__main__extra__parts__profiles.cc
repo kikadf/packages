@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2024-03-06 00:14:41.742046800 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
 @@ -314,7 +314,7 @@

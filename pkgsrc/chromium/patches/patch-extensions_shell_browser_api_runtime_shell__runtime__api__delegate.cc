@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2024-03-06 00:14:52.674996000 +0000
 +++ extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc
 @@ -44,7 +44,7 @@ void ShellRuntimeAPIDelegate::OpenURL(co

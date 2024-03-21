@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/atomicops.h.orig	2024-03-06 00:14:36.921628200 +0000
 +++ base/atomicops.h
 @@ -71,7 +71,11 @@ typedef intptr_t Atomic64;

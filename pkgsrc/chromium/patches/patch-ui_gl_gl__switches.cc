@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gl/gl_switches.cc.orig	2024-03-06 00:15:20.757433700 +0000
 +++ ui/gl/gl_switches.cc
 @@ -11,7 +11,7 @@

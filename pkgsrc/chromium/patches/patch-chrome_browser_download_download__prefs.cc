@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/download/download_prefs.cc.orig	2024-03-06 00:14:40.805965400 +0000
 +++ chrome/browser/download/download_prefs.cc
 @@ -11,6 +11,7 @@

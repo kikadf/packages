@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/native_pixmap_handle.cc.orig	2024-03-06 00:15:20.701429000 +0000
 +++ ui/gfx/native_pixmap_handle.cc
 @@ -11,7 +11,7 @@

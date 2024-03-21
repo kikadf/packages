@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/device_identity/device_oauth2_token_service_factory.cc.orig	2024-03-06 00:14:40.749960700 +0000
 +++ chrome/browser/device_identity/device_oauth2_token_service_factory.cc
 @@ -28,7 +28,7 @@ std::unique_ptr<DeviceOAuth2TokenStore> 

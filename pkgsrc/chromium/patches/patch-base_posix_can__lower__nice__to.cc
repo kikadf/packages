@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/posix/can_lower_nice_to.cc.orig	2024-03-06 00:14:37.013636400 +0000
 +++ base/posix/can_lower_nice_to.cc
 @@ -11,8 +11,12 @@

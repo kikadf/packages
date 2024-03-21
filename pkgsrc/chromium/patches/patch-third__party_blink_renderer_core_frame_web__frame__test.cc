@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2024-03-06 00:14:59.435582600 +0000
 +++ third_party/blink/renderer/core/frame/web_frame_test.cc
 @@ -6468,7 +6468,7 @@ TEST_F(WebFrameTest, DISABLED_PositionFo

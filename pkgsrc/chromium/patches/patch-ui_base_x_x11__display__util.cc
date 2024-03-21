@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/x/x11_display_util.cc.orig	2024-03-06 00:15:20.337397300 +0000
 +++ ui/base/x/x11_display_util.cc
 @@ -12,7 +12,6 @@

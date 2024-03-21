@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/network_service.cc.orig	2024-03-06 00:14:57.691431300 +0000
 +++ services/network/network_service.cc
 @@ -96,7 +96,7 @@

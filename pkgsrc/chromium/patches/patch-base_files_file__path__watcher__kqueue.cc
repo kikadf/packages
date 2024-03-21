@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/files/file_path_watcher_kqueue.cc.orig	2024-03-06 00:14:36.949630700 +0000
 +++ base/files/file_path_watcher_kqueue.cc
 @@ -76,9 +76,15 @@ size_t FilePathWatcherKQueue::EventsForP

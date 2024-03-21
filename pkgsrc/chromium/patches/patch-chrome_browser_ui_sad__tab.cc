@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/sad_tab.cc.orig	2024-03-06 00:14:43.338185300 +0000
 +++ chrome/browser/ui/sad_tab.cc
 @@ -176,7 +176,7 @@ std::vector<int> SadTab::GetSubMessages(

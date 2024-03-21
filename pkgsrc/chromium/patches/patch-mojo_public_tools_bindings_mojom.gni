@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- mojo/public/tools/bindings/mojom.gni.orig	2024-03-06 00:14:55.959281000 +0000
 +++ mojo/public/tools/bindings/mojom.gni
 @@ -748,6 +748,16 @@ template("mojom") {

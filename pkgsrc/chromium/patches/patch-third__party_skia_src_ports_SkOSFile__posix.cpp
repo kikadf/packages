@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/skia/src/ports/SkOSFile_posix.cpp.orig	2024-03-06 00:16:01.808997400 +0000
 +++ third_party/skia/src/ports/SkOSFile_posix.cpp
 @@ -25,7 +25,7 @@

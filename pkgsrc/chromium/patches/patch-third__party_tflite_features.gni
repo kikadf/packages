@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/tflite/features.gni.orig	2024-03-06 00:15:17.973192000 +0000
 +++ third_party/tflite/features.gni
 @@ -8,9 +8,9 @@ declare_args() {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- printing/mojom/printing_context_mojom_traits.cc.orig	2024-03-06 00:14:57.311398300 +0000
 +++ printing/mojom/printing_context_mojom_traits.cc
 @@ -19,7 +19,7 @@

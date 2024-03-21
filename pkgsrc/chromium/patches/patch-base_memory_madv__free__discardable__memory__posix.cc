@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/memory/madv_free_discardable_memory_posix.cc.orig	2024-03-06 00:14:36.981633400 +0000
 +++ base/memory/madv_free_discardable_memory_posix.cc
 @@ -306,6 +306,10 @@ void MadvFreeDiscardableMemoryPosix::Set

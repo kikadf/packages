@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/views/corewm/tooltip_aura.cc.orig	2024-03-06 00:15:20.981453200 +0000
 +++ ui/views/corewm/tooltip_aura.cc
 @@ -38,7 +38,7 @@ namespace {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/common/features.h.orig	2024-03-06 00:14:51.182866300 +0000
 +++ content/common/features.h
 @@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc

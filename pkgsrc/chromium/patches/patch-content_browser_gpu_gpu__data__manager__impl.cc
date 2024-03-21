@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/gpu/gpu_data_manager_impl.cc.orig	2024-03-06 00:14:50.518808600 +0000
 +++ content/browser/gpu/gpu_data_manager_impl.cc
 @@ -405,7 +405,7 @@ void GpuDataManagerImpl::OnDisplayMetric

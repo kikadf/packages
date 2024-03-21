@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/events/event_switches.h.orig	2024-03-06 00:15:20.541415000 +0000
 +++ ui/events/event_switches.h
 @@ -13,7 +13,7 @@ namespace switches {

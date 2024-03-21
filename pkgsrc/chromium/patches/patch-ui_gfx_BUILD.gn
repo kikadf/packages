@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gfx/BUILD.gn.orig	2024-03-06 00:15:20.657425200 +0000
 +++ ui/gfx/BUILD.gn
 @@ -664,7 +664,7 @@ source_set("memory_buffer_sources") {

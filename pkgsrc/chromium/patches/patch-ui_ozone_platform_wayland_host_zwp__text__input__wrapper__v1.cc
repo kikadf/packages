@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc.orig	2024-03-06 00:15:20.837440700 +0000
 +++ ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc
 @@ -226,6 +226,10 @@ void ZWPTextInputWrapperV1::SetSurroundi

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/common/chrome_paths.cc.orig	2024-03-06 00:14:44.054247400 +0000
 +++ chrome/common/chrome_paths.cc
 @@ -30,7 +30,7 @@
@@ -22,10 +24,10 @@ $NetBSD$
  const base::FilePath::CharType kFilepathSinglePrefExtensions[] =
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
 -    FILE_PATH_LITERAL("/usr/share/google-chrome/extensions");
-+    FILE_PATH_LITERAL("/usr/local/share/chromium/extensions");
++    FILE_PATH_LITERAL("@PREFIX@/share/chromium/extensions");
  #else
 -    FILE_PATH_LITERAL("/usr/share/chromium/extensions");
-+    FILE_PATH_LITERAL("/usr/local/share/chromium/extensions");
++    FILE_PATH_LITERAL("@PREFIX@/share/chromium/extensions");
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -80,7 +82,7 @@ $NetBSD$
            FILE_PATH_LITERAL("/etc/opt/chrome/native-messaging-hosts"));
 +#elif BUILDFLAG(IS_FREEBSD)
 +      cur = base::FilePath(FILE_PATH_LITERAL(
-+          "/usr/local/etc/chromium/native-messaging-hosts"));
++          "@PREFIX@/etc/chromium/native-messaging-hosts"));
  #else
        cur = base::FilePath(
            FILE_PATH_LITERAL("/etc/chromium/native-messaging-hosts"));

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2024-03-06 00:14:52.887014200 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc
 @@ -147,7 +147,7 @@ bool IsFormatSupported(viz::SharedImageF

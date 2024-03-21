@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-03-06 00:14:44.090250500 +0000
 +++ chrome/common/media/component_widevine_cdm_hint_file_linux.h
 @@ -15,7 +15,7 @@

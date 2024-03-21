@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/common/egl_util.cc.orig	2024-03-06 00:15:20.789436600 +0000
 +++ ui/ozone/common/egl_util.cc
 @@ -26,9 +26,9 @@ const base::FilePath::CharType kDefaultG

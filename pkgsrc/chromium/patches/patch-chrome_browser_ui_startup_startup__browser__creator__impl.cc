@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2024-03-06 00:14:43.366187800 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
 @@ -256,7 +256,7 @@ Browser* StartupBrowserCreatorImpl::Open

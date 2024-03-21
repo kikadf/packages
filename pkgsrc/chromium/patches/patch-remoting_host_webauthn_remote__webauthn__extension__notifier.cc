@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2024-03-06 00:14:57.435409000 +0000
 +++ remoting/host/webauthn/remote_webauthn_extension_notifier.cc
 @@ -24,7 +24,7 @@

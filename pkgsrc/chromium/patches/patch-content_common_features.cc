@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/common/features.cc.orig	2024-03-06 00:14:51.182866300 +0000
 +++ content/common/features.cc
 @@ -166,7 +166,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO

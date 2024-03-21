@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/device_signals/core/common/signals_features.cc.orig	2024-03-06 00:14:47.102512100 +0000
 +++ components/device_signals/core/common/signals_features.cc
 @@ -46,7 +46,7 @@ bool IsNewFunctionEnabled(NewEvFunction 

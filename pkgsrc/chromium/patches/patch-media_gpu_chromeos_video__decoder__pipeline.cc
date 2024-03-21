@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-03-06 00:14:54.983196300 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -1009,14 +1009,14 @@ VideoDecoderPipeline::PickDecoderOutputF

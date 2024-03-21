@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/ozone/platform/x11/x11_window.cc.orig	2024-03-06 00:15:20.853442200 +0000
 +++ ui/ozone/platform/x11/x11_window.cc
 @@ -1499,7 +1499,7 @@ void X11Window::OnXWindowStateChanged() 

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/vaapi/vaapi_video_decoder.cc.orig	2024-03-06 00:14:55.027200000 +0000
 +++ media/gpu/vaapi/vaapi_video_decoder.cc
 @@ -789,7 +789,7 @@ void VaapiVideoDecoder::ApplyResolutionC

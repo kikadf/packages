@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/cpuinfo/cpuinfo.gni.orig	2024-03-06 00:15:14.916926600 +0000
 +++ third_party/cpuinfo/cpuinfo.gni
 @@ -7,7 +7,7 @@ use_cpuinfo =

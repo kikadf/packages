@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/feature_engagement/public/feature_list.h.orig	2024-03-06 00:14:47.254525200 +0000
 +++ components/feature_engagement/public/feature_list.h
 @@ -288,7 +288,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPromoStayS

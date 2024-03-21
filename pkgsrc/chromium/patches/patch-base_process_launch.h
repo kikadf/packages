@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/process/launch.h.orig	2024-03-06 00:14:37.021637000 +0000
 +++ base/process/launch.h
 @@ -200,7 +200,7 @@ struct BASE_EXPORT LaunchOptions {

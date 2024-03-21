@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- device/bluetooth/bluetooth_adapter.cc.orig	2024-03-06 00:14:51.974935000 +0000
 +++ device/bluetooth/bluetooth_adapter.cc
 @@ -31,7 +31,7 @@ namespace device {

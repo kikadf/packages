@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/base/platform/platform-openbsd.cc.orig	2024-03-06 00:16:10.609761500 +0000
 +++ v8/src/base/platform/platform-openbsd.cc
 @@ -6,6 +6,7 @@

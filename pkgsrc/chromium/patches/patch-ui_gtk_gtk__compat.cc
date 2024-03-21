@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/gtk/gtk_compat.cc.orig	2024-03-06 00:15:20.765434500 +0000
 +++ ui/gtk/gtk_compat.cc
 @@ -62,27 +62,47 @@ auto DlCast(void* symbol) {

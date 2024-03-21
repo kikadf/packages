@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/embedder_support/user_agent_utils_unittest.cc.orig	2024-03-06 00:14:47.174518300 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
 @@ -84,7 +84,7 @@ const char kDesktop[] =

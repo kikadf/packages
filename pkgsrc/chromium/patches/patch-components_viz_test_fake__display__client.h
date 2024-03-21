@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/viz/test/fake_display_client.h.orig	2024-03-06 00:14:50.258786200 +0000
 +++ components/viz/test/fake_display_client.h
 @@ -36,7 +36,7 @@ class FakeDisplayClient : public mojom::

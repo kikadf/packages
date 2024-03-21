@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- build/gn_run_binary.py.orig	2024-03-06 00:14:37.285659800 +0000
 +++ build/gn_run_binary.py
 @@ -23,7 +23,7 @@ if not os.path.isabs(path):

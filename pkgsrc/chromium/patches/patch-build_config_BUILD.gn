@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- build/config/BUILD.gn.orig	2024-03-06 00:14:37.249656700 +0000
 +++ build/config/BUILD.gn
 @@ -214,6 +214,10 @@ config("default_libs") {

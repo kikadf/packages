@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/color/color_id.h.orig	2024-03-06 00:15:20.489410400 +0000
 +++ ui/color/color_id.h
 @@ -610,7 +610,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/renderer/renderer_blink_platform_impl.h.orig	2024-03-06 00:14:51.366882300 +0000
 +++ content/renderer/renderer_blink_platform_impl.h
 @@ -246,7 +246,7 @@ class CONTENT_EXPORT RendererBlinkPlatfo

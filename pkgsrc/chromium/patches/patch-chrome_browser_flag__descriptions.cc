@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/flag_descriptions.cc.orig	2024-03-06 00:14:41.161996400 +0000
 +++ chrome/browser/flag_descriptions.cc
 @@ -2895,7 +2895,7 @@ const char kCbdTimeframeRequiredDescript

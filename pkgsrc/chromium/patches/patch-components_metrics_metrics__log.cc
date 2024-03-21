@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/metrics/metrics_log.cc.orig	2024-03-06 00:14:47.482545100 +0000
 +++ components/metrics/metrics_log.cc
 @@ -53,7 +53,7 @@

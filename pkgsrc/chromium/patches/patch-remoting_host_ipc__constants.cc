@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/ipc_constants.cc.orig	2024-03-06 00:14:57.399406000 +0000
 +++ remoting/host/ipc_constants.cc
 @@ -17,7 +17,7 @@ namespace remoting {

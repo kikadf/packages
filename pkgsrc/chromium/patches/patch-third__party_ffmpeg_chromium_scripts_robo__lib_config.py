@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/ffmpeg/chromium/scripts/robo_lib/config.py.orig	2024-03-06 00:15:31.038326300 +0000
 +++ third_party/ffmpeg/chromium/scripts/robo_lib/config.py
 @@ -35,7 +35,7 @@ class RoboConfiguration:

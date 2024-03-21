@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chromecast/media/base/default_monotonic_clock.cc.orig	2024-03-06 00:14:45.874405400 +0000
 +++ chromecast/media/base/default_monotonic_clock.cc
 @@ -11,7 +11,7 @@

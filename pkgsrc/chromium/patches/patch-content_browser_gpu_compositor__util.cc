@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/gpu/compositor_util.cc.orig	2024-03-06 00:14:50.514808400 +0000
 +++ content/browser/gpu/compositor_util.cc
 @@ -149,7 +149,7 @@ const GpuFeatureData GetGpuFeatureData(

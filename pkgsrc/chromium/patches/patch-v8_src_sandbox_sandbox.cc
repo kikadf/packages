@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/sandbox/sandbox.cc.orig	2024-03-06 00:16:16.046233400 +0000
 +++ v8/src/sandbox/sandbox.cc
 @@ -46,7 +46,7 @@ static Address DetermineAddressSpaceLimi

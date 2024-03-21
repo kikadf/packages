@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/device_signals/core/browser/mock_signals_aggregator.h.orig	2024-03-06 00:14:47.098511700 +0000
 +++ components/device_signals/core/browser/mock_signals_aggregator.h
 @@ -17,7 +17,7 @@ class MockSignalsAggregator : public Sig

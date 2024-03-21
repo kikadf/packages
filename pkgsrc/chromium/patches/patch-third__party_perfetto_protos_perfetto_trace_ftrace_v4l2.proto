@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto.orig	2024-03-06 00:16:01.784995300 +0000
 +++ third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto
 @@ -10,7 +10,7 @@ message V4l2QbufFtraceEvent {

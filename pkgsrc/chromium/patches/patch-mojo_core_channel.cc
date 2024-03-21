@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- mojo/core/channel.cc.orig	2024-03-06 00:14:55.859272200 +0000
 +++ mojo/core/channel.cc
 @@ -75,7 +75,11 @@ const size_t kMaxUnusedReadBufferCapacit

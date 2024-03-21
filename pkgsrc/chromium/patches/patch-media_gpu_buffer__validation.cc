@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/buffer_validation.cc.orig	2024-03-06 00:14:54.975195600 +0000
 +++ media/gpu/buffer_validation.cc
 @@ -16,7 +16,7 @@

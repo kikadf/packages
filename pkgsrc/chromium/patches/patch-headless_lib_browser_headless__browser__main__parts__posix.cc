@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2024-03-06 00:14:52.955020200 +0000
 +++ headless/lib/browser/headless_browser_main_parts_posix.cc
 @@ -21,13 +21,13 @@

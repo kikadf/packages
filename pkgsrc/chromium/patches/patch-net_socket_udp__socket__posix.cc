@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- net/socket/udp_socket_posix.cc.orig	2024-03-06 00:14:57.059376500 +0000
 +++ net/socket/udp_socket_posix.cc
 @@ -74,6 +74,32 @@ const int kActivityMonitorBytesThreshold

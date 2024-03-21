@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/base/video_frame.cc.orig	2024-03-06 00:14:54.839183800 +0000
 +++ media/base/video_frame.cc
 @@ -80,7 +80,7 @@ std::string VideoFrame::StorageTypeToStr

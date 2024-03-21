@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/perfetto/include/perfetto/ext/base/thread_utils.h.orig	2024-03-06 00:16:01.048931600 +0000
 +++ third_party/perfetto/include/perfetto/ext/base/thread_utils.h
 @@ -41,9 +41,10 @@

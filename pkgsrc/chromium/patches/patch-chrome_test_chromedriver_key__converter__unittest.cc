@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/test/chromedriver/key_converter_unittest.cc.orig	2024-03-06 00:14:44.302269000 +0000
 +++ chrome/test/chromedriver/key_converter_unittest.cc
 @@ -246,7 +246,7 @@ TEST(KeyConverter, ToggleModifiers) {

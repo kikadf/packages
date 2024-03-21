@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/capture/video/create_video_capture_device_factory.cc.orig	2024-03-06 00:14:54.867186000 +0000
 +++ media/capture/video/create_video_capture_device_factory.cc
 @@ -13,7 +13,7 @@

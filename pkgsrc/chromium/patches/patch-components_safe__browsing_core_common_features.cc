@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/safe_browsing/core/common/features.cc.orig	2024-03-06 00:14:48.894667600 +0000
 +++ components/safe_browsing/core/common/features.cc
 @@ -201,7 +201,7 @@ BASE_FEATURE(kSafeBrowsingSkipSubresourc

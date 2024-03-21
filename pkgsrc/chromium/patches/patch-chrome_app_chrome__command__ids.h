@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/app/chrome_command_ids.h.orig	2024-03-06 00:14:38.069728000 +0000
 +++ chrome/app/chrome_command_ids.h
 @@ -68,12 +68,12 @@

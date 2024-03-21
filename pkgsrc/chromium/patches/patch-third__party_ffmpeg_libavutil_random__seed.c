@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-03-06 00:15:55.348436600 +0000
 +++ third_party/ffmpeg/libavutil/random_seed.c
 @@ -35,6 +35,11 @@

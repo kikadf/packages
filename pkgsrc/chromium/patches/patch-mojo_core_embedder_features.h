@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- mojo/core/embedder/features.h.orig	2024-03-06 00:14:55.863272700 +0000
 +++ mojo/core/embedder/features.h
 @@ -16,7 +16,7 @@ namespace core {

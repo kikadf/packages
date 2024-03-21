@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/basic_desktop_environment.cc.orig	2024-03-06 00:14:57.363402800 +0000
 +++ remoting/host/basic_desktop_environment.cc
 @@ -195,7 +195,7 @@ BasicDesktopEnvironment::CreateVideoCapt

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/widevine/cdm/widevine.gni.orig	2024-03-06 00:15:18.897272300 +0000
 +++ third_party/widevine/cdm/widevine.gni
 @@ -28,6 +28,8 @@ library_widevine_cdm_available =

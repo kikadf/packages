@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/capture/video/linux/fake_v4l2_impl.cc.orig	2024-03-06 00:14:54.867186000 +0000
 +++ media/capture/video/linux/fake_v4l2_impl.cc
 @@ -561,7 +561,7 @@ int FakeV4L2Impl::close(int fd) {

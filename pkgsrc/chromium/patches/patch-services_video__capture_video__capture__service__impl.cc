@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/video_capture/video_capture_service_impl.cc.orig	2024-03-06 00:14:57.827443100 +0000
 +++ services/video_capture/video_capture_service_impl.cc
 @@ -41,7 +41,7 @@

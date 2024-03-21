@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2024-03-06 00:15:00.371664000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
 @@ -55,7 +55,7 @@

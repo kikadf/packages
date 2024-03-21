@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-03-06 00:14:50.682823000 +0000
 +++ content/browser/renderer_host/input/input_device_change_observer.cc
 @@ -9,7 +9,7 @@

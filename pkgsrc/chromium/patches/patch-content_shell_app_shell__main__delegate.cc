@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/shell/app/shell_main_delegate.cc.orig	2024-03-06 00:14:51.394884800 +0000
 +++ content/shell/app/shell_main_delegate.cc
 @@ -227,7 +227,7 @@ void ShellMainDelegate::PreSandboxStartu

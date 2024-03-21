@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/capture/video/video_capture_device_client.cc.orig	2024-03-06 00:14:54.871186500 +0000
 +++ media/capture/video/video_capture_device_client.cc
 @@ -150,7 +150,7 @@ FourccAndFlip GetFourccAndFlipFromPixelF

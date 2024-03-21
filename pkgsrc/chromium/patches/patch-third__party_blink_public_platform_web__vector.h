@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/public/platform/web_vector.h.orig	2024-03-06 00:14:58.995544400 +0000
 +++ third_party/blink/public/platform/web_vector.h
 @@ -86,7 +86,7 @@ class WebVector {

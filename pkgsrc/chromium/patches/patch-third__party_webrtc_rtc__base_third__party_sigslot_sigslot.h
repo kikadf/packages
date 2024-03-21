@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h.orig	2024-03-06 00:16:10.057713500 +0000
 +++ third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h
 @@ -178,6 +178,10 @@ class multi_threaded_local {

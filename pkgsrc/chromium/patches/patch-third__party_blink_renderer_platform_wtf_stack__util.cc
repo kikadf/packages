@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-03-06 00:15:00.619685600 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -18,6 +18,11 @@

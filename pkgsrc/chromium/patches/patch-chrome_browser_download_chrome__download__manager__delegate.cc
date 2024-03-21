@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2024-03-06 00:14:40.793964400 +0000
 +++ chrome/browser/download/chrome_download_manager_delegate.cc
 @@ -1661,7 +1661,7 @@ void ChromeDownloadManagerDelegate::OnDo

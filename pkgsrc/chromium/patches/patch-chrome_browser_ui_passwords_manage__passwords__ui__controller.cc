@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/passwords/manage_passwords_ui_controller.cc.orig	2024-03-06 00:14:43.326184300 +0000
 +++ chrome/browser/ui/passwords/manage_passwords_ui_controller.cc
 @@ -87,7 +87,7 @@ int ManagePasswordsUIController::save_fa

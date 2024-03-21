@@ -1,6 +1,8 @@
 $NetBSD$
 
---- services/device/hid/hid_service_netbsd.h.orig	2024-03-19 17:04:41.397513808 +0000
+* Part of patchset to build on NetBSD
+
+--- services/device/hid/hid_service_netbsd.h.orig	2024-03-21 18:08:01.107387667 +0000
 +++ services/device/hid/hid_service_netbsd.h
 @@ -0,0 +1,49 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.

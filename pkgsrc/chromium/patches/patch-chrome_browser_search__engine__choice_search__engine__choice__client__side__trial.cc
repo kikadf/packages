@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/search_engine_choice/search_engine_choice_client_side_trial.cc.orig	2024-03-06 00:14:42.438107300 +0000
 +++ chrome/browser/search_engine_choice/search_engine_choice_client_side_trial.cc
 @@ -132,7 +132,7 @@ void RegisterLocalStatePrefs(PrefRegistr

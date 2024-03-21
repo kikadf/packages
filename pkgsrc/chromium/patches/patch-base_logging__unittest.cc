@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/logging_unittest.cc.orig	2024-03-06 00:14:36.977633200 +0000
 +++ base/logging_unittest.cc
 @@ -32,7 +32,7 @@

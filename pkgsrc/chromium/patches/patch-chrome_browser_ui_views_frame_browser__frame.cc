@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/frame/browser_frame.cc.orig	2024-03-06 00:14:43.486198200 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.cc
 @@ -54,7 +54,7 @@

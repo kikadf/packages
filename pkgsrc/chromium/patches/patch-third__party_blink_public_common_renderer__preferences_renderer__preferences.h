@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/public/common/renderer_preferences/renderer_preferences.h.orig	2024-03-06 00:14:58.931539000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences.h
 @@ -63,7 +63,7 @@ struct BLINK_COMMON_EXPORT RendererPrefe

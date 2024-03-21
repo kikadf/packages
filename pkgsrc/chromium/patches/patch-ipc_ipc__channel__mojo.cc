@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ipc/ipc_channel_mojo.cc.orig	2024-03-06 00:14:54.751176000 +0000
 +++ ipc/ipc_channel_mojo.cc
 @@ -105,7 +105,7 @@ class ThreadSafeChannelProxy : public mo

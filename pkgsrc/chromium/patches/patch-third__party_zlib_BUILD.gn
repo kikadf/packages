@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/zlib/BUILD.gn.orig	2024-03-06 00:15:19.029283800 +0000
 +++ third_party/zlib/BUILD.gn
 @@ -128,7 +128,7 @@ if (use_arm_neon_optimizations) {

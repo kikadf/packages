@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/crashpad/crashpad/client/BUILD.gn.orig	2024-03-06 00:15:14.920927000 +0000
 +++ third_party/crashpad/crashpad/client/BUILD.gn
 @@ -137,6 +137,13 @@ static_library("common") {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/protocol/webrtc_video_stream.cc.orig	2024-03-06 00:14:57.483413200 +0000
 +++ remoting/protocol/webrtc_video_stream.cc
 @@ -263,7 +263,7 @@ WebrtcVideoStream::WebrtcVideoStream(con

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc.orig	2024-03-06 00:15:00.599683800 +0000
 +++ third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc
 @@ -27,7 +27,7 @@ BlinkCategorizedWorkerPoolDelegate& Blin

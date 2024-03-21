@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/skia/src/base/SkContainers.cpp.orig	2024-03-06 00:15:59.516798500 +0000
 +++ third_party/skia/src/base/SkContainers.cpp
 @@ -14,7 +14,8 @@

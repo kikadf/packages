@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/angle/src/libANGLE/Display.cpp.orig	2024-03-06 00:16:07.257470600 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
 @@ -60,7 +60,7 @@

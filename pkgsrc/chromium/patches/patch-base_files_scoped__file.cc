@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/files/scoped_file.cc.orig	2024-03-06 00:14:36.953631000 +0000
 +++ base/files/scoped_file.cc
 @@ -31,7 +31,7 @@ void ScopedFDCloseTraits::Free(int fd) {

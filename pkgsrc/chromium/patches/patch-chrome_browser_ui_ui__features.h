@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/ui_features.h.orig	2024-03-06 00:14:43.398190500 +0000
 +++ chrome/browser/ui/ui_features.h
 @@ -221,7 +221,7 @@ BASE_DECLARE_FEATURE(kToolbarUseHardware

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/x/x11_shm_image_pool.cc.orig	2024-03-06 00:15:20.337397300 +0000
 +++ ui/base/x/x11_shm_image_pool.cc
 @@ -16,6 +16,7 @@

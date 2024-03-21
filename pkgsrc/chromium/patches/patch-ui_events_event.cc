@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/events/event.cc.orig	2024-03-06 00:15:20.537414600 +0000
 +++ ui/events/event.cc
 @@ -438,7 +438,7 @@ std::string LocatedEvent::ToString() con

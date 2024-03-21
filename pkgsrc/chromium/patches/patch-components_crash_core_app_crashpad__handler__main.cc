@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/crash/core/app/crashpad_handler_main.cc.orig	2024-03-06 00:14:47.034506000 +0000
 +++ components/crash/core/app/crashpad_handler_main.cc
 @@ -10,7 +10,7 @@

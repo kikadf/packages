@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- extensions/shell/app/shell_main_delegate.cc.orig	2024-03-06 00:14:52.674996000 +0000
 +++ extensions/shell/app/shell_main_delegate.cc
 @@ -43,7 +43,7 @@

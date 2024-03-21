@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/debug/elf_reader.cc.orig	2024-03-06 00:14:36.941630000 +0000
 +++ base/debug/elf_reader.cc
 @@ -78,6 +78,7 @@ size_t ReadElfBuildId(const void* elf_ma

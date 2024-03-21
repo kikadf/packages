@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2024-03-06 00:14:43.986241600 +0000
 +++ chrome/browser/web_applications/policy/web_app_policy_manager.cc
 @@ -113,7 +113,7 @@ namespace web_app {

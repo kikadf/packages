@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp.orig	2024-03-06 00:16:07.069454200 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp
 @@ -71,6 +71,24 @@ bool GetPCIDevicesWithLibPCI(std::vector

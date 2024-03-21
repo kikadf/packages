@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/cookie_config/cookie_store_util.cc.orig	2024-03-06 00:14:47.026505500 +0000
 +++ components/cookie_config/cookie_store_util.cc
 @@ -12,7 +12,7 @@

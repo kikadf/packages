@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/diagnostics/perf-jit.h.orig	2024-03-06 00:16:12.469923000 +0000
 +++ v8/src/diagnostics/perf-jit.h
 @@ -31,7 +31,7 @@

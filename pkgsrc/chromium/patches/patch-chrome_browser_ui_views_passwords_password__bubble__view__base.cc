@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2024-03-06 00:14:43.558204400 +0000
 +++ chrome/browser/ui/views/passwords/password_bubble_view_base.cc
 @@ -33,7 +33,7 @@

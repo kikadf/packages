@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-03-06 00:14:54.979195800 +0000
 +++ media/gpu/chromeos/libyuv_image_processor_backend.cc
 @@ -47,7 +47,7 @@ static constexpr struct {

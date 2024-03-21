@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/sync/sync_service_factory.cc.orig	2024-03-06 00:14:42.594120700 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
 @@ -84,7 +84,7 @@

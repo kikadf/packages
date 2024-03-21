@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- media/video/fake_gpu_memory_buffer.cc.orig	2024-03-06 00:14:55.847271200 +0000
 +++ media/video/fake_gpu_memory_buffer.cc
 @@ -9,7 +9,7 @@

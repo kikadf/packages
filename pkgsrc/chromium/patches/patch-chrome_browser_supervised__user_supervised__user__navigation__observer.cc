@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2024-03-06 00:14:42.582119700 +0000
 +++ chrome/browser/supervised_user/supervised_user_navigation_observer.cc
 @@ -47,7 +47,7 @@

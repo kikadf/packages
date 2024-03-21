@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/gwp_asan/BUILD.gn.orig	2024-03-06 00:14:47.318530800 +0000
 +++ components/gwp_asan/BUILD.gn
 @@ -15,7 +15,7 @@ test("gwp_asan_unittests") {

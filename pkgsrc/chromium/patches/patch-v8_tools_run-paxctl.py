@@ -1,9 +1,11 @@
 $NetBSD$
 
---- v8/tools/run-paxctl.py.orig	2024-03-19 17:04:42.165312000 +0000
+* Part of patchset to build on NetBSD
+
+--- v8/tools/run-paxctl.py.orig	2024-03-21 18:08:02.439457540 +0000
 +++ v8/tools/run-paxctl.py
 @@ -0,0 +1,16 @@
-+#!/usr/bin/env python
++@PLACEHOLDER@
 +# Copyright 2014 the V8 project authors. All rights reserved.
 +# Use of this source code is governed by a BSD-style license that can be
 +# found in the LICENSE file.

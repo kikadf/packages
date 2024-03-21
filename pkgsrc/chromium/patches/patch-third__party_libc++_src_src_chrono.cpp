@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/libc++/src/src/chrono.cpp.orig	2024-03-06 00:15:30.470276800 +0000
 +++ third_party/libc++/src/src/chrono.cpp
 @@ -31,7 +31,8 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/angle/src/libANGLE/formatutils.cpp.orig	2024-03-06 00:16:07.381481200 +0000
 +++ third_party/angle/src/libANGLE/formatutils.cpp
 @@ -1475,7 +1475,7 @@ static InternalFormatInfoMap BuildIntern

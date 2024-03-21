@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-03-06 00:14:43.590207000 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view_base.cc
 @@ -672,7 +672,7 @@ void ProfileMenuViewBase::SetProfileIden

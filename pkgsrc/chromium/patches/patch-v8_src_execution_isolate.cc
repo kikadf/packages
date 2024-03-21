@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- v8/src/execution/isolate.cc.orig	2024-03-06 00:16:12.765948800 +0000
 +++ v8/src/execution/isolate.cc
 @@ -148,6 +148,10 @@

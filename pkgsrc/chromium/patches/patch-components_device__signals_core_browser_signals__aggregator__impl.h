@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/device_signals/core/browser/signals_aggregator_impl.h.orig	2024-03-06 00:14:47.098511700 +0000
 +++ components/device_signals/core/browser/signals_aggregator_impl.h
 @@ -29,7 +29,7 @@ class SignalsAggregatorImpl : public Sig

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- content/browser/network_service_instance_impl.cc.orig	2024-03-06 00:14:50.626818000 +0000
 +++ content/browser/network_service_instance_impl.cc
 @@ -81,7 +81,7 @@

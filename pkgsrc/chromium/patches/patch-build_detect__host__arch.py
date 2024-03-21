@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- build/detect_host_arch.py.orig	2024-03-06 00:14:37.277659200 +0000
 +++ build/detect_host_arch.py
 @@ -20,6 +20,8 @@ def HostArch():

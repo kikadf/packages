@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/base/host_settings.cc.orig	2024-03-06 00:14:57.339400800 +0000
 +++ remoting/base/host_settings.cc
 @@ -7,7 +7,7 @@

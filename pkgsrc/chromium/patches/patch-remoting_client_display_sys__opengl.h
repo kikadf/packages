@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/client/display/sys_opengl.h.orig	2024-03-06 00:14:57.351401800 +0000
 +++ remoting/client/display/sys_opengl.h
 @@ -9,7 +9,7 @@

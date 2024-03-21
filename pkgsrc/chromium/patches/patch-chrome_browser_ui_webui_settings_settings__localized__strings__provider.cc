@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2024-03-06 00:14:43.866231200 +0000
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
 @@ -138,7 +138,7 @@

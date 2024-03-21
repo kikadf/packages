@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2024-03-06 00:14:59.375577400 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -425,7 +425,7 @@ SkFontHinting RendererPreferencesToSkiaH

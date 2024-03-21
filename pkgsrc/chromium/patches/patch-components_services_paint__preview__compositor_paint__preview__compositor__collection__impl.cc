@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc.orig	2024-03-06 00:14:48.990676000 +0000
 +++ components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc
 @@ -22,7 +22,7 @@

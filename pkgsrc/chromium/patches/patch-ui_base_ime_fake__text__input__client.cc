@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- ui/base/ime/fake_text_input_client.cc.orig	2024-03-06 00:15:20.293393400 +0000
 +++ ui/base/ime/fake_text_input_client.cc
 @@ -171,7 +171,7 @@ bool FakeTextInputClient::ShouldDoLearni

@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/host_details.cc.orig	2024-03-06 00:14:57.383404500 +0000
 +++ remoting/host/host_details.cc
 @@ -23,7 +23,7 @@ std::string GetHostOperatingSystemName()

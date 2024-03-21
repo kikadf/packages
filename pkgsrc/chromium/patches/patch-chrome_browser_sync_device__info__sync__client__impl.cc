@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- chrome/browser/sync/device_info_sync_client_impl.cc.orig	2024-03-06 00:14:42.590120300 +0000
 +++ chrome/browser/sync/device_info_sync_client_impl.cc
 @@ -41,7 +41,7 @@ std::string DeviceInfoSyncClientImpl::Ge

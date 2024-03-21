@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- third_party/vulkan_memory_allocator/include/vk_mem_alloc.h.orig	2024-03-06 00:15:40.019106000 +0000
 +++ third_party/vulkan_memory_allocator/include/vk_mem_alloc.h
 @@ -2760,7 +2760,7 @@ void* vma_aligned_alloc(size_t alignment

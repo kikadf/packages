@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/network/network_service.h.orig	2024-03-06 00:14:57.691431300 +0000
 +++ services/network/network_service.h
 @@ -221,7 +221,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 

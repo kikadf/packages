@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2024-03-06 00:14:36.861623000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h
 @@ -251,7 +251,7 @@ constexpr bool kUseLazyCommit = false;

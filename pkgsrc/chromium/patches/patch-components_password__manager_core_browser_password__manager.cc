@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- components/password_manager/core/browser/password_manager.cc.orig	2024-03-06 00:14:47.898581300 +0000
 +++ components/password_manager/core/browser/password_manager.cc
 @@ -363,7 +363,7 @@ void PasswordManager::RegisterProfilePre

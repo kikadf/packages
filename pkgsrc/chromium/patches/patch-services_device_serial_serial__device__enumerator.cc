@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- services/device/serial/serial_device_enumerator.cc.orig	2024-03-06 00:14:57.643427100 +0000
 +++ services/device/serial/serial_device_enumerator.cc
 @@ -12,7 +12,7 @@

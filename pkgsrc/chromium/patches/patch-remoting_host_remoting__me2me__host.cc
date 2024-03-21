@@ -1,5 +1,7 @@
 $NetBSD$
 
+* Part of patchset to build on NetBSD
+
 --- remoting/host/remoting_me2me_host.cc.orig	2024-03-06 00:14:57.423408000 +0000
 +++ remoting/host/remoting_me2me_host.cc
 @@ -127,7 +127,7 @@
