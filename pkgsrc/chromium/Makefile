@@ -1,5 +1,4 @@
 # $NetBSD$
-# $NetBSD:
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			122.0.6261.111
@@ -201,13 +200,17 @@ do-build:
 	${SETENV} ${MAKE_ENV} \
 		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
 			mksnapshot
+.if ${OPSYS} == "NetBSD"
 	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/mksnapshot
+.endif
 
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
 		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
 			v8_context_snapshot_generator
+.if ${OPSYS} == "NetBSD"
 	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/v8_context_snapshot_generator
+.endif
 
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
