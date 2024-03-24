@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-03-06 00:14:47.926583500 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-03-19 22:14:39.450630400 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
-@@ -324,7 +324,7 @@ inline constexpr char kPasswordManagerPr
+@@ -328,7 +328,7 @@ inline constexpr char kPasswordManagerPr
  inline constexpr char kPasswordSharingEnabled[] =
      "password_manager.password_sharing_enabled";
  

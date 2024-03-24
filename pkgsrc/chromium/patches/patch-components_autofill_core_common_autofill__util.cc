@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/autofill/core/common/autofill_util.cc.orig	2024-03-06 00:14:46.754481800 +0000
+--- components/autofill/core/common/autofill_util.cc.orig	2024-03-19 22:14:38.190518100 +0000
 +++ components/autofill/core/common/autofill_util.cc
-@@ -130,7 +130,7 @@ bool SanitizedFieldIsEmpty(const std::u1
+@@ -131,7 +131,7 @@ bool SanitizedFieldIsEmpty(const std::u1
  
  bool ShouldAutoselectFirstSuggestionOnArrowDown() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

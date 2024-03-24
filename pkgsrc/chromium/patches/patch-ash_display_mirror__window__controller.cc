@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ash/display/mirror_window_controller.cc.orig	2024-03-06 00:14:35.881538000 +0000
+--- ash/display/mirror_window_controller.cc.orig	2024-03-19 22:14:25.917423000 +0000
 +++ ash/display/mirror_window_controller.cc
 @@ -294,7 +294,11 @@ void MirrorWindowController::UpdateWindo
        if (!base::Contains(display_info_list, iter->first,

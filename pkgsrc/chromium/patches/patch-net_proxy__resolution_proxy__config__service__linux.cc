@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-03-06 00:14:57.003371700 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-03-19 22:14:51.119671600 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
 @@ -6,7 +6,9 @@
  

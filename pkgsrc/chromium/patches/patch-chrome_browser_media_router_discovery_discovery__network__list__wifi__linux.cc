@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2024-03-06 00:14:41.294007800 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2024-03-19 22:14:31.529924000 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc
 @@ -9,7 +9,11 @@
  #include <sys/socket.h>

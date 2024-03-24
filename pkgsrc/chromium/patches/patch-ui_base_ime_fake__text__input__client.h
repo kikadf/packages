@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/ime/fake_text_input_client.h.orig	2024-03-06 00:15:20.293393400 +0000
+--- ui/base/ime/fake_text_input_client.h.orig	2024-03-19 22:15:26.958868700 +0000
 +++ ui/base/ime/fake_text_input_client.h
-@@ -74,7 +74,7 @@ class FakeTextInputClient : public TextI
+@@ -96,7 +96,7 @@ class FakeTextInputClient : public TextI
    void SetTextEditCommandForNextKeyEvent(TextEditCommand command) override;
    ukm::SourceId GetClientSourceForMetrics() const override;
    bool ShouldDoLearning() override;

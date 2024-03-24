@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2024-03-06 00:15:20.281392300 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2024-03-19 22:15:26.942867300 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_factory.cc
 @@ -7,7 +7,7 @@
  #include "base/notreached.h"

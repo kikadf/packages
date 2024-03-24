@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- v8/src/api/api.cc.orig	2024-03-06 00:16:10.589759800 +0000
+--- v8/src/api/api.cc.orig	2024-03-19 22:16:27.712288900 +0000
 +++ v8/src/api/api.cc
-@@ -141,7 +141,7 @@
+@@ -144,7 +144,7 @@
  #include "src/wasm/wasm-serialization.h"
  #endif  // V8_ENABLE_WEBASSEMBLY
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6393,7 +6393,7 @@ bool v8::V8::Initialize(const int build_
+@@ -6428,7 +6428,7 @@ bool v8::V8::Initialize(const int build_
    return true;
  }
  

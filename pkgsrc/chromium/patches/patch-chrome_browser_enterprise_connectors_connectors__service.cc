@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2024-03-06 00:14:40.845969000 +0000
+--- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2024-03-19 22:14:31.065882400 +0000
 +++ chrome/browser/enterprise/connectors/connectors_service.cc
 @@ -542,7 +542,7 @@ bool ConnectorsService::ConnectorsEnable
  

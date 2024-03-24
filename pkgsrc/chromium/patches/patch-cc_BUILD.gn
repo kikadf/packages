@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- cc/BUILD.gn.orig	2024-03-06 00:14:37.325663300 +0000
+--- cc/BUILD.gn.orig	2024-03-19 22:14:27.489563500 +0000
 +++ cc/BUILD.gn
 @@ -678,7 +678,7 @@ cc_test_static_library("test_support") {
    if (enable_vulkan) {
@@ -13,7 +13,7 @@ $NetBSD$
      data_deps = [ "//third_party/mesa_headers" ]
    }
    if (skia_use_dawn) {
-@@ -938,7 +938,6 @@ cc_test("cc_unittests") {
+@@ -937,7 +937,6 @@ cc_test("cc_unittests") {
    data = [ "//components/test/data/viz/" ]
    data_deps = [
      "//testing/buildbot/filters:cc_unittests_filters",

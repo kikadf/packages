@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- v8/tools/run-paxctl.py.orig	2024-03-21 18:08:02.439457540 +0000
+--- v8/tools/run-paxctl.py.orig	2024-03-24 15:39:43.512859175 +0000
 +++ v8/tools/run-paxctl.py
 @@ -0,0 +1,16 @@
 +@PLACEHOLDER@

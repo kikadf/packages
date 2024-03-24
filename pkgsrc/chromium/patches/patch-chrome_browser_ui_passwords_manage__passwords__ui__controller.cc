@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/passwords/manage_passwords_ui_controller.cc.orig	2024-03-06 00:14:43.326184300 +0000
+--- chrome/browser/ui/passwords/manage_passwords_ui_controller.cc.orig	2024-03-19 22:14:33.962140800 +0000
 +++ chrome/browser/ui/passwords/manage_passwords_ui_controller.cc
-@@ -87,7 +87,7 @@ int ManagePasswordsUIController::save_fa
+@@ -88,7 +88,7 @@ int ManagePasswordsUIController::save_fa
  
  namespace {
  
@@ -13,7 +13,7 @@ $NetBSD$
  // Should be kept in sync with constant declared in
  // bubble_controllers/relaunch_chrome_bubble_controller.cc.
  constexpr int kMaxNumberOfTimesKeychainErrorBubbleIsShown = 3;
-@@ -452,7 +452,7 @@ void ManagePasswordsUIController::OnBiom
+@@ -478,7 +478,7 @@ void ManagePasswordsUIController::OnBiom
  }
  
  void ManagePasswordsUIController::OnKeychainError() {

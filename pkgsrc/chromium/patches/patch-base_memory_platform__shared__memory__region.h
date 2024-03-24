@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/memory/platform_shared_memory_region.h.orig	2024-03-06 00:14:36.985633900 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2024-03-19 22:14:27.101528600 +0000
 +++ base/memory/platform_shared_memory_region.h
 @@ -16,7 +16,7 @@
  

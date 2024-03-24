@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- v8/src/base/platform/memory.h.orig	2024-03-06 00:16:10.605761300 +0000
+--- v8/src/base/platform/memory.h.orig	2024-03-19 22:16:28.716378500 +0000
 +++ v8/src/base/platform/memory.h
 @@ -19,11 +19,11 @@
  

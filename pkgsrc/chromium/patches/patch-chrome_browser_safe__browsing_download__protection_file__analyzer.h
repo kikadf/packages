@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/safe_browsing/download_protection/file_analyzer.h.orig	2024-03-06 00:14:42.394103300 +0000
+--- chrome/browser/safe_browsing/download_protection/file_analyzer.h.orig	2024-03-19 22:14:33.002055200 +0000
 +++ chrome/browser/safe_browsing/download_protection/file_analyzer.h
 @@ -18,7 +18,7 @@
  #include "components/safe_browsing/core/common/proto/csd.pb.h"

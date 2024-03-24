@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2024-03-06 00:14:48.870665600 +0000
+--- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2024-03-19 22:14:40.390714400 +0000
 +++ components/safe_browsing/content/common/file_type_policies_unittest.cc
 @@ -139,7 +139,7 @@ TEST_F(FileTypePoliciesTest, UnpackResou
    EXPECT_EQ(DownloadFileType::FULL_PING, file_type.ping_setting());

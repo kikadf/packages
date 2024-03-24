@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/password_manager/core/browser/sync/password_sync_bridge.cc.orig	2024-03-06 00:14:47.918583000 +0000
+--- components/password_manager/core/browser/sync/password_sync_bridge.cc.orig	2024-03-19 22:14:39.442629800 +0000
 +++ components/password_manager/core/browser/sync/password_sync_bridge.cc
-@@ -197,7 +197,7 @@ bool ShouldRecoverPasswordsDuringMerge()
+@@ -195,7 +195,7 @@ bool ShouldRecoverPasswordsDuringMerge()
  }
  
  bool ShouldCleanSyncMetadataDuringStartupWhenDecryptionFails() {

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2024-03-06 00:16:10.001708700 +0000
+--- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2024-03-19 22:16:26.624191800 +0000
 +++ third_party/webrtc/rtc_base/net_test_helpers.cc
 @@ -21,6 +21,7 @@
  #endif

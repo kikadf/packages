@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- v8/src/base/platform/platform-posix.cc.orig	2024-03-06 00:16:10.609761500 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2024-03-19 22:16:28.768383000 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -27,6 +27,9 @@
      defined(__NetBSD__) || defined(__OpenBSD__)
@@ -72,7 +72,7 @@ $NetBSD$
  #elif V8_OS_SOLARIS
    return static_cast<int>(pthread_self());
  #else
-@@ -1113,7 +1126,11 @@ Thread::Thread(const Options& options)
+@@ -1114,7 +1127,11 @@ Thread::Thread(const Options& options)
        stack_size_(options.stack_size()),
        priority_(options.priority()),
        start_semaphore_(nullptr) {
@@ -84,7 +84,7 @@ $NetBSD$
    if (stack_size_ > 0) stack_size_ = std::max(stack_size_, min_stack_size);
    set_name(options.name());
  }
-@@ -1128,7 +1145,7 @@ static void SetThreadName(const char* na
+@@ -1129,7 +1146,7 @@ static void SetThreadName(const char* na
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    static_assert(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);
@@ -93,7 +93,7 @@ $NetBSD$
  #elif V8_OS_DARWIN
    // pthread_setname_np is only available in 10.6 or later, so test
    // for it at runtime.
-@@ -1303,7 +1320,7 @@ void Thread::SetThreadLocal(LocalStorage
+@@ -1304,7 +1321,7 @@ void Thread::SetThreadLocal(LocalStorage
  // keep this version in POSIX as most Linux-compatible derivatives will
  // support it. MacOS and FreeBSD are different here.
  #if !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) && !defined(_AIX) && \

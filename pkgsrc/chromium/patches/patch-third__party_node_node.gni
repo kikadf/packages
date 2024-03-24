@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/node/node.gni.orig	2024-03-06 00:15:16.453060200 +0000
+--- third_party/node/node.gni.orig	2024-03-19 22:15:22.382460600 +0000
 +++ third_party/node/node.gni
 @@ -19,7 +19,7 @@ template("node") {
  

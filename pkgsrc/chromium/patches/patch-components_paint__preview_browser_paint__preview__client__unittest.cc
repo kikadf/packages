@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/paint_preview/browser/paint_preview_client_unittest.cc.orig	2024-03-06 00:14:47.850577000 +0000
+--- components/paint_preview/browser/paint_preview_client_unittest.cc.orig	2024-03-19 22:14:39.362622500 +0000
 +++ components/paint_preview/browser/paint_preview_client_unittest.cc
 @@ -174,8 +174,8 @@ TEST_P(PaintPreviewClientRenderViewHostT
    metadata->set_version(kPaintPreviewVersion);

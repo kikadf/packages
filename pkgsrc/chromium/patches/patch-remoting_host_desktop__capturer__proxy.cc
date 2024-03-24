@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/host/desktop_capturer_proxy.cc.orig	2024-03-06 00:14:57.375404000 +0000
+--- remoting/host/desktop_capturer_proxy.cc.orig	2024-03-19 22:14:51.651718900 +0000
 +++ remoting/host/desktop_capturer_proxy.cc
 @@ -26,7 +26,7 @@
  #include "remoting/host/chromeos/frame_sink_desktop_capturer.h"

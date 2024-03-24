@@ -2,11 +2,11 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/supervised_user/core/common/features.h.orig	2024-03-06 00:14:49.402711900 +0000
+--- components/supervised_user/core/common/features.h.orig	2024-03-19 22:14:41.118779200 +0000
 +++ components/supervised_user/core/common/features.h
-@@ -24,7 +24,7 @@ BASE_DECLARE_FEATURE(kEnableManagedByPar
- extern const base::FeatureParam<std::string> kManagedByParentUiMoreInfoUrl;
- BASE_DECLARE_FEATURE(kClearingCookiesKeepsSupervisedUsersSignedIn);
+@@ -28,7 +28,7 @@ extern const base::FeatureParam<std::str
+ BASE_DECLARE_FEATURE(
+     kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)

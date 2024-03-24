@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/audio/sndio/audio_manager_sndio.h.orig	2024-03-21 18:08:00.386067922 +0000
+--- media/audio/sndio/audio_manager_sndio.h.orig	2024-03-24 15:39:39.448912018 +0000
 +++ media/audio/sndio/audio_manager_sndio.h
 @@ -0,0 +1,66 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

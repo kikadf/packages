@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2024-03-06 00:14:48.062595400 +0000
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2024-03-19 22:14:39.626646000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
 @@ -20,7 +20,7 @@
  #endif
@@ -30,7 +30,7 @@ $NetBSD$
  #include <algorithm>
  #include <utility>
  
-@@ -86,7 +91,7 @@ namespace em = enterprise_management;
+@@ -88,7 +93,7 @@ namespace em = enterprise_management;
  
  std::string GetMachineName() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
@@ -39,7 +39,7 @@ $NetBSD$
    char hostname[HOST_NAME_MAX];
    if (gethostname(hostname, HOST_NAME_MAX) == 0)  // Success.
      return hostname;
-@@ -143,7 +148,7 @@ std::string GetMachineName() {
+@@ -145,7 +150,7 @@ std::string GetMachineName() {
  
  std::string GetOSVersion() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \
@@ -48,7 +48,7 @@ $NetBSD$
    return base::SysInfo::OperatingSystemVersion();
  #elif BUILDFLAG(IS_WIN)
    base::win::OSInfo::VersionNumber version_number =
-@@ -166,7 +171,7 @@ std::string GetOSArchitecture() {
+@@ -168,7 +173,7 @@ std::string GetOSArchitecture() {
  }
  
  std::string GetOSUsername() {

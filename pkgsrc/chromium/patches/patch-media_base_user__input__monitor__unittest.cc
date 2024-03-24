@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/base/user_input_monitor_unittest.cc.orig	2024-03-06 00:14:54.835183400 +0000
+--- media/base/user_input_monitor_unittest.cc.orig	2024-03-19 22:14:48.999482400 +0000
 +++ media/base/user_input_monitor_unittest.cc
 @@ -13,7 +13,7 @@
  #include "build/build_config.h"

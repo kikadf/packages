@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/debug/debugger_posix.cc.orig	2024-03-06 00:14:36.941630000 +0000
+--- base/debug/debugger_posix.cc.orig	2024-03-19 22:14:27.053524500 +0000
 +++ base/debug/debugger_posix.cc
 @@ -35,6 +35,10 @@
  #include <sys/sysctl.h>

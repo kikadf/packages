@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/x/x11_util.h.orig	2024-03-06 00:15:20.341397500 +0000
+--- ui/base/x/x11_util.h.orig	2024-03-19 22:15:27.006873100 +0000
 +++ ui/base/x/x11_util.h
 @@ -256,6 +256,10 @@ COMPONENT_EXPORT(UI_BASE_X) bool IsVulka
  COMPONENT_EXPORT(UI_BASE_X)

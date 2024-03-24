@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/webrtc/audio_processor.cc.orig	2024-03-06 00:14:55.855271800 +0000
+--- media/webrtc/audio_processor.cc.orig	2024-03-19 22:14:49.671542200 +0000
 +++ media/webrtc/audio_processor.cc
-@@ -513,7 +513,7 @@ absl::optional<double> AudioProcessor::P
+@@ -513,7 +513,7 @@ std::optional<double> AudioProcessor::Pr
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
    DCHECK_LE(volume, 1.0);
  #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \

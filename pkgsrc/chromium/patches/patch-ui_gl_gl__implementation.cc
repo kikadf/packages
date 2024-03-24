@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gl/gl_implementation.cc.orig	2024-03-06 00:15:20.753433500 +0000
+--- ui/gl/gl_implementation.cc.orig	2024-03-19 22:15:27.402908300 +0000
 +++ ui/gl/gl_implementation.cc
 @@ -276,7 +276,7 @@ GetRequestedGLImplementationFromCommandL
    *fallback_to_software_gl = false;

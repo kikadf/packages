@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chromecast/browser/cast_browser_main_parts.cc.orig	2024-03-06 00:14:45.830401700 +0000
+--- chromecast/browser/cast_browser_main_parts.cc.orig	2024-03-19 22:14:36.910403700 +0000
 +++ chromecast/browser/cast_browser_main_parts.cc
 @@ -90,7 +90,7 @@
  #include "ui/base/ui_base_switches.h"

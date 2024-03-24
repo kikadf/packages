@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2024-03-06 00:14:52.939018700 +0000
+--- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2024-03-19 22:14:45.711189000 +0000
 +++ gpu/ipc/service/gpu_memory_buffer_factory.cc
 @@ -13,7 +13,7 @@
  #include "gpu/ipc/service/gpu_memory_buffer_factory_io_surface.h"

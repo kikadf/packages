@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/variations/service/variations_service.cc.orig	2024-03-06 00:14:50.158777500 +0000
+--- components/variations/service/variations_service.cc.orig	2024-03-19 22:14:42.126869200 +0000
 +++ components/variations/service/variations_service.cc
-@@ -98,7 +98,7 @@ std::string GetPlatformString() {
+@@ -99,7 +99,7 @@ std::string GetPlatformString() {
    return "android";
  #elif BUILDFLAG(IS_FUCHSIA)
    return "fuchsia";

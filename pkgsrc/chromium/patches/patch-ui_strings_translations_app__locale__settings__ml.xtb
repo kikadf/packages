@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/strings/translations/app_locale_settings_ml.xtb.orig	2024-03-06 00:15:20.877444300 +0000
+--- ui/strings/translations/app_locale_settings_ml.xtb.orig	2024-03-19 22:15:27.562922700 +0000
 +++ ui/strings/translations/app_locale_settings_ml.xtb
 @@ -9,7 +9,7 @@
    <translation id="IDS_WEB_FONT_FAMILY">'Segoe UI',Arial,AnjaliOldLipi,Rachana,Kartika</translation>

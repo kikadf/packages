@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2024-03-06 00:14:57.635426500 +0000
+--- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2024-03-19 22:14:51.959746400 +0000
 +++ services/device/public/cpp/generic_sensor/sensor_reading.h
 @@ -8,6 +8,8 @@
  #include <stddef.h>

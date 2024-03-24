@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/host/desktop_and_cursor_conditional_composer.cc.orig	2024-03-06 00:14:57.371403500 +0000
+--- remoting/host/desktop_and_cursor_conditional_composer.cc.orig	2024-03-19 22:14:51.651718900 +0000
 +++ remoting/host/desktop_and_cursor_conditional_composer.cc
 @@ -7,7 +7,7 @@
  #include "base/functional/bind.h"

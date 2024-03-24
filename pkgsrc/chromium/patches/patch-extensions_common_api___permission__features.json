@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- extensions/common/api/_permission_features.json.orig	2024-03-06 00:14:52.594988800 +0000
+--- extensions/common/api/_permission_features.json.orig	2024-03-19 22:14:45.115135700 +0000
 +++ extensions/common/api/_permission_features.json
 @@ -138,7 +138,7 @@
      {

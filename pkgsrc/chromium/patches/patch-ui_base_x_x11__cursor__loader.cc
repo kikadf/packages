@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/x/x11_cursor_loader.cc.orig	2024-03-06 00:15:20.337397300 +0000
+--- ui/base/x/x11_cursor_loader.cc.orig	2024-03-19 22:15:27.002872700 +0000
 +++ ui/base/x/x11_cursor_loader.cc
 @@ -31,7 +31,7 @@
  #include "ui/gfx/x/connection.h"

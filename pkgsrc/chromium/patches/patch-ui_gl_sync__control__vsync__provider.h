@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gl/sync_control_vsync_provider.h.orig	2024-03-06 00:15:20.761434000 +0000
+--- ui/gl/sync_control_vsync_provider.h.orig	2024-03-19 22:15:27.414909600 +0000
 +++ ui/gl/sync_control_vsync_provider.h
 @@ -31,7 +31,7 @@ class SyncControlVSyncProvider : public 
    bool SupportGetVSyncParametersIfAvailable() const override;

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/resource/resource_bundle.cc.orig	2024-03-06 00:15:20.321395900 +0000
+--- ui/base/resource/resource_bundle.cc.orig	2024-03-19 22:15:26.986871200 +0000
 +++ ui/base/resource/resource_bundle.cc
 @@ -926,7 +926,7 @@ void ResourceBundle::ReloadFonts() {
  }

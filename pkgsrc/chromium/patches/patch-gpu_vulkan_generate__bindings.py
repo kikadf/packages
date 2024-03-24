@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- gpu/vulkan/generate_bindings.py.orig	2024-03-06 00:14:52.947019600 +0000
+--- gpu/vulkan/generate_bindings.py.orig	2024-03-19 22:14:45.719189600 +0000
 +++ gpu/vulkan/generate_bindings.py
 @@ -270,7 +270,7 @@ VULKAN_DEVICE_FUNCTIONS = [
      ]

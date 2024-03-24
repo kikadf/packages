@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2024-03-06 00:14:43.994242200 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2024-03-19 22:14:34.726209000 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.h
 @@ -38,7 +38,7 @@ class ShellLinkItem;
  

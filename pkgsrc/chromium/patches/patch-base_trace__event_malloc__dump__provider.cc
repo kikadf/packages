@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/trace_event/malloc_dump_provider.cc.orig	2024-03-06 00:14:37.153648400 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2024-03-19 22:14:27.297546100 +0000
 +++ base/trace_event/malloc_dump_provider.cc
 @@ -25,6 +25,8 @@
  

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-03-06 00:14:55.847271200 +0000
+--- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-03-19 22:14:49.659541100 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
 @@ -803,7 +803,7 @@ void GpuMemoryBufferVideoFramePool::Pool
    }
@@ -22,7 +22,7 @@ $NetBSD$
      is_webgpu_compatible = (gpu_memory_buffer != nullptr);
      if (is_webgpu_compatible) {
        is_webgpu_compatible &=
-@@ -1305,7 +1305,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
+@@ -1307,7 +1307,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
                         gpu::SHARED_IMAGE_USAGE_DISPLAY_READ |
                         gpu::SHARED_IMAGE_USAGE_SCANOUT;
  

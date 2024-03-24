@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- extensions/common/api/runtime.json.orig	2024-03-06 00:14:52.602989700 +0000
+--- extensions/common/api/runtime.json.orig	2024-03-19 22:14:45.123136500 +0000
 +++ extensions/common/api/runtime.json
 @@ -86,6 +86,8 @@
              {"name": "cros", "description": "Specifies the Chrome operating system."},

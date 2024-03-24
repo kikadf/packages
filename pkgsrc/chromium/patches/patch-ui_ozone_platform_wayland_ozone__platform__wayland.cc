@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-03-06 00:15:20.837440700 +0000
+--- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-03-19 22:15:27.522919200 +0000
 +++ ui/ozone/platform/wayland/ozone_platform_wayland.cc
 @@ -66,13 +66,13 @@
  #include "ui/events/ozone/layout/stub/stub_keyboard_layout_engine.h"
@@ -38,7 +38,7 @@ $NetBSD$
      linux_ui_delegate_ =
          std::make_unique<LinuxUiDelegateWayland>(connection_.get());
  #endif
-@@ -514,7 +514,7 @@ class OzonePlatformWayland : public Ozon
+@@ -522,7 +522,7 @@ class OzonePlatformWayland : public Ozon
    DrmRenderNodePathFinder path_finder_;
  #endif
  

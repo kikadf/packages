@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- extensions/shell/browser/shell_extensions_api_client.h.orig	2024-03-06 00:14:52.678996000 +0000
+--- extensions/shell/browser/shell_extensions_api_client.h.orig	2024-03-19 22:14:45.219145000 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.h
 @@ -36,7 +36,7 @@ class ShellExtensionsAPIClient : public 
        const override;

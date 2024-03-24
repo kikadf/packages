@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/first_run/first_run_internal.h.orig	2024-03-06 00:14:41.153995800 +0000
+--- chrome/browser/first_run/first_run_internal.h.orig	2024-03-19 22:14:31.385911000 +0000
 +++ chrome/browser/first_run/first_run_internal.h
 @@ -54,7 +54,7 @@ FirstRunState DetermineFirstRunState(boo
                                       bool force_first_run,

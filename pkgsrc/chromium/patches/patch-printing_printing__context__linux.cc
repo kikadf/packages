@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- printing/printing_context_linux.cc.orig	2024-03-06 00:14:57.319399000 +0000
+--- printing/printing_context_linux.cc.orig	2024-03-19 22:14:51.591713700 +0000
 +++ printing/printing_context_linux.cc
 @@ -23,7 +23,7 @@
  #endif

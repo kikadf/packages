@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/strings/safe_sprintf_unittest.cc.orig	2024-03-06 00:14:37.045639000 +0000
+--- base/strings/safe_sprintf_unittest.cc.orig	2024-03-19 22:14:27.173535000 +0000
 +++ base/strings/safe_sprintf_unittest.cc
 @@ -733,6 +733,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  #endif

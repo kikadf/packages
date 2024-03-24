@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/cert/cert_verify_proc.h.orig	2024-03-06 00:14:56.347314600 +0000
+--- net/cert/cert_verify_proc.h.orig	2024-03-19 22:14:50.479614300 +0000
 +++ net/cert/cert_verify_proc.h
 @@ -145,7 +145,7 @@ class NET_EXPORT CertVerifyProc
      kMaxValue = kChainLengthOne

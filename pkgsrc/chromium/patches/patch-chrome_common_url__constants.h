@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/common/url_constants.h.orig	2024-03-06 00:14:44.102251500 +0000
+--- chrome/common/url_constants.h.orig	2024-03-19 22:14:34.858220800 +0000
 +++ chrome/common/url_constants.h
-@@ -822,7 +822,7 @@ inline constexpr char kPhoneHubPermissio
+@@ -842,7 +842,7 @@ inline constexpr char kPhoneHubPermissio
      "https://support.google.com/chromebook?p=multidevice";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

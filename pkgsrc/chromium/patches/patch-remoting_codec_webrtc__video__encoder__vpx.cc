@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/codec/webrtc_video_encoder_vpx.cc.orig	2024-03-06 00:14:57.363402800 +0000
+--- remoting/codec/webrtc_video_encoder_vpx.cc.orig	2024-03-19 22:14:51.639717800 +0000
 +++ remoting/codec/webrtc_video_encoder_vpx.cc
 @@ -88,7 +88,7 @@ void SetVp8CodecParameters(vpx_codec_enc
                             const webrtc::DesktopSize& size) {

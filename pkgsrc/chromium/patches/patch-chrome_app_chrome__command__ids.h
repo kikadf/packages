@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/app/chrome_command_ids.h.orig	2024-03-06 00:14:38.069728000 +0000
+--- chrome/app/chrome_command_ids.h.orig	2024-03-19 22:14:28.313636800 +0000
 +++ chrome/app/chrome_command_ids.h
 @@ -68,12 +68,12 @@
  #define IDC_TOGGLE_MULTITASK_MENU       34050

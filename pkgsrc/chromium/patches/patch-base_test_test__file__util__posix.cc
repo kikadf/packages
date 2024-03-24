@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/test/test_file_util_posix.cc.orig	2024-03-06 00:14:37.121645700 +0000
+--- base/test/test_file_util_posix.cc.orig	2024-03-19 22:14:27.257542600 +0000
 +++ base/test/test_file_util_posix.cc
-@@ -88,7 +88,7 @@ void SyncPageCacheToDisk() {
+@@ -89,7 +89,7 @@ void SyncPageCacheToDisk() {
  }
  
  #if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_APPLE) && \

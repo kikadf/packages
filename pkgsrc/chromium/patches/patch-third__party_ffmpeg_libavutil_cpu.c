@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/ffmpeg/libavutil/cpu.c.orig	2024-03-06 00:15:55.044410200 +0000
+--- third_party/ffmpeg/libavutil/cpu.c.orig	2024-03-19 22:15:58.037641500 +0000
 +++ third_party/ffmpeg/libavutil/cpu.c
 @@ -38,10 +38,7 @@
  #if HAVE_GETPROCESSAFFINITYMASK || HAVE_WINRT

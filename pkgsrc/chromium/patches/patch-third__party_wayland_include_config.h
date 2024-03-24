@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/wayland/include/config.h.orig	2024-03-06 00:15:18.801263800 +0000
+--- third_party/wayland/include/config.h.orig	2024-03-19 22:15:24.646662500 +0000
 +++ third_party/wayland/include/config.h
 @@ -9,7 +9,14 @@
  

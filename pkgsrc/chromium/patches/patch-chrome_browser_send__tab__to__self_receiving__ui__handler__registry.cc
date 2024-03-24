@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc.orig	2024-03-06 00:14:42.462109300 +0000
+--- chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc.orig	2024-03-19 22:14:33.058060200 +0000
 +++ chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc
-@@ -16,7 +16,7 @@
+@@ -15,7 +15,7 @@
  #include "components/send_tab_to_self/features.h"
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -13,7 +13,7 @@ $NetBSD$
  #include "chrome/browser/send_tab_to_self/desktop_notification_handler.h"
  #include "chrome/browser/ui/send_tab_to_self/send_tab_to_self_toolbar_icon_controller.h"
  #endif
-@@ -48,7 +48,7 @@ SendTabToSelfToolbarIconController*
+@@ -47,7 +47,7 @@ SendTabToSelfToolbarIconController*
  ReceivingUiHandlerRegistry::GetToolbarButtonControllerForProfile(
      Profile* profile) {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

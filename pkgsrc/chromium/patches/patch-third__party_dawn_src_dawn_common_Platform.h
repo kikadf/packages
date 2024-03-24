@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/dawn/src/dawn/common/Platform.h.orig	2024-03-06 00:15:41.387224700 +0000
+--- third_party/dawn/src/dawn/common/Platform.h.orig	2024-03-19 22:16:00.825890000 +0000
 +++ third_party/dawn/src/dawn/common/Platform.h
 @@ -59,6 +59,11 @@
  #error "Unsupported Windows platform."

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/message_loop/message_pump_glib.cc.orig	2024-03-06 00:14:36.993634500 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2024-03-19 22:14:27.109529500 +0000
 +++ base/message_loop/message_pump_glib.cc
 @@ -8,6 +8,11 @@
  #include <glib.h>

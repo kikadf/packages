@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/url_request/url_request_context_builder.cc.orig	2024-03-06 00:14:57.143383700 +0000
+--- net/url_request/url_request_context_builder.cc.orig	2024-03-19 22:14:51.407697200 +0000
 +++ net/url_request/url_request_context_builder.cc
-@@ -434,7 +434,7 @@ std::unique_ptr<URLRequestContext> URLRe
+@@ -428,7 +428,7 @@ std::unique_ptr<URLRequestContext> URLRe
    }
  
    if (!proxy_resolution_service_) {

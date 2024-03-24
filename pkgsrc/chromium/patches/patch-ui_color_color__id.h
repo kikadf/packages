@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/color/color_id.h.orig	2024-03-06 00:15:20.489410400 +0000
+--- ui/color/color_id.h.orig	2024-03-19 22:15:27.106882000 +0000
 +++ ui/color/color_id.h
-@@ -610,7 +610,7 @@
+@@ -611,7 +611,7 @@
    E_CPONLY(kColorNativeColor6) \
    E_CPONLY(kColorNativeBaseColor) \
    E_CPONLY(kColorNativeSecondaryColor)

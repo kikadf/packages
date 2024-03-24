@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/host/policy_watcher.cc.orig	2024-03-06 00:14:57.419407600 +0000
+--- remoting/host/policy_watcher.cc.orig	2024-03-19 22:14:51.739726800 +0000
 +++ remoting/host/policy_watcher.cc
-@@ -191,7 +191,7 @@ base::Value::Dict PolicyWatcher::GetDefa
+@@ -192,7 +192,7 @@ base::Value::Dict PolicyWatcher::GetDefa
               true);
    result.Set(key::kRemoteAccessHostAllowEnterpriseFileTransfer, false);
  #endif

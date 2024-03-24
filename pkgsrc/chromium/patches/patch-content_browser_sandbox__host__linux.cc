@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/sandbox_host_linux.cc.orig	2024-03-06 00:14:50.782831700 +0000
+--- content/browser/sandbox_host_linux.cc.orig	2024-03-19 22:14:43.082954400 +0000
 +++ content/browser/sandbox_host_linux.cc
 @@ -45,6 +45,7 @@ void SandboxHostLinux::Init() {
    // Instead, it replies on a temporary socket provided by the caller.

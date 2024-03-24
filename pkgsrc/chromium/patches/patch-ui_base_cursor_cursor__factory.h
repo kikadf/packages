@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/cursor/cursor_factory.h.orig	2024-03-06 00:15:20.277392100 +0000
+--- ui/base/cursor/cursor_factory.h.orig	2024-03-19 22:15:26.942867300 +0000
 +++ ui/base/cursor/cursor_factory.h
 @@ -93,7 +93,7 @@ class COMPONENT_EXPORT(UI_BASE_CURSOR) C
    base::ObserverList<CursorFactoryObserver>::Unchecked observers_;

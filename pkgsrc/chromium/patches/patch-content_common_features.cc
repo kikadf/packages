@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/common/features.cc.orig	2024-03-06 00:14:51.182866300 +0000
+--- content/common/features.cc.orig	2024-03-19 22:14:43.314975300 +0000
 +++ content/common/features.cc
 @@ -166,7 +166,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -13,7 +13,7 @@ $NetBSD$
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               "EnableDevToolsJsErrorReporting",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -254,7 +254,7 @@ BASE_FEATURE(kGroupNIKByJoiningOrigin,
+@@ -262,7 +262,7 @@ BASE_FEATURE(kGroupNIKByJoiningOrigin,
  // process and having browser process handle adjusting thread properties (nice
  // value, c-group, latency sensitivity...) for children which have sandbox
  // restrictions.

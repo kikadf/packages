@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/system/sys_info_freebsd.cc.orig	2024-03-06 00:14:37.057640000 +0000
+--- base/system/sys_info_freebsd.cc.orig	2024-03-19 22:14:27.185536100 +0000
 +++ base/system/sys_info_freebsd.cc
 @@ -9,30 +9,106 @@
  #include <sys/sysctl.h>

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- build/linux/unbundle/icu.gn.orig	2024-03-06 00:14:37.293660600 +0000
+--- build/linux/unbundle/icu.gn.orig	2024-03-19 22:14:27.441559000 +0000
 +++ build/linux/unbundle/icu.gn
 @@ -17,6 +17,15 @@ config("icu_config") {
      "USING_SYSTEM_ICU=1",

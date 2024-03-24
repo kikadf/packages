@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2024-03-06 00:15:00.371664000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2024-03-19 22:14:55.904098300 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
 @@ -55,7 +55,7 @@
  #include "third_party/skia/include/core/SkFontMgr.h"
@@ -13,7 +13,7 @@ $NetBSD$
  #include "ui/gfx/font_fallback_linux.h"
  #endif
  
-@@ -174,7 +174,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -163,7 +163,7 @@ class PLATFORM_EXPORT FontCache final {
    static void PrewarmFamily(const AtomicString& family_name) {}
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD$
    // These are needed for calling QueryRenderStyleForStrike, since
    // gfx::GetFontRenderParams makes distinctions based on DSF.
    static float DeviceScaleFactor() { return device_scale_factor_; }
-@@ -250,7 +250,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -239,7 +239,7 @@ class PLATFORM_EXPORT FontCache final {
        const char* locale_family_name);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -31,7 +31,7 @@ $NetBSD$
    static bool GetFontForCharacter(UChar32,
                                    const char* preferred_locale,
                                    gfx::FallbackFontData*);
-@@ -330,7 +330,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -312,7 +312,7 @@ class PLATFORM_EXPORT FontCache final {
                                     const FontFaceCreationParams&,
                                     std::string& name);
  
@@ -40,7 +40,7 @@ $NetBSD$
    static AtomicString GetFamilyNameForCharacter(SkFontMgr*,
                                                  UChar32,
                                                  const FontDescription&,
-@@ -368,7 +368,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -349,7 +349,7 @@ class PLATFORM_EXPORT FontCache final {
    bool is_test_font_mgr_ = false;
  #endif  // BUILDFLAG(IS_WIN)
  

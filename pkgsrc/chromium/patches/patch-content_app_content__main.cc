@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/app/content_main.cc.orig	2024-03-06 00:14:50.342793500 +0000
+--- content/app/content_main.cc.orig	2024-03-19 22:14:42.326887100 +0000
 +++ content/app/content_main.cc
 @@ -207,7 +207,7 @@ RunContentProcess(ContentMainParams para
  #endif

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2024-03-06 00:14:58.103467000 +0000
+--- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2024-03-19 22:14:52.643807400 +0000
 +++ third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 @@ -30,7 +30,7 @@
  #include <sys/syscall.h>

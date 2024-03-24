@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/gpu/vaapi/vaapi_wrapper.cc.orig	2024-03-06 00:14:55.031200400 +0000
+--- media/gpu/vaapi/vaapi_wrapper.cc.orig	2024-03-19 22:14:49.251505000 +0000
 +++ media/gpu/vaapi/vaapi_wrapper.cc
-@@ -66,7 +66,7 @@
+@@ -67,7 +67,7 @@
  using media_gpu_vaapi::kModuleVa_prot;
  #endif
  

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/gpu_memory_buffer.cc.orig	2024-03-06 00:15:20.685427400 +0000
+--- ui/gfx/gpu_memory_buffer.cc.orig	2024-03-19 22:15:27.334902300 +0000
 +++ ui/gfx/gpu_memory_buffer.cc
 @@ -54,7 +54,7 @@ GpuMemoryBufferHandle GpuMemoryBufferHan
    handle.region = region.Duplicate();

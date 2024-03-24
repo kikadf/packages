@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/files/important_file_writer_cleaner.cc.orig	2024-03-06 00:14:36.953631000 +0000
+--- base/files/important_file_writer_cleaner.cc.orig	2024-03-19 22:14:27.069526000 +0000
 +++ base/files/important_file_writer_cleaner.cc
 @@ -25,7 +25,8 @@ namespace base {
  namespace {

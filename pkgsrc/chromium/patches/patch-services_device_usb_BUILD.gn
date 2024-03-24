@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- services/device/usb/BUILD.gn.orig	2024-03-06 00:14:57.647427600 +0000
+--- services/device/usb/BUILD.gn.orig	2024-03-19 22:14:51.975747800 +0000
 +++ services/device/usb/BUILD.gn
 @@ -92,15 +92,17 @@ static_library("usb") {
      deps += [ "//third_party/re2" ]

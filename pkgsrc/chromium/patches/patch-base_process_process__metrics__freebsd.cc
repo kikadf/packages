@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/process/process_metrics_freebsd.cc.orig	2024-03-06 00:14:37.025637400 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2024-03-19 22:14:27.153533500 +0000
 +++ base/process/process_metrics_freebsd.cc
 @@ -3,20 +3,39 @@
  // found in the LICENSE file.

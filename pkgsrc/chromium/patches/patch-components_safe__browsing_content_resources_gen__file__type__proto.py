@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2024-03-06 00:14:48.874666000 +0000
+--- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2024-03-19 22:14:40.394714600 +0000
 +++ components/safe_browsing/content/resources/gen_file_type_proto.py
 @@ -38,6 +38,8 @@ def PlatformTypes():
          "fuchsia":

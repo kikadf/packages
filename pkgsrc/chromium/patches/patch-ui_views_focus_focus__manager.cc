@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/views/focus/focus_manager.cc.orig	2024-03-06 00:15:20.993454200 +0000
+--- ui/views/focus/focus_manager.cc.orig	2024-03-19 22:15:27.690934200 +0000
 +++ ui/views/focus/focus_manager.cc
 @@ -577,7 +577,7 @@ bool FocusManager::RedirectAcceleratorTo
  

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/v8_snapshot_files.cc.orig	2024-03-06 00:14:51.118860700 +0000
+--- content/browser/v8_snapshot_files.cc.orig	2024-03-19 22:14:43.162961700 +0000
 +++ content/browser/v8_snapshot_files.cc
 @@ -13,7 +13,7 @@ namespace content {
  std::map<std::string, absl::variant<base::FilePath, base::ScopedFD>>

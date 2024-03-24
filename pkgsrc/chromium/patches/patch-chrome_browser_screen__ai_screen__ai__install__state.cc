@@ -2,18 +2,18 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-03-06 00:14:42.430106400 +0000
+--- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-03-19 22:14:33.034058000 +0000
 +++ chrome/browser/screen_ai/screen_ai_install_state.cc
-@@ -23,7 +23,7 @@
- #include "components/services/screen_ai/public/cpp/utilities.h"
+@@ -24,7 +24,7 @@
  #include "content/public/browser/browser_thread.h"
+ #include "ui/accessibility/accessibility_features.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "base/cpu.h"
  #include "base/files/file_util.h"
  #endif
-@@ -39,7 +39,7 @@ const char kMinExpectedVersion[] = "121.
+@@ -36,7 +36,7 @@ const char kMinExpectedVersion[] = "123.
  bool IsDeviceCompatible() {
    // Check if the CPU has the required instruction set to run the Screen AI
    // library.
@@ -22,12 +22,3 @@ $NetBSD$
    if (!base::CPU().has_sse41()) {
      return false;
    }
-@@ -284,7 +284,7 @@ void ScreenAIInstallState::ResetForTesti
- 
- void ScreenAIInstallState::SetComponentFolderForTesting() {
-   CHECK_IS_TEST();
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Set the path to the ScreenAI test files. For more details, see the
-   // `screen_ai_test_files` rule in the accessibility_common BUILD file.
-   base::FilePath screenai_library_path =

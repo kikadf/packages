@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2024-03-06 00:14:40.865970600 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2024-03-19 22:14:31.089884500 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h
 @@ -16,7 +16,7 @@
  #include "components/keyed_service/core/keyed_service.h"

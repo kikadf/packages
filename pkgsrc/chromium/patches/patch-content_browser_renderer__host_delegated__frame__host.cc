@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/renderer_host/delegated_frame_host.cc.orig	2024-03-06 00:14:50.674822000 +0000
+--- content/browser/renderer_host/delegated_frame_host.cc.orig	2024-03-19 22:14:42.786928200 +0000
 +++ content/browser/renderer_host/delegated_frame_host.cc
-@@ -317,7 +317,7 @@ void DelegatedFrameHost::EmbedSurface(
+@@ -318,7 +318,7 @@ void DelegatedFrameHost::EmbedSurface(
  
    if (!primary_surface_id ||
        primary_surface_id->local_surface_id() != local_surface_id_) {

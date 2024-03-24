@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc.orig	2024-03-06 00:14:59.447583700 +0000
+--- third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc.orig	2024-03-19 22:14:54.447968500 +0000
 +++ third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc
 @@ -50,7 +50,7 @@ constexpr base::TimeDelta kEncodeRowSlac
  

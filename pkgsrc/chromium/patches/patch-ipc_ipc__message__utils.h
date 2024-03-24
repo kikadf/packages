@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ipc/ipc_message_utils.h.orig	2024-03-06 00:14:54.759176700 +0000
+--- ipc/ipc_message_utils.h.orig	2024-03-19 22:14:48.907474000 +0000
 +++ ipc/ipc_message_utils.h
 @@ -214,7 +214,7 @@ struct ParamTraits<unsigned int> {
  // Since we want to support Android 32<>64 bit IPC, as long as we don't have

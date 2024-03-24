@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/media/audio_service_util.cc.orig	2024-03-06 00:14:41.274006100 +0000
+--- chrome/browser/media/audio_service_util.cc.orig	2024-03-19 22:14:31.509922000 +0000
 +++ chrome/browser/media/audio_service_util.cc
 @@ -21,7 +21,7 @@
  

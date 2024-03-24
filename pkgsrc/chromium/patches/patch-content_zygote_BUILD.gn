@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/zygote/BUILD.gn.orig	2024-03-06 00:14:51.922930500 +0000
+--- content/zygote/BUILD.gn.orig	2024-03-19 22:14:44.399072000 +0000
 +++ content/zygote/BUILD.gn
 @@ -5,7 +5,7 @@
  import("//build/config/nacl/config.gni")

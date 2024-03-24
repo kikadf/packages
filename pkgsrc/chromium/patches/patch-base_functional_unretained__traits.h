@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/functional/unretained_traits.h.orig	2024-03-06 00:14:36.961631800 +0000
+--- base/functional/unretained_traits.h.orig	2024-03-19 22:14:27.077526600 +0000
 +++ base/functional/unretained_traits.h
-@@ -99,7 +99,7 @@ struct SupportsUnretainedImpl {
+@@ -93,7 +93,7 @@ struct SupportsUnretainedImpl {
  // official builds, and then in non-test code as well.
  #if defined(FORCE_UNRETAINED_COMPLETENESS_CHECKS_FOR_TESTS) || \
      (!defined(UNIT_TEST) && !defined(OFFICIAL_BUILD) &&        \

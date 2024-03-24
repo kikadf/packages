@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/url_formatter/spoof_checks/idn_spoof_checker.cc.orig	2024-03-06 00:14:50.114773500 +0000
+--- components/url_formatter/spoof_checks/idn_spoof_checker.cc.orig	2024-03-19 22:14:42.074864600 +0000
 +++ components/url_formatter/spoof_checks/idn_spoof_checker.cc
 @@ -294,7 +294,7 @@ IDNSpoofChecker::IDNSpoofChecker() {
    // The ideal fix would be to change the omnibox font used for Thai. In

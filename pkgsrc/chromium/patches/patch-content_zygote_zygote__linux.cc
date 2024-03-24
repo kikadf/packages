@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/zygote/zygote_linux.cc.orig	2024-03-06 00:14:51.922930500 +0000
+--- content/zygote/zygote_linux.cc.orig	2024-03-19 22:14:44.399072000 +0000
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@
  // Copyright 2012 The Chromium Authors
@@ -12,7 +12,7 @@ $NetBSD$
  
  #include "content/zygote/zygote_linux.h"
  
-@@ -709,3 +710,4 @@ void Zygote::HandleReinitializeLoggingRe
+@@ -717,3 +718,4 @@ void Zygote::HandleReinitializeLoggingRe
  }
  
  }  // namespace content

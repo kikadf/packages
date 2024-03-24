@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/protobuf/src/google/protobuf/stubs/platform_macros.h.orig	2024-03-06 00:15:17.093115600 +0000
+--- third_party/protobuf/src/google/protobuf/stubs/platform_macros.h.orig	2024-03-19 22:15:22.754493700 +0000
 +++ third_party/protobuf/src/google/protobuf/stubs/platform_macros.h
 @@ -122,7 +122,7 @@ GOOGLE_PROTOBUF_PLATFORM_ERROR
  

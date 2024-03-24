@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/named_mojo_ipc_server/connection_info.h.orig	2024-03-06 00:14:47.526548900 +0000
+--- components/named_mojo_ipc_server/connection_info.h.orig	2024-03-19 22:14:39.142603000 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
-@@ -13,7 +13,7 @@
+@@ -14,7 +14,7 @@
  #include "base/win/scoped_handle.h"
  #elif BUILDFLAG(IS_MAC)
  #include <bsm/libbsm.h>
@@ -13,8 +13,8 @@ $NetBSD$
  #include <sys/socket.h>
  #endif
  
-@@ -32,7 +32,7 @@ struct ConnectionInfo {
-   absl::optional<base::win::ScopedHandle> impersonation_token{};
+@@ -33,7 +33,7 @@ struct ConnectionInfo {
+   std::optional<base::win::ScopedHandle> impersonation_token{};
  #elif BUILDFLAG(IS_MAC)
    audit_token_t audit_token{};
 -#elif BUILDFLAG(IS_LINUX)

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/live_caption/caption_util.cc.orig	2024-03-06 00:14:47.414539000 +0000
+--- components/live_caption/caption_util.cc.orig	2024-03-19 22:14:39.010591300 +0000
 +++ components/live_caption/caption_util.cc
 @@ -145,7 +145,7 @@ bool IsLiveCaptionFeatureSupported() {
      return false;

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/BUILD.gn.orig	2024-03-06 00:14:54.763177200 +0000
+--- media/BUILD.gn.orig	2024-03-19 22:14:48.915475000 +0000
 +++ media/BUILD.gn
 @@ -96,6 +96,9 @@ config("media_config") {
        defines += [ "DLOPEN_PULSEAUDIO" ]

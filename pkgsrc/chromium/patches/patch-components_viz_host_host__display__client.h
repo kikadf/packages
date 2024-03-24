@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/viz/host/host_display_client.h.orig	2024-03-06 00:14:50.206781600 +0000
+--- components/viz/host/host_display_client.h.orig	2024-03-19 22:14:42.174873600 +0000
 +++ components/viz/host/host_display_client.h
 @@ -52,7 +52,7 @@ class VIZ_HOST_EXPORT HostDisplayClient 
    void AddChildWindowToBrowser(gpu::SurfaceHandle child_window) override;

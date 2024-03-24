@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/message_center/views/message_popup_view.cc.orig	2024-03-06 00:15:20.777435500 +0000
+--- ui/message_center/views/message_popup_view.cc.orig	2024-03-19 22:15:27.430910800 +0000
 +++ ui/message_center/views/message_popup_view.cc
 @@ -135,7 +135,7 @@ void MessagePopupView::Show() {
    params.z_order = ui::ZOrderLevel::kFloatingWindow;

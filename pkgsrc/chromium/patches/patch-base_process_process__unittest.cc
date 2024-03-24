@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/process/process_unittest.cc.orig	2024-03-06 00:14:37.025637400 +0000
+--- base/process/process_unittest.cc.orig	2024-03-19 22:14:27.157533600 +0000
 +++ base/process/process_unittest.cc
-@@ -198,7 +198,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
+@@ -199,7 +199,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
    // was spawned and a time recorded after it was spawned. However, since the
    // base::Time and process creation clocks don't match, tolerate some error.
    constexpr base::TimeDelta kTolerance =

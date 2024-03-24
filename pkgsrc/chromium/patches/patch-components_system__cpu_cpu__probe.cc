@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/system_cpu/cpu_probe.cc.orig	2024-03-06 00:14:49.494719700 +0000
+--- components/system_cpu/cpu_probe.cc.orig	2024-03-19 22:14:41.218788100 +0000
 +++ components/system_cpu/cpu_probe.cc
 @@ -30,6 +30,9 @@ std::unique_ptr<CpuProbe> CpuProbe::Crea
    return CpuProbeWin::Create();

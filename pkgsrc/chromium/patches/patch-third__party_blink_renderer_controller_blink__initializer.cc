@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-03-06 00:14:59.107554200 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-03-19 22:14:54.039932000 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
 @@ -75,12 +75,12 @@
  #include "third_party/blink/renderer/controller/private_memory_footprint_provider.h"

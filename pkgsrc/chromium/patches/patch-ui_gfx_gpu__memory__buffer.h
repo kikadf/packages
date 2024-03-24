@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/gpu_memory_buffer.h.orig	2024-03-06 00:15:20.685427400 +0000
+--- ui/gfx/gpu_memory_buffer.h.orig	2024-03-19 22:15:27.334902300 +0000
 +++ ui/gfx/gpu_memory_buffer.h
 @@ -15,7 +15,7 @@
  #include "ui/gfx/geometry/rect.h"
@@ -13,7 +13,7 @@ $NetBSD$
  #include "ui/gfx/native_pixmap_handle.h"
  #elif BUILDFLAG(IS_APPLE)
  #include "ui/gfx/mac/io_surface.h"
-@@ -75,7 +75,7 @@ struct GFX_EXPORT GpuMemoryBufferHandle 
+@@ -76,7 +76,7 @@ struct GFX_EXPORT GpuMemoryBufferHandle 
    base::UnsafeSharedMemoryRegion region;
    uint32_t offset = 0;
    uint32_t stride = 0;

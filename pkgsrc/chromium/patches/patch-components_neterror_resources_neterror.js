@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/neterror/resources/neterror.js.orig	2024-03-06 00:14:47.534549500 +0000
+--- components/neterror/resources/neterror.js.orig	2024-03-19 22:14:39.146603300 +0000
 +++ components/neterror/resources/neterror.js
 @@ -142,7 +142,7 @@ function detailsButtonClick() {
  

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-03-06 00:14:51.206868400 +0000
+--- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-03-19 22:14:43.338977300 +0000
 +++ content/ppapi_plugin/ppapi_plugin_main.cc
 @@ -54,6 +54,11 @@
  #include "gin/v8_initializer.h"

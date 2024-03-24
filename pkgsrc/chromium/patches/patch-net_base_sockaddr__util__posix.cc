@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/base/sockaddr_util_posix.cc.orig	2024-03-06 00:14:56.339314000 +0000
+--- net/base/sockaddr_util_posix.cc.orig	2024-03-19 22:14:50.471613600 +0000
 +++ net/base/sockaddr_util_posix.cc
 @@ -41,7 +41,8 @@ bool FillUnixAddress(const std::string& 
      return true;

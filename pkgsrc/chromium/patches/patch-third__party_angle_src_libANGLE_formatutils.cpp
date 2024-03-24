@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/angle/src/libANGLE/formatutils.cpp.orig	2024-03-06 00:16:07.381481200 +0000
+--- third_party/angle/src/libANGLE/formatutils.cpp.orig	2024-03-19 22:16:20.567651500 +0000
 +++ third_party/angle/src/libANGLE/formatutils.cpp
 @@ -1475,7 +1475,7 @@ static InternalFormatInfoMap BuildIntern
      AddYUVFormat(&map,  GL_G8_B8R8_2PLANE_420_UNORM_ANGLE,            true,   8,   8,  8,   0,  0,  GL_G8_B8R8_2PLANE_420_UNORM_ANGLE,    GL_UNSIGNED_BYTE, GL_UNSIGNED_NORMALIZED, false, RequireExt<&Extensions::yuvInternalFormatANGLE>,          RequireExt<&Extensions::yuvInternalFormatANGLE>,          RequireExt<&Extensions::yuvInternalFormatANGLE>,          NeverSupported, NeverSupported);

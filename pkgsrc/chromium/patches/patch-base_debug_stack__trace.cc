@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/debug/stack_trace.cc.orig	2024-03-06 00:14:36.941630000 +0000
+--- base/debug/stack_trace.cc.orig	2024-03-19 22:14:27.057525000 +0000
 +++ base/debug/stack_trace.cc
 @@ -266,7 +266,9 @@ void StackTrace::Print() const {
  }

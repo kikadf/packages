@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2024-03-06 00:16:08.129546200 +0000
+--- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2024-03-19 22:16:23.859945000 +0000
 +++ third_party/webrtc/modules/audio_device/BUILD.gn
 @@ -350,7 +350,7 @@ rtc_library("audio_device_impl") {
      if (rtc_use_dummy_audio_file_devices) {

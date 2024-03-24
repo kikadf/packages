@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-03-06 00:14:57.127382300 +0000
+--- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-03-19 22:14:51.391695700 +0000
 +++ net/tools/cert_verify_tool/cert_verify_tool.cc
 @@ -33,7 +33,7 @@
  #include "third_party/boringssl/src/pki/trust_store.h"

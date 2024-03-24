@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/host/setup/start_host_main.cc.orig	2024-03-06 00:14:57.431408600 +0000
+--- remoting/host/setup/start_host_main.cc.orig	2024-03-19 22:14:51.747727400 +0000
 +++ remoting/host/setup/start_host_main.cc
 @@ -36,7 +36,7 @@
  #include <unistd.h>

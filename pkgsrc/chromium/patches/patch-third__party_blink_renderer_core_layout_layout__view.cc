@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-03-06 00:14:59.639600500 +0000
+--- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-03-19 22:14:54.856004700 +0000
 +++ third_party/blink/renderer/core/layout/layout_view.cc
-@@ -72,7 +72,7 @@
+@@ -71,7 +71,7 @@
  #include "ui/gfx/geometry/quad_f.h"
  #include "ui/gfx/geometry/size_conversions.h"
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include "third_party/blink/renderer/platform/fonts/font_cache.h"
  #endif
  
-@@ -813,7 +813,7 @@ void LayoutView::UpdateLayout() {
+@@ -811,7 +811,7 @@ void LayoutView::UpdateLayout() {
      intrinsic_logical_widths_ = LogicalWidth();
    }
  

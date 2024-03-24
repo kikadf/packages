@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/trace_event/process_memory_dump.cc.orig	2024-03-06 00:14:37.157648800 +0000
+--- base/trace_event/process_memory_dump.cc.orig	2024-03-19 22:14:27.301546600 +0000
 +++ base/trace_event/process_memory_dump.cc
-@@ -112,7 +112,7 @@ absl::optional<size_t> ProcessMemoryDump
+@@ -113,7 +113,7 @@ absl::optional<size_t> ProcessMemoryDump
  #if BUILDFLAG(IS_WIN)
    std::unique_ptr<PSAPI_WORKING_SET_EX_INFORMATION[]> vec(
        new PSAPI_WORKING_SET_EX_INFORMATION[max_vec_size]);
@@ -13,7 +13,7 @@ $NetBSD$
    std::unique_ptr<char[]> vec(new char[max_vec_size]);
  #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
    std::unique_ptr<unsigned char[]> vec(new unsigned char[max_vec_size]);
-@@ -134,7 +134,7 @@ absl::optional<size_t> ProcessMemoryDump
+@@ -135,7 +135,7 @@ absl::optional<size_t> ProcessMemoryDump
  
      for (size_t i = 0; i < page_count; i++)
        resident_page_count += vec[i].VirtualAttributes.Valid;

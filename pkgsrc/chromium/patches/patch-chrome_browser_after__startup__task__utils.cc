@@ -2,11 +2,11 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/after_startup_task_utils.cc.orig	2024-03-06 00:14:39.649865200 +0000
+--- chrome/browser/after_startup_task_utils.cc.orig	2024-03-19 22:14:29.577749700 +0000
 +++ chrome/browser/after_startup_task_utils.cc
-@@ -107,7 +107,7 @@ void SetBrowserStartupIsComplete() {
-   TRACE_EVENT0("startup", "SetBrowserStartupIsComplete");
-   g_startup_complete_flag.Get().Set();
+@@ -115,7 +115,7 @@ void SetBrowserStartupIsComplete() {
+                        TRACE_EVENT_SCOPE_GLOBAL, "BrowserCount", browser_count);
+   GetStartupCompleteFlag().Set();
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

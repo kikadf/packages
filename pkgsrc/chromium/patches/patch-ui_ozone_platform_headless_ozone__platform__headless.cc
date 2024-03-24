@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2024-03-06 00:15:20.809438200 +0000
+--- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2024-03-19 22:15:27.494916700 +0000
 +++ ui/ozone/platform/headless/ozone_platform_headless.cc
 @@ -102,7 +102,7 @@ class OzonePlatformHeadless : public Ozo
    }

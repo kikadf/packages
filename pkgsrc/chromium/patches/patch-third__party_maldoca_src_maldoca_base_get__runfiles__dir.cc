@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc.orig	2024-03-06 00:15:16.233041000 +0000
+--- third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc.orig	2024-03-19 22:15:22.054431200 +0000
 +++ third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc
 @@ -25,11 +25,6 @@
  #error "__APPLE__ not supported."

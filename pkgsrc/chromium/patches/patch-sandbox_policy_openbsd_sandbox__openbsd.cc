@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2024-03-21 18:08:01.052161944 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2024-03-24 15:39:40.828812963 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
-@@ -0,0 +1,420 @@
+@@ -0,0 +1,424 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -67,7 +67,8 @@ $NetBSD$
 +
 +#include "third_party/boringssl/src/include/openssl/crypto.h"
 +
-+#include "ui/gfx/font_util.h"
++#include <fontconfig/fontconfig.h>
++#include "ui/gfx/linux/fontconfig_util.h"
 +
 +#define MAXTOKENS	3
 +
@@ -150,8 +151,11 @@ $NetBSD$
 +      break;
 +    }
 +    case sandbox::mojom::Sandbox::kRenderer:
-+      gfx::InitializeFonts();
++    {
++      FcConfig* config = gfx::GetGlobalFontConfig();
++      DCHECK(config);
 +      break;
++    }
 +    default:
 +      break;
 +  }

@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/views/tab_search_bubble_host.cc.orig	2024-03-06 00:14:43.626210200 +0000
+--- chrome/browser/ui/views/tab_search_bubble_host.cc.orig	2024-03-19 22:14:34.318172500 +0000
 +++ chrome/browser/ui/views/tab_search_bubble_host.cc
-@@ -285,7 +285,7 @@ bool TabSearchBubbleHost::ShouldTabSearc
+@@ -296,7 +296,7 @@ bool TabSearchBubbleHost::ShouldTabSearc
  // Mac should have tabsearch on the right side. Windows >= Win10 has the
  // Tab Search button as a FrameCaptionButton, but it still needs to be on the
  // left if it exists.

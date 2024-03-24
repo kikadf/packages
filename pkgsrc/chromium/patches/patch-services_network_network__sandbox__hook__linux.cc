@@ -2,11 +2,11 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- services/network/network_sandbox_hook_linux.cc.orig	2024-03-06 00:14:57.691431300 +0000
+--- services/network/network_sandbox_hook_linux.cc.orig	2024-03-19 22:14:52.019751800 +0000
 +++ services/network/network_sandbox_hook_linux.cc
-@@ -14,11 +14,14 @@
+@@ -15,11 +15,14 @@
+ #include "sandbox/linux/syscall_broker/broker_file_permission.h"
  #include "sandbox/policy/features.h"
- #include "third_party/abseil-cpp/absl/types/optional.h"
  
 +#if !BUILDFLAG(IS_BSD)
  using sandbox::syscall_broker::BrokerFilePermission;
@@ -19,7 +19,7 @@ $NetBSD$
  sandbox::syscall_broker::BrokerCommandSet GetNetworkBrokerCommandSet() {
    return MakeBrokerCommandSet({
        sandbox::syscall_broker::COMMAND_ACCESS,
-@@ -102,9 +105,11 @@ void LoadNetworkLibraries() {
+@@ -103,9 +106,11 @@ void LoadNetworkLibraries() {
    }
  }
  #endif  // BUILDFLAG(IS_CHROMEOS)
@@ -31,7 +31,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS)
    LoadNetworkLibraries();
  #endif
-@@ -117,6 +122,7 @@ bool NetworkPreSandboxHook(std::vector<s
+@@ -118,6 +123,7 @@ bool NetworkPreSandboxHook(std::vector<s
        GetNetworkBrokerCommandSet(),
        GetNetworkFilePermissions(std::move(network_context_parent_dirs)),
        sandbox::policy::SandboxLinux::PreSandboxHook(), options);

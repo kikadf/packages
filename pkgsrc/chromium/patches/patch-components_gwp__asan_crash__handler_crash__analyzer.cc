@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-03-06 00:14:47.322531200 +0000
+--- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-03-19 22:14:38.890580400 +0000
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
-@@ -30,7 +30,7 @@
+@@ -31,7 +31,7 @@
  #include "third_party/crashpad/crashpad/snapshot/process_snapshot.h"
  #include "third_party/crashpad/crashpad/util/process/process_memory.h"
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include <signal.h>
  #elif BUILDFLAG(IS_APPLE)
  #include <mach/exception_types.h>
-@@ -90,7 +90,7 @@ bool CrashAnalyzer::GetExceptionInfo(
+@@ -91,7 +91,7 @@ bool CrashAnalyzer::GetExceptionInfo(
  
  crashpad::VMAddress CrashAnalyzer::GetAccessAddress(
      const crashpad::ExceptionSnapshot& exception) {

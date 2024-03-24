@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/feature_engagement/public/event_constants.h.orig	2024-03-06 00:14:47.254525200 +0000
+--- components/feature_engagement/public/event_constants.h.orig	2024-03-19 22:14:38.810573300 +0000
 +++ components/feature_engagement/public/event_constants.h
 @@ -14,7 +14,7 @@ namespace events {
  

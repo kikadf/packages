@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-03-06 00:14:36.837621000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-03-19 22:14:26.945515000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/BUILD.gn
-@@ -852,7 +852,7 @@ if (is_clang_or_gcc) {
+@@ -858,7 +858,7 @@ if (is_clang_or_gcc) {
          configs -= [ "//build/config/compiler:enable_arc" ]
        }
      }

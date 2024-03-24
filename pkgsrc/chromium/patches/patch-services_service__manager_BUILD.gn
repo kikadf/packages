@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- services/service_manager/BUILD.gn.orig	2024-03-06 00:14:57.787439600 +0000
+--- services/service_manager/BUILD.gn.orig	2024-03-19 22:14:52.151763400 +0000
 +++ services/service_manager/BUILD.gn
 @@ -67,7 +67,7 @@ source_set("service_manager") {
      ]

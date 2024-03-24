@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/views/frame/browser_frame_view_layout_linux_native.cc.orig	2024-03-06 00:14:43.486198200 +0000
+--- chrome/browser/ui/views/frame/browser_frame_view_layout_linux_native.cc.orig	2024-03-19 22:14:34.158158300 +0000
 +++ chrome/browser/ui/views/frame/browser_frame_view_layout_linux_native.cc
 @@ -18,7 +18,7 @@ BrowserFrameViewLayoutLinuxNative::~Brow
  

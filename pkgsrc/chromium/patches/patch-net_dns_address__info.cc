@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/dns/address_info.cc.orig	2024-03-06 00:14:56.583335200 +0000
+--- net/dns/address_info.cc.orig	2024-03-19 22:14:50.759639300 +0000
 +++ net/dns/address_info.cc
 @@ -78,8 +78,12 @@ AddressInfo::AddressInfoAndResult Addres
      // error.

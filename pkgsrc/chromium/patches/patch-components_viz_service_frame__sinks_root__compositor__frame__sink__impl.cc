@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-03-06 00:14:50.246785200 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-03-19 22:14:42.218877300 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc
-@@ -109,7 +109,7 @@ RootCompositorFrameSinkImpl::Create(
+@@ -112,7 +112,7 @@ RootCompositorFrameSinkImpl::Create(
    output_surface->SetNeedsSwapSizeNotifications(
        params->send_swap_size_notifications);
  
@@ -13,7 +13,7 @@ $NetBSD$
    // For X11, we need notify client about swap completion after resizing, so the
    // client can use it for synchronize with X11 WM.
    output_surface->SetNeedsSwapSizeNotifications(true);
-@@ -713,7 +713,7 @@ void RootCompositorFrameSinkImpl::Displa
+@@ -712,7 +712,7 @@ void RootCompositorFrameSinkImpl::Displa
  #if BUILDFLAG(IS_ANDROID)
    if (display_client_ && enable_swap_competion_callback_)
      display_client_->DidCompleteSwapWithSize(pixel_size);

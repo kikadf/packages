@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/third_party/quiche/BUILD.gn.orig	2024-03-06 00:14:57.123382000 +0000
+--- net/third_party/quiche/BUILD.gn.orig	2024-03-19 22:14:51.387695300 +0000
 +++ net/third_party/quiche/BUILD.gn
 @@ -29,7 +29,7 @@ import("//net/third_party/quiche/src/bui
  import("//testing/libfuzzer/fuzzer_test.gni")

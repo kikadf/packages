@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-03-06 00:15:00.631686700 +0000
+--- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-03-19 22:14:56.192124000 +0000
 +++ third_party/blink/renderer/platform/wtf/thread_specific.h
 @@ -104,7 +104,8 @@ inline bool ThreadSpecific<T>::IsSet() {
  template <typename T>

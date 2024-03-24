@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/gpu/gpu_main.cc.orig	2024-03-06 00:14:51.206868400 +0000
+--- content/gpu/gpu_main.cc.orig	2024-03-19 22:14:43.338977300 +0000
 +++ content/gpu/gpu_main.cc
 @@ -91,7 +91,7 @@
  #include "sandbox/win/src/sandbox.h"
@@ -40,7 +40,7 @@ $NetBSD$
  #error "Unsupported Linux platform."
  #elif BUILDFLAG(IS_MAC)
      // Cross-process CoreAnimation requires a CFRunLoop to function at all, and
-@@ -330,7 +330,8 @@ int GpuMain(MainFunctionParams parameter
+@@ -328,7 +328,8 @@ int GpuMain(MainFunctionParams parameter
    // before it.
    InitializeSkia();
  
@@ -50,7 +50,7 @@ $NetBSD$
    // Thread type delegate of the process should be registered before
    // first thread type change in ChildProcess constructor.
    // It also needs to be registered before the process has multiple threads,
-@@ -438,7 +439,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -436,7 +437,7 @@ int GpuMain(MainFunctionParams parameter
  
  namespace {
  
@@ -59,7 +59,7 @@ $NetBSD$
  bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
                         const gpu::GPUInfo* gpu_info,
                         const gpu::GpuPreferences& gpu_prefs) {
-@@ -478,7 +479,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
+@@ -476,7 +477,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
    sandbox_options.accelerated_video_encode_enabled =
        !gpu_prefs.disable_accelerated_video_encode;
  

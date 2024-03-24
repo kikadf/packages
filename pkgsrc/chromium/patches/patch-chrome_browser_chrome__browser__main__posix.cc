@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/chrome_browser_main_posix.cc.orig	2024-03-06 00:14:40.633950500 +0000
+--- chrome/browser/chrome_browser_main_posix.cc.orig	2024-03-19 22:14:30.841862400 +0000
 +++ chrome/browser/chrome_browser_main_posix.cc
 @@ -79,7 +79,7 @@ void ExitHandler::ExitWhenPossibleOnUITh
    } else {

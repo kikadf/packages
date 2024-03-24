@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2024-03-06 00:14:57.431408600 +0000
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2024-03-19 22:14:51.751727800 +0000
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
 @@ -10,7 +10,7 @@
  #include "base/strings/utf_string_conversions.h"

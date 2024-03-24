@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/omnibox/browser/omnibox_edit_model.cc.orig	2024-03-06 00:14:47.738567400 +0000
+--- components/omnibox/browser/omnibox_edit_model.cc.orig	2024-03-19 22:14:39.230610800 +0000
 +++ components/omnibox/browser/omnibox_edit_model.cc
 @@ -24,6 +24,7 @@
  #include "base/trace_event/typed_macros.h"

@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-03-06 00:14:50.762829800 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-03-19 22:14:43.022949200 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
-@@ -120,7 +120,7 @@
+@@ -118,7 +118,7 @@
  #include "ui/gfx/gdi_util.h"
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include "content/browser/accessibility/browser_accessibility_auralinux.h"
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
-@@ -458,7 +458,7 @@ gfx::NativeViewAccessible RenderWidgetHo
+@@ -451,7 +451,7 @@ gfx::NativeViewAccessible RenderWidgetHo
      return ToBrowserAccessibilityWin(manager->GetBrowserAccessibilityRoot())
          ->GetCOM();
  
@@ -22,7 +22,7 @@ $NetBSD$
    BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -1696,7 +1696,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+@@ -1694,7 +1694,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
    return GetTextInputManager() && GetTextInputManager()->should_do_learning();
  }
  
@@ -31,7 +31,7 @@ $NetBSD$
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2540,7 +2540,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -2526,7 +2526,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -40,7 +40,7 @@ $NetBSD$
    return NeedsInputGrab();
  #else
    return false;
-@@ -2723,7 +2723,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -2710,7 +2710,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  

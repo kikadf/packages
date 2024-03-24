@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/dns/dns_reloader.cc.orig	2024-03-06 00:14:56.591335800 +0000
+--- net/dns/dns_reloader.cc.orig	2024-03-19 22:14:50.763639700 +0000
 +++ net/dns/dns_reloader.cc
 @@ -10,6 +10,7 @@
  // - there's not guarantee it exists at all. :(

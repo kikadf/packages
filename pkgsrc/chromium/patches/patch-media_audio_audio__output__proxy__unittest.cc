@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/audio/audio_output_proxy_unittest.cc.orig	2024-03-06 00:14:54.775178200 +0000
+--- media/audio/audio_output_proxy_unittest.cc.orig	2024-03-19 22:14:48.927476000 +0000
 +++ media/audio/audio_output_proxy_unittest.cc
 @@ -443,7 +443,11 @@ class AudioOutputProxyTest : public test
      // |stream| is closed at this point. Start() should reopen it again.

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-03-06 00:15:15.000934100 +0000
+--- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-03-19 22:15:14.193729900 +0000
 +++ third_party/crashpad/crashpad/util/misc/uuid.cc
 @@ -102,7 +102,7 @@ bool UUID::InitializeWithNew() {
    InitializeFromBytes(uuid);

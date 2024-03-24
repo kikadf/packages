@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/common/features.h.orig	2024-03-06 00:14:51.182866300 +0000
+--- content/common/features.h.orig	2024-03-19 22:14:43.314975300 +0000
 +++ content/common/features.h
 @@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);
@@ -13,7 +13,7 @@ $NetBSD$
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnsureAllowBindingsIsAlwaysForWebUI);
-@@ -58,7 +58,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kFor
+@@ -61,7 +61,7 @@ CONTENT_EXPORT extern const base::Featur
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGpuInfoCollectionSeparatePrefetch);
  #endif
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGroupNIKByJoiningOrigin);

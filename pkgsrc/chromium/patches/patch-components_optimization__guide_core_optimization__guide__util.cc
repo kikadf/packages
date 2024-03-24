@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/optimization_guide/core/optimization_guide_util.cc.orig	2024-03-06 00:14:47.798572500 +0000
+--- components/optimization_guide/core/optimization_guide_util.cc.orig	2024-03-19 22:14:39.302617300 +0000
 +++ components/optimization_guide/core/optimization_guide_util.cc
 @@ -39,7 +39,7 @@ optimization_guide::proto::Platform GetP
    return optimization_guide::proto::PLATFORM_CHROMEOS;

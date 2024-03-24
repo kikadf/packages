@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/debug/stack_trace_posix.cc.orig	2024-03-06 00:14:36.941630000 +0000
+--- base/debug/stack_trace_posix.cc.orig	2024-03-19 22:14:27.057525000 +0000
 +++ base/debug/stack_trace_posix.cc
 @@ -41,7 +41,7 @@
  // execinfo.h and backtrace(3) are really only present in glibc and in macOS

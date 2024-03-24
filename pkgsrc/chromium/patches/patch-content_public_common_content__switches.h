@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/public/common/content_switches.h.orig	2024-03-06 00:14:51.294876000 +0000
+--- content/public/common/content_switches.h.orig	2024-03-19 22:14:43.627003000 +0000
 +++ content/public/common/content_switches.h
 @@ -115,6 +115,7 @@ CONTENT_EXPORT extern const char kEnable
  CONTENT_EXPORT extern const char kEnableIsolatedWebAppsInRenderer[];

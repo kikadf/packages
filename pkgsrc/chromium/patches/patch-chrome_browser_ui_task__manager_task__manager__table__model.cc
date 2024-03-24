@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-03-06 00:14:43.382189000 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-03-19 22:14:34.042147900 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
 @@ -454,7 +454,7 @@ std::u16string TaskManagerTableModel::Ge
            ? stringifier_->backgrounded_string()

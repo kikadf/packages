@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/translate/core/common/translate_util.cc.orig	2024-03-06 00:14:50.070769800 +0000
+--- components/translate/core/common/translate_util.cc.orig	2024-03-19 22:14:41.994857300 +0000
 +++ components/translate/core/common/translate_util.cc
 @@ -21,7 +21,7 @@ const char kSecurityOrigin[] = "https://
  BASE_FEATURE(kTFLiteLanguageDetectionEnabled,

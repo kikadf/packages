@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/host/base/switches.cc.orig	2024-03-06 00:14:57.363402800 +0000
+--- remoting/host/base/switches.cc.orig	2024-03-19 22:14:51.643718200 +0000
 +++ remoting/host/base/switches.cc
 @@ -23,13 +23,13 @@ const char kProcessTypeEvaluateCapabilit
  const char kProcessTypeFileChooser[] = "file_chooser";

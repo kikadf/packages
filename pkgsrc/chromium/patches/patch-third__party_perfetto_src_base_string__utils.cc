@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/perfetto/src/base/string_utils.cc.orig	2024-03-06 00:16:02.645070000 +0000
+--- third_party/perfetto/src/base/string_utils.cc.orig	2024-03-19 22:16:16.575295200 +0000
 +++ third_party/perfetto/src/base/string_utils.cc
 @@ -38,9 +38,10 @@ namespace base {
  

@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/utility/services.cc.orig	2024-03-06 00:14:45.806399600 +0000
+--- chrome/utility/services.cc.orig	2024-03-19 22:14:36.882401200 +0000
 +++ chrome/utility/services.cc
-@@ -57,7 +57,7 @@
+@@ -55,7 +55,7 @@
  #include "chrome/services/system_signals/mac/mac_system_signals_service.h"
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include "chrome/services/system_signals/linux/linux_system_signals_service.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -83,7 +83,7 @@
+@@ -81,7 +81,7 @@
  #include "chrome/services/file_util/file_util_service.h"  // nogncheck
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD$
  #include "chrome/services/file_util/document_analysis_service.h"  // nogncheck
  #endif
  
-@@ -219,7 +219,7 @@ auto RunMacNotificationService(
+@@ -212,7 +212,7 @@ auto RunMacNotificationService(
  }
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -31,7 +31,7 @@ $NetBSD$
  auto RunSystemSignalsService(
      mojo::PendingReceiver<device_signals::mojom::SystemSignalsService>
          receiver) {
-@@ -279,7 +279,7 @@ auto RunCupsIppParser(
+@@ -272,7 +272,7 @@ auto RunCupsIppParser(
  }
  #endif
  
@@ -40,7 +40,7 @@ $NetBSD$
  auto RunDocumentAnalysis(
      mojo::PendingReceiver<chrome::mojom::DocumentAnalysisService> receiver) {
    return std::make_unique<DocumentAnalysisService>(std::move(receiver));
-@@ -467,7 +467,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -465,7 +465,7 @@ void RegisterMainThreadServices(mojo::Se
    services.Add(RunWindowsIconReader);
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -49,7 +49,7 @@ $NetBSD$
    services.Add(RunSystemSignalsService);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -483,7 +483,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -481,7 +481,7 @@ void RegisterMainThreadServices(mojo::Se
    services.Add(RunFileUtil);
  #endif
  

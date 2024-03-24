@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/modules/ml/webnn/features.gni.orig	2024-03-06 00:15:00.119642000 +0000
+--- third_party/blink/renderer/modules/ml/webnn/features.gni.orig	2024-03-19 22:14:55.636074300 +0000
 +++ third_party/blink/renderer/modules/ml/webnn/features.gni
 @@ -6,7 +6,7 @@ import("//build/config/chrome_build.gni"
  declare_args() {

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/process/process_iterator_openbsd.cc.orig	2024-03-06 00:14:37.025637400 +0000
+--- base/process/process_iterator_openbsd.cc.orig	2024-03-19 22:14:27.153533500 +0000
 +++ base/process/process_iterator_openbsd.cc
 @@ -6,6 +6,9 @@
  

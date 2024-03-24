@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/supervised_user/core/common/features.cc.orig	2024-03-06 00:14:49.402711900 +0000
+--- components/supervised_user/core/common/features.cc.orig	2024-03-19 22:14:41.118779200 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -66,7 +66,7 @@ bool IsLocalWebApprovalsEnabled() {
  BASE_FEATURE(kFilterWebsitesForSupervisedUsersOnDesktopAndIOS,
@@ -22,7 +22,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -84,13 +84,13 @@ BASE_FEATURE(kSupervisedPrefsControlledB
+@@ -84,7 +84,7 @@ BASE_FEATURE(kSupervisedPrefsControlledB
  // users in various UI surfaces.
  BASE_FEATURE(kEnableManagedByParentUi,
               "EnableManagedByParentUi",
@@ -31,23 +31,16 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
- #endif
+@@ -94,7 +94,7 @@ BASE_FEATURE(kEnableSupervisedUserSkipPa
+              "EnableSupervisedUserSkipParentApprovalToInstallExtensions",
+              base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop,
               "EnableExtensionsPermissionsForSupervisedUsersOnDesktop",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -111,7 +111,7 @@ bool CanDisplayFirstTimeInterstitialBann
- // their google account when cookies are cleared
- BASE_FEATURE(kClearingCookiesKeepsSupervisedUsersSignedIn,
-              "ClearingCookiesKeepsSupervisedUsersSignedIn",
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT);
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -152,7 +152,7 @@ bool IsChildAccountSupervisionEnabled() 
+@@ -143,7 +143,7 @@ bool IsChildAccountSupervisionEnabled() 
    return base::FeatureList::IsEnabled(
               supervised_user::
                   kFilterWebsitesForSupervisedUsersOnDesktopAndIOS) ||

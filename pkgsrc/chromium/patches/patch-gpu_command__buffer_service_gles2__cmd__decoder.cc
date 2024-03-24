@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2024-03-06 00:14:52.847010900 +0000
+--- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2024-03-19 22:14:45.619180700 +0000
 +++ gpu/command_buffer/service/gles2_cmd_decoder.cc
-@@ -2999,7 +2999,7 @@ GLES2Decoder* GLES2Decoder::Create(
+@@ -2984,7 +2984,7 @@ GLES2Decoder* GLES2Decoder::Create(
    }
  
  // Allow linux to run fuzzers.

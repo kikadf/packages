@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gl/sync_control_vsync_provider.cc.orig	2024-03-06 00:15:20.761434000 +0000
+--- ui/gl/sync_control_vsync_provider.cc.orig	2024-03-19 22:15:27.414909600 +0000
 +++ ui/gl/sync_control_vsync_provider.cc
 @@ -11,7 +11,7 @@
  #include "base/trace_event/trace_event.h"

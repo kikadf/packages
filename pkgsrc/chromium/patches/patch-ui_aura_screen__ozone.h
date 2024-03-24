@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/aura/screen_ozone.h.orig	2024-03-06 00:15:20.253390000 +0000
+--- ui/aura/screen_ozone.h.orig	2024-03-19 22:15:26.666842700 +0000
 +++ ui/aura/screen_ozone.h
 @@ -44,7 +44,7 @@ class AURA_EXPORT ScreenOzone : public d
    display::Display GetDisplayMatching(

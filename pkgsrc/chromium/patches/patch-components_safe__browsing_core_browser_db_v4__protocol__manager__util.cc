@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc.orig	2024-03-06 00:14:48.882666600 +0000
+--- components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc.orig	2024-03-19 22:14:40.410716000 +0000
 +++ components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc
 @@ -116,7 +116,7 @@ std::ostream& operator<<(std::ostream& o
  PlatformType GetCurrentPlatformType() {

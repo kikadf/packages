@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/gpu/gpu_process_host.cc.orig	2024-03-06 00:14:50.522809000 +0000
+--- content/browser/gpu/gpu_process_host.cc.orig	2024-03-19 22:14:42.562908200 +0000
 +++ content/browser/gpu/gpu_process_host.cc
-@@ -256,6 +256,7 @@ static const char* const kSwitchNames[] 
+@@ -261,6 +261,7 @@ static const char* const kSwitchNames[] 
      switches::kEnableGpuRasterization,
      switches::kEnableSkiaGraphite,
      switches::kEnableLogging,
@@ -12,7 +12,7 @@ $NetBSD$
      switches::kDoubleBufferCompositing,
      switches::kHeadless,
      switches::kLoggingLevel,
-@@ -290,7 +291,7 @@ static const char* const kSwitchNames[] 
+@@ -295,7 +296,7 @@ static const char* const kSwitchNames[] 
      switches::kDisableExplicitDmaFences,
      switches::kOzoneDumpFile,
  #endif

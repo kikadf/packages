@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/viz/test/fake_display_client.cc.orig	2024-03-06 00:14:50.258786200 +0000
+--- components/viz/test/fake_display_client.cc.orig	2024-03-19 22:14:42.230878600 +0000
 +++ components/viz/test/fake_display_client.cc
 @@ -27,7 +27,7 @@ void FakeDisplayClient::AddChildWindowTo
      gpu::SurfaceHandle child_window) {}

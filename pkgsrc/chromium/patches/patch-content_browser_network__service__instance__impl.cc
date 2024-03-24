@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/network_service_instance_impl.cc.orig	2024-03-06 00:14:50.626818000 +0000
+--- content/browser/network_service_instance_impl.cc.orig	2024-03-19 22:14:42.682918800 +0000
 +++ content/browser/network_service_instance_impl.cc
 @@ -81,7 +81,7 @@
  #include "content/browser/network/network_service_process_tracker_win.h"

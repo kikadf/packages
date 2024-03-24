@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/BUILD.gn.orig	2024-03-06 00:14:50.346793700 +0000
+--- content/browser/BUILD.gn.orig	2024-03-19 22:14:42.330887300 +0000
 +++ content/browser/BUILD.gn
-@@ -2457,6 +2457,13 @@ source_set("browser") {
+@@ -2476,6 +2476,13 @@ source_set("browser") {
      deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]
    }
  

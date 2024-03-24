@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2024-03-06 00:14:51.170865300 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2024-03-19 22:14:43.302974200 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.h
 @@ -47,12 +47,14 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
                       base::ScopedFD* control_fd,

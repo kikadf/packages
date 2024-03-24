@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/profiler/stack_base_address_posix.cc.orig	2024-03-06 00:14:37.029637600 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2024-03-19 22:14:27.161534000 +0000
 +++ base/profiler/stack_base_address_posix.cc
 @@ -17,6 +17,10 @@
  #include "base/files/scoped_file.h"

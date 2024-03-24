@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/device_signals/core/common/signals_features.h.orig	2024-03-06 00:14:47.102512100 +0000
+--- components/device_signals/core/common/signals_features.h.orig	2024-03-19 22:14:38.602554800 +0000
 +++ components/device_signals/core/common/signals_features.h
 @@ -28,7 +28,7 @@ enum class NewEvFunction { kFileSystemIn
  bool IsNewFunctionEnabled(NewEvFunction new_ev_function);

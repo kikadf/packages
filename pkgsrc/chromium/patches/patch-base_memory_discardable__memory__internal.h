@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/memory/discardable_memory_internal.h.orig	2024-03-06 00:14:36.981633400 +0000
+--- base/memory/discardable_memory_internal.h.orig	2024-03-19 22:14:27.097528500 +0000
 +++ base/memory/discardable_memory_internal.h
 @@ -10,7 +10,7 @@
  #include "base/metrics/field_trial_params.h"

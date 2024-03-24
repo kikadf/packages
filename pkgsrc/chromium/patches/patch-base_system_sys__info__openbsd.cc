@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/system/sys_info_openbsd.cc.orig	2024-03-06 00:14:37.057640000 +0000
+--- base/system/sys_info_openbsd.cc.orig	2024-03-19 22:14:27.185536100 +0000
 +++ base/system/sys_info_openbsd.cc
 @@ -3,7 +3,6 @@
  // found in the LICENSE file.

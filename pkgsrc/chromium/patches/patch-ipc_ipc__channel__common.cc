@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ipc/ipc_channel_common.cc.orig	2024-03-06 00:14:54.751176000 +0000
+--- ipc/ipc_channel_common.cc.orig	2024-03-19 22:14:48.903473900 +0000
 +++ ipc/ipc_channel_common.cc
 @@ -10,7 +10,7 @@
  

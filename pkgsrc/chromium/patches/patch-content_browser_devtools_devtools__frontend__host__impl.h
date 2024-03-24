@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-03-06 00:14:50.466804300 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-03-19 22:14:42.502902700 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.h
 @@ -33,7 +33,7 @@ class DevToolsFrontendHostImpl : public 
  

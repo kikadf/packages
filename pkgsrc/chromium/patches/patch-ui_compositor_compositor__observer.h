@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/compositor/compositor_observer.h.orig	2024-03-06 00:15:20.497411300 +0000
+--- ui/compositor/compositor_observer.h.orig	2024-03-19 22:15:27.114882700 +0000
 +++ ui/compositor/compositor_observer.h
 @@ -46,7 +46,7 @@ class COMPOSITOR_EXPORT CompositorObserv
    // Called when a child of the compositor is resizing.

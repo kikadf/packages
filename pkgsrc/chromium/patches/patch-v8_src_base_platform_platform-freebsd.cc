@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- v8/src/base/platform/platform-freebsd.cc.orig	2024-03-06 00:16:10.605761300 +0000
+--- v8/src/base/platform/platform-freebsd.cc.orig	2024-03-19 22:16:28.768383000 +0000
 +++ v8/src/base/platform/platform-freebsd.cc
 @@ -43,14 +43,10 @@ TimezoneCache* OS::CreateTimezoneCache()
    return new PosixDefaultTimezoneCache();

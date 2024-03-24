@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/app/content_main_runner_impl.cc.orig	2024-03-06 00:14:50.342793500 +0000
+--- content/app/content_main_runner_impl.cc.orig	2024-03-19 22:14:42.326887100 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -143,13 +143,13 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
@@ -68,8 +68,8 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -834,11 +848,10 @@ int ContentMainRunnerImpl::Initialize(Co
-              kFieldTrialDescriptor + base::GlobalDescriptors::kBaseDescriptor);
+@@ -838,11 +852,10 @@ int ContentMainRunnerImpl::Initialize(Co
+                  base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OPENBSD)
@@ -82,7 +82,7 @@ $NetBSD$
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1031,6 +1044,18 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1035,6 +1048,18 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
@@ -101,7 +101,7 @@ $NetBSD$
  #endif
  
    delegate_->SandboxInitialized(process_type);
-@@ -1100,7 +1125,7 @@ int NO_STACK_PROTECTOR ContentMainRunner
+@@ -1104,7 +1129,7 @@ int NO_STACK_PROTECTOR ContentMainRunner
            ->ReconfigureAfterFeatureListInit(process_type);
      }
  
@@ -110,7 +110,7 @@ $NetBSD$
      // If dynamic Mojo Core is being used, ensure that it's loaded very early in
      // the child/zygote process, before any sandbox is initialized. The library
      // is not fully initialized with IPC support until a ChildProcess is later
-@@ -1136,6 +1161,11 @@ int NO_STACK_PROTECTOR ContentMainRunner
+@@ -1140,6 +1165,11 @@ int NO_STACK_PROTECTOR ContentMainRunner
  
    RegisterMainThreadFactories();
  

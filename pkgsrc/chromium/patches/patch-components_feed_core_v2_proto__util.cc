@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/feed/core/v2/proto_util.cc.orig	2024-03-06 00:14:47.266526200 +0000
+--- components/feed/core/v2/proto_util.cc.orig	2024-03-19 22:14:38.826574800 +0000
 +++ components/feed/core/v2/proto_util.cc
 @@ -93,8 +93,8 @@ feedwire::Version GetPlatformVersionMess
  

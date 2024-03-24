@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/views/accelerator_table.cc.orig	2024-03-06 00:14:43.402191000 +0000
+--- chrome/browser/ui/views/accelerator_table.cc.orig	2024-03-19 22:14:34.058149300 +0000
 +++ chrome/browser/ui/views/accelerator_table.cc
 @@ -72,11 +72,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},
@@ -36,7 +36,7 @@ $NetBSD$
      {ui::VKEY_BROWSER_BACK, ui::EF_NONE, IDC_BACK},
      {ui::VKEY_BROWSER_FORWARD, ui::EF_NONE, IDC_FORWARD},
      {ui::VKEY_BROWSER_HOME, ui::EF_NONE, IDC_HOME},
-@@ -254,7 +254,7 @@ const AcceleratorMapping kAcceleratorMap
+@@ -250,7 +250,7 @@ const AcceleratorMapping kAcceleratorMap
  #endif  // !BUILDFLAG(IS_CHROMEOS)
  #endif  // !BUILDFLAG(IS_MAC)
  #if BUILDFLAG(ENABLE_SCREEN_AI_SERVICE) && \

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2024-03-06 00:14:44.230262800 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2024-03-19 22:14:35.006234000 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
 @@ -49,7 +49,7 @@
  #include "printing/backend/cups_connection_pool.h"
@@ -31,7 +31,7 @@ $NetBSD$
    // Use task runner associated with equivalent of UI thread.  Needed for calls
    // made through `PrintDialogLinuxInterface` to properly execute.
    CHECK(base::SequencedTaskRunner::HasCurrentDefault());
-@@ -467,7 +467,7 @@ void PrintBackendServiceImpl::Init(
+@@ -469,7 +469,7 @@ void PrintBackendServiceImpl::Init(
    // `InitCommon()`.
    InitializeProcessForPrinting();
    print_backend_ = PrintBackend::CreateInstance(locale);
@@ -40,7 +40,7 @@ $NetBSD$
    // Test framework already initializes the UI, so this should not go in
    // `InitCommon()`.  Additionally, low-level Linux UI is not needed when tests
    // are using `TestPrintingContext`.
-@@ -688,7 +688,7 @@ void PrintBackendServiceImpl::UpdatePrin
+@@ -690,7 +690,7 @@ void PrintBackendServiceImpl::UpdatePrin
    crash_keys_ = std::make_unique<crash_keys::ScopedPrinterInfo>(
        *printer_name, print_backend_->GetPrinterDriverInfo(*printer_name));
  

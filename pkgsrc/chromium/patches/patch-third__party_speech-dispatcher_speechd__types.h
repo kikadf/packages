@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/speech-dispatcher/speechd_types.h.orig	2024-03-06 00:15:17.737171600 +0000
+--- third_party/speech-dispatcher/speechd_types.h.orig	2024-03-19 22:15:23.618570800 +0000
 +++ third_party/speech-dispatcher/speechd_types.h
 @@ -119,4 +119,139 @@ typedef struct {
  	SPDVoice voice;

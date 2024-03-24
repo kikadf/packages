@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/crash/core/app/chrome_crashpad_handler.cc.orig	2024-03-06 00:14:47.034506000 +0000
+--- components/crash/core/app/chrome_crashpad_handler.cc.orig	2024-03-19 22:14:38.518547300 +0000
 +++ components/crash/core/app/chrome_crashpad_handler.cc
 @@ -6,5 +6,9 @@
  extern "C" int CrashpadHandlerMain(int argc, char* argv[]);

@@ -2,10 +2,10 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/browser_process_impl.cc.orig	2024-03-06 00:14:40.593947200 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2024-03-19 22:14:30.801859000 +0000
 +++ chrome/browser/browser_process_impl.cc
-@@ -219,7 +219,7 @@
- #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
+@@ -220,7 +220,7 @@
+ #include "chrome/browser/ui/profiles/profile_picker.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -13,7 +13,7 @@ $NetBSD$
  #include "chrome/browser/error_reporting/chrome_js_error_report_processor.h"  // nogncheck
  #endif
  
-@@ -1232,7 +1232,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1253,7 +1253,7 @@ void BrowserProcessImpl::PreMainMessageL
  
    ApplyMetricsReportingPolicy();
  
@@ -22,7 +22,7 @@ $NetBSD$
    ChromeJsErrorReportProcessor::Create();
  #endif
  
-@@ -1511,7 +1511,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1533,7 +1533,7 @@ void BrowserProcessImpl::Unpin() {
  // Mac is currently not supported.
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.

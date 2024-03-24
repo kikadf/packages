@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/socket/udp_socket_unittest.cc.orig	2024-03-06 00:14:57.059376500 +0000
+--- net/socket/udp_socket_unittest.cc.orig	2024-03-19 22:14:51.251683200 +0000
 +++ net/socket/udp_socket_unittest.cc
-@@ -344,7 +344,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
+@@ -352,7 +352,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);
  }
  
@@ -13,7 +13,7 @@ $NetBSD$
  // - MacOS: requires root permissions on OSX 10.7+.
  // - Android: devices attached to testbots don't have default network, so
  // broadcasting to 255.255.255.255 returns error -109 (Address not reachable).
-@@ -655,7 +655,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
+@@ -663,7 +663,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = client.SetDoNotFragment();
@@ -22,7 +22,7 @@ $NetBSD$
      // TODO(crbug.com/945590): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
  #elif BUILDFLAG(IS_MAC)
-@@ -683,7 +683,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
+@@ -691,7 +691,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = server.SetDoNotFragment();
@@ -31,7 +31,7 @@ $NetBSD$
      // TODO(crbug.com/945590): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
  #elif BUILDFLAG(IS_MAC)
-@@ -748,7 +748,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
+@@ -756,7 +756,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
  
  // TODO(https://crbug.com/947115): failing on device on iOS 12.2.
  // TODO(https://crbug.com/1227554): flaky on Mac 11.
@@ -40,7 +40,7 @@ $NetBSD$
  #define MAYBE_SharedMulticastAddress DISABLED_SharedMulticastAddress
  #else
  #define MAYBE_SharedMulticastAddress SharedMulticastAddress
-@@ -802,7 +802,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
+@@ -810,7 +810,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
                                  NetLogSource());
    ASSERT_THAT(client_socket.Connect(send_address), IsOk());
  

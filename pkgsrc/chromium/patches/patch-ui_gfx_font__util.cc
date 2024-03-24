@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/font_util.cc.orig	2024-03-06 00:15:20.673426400 +0000
+--- ui/gfx/font_util.cc.orig	2024-03-19 22:15:27.302899600 +0000
 +++ ui/gfx/font_util.cc
 @@ -6,7 +6,7 @@
  
@@ -19,6 +19,6 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   // Ensures the config is created on this thread.
-   FcConfig* config = GetGlobalFontConfig();
-   DCHECK(config);
+   // Early initialize FontConfig.
+   InitializeGlobalFontConfigAsync();
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

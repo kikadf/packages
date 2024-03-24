@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-03-06 00:14:52.903015600 +0000
+--- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-03-19 22:14:45.675185700 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
-@@ -1243,7 +1243,7 @@ void WebGPUDecoderImpl::RequestAdapterIm
+@@ -1239,7 +1239,7 @@ void WebGPUDecoderImpl::RequestAdapterIm
      force_fallback_adapter = true;
    }
  
@@ -13,7 +13,7 @@ $NetBSD$
    if (!shared_context_state_->GrContextIsVulkan() &&
        !shared_context_state_->IsGraphiteDawnVulkan() &&
        use_webgpu_adapter_ != WebGPUAdapterName::kOpenGLES) {
-@@ -1895,7 +1895,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
+@@ -1891,7 +1891,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
    }
  
  #if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_APPLE) && \

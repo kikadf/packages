@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2024-03-06 00:15:20.849441800 +0000
+--- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2024-03-19 22:15:27.534920200 +0000
 +++ ui/ozone/platform/x11/x11_screen_ozone.cc
 @@ -22,7 +22,7 @@
  #include "ui/ozone/platform/x11/x11_window.h"
@@ -13,7 +13,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -77,7 +77,7 @@ X11ScreenOzone::X11ScreenOzone()
+@@ -97,7 +97,7 @@ X11ScreenOzone::X11ScreenOzone()
        window_manager_(X11WindowManager::GetInstance()),
        x11_display_manager_(std::make_unique<XDisplayManager>(this)) {
    DCHECK(window_manager_);
@@ -22,3 +22,12 @@ $NetBSD$
    if (auto* linux_ui = ui::LinuxUi::instance()) {
      display_scale_factor_observer_.Observe(linux_ui);
    }
+@@ -260,7 +260,7 @@ void X11ScreenOzone::OnEvent(const x11::
+   x11_display_manager_->OnEvent(xev);
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ void X11ScreenOzone::OnDeviceScaleFactorChanged() {
+   x11_display_manager_->DispatchDelayedDisplayListUpdate();
+ }

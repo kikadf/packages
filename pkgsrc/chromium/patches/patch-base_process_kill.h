@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/process/kill.h.orig	2024-03-06 00:14:37.017636500 +0000
+--- base/process/kill.h.orig	2024-03-19 22:14:27.149533000 +0000
 +++ base/process/kill.h
 @@ -121,7 +121,7 @@ BASE_EXPORT TerminationStatus GetTermina
  BASE_EXPORT TerminationStatus GetKnownDeadTerminationStatus(

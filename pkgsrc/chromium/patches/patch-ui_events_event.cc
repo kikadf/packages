@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/events/event.cc.orig	2024-03-06 00:15:20.537414600 +0000
+--- ui/events/event.cc.orig	2024-03-19 22:15:27.162887000 +0000
 +++ ui/events/event.cc
 @@ -438,7 +438,7 @@ std::string LocatedEvent::ToString() con
  MouseEvent::MouseEvent(const PlatformEvent& native_event)
@@ -13,7 +13,7 @@ $NetBSD$
        movement_(GetMouseMovementFromNative(native_event)),
  #endif
        pointer_details_(GetMousePointerDetailsFromNative(native_event)) {
-@@ -689,7 +689,7 @@ std::unique_ptr<Event> MouseWheelEvent::
+@@ -688,7 +688,7 @@ std::unique_ptr<Event> MouseWheelEvent::
    return std::make_unique<MouseWheelEvent>(*this);
  }
  
@@ -22,7 +22,7 @@ $NetBSD$
  // This value matches Windows, Fuchsia WHEEL_DELTA, and (roughly) Firefox on
  // Linux.
  // static
-@@ -949,7 +949,7 @@ void KeyEvent::InitializeNative() {
+@@ -948,7 +948,7 @@ void KeyEvent::InitializeNative() {
    if (synthesize_key_repeat_enabled_ && IsRepeated(GetLastKeyEvent()))
      SetFlags(flags() | EF_IS_REPEAT);
  

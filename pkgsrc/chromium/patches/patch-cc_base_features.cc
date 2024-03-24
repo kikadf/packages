@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- cc/base/features.cc.orig	2024-03-06 00:14:37.337664400 +0000
+--- cc/base/features.cc.orig	2024-03-19 22:14:27.501564500 +0000
 +++ cc/base/features.cc
 @@ -88,7 +88,7 @@ BASE_FEATURE(kNormalPriorityImageDecodin
  // be using a separate flag to control the launch on GL.

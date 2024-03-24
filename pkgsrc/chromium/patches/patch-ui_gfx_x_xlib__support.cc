@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/x/xlib_support.cc.orig	2024-03-06 00:15:20.733431600 +0000
+--- ui/gfx/x/xlib_support.cc.orig	2024-03-19 22:15:27.382906700 +0000
 +++ ui/gfx/x/xlib_support.cc
 @@ -39,10 +39,18 @@ void InitXlib() {
      return;

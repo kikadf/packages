@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2024-03-06 00:14:43.234176200 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2024-03-19 22:14:33.866132300 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
 @@ -121,7 +121,7 @@
  #include "components/user_manager/user_manager.h"
@@ -40,7 +40,7 @@ $NetBSD$
      case IDC_USE_SYSTEM_TITLE_BAR: {
        PrefService* prefs = profile()->GetPrefs();
        prefs->SetBoolean(prefs::kUseCustomChromeFrame,
-@@ -1234,12 +1234,12 @@ void BrowserCommandController::InitComma
+@@ -1231,12 +1231,12 @@ void BrowserCommandController::InitComma
  #endif
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

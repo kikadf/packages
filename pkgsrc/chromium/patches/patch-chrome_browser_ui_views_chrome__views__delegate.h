@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/views/chrome_views_delegate.h.orig	2024-03-06 00:14:43.438194000 +0000
+--- chrome/browser/ui/views/chrome_views_delegate.h.orig	2024-03-19 22:14:34.106153700 +0000
 +++ chrome/browser/ui/views/chrome_views_delegate.h
 @@ -59,11 +59,11 @@ class ChromeViewsDelegate : public views
                               base::OnceClosure callback) override;

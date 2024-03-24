@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2024-03-06 00:14:54.767177600 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2024-03-19 22:14:48.915475000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
 @@ -88,7 +88,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;

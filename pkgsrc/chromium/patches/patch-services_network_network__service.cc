@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- services/network/network_service.cc.orig	2024-03-06 00:14:57.691431300 +0000
+--- services/network/network_service.cc.orig	2024-03-19 22:14:52.023752200 +0000
 +++ services/network/network_service.cc
-@@ -96,7 +96,7 @@
+@@ -97,7 +97,7 @@
  #include "third_party/boringssl/src/include/openssl/cpu.h"
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS_LACROS)
  
  #include "components/os_crypt/sync/key_storage_config_linux.h"
-@@ -963,7 +963,7 @@ void NetworkService::SetExplicitlyAllowe
+@@ -979,7 +979,7 @@ void NetworkService::SetExplicitlyAllowe
    net::SetExplicitlyAllowedPorts(ports);
  }
  
@@ -22,7 +22,7 @@ $NetBSD$
  void NetworkService::SetGssapiLibraryLoadObserver(
      mojo::PendingRemote<mojom::GssapiLibraryLoadObserver>
          gssapi_library_load_observer) {
-@@ -1045,7 +1045,7 @@ NetworkService::CreateHttpAuthHandlerFac
+@@ -1061,7 +1061,7 @@ NetworkService::CreateHttpAuthHandlerFac
    );
  }
  

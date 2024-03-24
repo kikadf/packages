@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/proxy_resolution/proxy_config_service.cc.orig	2024-03-06 00:14:56.999371300 +0000
+--- net/proxy_resolution/proxy_config_service.cc.orig	2024-03-19 22:14:51.119671600 +0000
 +++ net/proxy_resolution/proxy_config_service.cc
 @@ -19,20 +19,20 @@
  #include "net/proxy_resolution/proxy_config_service_ios.h"

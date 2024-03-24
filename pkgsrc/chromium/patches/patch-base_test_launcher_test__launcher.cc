@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/test/launcher/test_launcher.cc.orig	2024-03-06 00:14:37.109644700 +0000
+--- base/test/launcher/test_launcher.cc.orig	2024-03-19 22:14:27.249542000 +0000
 +++ base/test/launcher/test_launcher.cc
 @@ -69,6 +69,7 @@
  #include "testing/gtest/include/gtest/gtest.h"

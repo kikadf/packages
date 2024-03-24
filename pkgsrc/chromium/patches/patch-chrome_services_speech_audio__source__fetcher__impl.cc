@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2024-03-06 00:14:44.242263800 +0000
+--- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2024-03-19 22:14:35.026235800 +0000
 +++ chrome/services/speech/audio_source_fetcher_impl.cc
 @@ -129,7 +129,7 @@ void AudioSourceFetcherImpl::Start(
  

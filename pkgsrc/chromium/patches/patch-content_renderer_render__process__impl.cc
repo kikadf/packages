@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/renderer/render_process_impl.cc.orig	2024-03-06 00:14:51.362882000 +0000
+--- content/renderer/render_process_impl.cc.orig	2024-03-19 22:14:43.691008800 +0000
 +++ content/renderer/render_process_impl.cc
 @@ -44,7 +44,7 @@
  #include "third_party/blink/public/web/web_frame.h"

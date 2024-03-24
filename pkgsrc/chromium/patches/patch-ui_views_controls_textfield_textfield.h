@@ -2,10 +2,10 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/views/controls/textfield/textfield.h.orig	2024-03-06 00:15:20.977452800 +0000
+--- ui/views/controls/textfield/textfield.h.orig	2024-03-19 22:15:27.670932300 +0000
 +++ ui/views/controls/textfield/textfield.h
-@@ -46,7 +46,7 @@
- #include "ui/views/view.h"
+@@ -47,7 +47,7 @@
+ #include "ui/views/view_observer.h"
  #include "ui/views/word_lookup_client.h"
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -13,7 +13,7 @@ $NetBSD$
  #include <vector>
  #endif
  
-@@ -454,7 +454,7 @@ class VIEWS_EXPORT Textfield : public Vi
+@@ -456,7 +456,7 @@ class VIEWS_EXPORT Textfield : public Vi
    // Set whether the text should be used to improve typing suggestions.
    void SetShouldDoLearning(bool value) { should_do_learning_ = value; }
  

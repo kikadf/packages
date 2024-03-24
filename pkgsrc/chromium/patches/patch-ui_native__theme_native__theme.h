@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/native_theme/native_theme.h.orig	2024-03-06 00:15:20.785436200 +0000
+--- ui/native_theme/native_theme.h.orig	2024-03-19 22:15:27.434911300 +0000
 +++ ui/native_theme/native_theme.h
 @@ -62,7 +62,7 @@ class NATIVE_THEME_EXPORT NativeTheme {
      kCheckbox,

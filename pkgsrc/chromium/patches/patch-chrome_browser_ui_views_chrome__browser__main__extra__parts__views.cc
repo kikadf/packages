@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2024-03-06 00:14:43.438194000 +0000
+--- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2024-03-19 22:14:34.106153700 +0000
 +++ chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc
-@@ -39,7 +39,7 @@
+@@ -38,7 +38,7 @@
  #include "ui/wm/core/wm_state.h"
  #endif  // defined(USE_AURA)
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include <sys/stat.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -132,7 +132,7 @@ void ChromeBrowserMainExtraPartsViews::P
+@@ -131,7 +131,7 @@ void ChromeBrowserMainExtraPartsViews::P
          return controller;
        }));
  

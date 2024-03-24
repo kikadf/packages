@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/utility/services.cc.orig	2024-03-06 00:14:51.906929300 +0000
+--- content/utility/services.cc.orig	2024-03-19 22:14:44.383070500 +0000
 +++ content/utility/services.cc
 @@ -67,7 +67,7 @@
  extern sandbox::TargetServices* g_utility_target_services;
@@ -40,8 +40,8 @@ $NetBSD$
    auto* command_line = base::CommandLine::ForCurrentProcess();
    if (sandbox::policy::SandboxTypeFromCommandLine(*command_line) ==
        sandbox::mojom::Sandbox::kNoSandbox) {
-@@ -308,7 +308,7 @@ auto RunVideoCapture(
-     mojo::PendingReceiver<video_capture::mojom::VideoCaptureService> receiver) {
+@@ -312,7 +312,7 @@ auto RunVideoCapture(
+ #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
    auto service = std::make_unique<UtilityThreadVideoCaptureServiceImpl>(
        std::move(receiver), base::SingleThreadTaskRunner::GetCurrentDefault());
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
@@ -49,7 +49,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS_ASH)
    {
  #else
-@@ -352,7 +352,7 @@ auto RunOOPArcVideoAcceleratorFactorySer
+@@ -356,7 +356,7 @@ auto RunOOPArcVideoAcceleratorFactorySer
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) && (BUILDFLAG(USE_VAAPI) ||
          // BUILDFLAG(USE_V4L2_CODEC))
  
@@ -58,7 +58,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  auto RunStableVideoDecoderFactoryProcessService(
      mojo::PendingReceiver<
-@@ -363,7 +363,7 @@ auto RunStableVideoDecoderFactoryProcess
+@@ -367,7 +367,7 @@ auto RunStableVideoDecoderFactoryProcess
  #endif  // (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)) &&
          // (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  
@@ -67,7 +67,7 @@ $NetBSD$
  auto RunVideoEncodeAcceleratorProviderFactory(
      mojo::PendingReceiver<media::mojom::VideoEncodeAcceleratorProviderFactory>
          receiver) {
-@@ -386,7 +386,7 @@ void RegisterIOThreadServices(mojo::Serv
+@@ -390,7 +390,7 @@ void RegisterIOThreadServices(mojo::Serv
    // loop of type IO that can get notified when pipes have data.
    services.Add(RunNetworkService);
  
@@ -76,7 +76,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
    if (base::FeatureList::IsEnabled(
            features::kRunStableVideoDecoderFactoryProcessServiceOnIOThread)) {
-@@ -434,7 +434,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -438,7 +438,7 @@ void RegisterMainThreadServices(mojo::Se
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) && (BUILDFLAG(USE_VAAPI) ||
          // BUILDFLAG(USE_V4L2_CODEC))
  
@@ -85,7 +85,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
    if (!base::FeatureList::IsEnabled(
            features::kRunStableVideoDecoderFactoryProcessServiceOnIOThread)) {
-@@ -443,7 +443,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -447,7 +447,7 @@ void RegisterMainThreadServices(mojo::Se
  #endif  // (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)) &&
          // (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  

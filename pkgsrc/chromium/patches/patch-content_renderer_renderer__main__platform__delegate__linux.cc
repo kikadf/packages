@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2024-03-06 00:14:51.366882300 +0000
+--- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2024-03-19 22:14:43.699009400 +0000
 +++ content/renderer/renderer_main_platform_delegate_linux.cc
 @@ -44,6 +44,7 @@ bool RendererMainPlatformDelegate::Enabl
    // any renderer has been started.

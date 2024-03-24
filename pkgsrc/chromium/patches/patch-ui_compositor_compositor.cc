@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/compositor/compositor.cc.orig	2024-03-06 00:15:20.493410800 +0000
+--- ui/compositor/compositor.cc.orig	2024-03-19 22:15:27.110882300 +0000
 +++ ui/compositor/compositor.cc
 @@ -894,7 +894,7 @@ void Compositor::OnResume() {
      obs.ResetIfActive();

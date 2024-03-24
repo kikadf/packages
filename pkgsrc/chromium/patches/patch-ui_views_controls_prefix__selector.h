@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/views/controls/prefix_selector.h.orig	2024-03-06 00:15:20.969452100 +0000
+--- ui/views/controls/prefix_selector.h.orig	2024-03-19 22:15:27.662931700 +0000
 +++ ui/views/controls/prefix_selector.h
 @@ -83,7 +83,7 @@ class VIEWS_EXPORT PrefixSelector : publ
    ukm::SourceId GetClientSourceForMetrics() const override;

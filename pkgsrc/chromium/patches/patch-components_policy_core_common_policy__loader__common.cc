@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/policy/core/common/policy_loader_common.cc.orig	2024-03-06 00:14:48.074596400 +0000
+--- components/policy/core/common/policy_loader_common.cc.orig	2024-03-19 22:14:39.642647500 +0000
 +++ components/policy/core/common/policy_loader_common.cc
 @@ -46,7 +46,7 @@ const char* kSensitivePolicies[] = {
      key::kDefaultSearchProviderEnabled,

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/native_library_posix.cc.orig	2024-03-06 00:14:37.009636000 +0000
+--- base/native_library_posix.cc.orig	2024-03-19 22:14:27.137532000 +0000
 +++ base/native_library_posix.cc
 @@ -33,7 +33,7 @@ NativeLibrary LoadNativeLibraryWithOptio
    // http://crbug.com/17943, http://crbug.com/17557, http://crbug.com/36892,

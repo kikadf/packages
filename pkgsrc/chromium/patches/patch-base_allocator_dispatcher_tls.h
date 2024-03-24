@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/allocator/dispatcher/tls.h.orig	2024-03-06 00:14:36.833620500 +0000
+--- base/allocator/dispatcher/tls.h.orig	2024-03-19 22:14:26.945515000 +0000
 +++ base/allocator/dispatcher/tls.h
 @@ -74,7 +74,7 @@ struct BASE_EXPORT MMapAllocator {
        partition_alloc::PartitionPageSize();

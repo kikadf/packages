@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/disk_cache/simple/simple_file_tracker.cc.orig	2024-03-06 00:14:56.583335200 +0000
+--- net/disk_cache/simple/simple_file_tracker.cc.orig	2024-03-19 22:14:50.755639000 +0000
 +++ net/disk_cache/simple/simple_file_tracker.cc
 @@ -29,7 +29,17 @@ void RecordFileDescripterLimiterOp(FileD
  }  // namespace

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/fontconfig/src/src/fccompat.c.orig	2024-03-06 00:15:30.002236400 +0000
+--- third_party/fontconfig/src/src/fccompat.c.orig	2024-03-19 22:15:36.587727800 +0000
 +++ third_party/fontconfig/src/src/fccompat.c
 @@ -184,7 +184,9 @@ FcRandom(void)
  {

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- tools/gn/src/gn/version.h.orig	2024-03-06 00:26:43.584711600 +0000
+--- tools/gn/src/gn/version.h.orig	2024-03-19 22:26:10.668294200 +0000
 +++ tools/gn/src/gn/version.h
 @@ -22,9 +22,9 @@ class Version {
  

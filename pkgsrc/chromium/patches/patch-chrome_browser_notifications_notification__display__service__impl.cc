@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/notifications/notification_display_service_impl.cc.orig	2024-03-06 00:14:41.446021000 +0000
+--- chrome/browser/notifications/notification_display_service_impl.cc.orig	2024-03-19 22:14:31.709940000 +0000
 +++ chrome/browser/notifications/notification_display_service_impl.cc
 @@ -32,7 +32,7 @@
  #endif

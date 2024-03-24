@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2024-03-06 00:14:47.906581900 +0000
+--- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2024-03-19 22:14:39.426628400 +0000
 +++ components/password_manager/core/browser/password_store/login_database_unittest.cc
-@@ -2106,7 +2106,7 @@ INSTANTIATE_TEST_SUITE_P(MigrationToVCur
+@@ -2105,7 +2105,7 @@ INSTANTIATE_TEST_SUITE_P(MigrationToVCur
                           LoginDatabaseMigrationTestBroken,
                           testing::Values(1, 2, 3, 24));
  

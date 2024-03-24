@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/common/channel_info.h.orig	2024-03-06 00:14:44.050247200 +0000
+--- chrome/common/channel_info.h.orig	2024-03-19 22:14:34.794215000 +0000
 +++ chrome/common/channel_info.h
 @@ -104,13 +104,13 @@ void ClearChannelForTesting();
  std::string GetChannelSuffixForDataDir();

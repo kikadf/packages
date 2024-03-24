@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/dns/dns_config_service_posix.cc.orig	2024-03-06 00:14:56.587335600 +0000
+--- net/dns/dns_config_service_posix.cc.orig	2024-03-19 22:14:50.763639700 +0000
 +++ net/dns/dns_config_service_posix.cc
 @@ -34,6 +34,11 @@
  #include "net/dns/dns_config_watcher_mac.h"

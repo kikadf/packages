@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/feature_engagement/public/feature_constants.h.orig	2024-03-06 00:14:47.254525200 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2024-03-19 22:14:38.810573300 +0000
 +++ components/feature_engagement/public/feature_constants.h
-@@ -25,7 +25,7 @@ BASE_DECLARE_FEATURE(kUseClientConfigIPH
+@@ -20,7 +20,7 @@ BASE_DECLARE_FEATURE(kIPHDemoMode);
  BASE_DECLARE_FEATURE(kIPHDummyFeature);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -13,8 +13,8 @@ $NetBSD$
  BASE_DECLARE_FEATURE(kIPHBatterySaverModeFeature);
  BASE_DECLARE_FEATURE(kIPHCompanionSidePanelFeature);
  BASE_DECLARE_FEATURE(kIPHCompanionSidePanelRegionSearchFeature);
-@@ -252,7 +252,7 @@ extern const base::FeatureParam<int>
-     kDefaultBrowserEligibilitySlidingWindowParam;
+@@ -255,7 +255,7 @@ extern const char kGestureInProductHelpD
+ 
  #endif  // BUILDFLAG(IS_IOS)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -22,7 +22,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
  BASE_DECLARE_FEATURE(kIPHAutofillExternalAccountProfileSuggestionFeature);
  BASE_DECLARE_FEATURE(kIPHAutofillVirtualCardCVCSuggestionFeature);
-@@ -300,7 +300,7 @@ BASE_DECLARE_FEATURE(kIPHScalableIphHelp
+@@ -303,7 +303,7 @@ BASE_DECLARE_FEATURE(kIPHScalableIphHelp
  BASE_DECLARE_FEATURE(kIPHScalableIphGamingFeature);
  #endif
  

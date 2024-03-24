@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2024-03-06 00:14:51.906929300 +0000
+--- content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2024-03-19 22:14:44.383070500 +0000
 +++ content/utility/utility_blink_platform_with_sandbox_support_impl.cc
 @@ -9,7 +9,7 @@
  

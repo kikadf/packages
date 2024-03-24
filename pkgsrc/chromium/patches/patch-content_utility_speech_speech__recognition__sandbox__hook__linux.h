@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/utility/speech/speech_recognition_sandbox_hook_linux.h.orig	2024-03-06 00:14:51.906929300 +0000
+--- content/utility/speech/speech_recognition_sandbox_hook_linux.h.orig	2024-03-19 22:14:44.383070500 +0000
 +++ content/utility/speech/speech_recognition_sandbox_hook_linux.h
 @@ -5,7 +5,13 @@
  #ifndef CONTENT_UTILITY_SPEECH_SPEECH_RECOGNITION_SANDBOX_HOOK_LINUX_H_

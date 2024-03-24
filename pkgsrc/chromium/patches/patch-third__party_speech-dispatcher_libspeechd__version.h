@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/speech-dispatcher/libspeechd_version.h.orig	2024-03-21 18:08:01.959011377 +0000
+--- third_party/speech-dispatcher/libspeechd_version.h.orig	2024-03-24 15:39:42.362814422 +0000
 +++ third_party/speech-dispatcher/libspeechd_version.h
 @@ -0,0 +1,29 @@
 +/*
@@ -23,7 +23,7 @@ $NetBSD$
 + * You should have received a copy of the GNU Lesser General Public License
 + * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 + *
-+ * Id: patch-third_party_speech-dispatcher_libspeechd_version_h,v 1.3 2024/02/24 14:04:13 robert
++ * Id: patch-third_party_speech-dispatcher_libspeechd_version_h,v 1.4 2024/03/22 13:10:56 robert
 + */
 +
 +#ifndef _LIBSPEECHD_VERSION_H

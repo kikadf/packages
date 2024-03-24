@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-03-06 00:14:50.242784700 +0000
+--- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-03-19 22:14:42.214877100 +0000
 +++ components/viz/service/display_embedder/software_output_surface.cc
 @@ -124,7 +124,7 @@ void SoftwareOutputSurface::SwapBuffersC
        now.SnappedToNextTick(refresh_timebase_, refresh_interval_) - now;

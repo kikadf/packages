@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/maldoca/src/maldoca/service/common/process_doc_wrapper.cc.orig	2024-03-06 00:15:16.245042000 +0000
+--- third_party/maldoca/src/maldoca/service/common/process_doc_wrapper.cc.orig	2024-03-19 22:15:22.062432000 +0000
 +++ third_party/maldoca/src/maldoca/service/common/process_doc_wrapper.cc
 @@ -7,7 +7,7 @@
  #include "build/build_config.h"

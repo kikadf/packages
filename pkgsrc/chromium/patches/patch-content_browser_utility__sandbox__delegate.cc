@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/utility_sandbox_delegate.cc.orig	2024-03-06 00:14:51.118860700 +0000
+--- content/browser/utility_sandbox_delegate.cc.orig	2024-03-19 22:14:43.162961700 +0000
 +++ content/browser/utility_sandbox_delegate.cc
 @@ -67,10 +67,10 @@ UtilitySandboxedProcessLauncherDelegate:
  #if BUILDFLAG(IS_FUCHSIA)

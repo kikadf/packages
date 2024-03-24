@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- services/audio/audio_sandbox_hook_linux.cc.orig	2024-03-06 00:14:57.575421300 +0000
+--- services/audio/audio_sandbox_hook_linux.cc.orig	2024-03-19 22:14:51.899741200 +0000
 +++ services/audio/audio_sandbox_hook_linux.cc
 @@ -144,6 +144,7 @@ void AddPulseAudioFilePermissions(
  }

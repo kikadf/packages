@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2024-03-06 00:14:41.350012800 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2024-03-19 22:14:31.589929000 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
-@@ -191,7 +191,7 @@
+@@ -193,7 +193,7 @@
  #include "chrome/notification_helper/notification_helper_constants.h"
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include "components/metrics/motherboard_metrics_provider.h"
  #endif
  
-@@ -208,7 +208,7 @@
+@@ -210,7 +210,7 @@
  #include "chrome/browser/metrics/power/power_metrics_provider_mac.h"
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD$
  #include "chrome/browser/metrics/bluetooth_metrics_provider.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -581,7 +581,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -586,7 +586,7 @@ void ChromeMetricsServiceClient::Registe
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -31,7 +31,7 @@ $NetBSD$
    metrics::structured::StructuredMetricsService::RegisterPrefs(registry);
  
  #if !BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -767,7 +767,7 @@ void ChromeMetricsServiceClient::Initial
+@@ -773,7 +773,7 @@ void ChromeMetricsServiceClient::Initial
      RegisterUKMProviders();
    }
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -40,7 +40,7 @@ $NetBSD$
    metrics::structured::Recorder::GetInstance()->SetUiTaskRunner(
        base::SequencedTaskRunner::GetCurrentDefault());
  #endif
-@@ -814,7 +814,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -820,7 +820,7 @@ void ChromeMetricsServiceClient::Registe
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::CPUMetricsProvider>());
  
@@ -49,7 +49,7 @@ $NetBSD$
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::MotherboardMetricsProvider>());
  #endif
-@@ -899,7 +899,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -905,7 +905,7 @@ void ChromeMetricsServiceClient::Registe
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
@@ -58,7 +58,7 @@ $NetBSD$
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<DesktopPlatformFeaturesMetricsProvider>());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX) ||
-@@ -1009,7 +1009,7 @@ void ChromeMetricsServiceClient::Registe
+@@ -1015,7 +1015,7 @@ void ChromeMetricsServiceClient::Registe
        std::make_unique<PowerMetricsProvider>());
  #endif
  
@@ -67,7 +67,7 @@ $NetBSD$
    metrics_service_->RegisterMetricsProvider(
        metrics::CreateDesktopSessionMetricsProvider());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX)
-@@ -1174,7 +1174,7 @@ bool ChromeMetricsServiceClient::Registe
+@@ -1180,7 +1180,7 @@ bool ChromeMetricsServiceClient::Registe
    }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -76,7 +76,7 @@ $NetBSD$
    // Begin initializing the structured metrics system. Initialization must wait
    // until a profile is added, because it reads keys stored within the user's
    // cryptohome. We only initialize for profiles that are valid candidates
-@@ -1205,7 +1205,7 @@ bool ChromeMetricsServiceClient::Registe
+@@ -1211,7 +1211,7 @@ bool ChromeMetricsServiceClient::Registe
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
@@ -85,7 +85,7 @@ $NetBSD$
    // This creates the DesktopProfileSessionDurationsServices if it didn't exist
    // already.
    metrics::DesktopProfileSessionDurationsServiceFactory::GetForBrowserContext(
-@@ -1548,7 +1548,7 @@ void ChromeMetricsServiceClient::CreateS
+@@ -1554,7 +1554,7 @@ void ChromeMetricsServiceClient::CreateS
    recorder =
        std::make_unique<metrics::structured::AshStructuredMetricsRecorder>(
            cros_system_profile_provider_.get());

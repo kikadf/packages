@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-03-06 00:15:55.424443200 +0000
+--- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-03-19 22:15:58.597691300 +0000
 +++ third_party/ffmpeg/libavutil/x86/x86inc.asm
 @@ -53,6 +53,12 @@
      %endif

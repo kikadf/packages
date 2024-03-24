@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- google_apis/gcm/engine/heartbeat_manager.cc.orig	2024-03-06 00:14:52.783005200 +0000
+--- google_apis/gcm/engine/heartbeat_manager.cc.orig	2024-03-19 22:14:45.551174600 +0000
 +++ google_apis/gcm/engine/heartbeat_manager.cc
 @@ -32,7 +32,7 @@ const int kMinClientHeartbeatIntervalMs 
  // Minimum time spent sleeping before we force a new heartbeat.

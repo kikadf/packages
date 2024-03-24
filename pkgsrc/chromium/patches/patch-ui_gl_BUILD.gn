@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gl/BUILD.gn.orig	2024-03-06 00:15:20.733431600 +0000
+--- ui/gl/BUILD.gn.orig	2024-03-19 22:15:27.382906700 +0000
 +++ ui/gl/BUILD.gn
 @@ -154,8 +154,6 @@ component("gl") {
      defines += [ "GPU_ENABLE_SERVICE_LOGGING" ]
@@ -21,7 +21,7 @@ $NetBSD$
      "//ui/events/platform",
      "//ui/gfx",
      "//ui/gfx/geometry",
-@@ -380,7 +377,6 @@ component("gl") {
+@@ -379,7 +376,6 @@ component("gl") {
      data_deps += [
        "//third_party/angle:libEGL",
        "//third_party/angle:libGLESv2",
@@ -29,7 +29,7 @@ $NetBSD$
      ]
      if (enable_swiftshader) {
        data_deps += [
-@@ -584,7 +580,6 @@ test("gl_unittests") {
+@@ -579,7 +575,6 @@ test("gl_unittests") {
  
    data_deps = [
      "//testing/buildbot/filters:gl_unittests_filters",

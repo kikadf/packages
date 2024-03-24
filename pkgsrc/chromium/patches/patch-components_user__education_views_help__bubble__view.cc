@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/user_education/views/help_bubble_view.cc.orig	2024-03-06 00:14:50.134775400 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2024-03-19 22:14:42.098866700 +0000
 +++ components/user_education/views/help_bubble_view.cc
-@@ -1009,7 +1009,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
+@@ -1011,7 +1011,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
  void HelpBubbleView::OnBeforeBubbleWidgetInit(views::Widget::InitParams* params,
                                                views::Widget* widget) const {
    BubbleDialogDelegateView::OnBeforeBubbleWidgetInit(params, widget);

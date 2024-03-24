@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/profiler/module_cache.cc.orig	2024-03-06 00:14:37.029637600 +0000
+--- base/profiler/module_cache.cc.orig	2024-03-19 22:14:27.157533600 +0000
 +++ base/profiler/module_cache.cc
 @@ -37,7 +37,7 @@ std::string TransformModuleIDToSymbolSer
    // Android and Linux Chrome builds use the "breakpad" format to index their

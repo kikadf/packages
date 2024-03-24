@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- printing/print_settings.cc.orig	2024-03-06 00:14:57.315398700 +0000
+--- printing/print_settings.cc.orig	2024-03-19 22:14:51.591713700 +0000
 +++ printing/print_settings.cc
 @@ -320,7 +320,7 @@ PrintSettings& PrintSettings::operator=(
  #endif

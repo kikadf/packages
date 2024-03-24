@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/platform/wtf/math_extras.h.orig	2024-03-06 00:15:00.615685200 +0000
+--- third_party/blink/renderer/platform/wtf/math_extras.h.orig	2024-03-19 22:14:56.176122700 +0000
 +++ third_party/blink/renderer/platform/wtf/math_extras.h
 @@ -128,6 +128,10 @@ constexpr float Grad2turn(float g) {
    return g * (1.0f / 400.0f);

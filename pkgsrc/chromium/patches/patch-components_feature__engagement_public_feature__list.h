@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/feature_engagement/public/feature_list.h.orig	2024-03-06 00:14:47.254525200 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2024-03-19 22:14:38.810573300 +0000
 +++ components/feature_engagement/public/feature_list.h
-@@ -288,7 +288,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPromoStayS
+@@ -290,7 +290,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSPostDefaul
  #endif  // BUILDFLAG(IS_IOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -31,16 +31,16 @@ $NetBSD$
  DEFINE_VARIATION_PARAM(kIPHDesktopPWAsLinkCapturingLaunch,
                         "IPH_DesktopPWAsLinkCapturingLaunch");
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -615,7 +615,7 @@ constexpr flags_ui::FeatureEntry::Featur
-         VARIATION_ENTRY(kIPHiOSPromoMadeForIOSFeature),
-         VARIATION_ENTRY(kIPHiOSPromoStaySafeFeature),
+@@ -618,7 +618,7 @@ constexpr flags_ui::FeatureEntry::Featur
+         VARIATION_ENTRY(kIPHiOSSwipeToolbarToChangeTabFeature),
+         VARIATION_ENTRY(kIPHiOSPostDefaultAbandonmentPromoFeature),
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
          VARIATION_ENTRY(kIPHBatterySaverModeFeature),
          VARIATION_ENTRY(kIPHCompanionSidePanelFeature),
          VARIATION_ENTRY(kIPHCompanionSidePanelRegionSearchFeature),
-@@ -672,7 +672,7 @@ constexpr flags_ui::FeatureEntry::Featur
+@@ -674,7 +674,7 @@ constexpr flags_ui::FeatureEntry::Featur
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
@@ -49,7 +49,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
          VARIATION_ENTRY(kIPHAutofillExternalAccountProfileSuggestionFeature),
          VARIATION_ENTRY(kIPHAutofillVirtualCardCVCSuggestionFeature),
-@@ -720,7 +720,7 @@ constexpr flags_ui::FeatureEntry::Featur
+@@ -722,7 +722,7 @@ constexpr flags_ui::FeatureEntry::Featur
          VARIATION_ENTRY(kIPHScalableIphGamingFeature),
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  

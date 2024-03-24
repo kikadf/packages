@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/x/generated_protos/shm.cc.orig	2024-03-06 00:15:20.725431000 +0000
+--- ui/gfx/x/generated_protos/shm.cc.orig	2024-03-19 22:15:27.374905800 +0000
 +++ ui/gfx/x/generated_protos/shm.cc
 @@ -27,6 +27,8 @@
  #include <xcb/xcb.h>

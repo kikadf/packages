@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/process/process_metrics.h.orig	2024-03-06 00:14:37.025637400 +0000
+--- base/process/process_metrics.h.orig	2024-03-19 22:14:27.153533500 +0000
 +++ base/process/process_metrics.h
 @@ -37,7 +37,7 @@
  #endif
@@ -113,7 +113,7 @@ $NetBSD$
  // Parse the data found in /proc/<pid>/stat and return the sum of the
  // CPU-related ticks.  Returns -1 on parse error.
  // Exposed for testing.
-@@ -588,7 +586,7 @@ class BASE_EXPORT SystemMetrics {
+@@ -594,7 +592,7 @@ class BASE_EXPORT SystemMetrics {
    FRIEND_TEST_ALL_PREFIXES(SystemMetricsTest, SystemMetrics);
  
    size_t committed_memory_;

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2024-03-06 00:14:41.350012800 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2024-03-19 22:14:31.589929000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
 @@ -79,8 +79,10 @@
  

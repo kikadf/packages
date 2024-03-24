@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/process/process_handle_freebsd.cc.orig	2024-03-06 00:14:37.021637000 +0000
+--- base/process/process_handle_freebsd.cc.orig	2024-03-19 22:14:27.149533000 +0000
 +++ base/process/process_handle_freebsd.cc
 @@ -3,6 +3,7 @@
  // found in the LICENSE file.

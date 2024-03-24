@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/process/process_metrics_netbsd.cc.orig	2024-03-21 18:07:58.156933936 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2024-03-24 15:39:33.767482451 +0000
 +++ base/process/process_metrics_netbsd.cc
 @@ -0,0 +1,199 @@
 +// Copyright 2013 The Chromium Authors

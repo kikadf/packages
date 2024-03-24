@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- headless/lib/browser/headless_request_context_manager.cc.orig	2024-03-06 00:14:52.955020200 +0000
+--- headless/lib/browser/headless_request_context_manager.cc.orig	2024-03-19 22:14:45.731190700 +0000
 +++ headless/lib/browser/headless_request_context_manager.cc
 @@ -64,7 +64,7 @@ void SetCryptKeyOnce(const base::FilePat
      return;

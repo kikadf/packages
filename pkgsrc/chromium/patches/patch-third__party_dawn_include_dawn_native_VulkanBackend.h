@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-03-06 00:15:41.379224000 +0000
+--- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-03-19 22:16:00.725881300 +0000
 +++ third_party/dawn/include/dawn/native/VulkanBackend.h
 @@ -83,7 +83,8 @@ struct ExternalImageExportInfoVk : Exter
  };

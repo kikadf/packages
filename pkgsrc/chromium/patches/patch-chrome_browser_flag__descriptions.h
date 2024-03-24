@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/flag_descriptions.h.orig	2024-03-06 00:14:41.161996400 +0000
+--- chrome/browser/flag_descriptions.h.orig	2024-03-19 22:14:31.393911600 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -1665,7 +1665,7 @@ extern const char kCbdTimeframeRequiredN
+@@ -1691,7 +1691,7 @@ extern const char kCbdTimeframeRequiredN
  extern const char kCbdTimeframeRequiredDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -13,16 +13,16 @@ $NetBSD$
  extern const char kPolicyIndicationForManagedDefaultSearchName[];
  extern const char kPolicyIndicationForManagedDefaultSearchDescription[];
  #endif
-@@ -1847,7 +1847,7 @@ extern const char kSiteInstanceGroupsFor
+@@ -1876,7 +1876,7 @@ extern const char kSiteInstanceGroupsFor
  extern const char kSiteInstanceGroupsForDataUrlsDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_ASH)
-+    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  extern const char kSiteSearchSettingsPolicyName[];
  extern const char kSiteSearchSettingsPolicyDescription[];
  #endif
-@@ -4242,7 +4242,7 @@ extern const char kLacrosMergeIcuDataFil
+@@ -4302,7 +4302,7 @@ extern const char kLacrosMergeIcuDataFil
  extern const char kLacrosMergeIcuDataFileDescription[];
  #endif  // #if BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -31,7 +31,7 @@ $NetBSD$
  extern const char kGetAllScreensMediaName[];
  extern const char kGetAllScreensMediaDescription[];
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-@@ -4382,7 +4382,7 @@ extern const char kV4L2FlatStatefulVideo
+@@ -4442,7 +4442,7 @@ extern const char kV4L2FlatStatefulVideo
  
  // Linux ---------------------------------------------------------------------
  
@@ -40,24 +40,7 @@ $NetBSD$
  extern const char kOzonePlatformHintChoiceDefault[];
  extern const char kOzonePlatformHintChoiceAuto[];
  extern const char kOzonePlatformHintChoiceX11[];
-@@ -4415,14 +4415,14 @@ extern const char kZeroCopyVideoCaptureD
- #endif  // BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
- 
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- extern const char kQuickCommandsName[];
- extern const char kQuickCommandsDescription[];
- 
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-         // defined (OS_FUCHSIA)
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
- extern const char kWebShareName[];
- extern const char kWebShareDescription[];
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-@@ -4432,7 +4432,7 @@ extern const char kWebBluetoothConfirmPa
+@@ -4484,7 +4484,7 @@ extern const char kWebBluetoothConfirmPa
  extern const char kWebBluetoothConfirmPairingSupportDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -66,7 +49,7 @@ $NetBSD$
  extern const char kSkipUndecryptablePasswordsName[];
  extern const char kSkipUndecryptablePasswordsDescription[];
  
-@@ -4443,13 +4443,13 @@ extern const char kRestartToGainAccessTo
+@@ -4495,13 +4495,13 @@ extern const char kRestartToGainAccessTo
  extern const char kRestartToGainAccessToKeychainDescription[];
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
  
@@ -82,7 +65,7 @@ $NetBSD$
  extern const char kFollowingFeedSidepanelName[];
  extern const char kFollowingFeedSidepanelDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
-@@ -4460,7 +4460,7 @@ extern const char kEnableProtoApiForClas
+@@ -4512,7 +4512,7 @@ extern const char kEnableProtoApiForClas
  extern const char kEnableProtoApiForClassifyUrlDescription[];
  #endif  // BUILDFLAG(ENABLE_SUPERVISED_USERS)
  
@@ -91,7 +74,7 @@ $NetBSD$
  extern const char kEnableNetworkServiceSandboxName[];
  extern const char kEnableNetworkServiceSandboxDescription[];
  
-@@ -4537,7 +4537,7 @@ extern const char kElementCaptureDescrip
+@@ -4589,7 +4589,7 @@ extern const char kElementCaptureDescrip
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
@@ -100,8 +83,8 @@ $NetBSD$
  extern const char kUIDebugToolsName[];
  extern const char kUIDebugToolsDescription[];
  
-@@ -4573,7 +4573,7 @@ extern const char kComposeName[];
- extern const char kComposeDescription[];
+@@ -4623,7 +4623,7 @@ extern const char kComposeTextSelectionN
+ extern const char kComposeTextSelectionDescription[];
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

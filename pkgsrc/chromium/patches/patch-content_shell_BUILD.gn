@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/shell/BUILD.gn.orig	2024-03-06 00:14:51.386884000 +0000
+--- content/shell/BUILD.gn.orig	2024-03-19 22:14:43.723011500 +0000
 +++ content/shell/BUILD.gn
-@@ -1030,7 +1030,7 @@ group("content_shell_crash_test") {
+@@ -1027,7 +1027,7 @@ group("content_shell_crash_test") {
    if (is_win) {
      data_deps += [ "//build/win:copy_cdb_to_output" ]
    }

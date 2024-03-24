@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- skia/ext/font_utils.cc.orig	2024-03-06 00:14:57.847444800 +0000
+--- skia/ext/font_utils.cc.orig	2024-03-19 22:14:52.223770000 +0000
 +++ skia/ext/font_utils.cc
 @@ -19,7 +19,7 @@
  #include "third_party/skia/include/ports/SkFontMgr_mac_ct.h"

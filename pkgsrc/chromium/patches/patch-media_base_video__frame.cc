@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/base/video_frame.cc.orig	2024-03-06 00:14:54.839183800 +0000
+--- media/base/video_frame.cc.orig	2024-03-19 22:14:49.003482600 +0000
 +++ media/base/video_frame.cc
 @@ -80,7 +80,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
@@ -22,7 +22,7 @@ $NetBSD$
        // This is not strictly needed but makes explicit that, at VideoFrame
        // level, DmaBufs are not mappable from userspace.
        storage_type != VideoFrame::STORAGE_DMABUFS &&
-@@ -306,7 +306,7 @@ static absl::optional<VideoFrameLayout> 
+@@ -306,7 +306,7 @@ static std::optional<VideoFrameLayout> G
    return VideoFrameLayout::CreateWithPlanes(format, coded_size, planes);
  }
  

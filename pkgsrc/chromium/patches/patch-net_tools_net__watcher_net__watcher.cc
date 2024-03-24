@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/tools/net_watcher/net_watcher.cc.orig	2024-03-06 00:14:57.127382300 +0000
+--- net/tools/net_watcher/net_watcher.cc.orig	2024-03-19 22:14:51.395696200 +0000
 +++ net/tools/net_watcher/net_watcher.cc
 @@ -32,7 +32,7 @@
  #include "net/proxy_resolution/proxy_config_service.h"

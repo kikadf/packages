@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2024-03-06 00:14:41.314009700 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2024-03-19 22:14:31.549925600 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.h
 @@ -20,7 +20,7 @@ namespace aura {
  class Window;

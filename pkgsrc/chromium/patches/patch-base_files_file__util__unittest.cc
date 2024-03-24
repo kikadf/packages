@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/files/file_util_unittest.cc.orig	2024-03-06 00:14:36.953631000 +0000
+--- base/files/file_util_unittest.cc.orig	2024-03-19 22:14:27.069526000 +0000
 +++ base/files/file_util_unittest.cc
 @@ -3869,7 +3869,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }

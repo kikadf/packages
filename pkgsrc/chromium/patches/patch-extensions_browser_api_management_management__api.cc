@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- extensions/browser/api/management/management_api.cc.orig	2024-03-06 00:14:52.386970800 +0000
+--- extensions/browser/api/management/management_api.cc.orig	2024-03-19 22:14:44.999125500 +0000
 +++ extensions/browser/api/management/management_api.cc
-@@ -279,7 +279,7 @@ bool PlatformSupportsApprovalFlowForExte
+@@ -280,7 +280,7 @@ bool PlatformSupportsApprovalFlowForExte
  #if BUILDFLAG(IS_CHROMEOS)
    // ChromeOS devices have this feature already shipped.
    return true;

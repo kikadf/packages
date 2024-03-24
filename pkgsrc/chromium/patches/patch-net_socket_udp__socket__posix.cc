@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/socket/udp_socket_posix.cc.orig	2024-03-06 00:14:57.059376500 +0000
+--- net/socket/udp_socket_posix.cc.orig	2024-03-19 22:14:51.251683200 +0000
 +++ net/socket/udp_socket_posix.cc
 @@ -74,6 +74,32 @@ const int kActivityMonitorBytesThreshold
  const int kActivityMonitorMinimumSamplesForThroughputEstimate = 2;
@@ -37,7 +37,7 @@ $NetBSD$
  #if BUILDFLAG(IS_APPLE) && !BUILDFLAG(CRONET_BUILD)
  
  // On macOS, the file descriptor is guarded to detect the cause of
-@@ -592,12 +618,17 @@ int UDPSocketPosix::SetRecvEcn() {
+@@ -592,12 +618,17 @@ int UDPSocketPosix::SetRecvTos() {
      }
    }
  
@@ -65,7 +65,7 @@ $NetBSD$
    // SO_REUSEPORT on OSX permits multiple processes to each receive
    // UDP multicast or broadcast datagrams destined for the bound
    // port.
-@@ -894,9 +925,17 @@ int UDPSocketPosix::SetMulticastOptions(
+@@ -922,9 +953,17 @@ int UDPSocketPosix::SetMulticastOptions(
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -83,7 +83,7 @@ $NetBSD$
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -931,7 +970,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
+@@ -959,7 +998,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
  #if BUILDFLAG(IS_CHROMEOS_ASH)
    if (last_error == EINVAL)
      return ERR_ADDRESS_IN_USE;
@@ -92,7 +92,7 @@ $NetBSD$
    if (last_error == EADDRNOTAVAIL)
      return ERR_ADDRESS_IN_USE;
  #endif
-@@ -959,9 +998,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
+@@ -987,9 +1026,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -110,7 +110,7 @@ $NetBSD$
        memcpy(&mreq.imr_multiaddr, group_address.bytes().data(),
               IPAddress::kIPv4AddressSize);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
-@@ -999,9 +1046,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
+@@ -1027,9 +1074,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;

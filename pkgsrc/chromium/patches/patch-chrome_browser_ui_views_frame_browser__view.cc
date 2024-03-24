@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-03-06 00:14:43.494198800 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-03-19 22:14:34.166159000 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
-@@ -2161,7 +2161,7 @@ void BrowserView::TabDraggingStatusChang
+@@ -2204,7 +2204,7 @@ void BrowserView::TabDraggingStatusChang
    // CrOS cleanup is done.
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

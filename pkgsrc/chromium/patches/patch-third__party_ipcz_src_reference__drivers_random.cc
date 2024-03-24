@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-03-06 00:15:15.572983700 +0000
+--- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-03-19 22:15:15.009802800 +0000
 +++ third_party/ipcz/src/reference_drivers/random.cc
 @@ -14,7 +14,7 @@
  #include <windows.h>

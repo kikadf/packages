@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ppapi/tests/test_utils.h.orig	2024-03-06 00:14:57.291396600 +0000
+--- ppapi/tests/test_utils.h.orig	2024-03-19 22:14:51.563711200 +0000
 +++ ppapi/tests/test_utils.h
 @@ -314,6 +314,8 @@ do { \
  #define PPAPI_OS_FREEBSD 1

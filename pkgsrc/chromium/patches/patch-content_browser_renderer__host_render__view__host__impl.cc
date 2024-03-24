@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-03-06 00:14:50.754829200 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-03-19 22:14:43.014948400 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
 @@ -270,7 +270,7 @@ void RenderViewHostImpl::GetPlatformSpec
        display::win::ScreenWin::GetSystemMetricsInDIP(SM_CYVSCROLL);

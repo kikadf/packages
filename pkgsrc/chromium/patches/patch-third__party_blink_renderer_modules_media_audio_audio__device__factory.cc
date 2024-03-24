@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2024-03-06 00:15:00.071637900 +0000
+--- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2024-03-19 22:14:55.580069300 +0000
 +++ third_party/blink/renderer/modules/media/audio/audio_device_factory.cc
 @@ -35,7 +35,7 @@ namespace {
  AudioDeviceFactory* g_factory_override = nullptr;

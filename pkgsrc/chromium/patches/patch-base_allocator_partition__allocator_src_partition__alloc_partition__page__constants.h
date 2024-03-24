@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_page_constants.h.orig	2024-03-06 00:14:36.865623500 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_page_constants.h.orig	2024-03-19 22:14:26.977517600 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_page_constants.h
 @@ -16,7 +16,7 @@ namespace partition_alloc::internal {
  // (1 << 12 or 1 << 14), as checked in PartitionRoot::Init(). And

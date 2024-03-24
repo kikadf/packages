@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/perfetto/src/tracing/track.cc.orig	2024-03-06 00:16:06.925441700 +0000
+--- third_party/perfetto/src/tracing/track.cc.orig	2024-03-19 22:16:21.547738800 +0000
 +++ third_party/perfetto/src/tracing/track.cc
 @@ -143,7 +143,7 @@ namespace internal {
  namespace {

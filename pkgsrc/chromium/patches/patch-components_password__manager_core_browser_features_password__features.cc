@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- components/password_manager/core/browser/features/password_features.cc.orig	2024-03-06 00:14:47.874579200 +0000
+--- components/password_manager/core/browser/features/password_features.cc.orig	2024-03-19 22:14:39.382624400 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
 @@ -24,7 +24,7 @@ BASE_FEATURE(kButterOnDesktopFollowup,
  
@@ -13,7 +13,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -104,7 +104,7 @@ BASE_FEATURE(kPasswordManagerLogToTermin
+@@ -99,7 +99,7 @@ BASE_FEATURE(kPasswordManagerLogToTermin
               "PasswordManagerLogToTerminal",
               base::FEATURE_DISABLED_BY_DEFAULT);
  

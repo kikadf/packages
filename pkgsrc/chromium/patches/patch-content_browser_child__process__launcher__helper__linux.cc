@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/child_process_launcher_helper_linux.cc.orig	2024-03-06 00:14:50.450802800 +0000
+--- content/browser/child_process_launcher_helper_linux.cc.orig	2024-03-19 22:14:42.466899600 +0000
 +++ content/browser/child_process_launcher_helper_linux.cc
 @@ -21,7 +21,9 @@
  #include "content/public/common/result_codes.h"

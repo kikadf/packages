@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/canvas_skia.cc.orig	2024-03-06 00:15:20.665425800 +0000
+--- ui/gfx/canvas_skia.cc.orig	2024-03-19 22:15:27.294898700 +0000
 +++ ui/gfx/canvas_skia.cc
 @@ -213,7 +213,7 @@ void Canvas::DrawStringRectWithFlags(con
      Range range = StripAcceleratorChars(flags, &adjusted_text);

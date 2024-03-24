@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- remoting/host/chromoting_host.h.orig	2024-03-06 00:14:57.367403300 +0000
+--- remoting/host/chromoting_host.h.orig	2024-03-19 22:14:51.647718700 +0000
 +++ remoting/host/chromoting_host.h
 @@ -32,7 +32,7 @@
  #include "remoting/protocol/session_manager.h"

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- build/config/ozone.gni.orig	2024-03-06 00:14:37.269658600 +0000
+--- build/config/ozone.gni.orig	2024-03-19 22:14:27.421557200 +0000
 +++ build/config/ozone.gni
 @@ -84,7 +84,19 @@ declare_args() {
      } else if (is_chromeos_lacros) {

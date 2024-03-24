@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ipc/ipc_message_utils.cc.orig	2024-03-06 00:14:54.755176500 +0000
+--- ipc/ipc_message_utils.cc.orig	2024-03-19 22:14:48.907474000 +0000
 +++ ipc/ipc_message_utils.cc
 @@ -394,7 +394,7 @@ void ParamTraits<unsigned int>::Log(cons
  }

@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- v8/src/execution/isolate.cc.orig	2024-03-06 00:16:12.765948800 +0000
+--- v8/src/execution/isolate.cc.orig	2024-03-19 22:16:38.037210000 +0000
 +++ v8/src/execution/isolate.cc
-@@ -148,6 +148,10 @@
+@@ -153,6 +153,10 @@
  #include "src/execution/simulator-base.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  extern "C" const uint8_t v8_Default_embedded_blob_code_[];
  extern "C" uint32_t v8_Default_embedded_blob_code_size_;
  extern "C" const uint8_t v8_Default_embedded_blob_data_[];
-@@ -4212,6 +4216,11 @@ void Isolate::InitializeDefaultEmbeddedB
+@@ -4232,6 +4236,11 @@ void Isolate::InitializeDefaultEmbeddedB
    const uint8_t* data = DefaultEmbeddedBlobData();
    uint32_t data_size = DefaultEmbeddedBlobDataSize();
  

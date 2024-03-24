@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/synchronization/lock_impl.h.orig	2024-03-06 00:14:37.053639700 +0000
+--- base/synchronization/lock_impl.h.orig	2024-03-19 22:14:27.185536100 +0000
 +++ base/synchronization/lock_impl.h
-@@ -106,6 +106,10 @@ void LockImpl::Unlock() {
+@@ -105,6 +105,10 @@ void LockImpl::Unlock() {
  }
  
  #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
@@ -15,7 +15,7 @@ $NetBSD$
  
  #if DCHECK_IS_ON()
  BASE_EXPORT void dcheck_trylock_result(int rv);
-@@ -126,6 +130,9 @@ void LockImpl::Unlock() {
+@@ -125,6 +129,9 @@ void LockImpl::Unlock() {
    dcheck_unlock_result(rv);
  #endif
  }

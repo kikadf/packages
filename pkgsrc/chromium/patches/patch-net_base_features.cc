@@ -2,9 +2,18 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/base/features.cc.orig	2024-03-06 00:14:56.315312000 +0000
+--- net/base/features.cc.orig	2024-03-19 22:14:50.447611600 +0000
 +++ net/base/features.cc
-@@ -500,7 +500,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
+@@ -26,7 +26,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
+ BASE_FEATURE(kAsyncDns,
+              "AsyncDns",
+ #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_ANDROID) || \
+-    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT
+@@ -510,7 +510,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
               "SpdyHeadersToHttpResponseUseBuilder",
               base::FEATURE_DISABLED_BY_DEFAULT);
  

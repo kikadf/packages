@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2024-03-06 00:15:00.391665700 +0000
+--- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2024-03-19 22:14:55.928100300 +0000
 +++ third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc
 @@ -65,7 +65,7 @@ AtomicString ToAtomicString(const SkStri
    return AtomicString::FromUTF8(str.c_str(), str.size());
@@ -13,7 +13,7 @@ $NetBSD$
  // This function is called on android or when we are emulating android fonts on
  // linux and the embedder has overriden the default fontManager with
  // WebFontRendering::setSkiaFontMgr.
-@@ -247,7 +247,7 @@ std::unique_ptr<FontPlatformData> FontCa
+@@ -246,7 +246,7 @@ const FontPlatformData* FontCache::Creat
    std::string name;
  
    sk_sp<SkTypeface> typeface;

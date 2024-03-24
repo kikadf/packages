@@ -2,9 +2,18 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2024-03-06 00:14:40.629950300 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2024-03-19 22:14:30.837862000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
-@@ -67,7 +67,9 @@ void ChromeBrowserMainPartsLinux::PostCr
+@@ -24,7 +24,7 @@
+ #include "device/bluetooth/dbus/bluez_dbus_thread_manager.h"
+ #include "ui/base/l10n/l10n_util.h"
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "ui/ozone/public/ozone_platform.h"
+ #endif
+ 
+@@ -71,7 +71,9 @@ void ChromeBrowserMainPartsLinux::PostCr
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if !BUILDFLAG(IS_CHROMEOS)
@@ -14,7 +23,16 @@ $NetBSD$
  
    // Set up crypt config. This needs to be done before anything starts the
    // network service, as the raw encryption key needs to be shared with the
-@@ -124,7 +126,7 @@ void ChromeBrowserMainPartsLinux::PostBr
+@@ -96,7 +98,7 @@ void ChromeBrowserMainPartsLinux::PostCr
+   ChromeBrowserMainPartsPosix::PostCreateMainMessageLoop();
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ void ChromeBrowserMainPartsLinux::PostMainMessageLoopRun() {
+   ChromeBrowserMainPartsPosix::PostMainMessageLoopRun();
+   ui::OzonePlatform::GetInstance()->PostMainMessageLoopRun();
+@@ -135,7 +137,7 @@ void ChromeBrowserMainPartsLinux::PostBr
  #endif  // defined(USE_DBUS) && !BUILDFLAG(IS_CHROMEOS)
  
  void ChromeBrowserMainPartsLinux::PostDestroyThreads() {

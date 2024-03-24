@@ -2,10 +2,10 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2024-03-06 00:15:20.701429000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2024-03-19 22:15:27.350903700 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.h
-@@ -15,7 +15,7 @@
- #include "third_party/abseil-cpp/absl/types/optional.h"
+@@ -16,7 +16,7 @@
+ #include "mojo/public/cpp/system/platform_handle.h"
  #include "ui/gfx/mojom/native_handle_types.mojom-shared.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
@@ -13,7 +13,7 @@ $NetBSD$
  #include "ui/gfx/native_pixmap_handle.h"
  #endif
  
-@@ -25,7 +25,7 @@
+@@ -26,7 +26,7 @@
  
  namespace mojo {
  
@@ -22,7 +22,7 @@ $NetBSD$
  template <>
  struct COMPONENT_EXPORT(GFX_NATIVE_HANDLE_TYPES_SHARED_MOJOM_TRAITS)
      StructTraits<gfx::mojom::NativePixmapPlaneDataView,
-@@ -53,13 +53,13 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
+@@ -54,13 +54,13 @@ struct COMPONENT_EXPORT(GFX_NATIVE_HANDL
      return pixmap_handle.planes;
    }
  

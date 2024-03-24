@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc.orig	2024-03-06 00:14:42.462109300 +0000
+--- chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc.orig	2024-03-19 22:14:33.058060200 +0000
 +++ chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc
-@@ -17,7 +17,7 @@
+@@ -16,7 +16,7 @@
  #include "components/send_tab_to_self/send_tab_to_self_model.h"
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -13,7 +13,7 @@ $NetBSD$
  #include "chrome/browser/ui/send_tab_to_self/send_tab_to_self_toolbar_icon_controller.h"
  #endif
  
-@@ -51,7 +51,7 @@ void SendTabToSelfClientService::Entries
+@@ -50,7 +50,7 @@ void SendTabToSelfClientService::Entries
      const std::vector<const SendTabToSelfEntry*>& new_entries) {
    for (const std::unique_ptr<ReceivingUiHandler>& handler : GetHandlers()) {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

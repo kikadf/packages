@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-03-06 00:14:43.590207000 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-03-19 22:14:34.266167900 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view_base.cc
-@@ -672,7 +672,7 @@ void ProfileMenuViewBase::SetProfileIden
+@@ -703,7 +703,7 @@ void ProfileMenuViewBase::SetProfileIden
  
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.

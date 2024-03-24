@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/ozone/platform/wayland/host/wayland_toplevel_window.cc.orig	2024-03-06 00:15:20.829439900 +0000
+--- ui/ozone/platform/wayland/host/wayland_toplevel_window.cc.orig	2024-03-19 22:15:27.510918100 +0000
 +++ ui/ozone/platform/wayland/host/wayland_toplevel_window.cc
-@@ -611,7 +611,7 @@ void WaylandToplevelWindow::HandleAuraTo
+@@ -598,7 +598,7 @@ void WaylandToplevelWindow::HandleAuraTo
    const bool did_active_change = is_active_ != window_states.is_activated;
    is_active_ = window_states.is_activated;
  

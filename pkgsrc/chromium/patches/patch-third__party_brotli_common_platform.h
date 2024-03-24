@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/brotli/common/platform.h.orig	2024-03-06 00:15:14.800916700 +0000
+--- third_party/brotli/common/platform.h.orig	2024-03-19 22:15:13.981711100 +0000
 +++ third_party/brotli/common/platform.h
 @@ -28,7 +28,7 @@
  #include <brotli/port.h>

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/base/video_frame.h.orig	2024-03-06 00:14:54.839183800 +0000
+--- media/base/video_frame.h.orig	2024-03-19 22:14:49.003482600 +0000
 +++ media/base/video_frame.h
 @@ -44,7 +44,7 @@
  #include "base/apple/scoped_cftyperef.h"

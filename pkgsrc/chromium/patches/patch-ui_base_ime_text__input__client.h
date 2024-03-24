@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/ime/text_input_client.h.orig	2024-03-06 00:15:20.301394200 +0000
+--- ui/base/ime/text_input_client.h.orig	2024-03-19 22:15:26.966869600 +0000
 +++ ui/base/ime/text_input_client.h
 @@ -265,7 +265,7 @@ class COMPONENT_EXPORT(UI_BASE_IME) Text
    // fields that are considered 'private' (e.g. in incognito tabs).

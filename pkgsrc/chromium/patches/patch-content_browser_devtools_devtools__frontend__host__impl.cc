@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2024-03-06 00:14:50.466804300 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2024-03-19 22:14:42.502902700 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.cc
 @@ -22,7 +22,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"

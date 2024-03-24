@@ -2,21 +2,13 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-03-06 00:15:31.322351000 +0000
+--- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-03-19 22:15:37.791835300 +0000
 +++ third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c
-@@ -85,7 +85,7 @@ static int arm_get_cpu_caps(void) {
+@@ -95,10 +95,46 @@ static int arm_get_cpu_caps(void) {
    return flags;
  }
  
--#elif defined(ANDROID_USE_CPU_FEATURES_LIB)
-+#elif defined(ANDROID_USE_CPU_FEATURES_LIB) || defined(__FreeBSD__)
- 
- static int arm_get_cpu_caps(void) {
-   int flags = 0;
-@@ -95,6 +95,28 @@ static int arm_get_cpu_caps(void) {
-   return flags;
- }
- 
+-#elif defined(__linux__)  // end defined(AOM_USE_ANDROID_CPU_FEATURES)
 +#elif defined(__OpenBSD__)
 +#include <sys/sysctl.h>
 +#include <machine/cpu.h>
@@ -39,6 +31,24 @@ $NetBSD$
 +  return flags;
 +}
 +
- #elif defined(__linux__)  // end defined(AOM_USE_ANDROID_CPU_FEATURES)
++#elif defined(__linux__) || defined(__FreeBSD__)  // end defined(AOM_USE_ANDROID_CPU_FEATURES)
  
  #include <sys/auxv.h>
+ 
++#if defined(__FreeBSD__)
++static unsigned long getauxval(unsigned long type)
++{
++    /* Only AT_HWCAP* return unsigned long */
++    if (type != AT_HWCAP && type != AT_HWCAP2) {
++        return 0;
++    }
++
++    unsigned long ret = 0;
++    elf_aux_info(type, &ret, sizeof(ret));
++    return ret;
++}
++#endif
++
+ // Define hwcap values ourselves: building with an old auxv header where these
+ // hwcap values are not defined should not prevent features from being enabled.
+ #define AOM_AARCH64_HWCAP_CRC32 (1 << 7)

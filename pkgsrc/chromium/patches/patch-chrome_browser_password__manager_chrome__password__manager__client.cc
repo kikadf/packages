@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-03-06 00:14:41.566031500 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-03-19 22:14:31.833951000 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
-@@ -675,7 +675,7 @@ void ChromePasswordManagerClient::Notify
+@@ -671,7 +671,7 @@ void ChromePasswordManagerClient::Notify
  }
  
  void ChromePasswordManagerClient::NotifyKeychainError() {

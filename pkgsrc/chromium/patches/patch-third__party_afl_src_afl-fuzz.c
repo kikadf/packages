@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/afl/src/afl-fuzz.c.orig	2024-03-06 00:14:58.235478600 +0000
+--- third_party/afl/src/afl-fuzz.c.orig	2024-03-19 22:14:52.815822800 +0000
 +++ third_party/afl/src/afl-fuzz.c
 @@ -58,7 +58,8 @@
  #include <sys/ioctl.h>

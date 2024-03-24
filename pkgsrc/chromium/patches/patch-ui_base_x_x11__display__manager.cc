@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/x/x11_display_manager.cc.orig	2024-03-06 00:15:20.337397300 +0000
+--- ui/base/x/x11_display_manager.cc.orig	2024-03-19 22:15:27.002872700 +0000
 +++ ui/base/x/x11_display_manager.cc
-@@ -15,7 +15,7 @@
+@@ -16,7 +16,7 @@
  #include "ui/gfx/x/randr.h"
  #include "ui/gfx/x/xproto.h"
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -91,7 +91,7 @@ void XDisplayManager::FetchDisplayList()
+@@ -92,7 +92,7 @@ void XDisplayManager::FetchDisplayList()
            ? display::Display::GetForcedDeviceScaleFactor()
            : 1.0f};
    const auto* display_config = &empty_display_config;

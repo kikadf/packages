@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/ozone/platform/x11/vulkan_implementation_x11.cc.orig	2024-03-06 00:15:20.849441800 +0000
+--- ui/ozone/platform/x11/vulkan_implementation_x11.cc.orig	2024-03-19 22:15:27.534920200 +0000
 +++ ui/ozone/platform/x11/vulkan_implementation_x11.cc
-@@ -58,7 +58,11 @@ bool VulkanImplementationX11::Initialize
+@@ -59,7 +59,11 @@ bool VulkanImplementationX11::Initialize
  
      path = path.Append("libvk_swiftshader.so");
    } else {

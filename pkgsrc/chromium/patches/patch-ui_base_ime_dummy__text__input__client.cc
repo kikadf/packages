@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/base/ime/dummy_text_input_client.cc.orig	2024-03-06 00:15:20.293393400 +0000
+--- ui/base/ime/dummy_text_input_client.cc.orig	2024-03-19 22:15:26.958868700 +0000
 +++ ui/base/ime/dummy_text_input_client.cc
 @@ -159,7 +159,7 @@ bool DummyTextInputClient::ShouldDoLearn
    return false;

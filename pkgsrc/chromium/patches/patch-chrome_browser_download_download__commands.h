@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/download/download_commands.h.orig	2024-03-06 00:14:40.801965200 +0000
+--- chrome/browser/download/download_commands.h.orig	2024-03-19 22:14:31.021878500 +0000
 +++ chrome/browser/download/download_commands.h
 @@ -63,7 +63,7 @@ class DownloadCommands {
    void ExecuteCommand(Command command);

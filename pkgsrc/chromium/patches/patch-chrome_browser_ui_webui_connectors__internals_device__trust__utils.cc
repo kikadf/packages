@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2024-03-06 00:14:43.798225200 +0000
+--- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2024-03-19 22:14:34.506189300 +0000
 +++ chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc
 @@ -6,7 +6,7 @@
  

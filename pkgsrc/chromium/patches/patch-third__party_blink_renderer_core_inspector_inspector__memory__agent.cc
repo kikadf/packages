@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2024-03-06 00:14:59.551592800 +0000
+--- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2024-03-19 22:14:54.555978000 +0000
 +++ third_party/blink/renderer/core/inspector/inspector_memory_agent.cc
 @@ -192,7 +192,7 @@ InspectorMemoryAgent::GetSamplingProfile
  

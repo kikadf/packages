@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/browser/task_manager/sampling/task_group.h.orig	2024-03-06 00:14:42.678128000 +0000
+--- chrome/browser/task_manager/sampling/task_group.h.orig	2024-03-19 22:14:33.294081200 +0000
 +++ chrome/browser/task_manager/sampling/task_group.h
 @@ -44,7 +44,7 @@ constexpr int kUnsupportedVMRefreshFlags
      REFRESH_TYPE_WEBCACHE_STATS | REFRESH_TYPE_NETWORK_USAGE |

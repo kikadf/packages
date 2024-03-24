@@ -2,10 +2,10 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- chrome/app/chrome_main.cc.orig	2024-03-06 00:14:38.073728300 +0000
+--- chrome/app/chrome_main.cc.orig	2024-03-19 22:14:28.313636800 +0000
 +++ chrome/app/chrome_main.cc
-@@ -29,11 +29,11 @@
- #include "chrome/app/notification_metrics.h"
+@@ -28,11 +28,11 @@
+ #include "chrome/app/chrome_main_mac.h"
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
@@ -18,7 +18,7 @@ $NetBSD$
  #include "chrome/app/chrome_main_linux.h"
  #endif
  
-@@ -81,7 +81,7 @@ int ChromeMain(int argc, const char** ar
+@@ -80,7 +80,7 @@ int ChromeMain(int argc, const char** ar
  #error Unknown platform.
  #endif
  
@@ -27,7 +27,7 @@ $NetBSD$
    PossiblyDetermineFallbackChromeChannel(argv[0]);
  #endif
  
-@@ -142,7 +142,7 @@ int ChromeMain(int argc, const char** ar
+@@ -141,7 +141,7 @@ int ChromeMain(int argc, const char** ar
    SetUpBundleOverrides();
  #endif
  
@@ -36,7 +36,7 @@ $NetBSD$
    AppendExtraArgumentsToCommandLine(command_line);
  #endif
  
-@@ -171,7 +171,7 @@ int ChromeMain(int argc, const char** ar
+@@ -170,7 +170,7 @@ int ChromeMain(int argc, const char** ar
      headless_mode_handle = headless::InitHeadlessMode();
    } else {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

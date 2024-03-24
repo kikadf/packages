@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/blink/renderer/controller/memory_usage_monitor_posix.h.orig	2024-03-06 00:14:59.107554200 +0000
+--- third_party/blink/renderer/controller/memory_usage_monitor_posix.h.orig	2024-03-19 22:14:54.039932000 +0000
 +++ third_party/blink/renderer/controller/memory_usage_monitor_posix.h
 @@ -13,7 +13,7 @@
  #include "third_party/blink/renderer/controller/controller_export.h"

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- printing/print_settings_conversion.cc.orig	2024-03-06 00:14:57.315398700 +0000
+--- printing/print_settings_conversion.cc.orig	2024-03-19 22:14:51.591713700 +0000
 +++ printing/print_settings_conversion.cc
 @@ -287,7 +287,7 @@ std::unique_ptr<PrintSettings> PrintSett
      settings->set_is_modifiable(is_modifiable.value());

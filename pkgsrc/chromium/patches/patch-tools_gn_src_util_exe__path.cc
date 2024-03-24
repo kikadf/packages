@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- tools/gn/src/util/exe_path.cc.orig	2024-03-06 00:26:43.588712000 +0000
+--- tools/gn/src/util/exe_path.cc.orig	2024-03-19 22:26:10.672294600 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@
  #include <windows.h>

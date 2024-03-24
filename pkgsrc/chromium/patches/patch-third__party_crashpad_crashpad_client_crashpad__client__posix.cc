@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2024-03-21 18:08:01.637076391 +0000
+--- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2024-03-24 15:39:41.872515202 +0000
 +++ third_party/crashpad/crashpad/client/crashpad_client_posix.cc
 @@ -0,0 +1,40 @@
 +// Copyright 2017 The Crashpad Authors. All rights reserved.

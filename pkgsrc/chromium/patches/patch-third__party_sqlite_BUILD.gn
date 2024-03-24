@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/sqlite/BUILD.gn.orig	2024-03-06 00:15:17.737171600 +0000
+--- third_party/sqlite/BUILD.gn.orig	2024-03-19 22:15:23.618570800 +0000
 +++ third_party/sqlite/BUILD.gn
 @@ -142,7 +142,7 @@ config("sqlite_warnings") {
        ]

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2024-03-06 00:14:50.518808600 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2024-03-19 22:14:42.558907700 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.h
 @@ -151,7 +151,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
    void OnDisplayMetricsChanged(const display::Display& display,

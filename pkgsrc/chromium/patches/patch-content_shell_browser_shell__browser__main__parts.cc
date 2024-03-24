@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/shell/browser/shell_browser_main_parts.cc.orig	2024-03-06 00:14:51.398885000 +0000
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2024-03-19 22:14:43.731012300 +0000
 +++ content/shell/browser/shell_browser_main_parts.cc
 @@ -51,7 +51,7 @@
  #include "net/base/network_change_notifier.h"

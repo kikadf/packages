@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- content/zygote/zygote_main_linux.cc.orig	2024-03-06 00:14:51.922930500 +0000
+--- content/zygote/zygote_main_linux.cc.orig	2024-03-19 22:14:44.403072400 +0000
 +++ content/zygote/zygote_main_linux.cc
 @@ -11,7 +11,9 @@
  #include <stddef.h>

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- headless/lib/headless_content_main_delegate.cc.orig	2024-03-06 00:14:52.959020600 +0000
+--- headless/lib/headless_content_main_delegate.cc.orig	2024-03-19 22:14:45.735191000 +0000
 +++ headless/lib/headless_content_main_delegate.cc
 @@ -362,7 +362,7 @@ void HeadlessContentMainDelegate::InitCr
    if (process_type != ::switches::kZygoteProcess) {

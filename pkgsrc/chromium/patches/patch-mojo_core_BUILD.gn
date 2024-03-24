@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- mojo/core/BUILD.gn.orig	2024-03-06 00:14:55.859272200 +0000
+--- mojo/core/BUILD.gn.orig	2024-03-19 22:14:49.671542200 +0000
 +++ mojo/core/BUILD.gn
 @@ -166,7 +166,7 @@ template("core_impl_source_set") {
          ]

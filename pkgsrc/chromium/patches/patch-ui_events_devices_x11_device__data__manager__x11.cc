@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-03-06 00:15:20.537414600 +0000
+--- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-03-19 22:15:27.158886700 +0000
 +++ ui/events/devices/x11/device_data_manager_x11.cc
 @@ -844,6 +844,7 @@ void DeviceDataManagerX11::SetDisabledKe
  }

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ipc/ipc_channel.h.orig	2024-03-06 00:14:54.751176000 +0000
+--- ipc/ipc_channel.h.orig	2024-03-19 22:14:48.899473400 +0000
 +++ ipc/ipc_channel.h
 @@ -240,7 +240,7 @@ class COMPONENT_EXPORT(IPC) Channel : pu
    static std::string GenerateUniqueRandomChannelID();

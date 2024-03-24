@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/native_widget_types.h.orig	2024-03-06 00:15:20.701429000 +0000
+--- ui/gfx/native_widget_types.h.orig	2024-03-19 22:15:27.350903700 +0000
 +++ ui/gfx/native_widget_types.h
 @@ -104,7 +104,7 @@ class SkBitmap;
  

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/base/network_change_notifier_passive.cc.orig	2024-03-06 00:14:56.327313000 +0000
+--- net/base/network_change_notifier_passive.cc.orig	2024-03-19 22:14:50.459612600 +0000
 +++ net/base/network_change_notifier_passive.cc
 @@ -107,7 +107,7 @@ NetworkChangeNotifierPassive::GetAddress
  NetworkChangeNotifier::NetworkChangeCalculatorParams

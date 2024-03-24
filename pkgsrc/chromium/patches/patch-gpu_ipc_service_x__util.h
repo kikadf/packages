@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- gpu/ipc/service/x_util.h.orig	2024-03-06 00:14:52.943019200 +0000
+--- gpu/ipc/service/x_util.h.orig	2024-03-19 22:14:45.715189200 +0000
 +++ gpu/ipc/service/x_util.h
 @@ -12,7 +12,7 @@
  #include "gpu/ipc/service/gpu_config.h"

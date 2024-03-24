@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-03-06 00:14:54.979195800 +0000
+--- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-03-19 22:14:49.175498000 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
 @@ -68,7 +68,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
      const base::FilePath dev_path(FILE_PATH_LITERAL(
@@ -13,7 +13,16 @@ $NetBSD$
      const bool is_render_node = base::Contains(drm_node_file_prefix, "render");
  
      // TODO(b/313513760): don't guard base::File::FLAG_WRITE behind
-@@ -301,7 +301,7 @@ scoped_refptr<VideoFrame> CreateGpuMemor
+@@ -196,7 +196,7 @@ class GbmDeviceWrapper {
+     const bool is_intel_media_compression_enabled =
+ #if BUILDFLAG(IS_CHROMEOS)
+         base::FeatureList::IsEnabled(features::kEnableIntelMediaCompression);
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+         false;
+ #endif
+     if (is_intel_media_compression_enabled) {
+@@ -334,7 +334,7 @@ scoped_refptr<VideoFrame> CreateGpuMemor
    const bool is_intel_media_compression_enabled =
  #if BUILDFLAG(IS_CHROMEOS)
        base::FeatureList::IsEnabled(features::kEnableIntelMediaCompression);

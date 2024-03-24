@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/threading/platform_thread_posix.cc.orig	2024-03-06 00:14:37.137647000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2024-03-19 22:14:27.281544700 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -78,12 +78,12 @@ void* ThreadFunc(void* params) {
      if (!thread_params->joinable)

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/profiler/thread_delegate_posix.cc.orig	2024-03-06 00:14:37.033638000 +0000
+--- base/profiler/thread_delegate_posix.cc.orig	2024-03-19 22:14:27.165534500 +0000
 +++ base/profiler/thread_delegate_posix.cc
 @@ -13,7 +13,7 @@
  #include "build/build_config.h"

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2024-03-06 00:15:17.969191800 +0000
+--- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2024-03-19 22:15:23.846591200 +0000
 +++ third_party/test_fonts/fontconfig/fontconfig_util_linux.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be
@@ -13,7 +13,7 @@ $NetBSD$
  #include "third_party/test_fonts/fontconfig/fontconfig_util_linux.h"
  
  #include <fontconfig/fontconfig.h>
-@@ -15,11 +17,15 @@
+@@ -16,11 +18,15 @@
  namespace test_fonts {
  
  std::string GetSysrootDir() {

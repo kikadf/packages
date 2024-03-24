@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- ui/gfx/font_render_params.h.orig	2024-03-06 00:15:20.673426400 +0000
+--- ui/gfx/font_render_params.h.orig	2024-03-19 22:15:27.302899600 +0000
 +++ ui/gfx/font_render_params.h
 @@ -118,7 +118,7 @@ GFX_EXPORT FontRenderParams GetFontRende
      const FontRenderParamsQuery& query,

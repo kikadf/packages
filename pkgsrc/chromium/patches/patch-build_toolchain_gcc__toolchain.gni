@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- build/toolchain/gcc_toolchain.gni.orig	2024-03-06 00:14:37.309661900 +0000
+--- build/toolchain/gcc_toolchain.gni.orig	2024-03-19 22:14:27.461561000 +0000
 +++ build/toolchain/gcc_toolchain.gni
-@@ -53,6 +53,13 @@ if (enable_resource_allowlist_generation
+@@ -57,6 +57,13 @@ if (enable_resource_allowlist_generation
        "enable_resource_allowlist_generation=true does not work for target_os=$target_os")
  }
  
@@ -18,7 +18,7 @@ $NetBSD$
  # This template defines a toolchain for something that works like gcc
  # (including clang).
  #
-@@ -886,22 +893,12 @@ template("gcc_toolchain") {
+@@ -890,22 +897,12 @@ template("gcc_toolchain") {
  # use_gold too.
  template("clang_toolchain") {
    gcc_toolchain(target_name) {

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- net/http/http_auth_gssapi_posix.cc.orig	2024-03-06 00:14:56.627339000 +0000
+--- net/http/http_auth_gssapi_posix.cc.orig	2024-03-19 22:14:50.807643700 +0000
 +++ net/http/http_auth_gssapi_posix.cc
 @@ -370,8 +370,9 @@ base::NativeLibrary GSSAPISharedLibrary:
      static const char* const kDefaultLibraryNames[] = {

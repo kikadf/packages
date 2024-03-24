@@ -2,9 +2,9 @@ $NetBSD$
 
 * Part of patchset to build on NetBSD
 
---- base/i18n/icu_util.cc.orig	2024-03-06 00:14:36.969632400 +0000
+--- base/i18n/icu_util.cc.orig	2024-03-19 22:14:27.085527400 +0000
 +++ base/i18n/icu_util.cc
-@@ -51,7 +51,7 @@
+@@ -52,7 +52,7 @@
  #include "third_party/icu/source/common/unicode/unistr.h"
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD$
      BUILDFLAG(IS_CHROMEOS) || (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS))
  #include "third_party/icu/source/i18n/unicode/timezone.h"
  #endif
-@@ -345,7 +345,7 @@ void InitializeIcuTimeZone() {
+@@ -328,7 +328,7 @@ void InitializeIcuTimeZone() {
        FuchsiaIntlProfileWatcher::GetPrimaryTimeZoneIdForIcuInitialization();
    icu::TimeZone::adoptDefault(
        icu::TimeZone::createTimeZone(icu::UnicodeString::fromUTF8(zone_id)));
