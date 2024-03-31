@@ -1,7 +1,7 @@
 # Maintainer: kikadf <kikadf.01@gmail.com>
 
 pkgname=chku
-pkgver=6.0
+pkgver=6.1
 pkgrel=1
 pkgdesc="Check updates on host and guests"
 url="https://github.com/kikadf/chku"
@@ -9,7 +9,7 @@ license=(GPLv3)
 depends=('curl' 'libarchive' 'cjson')
 arch=('aarch64')
 source=(file:///home/archer/share/mega/share/${pkgname}-${pkgver}.tar.gz)
-sha256sums=('fbbfb589c726e53757bb2679e9c156659533405a216ba2bae049c388586c2382')
+sha256sums=('b30c95f15bd6e26c635096aba42e9918a8890643519b2bb3aa32c1053a0a47b9')
 
 
 build() {
