@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2024-03-19 22:14:31.569927500 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.h.orig	2024-03-26 21:36:38.500012200 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.h
 @@ -133,7 +133,7 @@ class WebRtcLoggingController
                           size_t web_app_id,

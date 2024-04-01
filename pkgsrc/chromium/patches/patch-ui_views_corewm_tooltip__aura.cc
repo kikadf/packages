@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/views/corewm/tooltip_aura.cc.orig	2024-03-19 22:15:27.678933100 +0000
+--- ui/views/corewm/tooltip_aura.cc.orig	2024-03-26 21:38:05.739954200 +0000
 +++ ui/views/corewm/tooltip_aura.cc
 @@ -38,7 +38,7 @@ namespace {
  bool CanUseTranslucentTooltipWidget() {

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2024-03-19 22:14:34.174159800 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_delegate.cc.orig	2024-03-26 21:36:44.544562300 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_delegate.cc
 @@ -21,7 +21,7 @@
  #include "chromeos/ui/frame/desks/move_to_desks_menu_model.h"

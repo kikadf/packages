@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/files/important_file_writer_cleaner.cc.orig	2024-03-19 22:14:27.069526000 +0000
+--- base/files/important_file_writer_cleaner.cc.orig	2024-03-26 21:36:30.111248500 +0000
 +++ base/files/important_file_writer_cleaner.cc
 @@ -25,7 +25,8 @@ namespace base {
  namespace {

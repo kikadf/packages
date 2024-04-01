@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/zlib/cpu_features.c.orig	2024-03-19 22:15:25.350725400 +0000
+--- third_party/zlib/cpu_features.c.orig	2024-03-26 21:38:03.471747600 +0000
 +++ third_party/zlib/cpu_features.c
 @@ -35,7 +35,8 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 
  

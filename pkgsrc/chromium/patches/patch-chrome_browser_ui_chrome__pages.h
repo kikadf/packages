@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/chrome_pages.h.orig	2024-03-19 22:14:33.874132900 +0000
+--- chrome/browser/ui/chrome_pages.h.orig	2024-03-26 21:36:42.180347200 +0000
 +++ chrome/browser/ui/chrome_pages.h
 @@ -38,7 +38,7 @@ enum class ConsentLevel;
  }  // namespace signin

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/trace_event/malloc_dump_provider.cc.orig	2024-03-19 22:14:27.297546100 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2024-03-26 21:36:30.395274400 +0000
 +++ base/trace_event/malloc_dump_provider.cc
 @@ -25,6 +25,8 @@
  

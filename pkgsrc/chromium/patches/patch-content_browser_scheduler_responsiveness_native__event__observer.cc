@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/scheduler/responsiveness/native_event_observer.cc.orig	2024-03-19 22:14:43.086954800 +0000
+--- content/browser/scheduler/responsiveness/native_event_observer.cc.orig	2024-03-26 21:36:58.617843600 +0000
 +++ content/browser/scheduler/responsiveness/native_event_observer.cc
 @@ -15,7 +15,7 @@
  

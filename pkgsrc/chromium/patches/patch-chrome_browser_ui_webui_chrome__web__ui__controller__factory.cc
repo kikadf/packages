@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-03-19 22:14:34.502189000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-03-26 21:36:47.036789400 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
 @@ -200,7 +200,7 @@
  #include "chrome/browser/ui/webui/chromeos/chrome_url_disabled/chrome_url_disabled_ui.h"

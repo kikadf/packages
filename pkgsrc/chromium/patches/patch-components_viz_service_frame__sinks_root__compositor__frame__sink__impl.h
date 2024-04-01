@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2024-03-19 22:14:42.218877300 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2024-03-26 21:36:57.581749200 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
 @@ -210,7 +210,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
    // to actually unref.

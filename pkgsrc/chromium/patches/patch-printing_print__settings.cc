@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- printing/print_settings.cc.orig	2024-03-19 22:14:51.591713700 +0000
+--- printing/print_settings.cc.orig	2024-03-26 21:37:07.658666600 +0000
 +++ printing/print_settings.cc
 @@ -320,7 +320,7 @@ PrintSettings& PrintSettings::operator=(
  #endif

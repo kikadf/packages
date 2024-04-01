@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/linux_util.cc.orig	2024-03-19 22:14:27.093528000 +0000
+--- base/linux_util.cc.orig	2024-03-26 21:36:30.131250400 +0000
 +++ base/linux_util.cc
 @@ -15,6 +15,7 @@
  

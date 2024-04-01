@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2024-03-19 22:14:31.013877900 +0000
+--- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2024-03-26 21:36:37.771946000 +0000
 +++ chrome/browser/download/chrome_download_manager_delegate.cc
 @@ -1674,7 +1674,7 @@ void ChromeDownloadManagerDelegate::OnDo
  bool ChromeDownloadManagerDelegate::IsOpenInBrowserPreferredForFile(

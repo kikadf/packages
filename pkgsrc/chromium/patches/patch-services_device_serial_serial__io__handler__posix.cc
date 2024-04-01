@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- services/device/serial/serial_io_handler_posix.cc.orig	2024-03-19 22:14:51.971747400 +0000
+--- services/device/serial/serial_io_handler_posix.cc.orig	2024-03-26 21:37:08.190715000 +0000
 +++ services/device/serial/serial_io_handler_posix.cc
 @@ -68,7 +68,7 @@ bool BitrateToSpeedConstant(int bitrate,
      BITRATE_TO_SPEED_CASE(9600)

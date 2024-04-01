@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/headless/headless_surface_factory.cc.orig	2024-03-19 22:15:27.494916700 +0000
+--- ui/ozone/platform/headless/headless_surface_factory.cc.orig	2024-03-26 21:38:05.563938100 +0000
 +++ ui/ozone/platform/headless/headless_surface_factory.cc
 @@ -34,7 +34,7 @@
  #include "ui/ozone/platform/headless/headless_window_manager.h"

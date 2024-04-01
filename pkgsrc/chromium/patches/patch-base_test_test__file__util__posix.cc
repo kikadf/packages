@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/test/test_file_util_posix.cc.orig	2024-03-19 22:14:27.257542600 +0000
+--- base/test/test_file_util_posix.cc.orig	2024-03-26 21:36:30.355270600 +0000
 +++ base/test/test_file_util_posix.cc
 @@ -89,7 +89,7 @@ void SyncPageCacheToDisk() {
  }

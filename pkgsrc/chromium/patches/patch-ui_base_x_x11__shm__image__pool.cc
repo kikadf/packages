@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_shm_image_pool.cc.orig	2024-03-19 22:15:27.006873100 +0000
+--- ui/base/x/x11_shm_image_pool.cc.orig	2024-03-26 21:38:04.983885300 +0000
 +++ ui/base/x/x11_shm_image_pool.cc
 @@ -16,6 +16,7 @@
  #include "base/functional/callback.h"

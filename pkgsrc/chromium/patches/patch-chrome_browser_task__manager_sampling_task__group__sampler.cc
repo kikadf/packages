@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2024-03-19 22:14:33.294081200 +0000
+--- chrome/browser/task_manager/sampling/task_group_sampler.cc.orig	2024-03-26 21:36:40.856226700 +0000
 +++ chrome/browser/task_manager/sampling/task_group_sampler.cc
 @@ -45,7 +45,7 @@ TaskGroupSampler::TaskGroupSampler(
      const OnCpuRefreshCallback& on_cpu_refresh,

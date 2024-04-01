@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/mouse_cursor_monitor_proxy.cc.orig	2024-03-19 22:14:51.735726400 +0000
+--- remoting/host/mouse_cursor_monitor_proxy.cc.orig	2024-03-26 21:37:07.778677700 +0000
 +++ remoting/host/mouse_cursor_monitor_proxy.cc
 @@ -73,7 +73,7 @@ void MouseCursorMonitorProxy::Core::Crea
  

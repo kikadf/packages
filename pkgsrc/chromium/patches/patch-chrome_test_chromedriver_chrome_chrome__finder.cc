@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2024-03-19 22:14:35.086241000 +0000
+--- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2024-03-26 21:36:48.668938000 +0000
 +++ chrome/test/chromedriver/chrome/chrome_finder.cc
 @@ -58,7 +58,7 @@ void GetApplicationDirs(std::vector<base
          installation_locations[i].Append(L"Chromium\\Application"));

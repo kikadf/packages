@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2024-03-19 22:15:27.494916700 +0000
+--- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2024-03-26 21:38:05.563938100 +0000
 +++ ui/ozone/platform/wayland/common/wayland_util.cc
 @@ -335,7 +335,7 @@ void TransformToWlArray(
  }

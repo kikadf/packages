@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/base/clipboard/clipboard_non_backed.cc.orig	2024-03-19 22:15:26.930866200 +0000
+--- ui/base/clipboard/clipboard_non_backed.cc.orig	2024-03-26 21:38:04.903878000 +0000
 +++ ui/base/clipboard/clipboard_non_backed.cc
 @@ -460,7 +460,7 @@ ClipboardNonBacked::ClipboardNonBacked()
    // so create internal clipboards for platform supported clipboard buffers.

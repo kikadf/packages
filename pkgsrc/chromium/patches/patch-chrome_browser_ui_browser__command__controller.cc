@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2024-03-19 22:14:33.866132300 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2024-03-26 21:36:42.144343900 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
 @@ -121,7 +121,7 @@
  #include "components/user_manager/user_manager.h"

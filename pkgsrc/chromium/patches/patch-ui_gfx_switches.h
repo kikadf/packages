@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/gfx/switches.h.orig	2024-03-19 22:15:27.362904800 +0000
+--- ui/gfx/switches.h.orig	2024-03-26 21:38:05.459928500 +0000
 +++ ui/gfx/switches.h
 @@ -18,7 +18,7 @@ GFX_SWITCHES_EXPORT extern const char kE
  GFX_SWITCHES_EXPORT extern const char kForcePrefersReducedMotion[];

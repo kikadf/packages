@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-03-19 22:14:40.442719000 +0000
+--- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-03-26 21:36:55.081521700 +0000
 +++ components/search_engines/search_engine_choice/search_engine_choice_service.cc
 @@ -428,7 +428,7 @@ void SearchEngineChoiceService::Preproce
  

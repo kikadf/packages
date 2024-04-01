@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/fontconfig/include/config.h.orig	2024-03-19 22:15:14.445752400 +0000
+--- third_party/fontconfig/include/config.h.orig	2024-03-26 21:37:57.627215600 +0000
 +++ third_party/fontconfig/include/config.h
 @@ -13,7 +13,7 @@
  

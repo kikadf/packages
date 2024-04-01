@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/sandbox_host_linux.cc.orig	2024-03-19 22:14:43.082954400 +0000
+--- content/browser/sandbox_host_linux.cc.orig	2024-03-26 21:36:58.613843200 +0000
 +++ content/browser/sandbox_host_linux.cc
 @@ -45,6 +45,7 @@ void SandboxHostLinux::Init() {
    // Instead, it replies on a temporary socket provided by the caller.

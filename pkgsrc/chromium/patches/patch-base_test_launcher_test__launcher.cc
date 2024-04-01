@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/test/launcher/test_launcher.cc.orig	2024-03-19 22:14:27.249542000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2024-03-26 21:36:30.343269600 +0000
 +++ base/test/launcher/test_launcher.cc
 @@ -69,6 +69,7 @@
  #include "testing/gtest/include/gtest/gtest.h"

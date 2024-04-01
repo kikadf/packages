@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- v8/src/trap-handler/trap-handler.h.orig	2024-03-19 22:16:44.229762300 +0000
+--- v8/src/trap-handler/trap-handler.h.orig	2024-03-26 21:39:30.443665000 +0000
 +++ v8/src/trap-handler/trap-handler.h
 @@ -20,7 +20,7 @@ namespace trap_handler {
  // X64 on Linux, Windows, MacOS, FreeBSD.

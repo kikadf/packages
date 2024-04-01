@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/sync/sync_service_util.cc.orig	2024-03-19 22:14:33.198072700 +0000
+--- chrome/browser/sync/sync_service_util.cc.orig	2024-03-26 21:36:40.752217300 +0000
 +++ chrome/browser/sync/sync_service_util.cc
 @@ -9,7 +9,7 @@
  #include "components/sync/base/features.h"

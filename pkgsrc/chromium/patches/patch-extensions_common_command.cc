@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- extensions/common/command.cc.orig	2024-03-19 22:14:45.127137000 +0000
+--- extensions/common/command.cc.orig	2024-03-26 21:37:00.794041900 +0000
 +++ extensions/common/command.cc
 @@ -283,7 +283,7 @@ std::string Command::CommandPlatform() {
    return values::kKeybindingPlatformMac;

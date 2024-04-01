@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/BUILD.gn.orig	2024-03-19 22:14:55.860094300 +0000
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2024-03-26 21:37:13.391188600 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
 @@ -1939,7 +1939,7 @@ static_library("test_support") {
    ]

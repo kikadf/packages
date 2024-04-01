@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc.orig	2024-03-19 22:14:33.906135800 +0000
+--- chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc.orig	2024-03-26 21:36:42.208349700 +0000
 +++ chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc
 @@ -19,7 +19,7 @@
  

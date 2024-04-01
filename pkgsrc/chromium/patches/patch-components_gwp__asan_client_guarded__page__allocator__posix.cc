@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/gwp_asan/client/guarded_page_allocator_posix.cc.orig	2024-03-19 22:14:38.886580200 +0000
+--- components/gwp_asan/client/guarded_page_allocator_posix.cc.orig	2024-03-26 21:36:53.057337500 +0000
 +++ components/gwp_asan/client/guarded_page_allocator_posix.cc
 @@ -35,8 +35,9 @@ void GuardedPageAllocator::MarkPageInacc
    // mmap() a PROT_NONE page over the address to release it to the system, if

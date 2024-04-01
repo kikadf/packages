@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2024-03-19 22:14:32.013967000 +0000
+--- chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc.orig	2024-03-26 21:36:39.044061700 +0000
 +++ chrome/browser/profiles/chrome_browser_main_extra_parts_profiles.cc
 @@ -317,7 +317,7 @@
  #include "chromeos/constants/chromeos_features.h"

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chromecast/media/base/default_monotonic_clock.cc.orig	2024-03-19 22:14:36.966408700 +0000
+--- chromecast/media/base/default_monotonic_clock.cc.orig	2024-03-26 21:36:50.981148500 +0000
 +++ chromecast/media/base/default_monotonic_clock.cc
 @@ -11,7 +11,7 @@
  #include "base/time/time.h"

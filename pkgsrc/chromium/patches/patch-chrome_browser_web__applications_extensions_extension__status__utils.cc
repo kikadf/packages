@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-03-19 22:14:34.682205000 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-03-26 21:36:47.988876000 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -26,7 +26,7 @@ namespace {
  const char* g_preinstalled_app_for_testing = nullptr;

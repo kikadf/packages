@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- sandbox/policy/sandbox_type.cc.orig	2024-03-19 22:14:51.867738200 +0000
+--- sandbox/policy/sandbox_type.cc.orig	2024-03-26 21:37:08.042701700 +0000
 +++ sandbox/policy/sandbox_type.cc
 @@ -38,7 +38,7 @@ bool IsUnsandboxedSandboxType(Sandbox sa
  #endif

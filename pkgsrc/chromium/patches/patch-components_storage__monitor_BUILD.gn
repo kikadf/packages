@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/storage_monitor/BUILD.gn.orig	2024-03-19 22:14:40.666739000 +0000
+--- components/storage_monitor/BUILD.gn.orig	2024-03-26 21:36:55.449555200 +0000
 +++ components/storage_monitor/BUILD.gn
 @@ -77,7 +77,7 @@ static_library("storage_monitor") {
        deps += [ "//services/device/public/mojom" ]

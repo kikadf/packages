@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/feed/core/v2/test/proto_printer.cc.orig	2024-03-19 22:14:38.834575400 +0000
+--- components/feed/core/v2/test/proto_printer.cc.orig	2024-03-26 21:36:53.009333100 +0000
 +++ components/feed/core/v2/test/proto_printer.cc
 @@ -158,8 +158,8 @@ class TextProtoPrinter {
    }

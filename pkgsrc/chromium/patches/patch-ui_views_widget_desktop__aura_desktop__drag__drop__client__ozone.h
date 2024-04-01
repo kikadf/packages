@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.h.orig	2024-03-19 22:15:27.738938300 +0000
+--- ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.h.orig	2024-03-26 21:38:05.803959800 +0000
 +++ ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone.h
 @@ -65,7 +65,7 @@ class VIEWS_EXPORT DesktopDragDropClient
      // The offset of |drag_widget_| relative to the mouse position.

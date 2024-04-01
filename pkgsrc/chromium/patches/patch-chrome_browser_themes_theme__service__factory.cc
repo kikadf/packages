@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/themes/theme_service_factory.cc.orig	2024-03-19 22:14:33.302081800 +0000
+--- chrome/browser/themes/theme_service_factory.cc.orig	2024-03-26 21:36:40.868227700 +0000
 +++ chrome/browser/themes/theme_service_factory.cc
 @@ -27,11 +27,11 @@
  

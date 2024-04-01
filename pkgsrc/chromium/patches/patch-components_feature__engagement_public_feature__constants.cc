@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2024-03-19 22:14:38.810573300 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2024-03-26 21:36:52.989331200 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -18,7 +18,7 @@ BASE_FEATURE(kIPHDemoMode, "IPH_DemoMode
  BASE_FEATURE(kIPHDummyFeature, "IPH_Dummy", base::FEATURE_DISABLED_BY_DEFAULT);

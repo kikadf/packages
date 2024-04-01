@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/public/browser/zygote_host/zygote_host_linux.h.orig	2024-03-19 22:14:43.619002300 +0000
+--- content/public/browser/zygote_host/zygote_host_linux.h.orig	2024-03-26 21:36:58.929872000 +0000
 +++ content/public/browser/zygote_host/zygote_host_linux.h
 @@ -35,11 +35,13 @@ class ZygoteHost {
    // after the first render has been forked.

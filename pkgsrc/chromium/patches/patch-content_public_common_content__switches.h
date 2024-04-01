@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/public/common/content_switches.h.orig	2024-03-19 22:14:43.627003000 +0000
+--- content/public/common/content_switches.h.orig	2024-03-26 21:36:58.933872500 +0000
 +++ content/public/common/content_switches.h
 @@ -115,6 +115,7 @@ CONTENT_EXPORT extern const char kEnable
  CONTENT_EXPORT extern const char kEnableIsolatedWebAppsInRenderer[];

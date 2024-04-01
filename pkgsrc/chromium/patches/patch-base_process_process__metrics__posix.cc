@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_posix.cc.orig	2024-03-19 22:14:27.153533500 +0000
+--- base/process/process_metrics_posix.cc.orig	2024-03-26 21:36:30.227259000 +0000
 +++ base/process/process_metrics_posix.cc
 @@ -21,6 +21,8 @@
  

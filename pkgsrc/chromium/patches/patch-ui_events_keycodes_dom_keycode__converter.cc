@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/events/keycodes/dom/keycode_converter.cc.orig	2024-03-19 22:15:27.174888100 +0000
+--- ui/events/keycodes/dom/keycode_converter.cc.orig	2024-03-26 21:38:05.243909000 +0000
 +++ ui/events/keycodes/dom/keycode_converter.cc
 @@ -11,7 +11,7 @@
  #include "ui/events/keycodes/dom/dom_code.h"

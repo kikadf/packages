@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/pepper/pepper_file_io_host.cc.orig	2024-03-19 22:14:42.986945900 +0000
+--- content/browser/renderer_host/pepper/pepper_file_io_host.cc.orig	2024-03-26 21:36:58.525835300 +0000
 +++ content/browser/renderer_host/pepper/pepper_file_io_host.cc
 @@ -462,7 +462,7 @@ void PepperFileIOHost::OnLocalFileOpened
      ppapi::host::ReplyMessageContext reply_context,

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- net/base/sockaddr_util_posix_unittest.cc.orig	2024-03-19 22:14:50.471613600 +0000
+--- net/base/sockaddr_util_posix_unittest.cc.orig	2024-03-26 21:37:06.234537100 +0000
 +++ net/base/sockaddr_util_posix_unittest.cc
 @@ -83,7 +83,8 @@ TEST(FillUnixAddressTest, AbstractLinuxA
    size_t path_max = MaxPathLength(&storage);

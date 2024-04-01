@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ipc/ipc_channel_common.cc.orig	2024-03-19 22:14:48.903473900 +0000
+--- ipc/ipc_channel_common.cc.orig	2024-03-26 21:37:03.866321600 +0000
 +++ ipc/ipc_channel_common.cc
 @@ -10,7 +10,7 @@
  

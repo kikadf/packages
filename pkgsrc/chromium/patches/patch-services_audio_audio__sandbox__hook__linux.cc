@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- services/audio/audio_sandbox_hook_linux.cc.orig	2024-03-19 22:14:51.899741200 +0000
+--- services/audio/audio_sandbox_hook_linux.cc.orig	2024-03-26 21:37:08.094706300 +0000
 +++ services/audio/audio_sandbox_hook_linux.cc
 @@ -144,6 +144,7 @@ void AddPulseAudioFilePermissions(
  }

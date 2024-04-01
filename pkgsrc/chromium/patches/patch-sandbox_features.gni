@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- sandbox/features.gni.orig	2024-03-19 22:14:51.839735700 +0000
+--- sandbox/features.gni.orig	2024-03-26 21:37:08.002698000 +0000
 +++ sandbox/features.gni
 @@ -6,7 +6,7 @@
  # currently.

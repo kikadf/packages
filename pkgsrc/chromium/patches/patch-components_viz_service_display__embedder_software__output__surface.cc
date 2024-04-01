@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-03-19 22:14:42.214877100 +0000
+--- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-03-26 21:36:57.577749000 +0000
 +++ components/viz/service/display_embedder/software_output_surface.cc
 @@ -124,7 +124,7 @@ void SoftwareOutputSurface::SwapBuffersC
        now.SnappedToNextTick(refresh_timebase_, refresh_interval_) - now;

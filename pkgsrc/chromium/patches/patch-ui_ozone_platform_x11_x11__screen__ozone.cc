@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2024-03-19 22:15:27.534920200 +0000
+--- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2024-03-26 21:38:05.603941700 +0000
 +++ ui/ozone/platform/x11/x11_screen_ozone.cc
 @@ -22,7 +22,7 @@
  #include "ui/ozone/platform/x11/x11_window.h"

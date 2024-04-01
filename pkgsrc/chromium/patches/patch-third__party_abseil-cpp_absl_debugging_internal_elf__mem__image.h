@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2024-03-19 22:14:52.663809300 +0000
+--- third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h.orig	2024-03-26 21:37:10.038883400 +0000
 +++ third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h
 @@ -34,7 +34,8 @@
  #if defined(__ELF__) && !defined(__OpenBSD__) && !defined(__QNX__) && \

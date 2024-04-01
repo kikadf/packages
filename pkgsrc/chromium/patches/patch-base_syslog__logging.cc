@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/syslog_logging.cc.orig	2024-03-19 22:14:27.185536100 +0000
+--- base/syslog_logging.cc.orig	2024-03-26 21:36:30.267262700 +0000
 +++ base/syslog_logging.cc
 @@ -17,7 +17,7 @@
  #include "base/strings/string_util.h"

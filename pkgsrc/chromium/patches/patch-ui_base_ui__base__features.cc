@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/base/ui_base_features.cc.orig	2024-03-19 22:15:26.994872000 +0000
+--- ui/base/ui_base_features.cc.orig	2024-03-26 21:38:04.975884700 +0000
 +++ ui/base/ui_base_features.cc
 @@ -223,7 +223,7 @@ BASE_FEATURE(kExperimentalFlingAnimation
               "ExperimentalFlingAnimation",

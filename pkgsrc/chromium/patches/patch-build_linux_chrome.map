@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- build/linux/chrome.map.orig	2024-03-19 22:14:27.437558700 +0000
+--- build/linux/chrome.map.orig	2024-03-26 21:36:30.539287300 +0000
 +++ build/linux/chrome.map
 @@ -20,6 +20,10 @@ global:
    # Program entry point.

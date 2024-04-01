@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/common/webui_url_constants.h.orig	2024-03-19 22:14:34.858220800 +0000
+--- chrome/common/webui_url_constants.h.orig	2024-03-26 21:36:48.420915400 +0000
 +++ chrome/common/webui_url_constants.h
 @@ -432,24 +432,24 @@ extern const char kOsUISystemURL[];
  extern const char kOsUIVersionURL[];

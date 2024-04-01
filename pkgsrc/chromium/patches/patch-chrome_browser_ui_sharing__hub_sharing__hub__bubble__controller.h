@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h.orig	2024-03-19 22:14:33.990143300 +0000
+--- chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h.orig	2024-03-26 21:36:42.708395200 +0000
 +++ chrome/browser/ui/sharing_hub/sharing_hub_bubble_controller.h
 @@ -37,7 +37,7 @@ class SharingHubBubbleController {
    virtual bool ShouldOfferOmniboxIcon() = 0;

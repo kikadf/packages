@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/strings/translations/app_locale_settings_ko.xtb.orig	2024-03-19 22:15:27.562922700 +0000
+--- ui/strings/translations/app_locale_settings_ko.xtb.orig	2024-03-26 21:38:05.631944200 +0000
 +++ ui/strings/translations/app_locale_settings_ko.xtb
 @@ -12,7 +12,7 @@
  <if expr="is_ios">

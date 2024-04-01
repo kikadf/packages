@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/test/test_browser_ui.cc.orig	2024-03-19 22:14:34.042147900 +0000
+--- chrome/browser/ui/test/test_browser_ui.cc.orig	2024-03-26 21:36:43.328451600 +0000
 +++ chrome/browser/ui/test/test_browser_ui.cc
 @@ -22,7 +22,7 @@
  

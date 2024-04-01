@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/x11/vulkan_implementation_x11.cc.orig	2024-03-19 22:15:27.534920200 +0000
+--- ui/ozone/platform/x11/vulkan_implementation_x11.cc.orig	2024-03-26 21:38:05.603941700 +0000
 +++ ui/ozone/platform/x11/vulkan_implementation_x11.cc
 @@ -59,7 +59,11 @@ bool VulkanImplementationX11::Initialize
  

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- tools/memory/partition_allocator/inspect_utils.h.orig	2024-03-19 22:15:25.598747500 +0000
+--- tools/memory/partition_allocator/inspect_utils.h.orig	2024-03-26 21:38:03.803778000 +0000
 +++ tools/memory/partition_allocator/inspect_utils.h
 @@ -61,7 +61,7 @@ class RemoteProcessMemoryReader {
    const pid_t pid_;

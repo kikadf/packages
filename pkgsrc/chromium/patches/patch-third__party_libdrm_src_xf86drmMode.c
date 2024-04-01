@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/libdrm/src/xf86drmMode.c.orig	2024-03-19 22:16:11.418835200 +0000
+--- third_party/libdrm/src/xf86drmMode.c.orig	2024-03-26 21:38:58.980800900 +0000
 +++ third_party/libdrm/src/xf86drmMode.c
 @@ -966,7 +966,7 @@ drm_public int drmCheckModesettingSuppor
  	}

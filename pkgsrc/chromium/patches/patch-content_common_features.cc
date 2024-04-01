@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/common/features.cc.orig	2024-03-19 22:14:43.314975300 +0000
+--- content/common/features.cc.orig	2024-03-26 21:36:58.813861400 +0000
 +++ content/common/features.cc
 @@ -166,7 +166,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO
               base::FEATURE_DISABLED_BY_DEFAULT);

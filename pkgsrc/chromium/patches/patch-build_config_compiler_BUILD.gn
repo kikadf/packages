@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- build/config/compiler/BUILD.gn.orig	2024-03-19 22:14:27.409556200 +0000
+--- build/config/compiler/BUILD.gn.orig	2024-03-26 21:36:30.511284800 +0000
 +++ build/config/compiler/BUILD.gn
 @@ -204,7 +204,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of

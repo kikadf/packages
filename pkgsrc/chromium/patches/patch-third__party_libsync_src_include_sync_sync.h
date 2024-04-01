@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/libsync/src/include/sync/sync.h.orig	2024-03-19 22:15:44.932472200 +0000
+--- third_party/libsync/src/include/sync/sync.h.orig	2024-03-26 21:38:28.942066200 +0000
 +++ third_party/libsync/src/include/sync/sync.h
 @@ -22,7 +22,9 @@
  #include <sys/cdefs.h>

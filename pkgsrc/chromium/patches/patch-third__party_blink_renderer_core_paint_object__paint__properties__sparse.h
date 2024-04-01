@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/paint/object_paint_properties_sparse.h.orig	2024-03-19 22:14:55.224037600 +0000
+--- third_party/blink/renderer/core/paint/object_paint_properties_sparse.h.orig	2024-03-26 21:37:12.467104400 +0000
 +++ third_party/blink/renderer/core/paint/object_paint_properties_sparse.h
 @@ -272,8 +272,8 @@ class CORE_EXPORT ObjectPaintPropertiesS
        NodeList& nodes,

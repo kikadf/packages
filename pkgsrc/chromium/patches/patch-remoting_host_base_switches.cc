@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/base/switches.cc.orig	2024-03-19 22:14:51.643718200 +0000
+--- remoting/host/base/switches.cc.orig	2024-03-26 21:37:07.710671400 +0000
 +++ remoting/host/base/switches.cc
 @@ -23,13 +23,13 @@ const char kProcessTypeEvaluateCapabilit
  const char kProcessTypeFileChooser[] = "file_chooser";

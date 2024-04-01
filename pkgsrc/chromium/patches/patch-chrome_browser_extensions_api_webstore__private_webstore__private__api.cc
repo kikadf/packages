@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/webstore_private/webstore_private_api.cc.orig	2024-03-19 22:14:31.249899000 +0000
+--- chrome/browser/extensions/api/webstore_private/webstore_private_api.cc.orig	2024-03-26 21:36:38.047971000 +0000
 +++ chrome/browser/extensions/api/webstore_private/webstore_private_api.cc
 @@ -904,7 +904,7 @@ void WebstorePrivateBeginInstallWithMani
          RequestExtensionApproval(contents);

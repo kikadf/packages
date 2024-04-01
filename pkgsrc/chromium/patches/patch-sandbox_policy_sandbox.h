@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- sandbox/policy/sandbox.h.orig	2024-03-19 22:14:51.867738200 +0000
+--- sandbox/policy/sandbox.h.orig	2024-03-26 21:37:08.042701700 +0000
 +++ sandbox/policy/sandbox.h
 @@ -12,6 +12,14 @@
  #include "sandbox/policy/linux/sandbox_linux.h"

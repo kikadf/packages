@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/chromium/scripts/robo_lib/config.py.orig	2024-03-19 22:15:37.071771000 +0000
+--- third_party/ffmpeg/chromium/scripts/robo_lib/config.py.orig	2024-03-26 21:38:13.436654800 +0000
 +++ third_party/ffmpeg/chromium/scripts/robo_lib/config.py
 @@ -49,18 +49,12 @@ class RoboConfiguration:
      self._llvm_path = os.path.join(self.chrome_src(), "third_party",

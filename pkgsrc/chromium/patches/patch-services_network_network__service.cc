@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- services/network/network_service.cc.orig	2024-03-19 22:14:52.023752200 +0000
+--- services/network/network_service.cc.orig	2024-03-26 21:37:08.694761000 +0000
 +++ services/network/network_service.cc
 @@ -97,7 +97,7 @@
  #include "third_party/boringssl/src/include/openssl/cpu.h"

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2024-03-19 22:14:51.739726800 +0000
+--- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2024-03-26 21:37:07.806680200 +0000
 +++ remoting/host/remote_open_url/url_forwarder_configurator.cc
 @@ -12,7 +12,7 @@ UrlForwarderConfigurator::UrlForwarderCo
  

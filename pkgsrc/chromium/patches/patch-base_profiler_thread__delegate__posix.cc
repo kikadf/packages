@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/profiler/thread_delegate_posix.cc.orig	2024-03-19 22:14:27.165534500 +0000
+--- base/profiler/thread_delegate_posix.cc.orig	2024-03-26 21:36:30.243260400 +0000
 +++ base/profiler/thread_delegate_posix.cc
 @@ -13,7 +13,7 @@
  #include "build/build_config.h"

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/common/user_agent.cc.orig	2024-03-19 22:14:43.334977000 +0000
+--- content/common/user_agent.cc.orig	2024-03-26 21:36:58.833863300 +0000
 +++ content/common/user_agent.cc
 @@ -45,7 +45,7 @@ std::string GetUserAgentPlatform() {
    return "";

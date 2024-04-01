@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/webrtc/system_wrappers/BUILD.gn.orig	2024-03-19 22:16:28.676375000 +0000
+--- third_party/webrtc/system_wrappers/BUILD.gn.orig	2024-03-26 21:39:30.063630300 +0000
 +++ third_party/webrtc/system_wrappers/BUILD.gn
 @@ -64,8 +64,6 @@ rtc_library("system_wrappers") {
      if (!build_with_chromium) {

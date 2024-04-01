@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2024-03-19 22:14:42.542906300 +0000
+--- content/browser/file_system_access/file_system_access_local_path_watcher.cc.orig	2024-03-26 21:36:58.101796600 +0000
 +++ content/browser/file_system_access/file_system_access_local_path_watcher.cc
 @@ -63,7 +63,7 @@ void FileSystemAccessLocalPathWatcher::I
    base::FilePathWatcher::WatchOptions watch_options {

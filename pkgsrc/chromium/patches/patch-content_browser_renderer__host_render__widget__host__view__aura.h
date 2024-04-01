@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.h.orig	2024-03-19 22:14:43.022949200 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.h.orig	2024-03-26 21:36:58.569839200 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.h
 @@ -258,7 +258,7 @@ class CONTENT_EXPORT RenderWidgetHostVie
    ukm::SourceId GetClientSourceForMetrics() const override;

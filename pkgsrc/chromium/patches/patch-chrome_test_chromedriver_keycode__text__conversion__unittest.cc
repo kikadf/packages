@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/test/chromedriver/keycode_text_conversion_unittest.cc.orig	2024-03-19 22:14:35.102242500 +0000
+--- chrome/test/chromedriver/keycode_text_conversion_unittest.cc.orig	2024-03-26 21:36:48.688939800 +0000
 +++ chrome/test/chromedriver/keycode_text_conversion_unittest.cc
 @@ -67,7 +67,7 @@ std::string ConvertKeyCodeToTextNoError(
  

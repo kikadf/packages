@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- sandbox/BUILD.gn.orig	2024-03-19 22:14:51.839735700 +0000
+--- sandbox/BUILD.gn.orig	2024-03-26 21:37:08.002698000 +0000
 +++ sandbox/BUILD.gn
 @@ -49,7 +49,7 @@ group("sandbox") {
        "//sandbox/mac:system_services",

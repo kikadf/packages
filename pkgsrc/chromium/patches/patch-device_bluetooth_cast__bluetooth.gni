@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- device/bluetooth/cast_bluetooth.gni.orig	2024-03-19 22:14:44.507081500 +0000
+--- device/bluetooth/cast_bluetooth.gni.orig	2024-03-26 21:36:59.913961600 +0000
 +++ device/bluetooth/cast_bluetooth.gni
 @@ -2,5 +2,5 @@ import("//build/config/features.gni")
  

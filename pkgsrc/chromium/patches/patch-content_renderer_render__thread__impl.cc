@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/renderer/render_thread_impl.cc.orig	2024-03-19 22:14:43.695009000 +0000
+--- content/renderer/render_thread_impl.cc.orig	2024-03-26 21:36:59.025880800 +0000
 +++ content/renderer/render_thread_impl.cc
 @@ -203,6 +203,8 @@
  

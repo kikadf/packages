@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-03-19 22:14:31.833951000 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-03-26 21:36:38.780037600 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
 @@ -671,7 +671,7 @@ void ChromePasswordManagerClient::Notify
  }

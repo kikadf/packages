@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/search_engine_choice/search_engine_choice_client_side_trial.cc.orig	2024-03-19 22:14:33.042058700 +0000
+--- chrome/browser/search_engine_choice/search_engine_choice_client_side_trial.cc.orig	2024-03-26 21:36:40.540197800 +0000
 +++ chrome/browser/search_engine_choice/search_engine_choice_client_side_trial.cc
 @@ -132,7 +132,7 @@ void RegisterLocalStatePrefs(PrefRegistr
  void SetUpIfNeeded(const base::FieldTrial::EntropyProvider& entropy_provider,

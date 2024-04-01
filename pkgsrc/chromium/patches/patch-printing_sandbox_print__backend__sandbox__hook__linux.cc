@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2024-03-19 22:14:51.595713900 +0000
+--- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2024-03-26 21:37:07.662667000 +0000
 +++ printing/sandbox/print_backend_sandbox_hook_linux.cc
 @@ -10,20 +10,27 @@
  #include "base/path_service.h"

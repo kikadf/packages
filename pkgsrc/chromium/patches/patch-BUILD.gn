@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- BUILD.gn.orig	2024-03-19 22:14:25.237362400 +0000
+--- BUILD.gn.orig	2024-03-26 21:36:26.830949800 +0000
 +++ BUILD.gn
 @@ -64,7 +64,7 @@ declare_args() {
    root_extra_deps = []

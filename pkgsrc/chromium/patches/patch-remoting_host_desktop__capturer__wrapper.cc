@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/desktop_capturer_wrapper.cc.orig	2024-03-19 22:14:51.651718900 +0000
+--- remoting/host/desktop_capturer_wrapper.cc.orig	2024-03-26 21:37:07.722672500 +0000
 +++ remoting/host/desktop_capturer_wrapper.cc
 @@ -13,7 +13,7 @@
  #include "third_party/webrtc/modules/desktop_capture/desktop_capturer.h"

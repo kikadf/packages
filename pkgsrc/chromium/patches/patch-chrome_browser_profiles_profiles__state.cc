@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/profiles/profiles_state.cc.orig	2024-03-19 22:14:32.033968700 +0000
+--- chrome/browser/profiles/profiles_state.cc.orig	2024-03-26 21:36:39.068064000 +0000
 +++ chrome/browser/profiles/profiles_state.cc
 @@ -195,7 +195,7 @@ bool IsGuestModeRequested(const base::Co
                            PrefService* local_state,

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/posix/unix_domain_socket.cc.orig	2024-03-19 22:14:27.145532600 +0000
+--- base/posix/unix_domain_socket.cc.orig	2024-03-26 21:36:30.219258300 +0000
 +++ base/posix/unix_domain_socket.cc
 @@ -51,7 +51,7 @@ bool CreateSocketPair(ScopedFD* one, Sco
  

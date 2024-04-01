@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/public/common/content_features.cc.orig	2024-03-19 22:14:43.623002800 +0000
+--- content/public/common/content_features.cc.orig	2024-03-26 21:36:58.929872000 +0000
 +++ content/public/common/content_features.cc
 @@ -32,7 +32,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
               "AudioServiceOutOfProcess",

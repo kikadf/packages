@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/viz/service/display_embedder/software_output_surface.h.orig	2024-03-19 22:14:42.214877100 +0000
+--- components/viz/service/display_embedder/software_output_surface.h.orig	2024-03-26 21:36:57.577749000 +0000
 +++ components/viz/service/display_embedder/software_output_surface.h
 @@ -47,7 +47,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
    gfx::OverlayTransform GetDisplayTransform() override;

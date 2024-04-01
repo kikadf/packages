@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-03-19 22:16:21.567740700 +0000
+--- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-03-26 21:39:09.429752000 +0000
 +++ third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 @@ -18,7 +18,7 @@
  #include "third_party/base/check.h"

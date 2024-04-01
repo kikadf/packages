@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- services/network/network_sandbox_hook_linux.h.orig	2024-03-19 22:14:52.019751800 +0000
+--- services/network/network_sandbox_hook_linux.h.orig	2024-03-26 21:37:08.666758500 +0000
 +++ services/network/network_sandbox_hook_linux.h
 @@ -6,7 +6,11 @@
  #define SERVICES_NETWORK_NETWORK_SANDBOX_HOOK_LINUX_H_

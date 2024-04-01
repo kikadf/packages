@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/debug/stack_trace.cc.orig	2024-03-19 22:14:27.057525000 +0000
+--- base/debug/stack_trace.cc.orig	2024-03-26 21:36:30.075245100 +0000
 +++ base/debug/stack_trace.cc
 @@ -266,7 +266,9 @@ void StackTrace::Print() const {
  }

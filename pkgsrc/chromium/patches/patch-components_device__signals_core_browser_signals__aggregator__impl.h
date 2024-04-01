@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/device_signals/core/browser/signals_aggregator_impl.h.orig	2024-03-19 22:14:38.598554400 +0000
+--- components/device_signals/core/browser/signals_aggregator_impl.h.orig	2024-03-26 21:36:52.761310600 +0000
 +++ components/device_signals/core/browser/signals_aggregator_impl.h
 @@ -29,7 +29,7 @@ class SignalsAggregatorImpl : public Sig
    ~SignalsAggregatorImpl() override;

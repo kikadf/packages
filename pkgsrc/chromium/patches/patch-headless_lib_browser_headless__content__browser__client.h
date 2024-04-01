@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- headless/lib/browser/headless_content_browser_client.h.orig	2024-03-19 22:14:45.731190700 +0000
+--- headless/lib/browser/headless_content_browser_client.h.orig	2024-03-26 21:37:01.238082200 +0000
 +++ headless/lib/browser/headless_content_browser_client.h
 @@ -45,7 +45,7 @@ class HeadlessContentBrowserClient : pub
    CreateDevToolsManagerDelegate() override;

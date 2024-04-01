@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/perfetto/include/perfetto/ext/base/event_fd.h.orig	2024-03-19 22:16:14.843140600 +0000
+--- third_party/perfetto/include/perfetto/ext/base/event_fd.h.orig	2024-03-26 21:38:57.564672000 +0000
 +++ third_party/perfetto/include/perfetto/ext/base/event_fd.h
 @@ -55,6 +55,8 @@ class EventFd {
    // On Mac and other non-Linux UNIX platforms a pipe-based fallback is used.

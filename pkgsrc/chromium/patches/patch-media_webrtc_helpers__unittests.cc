@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- media/webrtc/helpers_unittests.cc.orig	2024-03-19 22:14:49.671542200 +0000
+--- media/webrtc/helpers_unittests.cc.orig	2024-03-26 21:37:05.318453600 +0000
 +++ media/webrtc/helpers_unittests.cc
 @@ -40,7 +40,7 @@ TEST(CreateWebRtcAudioProcessingModuleTe
    EXPECT_TRUE(config.echo_canceller.enabled);

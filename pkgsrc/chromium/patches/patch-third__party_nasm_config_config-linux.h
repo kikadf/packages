@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/nasm/config/config-linux.h.orig	2024-03-19 22:15:40.116042600 +0000
+--- third_party/nasm/config/config-linux.h.orig	2024-03-26 21:38:15.696860600 +0000
 +++ third_party/nasm/config/config-linux.h
 @@ -160,7 +160,7 @@
  

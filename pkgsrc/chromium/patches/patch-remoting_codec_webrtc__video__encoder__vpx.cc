@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/codec/webrtc_video_encoder_vpx.cc.orig	2024-03-19 22:14:51.639717800 +0000
+--- remoting/codec/webrtc_video_encoder_vpx.cc.orig	2024-03-26 21:37:07.706671000 +0000
 +++ remoting/codec/webrtc_video_encoder_vpx.cc
 @@ -88,7 +88,7 @@ void SetVp8CodecParameters(vpx_codec_enc
                             const webrtc::DesktopSize& size) {

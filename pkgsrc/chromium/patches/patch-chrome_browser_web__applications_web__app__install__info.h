@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/web_app_install_info.h.orig	2024-03-19 22:14:34.738210000 +0000
+--- chrome/browser/web_applications/web_app_install_info.h.orig	2024-03-26 21:36:48.148890500 +0000
 +++ chrome/browser/web_applications/web_app_install_info.h
 @@ -35,7 +35,7 @@
  #include "url/gurl.h"

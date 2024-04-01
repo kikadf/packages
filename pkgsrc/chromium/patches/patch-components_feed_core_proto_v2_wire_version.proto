@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/feed/core/proto/v2/wire/version.proto.orig	2024-03-19 22:14:38.818574000 +0000
+--- components/feed/core/proto/v2/wire/version.proto.orig	2024-03-26 21:36:52.993331700 +0000
 +++ components/feed/core/proto/v2/wire/version.proto
 @@ -25,8 +25,8 @@ message Version {
      BETA = 3;

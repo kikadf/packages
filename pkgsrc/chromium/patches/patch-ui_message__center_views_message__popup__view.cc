@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/message_center/views/message_popup_view.cc.orig	2024-03-19 22:15:27.430910800 +0000
+--- ui/message_center/views/message_popup_view.cc.orig	2024-03-26 21:38:05.531935200 +0000
 +++ ui/message_center/views/message_popup_view.cc
 @@ -135,7 +135,7 @@ void MessagePopupView::Show() {
    params.z_order = ui::ZOrderLevel::kFloatingWindow;

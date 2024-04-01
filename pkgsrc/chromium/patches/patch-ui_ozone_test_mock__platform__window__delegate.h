@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/ozone/test/mock_platform_window_delegate.h.orig	2024-03-19 22:15:27.538920600 +0000
+--- ui/ozone/test/mock_platform_window_delegate.h.orig	2024-03-26 21:38:05.611942500 +0000
 +++ ui/ozone/test/mock_platform_window_delegate.h
 @@ -33,7 +33,7 @@ class MockPlatformWindowDelegate : publi
    MOCK_METHOD2(OnWindowStateChanged,

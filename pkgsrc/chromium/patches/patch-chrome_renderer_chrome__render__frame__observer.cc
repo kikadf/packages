@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/renderer/chrome_render_frame_observer.cc.orig	2024-03-19 22:14:34.966230400 +0000
+--- chrome/renderer/chrome_render_frame_observer.cc.orig	2024-03-26 21:36:48.544926600 +0000
 +++ chrome/renderer/chrome_render_frame_observer.cc
 @@ -351,7 +351,7 @@ void ChromeRenderFrameObserver::WillDeta
  

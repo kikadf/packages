@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/host_main.cc.orig	2024-03-19 22:14:51.663720000 +0000
+--- remoting/host/host_main.cc.orig	2024-03-26 21:37:07.734673700 +0000
 +++ remoting/host/host_main.cc
 @@ -50,7 +50,7 @@ int FileChooserMain();
  int RdpDesktopSessionMain();

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-03-19 22:16:12.430925600 +0000
+--- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-03-26 21:38:52.300192600 +0000
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
 @@ -44510,6 +44510,11 @@ static int unixRandomness(sqlite3_vfs *N
    memset(zBuf, 0, nBuf);

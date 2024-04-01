@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/it2me/it2me_host.cc.orig	2024-03-19 22:14:51.719725000 +0000
+--- remoting/host/it2me/it2me_host.cc.orig	2024-03-26 21:37:07.762676200 +0000
 +++ remoting/host/it2me/it2me_host.cc
 @@ -52,7 +52,7 @@
  #include "remoting/host/chromeos/features.h"

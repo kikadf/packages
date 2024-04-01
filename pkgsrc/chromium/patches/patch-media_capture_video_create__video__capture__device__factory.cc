@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- media/capture/video/create_video_capture_device_factory.cc.orig	2024-03-19 22:14:49.031485000 +0000
+--- media/capture/video/create_video_capture_device_factory.cc.orig	2024-03-26 21:37:04.074340300 +0000
 +++ media/capture/video/create_video_capture_device_factory.cc
 @@ -13,7 +13,7 @@
  #include "media/capture/video/fake_video_capture_device_factory.h"

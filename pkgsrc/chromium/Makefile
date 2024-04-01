@@ -1,25 +1,17 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			123.0.6312.58
+VERSION=			123.0.6312.86
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
 
 PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
-REGRESS_DISTFILE0=		chromium-${VERSION}-testdata${EXTRACT_SUFX}
-REGRESS_DISTFILE1=		test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz
 
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX} \
-				${PROFILE_DISTFILE} \
-				${REGRESS_DISTFILE0} \
-				${REGRESS_DISTFILE1}
-
-EXTRACT_ONLY=			${DISTNAME}${EXTRACT_SUFX} \
 				${PROFILE_DISTFILE}
 
 SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
-SITES.${REGRESS_DISTFILE1}=	http://nerd.hu/distfiles/
 
 MAINTAINER=			ryoon@NetBSD.org
 #MAINTAINER+=			kikadf.01@gmail.com
@@ -31,14 +23,17 @@ USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
 TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
+CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/dxc/utils/buildit/build_llvm
 CHECK_PORTABILITY_SKIP+=	third_party/sqlite/src/configure
 CHECK_PORTABILITY_SKIP+=	third_party/protobuf/post_process_dist.sh
 CHECK_PORTABILITY_SKIP+=	third_party/ffmpeg/configure
+CHECK_PORTABILITY_SKIP+=	third_party/nearby/src/embedded/build.sh
 CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
 CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
 CHECK_PORTABILITY_SKIP+=	third_party/llvm/flang/tools/f18/flang.sh.in
 CHECK_PORTABILITY_SKIP+=	third_party/llvm/polly/lib/External/isl/configure
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
+CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
 TOOL_DEPENDS+=			yasm-[0-9]*:../../devel/yasm
@@ -48,7 +43,8 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup
 TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 #TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
-TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
+#TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
+TOOL_DEPENDS+=			lld-[0-9]*:../../devel/lld
 
 #PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 
@@ -95,59 +91,115 @@ CFLAGS+=		-isystem${PREFIX}/lib/clang/16/include # third_party/zlib with clang
 
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
-TEST_ENV+=	FONTCONFIG_SYSROOT=${WRKSRC}/third_party/test_fonts
 
-# Proprietary codecs are enabled.
-GN_ARGS+=	proprietary_codecs=true \
-		ffmpeg_branding="Chrome"
+# These libraries are used from the system and the build infrastructure
+# removes them from the bundled third_party directory and replaces them
+# with hooks to use them from the system.
+GN_SYSTEM_LIBS=	dav1d \
+		fontconfig \
+		icu \
+		libaom \
+		libevent \
+		libjpeg \
+		libpng \
+		libvpx \
+		libxml \
+		libxslt \
+		openh264 \
+		opus
 
-GN_ARGS+=	clang_use_chrome_plugins=false \
-		enable_hangout_services_extension=true \
-		use_kerberos=false \
-		use_aura=true \
-		use_cups=true \
-		enable_nacl=false \
+GN_ARGS=	enable_nacl=false \
+		is_official_build=true \
+		is_cfi=false \
+		optimize_webui=true \
 		enable_remoting=false \
-		fieldtrial_testing_like_official_build=true \
-		toolkit_views=true \
-		treat_warnings_as_errors=false \
-		use_sysroot=false \
-		use_system_libjpeg=false \
+		enable_hangout_services_extension=true \
+		enable_log_error_not_reached=true \
+		use_kerberos=false \
+		use_cups=true \
+		use_system_libdrm=true \
+		use_system_libjpeg=true \
 		use_system_harfbuzz=true \
 		use_system_freetype=true \
-		enable_one_click_signin=true \
-		use_allocator="none" \
-		use_allocator_shim=false \
+		icu_use_data_file=false \
 		is_clang=true \
-		use_lld=false \
+		use_sysroot=false \
+		treat_warnings_as_errors=false \
+		clang_use_chrome_plugins=false \
+		use_allocator_shim=false \
+		use_partition_alloc=true \
+		use_partition_alloc_as_malloc=false \
+		enable_backup_ref_ptr_support=false \
+		disable_fieldtrial_testing_config=true \
+		fatal_linker_warnings=false \
 		use_custom_libcxx=true \
-		use_gold=false \
-		icu_use_data_file=false
-GN_ARGS+=	extra_cxxflags="-I${BUILDLINK_DIR}/include \
-			-I${BUILDLINK_DIR}/include/glib \
-			-I${BUILDLINK_DIR}/include/nss" \
-		extra_ldflags="-L${PREFIX}/lib \
-			-L${X11BASE}/lib \
-			${COMPILER_RPATH_FLAG}${PREFIX}/lib \
-			${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr \
-			${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss \
-			${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg4 \
-			${COMPILER_RPATH_FLAG}${X11BASE}/lib"
+		use_custom_libunwind=true \
+		use_udev=true \
+		use_vaapi=false \
+		v8_enable_cet_ibt=true \
+		use_thin_lto=false \
+		thin_lto_enable_optimizations=true \
+		is_component_build=false
 
-GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild --skip-generate-buildfiles
+# rust
+RUSTC_VERSION=	rustc -V
+MAKE_ENV+=	RUSTC_BOOTSTRAP=1
+GN_ARGS+=	enable_rust=true \
+		rust_sysroot_absolute=\"${PREFIX}\" \
+		rustc_version=\"${RUSTC_VERSION:sh}\"
+
+# flags
+EXTRA_LDFLAGS=	-L${PREFIX}/lib \
+		-L${X11BASE}/lib \
+		${COMPILER_RPATH_FLAG}${PREFIX}/lib \
+		${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr \
+		 ${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss \
+		${COMPILER_RPATH_FLAG}${X11BASE}/lib
+EXTRA_CXXFLAGS=	-I${BUILDLINK_DIR}/include \
+		-I${BUILDLINK_DIR}/include/glib \
+		-I${BUILDLINK_DIR}/include/nss
+
+PLIST_VARS+=		swiftshader
+.if ${MACHINE_ARCH} == "aarch64"
+FFMPEG_TARGET=		arm64
+.elif ${MACHINE_ARCH} == "x86_64"
+PLIST.swiftshader=	yes
+FFMPEG_TARGET=		x64
+.elif ${MACHINE_ARCH} == "i386"
+EXTRA_LDFLAGS+=		-Wl,--no-keep-memory
+PLIST.swiftshader=	yes
+FFMPEG_TARGET=		ia32
+.endif
+
+GN_ARGS+=	extra_cxxflags=\"${EXTRA_CXXFLAGS}\" \
+		extra_ldflags=\"${EXTRA_LDFLAGS}\"
+
+# Proprietary codecs are enabled.
+FFMPEG_BRAND=	Chrome
+FFMPEG_BDIR=	${WRKSRC}/build.${FFMPEG_TARGET}.${LOWER_OPSYS}/${FFMPEG_BRAND}
+FFMPEG_CDIR=	${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${LOWER_OPSYS}/${FFMPEG_TARGET}
+
+GN_ARGS+=	proprietary_codecs=true \
+		ffmpeg_branding=\"${FFMPEG_BRAND}\"
+
+GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild
 
 # API key and OAuth credential for Google.
 # This is pkgsrc use only.
-GN_ARGS+=	google_api_key="AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg" \
-		google_default_client_id="74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com" \
-		google_default_client_secret="3R9TyUv14OXgzJnZi6Ismela"
+GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\" \
+		google_default_client_id=\"74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com\" \
+		google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
 
 NOT_PAX_MPROTECT_SAFE+=	bin/chrome
 NOT_PAX_ASLR_SAFE+=	bin/chrome
 
-post-extract:
-	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
-		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
+PKGSRC_COMPILER=	clang
+PKG_CC=			clang
+PKG_CXX=		clang++
+
+#post-extract:
+#	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
+#		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
 
 pre-configure:
 #	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
@@ -159,8 +211,23 @@ pre-configure:
 #		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/llvm-ar
 #	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
 #		${BUILDLINK_DIR}/bin/java
-	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
-		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
+#	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
+#		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
+	# Prepare internal ffmpeg
+	cd ${WRKSRC}/third_party/ffmpeg && \
+		${PYTHONBIN} chromium/scripts/build_ffmpeg.py \
+		${LOWER_OPSYS} ${FFMPEG_TARGET} --config-only --branding=${FFMPEG_BRAND}
+	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
+	${INSTALL_DATA_DIR} ${FFMPEG_CDIR}
+.for ffmpeg_part in config.h config.asm config_components.h libavcodec libavformat libavutil
+	cp -pR ${FFMPEG_BDIR}/${ffmpeg_part} ${FFMPEG_CDIR}
+.endfor
+
+	# Create symlink to NetBSD nodejs command.
+	${MKDIR} ${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin
+	${LN} -sf ${PREFIX}/bin/node \
+		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node
+
 # a wrapper for rpath $ORIGIN removal
 #	echo "#! /bin/sh" > ${WRKSRC}/python
 #	echo "LD_LIBRARY_PATH=./ ${PYTHONBIN} \"\$$@\"" >> ${WRKSRC}/python
@@ -169,31 +236,17 @@ pre-configure:
 # Sadly rpath $ORIGIN/. is needed.
 #	rm -rf ${WRAPPER_DIR}
 
-	cd ${WRKSRC} && \
-	${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
-		--system-libraries \
-		ffmpeg flac fontconfig freetype harfbuzz-ng libdrm libpng \
-		libwebp libxml libxslt opus snappy \
-			|| ${FALSE}
-
 do-configure:
-	# Create symlink to NetBSD nodejs command.
-	${MKDIR} ${WRKSRC}/third_party/node/node-${LOWER_OPSYS}/node/bin
-	${LN} -sf ${PREFIX}/bin/node \
-		${WRKSRC}/third_party/node/node-${LOWER_OPSYS}/node/bin/node
+	cd ${WRKSRC} && \
+		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
+		--system-libraries ${GN_SYSTEM_LIBS} || ${FALSE}
 
 	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} \
-		${PYTHONBIN} ./tools/gn/bootstrap/bootstrap.py \
-			${GN_BOOTSTRAP_FLAGS} \
-			--gn-gen-args '${GN_ARGS}'
+		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./tools/gn/bootstrap/bootstrap.py \
+		${GN_BOOTSTRAP_FLAGS} --gn-gen-args "${GN_ARGS}"
 	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} \
-		./out/${BUILDTYPE}/gn \
-			gen --args='${GN_ARGS}' \
-			--script-executable="${PYTHONBIN}" \
-			${GN_VERBOSE} \
-			out/${BUILDTYPE}
+		${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \
+		gen --args="${GN_ARGS}" --script-executable="${PYTHONBIN}" ${GN_VERBOSE} out/${BUILDTYPE}
 
 do-build:
 	cd ${WRKSRC} && \
@@ -215,7 +268,7 @@ do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
 		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
-			chrome
+			chrome chromedriver
 
 CHROMIUM_DIR=		chrome
 INSTALLATION_DIRS+=	${CHROMIUM_DIR}
@@ -323,14 +376,12 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../misc/usbids/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../multimedia/libaom/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+#.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../devel/libatomic/buildlink3.mk"
-# Some C++ files in ui/base/x are not buildable with GCC 8.4.0 on NetBSD/amd64.
-PKG_CC=		${PREFIX}/bin/clang
-PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-
 .include "../../lang/python/tool.mk"
+.include "../../lang/rust/rust.mk"
 .include "../../mk/bsd.pkg.mk"

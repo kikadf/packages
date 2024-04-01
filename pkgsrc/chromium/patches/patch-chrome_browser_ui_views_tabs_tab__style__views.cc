@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/tabs/tab_style_views.cc.orig	2024-03-19 22:14:34.342174800 +0000
+--- chrome/browser/ui/views/tabs/tab_style_views.cc.orig	2024-03-26 21:36:45.620660300 +0000
 +++ chrome/browser/ui/views/tabs/tab_style_views.cc
 @@ -490,7 +490,7 @@ float GM2TabStyleViews::GetCurrentActive
    if (!IsHoverAnimationActive()) {

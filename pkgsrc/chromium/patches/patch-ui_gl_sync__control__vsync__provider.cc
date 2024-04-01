@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/gl/sync_control_vsync_provider.cc.orig	2024-03-19 22:15:27.414909600 +0000
+--- ui/gl/sync_control_vsync_provider.cc.orig	2024-03-26 21:38:05.511933300 +0000
 +++ ui/gl/sync_control_vsync_provider.cc
 @@ -11,7 +11,7 @@
  #include "base/trace_event/trace_event.h"

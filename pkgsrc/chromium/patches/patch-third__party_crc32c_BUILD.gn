@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/crc32c/BUILD.gn.orig	2024-03-19 22:15:14.209731300 +0000
+--- third_party/crc32c/BUILD.gn.orig	2024-03-26 21:37:57.595212700 +0000
 +++ third_party/crc32c/BUILD.gn
 @@ -46,7 +46,7 @@ config("crc32c_config") {
    }

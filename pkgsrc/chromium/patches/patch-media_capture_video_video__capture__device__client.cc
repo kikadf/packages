@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- media/capture/video/video_capture_device_client.cc.orig	2024-03-19 22:14:49.039486000 +0000
+--- media/capture/video/video_capture_device_client.cc.orig	2024-03-26 21:37:04.082341200 +0000
 +++ media/capture/video/video_capture_device_client.cc
 @@ -150,7 +150,7 @@ FourccAndFlip GetFourccAndFlipFromPixelF
        CHECK(!is_width_odd && !is_height_odd);

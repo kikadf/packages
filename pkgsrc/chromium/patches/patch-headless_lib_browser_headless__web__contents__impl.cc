@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- headless/lib/browser/headless_web_contents_impl.cc.orig	2024-03-19 22:14:45.731190700 +0000
+--- headless/lib/browser/headless_web_contents_impl.cc.orig	2024-03-26 21:37:01.242082600 +0000
 +++ headless/lib/browser/headless_web_contents_impl.cc
 @@ -60,7 +60,7 @@ namespace headless {
  namespace {

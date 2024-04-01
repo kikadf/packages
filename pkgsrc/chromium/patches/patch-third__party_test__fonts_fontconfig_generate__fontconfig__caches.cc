@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2024-03-19 22:15:23.846591200 +0000
+--- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2024-03-26 21:38:02.139626300 +0000
 +++ third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc
 @@ -56,7 +56,7 @@ int main() {
    FcFini();

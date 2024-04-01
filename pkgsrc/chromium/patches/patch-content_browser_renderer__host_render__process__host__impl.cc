@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2024-03-19 22:14:43.014948400 +0000
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2024-03-26 21:36:58.557838200 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
 @@ -224,7 +224,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"

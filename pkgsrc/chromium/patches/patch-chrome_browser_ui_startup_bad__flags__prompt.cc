@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2024-03-19 22:14:33.998144000 +0000
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2024-03-26 21:36:42.776401500 +0000
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
 @@ -104,7 +104,7 @@ const char* const kBadFlags[] = {
  

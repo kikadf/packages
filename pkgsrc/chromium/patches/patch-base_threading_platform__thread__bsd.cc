@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/threading/platform_thread_bsd.cc.orig	2024-03-24 15:39:33.913930600 +0000
+--- base/threading/platform_thread_bsd.cc.orig	2024-04-01 16:45:46.138495933 +0000
 +++ base/threading/platform_thread_bsd.cc
 @@ -0,0 +1,31 @@
 +// Copyright 2023 The Chromium Authors

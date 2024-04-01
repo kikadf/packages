@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/policy/device_management_service_configuration.cc.orig	2024-03-19 22:14:31.897956600 +0000
+--- chrome/browser/policy/device_management_service_configuration.cc.orig	2024-03-26 21:36:38.924050800 +0000
 +++ chrome/browser/policy/device_management_service_configuration.cc
 @@ -22,7 +22,7 @@
  

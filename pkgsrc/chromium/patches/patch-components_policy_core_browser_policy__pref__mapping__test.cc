@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/policy/core/browser/policy_pref_mapping_test.cc.orig	2024-03-19 22:14:39.614645000 +0000
+--- components/policy/core/browser/policy_pref_mapping_test.cc.orig	2024-03-26 21:36:53.757401200 +0000
 +++ components/policy/core/browser/policy_pref_mapping_test.cc
 @@ -322,7 +322,7 @@ class PolicyTestCase {
      const std::string os("chromeos_lacros");

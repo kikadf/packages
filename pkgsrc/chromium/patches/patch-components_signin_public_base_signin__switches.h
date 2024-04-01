@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/signin/public/base/signin_switches.h.orig	2024-03-19 22:14:40.618734600 +0000
+--- components/signin/public/base/signin_switches.h.orig	2024-03-26 21:36:55.417552200 +0000
 +++ components/signin/public/base/signin_switches.h
 @@ -119,7 +119,7 @@ bool IsExplicitBrowserSigninUIOnDesktopE
  

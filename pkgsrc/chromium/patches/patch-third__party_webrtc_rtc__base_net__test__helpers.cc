@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2024-03-19 22:16:26.624191800 +0000
+--- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2024-03-26 21:39:26.355292800 +0000
 +++ third_party/webrtc/rtc_base/net_test_helpers.cc
 @@ -21,6 +21,7 @@
  #endif

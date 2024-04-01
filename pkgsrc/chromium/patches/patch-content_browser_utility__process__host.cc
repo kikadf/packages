@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/utility_process_host.cc.orig	2024-03-19 22:14:43.162961700 +0000
+--- content/browser/utility_process_host.cc.orig	2024-03-26 21:36:58.693850500 +0000
 +++ content/browser/utility_process_host.cc
 @@ -61,7 +61,7 @@
  #include "content/browser/v8_snapshot_files.h"

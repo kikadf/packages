@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/basic_desktop_environment.cc.orig	2024-03-19 22:14:51.643718200 +0000
+--- remoting/host/basic_desktop_environment.cc.orig	2024-03-26 21:37:07.710671400 +0000
 +++ remoting/host/basic_desktop_environment.cc
 @@ -195,7 +195,7 @@ BasicDesktopEnvironment::CreateVideoCapt
    scoped_refptr<base::SingleThreadTaskRunner> capture_task_runner;

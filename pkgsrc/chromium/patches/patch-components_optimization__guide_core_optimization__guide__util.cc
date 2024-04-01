@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/optimization_guide/core/optimization_guide_util.cc.orig	2024-03-19 22:14:39.302617300 +0000
+--- components/optimization_guide/core/optimization_guide_util.cc.orig	2024-03-26 21:36:53.477375700 +0000
 +++ components/optimization_guide/core/optimization_guide_util.cc
 @@ -39,7 +39,7 @@ optimization_guide::proto::Platform GetP
    return optimization_guide::proto::PLATFORM_CHROMEOS;

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/viz/test/fake_display_client.h.orig	2024-03-19 22:14:42.230878600 +0000
+--- components/viz/test/fake_display_client.h.orig	2024-03-26 21:36:57.593750500 +0000
 +++ components/viz/test/fake_display_client.h
 @@ -36,7 +36,7 @@ class FakeDisplayClient : public mojom::
    void AddChildWindowToBrowser(gpu::SurfaceHandle child_window) override;

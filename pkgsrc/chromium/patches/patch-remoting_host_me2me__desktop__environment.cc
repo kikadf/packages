@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/me2me_desktop_environment.cc.orig	2024-03-19 22:14:51.731726200 +0000
+--- remoting/host/me2me_desktop_environment.cc.orig	2024-03-26 21:37:07.774677300 +0000
 +++ remoting/host/me2me_desktop_environment.cc
 @@ -125,7 +125,7 @@ std::string Me2MeDesktopEnvironment::Get
      capabilities += protocol::kRemoteWebAuthnCapability;

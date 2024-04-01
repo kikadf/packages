@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- extensions/shell/app/shell_main_delegate.cc.orig	2024-03-19 22:14:45.211144400 +0000
+--- extensions/shell/app/shell_main_delegate.cc.orig	2024-03-26 21:37:00.870048800 +0000
 +++ extensions/shell/app/shell_main_delegate.cc
 @@ -43,7 +43,7 @@
  #if BUILDFLAG(IS_WIN)

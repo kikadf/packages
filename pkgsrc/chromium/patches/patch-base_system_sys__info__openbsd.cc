@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/system/sys_info_openbsd.cc.orig	2024-03-19 22:14:27.185536100 +0000
+--- base/system/sys_info_openbsd.cc.orig	2024-03-26 21:36:30.267262700 +0000
 +++ base/system/sys_info_openbsd.cc
 @@ -3,7 +3,6 @@
  // found in the LICENSE file.

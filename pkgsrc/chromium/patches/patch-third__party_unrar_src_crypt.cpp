@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/unrar/src/crypt.cpp.orig	2024-03-19 22:15:24.614659500 +0000
+--- third_party/unrar/src/crypt.cpp.orig	2024-03-26 21:38:03.163719700 +0000
 +++ third_party/unrar/src/crypt.cpp
 @@ -120,6 +120,8 @@ void GetRnd(byte *RndBuf,size_t BufSize)
      Success=CryptGenRandom(hProvider, (DWORD)BufSize, RndBuf) == TRUE;

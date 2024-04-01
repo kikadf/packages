@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/pdfium/pdfium.gni.orig	2024-03-19 22:16:21.839764800 +0000
+--- third_party/pdfium/pdfium.gni.orig	2024-03-26 21:39:12.286012000 +0000
 +++ third_party/pdfium/pdfium.gni
 @@ -42,7 +42,7 @@ declare_args() {
    # PDFium will use PartitionAlloc partitions to separate strings, scalars,

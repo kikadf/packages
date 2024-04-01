@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- services/audio/audio_sandbox_hook_linux.h.orig	2024-03-19 22:14:51.899741200 +0000
+--- services/audio/audio_sandbox_hook_linux.h.orig	2024-03-26 21:37:08.094706300 +0000
 +++ services/audio/audio_sandbox_hook_linux.h
 @@ -5,7 +5,13 @@
  #ifndef SERVICES_AUDIO_AUDIO_SANDBOX_HOOK_LINUX_H_

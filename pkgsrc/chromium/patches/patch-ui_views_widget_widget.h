@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/views/widget/widget.h.orig	2024-03-19 22:15:27.750939400 +0000
+--- ui/views/widget/widget.h.orig	2024-03-26 21:38:05.815961100 +0000
 +++ ui/views/widget/widget.h
 @@ -420,7 +420,7 @@ class VIEWS_EXPORT Widget : public inter
      // If set, the widget was created in headless mode.

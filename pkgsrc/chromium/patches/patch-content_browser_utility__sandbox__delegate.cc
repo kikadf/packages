@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/utility_sandbox_delegate.cc.orig	2024-03-19 22:14:43.162961700 +0000
+--- content/browser/utility_sandbox_delegate.cc.orig	2024-03-26 21:36:58.697851000 +0000
 +++ content/browser/utility_sandbox_delegate.cc
 @@ -67,10 +67,10 @@ UtilitySandboxedProcessLauncherDelegate:
  #if BUILDFLAG(IS_FUCHSIA)

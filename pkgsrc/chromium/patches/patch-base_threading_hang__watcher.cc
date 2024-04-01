@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/threading/hang_watcher.cc.orig	2024-03-19 22:14:27.277544500 +0000
+--- base/threading/hang_watcher.cc.orig	2024-03-26 21:36:30.375272500 +0000
 +++ base/threading/hang_watcher.cc
 @@ -332,7 +332,7 @@ void HangWatcher::InitializeOnMainThread
  

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/browser_child_process_host_impl.h.orig	2024-03-19 22:14:42.442897300 +0000
+--- content/browser/browser_child_process_host_impl.h.orig	2024-03-26 21:36:57.985786200 +0000
 +++ content/browser/browser_child_process_host_impl.h
 @@ -34,7 +34,7 @@
  #include "base/win/object_watcher.h"

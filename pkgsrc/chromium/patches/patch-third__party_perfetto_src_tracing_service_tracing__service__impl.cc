@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/tracing/service/tracing_service_impl.cc.orig	2024-03-19 22:16:21.207708600 +0000
+--- third_party/perfetto/src/tracing/service/tracing_service_impl.cc.orig	2024-03-26 21:39:30.007625300 +0000
 +++ third_party/perfetto/src/tracing/service/tracing_service_impl.cc
 @@ -3275,7 +3275,8 @@ bool TracingServiceImpl::SnapshotClocks(
  

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2024-03-19 22:14:26.953515500 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2024-03-26 21:36:29.967235300 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h
 @@ -25,7 +25,7 @@
  // elimination.

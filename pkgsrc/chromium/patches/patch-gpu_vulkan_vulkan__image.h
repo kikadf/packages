@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- gpu/vulkan/vulkan_image.h.orig	2024-03-19 22:14:45.723190000 +0000
+--- gpu/vulkan/vulkan_image.h.orig	2024-03-26 21:37:01.214080000 +0000
 +++ gpu/vulkan/vulkan_image.h
 @@ -87,7 +87,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanIma
        VkImageUsageFlags usage,

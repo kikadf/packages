@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/synchronization/lock_impl.h.orig	2024-03-19 22:14:27.185536100 +0000
+--- base/synchronization/lock_impl.h.orig	2024-03-26 21:36:30.263262300 +0000
 +++ base/synchronization/lock_impl.h
 @@ -105,6 +105,10 @@ void LockImpl::Unlock() {
  }

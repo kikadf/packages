@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/base/webui/web_ui_util.cc.orig	2024-03-19 22:15:26.998872300 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2024-03-26 21:38:04.975884700 +0000
 +++ ui/base/webui/web_ui_util.cc
 @@ -39,7 +39,7 @@ namespace {
  constexpr float kMaxScaleFactor = 1000.0f;

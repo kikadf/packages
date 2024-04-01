@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/process/launch_posix.cc.orig	2024-03-19 22:14:27.149533000 +0000
+--- base/process/launch_posix.cc.orig	2024-03-26 21:36:30.223258700 +0000
 +++ base/process/launch_posix.cc
 @@ -61,6 +61,9 @@
  #error "macOS should use launch_mac.cc"

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/modules/ml/webnn/ml_graph_xnnpack.cc.orig	2024-03-19 22:14:55.648075600 +0000
+--- third_party/blink/renderer/modules/ml/webnn/ml_graph_xnnpack.cc.orig	2024-03-26 21:37:13.163167700 +0000
 +++ third_party/blink/renderer/modules/ml/webnn/ml_graph_xnnpack.cc
 @@ -202,7 +202,7 @@ class SharedXnnpackContext : public Thre
  

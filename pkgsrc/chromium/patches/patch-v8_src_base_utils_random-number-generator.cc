@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- v8/src/base/utils/random-number-generator.cc.orig	2024-03-19 22:16:28.868392000 +0000
+--- v8/src/base/utils/random-number-generator.cc.orig	2024-03-26 21:39:11.725961000 +0000
 +++ v8/src/base/utils/random-number-generator.cc
 @@ -56,7 +56,7 @@ RandomNumberGenerator::RandomNumberGener
    DCHECK_EQ(0, result);

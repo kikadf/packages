@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- extensions/browser/api/messaging/message_service.cc.orig	2024-03-19 22:14:44.999125500 +0000
+--- extensions/browser/api/messaging/message_service.cc.orig	2024-03-26 21:37:00.686031800 +0000
 +++ extensions/browser/api/messaging/message_service.cc
 @@ -71,7 +71,7 @@ namespace {
  const char kReceivingEndDoesntExistError[] =

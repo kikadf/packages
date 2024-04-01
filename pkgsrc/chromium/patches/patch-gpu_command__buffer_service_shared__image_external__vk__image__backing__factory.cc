@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2024-03-19 22:14:45.659184200 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc.orig	2024-03-26 21:37:01.098069400 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing_factory.cc
 @@ -147,7 +147,7 @@ bool IsFormatSupported(viz::SharedImageF
  }  // namespace

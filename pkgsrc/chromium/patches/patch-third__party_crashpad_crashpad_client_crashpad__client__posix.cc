@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2024-03-24 15:39:41.872515202 +0000
+--- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2024-04-01 16:45:50.115038041 +0000
 +++ third_party/crashpad/crashpad/client/crashpad_client_posix.cc
 @@ -0,0 +1,40 @@
 +// Copyright 2017 The Crashpad Authors. All rights reserved.

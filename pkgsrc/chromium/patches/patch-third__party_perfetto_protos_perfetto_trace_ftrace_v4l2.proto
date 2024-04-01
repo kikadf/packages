@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto.orig	2024-03-19 22:16:16.143256700 +0000
+--- third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto.orig	2024-03-26 21:38:59.228823400 +0000
 +++ third_party/perfetto/protos/perfetto/trace/ftrace/v4l2.proto
 @@ -10,7 +10,7 @@ message V4l2QbufFtraceEvent {
    optional uint32 field = 2;

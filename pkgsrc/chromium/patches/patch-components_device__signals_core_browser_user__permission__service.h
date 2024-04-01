@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/device_signals/core/browser/user_permission_service.h.orig	2024-03-19 22:14:38.598554400 +0000
+--- components/device_signals/core/browser/user_permission_service.h.orig	2024-03-26 21:36:52.761310600 +0000
 +++ components/device_signals/core/browser/user_permission_service.h
 @@ -57,7 +57,7 @@ class UserPermissionService : public Key
    // missing.

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- printing/mojom/printing_context_mojom_traits.cc.orig	2024-03-19 22:14:51.587713200 +0000
+--- printing/mojom/printing_context_mojom_traits.cc.orig	2024-03-26 21:37:07.622663500 +0000
 +++ printing/mojom/printing_context_mojom_traits.cc
 @@ -19,7 +19,7 @@
  #include "base/numerics/safe_conversions.h"

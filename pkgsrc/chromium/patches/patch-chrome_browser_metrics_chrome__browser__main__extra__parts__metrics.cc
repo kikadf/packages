@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2024-03-19 22:14:31.589929000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2024-03-26 21:36:38.520014000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
 @@ -79,8 +79,10 @@
  

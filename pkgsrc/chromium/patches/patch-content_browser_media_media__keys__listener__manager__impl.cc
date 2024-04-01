@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/media/media_keys_listener_manager_impl.cc.orig	2024-03-19 22:14:42.654916300 +0000
+--- content/browser/media/media_keys_listener_manager_impl.cc.orig	2024-03-26 21:36:58.305815200 +0000
 +++ content/browser/media/media_keys_listener_manager_impl.cc
 @@ -334,7 +334,7 @@ void MediaKeysListenerManagerImpl::Start
    }

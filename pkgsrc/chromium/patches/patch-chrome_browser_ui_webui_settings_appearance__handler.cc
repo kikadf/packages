@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/settings/appearance_handler.cc.orig	2024-03-19 22:14:34.562194300 +0000
+--- chrome/browser/ui/webui/settings/appearance_handler.cc.orig	2024-03-26 21:36:47.720851700 +0000
 +++ chrome/browser/ui/webui/settings/appearance_handler.cc
 @@ -28,7 +28,7 @@ void AppearanceHandler::RegisterMessages
        "useDefaultTheme",

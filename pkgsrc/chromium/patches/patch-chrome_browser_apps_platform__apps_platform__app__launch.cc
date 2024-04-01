@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2024-03-19 22:14:29.757765800 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2024-03-26 21:36:36.143797600 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.cc
 @@ -20,7 +20,7 @@
  #include "extensions/common/extension.h"

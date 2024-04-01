@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- build/config/BUILD.gn.orig	2024-03-19 22:14:27.401555500 +0000
+--- build/config/BUILD.gn.orig	2024-03-26 21:36:30.499283800 +0000
 +++ build/config/BUILD.gn
 @@ -214,6 +214,10 @@ config("default_libs") {
      # Targets should choose to explicitly link frameworks they require. Since

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/app_home/app_home_page_handler.cc.orig	2024-03-19 22:14:34.406180400 +0000
+--- chrome/browser/ui/webui/app_home/app_home_page_handler.cc.orig	2024-03-26 21:36:46.036698300 +0000
 +++ chrome/browser/ui/webui/app_home/app_home_page_handler.cc
 @@ -392,7 +392,7 @@ app_home::mojom::AppInfoPtr AppHomePageH
  

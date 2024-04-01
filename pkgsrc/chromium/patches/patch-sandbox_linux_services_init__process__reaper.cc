@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- sandbox/linux/services/init_process_reaper.cc.orig	2024-03-19 22:14:51.851736800 +0000
+--- sandbox/linux/services/init_process_reaper.cc.orig	2024-03-26 21:37:08.014699200 +0000
 +++ sandbox/linux/services/init_process_reaper.cc
 @@ -2,6 +2,7 @@
  // Use of this source code is governed by a BSD-style license that can be

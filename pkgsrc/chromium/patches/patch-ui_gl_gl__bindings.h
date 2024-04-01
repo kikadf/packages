@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/gl/gl_bindings.h.orig	2024-03-19 22:15:27.390907300 +0000
+--- ui/gl/gl_bindings.h.orig	2024-03-26 21:38:05.487931300 +0000
 +++ ui/gl/gl_bindings.h
 @@ -36,7 +36,7 @@
  #include <GL/wglext.h>

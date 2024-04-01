@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-03-19 22:14:56.180122900 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-03-26 21:37:13.815227300 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -18,6 +18,11 @@
  extern "C" void* __libc_stack_end;  // NOLINT

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- mojo/core/channel.cc.orig	2024-03-19 22:14:49.671542200 +0000
+--- mojo/core/channel.cc.orig	2024-03-26 21:37:05.318453600 +0000
 +++ mojo/core/channel.cc
 @@ -75,7 +75,11 @@ const size_t kMaxUnusedReadBufferCapacit
  // Fuchsia: The zx_channel_write() API supports up to 64 handles.

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2024-03-19 22:14:38.810573300 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2024-03-26 21:36:52.989331200 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -93,7 +93,7 @@ std::optional<FeatureConfig> CreateNewUs
  

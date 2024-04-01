@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/platform_util_linux.cc.orig	2024-03-19 22:14:31.881955100 +0000
+--- chrome/browser/platform_util_linux.cc.orig	2024-03-26 21:36:38.904049000 +0000
 +++ chrome/browser/platform_util_linux.cc
 @@ -300,7 +300,9 @@ void RunCommand(const std::string& comma
  

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/policy/configuration_policy_handler_list_factory.cc.orig	2024-03-19 22:14:31.897956600 +0000
+--- chrome/browser/policy/configuration_policy_handler_list_factory.cc.orig	2024-03-26 21:36:38.920050400 +0000
 +++ chrome/browser/policy/configuration_policy_handler_list_factory.cc
 @@ -228,19 +228,20 @@
  #include "components/spellcheck/browser/pref_names.h"

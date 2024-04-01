@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-03-19 22:14:42.794928800 +0000
+--- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-03-26 21:36:58.473830500 +0000
 +++ content/browser/renderer_host/input/input_device_change_observer.cc
 @@ -9,7 +9,7 @@
  

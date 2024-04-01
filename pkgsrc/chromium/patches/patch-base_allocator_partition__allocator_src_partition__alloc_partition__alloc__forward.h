@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_forward.h.orig	2024-03-19 22:14:26.973517400 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_forward.h.orig	2024-03-26 21:36:29.987237200 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_forward.h
 @@ -28,9 +28,13 @@ namespace internal {
  // the second one 16. We could technically return something different for

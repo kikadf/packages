@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- media/base/media_switches.cc.orig	2024-03-19 22:14:48.987481400 +0000
+--- media/base/media_switches.cc.orig	2024-03-26 21:37:04.030336400 +0000
 +++ media/base/media_switches.cc
 @@ -21,7 +21,7 @@
  #include "ui/gl/gl_features.h"

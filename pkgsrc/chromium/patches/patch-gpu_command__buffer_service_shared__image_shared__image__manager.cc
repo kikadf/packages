@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2024-03-19 22:14:45.663184600 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2024-03-26 21:37:01.106070300 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_manager.cc
 @@ -568,7 +568,7 @@ bool SharedImageManager::SupportsScanout
    return true;

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/base_paths_posix.cc.orig	2024-03-19 22:14:27.041523500 +0000
+--- base/base_paths_posix.cc.orig	2024-03-26 21:36:30.059243700 +0000
 +++ base/base_paths_posix.cc
 @@ -15,6 +15,7 @@
  #include <ostream>

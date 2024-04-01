@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-03-19 22:14:51.119671600 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-03-26 21:37:07.014608100 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
 @@ -6,7 +6,9 @@
  

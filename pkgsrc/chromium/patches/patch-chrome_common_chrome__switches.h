@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/common/chrome_switches.h.orig	2024-03-19 22:14:34.802215800 +0000
+--- chrome/common/chrome_switches.h.orig	2024-03-26 21:36:48.284903000 +0000
 +++ chrome/common/chrome_switches.h
 @@ -276,12 +276,12 @@ extern const char kAllowNaClSocketAPI[];
  #endif

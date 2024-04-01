@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-03-19 22:16:00.725881300 +0000
+--- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-03-26 21:38:46.595673300 +0000
 +++ third_party/dawn/include/dawn/native/VulkanBackend.h
 @@ -83,7 +83,8 @@ struct ExternalImageExportInfoVk : Exter
  };

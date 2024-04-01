@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- build/linux/unbundle/libusb.gn.orig	2024-03-19 22:14:27.445559500 +0000
+--- build/linux/unbundle/libusb.gn.orig	2024-03-26 21:36:30.547288200 +0000
 +++ build/linux/unbundle/libusb.gn
 @@ -1,3 +1,27 @@
 +# Copyright 2016 The Chromium Authors. All rights reserved.

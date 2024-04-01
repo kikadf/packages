@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-03-19 22:14:31.221896400 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-03-26 21:36:38.019968500 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
 @@ -205,7 +205,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[::prefs::kSidePanelHorizontalAlignment] =

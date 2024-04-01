@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/security_interstitials/content/utils.cc.orig	2024-03-19 22:14:40.462720600 +0000
+--- components/security_interstitials/content/utils.cc.orig	2024-03-26 21:36:55.097523200 +0000
 +++ components/security_interstitials/content/utils.cc
 @@ -38,7 +38,7 @@ void LaunchDateAndTimeSettings() {
  #if BUILDFLAG(IS_ANDROID)

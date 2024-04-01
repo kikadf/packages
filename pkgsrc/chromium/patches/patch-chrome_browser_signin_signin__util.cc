@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/signin/signin_util.cc.orig	2024-03-19 22:14:33.134066800 +0000
+--- chrome/browser/signin/signin_util.cc.orig	2024-03-26 21:36:40.688211400 +0000
 +++ chrome/browser/signin/signin_util.cc
 @@ -75,7 +75,7 @@ CookiesMover::CookiesMover(base::WeakPtr
  CookiesMover::~CookiesMover() = default;

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2024-03-19 22:14:31.105886000 +0000
+--- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2024-03-26 21:36:37.863954300 +0000
 +++ chrome/browser/enterprise/signals/device_info_fetcher.cc
 @@ -10,7 +10,7 @@
  #include "chrome/browser/enterprise/signals/device_info_fetcher_mac.h"

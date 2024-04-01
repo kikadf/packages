@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2024-03-19 22:14:51.959746400 +0000
+--- services/device/public/cpp/generic_sensor/sensor_reading.h.orig	2024-03-26 21:37:08.174713600 +0000
 +++ services/device/public/cpp/generic_sensor/sensor_reading.h
 @@ -8,6 +8,8 @@
  #include <stddef.h>

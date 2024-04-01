@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc.orig	2024-03-19 22:15:27.518918800 +0000
+--- ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc.orig	2024-03-26 21:38:05.591940600 +0000
 +++ ui/ozone/platform/wayland/host/xdg_toplevel_wrapper_impl.cc
 @@ -316,7 +316,7 @@ void XDGToplevelWrapperImpl::OnToplevelC
    window_states.is_activated =

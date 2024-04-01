@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/search_engine_choice/search_engine_choice_service_factory.cc.orig	2024-03-19 22:14:33.042058700 +0000
+--- chrome/browser/search_engine_choice/search_engine_choice_service_factory.cc.orig	2024-03-26 21:36:40.540197800 +0000
 +++ chrome/browser/search_engine_choice/search_engine_choice_service_factory.cc
 @@ -11,7 +11,7 @@
  #include "components/country_codes/country_codes.h"

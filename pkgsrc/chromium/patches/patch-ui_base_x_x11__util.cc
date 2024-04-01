@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_util.cc.orig	2024-03-19 22:15:27.006873100 +0000
+--- ui/base/x/x11_util.cc.orig	2024-03-26 21:38:04.987885700 +0000
 +++ ui/base/x/x11_util.cc
 @@ -699,4 +699,20 @@ gfx::ImageSkia GetNativeWindowIcon(intpt
    return gfx::ImageSkia::CreateFrom1xBitmap(result);

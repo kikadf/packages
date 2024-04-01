@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/feed/core/v2/proto_util_unittest.cc.orig	2024-03-19 22:14:38.826574800 +0000
+--- components/feed/core/v2/proto_util_unittest.cc.orig	2024-03-26 21:36:53.001332300 +0000
 +++ components/feed/core/v2/proto_util_unittest.cc
 @@ -44,8 +44,8 @@ TEST(ProtoUtilTest, CreateClientInfo) {
    feedwire::ClientInfo result = CreateClientInfo(request_metadata);

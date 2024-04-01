@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- media/base/user_input_monitor_unittest.cc.orig	2024-03-19 22:14:48.999482400 +0000
+--- media/base/user_input_monitor_unittest.cc.orig	2024-03-26 21:37:04.042337400 +0000
 +++ media/base/user_input_monitor_unittest.cc
 @@ -13,7 +13,7 @@
  #include "build/build_config.h"

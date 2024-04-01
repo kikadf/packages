@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- build/gn_run_binary.py.orig	2024-03-19 22:14:27.433558500 +0000
+--- build/gn_run_binary.py.orig	2024-03-26 21:36:30.535287100 +0000
 +++ build/gn_run_binary.py
 @@ -23,7 +23,7 @@ if not os.path.isabs(path):
  # The rest of the arguments are passed directly to the executable.

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/realbox/realbox_handler.cc.orig	2024-03-19 22:14:34.558194000 +0000
+--- chrome/browser/ui/webui/realbox/realbox_handler.cc.orig	2024-03-26 21:36:47.716851200 +0000
 +++ chrome/browser/ui/webui/realbox/realbox_handler.cc
 @@ -148,7 +148,7 @@ const char* kMacShareIconResourceName =
  #elif BUILDFLAG(IS_WIN)

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- remoting/host/host_attributes.cc.orig	2024-03-19 22:14:51.659719700 +0000
+--- remoting/host/host_attributes.cc.orig	2024-03-26 21:37:07.730673300 +0000
 +++ remoting/host/host_attributes.cc
 @@ -104,7 +104,7 @@ std::string GetHostAttributes() {
    if (media::InitializeMediaFoundation()) {

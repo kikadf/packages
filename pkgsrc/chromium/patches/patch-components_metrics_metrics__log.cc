@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/metrics/metrics_log.cc.orig	2024-03-19 22:14:39.090598300 +0000
+--- components/metrics/metrics_log.cc.orig	2024-03-26 21:36:53.261356000 +0000
 +++ components/metrics/metrics_log.cc
 @@ -53,7 +53,7 @@
  #include "base/win/current_module.h"

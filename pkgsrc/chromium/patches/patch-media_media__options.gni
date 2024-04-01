@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- media/media_options.gni.orig	2024-03-19 22:14:49.267506100 +0000
+--- media/media_options.gni.orig	2024-03-26 21:37:04.426372500 +0000
 +++ media/media_options.gni
 @@ -190,12 +190,15 @@ declare_args() {
    # Enables runtime selection of ALSA library for audio.

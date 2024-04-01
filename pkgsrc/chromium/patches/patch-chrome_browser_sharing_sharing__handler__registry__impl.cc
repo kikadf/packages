@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-03-19 22:14:33.098063700 +0000
+--- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-03-26 21:36:40.652208000 +0000
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
 @@ -23,7 +23,7 @@
  #endif  // BUILDFLAG(IS_ANDROID)

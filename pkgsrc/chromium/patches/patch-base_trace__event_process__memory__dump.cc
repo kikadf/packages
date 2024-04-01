@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- base/trace_event/process_memory_dump.cc.orig	2024-03-19 22:14:27.301546600 +0000
+--- base/trace_event/process_memory_dump.cc.orig	2024-03-26 21:36:30.399274600 +0000
 +++ base/trace_event/process_memory_dump.cc
 @@ -113,7 +113,7 @@ absl::optional<size_t> ProcessMemoryDump
  #if BUILDFLAG(IS_WIN)

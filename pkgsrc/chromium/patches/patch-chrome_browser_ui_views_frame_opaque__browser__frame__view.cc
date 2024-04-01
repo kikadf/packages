@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2024-03-19 22:14:34.174159800 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2024-03-26 21:36:44.540562200 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.cc
 @@ -54,7 +54,7 @@
  #include "ui/views/window/vector_icons/vector_icons.h"

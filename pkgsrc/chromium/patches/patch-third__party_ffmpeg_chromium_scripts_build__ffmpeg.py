@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/chromium/scripts/build_ffmpeg.py.orig	2024-03-19 22:15:36.939759300 +0000
+--- third_party/ffmpeg/chromium/scripts/build_ffmpeg.py.orig	2024-03-26 21:38:13.432654400 +0000
 +++ third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
 @@ -32,7 +32,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -78,6 +79,15 @@ $NetBSD$
              # See crbug.com/1467681. These could be removed eventually
              '--disable-dotprod',
              '--disable-i8mm',
+@@ -914,7 +918,7 @@ def ConfigureAndBuild(target_arch, targe
+     # typically be the system one, so explicitly configure use of Clang's
+     # ld.lld, to ensure that things like cross-compilation and LTO work.
+     # This does not work for ia32 and is always used on mac.
+-    if target_arch != 'ia32' and target_os != 'mac':
++    if target_arch != 'ia32' and target_os != 'mac' and target_os != 'netbsd':
+       configure_flags['Common'].append('--extra-ldflags=-fuse-ld=lld')
+ 
+   # Should be run on Mac, unless we're cross-compiling on Linux.
 @@ -1027,7 +1031,7 @@ def ConfigureAndBuild(target_arch, targe
          'Chrome', configure_flags['Common'] + configure_flags['ChromeAndroid'] +
          configure_args)

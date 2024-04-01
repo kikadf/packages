@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/webrtc/rtc_base/ip_address.cc.orig	2024-03-19 22:16:26.620191300 +0000
+--- third_party/webrtc/rtc_base/ip_address.cc.orig	2024-03-26 21:39:25.991259600 +0000
 +++ third_party/webrtc/rtc_base/ip_address.cc
 @@ -13,7 +13,8 @@
  #include <sys/socket.h>

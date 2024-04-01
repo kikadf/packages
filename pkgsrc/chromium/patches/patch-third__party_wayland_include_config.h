@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/wayland/include/config.h.orig	2024-03-19 22:15:24.646662500 +0000
+--- third_party/wayland/include/config.h.orig	2024-03-26 21:38:03.199722800 +0000
 +++ third_party/wayland/include/config.h
 @@ -9,7 +9,14 @@
  

@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/gpu/gpu_process_host.cc.orig	2024-03-19 22:14:42.562908200 +0000
+--- content/browser/gpu/gpu_process_host.cc.orig	2024-03-26 21:36:58.153801400 +0000
 +++ content/browser/gpu/gpu_process_host.cc
 @@ -261,6 +261,7 @@ static const char* const kSwitchNames[] 
      switches::kEnableGpuRasterization,

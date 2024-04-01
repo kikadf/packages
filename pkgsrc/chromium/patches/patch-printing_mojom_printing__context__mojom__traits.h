@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- printing/mojom/printing_context_mojom_traits.h.orig	2024-03-19 22:14:51.587713200 +0000
+--- printing/mojom/printing_context_mojom_traits.h.orig	2024-03-26 21:37:07.622663500 +0000
 +++ printing/mojom/printing_context_mojom_traits.h
 @@ -166,7 +166,7 @@ struct StructTraits<printing::mojom::Pri
      return s.pages_per_sheet();

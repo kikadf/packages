@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/embedder_support/user_agent_utils_unittest.cc.orig	2024-03-19 22:14:38.710564400 +0000
+--- components/embedder_support/user_agent_utils_unittest.cc.orig	2024-03-26 21:36:52.849318500 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
 @@ -84,7 +84,7 @@ const char kDesktop[] =
      "Safari/537.36";

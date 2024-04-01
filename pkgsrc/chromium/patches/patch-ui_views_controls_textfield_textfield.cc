@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- ui/views/controls/textfield/textfield.cc.orig	2024-03-19 22:15:27.670932300 +0000
+--- ui/views/controls/textfield/textfield.cc.orig	2024-03-26 21:38:05.731953400 +0000
 +++ ui/views/controls/textfield/textfield.cc
 @@ -84,7 +84,7 @@
  #include "base/win/win_util.h"

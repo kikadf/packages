@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/power/process_monitor.cc.orig	2024-03-19 22:14:31.605930600 +0000
+--- chrome/browser/metrics/power/process_monitor.cc.orig	2024-03-26 21:36:38.536015500 +0000
 +++ chrome/browser/metrics/power/process_monitor.cc
 @@ -65,7 +65,7 @@ ProcessMonitor::Metrics SampleMetrics(ba
  #endif

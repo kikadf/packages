@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- third_party/wayland/BUILD.gn.orig	2024-03-19 22:15:24.646662500 +0000
+--- third_party/wayland/BUILD.gn.orig	2024-03-26 21:38:03.199722800 +0000
 +++ third_party/wayland/BUILD.gn
 @@ -22,6 +22,11 @@ config("wayland_config") {
      "src/src",

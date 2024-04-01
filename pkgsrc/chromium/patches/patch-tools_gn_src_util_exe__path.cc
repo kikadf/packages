@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- tools/gn/src/util/exe_path.cc.orig	2024-03-19 22:26:10.672294600 +0000
+--- tools/gn/src/util/exe_path.cc.orig	2024-03-26 21:50:07.301625300 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@
  #include <windows.h>

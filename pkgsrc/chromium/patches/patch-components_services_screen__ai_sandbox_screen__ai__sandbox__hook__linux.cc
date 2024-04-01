@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- components/services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2024-03-19 22:14:40.542728000 +0000
+--- components/services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2024-03-26 21:36:55.313542800 +0000
 +++ components/services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc
 @@ -53,6 +53,7 @@ bool ScreenAIPreSandboxHook(sandbox::pol
      }

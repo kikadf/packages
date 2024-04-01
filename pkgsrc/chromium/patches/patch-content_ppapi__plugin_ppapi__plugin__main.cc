@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-03-19 22:14:43.338977300 +0000
+--- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-03-26 21:36:58.837863700 +0000
 +++ content/ppapi_plugin/ppapi_plugin_main.cc
 @@ -54,6 +54,11 @@
  #include "gin/v8_initializer.h"

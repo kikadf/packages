@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-03-19 22:14:34.166159000 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2024-03-26 21:36:44.468555500 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
 @@ -2204,7 +2204,7 @@ void BrowserView::TabDraggingStatusChang
    // CrOS cleanup is done.

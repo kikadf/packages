@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- media/base/libvpx_thread_wrapper.cc.orig	2024-03-19 22:14:48.983481000 +0000
+--- media/base/libvpx_thread_wrapper.cc.orig	2024-03-26 21:37:04.022335800 +0000
 +++ media/base/libvpx_thread_wrapper.cc
 @@ -5,11 +5,14 @@
  #include "media/base/libvpx_thread_wrapper.h"

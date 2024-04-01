@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-03-19 22:14:43.290973000 +0000
+--- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-03-26 21:36:58.789859300 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.h
 @@ -44,7 +44,7 @@ class CONTENT_EXPORT WebUIMainFrameObser
  

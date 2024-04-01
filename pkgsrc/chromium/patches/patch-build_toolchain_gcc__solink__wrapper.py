@@ -1,8 +1,9 @@
 $NetBSD$
 
 * Part of patchset to build on NetBSD
+* Based on OpenBSD's chromium patches
 
---- build/toolchain/gcc_solink_wrapper.py.orig	2024-03-19 22:14:27.461561000 +0000
+--- build/toolchain/gcc_solink_wrapper.py.orig	2024-03-26 21:36:30.595292600 +0000
 +++ build/toolchain/gcc_solink_wrapper.py
 @@ -39,7 +39,7 @@ def CollectDynSym(args):
    """Replaces: nm --format=posix -g -D -p $sofile | cut -f1-2 -d' '"""
