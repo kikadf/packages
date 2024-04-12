@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/tools/run-paxctl.py.orig	2024-04-01 16:45:51.091612756 +0000
+--- v8/tools/run-paxctl.py.orig	2024-04-12 16:23:49.448179307 +0000
 +++ v8/tools/run-paxctl.py
 @@ -0,0 +1,16 @@
 +@PLACEHOLDER@

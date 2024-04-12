@@ -5,12 +5,14 @@ $NetBSD$
 
 --- third_party/angle/src/common/system_utils_linux.cpp.orig	2024-03-26 21:39:01.765054200 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
-@@ -15,8 +15,13 @@
+@@ -15,8 +15,15 @@
  
  #include <array>
  
 +#if ANGLE_PLATFORM_OPENBSD
 +#include <pthread_np.h>
++#elif ANGLE_PLATFORM_NETBSD
++#include <pthread.h>
 +#endif
 +
  namespace angle
@@ -19,7 +21,7 @@ $NetBSD$
  std::string GetExecutablePath()
  {
      // We cannot use lstat to get the size of /proc/self/exe as it always returns 0
-@@ -32,6 +37,7 @@ std::string GetExecutablePath()
+@@ -32,6 +39,7 @@ std::string GetExecutablePath()
      path[result] = '\0';
      return path;
  }
@@ -27,7 +29,7 @@ $NetBSD$
  
  std::string GetExecutableDirectory()
  {
-@@ -56,6 +62,10 @@ void SetCurrentThreadName(const char *na
+@@ -56,6 +64,10 @@ void SetCurrentThreadName(const char *na
  {
      // There's a 15-character (16 including '\0') limit.  If the name is too big (and ERANGE is
      // returned), just ignore the name.

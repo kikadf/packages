@@ -6,12 +6,12 @@ CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
 
-PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
+#PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
 
-DISTFILES+=			${DISTNAME}${EXTRACT_SUFX} \
-				${PROFILE_DISTFILE}
+#DISTFILES+=			${DISTNAME}${EXTRACT_SUFX} \
+#				${PROFILE_DISTFILE}
 
-SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
+#SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
 
 MAINTAINER=			ryoon@NetBSD.org
 #MAINTAINER+=			kikadf.01@gmail.com
@@ -44,7 +44,6 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 #TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
 #TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
-TOOL_DEPENDS+=			lld-[0-9]*:../../devel/lld
 
 #PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 
@@ -66,6 +65,7 @@ BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
 BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
 BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
 BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
+BUILDLINK_TRANSFORM+=		opt:-std=c++20:-std=gnu++20
 
 REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
 
@@ -86,6 +86,8 @@ REPLACE_PYTHON+=	v8/tools/run-paxctl.py
 CFLAGS+=		-fno-stack-protector
 #CFLAGS+=		-isystem${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/include # third_party/zlib with clang
 CFLAGS+=		-isystem${PREFIX}/lib/clang/16/include # third_party/zlib with clang
+# Workaround -Wl,-zrelro: 'linker' input unused in bootstrap.py
+CFLAGS+=		-Wno-error=unused-command-line-argument
 
 .include "options.mk"
 
@@ -108,8 +110,7 @@ GN_SYSTEM_LIBS=	dav1d \
 		openh264 \
 		opus
 
-GN_ARGS=	enable_nacl=false \
-		is_official_build=true \
+GN_ARGS+=	enable_nacl=false \
 		is_cfi=false \
 		optimize_webui=true \
 		enable_remoting=false \
@@ -123,6 +124,8 @@ GN_ARGS=	enable_nacl=false \
 		use_system_freetype=true \
 		icu_use_data_file=false \
 		is_clang=true \
+		use_lld=false \
+		use_gold=false \
 		use_sysroot=false \
 		treat_warnings_as_errors=false \
 		clang_use_chrome_plugins=false \
@@ -197,10 +200,6 @@ PKGSRC_COMPILER=	clang
 PKG_CC=			clang
 PKG_CXX=		clang++
 
-#post-extract:
-#	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
-#		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
-
 pre-configure:
 #	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
 #	${LN} -sf ${PREFIX}/bin/clang++ \
@@ -241,9 +240,10 @@ do-configure:
 		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
 		--system-libraries ${GN_SYSTEM_LIBS} || ${FALSE}
 
-	cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./tools/gn/bootstrap/bootstrap.py \
+	cd ${WRKSRC}/tools/gn && \
+		${SETENV} ${MAKE_ENV} ${PYTHONBIN} bootstrap/bootstrap.py \
 		${GN_BOOTSTRAP_FLAGS} --gn-gen-args "${GN_ARGS}"
+
 	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \
 		gen --args="${GN_ARGS}" --script-executable="${PYTHONBIN}" ${GN_VERBOSE} out/${BUILDTYPE}
@@ -269,6 +269,12 @@ do-build:
 	${SETENV} ${MAKE_ENV} \
 		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
 			chrome chromedriver
+
+.if !empty(PKG_OPTIONS:Mprofdata)
+	cd ${WRKSRC}/tools/pgo && \
+		${PYTHONBIN} generate_profile.py -C out/${BUILDTYPE}
+.endif
+
 
 CHROMIUM_DIR=		chrome
 INSTALLATION_DIRS+=	${CHROMIUM_DIR}
@@ -323,65 +329,67 @@ do-install:
 		pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
 .endfor
 
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
-.include "../../print/libcups/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../audio/flac/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../security/libgnome-keyring/buildlink3.mk"
-.include "../../security/libsecret/buildlink3.mk"
-.include "../../fonts/harfbuzz/buildlink3.mk"
-# Not yet
-#.include "../../devel/libevent/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
-.include "../../textproc/jsoncpp/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
+.include "../../devel/dconf/buildlink3.mk"
+.include "../../devel/libatomic/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../devel/re2/buildlink3.mk"
+.include "../../devel/snappy/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+BUILDLINK_DEPMETHOD.clang=	build
+.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/compiler-rt/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../lang/rust/rust.mk"
+.include "../../misc/usbids/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../multimedia/dav1d/buildlink3.mk"
+.include "../../multimedia/libaom/buildlink3.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../multimedia/openh264/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
+.include "../../security/libgnome-keyring/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
 BUILDLINK_TRANSFORM+=	l:pci:pciutils
-.include "../../graphics/png/buildlink3.mk"
-.include "../../devel/re2/buildlink3.mk"
-.include "../../devel/snappy/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
-.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../devel/dconf/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk"
-.include "../../devel/libusb1/buildlink3.mk"
-.include "../../misc/usbids/buildlink3.mk"
-#.include "../../textproc/icu/buildlink3.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
-.include "../../multimedia/libaom/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-#.include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../devel/libatomic/buildlink3.mk"
-BUILDLINK_DEPMETHOD.clang=	build
-.include "../../lang/clang/buildlink3.mk"
-.include "../../lang/python/tool.mk"
-.include "../../lang/rust/rust.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

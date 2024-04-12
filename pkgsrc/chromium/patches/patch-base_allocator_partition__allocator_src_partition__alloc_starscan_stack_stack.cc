@@ -9,7 +9,7 @@ $NetBSD$
  #include <pthread.h>
  #endif
  
-+#if BUILDFLAG(IS_BSD)
++#if BUILDFLAG(IS_BSD) && !BUILDFLAG(IS_NETBSD)
 +#include <pthread_np.h>
 +#endif
 +

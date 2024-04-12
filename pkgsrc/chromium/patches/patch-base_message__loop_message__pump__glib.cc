@@ -9,7 +9,7 @@ $NetBSD$
  #include <glib.h>
  #include <math.h>
  
-+#if BUILDFLAG(IS_BSD)
++#if BUILDFLAG(IS_BSD) && !BUILDFLAG(IS_NETBSD)
 +#include <pthread.h>
 +#include <pthread_np.h>
 +#endif
@@ -21,7 +21,7 @@ $NetBSD$
  }
  
  bool RunningOnMainThread() {
-+#if BUILDFLAG(IS_BSD)
++#if BUILDFLAG(IS_BSD) && !BUILDFLAG(IS_NETBSD)
 +  return pthread_main_np();
 +#else
    auto pid = getpid();

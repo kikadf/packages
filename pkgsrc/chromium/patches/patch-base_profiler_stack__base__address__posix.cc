@@ -5,18 +5,22 @@ $NetBSD$
 
 --- base/profiler/stack_base_address_posix.cc.orig	2024-03-26 21:36:30.239260200 +0000
 +++ base/profiler/stack_base_address_posix.cc
-@@ -17,6 +17,10 @@
+@@ -17,6 +17,14 @@
  #include "base/files/scoped_file.h"
  #endif
  
 +#if BUILDFLAG(IS_BSD)
++#if BUILDFLAG(IS_NETBSD)
++#include <pthread.h>
++#else
 +#include <pthread_np.h>
++#endif
 +#endif
 +
  #if BUILDFLAG(IS_CHROMEOS)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -45,7 +49,21 @@ absl::optional<uintptr_t> GetAndroidMain
+@@ -45,7 +53,21 @@ absl::optional<uintptr_t> GetAndroidMain
  
  #if !BUILDFLAG(IS_LINUX)
  uintptr_t GetThreadStackBaseAddressImpl(pthread_t pthread_id) {
@@ -38,7 +42,7 @@ $NetBSD$
    // pthread_getattr_np will crash on ChromeOS & Linux if we are in the sandbox
    // and pthread_id refers to a different thread, due to the use of
    // sched_getaffinity().
-@@ -58,12 +76,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
+@@ -58,12 +80,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
                        << logging::SystemErrorCodeToString(result);
    // See crbug.com/617730 for limitations of this approach on Linux-like
    // systems.

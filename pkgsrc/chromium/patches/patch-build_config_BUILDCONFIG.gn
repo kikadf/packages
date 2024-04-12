@@ -43,7 +43,7 @@ $NetBSD$
  is_ios = current_os == "ios"
 -is_linux = current_os == "linux"
 +is_linux = current_os == "linux" || current_os == "openbsd" ||
-+           current_os == "freebsd"
++           current_os == "freebsd" || current_os == "netbsd"
 +is_openbsd = current_os == "openbsd"
 +is_freebsd = current_os == "freebsd"
 +is_netbsd = current_os == "netbsd"
