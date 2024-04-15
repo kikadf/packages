@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc.orig	2024-03-26 21:37:13.603207800 +0000
+--- third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc.orig	2024-04-10 21:25:02.070028300 +0000
 +++ third_party/blink/renderer/platform/instrumentation/partition_alloc_memory_dump_provider.cc
 @@ -24,6 +24,7 @@ PartitionAllocMemoryDumpProvider* Partit
  bool PartitionAllocMemoryDumpProvider::OnMemoryDump(

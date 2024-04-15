@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2024-03-26 21:37:11.775041300 +0000
+--- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2024-04-10 21:25:00.541906400 +0000
 +++ third_party/blink/renderer/core/editing/editing_behavior.cc
 @@ -324,7 +324,7 @@ bool EditingBehavior::ShouldInsertCharac
    // unexpected behaviour

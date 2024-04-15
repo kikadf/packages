@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2024-03-26 21:39:27.035354600 +0000
+--- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2024-04-10 21:26:12.847668600 +0000
 +++ third_party/webrtc/rtc_base/platform_thread_types.cc
 @@ -11,7 +11,9 @@
  #include "rtc_base/platform_thread_types.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/base/test/vm_test_utils.cc.orig	2024-03-26 21:38:59.940888200 +0000
+--- third_party/perfetto/src/base/test/vm_test_utils.cc.orig	2024-04-10 21:26:07.183217300 +0000
 +++ third_party/perfetto/src/base/test/vm_test_utils.cc
 @@ -91,7 +91,7 @@ bool IsMapped(void* start, size_t size) 
    // Fuchsia doesn't yet support paging (b/119503290).

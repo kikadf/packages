@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/crash/core/browser/crash_upload_list_crashpad.cc.orig	2024-03-26 21:36:52.669302000 +0000
+--- components/crash/core/browser/crash_upload_list_crashpad.cc.orig	2024-04-10 21:24:48.276929100 +0000
 +++ components/crash/core/browser/crash_upload_list_crashpad.cc
 @@ -38,7 +38,9 @@ CrashUploadListCrashpad::~CrashUploadLis
  std::vector<std::unique_ptr<UploadList::UploadInfo>>

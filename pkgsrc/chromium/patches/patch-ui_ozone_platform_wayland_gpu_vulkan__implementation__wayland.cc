@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc.orig	2024-03-26 21:38:05.567938600 +0000
+--- ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc.orig	2024-04-10 21:25:25.403887700 +0000
 +++ ui/ozone/platform/wayland/gpu/vulkan_implementation_wayland.cc
 @@ -38,7 +38,11 @@ bool VulkanImplementationWayland::Initia
  

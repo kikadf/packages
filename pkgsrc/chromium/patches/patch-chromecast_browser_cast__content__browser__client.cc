@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chromecast/browser/cast_content_browser_client.cc.orig	2024-03-26 21:36:50.909141800 +0000
+--- chromecast/browser/cast_content_browser_client.cc.orig	2024-04-10 21:24:47.036830200 +0000
 +++ chromecast/browser/cast_content_browser_client.cc
 @@ -434,7 +434,7 @@ void CastContentBrowserClient::AppendExt
                                            switches::kAudioOutputChannels));

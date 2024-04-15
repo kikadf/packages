@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/dns_util.cc.orig	2024-03-26 21:37:06.614571600 +0000
+--- net/dns/dns_util.cc.orig	2024-04-10 21:24:57.393655500 +0000
 +++ net/dns/dns_util.cc
 @@ -29,6 +29,8 @@
  #include "net/dns/public/util.h"

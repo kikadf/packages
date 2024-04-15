@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2024-03-26 21:38:05.563938100 +0000
+--- ui/ozone/platform/headless/ozone_platform_headless.cc.orig	2024-04-10 21:25:25.399887600 +0000
 +++ ui/ozone/platform/headless/ozone_platform_headless.cc
 @@ -103,7 +103,7 @@ class OzonePlatformHeadless : public Ozo
    }

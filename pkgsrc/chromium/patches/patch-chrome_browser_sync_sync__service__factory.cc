@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2024-03-26 21:36:40.752217300 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2024-04-10 21:24:43.268530000 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
 @@ -84,7 +84,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)

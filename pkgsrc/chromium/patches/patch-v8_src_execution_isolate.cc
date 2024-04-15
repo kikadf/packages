@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/execution/isolate.cc.orig	2024-03-26 21:39:25.367202800 +0000
+--- v8/src/execution/isolate.cc.orig	2024-04-10 21:26:20.436273300 +0000
 +++ v8/src/execution/isolate.cc
 @@ -153,6 +153,10 @@
  #include "src/execution/simulator-base.h"

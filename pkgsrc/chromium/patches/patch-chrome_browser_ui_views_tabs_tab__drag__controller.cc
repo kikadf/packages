@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-03-26 21:36:45.200622000 +0000
+--- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-04-10 21:24:44.364617300 +0000
 +++ chrome/browser/ui/views/tabs/tab_drag_controller.cc
 @@ -94,7 +94,7 @@
  #include "components/remote_cocoa/browser/window.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2024-03-26 21:36:44.988602900 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2024-04-10 21:24:44.316613400 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc
 @@ -55,7 +55,7 @@ namespace {
  

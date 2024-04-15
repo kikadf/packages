@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/client_session.cc.orig	2024-03-26 21:37:07.718672300 +0000
+--- remoting/host/client_session.cc.orig	2024-04-10 21:24:58.421737400 +0000
 +++ remoting/host/client_session.cc
 @@ -160,7 +160,7 @@ void ClientSession::NotifyClientResoluti
    if (desktop_environment_options_.enable_curtaining()) {

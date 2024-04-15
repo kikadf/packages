@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/font_render_params.h.orig	2024-03-26 21:38:05.415924500 +0000
+--- ui/gfx/font_render_params.h.orig	2024-04-10 21:25:25.255876000 +0000
 +++ ui/gfx/font_render_params.h
 @@ -118,7 +118,7 @@ GFX_EXPORT FontRenderParams GetFontRende
      const FontRenderParamsQuery& query,

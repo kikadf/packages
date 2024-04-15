@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2024-03-26 21:36:45.848681200 +0000
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2024-04-10 21:24:44.420621600 +0000
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
 @@ -512,7 +512,7 @@ std::string GetFileExtension(FileExtensi
  }

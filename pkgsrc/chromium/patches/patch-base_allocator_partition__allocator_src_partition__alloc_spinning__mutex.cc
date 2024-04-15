@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2024-03-26 21:36:30.003238700 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc.orig	2024-04-10 21:24:37.068035800 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/spinning_mutex.cc
 @@ -17,7 +17,16 @@
  #endif

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2024-03-26 21:37:57.563209800 +0000
+--- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2024-04-10 21:25:18.879367800 +0000
 +++ third_party/crashpad/crashpad/util/misc/capture_context.h
 @@ -21,7 +21,8 @@
  #include <mach/mach.h>

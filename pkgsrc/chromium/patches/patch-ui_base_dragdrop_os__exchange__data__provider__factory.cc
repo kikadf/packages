@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2024-03-26 21:38:04.919879400 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_factory.cc.orig	2024-04-10 21:25:24.679830000 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_factory.cc
 @@ -7,7 +7,7 @@
  #include "base/notreached.h"

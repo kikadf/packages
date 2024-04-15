@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gl/BUILD.gn.orig	2024-03-26 21:38:05.479930400 +0000
+--- ui/gl/BUILD.gn.orig	2024-04-10 21:25:25.319881200 +0000
 +++ ui/gl/BUILD.gn
 @@ -154,8 +154,6 @@ component("gl") {
      defines += [ "GPU_ENABLE_SERVICE_LOGGING" ]

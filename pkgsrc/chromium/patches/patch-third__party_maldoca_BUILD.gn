@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/maldoca/BUILD.gn.orig	2024-03-26 21:37:59.339371400 +0000
+--- third_party/maldoca/BUILD.gn.orig	2024-04-10 21:25:20.191472300 +0000
 +++ third_party/maldoca/BUILD.gn
 @@ -264,6 +264,10 @@ source_set("maldoca-public-headers") {
      ":maldoca_chromium_config",

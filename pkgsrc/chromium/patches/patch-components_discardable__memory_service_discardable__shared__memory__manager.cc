@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2024-03-26 21:36:52.773311600 +0000
+--- components/discardable_memory/service/discardable_shared_memory_manager.cc.orig	2024-04-10 21:24:48.360935700 +0000
 +++ components/discardable_memory/service/discardable_shared_memory_manager.cc
 @@ -172,7 +172,7 @@ uint64_t GetDefaultMemoryLimit() {
    // Limits the number of FDs used to 32, assuming a 4MB allocation size.

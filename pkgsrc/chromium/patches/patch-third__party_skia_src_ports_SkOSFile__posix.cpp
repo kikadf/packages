@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/skia/src/ports/SkOSFile_posix.cpp.orig	2024-03-26 21:38:22.797506800 +0000
+--- third_party/skia/src/ports/SkOSFile_posix.cpp.orig	2024-04-10 21:25:43.341317200 +0000
 +++ third_party/skia/src/ports/SkOSFile_posix.cpp
 @@ -25,7 +25,7 @@
  #endif

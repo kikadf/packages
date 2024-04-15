@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2024-03-26 21:36:40.476192000 +0000
+--- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2024-04-10 21:24:43.052512600 +0000
 +++ chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc
 @@ -18,7 +18,7 @@
  #include "net/base/url_util.h"

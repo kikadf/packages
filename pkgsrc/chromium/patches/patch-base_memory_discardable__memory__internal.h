@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/memory/discardable_memory_internal.h.orig	2024-03-26 21:36:30.139251000 +0000
+--- base/memory/discardable_memory_internal.h.orig	2024-04-10 21:24:37.176044500 +0000
 +++ base/memory/discardable_memory_internal.h
 @@ -10,7 +10,7 @@
  #include "base/metrics/field_trial_params.h"

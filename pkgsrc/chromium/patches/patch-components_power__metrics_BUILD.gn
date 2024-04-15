@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/power_metrics/BUILD.gn.orig	2024-03-26 21:36:54.797495800 +0000
+--- components/power_metrics/BUILD.gn.orig	2024-04-10 21:24:49.797050200 +0000
 +++ components/power_metrics/BUILD.gn
 @@ -41,7 +41,7 @@ static_library("power_metrics") {
      ldflags = [ "/DELAYLOAD:setupapi.dll" ]

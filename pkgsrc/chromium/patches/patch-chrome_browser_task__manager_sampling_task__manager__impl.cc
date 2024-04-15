@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2024-03-26 21:36:40.856226700 +0000
+--- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2024-04-10 21:24:43.360537300 +0000
 +++ chrome/browser/task_manager/sampling/task_manager_impl.cc
 @@ -218,7 +218,7 @@ void TaskManagerImpl::GetUSERHandles(Tas
  }

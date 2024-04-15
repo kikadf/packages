@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/base/mock_network_change_notifier.h.orig	2024-03-26 21:37:06.050520200 +0000
+--- net/base/mock_network_change_notifier.h.orig	2024-04-10 21:24:57.121634000 +0000
 +++ net/base/mock_network_change_notifier.h
 @@ -84,7 +84,7 @@ class MockNetworkChangeNotifier : public
    // use_default_connection_cost_implementation is set to true.

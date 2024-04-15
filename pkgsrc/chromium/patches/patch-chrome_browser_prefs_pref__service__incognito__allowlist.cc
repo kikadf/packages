@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2024-03-26 21:36:38.976055400 +0000
+--- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2024-04-10 21:24:42.296452500 +0000
 +++ chrome/browser/prefs/pref_service_incognito_allowlist.cc
 @@ -175,7 +175,7 @@ const char* const kPersistentPrefNames[]
      prefs::kShowFullscreenToolbar,

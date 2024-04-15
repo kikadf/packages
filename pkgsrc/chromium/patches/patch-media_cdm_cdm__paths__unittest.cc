@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/cdm/cdm_paths_unittest.cc.orig	2024-03-26 21:37:04.118344300 +0000
+--- media/cdm/cdm_paths_unittest.cc.orig	2024-04-10 21:24:56.049548400 +0000
 +++ media/cdm/cdm_paths_unittest.cc
 @@ -27,7 +27,7 @@ const char kComponentPlatform[] =
      "win";

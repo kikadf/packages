@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/crash/core/common/BUILD.gn.orig	2024-03-26 21:36:52.669302000 +0000
+--- components/crash/core/common/BUILD.gn.orig	2024-04-10 21:24:48.280929300 +0000
 +++ components/crash/core/common/BUILD.gn
 @@ -9,7 +9,7 @@ import("//components/gwp_asan/buildflags
  

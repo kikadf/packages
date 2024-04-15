@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc.orig	2024-03-26 21:36:37.855953500 +0000
+--- chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc.orig	2024-04-10 21:24:41.428383400 +0000
 +++ chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc
 @@ -11,7 +11,7 @@
  #include "chrome/browser/profiles/profile_manager.h"

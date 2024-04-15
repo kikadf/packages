@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/shell/BUILD.gn.orig	2024-03-26 21:36:59.077885600 +0000
+--- content/shell/BUILD.gn.orig	2024-04-10 21:24:52.637276600 +0000
 +++ content/shell/BUILD.gn
 @@ -1027,7 +1027,7 @@ group("content_shell_crash_test") {
    if (is_win) {

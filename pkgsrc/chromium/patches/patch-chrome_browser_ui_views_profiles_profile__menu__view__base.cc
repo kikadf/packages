@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-03-26 21:36:44.964600600 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-04-10 21:24:44.308612800 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view_base.cc
 @@ -703,7 +703,7 @@ void ProfileMenuViewBase::SetProfileIden
  

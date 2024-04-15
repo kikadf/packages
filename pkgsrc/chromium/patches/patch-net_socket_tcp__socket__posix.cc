@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/socket/tcp_socket_posix.cc.orig	2024-03-26 21:37:07.190624000 +0000
+--- net/socket/tcp_socket_posix.cc.orig	2024-04-10 21:24:57.925698000 +0000
 +++ net/socket/tcp_socket_posix.cc
 @@ -98,6 +98,17 @@ bool SetTCPKeepAlive(int fd, bool enable
        PLOG(ERROR) << "Failed to set TCP_KEEPALIVE on fd: " << fd;

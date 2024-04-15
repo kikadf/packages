@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/debug/debugger_posix.cc.orig	2024-03-26 21:36:30.071244700 +0000
+--- base/debug/debugger_posix.cc.orig	2024-04-10 21:24:37.132041000 +0000
 +++ base/debug/debugger_posix.cc
 @@ -35,6 +35,10 @@
  #include <sys/sysctl.h>

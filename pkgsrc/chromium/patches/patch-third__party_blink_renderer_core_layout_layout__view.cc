@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-03-26 21:37:12.343093200 +0000
+--- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-04-10 21:25:00.893934500 +0000
 +++ third_party/blink/renderer/core/layout/layout_view.cc
 @@ -71,7 +71,7 @@
  #include "ui/gfx/geometry/quad_f.h"

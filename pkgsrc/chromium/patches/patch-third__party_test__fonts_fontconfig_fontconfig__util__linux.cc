@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2024-03-26 21:38:02.139626300 +0000
+--- third_party/test_fonts/fontconfig/fontconfig_util_linux.cc.orig	2024-04-10 21:25:22.207633000 +0000
 +++ third_party/test_fonts/fontconfig/fontconfig_util_linux.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be

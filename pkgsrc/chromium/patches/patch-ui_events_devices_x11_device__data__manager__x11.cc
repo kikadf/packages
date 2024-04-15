@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-03-26 21:38:05.227907400 +0000
+--- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-04-10 21:25:25.115864800 +0000
 +++ ui/events/devices/x11/device_data_manager_x11.cc
 @@ -844,6 +844,7 @@ void DeviceDataManagerX11::SetDisabledKe
  }

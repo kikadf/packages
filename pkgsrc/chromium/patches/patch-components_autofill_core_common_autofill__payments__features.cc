@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2024-03-26 21:36:52.257264600 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2024-04-10 21:24:47.964904000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
 @@ -281,7 +281,7 @@ BASE_FEATURE(kAutofillEnableVirtualCards
  bool ShouldShowImprovedUserConsentForCreditCardSave() {

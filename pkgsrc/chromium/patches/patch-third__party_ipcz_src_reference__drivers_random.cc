@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-03-26 21:37:58.231270600 +0000
+--- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-04-10 21:25:19.615426500 +0000
 +++ third_party/ipcz/src/reference_drivers/random.cc
 @@ -14,7 +14,7 @@
  #include <windows.h>

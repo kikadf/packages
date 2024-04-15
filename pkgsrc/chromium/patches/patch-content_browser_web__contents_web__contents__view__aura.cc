@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/web_contents/web_contents_view_aura.cc.orig	2024-03-26 21:36:58.709852000 +0000
+--- content/browser/web_contents/web_contents_view_aura.cc.orig	2024-04-10 21:24:52.353253800 +0000
 +++ content/browser/web_contents/web_contents_view_aura.cc
 @@ -174,7 +174,7 @@ class WebDragSourceAura : public content
    raw_ptr<aura::Window> window_;

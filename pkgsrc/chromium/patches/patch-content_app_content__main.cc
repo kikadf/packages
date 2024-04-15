@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/app/content_main.cc.orig	2024-03-26 21:36:57.701760300 +0000
+--- content/app/content_main.cc.orig	2024-04-10 21:24:51.773207700 +0000
 +++ content/app/content_main.cc
 @@ -207,7 +207,7 @@ RunContentProcess(ContentMainParams para
  #endif

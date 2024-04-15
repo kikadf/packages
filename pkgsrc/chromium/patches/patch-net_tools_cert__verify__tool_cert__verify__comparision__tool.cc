@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/tools/cert_verify_tool/cert_verify_comparision_tool.cc.orig	2024-03-26 21:37:07.322636100 +0000
+--- net/tools/cert_verify_tool/cert_verify_comparision_tool.cc.orig	2024-04-10 21:24:57.977702100 +0000
 +++ net/tools/cert_verify_tool/cert_verify_comparision_tool.cc
 @@ -35,7 +35,7 @@
  #include "net/url_request/url_request_context_builder.h"

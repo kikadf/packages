@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/public/browser/content_browser_client.cc.orig	2024-03-26 21:36:58.893868700 +0000
+--- content/public/browser/content_browser_client.cc.orig	2024-04-10 21:24:52.497265300 +0000
 +++ content/public/browser/content_browser_client.cc
 @@ -1277,7 +1277,7 @@ bool ContentBrowserClient::ShouldRunOutO
  // that can be adequately sandboxed.

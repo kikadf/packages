@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/hid/hid_connection_freebsd.cc.orig	2024-04-12 16:23:47.905728832 +0000
+--- services/device/hid/hid_connection_freebsd.cc.orig	2024-04-15 08:14:43.174341225 +0000
 +++ services/device/hid/hid_connection_freebsd.cc
 @@ -0,0 +1,240 @@
 +// Copyright (c) 2014 The Chromium Authors. All rights reserved.

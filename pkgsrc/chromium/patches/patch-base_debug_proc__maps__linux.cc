@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/debug/proc_maps_linux.cc.orig	2024-03-26 21:36:30.075245100 +0000
+--- base/debug/proc_maps_linux.cc.orig	2024-04-10 21:24:37.136041200 +0000
 +++ base/debug/proc_maps_linux.cc
 @@ -13,7 +13,7 @@
  #include "base/strings/string_split.h"

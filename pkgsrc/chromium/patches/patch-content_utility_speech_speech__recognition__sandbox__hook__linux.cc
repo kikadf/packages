@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2024-03-26 21:36:59.773949000 +0000
+--- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2024-04-10 21:24:53.201321600 +0000
 +++ content/utility/speech/speech_recognition_sandbox_hook_linux.cc
 @@ -12,11 +12,14 @@
  #include "sandbox/linux/syscall_broker/broker_command.h"

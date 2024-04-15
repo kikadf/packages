@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/shell/utility/shell_content_utility_client.cc.orig	2024-03-26 21:36:59.097887300 +0000
+--- content/shell/utility/shell_content_utility_client.cc.orig	2024-04-10 21:24:52.653277900 +0000
 +++ content/shell/utility/shell_content_utility_client.cc
 @@ -38,7 +38,7 @@
  #include "sandbox/policy/sandbox.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/include/v8-internal.h.orig	2024-03-26 21:39:10.233825200 +0000
+--- v8/include/v8-internal.h.orig	2024-04-10 21:26:20.024240700 +0000
 +++ v8/include/v8-internal.h
 @@ -175,7 +175,7 @@ using SandboxedPointer_t = Address;
  #ifdef V8_ENABLE_SANDBOX

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/tabs/tab.cc.orig	2024-03-26 21:36:45.100613000 +0000
+--- chrome/browser/ui/views/tabs/tab.cc.orig	2024-04-10 21:24:44.360617000 +0000
 +++ chrome/browser/ui/views/tabs/tab.cc
 @@ -618,7 +618,7 @@ void Tab::MaybeUpdateHoverStatus(const u
      return;

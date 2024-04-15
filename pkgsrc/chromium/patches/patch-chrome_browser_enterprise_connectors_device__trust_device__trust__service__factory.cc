@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2024-03-26 21:36:37.831951400 +0000
+--- chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc.orig	2024-04-10 21:24:41.400381000 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/device_trust_service_factory.cc
 @@ -23,7 +23,7 @@
  #include "components/policy/core/common/management/management_service.h"

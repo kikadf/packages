@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/switches.cc.orig	2024-03-26 21:38:05.459928500 +0000
+--- ui/gfx/switches.cc.orig	2024-04-10 21:25:25.295879100 +0000
 +++ ui/gfx/switches.cc
 @@ -28,7 +28,7 @@ const char kForcePrefersReducedMotion[] 
  // Run in headless mode, i.e., without a UI or display server dependencies.

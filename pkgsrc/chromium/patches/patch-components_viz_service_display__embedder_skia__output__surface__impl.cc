@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-03-26 21:36:57.573748600 +0000
+--- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-04-10 21:24:51.485184700 +0000
 +++ components/viz/service/display_embedder/skia_output_surface_impl.cc
 @@ -1519,7 +1519,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
              ->GetDeviceQueue()

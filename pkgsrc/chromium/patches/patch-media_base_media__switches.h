@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/base/media_switches.h.orig	2024-03-26 21:37:04.030336400 +0000
+--- media/base/media_switches.h.orig	2024-04-10 21:24:55.961541400 +0000
 +++ media/base/media_switches.h
 @@ -43,7 +43,7 @@ MEDIA_EXPORT extern const char kDisableB
  MEDIA_EXPORT extern const char kReportVp9AsAnUnsupportedMimeType[];

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/utility/utility_main.cc.orig	2024-03-26 21:36:59.773949000 +0000
+--- content/utility/utility_main.cc.orig	2024-04-10 21:24:53.205321800 +0000
 +++ content/utility/utility_main.cc
 @@ -37,17 +37,21 @@
  #include "third_party/icu/source/common/unicode/unistr.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/video_capture/public/mojom/video_capture_service.mojom.orig	2024-03-26 21:37:09.370822700 +0000
+--- services/video_capture/public/mojom/video_capture_service.mojom.orig	2024-04-10 21:24:58.921777200 +0000
 +++ services/video_capture/public/mojom/video_capture_service.mojom
 @@ -25,10 +25,10 @@ interface AcceleratorFactory {
        pending_receiver<chromeos_camera.mojom.MjpegDecodeAccelerator> jda);

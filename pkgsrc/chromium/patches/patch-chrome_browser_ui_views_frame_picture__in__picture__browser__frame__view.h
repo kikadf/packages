@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2024-03-26 21:36:44.544562300 +0000
+--- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2024-04-10 21:24:44.212605200 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h
 @@ -27,7 +27,7 @@
  #include "ui/views/layout/flex_layout_view.h"

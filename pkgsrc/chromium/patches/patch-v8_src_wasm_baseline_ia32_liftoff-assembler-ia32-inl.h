@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h.orig	2024-03-26 21:39:30.447665500 +0000
+--- v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h.orig	2024-04-10 21:26:20.764299600 +0000
 +++ v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h
 @@ -511,7 +511,7 @@ void LiftoffAssembler::StoreTaggedPointe
  }

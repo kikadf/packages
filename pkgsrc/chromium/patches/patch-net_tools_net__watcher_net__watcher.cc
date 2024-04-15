@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/tools/net_watcher/net_watcher.cc.orig	2024-03-26 21:37:07.326636600 +0000
+--- net/tools/net_watcher/net_watcher.cc.orig	2024-04-10 21:24:57.981702300 +0000
 +++ net/tools/net_watcher/net_watcher.cc
 @@ -32,7 +32,7 @@
  #include "net/proxy_resolution/proxy_config_service.h"

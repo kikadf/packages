@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/events/keycodes/dom/keycode_converter.h.orig	2024-03-26 21:38:05.243909000 +0000
+--- ui/events/keycodes/dom/keycode_converter.h.orig	2024-04-10 21:25:25.127865800 +0000
 +++ ui/events/keycodes/dom/keycode_converter.h
 @@ -63,7 +63,7 @@ class KeycodeConverter {
    // Convert a DomCode into a native keycode.

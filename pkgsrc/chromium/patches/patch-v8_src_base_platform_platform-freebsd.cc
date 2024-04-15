@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/base/platform/platform-freebsd.cc.orig	2024-03-26 21:39:11.461937000 +0000
+--- v8/src/base/platform/platform-freebsd.cc.orig	2024-04-10 21:26:20.060243400 +0000
 +++ v8/src/base/platform/platform-freebsd.cc
 @@ -43,14 +43,10 @@ TimezoneCache* OS::CreateTimezoneCache()
    return new PosixDefaultTimezoneCache();

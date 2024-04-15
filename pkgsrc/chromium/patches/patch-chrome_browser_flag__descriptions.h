@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/flag_descriptions.h.orig	2024-03-26 21:36:38.295993600 +0000
+--- chrome/browser/flag_descriptions.h.orig	2024-04-10 21:24:41.732407600 +0000
 +++ chrome/browser/flag_descriptions.h
 @@ -1694,7 +1694,7 @@ extern const char kCbdTimeframeRequiredN
  extern const char kCbdTimeframeRequiredDescription[];

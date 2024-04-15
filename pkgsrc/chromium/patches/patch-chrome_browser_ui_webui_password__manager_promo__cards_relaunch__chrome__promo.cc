@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc.orig	2024-03-26 21:36:47.424824700 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc.orig	2024-04-10 21:24:44.616637500 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc
 @@ -37,7 +37,7 @@ std::u16string RelaunchChromePromo::GetT
    return l10n_util::GetStringUTF16(

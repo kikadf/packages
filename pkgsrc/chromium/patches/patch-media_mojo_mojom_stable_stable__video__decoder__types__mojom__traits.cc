@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2024-03-26 21:37:04.450374600 +0000
+--- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2024-04-10 21:24:56.217562000 +0000
 +++ media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc
 @@ -837,7 +837,7 @@ const gfx::GpuMemoryBufferId& StructTrai
    return input.id;

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/public/common/content_switches.cc.orig	2024-03-26 21:36:58.933872500 +0000
+--- content/public/common/content_switches.cc.orig	2024-04-10 21:24:52.533268200 +0000
 +++ content/public/common/content_switches.cc
 @@ -366,6 +366,8 @@ const char kEnableIsolatedWebAppsInRende
  // builds.

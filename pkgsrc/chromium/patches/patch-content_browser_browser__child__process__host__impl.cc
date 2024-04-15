@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/browser_child_process_host_impl.cc.orig	2024-03-26 21:36:57.985786200 +0000
+--- content/browser/browser_child_process_host_impl.cc.orig	2024-04-10 21:24:51.869215300 +0000
 +++ content/browser/browser_child_process_host_impl.cc
 @@ -326,6 +326,7 @@ void BrowserChildProcessHostImpl::Launch
        switches::kDisableBestEffortTasks,

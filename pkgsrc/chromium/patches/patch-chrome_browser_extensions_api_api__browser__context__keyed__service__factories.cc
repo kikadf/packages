@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2024-03-26 21:36:37.915959000 +0000
+--- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2024-04-10 21:24:41.452385200 +0000
 +++ chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc
 @@ -44,7 +44,7 @@
  #include "extensions/browser/api/networking_private/networking_private_delegate_factory.h"

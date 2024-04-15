@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/child/child_process.cc.orig	2024-03-26 21:36:58.801860300 +0000
+--- content/child/child_process.cc.orig	2024-04-10 21:24:52.401257800 +0000
 +++ content/child/child_process.cc
 @@ -66,7 +66,7 @@ ChildProcess::ChildProcess(base::ThreadT
                                 thread_pool_init_params)

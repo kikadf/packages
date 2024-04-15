@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2024-03-26 21:36:37.195893500 +0000
+--- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2024-04-10 21:24:41.072354800 +0000
 +++ chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc
 @@ -90,7 +90,7 @@ ChromeAutocompleteSchemeClassifier::GetI
        return metrics::OmniboxInputType::QUERY;

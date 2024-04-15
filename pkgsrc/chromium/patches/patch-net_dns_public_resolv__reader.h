@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/public/resolv_reader.h.orig	2024-03-26 21:37:06.634573500 +0000
+--- net/dns/public/resolv_reader.h.orig	2024-04-10 21:24:57.409656800 +0000
 +++ net/dns/public/resolv_reader.h
 @@ -5,6 +5,7 @@
  #ifndef NET_DNS_PUBLIC_RESOLV_READER_H_

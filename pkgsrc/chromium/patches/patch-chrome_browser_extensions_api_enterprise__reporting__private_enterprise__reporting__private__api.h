@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.h.orig	2024-03-26 21:36:37.955962700 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.h.orig	2024-04-10 21:24:41.492388500 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.h
 @@ -20,7 +20,7 @@
  #include "components/reporting/proto/synced/record.pb.h"

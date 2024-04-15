@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/node/node.py.orig	2024-03-26 21:37:59.587394000 +0000
+--- third_party/node/node.py.orig	2024-04-10 21:25:20.663510000 +0000
 +++ third_party/node/node.py
 @@ -16,6 +16,9 @@ def GetBinaryPath():
    return os_path.join(os_path.dirname(__file__), *{

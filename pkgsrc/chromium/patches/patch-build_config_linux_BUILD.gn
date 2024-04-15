@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/config/linux/BUILD.gn.orig	2024-03-26 21:36:30.519285700 +0000
+--- build/config/linux/BUILD.gn.orig	2024-04-10 21:24:37.484068900 +0000
 +++ build/config/linux/BUILD.gn
 @@ -41,7 +41,7 @@ config("runtime_library") {
    }

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/variations/service/variations_service.cc.orig	2024-03-26 21:36:57.485740700 +0000
+--- components/variations/service/variations_service.cc.orig	2024-04-10 21:24:51.397177700 +0000
 +++ components/variations/service/variations_service.cc
 @@ -99,7 +99,7 @@ std::string GetPlatformString() {
    return "android";

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/strings/translations/app_locale_settings_th.xtb.orig	2024-03-26 21:38:05.631944200 +0000
+--- ui/strings/translations/app_locale_settings_th.xtb.orig	2024-04-10 21:25:25.471893300 +0000
 +++ ui/strings/translations/app_locale_settings_th.xtb
 @@ -6,7 +6,7 @@
    <translation id="IDS_WEB_FONT_FAMILY">Tahoma,sans-serif</translation>

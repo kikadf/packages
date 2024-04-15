@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/about_flags.cc.orig	2024-03-26 21:36:35.775764200 +0000
+--- chrome/browser/about_flags.cc.orig	2024-04-10 21:24:40.096277000 +0000
 +++ chrome/browser/about_flags.cc
 @@ -234,7 +234,7 @@
  #include "ui/ui_features.h"

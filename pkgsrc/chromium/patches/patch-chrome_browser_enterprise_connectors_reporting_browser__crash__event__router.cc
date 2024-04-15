@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc.orig	2024-03-26 21:36:37.847952800 +0000
+--- chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc.orig	2024-04-10 21:24:41.416382300 +0000
 +++ chrome/browser/enterprise/connectors/reporting/browser_crash_event_router.cc
 @@ -11,7 +11,7 @@ namespace enterprise_connectors {
  

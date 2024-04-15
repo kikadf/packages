@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/download/download_item_model.cc.orig	2024-03-26 21:36:37.783947000 +0000
+--- chrome/browser/download/download_item_model.cc.orig	2024-04-10 21:24:41.352377200 +0000
 +++ chrome/browser/download/download_item_model.cc
 @@ -747,7 +747,7 @@ bool DownloadItemModel::IsCommandChecked
               download_crx_util::IsExtensionDownload(*download_);

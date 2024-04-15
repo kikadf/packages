@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2024-03-26 21:36:31.731396000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2024-04-10 21:24:38.356138500 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -146,7 +146,7 @@
  #include "components/about_ui/credit_utils.h"

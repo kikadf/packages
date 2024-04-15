@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-03-26 21:37:04.282359400 +0000
+--- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-04-10 21:24:56.125554600 +0000
 +++ media/gpu/chromeos/libyuv_image_processor_backend.cc
 @@ -48,7 +48,7 @@ static constexpr struct {
  #define CONV(in, out, trans, result) \

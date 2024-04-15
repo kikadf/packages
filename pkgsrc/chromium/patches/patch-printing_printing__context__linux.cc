@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- printing/printing_context_linux.cc.orig	2024-03-26 21:37:07.662667000 +0000
+--- printing/printing_context_linux.cc.orig	2024-04-10 21:24:58.181718300 +0000
 +++ printing/printing_context_linux.cc
 @@ -23,7 +23,7 @@
  #endif

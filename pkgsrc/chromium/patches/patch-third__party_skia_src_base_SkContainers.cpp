@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/skia/src/base/SkContainers.cpp.orig	2024-03-26 21:38:22.573486600 +0000
+--- third_party/skia/src/base/SkContainers.cpp.orig	2024-04-10 21:25:42.861279000 +0000
 +++ third_party/skia/src/base/SkContainers.cpp
 @@ -14,7 +14,8 @@
  

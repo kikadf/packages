@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2024-03-26 21:36:40.512195300 +0000
+--- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2024-04-10 21:24:43.076514700 +0000
 +++ chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc
 @@ -694,7 +694,7 @@ void IncidentReportingService::OnEnviron
  

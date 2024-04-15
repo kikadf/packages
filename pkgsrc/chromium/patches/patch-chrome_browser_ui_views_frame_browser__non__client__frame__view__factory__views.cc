@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2024-03-26 21:36:44.444553400 +0000
+--- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2024-04-10 21:24:44.196603800 +0000
 +++ chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc
 @@ -16,7 +16,7 @@
  #include "chrome/browser/ui/views/frame/browser_frame_view_win.h"

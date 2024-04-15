@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/cpuinfo/cpuinfo.gni.orig	2024-03-26 21:37:57.439198500 +0000
+--- third_party/cpuinfo/cpuinfo.gni.orig	2024-04-10 21:25:18.787360400 +0000
 +++ third_party/cpuinfo/cpuinfo.gni
 @@ -8,7 +8,7 @@ use_cpuinfo =
      current_cpu != "s390" && current_cpu != "s390x" &&

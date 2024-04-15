@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- cc/base/features.cc.orig	2024-03-26 21:36:30.691301300 +0000
+--- cc/base/features.cc.orig	2024-04-10 21:24:37.552074400 +0000
 +++ cc/base/features.cc
 @@ -88,7 +88,7 @@ BASE_FEATURE(kNormalPriorityImageDecodin
  // be using a separate flag to control the launch on GL.

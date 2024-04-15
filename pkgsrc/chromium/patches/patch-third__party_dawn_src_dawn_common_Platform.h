@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/dawn/src/dawn/common/Platform.h.orig	2024-03-26 21:38:46.603674200 +0000
+--- third_party/dawn/src/dawn/common/Platform.h.orig	2024-04-10 21:25:59.134575800 +0000
 +++ third_party/dawn/src/dawn/common/Platform.h
 @@ -59,6 +59,11 @@
  #error "Unsupported Windows platform."

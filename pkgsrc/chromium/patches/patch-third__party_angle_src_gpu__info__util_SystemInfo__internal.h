@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2024-03-26 21:39:01.865063400 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2024-04-10 21:26:13.875750500 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_internal.h
 @@ -15,6 +15,13 @@
  namespace angle

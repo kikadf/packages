@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/perf/cpu_identity.cc.orig	2024-03-26 21:36:38.532015000 +0000
+--- chrome/browser/metrics/perf/cpu_identity.cc.orig	2024-04-10 21:24:41.948424800 +0000
 +++ chrome/browser/metrics/perf/cpu_identity.cc
 @@ -141,7 +141,7 @@ CPUIdentity GetCPUIdentity() {
    result.release =

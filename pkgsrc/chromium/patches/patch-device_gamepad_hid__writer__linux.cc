@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- device/gamepad/hid_writer_linux.cc.orig	2024-03-26 21:37:00.117980200 +0000
+--- device/gamepad/hid_writer_linux.cc.orig	2024-04-10 21:24:53.389336600 +0000
 +++ device/gamepad/hid_writer_linux.cc
 @@ -2,6 +2,8 @@
  // Use of this source code is governed by a BSD-style license that can be

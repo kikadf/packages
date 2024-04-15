@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-03-26 21:38:04.919879400 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-04-10 21:25:24.679830000 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_non_backed.cc
 @@ -96,7 +96,7 @@ void OSExchangeDataProviderNonBacked::Se
  }

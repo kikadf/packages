@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ime/fake_text_input_client.h.orig	2024-03-26 21:38:04.935881000 +0000
+--- ui/base/ime/fake_text_input_client.h.orig	2024-04-10 21:25:24.695831300 +0000
 +++ ui/base/ime/fake_text_input_client.h
 @@ -96,7 +96,7 @@ class FakeTextInputClient : public TextI
    void SetTextEditCommandForNextKeyEvent(TextEditCommand command) override;

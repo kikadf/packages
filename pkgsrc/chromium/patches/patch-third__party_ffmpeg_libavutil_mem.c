@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/libavutil/mem.c.orig	2024-03-26 21:38:14.636764000 +0000
+--- third_party/ffmpeg/libavutil/mem.c.orig	2024-04-10 21:25:35.904724600 +0000
 +++ third_party/ffmpeg/libavutil/mem.c
 @@ -33,9 +33,6 @@
  #include <stdlib.h>

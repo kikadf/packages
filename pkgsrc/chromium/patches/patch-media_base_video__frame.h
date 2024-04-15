@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/base/video_frame.h.orig	2024-03-26 21:37:04.046337800 +0000
+--- media/base/video_frame.h.orig	2024-04-10 21:24:55.977542600 +0000
 +++ media/base/video_frame.h
 @@ -44,7 +44,7 @@
  #include "base/apple/scoped_cftyperef.h"

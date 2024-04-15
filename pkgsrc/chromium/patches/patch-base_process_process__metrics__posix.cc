@@ -3,13 +3,13 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_posix.cc.orig	2024-03-26 21:36:30.227259000 +0000
+--- base/process/process_metrics_posix.cc.orig	2024-04-10 21:24:37.224048100 +0000
 +++ base/process/process_metrics_posix.cc
 @@ -21,6 +21,8 @@
  
  #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
-+#elif BUILDFLAG(IS_OPENBSD)
++#elif BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
 +#include <stdlib.h>
  #else
  #include <malloc.h>

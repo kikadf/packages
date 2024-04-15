@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2024-03-26 21:36:37.419913800 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2024-04-10 21:24:41.172362800 +0000
 +++ chrome/browser/chrome_content_browser_client.h
 @@ -497,7 +497,7 @@ class ChromeContentBrowserClient : publi
    bool IsPluginAllowedToUseDevChannelAPIs(

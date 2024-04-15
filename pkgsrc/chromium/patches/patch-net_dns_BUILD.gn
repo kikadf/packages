@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/BUILD.gn.orig	2024-03-26 21:37:06.606571000 +0000
+--- net/dns/BUILD.gn.orig	2024-04-10 21:24:57.381654700 +0000
 +++ net/dns/BUILD.gn
 @@ -134,7 +134,7 @@ source_set("dns") {
        "dns_config_service_android.cc",

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/usb/BUILD.gn.orig	2024-03-26 21:37:08.190715000 +0000
+--- services/device/usb/BUILD.gn.orig	2024-04-10 21:24:58.721761500 +0000
 +++ services/device/usb/BUILD.gn
 @@ -92,15 +92,17 @@ static_library("usb") {
      deps += [ "//third_party/re2" ]

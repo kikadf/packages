@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/utility/utility_thread_impl.cc.orig	2024-03-26 21:36:59.773949000 +0000
+--- content/utility/utility_thread_impl.cc.orig	2024-04-10 21:24:53.205321800 +0000
 +++ content/utility/utility_thread_impl.cc
 @@ -32,7 +32,7 @@
  #include "mojo/public/cpp/bindings/pending_receiver.h"

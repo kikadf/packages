@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/child_process_launcher_helper_linux.cc.orig	2024-03-26 21:36:58.029790200 +0000
+--- content/browser/child_process_launcher_helper_linux.cc.orig	2024-04-10 21:24:51.893217300 +0000
 +++ content/browser/child_process_launcher_helper_linux.cc
 @@ -21,7 +21,9 @@
  #include "content/public/common/result_codes.h"

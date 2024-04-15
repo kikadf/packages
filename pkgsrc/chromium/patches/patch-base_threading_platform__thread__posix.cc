@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/threading/platform_thread_posix.cc.orig	2024-03-26 21:36:30.379273000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2024-04-10 21:24:37.348058000 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -78,12 +78,12 @@ void* ThreadFunc(void* params) {
      if (!thread_params->joinable)

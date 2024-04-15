@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/embedder_support/user_agent_utils.cc.orig	2024-03-26 21:36:52.849318500 +0000
+--- components/embedder_support/user_agent_utils.cc.orig	2024-04-10 21:24:48.564952000 +0000
 +++ components/embedder_support/user_agent_utils.cc
 @@ -445,6 +445,9 @@ std::string GetPlatformForUAMetadata() {
  # else

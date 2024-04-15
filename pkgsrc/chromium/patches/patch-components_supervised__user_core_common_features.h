@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/supervised_user/core/common/features.h.orig	2024-03-26 21:36:56.337636000 +0000
+--- components/supervised_user/core/common/features.h.orig	2024-04-10 21:24:50.569111800 +0000
 +++ components/supervised_user/core/common/features.h
 @@ -28,7 +28,7 @@ extern const base::FeatureParam<std::str
  BASE_DECLARE_FEATURE(

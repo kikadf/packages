@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/toolchain/gcc_toolchain.gni.orig	2024-03-26 21:36:30.595292600 +0000
+--- build/toolchain/gcc_toolchain.gni.orig	2024-04-10 21:24:37.524072200 +0000
 +++ build/toolchain/gcc_toolchain.gni
 @@ -57,6 +57,13 @@ if (enable_resource_allowlist_generation
        "enable_resource_allowlist_generation=true does not work for target_os=$target_os")

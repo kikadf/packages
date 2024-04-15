@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_handle_freebsd.cc.orig	2024-03-26 21:36:30.227259000 +0000
+--- base/process/process_handle_freebsd.cc.orig	2024-04-10 21:24:37.220048000 +0000
 +++ base/process/process_handle_freebsd.cc
 @@ -3,6 +3,7 @@
  // found in the LICENSE file.

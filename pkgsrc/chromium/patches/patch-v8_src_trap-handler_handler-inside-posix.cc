@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/trap-handler/handler-inside-posix.cc.orig	2024-03-26 21:39:30.439664600 +0000
+--- v8/src/trap-handler/handler-inside-posix.cc.orig	2024-04-10 21:26:20.752298600 +0000
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
  

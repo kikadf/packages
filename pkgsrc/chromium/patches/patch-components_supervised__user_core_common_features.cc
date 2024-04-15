@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/supervised_user/core/common/features.cc.orig	2024-03-26 21:36:56.337636000 +0000
+--- components/supervised_user/core/common/features.cc.orig	2024-04-10 21:24:50.569111800 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -66,7 +66,7 @@ bool IsLocalWebApprovalsEnabled() {
  BASE_FEATURE(kFilterWebsitesForSupervisedUsersOnDesktopAndIOS,

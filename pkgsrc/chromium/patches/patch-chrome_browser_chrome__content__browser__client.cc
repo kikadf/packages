@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/chrome_content_browser_client.cc.orig	2024-03-26 21:36:37.411913200 +0000
+--- chrome/browser/chrome_content_browser_client.cc.orig	2024-04-10 21:24:41.168362600 +0000
 +++ chrome/browser/chrome_content_browser_client.cc
 @@ -457,7 +457,7 @@
  #include "storage/browser/file_system/external_mount_points.h"

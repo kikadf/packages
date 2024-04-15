@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/BUILD.gn.orig	2024-03-26 21:37:06.030518500 +0000
+--- net/BUILD.gn.orig	2024-04-10 21:24:57.097632000 +0000
 +++ net/BUILD.gn
 @@ -122,7 +122,7 @@ net_configs = [
    "//build/config/compiler:wexit_time_destructors",

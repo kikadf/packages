@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- skia/ext/platform_canvas.h.orig	2024-03-26 21:37:09.474832000 +0000
+--- skia/ext/platform_canvas.h.orig	2024-04-10 21:24:58.957780100 +0000
 +++ skia/ext/platform_canvas.h
 @@ -58,7 +58,7 @@ SK_API HDC GetNativeDrawingContext(SkCan
  

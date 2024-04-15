@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/passwords/bubble_controllers/relaunch_chrome_bubble_controller.cc.orig	2024-03-26 21:36:42.392366400 +0000
+--- chrome/browser/ui/passwords/bubble_controllers/relaunch_chrome_bubble_controller.cc.orig	2024-04-10 21:24:44.012589200 +0000
 +++ chrome/browser/ui/passwords/bubble_controllers/relaunch_chrome_bubble_controller.cc
 @@ -44,7 +44,7 @@ std::u16string RelaunchChromeBubbleContr
  #if BUILDFLAG(IS_MAC)

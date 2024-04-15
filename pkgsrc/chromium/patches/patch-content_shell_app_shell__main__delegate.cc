@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/shell/app/shell_main_delegate.cc.orig	2024-03-26 21:36:59.085886200 +0000
+--- content/shell/app/shell_main_delegate.cc.orig	2024-04-10 21:24:52.645277300 +0000
 +++ content/shell/app/shell_main_delegate.cc
 @@ -223,7 +223,7 @@ void ShellMainDelegate::PreSandboxStartu
      // Reporting for sub-processes will be initialized in ZygoteForked.

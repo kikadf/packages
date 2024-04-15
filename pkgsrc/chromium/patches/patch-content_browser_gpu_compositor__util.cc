@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/gpu/compositor_util.cc.orig	2024-03-26 21:36:58.149801000 +0000
+--- content/browser/gpu/compositor_util.cc.orig	2024-04-10 21:24:51.965223000 +0000
 +++ content/browser/gpu/compositor_util.cc
 @@ -149,7 +149,7 @@ const GpuFeatureData GetGpuFeatureData(
        {"video_decode",

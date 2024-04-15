@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/base/sockaddr_util_posix.cc.orig	2024-03-26 21:37:06.234537100 +0000
+--- net/base/sockaddr_util_posix.cc.orig	2024-04-10 21:24:57.137635200 +0000
 +++ net/base/sockaddr_util_posix.cc
 @@ -41,7 +41,8 @@ bool FillUnixAddress(const std::string& 
      return true;

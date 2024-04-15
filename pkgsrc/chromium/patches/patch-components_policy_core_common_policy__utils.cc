@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/policy/core/common/policy_utils.cc.orig	2024-03-26 21:36:53.785403700 +0000
+--- components/policy/core/common/policy_utils.cc.orig	2024-04-10 21:24:49.397018200 +0000
 +++ components/policy/core/common/policy_utils.cc
 @@ -28,7 +28,7 @@ bool IsPolicyTestingEnabled(PrefService*
      return true;

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/views_delegate.h.orig	2024-03-26 21:38:05.803959800 +0000
+--- ui/views/views_delegate.h.orig	2024-04-10 21:25:25.623905400 +0000
 +++ ui/views/views_delegate.h
 @@ -146,7 +146,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // environment.

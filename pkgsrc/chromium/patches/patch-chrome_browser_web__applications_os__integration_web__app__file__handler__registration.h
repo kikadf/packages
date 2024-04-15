@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h.orig	2024-03-26 21:36:48.028879600 +0000
+--- chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h.orig	2024-04-10 21:24:44.784650800 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h
 @@ -43,7 +43,7 @@ void UnregisterFileHandlersWithOs(const 
                                    const base::FilePath& profile_path,

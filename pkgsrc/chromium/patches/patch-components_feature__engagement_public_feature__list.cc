@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2024-03-26 21:36:52.989331200 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2024-04-10 21:24:48.656959300 +0000
 +++ components/feature_engagement/public/feature_list.cc
 @@ -157,7 +157,7 @@ const base::Feature* const kAllFeatures[
      &kIPHiOSPostDefaultAbandonmentPromoFeature,

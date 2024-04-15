@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2024-03-26 21:36:58.593841600 +0000
+--- content/browser/renderer_host/render_widget_host_view_event_handler.cc.orig	2024-04-10 21:24:52.241245000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_event_handler.cc
 @@ -599,7 +599,7 @@ bool RenderWidgetHostViewEventHandler::C
    if (event->type() == ui::ET_MOUSE_EXITED) {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/emulate/wayland_input_emulate.cc.orig	2024-03-26 21:38:05.563938100 +0000
+--- ui/ozone/platform/wayland/emulate/wayland_input_emulate.cc.orig	2024-04-10 21:25:25.403887700 +0000
 +++ ui/ozone/platform/wayland/emulate/wayland_input_emulate.cc
 @@ -284,7 +284,7 @@ void WaylandInputEmulate::EmulateUpdateD
  }

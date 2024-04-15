@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/public/mojom/BUILD.gn.orig	2024-03-26 21:37:08.182714500 +0000
+--- services/device/public/mojom/BUILD.gn.orig	2024-04-10 21:24:58.713760900 +0000
 +++ services/device/public/mojom/BUILD.gn
 @@ -96,7 +96,7 @@ mojom("device_service") {
    enable_js_fuzzing = false

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ui_base_switches.cc.orig	2024-03-26 21:38:04.975884700 +0000
+--- ui/base/ui_base_switches.cc.orig	2024-04-10 21:25:24.735834600 +0000
 +++ ui/base/ui_base_switches.cc
 @@ -31,13 +31,13 @@ const char kShowMacOverlayBorders[] = "s
  const char kEnableResourcesFileSharing[] = "enable-resources-file-sharing";

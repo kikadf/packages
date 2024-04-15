@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/font_access/font_enumeration_data_source.cc.orig	2024-03-26 21:36:58.145800600 +0000
+--- content/browser/font_access/font_enumeration_data_source.cc.orig	2024-04-10 21:24:51.961222600 +0000
 +++ content/browser/font_access/font_enumeration_data_source.cc
 @@ -16,7 +16,7 @@
  #include "content/browser/font_access/font_enumeration_data_source_win.h"

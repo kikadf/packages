@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2024-03-26 21:39:11.493939900 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2024-04-10 21:26:20.064243800 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -27,6 +27,9 @@
      defined(__NetBSD__) || defined(__OpenBSD__)

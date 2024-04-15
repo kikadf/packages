@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/nasm/BUILD.gn.orig	2024-03-26 21:38:15.680859000 +0000
+--- third_party/nasm/BUILD.gn.orig	2024-04-10 21:25:36.036735000 +0000
 +++ third_party/nasm/BUILD.gn
 @@ -63,6 +63,13 @@ config("nasm_config") {
  

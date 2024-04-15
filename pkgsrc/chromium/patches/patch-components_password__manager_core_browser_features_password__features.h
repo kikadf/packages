@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2024-03-26 21:36:53.553382600 +0000
+--- components/password_manager/core/browser/features/password_features.h.orig	2024-04-10 21:24:49.177000800 +0000
 +++ components/password_manager/core/browser/features/password_features.h
 @@ -95,7 +95,7 @@ BASE_DECLARE_FEATURE(kPasswordManagerEna
  // terminal.

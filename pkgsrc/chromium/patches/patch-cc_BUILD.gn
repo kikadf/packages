@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- cc/BUILD.gn.orig	2024-03-26 21:36:30.679300000 +0000
+--- cc/BUILD.gn.orig	2024-04-10 21:24:37.544073800 +0000
 +++ cc/BUILD.gn
 @@ -678,7 +678,7 @@ cc_test_static_library("test_support") {
    if (enable_vulkan) {

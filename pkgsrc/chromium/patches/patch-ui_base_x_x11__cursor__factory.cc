@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_cursor_factory.cc.orig	2024-03-26 21:38:04.983885300 +0000
+--- ui/base/x/x11_cursor_factory.cc.orig	2024-04-10 21:25:24.739834800 +0000
 +++ ui/base/x/x11_cursor_factory.cc
 @@ -13,7 +13,7 @@
  #include "ui/gfx/geometry/point.h"

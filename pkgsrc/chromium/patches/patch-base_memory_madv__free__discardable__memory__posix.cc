@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/memory/madv_free_discardable_memory_posix.cc.orig	2024-03-26 21:36:30.139251000 +0000
+--- base/memory/madv_free_discardable_memory_posix.cc.orig	2024-04-10 21:24:37.180044700 +0000
 +++ base/memory/madv_free_discardable_memory_posix.cc
 @@ -306,6 +306,10 @@ void MadvFreeDiscardableMemoryPosix::Set
  

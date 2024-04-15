@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/BUILD.gn.orig	2024-03-26 21:36:29.955234300 +0000
+--- base/BUILD.gn.orig	2024-04-10 21:24:37.016031700 +0000
 +++ base/BUILD.gn
 @@ -192,7 +192,7 @@ buildflag_header("ios_cronet_buildflags"
    flags = [ "CRONET_BUILD=$is_cronet_build" ]

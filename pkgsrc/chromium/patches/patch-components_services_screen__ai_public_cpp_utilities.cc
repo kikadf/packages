@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/services/screen_ai/public/cpp/utilities.cc.orig	2024-03-26 21:36:55.265538500 +0000
+--- components/services/screen_ai/public/cpp/utilities.cc.orig	2024-04-10 21:24:50.097074000 +0000
 +++ components/services/screen_ai/public/cpp/utilities.cc
 @@ -34,7 +34,7 @@ constexpr char kScreenAIDlcRootPath[] =
  #endif

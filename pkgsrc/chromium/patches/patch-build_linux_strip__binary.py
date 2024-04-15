@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/linux/strip_binary.py.orig	2024-03-26 21:36:30.539287300 +0000
+--- build/linux/strip_binary.py.orig	2024-04-10 21:24:37.504070500 +0000
 +++ build/linux/strip_binary.py
 @@ -10,6 +10,7 @@ import sys
  

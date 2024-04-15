@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2024-03-26 21:37:01.194078200 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2024-04-10 21:24:54.181399600 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -354,7 +354,7 @@ bool GpuInit::InitializeAndStartSandbox(
    enable_watchdog = false;

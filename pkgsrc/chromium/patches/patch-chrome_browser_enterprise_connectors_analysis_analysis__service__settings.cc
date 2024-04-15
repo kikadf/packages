@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc.orig	2024-03-26 21:36:37.815950000 +0000
+--- chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc.orig	2024-04-10 21:24:41.388380000 +0000
 +++ chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc
 @@ -150,7 +150,7 @@ AnalysisServiceSettings::AnalysisService
    const char* verification_key = kKeyWindowsVerification;

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2024-03-26 21:36:59.049883000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2024-04-10 21:24:52.609274400 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
-@@ -116,7 +116,7 @@
+@@ -115,7 +115,7 @@
  
  #if BUILDFLAG(IS_MAC)
  #include "content/child/child_process_sandbox_support_impl_mac.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "content/child/child_process_sandbox_support_impl_linux.h"
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
-@@ -186,13 +186,13 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -185,13 +185,13 @@ RendererBlinkPlatformImpl::RendererBlink
        is_locked_to_site_(false),
        main_thread_scheduler_(main_thread_scheduler),
        next_frame_sink_id_(uint32_t{std::numeric_limits<int32_t>::max()} + 1) {
@@ -30,7 +30,7 @@ $NetBSD$
      mojo::PendingRemote<font_service::mojom::FontService> font_service;
      RenderThreadImpl::current()->BindHostReceiver(
          font_service.InitWithNewPipeAndPassReceiver());
-@@ -201,7 +201,7 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -200,7 +200,7 @@ RendererBlinkPlatformImpl::RendererBlink
  #endif
    }
  
@@ -39,7 +39,7 @@ $NetBSD$
    if (sandboxEnabled()) {
  #if BUILDFLAG(IS_MAC)
      sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
-@@ -262,7 +262,7 @@ void RendererBlinkPlatformImpl::SetThrea
+@@ -261,7 +261,7 @@ void RendererBlinkPlatformImpl::SetThrea
  #endif
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {

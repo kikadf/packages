@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2024-03-26 21:36:38.047971000 +0000
+--- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2024-04-10 21:24:41.580395500 +0000
 +++ chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc
 @@ -29,7 +29,7 @@
  #include "extensions/browser/process_manager.h"

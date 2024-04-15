@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2024-03-26 21:36:38.303994400 +0000
+--- chrome/browser/gcm/gcm_profile_service_factory.cc.orig	2024-04-10 21:24:41.740408200 +0000
 +++ chrome/browser/gcm/gcm_profile_service_factory.cc
 @@ -89,7 +89,7 @@ GCMProfileServiceFactory::ScopedTestingF
  // static

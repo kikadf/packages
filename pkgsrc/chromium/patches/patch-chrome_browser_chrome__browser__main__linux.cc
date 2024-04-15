@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2024-03-26 21:36:37.403912300 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2024-04-10 21:24:41.160362000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
 @@ -24,7 +24,7 @@
  #include "device/bluetooth/dbus/bluez_dbus_thread_manager.h"

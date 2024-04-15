@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2024-03-26 21:36:58.801860300 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.cc.orig	2024-04-10 21:24:52.397257300 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.cc
 @@ -19,8 +19,10 @@
  #include "build/chromeos_buildflags.h"

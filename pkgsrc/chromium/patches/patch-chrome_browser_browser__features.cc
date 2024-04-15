@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/browser_features.cc.orig	2024-03-26 21:36:37.359908300 +0000
+--- chrome/browser/browser_features.cc.orig	2024-04-10 21:24:41.120358700 +0000
 +++ chrome/browser/browser_features.cc
 @@ -44,7 +44,7 @@ const base::FeatureParam<bool> kSpareRen
  BASE_FEATURE(kDestroyProfileOnBrowserClose,

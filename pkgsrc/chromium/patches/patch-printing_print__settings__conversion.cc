@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- printing/print_settings_conversion.cc.orig	2024-03-26 21:37:07.658666600 +0000
+--- printing/print_settings_conversion.cc.orig	2024-04-10 21:24:58.181718300 +0000
 +++ printing/print_settings_conversion.cc
 @@ -287,7 +287,7 @@ std::unique_ptr<PrintSettings> PrintSett
      settings->set_is_modifiable(is_modifiable.value());

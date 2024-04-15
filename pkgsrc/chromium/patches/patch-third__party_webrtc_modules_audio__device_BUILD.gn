@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2024-03-26 21:39:08.357654300 +0000
+--- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2024-04-10 21:26:12.539644200 +0000
 +++ third_party/webrtc/modules/audio_device/BUILD.gn
 @@ -350,7 +350,7 @@ rtc_library("audio_device_impl") {
      if (rtc_use_dummy_audio_file_devices) {

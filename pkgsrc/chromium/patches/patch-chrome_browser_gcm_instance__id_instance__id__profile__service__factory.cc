@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2024-03-26 21:36:38.303994400 +0000
+--- chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc.orig	2024-04-10 21:24:41.740408200 +0000
 +++ chrome/browser/gcm/instance_id/instance_id_profile_service_factory.cc
 @@ -16,7 +16,7 @@ namespace instance_id {
  // static

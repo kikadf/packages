@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/BUILD.gn.orig	2024-03-26 21:36:57.709761000 +0000
+--- content/browser/BUILD.gn.orig	2024-04-10 21:24:51.781208300 +0000
 +++ content/browser/BUILD.gn
 @@ -2476,6 +2476,13 @@ source_set("browser") {
      deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]

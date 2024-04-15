@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-03-26 21:37:01.030063200 +0000
+--- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-04-10 21:24:54.061390000 +0000
 +++ gpu/command_buffer/common/gpu_memory_buffer_support.cc
 @@ -182,7 +182,7 @@ uint32_t GetPlatformSpecificTextureTarge
  #if BUILDFLAG(IS_MAC)

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/safe_browsing/core/common/features.cc.orig	2024-03-26 21:36:55.065520300 +0000
+--- components/safe_browsing/core/common/features.cc.orig	2024-04-10 21:24:49.989065400 +0000
 +++ components/safe_browsing/core/common/features.cc
 @@ -240,7 +240,7 @@ BASE_FEATURE(kSafeBrowsingSkipSubresourc
  BASE_FEATURE(kSafeBrowsingSkipSubresources2,

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2024-03-26 21:37:13.471196000 +0000
+--- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2024-04-10 21:25:01.870012300 +0000
 +++ third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc
 @@ -9,7 +9,7 @@
  #if BUILDFLAG(IS_ANDROID)

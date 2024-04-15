@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/widget/widget.cc.orig	2024-03-26 21:38:05.815961100 +0000
+--- ui/views/widget/widget.cc.orig	2024-04-10 21:25:25.635906200 +0000
 +++ ui/views/widget/widget.cc
 @@ -55,7 +55,7 @@
  #include "ui/views/window/custom_frame_view.h"

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			123.0.6312.86
+VERSION=			123.0.6312.122
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -61,11 +61,11 @@ ONLY_FOR_PLATFORM+=		*-*-x86_64
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 # Do not use alloca(3) in libc.
-BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
-BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
-BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
-BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
-BUILDLINK_TRANSFORM+=		opt:-std=c++20:-std=gnu++20
+#BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
+#BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
+#BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
+#BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
+#BUILDLINK_TRANSFORM+=		opt:-std=c++20:-std=gnu++20
 
 REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
 

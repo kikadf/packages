@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2024-03-26 21:37:07.906689200 +0000
+--- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2024-04-10 21:24:58.489743000 +0000
 +++ remoting/host/webauthn/remote_webauthn_extension_notifier.cc
 @@ -24,7 +24,7 @@
  #include "base/task/thread_pool.h"

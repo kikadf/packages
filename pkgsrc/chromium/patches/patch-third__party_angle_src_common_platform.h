@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/src/common/platform.h.orig	2024-03-26 21:39:01.761053800 +0000
+--- third_party/angle/src/common/platform.h.orig	2024-04-10 21:26:13.775742800 +0000
 +++ third_party/angle/src/common/platform.h
 @@ -26,8 +26,19 @@
  #elif defined(__linux__) || defined(EMSCRIPTEN)

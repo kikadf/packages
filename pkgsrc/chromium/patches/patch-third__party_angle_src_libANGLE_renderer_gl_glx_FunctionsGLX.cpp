@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/src/libANGLE/renderer/gl/glx/FunctionsGLX.cpp.orig	2024-03-26 21:39:02.729142000 +0000
+--- third_party/angle/src/libANGLE/renderer/gl/glx/FunctionsGLX.cpp.orig	2024-04-10 21:26:14.031763000 +0000
 +++ third_party/angle/src/libANGLE/renderer/gl/glx/FunctionsGLX.cpp
 @@ -144,10 +144,10 @@ bool FunctionsGLX::initialize(Display *x
      // which a GLXWindow was ever created.

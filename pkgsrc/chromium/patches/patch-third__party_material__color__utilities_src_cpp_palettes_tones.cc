@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/material_color_utilities/src/cpp/palettes/tones.cc.orig	2024-03-26 21:38:15.496842400 +0000
+--- third_party/material_color_utilities/src/cpp/palettes/tones.cc.orig	2024-04-10 21:25:36.052736500 +0000
 +++ third_party/material_color_utilities/src/cpp/palettes/tones.cc
 @@ -14,6 +14,8 @@
   * limitations under the License.

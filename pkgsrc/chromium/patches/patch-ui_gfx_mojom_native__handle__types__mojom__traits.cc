@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2024-03-26 21:38:05.443927300 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2024-04-10 21:25:25.283878300 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.cc
 @@ -8,11 +8,11 @@
  

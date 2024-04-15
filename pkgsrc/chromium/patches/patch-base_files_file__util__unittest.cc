@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_util_unittest.cc.orig	2024-03-26 21:36:30.107248000 +0000
+--- base/files/file_util_unittest.cc.orig	2024-04-10 21:24:37.148042200 +0000
 +++ base/files/file_util_unittest.cc
 @@ -3869,7 +3869,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-03-26 21:36:37.843952400 +0000
+--- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-04-10 21:24:41.416382300 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc
 @@ -21,7 +21,7 @@
  #include "chrome/browser/profiles/profile.h"

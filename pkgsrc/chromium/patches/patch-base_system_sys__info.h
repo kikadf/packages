@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/system/sys_info.h.orig	2024-03-26 21:36:30.267262700 +0000
+--- base/system/sys_info.h.orig	2024-04-10 21:24:37.256050800 +0000
 +++ base/system/sys_info.h
 @@ -318,6 +318,8 @@ class BASE_EXPORT SysInfo {
    static void ResetCpuSecurityMitigationsEnabledForTesting();

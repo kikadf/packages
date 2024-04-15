@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2024-03-26 21:36:29.963235000 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2024-04-10 21:24:37.024032400 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
 @@ -30,7 +30,7 @@ if (is_nacl) {
  }

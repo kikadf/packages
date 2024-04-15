@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/config/gpu_test_config.cc.orig	2024-03-26 21:37:01.158074900 +0000
+--- gpu/config/gpu_test_config.cc.orig	2024-04-10 21:24:54.161398000 +0000
 +++ gpu/config/gpu_test_config.cc
 @@ -29,7 +29,7 @@ GPUTestConfig::OS GetCurrentOS() {
  #if BUILDFLAG(IS_CHROMEOS_ASH)

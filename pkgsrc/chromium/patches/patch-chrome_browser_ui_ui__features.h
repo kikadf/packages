@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/ui_features.h.orig	2024-03-26 21:36:43.392457500 +0000
+--- chrome/browser/ui/ui_features.h.orig	2024-04-10 21:24:44.096596000 +0000
 +++ chrome/browser/ui/ui_features.h
 @@ -223,7 +223,7 @@ BASE_DECLARE_FEATURE(kToolbarUseHardware
  

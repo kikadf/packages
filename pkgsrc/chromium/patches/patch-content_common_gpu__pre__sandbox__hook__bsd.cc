@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2024-04-12 16:23:47.174916146 +0000
+--- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2024-04-15 08:14:42.644217823 +0000
 +++ content/common/gpu_pre_sandbox_hook_bsd.cc
 @@ -0,0 +1,69 @@
 +// Copyright 2023 The Chromium Authors

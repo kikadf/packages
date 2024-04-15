@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/policy_watcher.cc.orig	2024-03-26 21:37:07.806680200 +0000
+--- remoting/host/policy_watcher.cc.orig	2024-04-10 21:24:58.473741800 +0000
 +++ remoting/host/policy_watcher.cc
 @@ -192,7 +192,7 @@ base::Value::Dict PolicyWatcher::GetDefa
               true);

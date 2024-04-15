@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/chrome_features.cc.orig	2024-03-26 21:36:48.280902600 +0000
+--- chrome/common/chrome_features.cc.orig	2024-04-10 21:24:44.868657400 +0000
 +++ chrome/common/chrome_features.cc
 @@ -81,7 +81,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)

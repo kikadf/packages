@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/canvas_skia.cc.orig	2024-03-26 21:38:05.403923500 +0000
+--- ui/gfx/canvas_skia.cc.orig	2024-04-10 21:25:25.243875000 +0000
 +++ ui/gfx/canvas_skia.cc
 @@ -213,7 +213,7 @@ void Canvas::DrawStringRectWithFlags(con
      Range range = StripAcceleratorChars(flags, &adjusted_text);

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_address_space.cc.orig	2024-03-26 21:36:29.967235300 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_address_space.cc.orig	2024-04-10 21:24:37.032033000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_address_space.cc
 @@ -421,7 +421,7 @@ void PartitionAddressSpace::UninitThread
  }

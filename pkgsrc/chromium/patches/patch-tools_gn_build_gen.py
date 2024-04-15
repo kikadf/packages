@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/gn/build/gen.py.orig	2024-03-26 21:50:07.401634200 +0000
+--- tools/gn/build/gen.py.orig	2024-04-10 21:36:21.708190200 +0000
 +++ tools/gn/build/gen.py
 @@ -94,6 +94,12 @@ class Platform(object):
    def is_solaris(self):

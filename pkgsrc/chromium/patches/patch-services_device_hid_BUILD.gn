@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/hid/BUILD.gn.orig	2024-03-26 21:37:08.166713000 +0000
+--- services/device/hid/BUILD.gn.orig	2024-04-10 21:24:58.697759400 +0000
 +++ services/device/hid/BUILD.gn
 @@ -36,7 +36,35 @@ source_set("hid") {
      "//services/device/public/mojom",

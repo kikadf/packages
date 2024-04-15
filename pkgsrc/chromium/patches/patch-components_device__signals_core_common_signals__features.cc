@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/device_signals/core/common/signals_features.cc.orig	2024-03-26 21:36:52.765310800 +0000
+--- components/device_signals/core/common/signals_features.cc.orig	2024-04-10 21:24:48.352935000 +0000
 +++ components/device_signals/core/common/signals_features.cc
 @@ -46,7 +46,7 @@ bool IsNewFunctionEnabled(NewEvFunction 
  }

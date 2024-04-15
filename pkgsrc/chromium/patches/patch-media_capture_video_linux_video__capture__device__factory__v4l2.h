@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/capture/video/linux/video_capture_device_factory_v4l2.h.orig	2024-03-26 21:37:04.078340800 +0000
+--- media/capture/video/linux/video_capture_device_factory_v4l2.h.orig	2024-04-10 21:24:56.009545300 +0000
 +++ media/capture/video/linux/video_capture_device_factory_v4l2.h
 @@ -51,7 +51,7 @@ class CAPTURE_EXPORT VideoCaptureDeviceF
  

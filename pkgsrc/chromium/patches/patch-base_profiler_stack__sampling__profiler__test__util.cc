@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/stack_sampling_profiler_test_util.cc.orig	2024-03-26 21:36:30.243260400 +0000
+--- base/profiler/stack_sampling_profiler_test_util.cc.orig	2024-04-10 21:24:37.232048700 +0000
 +++ base/profiler/stack_sampling_profiler_test_util.cc
 @@ -36,7 +36,7 @@
  // Fortunately, it provides _alloca, which functions identically.

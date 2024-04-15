@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2024-03-26 21:36:53.313360700 +0000
+--- components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc.orig	2024-04-10 21:24:48.956983300 +0000
 +++ components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.cc
 @@ -22,7 +22,7 @@ namespace named_mojo_ipc_server {
  // static

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2024-03-26 21:36:57.461738300 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2024-04-10 21:24:51.369175400 +0000
 +++ components/user_education/views/help_bubble_view.cc
 @@ -1011,7 +1011,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
  void HelpBubbleView::OnBeforeBubbleWidgetInit(views::Widget::InitParams* params,

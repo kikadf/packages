@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/task_manager/task_manager_observer.h.orig	2024-03-26 21:36:40.860227000 +0000
+--- chrome/browser/task_manager/task_manager_observer.h.orig	2024-04-10 21:24:43.364537500 +0000
 +++ chrome/browser/task_manager/task_manager_observer.h
 @@ -47,7 +47,7 @@ enum RefreshType {
    // or backgrounded.

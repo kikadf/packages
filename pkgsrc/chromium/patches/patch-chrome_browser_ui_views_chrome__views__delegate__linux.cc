@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/chrome_views_delegate_linux.cc.orig	2024-03-26 21:36:43.916505300 +0000
+--- chrome/browser/ui/views/chrome_views_delegate_linux.cc.orig	2024-04-10 21:24:44.140599500 +0000
 +++ chrome/browser/ui/views/chrome_views_delegate_linux.cc
 @@ -23,7 +23,7 @@ bool IsDesktopEnvironmentUnity() {
    return desktop_env == base::nix::DESKTOP_ENVIRONMENT_UNITY;

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/power_metrics/energy_metrics_provider.cc.orig	2024-03-26 21:36:54.801496300 +0000
+--- components/power_metrics/energy_metrics_provider.cc.orig	2024-04-10 21:24:49.797050200 +0000
 +++ components/power_metrics/energy_metrics_provider.cc
 @@ -9,6 +9,8 @@
  #include "components/power_metrics/energy_metrics_provider_win.h"

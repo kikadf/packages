@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/kill.h.orig	2024-03-26 21:36:30.223258700 +0000
+--- base/process/kill.h.orig	2024-04-10 21:24:37.220048000 +0000
 +++ base/process/kill.h
 @@ -121,7 +121,7 @@ BASE_EXPORT TerminationStatus GetTermina
  BASE_EXPORT TerminationStatus GetKnownDeadTerminationStatus(

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/scoped_file.cc.orig	2024-03-26 21:36:30.111248500 +0000
+--- base/files/scoped_file.cc.orig	2024-04-10 21:24:37.148042200 +0000
 +++ base/files/scoped_file.cc
 @@ -31,7 +31,7 @@ void ScopedFDCloseTraits::Free(int fd) {
    int ret = IGNORE_EINTR(close(fd));

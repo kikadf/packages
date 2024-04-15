@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/renderer/render_process_impl.cc.orig	2024-03-26 21:36:59.021880400 +0000
+--- content/renderer/render_process_impl.cc.orig	2024-04-10 21:24:52.605274000 +0000
 +++ content/renderer/render_process_impl.cc
 @@ -44,7 +44,7 @@
  #include "third_party/blink/public/web/web_frame.h"

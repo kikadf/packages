@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/media/webrtc/capture_policy_utils.cc.orig	2024-03-26 21:36:38.480010300 +0000
+--- chrome/browser/media/webrtc/capture_policy_utils.cc.orig	2024-04-10 21:24:41.896420500 +0000
 +++ chrome/browser/media/webrtc/capture_policy_utils.cc
 @@ -140,7 +140,7 @@ void RegisterProfilePrefs(PrefRegistrySi
  }

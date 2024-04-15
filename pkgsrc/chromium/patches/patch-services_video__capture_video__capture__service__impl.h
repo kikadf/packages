@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/video_capture/video_capture_service_impl.h.orig	2024-03-26 21:37:09.370822700 +0000
+--- services/video_capture/video_capture_service_impl.h.orig	2024-04-10 21:24:58.921777200 +0000
 +++ services/video_capture/video_capture_service_impl.h
 @@ -26,7 +26,7 @@
  #include "services/video_capture/ash/video_capture_device_factory_ash.h"

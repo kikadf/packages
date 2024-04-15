@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/font_util.cc.orig	2024-03-26 21:38:05.415924500 +0000
+--- ui/gfx/font_util.cc.orig	2024-04-10 21:25:25.255876000 +0000
 +++ ui/gfx/font_util.cc
 @@ -6,7 +6,7 @@
  

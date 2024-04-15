@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/debug/elf_reader.cc.orig	2024-03-26 21:36:30.075245100 +0000
+--- base/debug/elf_reader.cc.orig	2024-04-10 21:24:37.132041000 +0000
 +++ base/debug/elf_reader.cc
 @@ -78,6 +78,7 @@ size_t ReadElfBuildId(const void* elf_ma
      bool found = false;

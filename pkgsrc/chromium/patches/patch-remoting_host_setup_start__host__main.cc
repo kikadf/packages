@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/setup/start_host_main.cc.orig	2024-03-26 21:37:07.906689200 +0000
+--- remoting/host/setup/start_host_main.cc.orig	2024-04-10 21:24:58.485742600 +0000
 +++ remoting/host/setup/start_host_main.cc
 @@ -36,7 +36,7 @@
  #include <unistd.h>

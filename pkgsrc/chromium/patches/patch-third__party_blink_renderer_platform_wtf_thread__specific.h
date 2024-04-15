@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-03-26 21:37:13.831228700 +0000
+--- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-04-10 21:25:02.254042900 +0000
 +++ third_party/blink/renderer/platform/wtf/thread_specific.h
 @@ -104,7 +104,8 @@ inline bool ThreadSpecific<T>::IsSet() {
  template <typename T>

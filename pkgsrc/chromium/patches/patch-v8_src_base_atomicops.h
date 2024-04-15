@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/base/atomicops.h.orig	2024-03-26 21:39:11.257918400 +0000
+--- v8/src/base/atomicops.h.orig	2024-04-10 21:26:20.052242800 +0000
 +++ v8/src/base/atomicops.h
 @@ -57,10 +57,10 @@ using Atomic64 = SbAtomic64;
  using Atomic8 = char;

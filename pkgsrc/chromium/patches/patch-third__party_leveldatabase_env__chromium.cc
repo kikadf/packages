@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/leveldatabase/env_chromium.cc.orig	2024-03-26 21:37:58.271274300 +0000
+--- third_party/leveldatabase/env_chromium.cc.orig	2024-04-10 21:25:19.651429400 +0000
 +++ third_party/leveldatabase/env_chromium.cc
 @@ -326,7 +326,8 @@ ChromiumWritableFile::ChromiumWritableFi
  

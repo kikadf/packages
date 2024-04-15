@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2024-03-26 21:37:00.870048800 +0000
+--- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2024-04-10 21:24:53.901377200 +0000
 +++ extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc
 @@ -44,7 +44,7 @@ void ShellRuntimeAPIDelegate::OpenURL(co
  bool ShellRuntimeAPIDelegate::GetPlatformInfo(PlatformInfo* info) {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/tflite/features.gni.orig	2024-03-26 21:38:02.143626700 +0000
+--- third_party/tflite/features.gni.orig	2024-04-10 21:25:22.211633400 +0000
 +++ third_party/tflite/features.gni
 @@ -8,9 +8,9 @@ declare_args() {
    # This enables building TFLite with XNNPACK. Currently only available for

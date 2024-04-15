@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc.orig	2024-03-26 21:36:55.165529300 +0000
+--- components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc.orig	2024-04-10 21:24:50.089073400 +0000
 +++ components/services/paint_preview_compositor/paint_preview_compositor_collection_impl.cc
 @@ -22,7 +22,7 @@
  

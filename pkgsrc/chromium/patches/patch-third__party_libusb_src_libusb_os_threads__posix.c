@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/libusb/src/libusb/os/threads_posix.c.orig	2024-03-26 21:37:59.039344000 +0000
+--- third_party/libusb/src/libusb/os/threads_posix.c.orig	2024-04-10 21:25:19.935452000 +0000
 +++ third_party/libusb/src/libusb/os/threads_posix.c
 @@ -19,9 +19,11 @@
   * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA

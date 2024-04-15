@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/grit/grit/node/base.py.orig	2024-03-26 21:38:03.695768000 +0000
+--- tools/grit/grit/node/base.py.orig	2024-04-10 21:25:23.623746000 +0000
 +++ tools/grit/grit/node/base.py
 @@ -498,7 +498,8 @@ class Node:
          value = defs

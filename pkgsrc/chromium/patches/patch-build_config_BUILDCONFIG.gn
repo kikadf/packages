@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/config/BUILDCONFIG.gn.orig	2024-03-26 21:36:30.499283800 +0000
+--- build/config/BUILDCONFIG.gn.orig	2024-04-10 21:24:37.464067500 +0000
 +++ build/config/BUILDCONFIG.gn
 @@ -136,7 +136,8 @@ declare_args() {
    is_official_build = false

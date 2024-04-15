@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/chrome_browser_interface_binders.cc.orig	2024-03-26 21:36:37.399912000 +0000
+--- chrome/browser/chrome_browser_interface_binders.cc.orig	2024-04-10 21:24:41.160362000 +0000
 +++ chrome/browser/chrome_browser_interface_binders.cc
 @@ -128,13 +128,13 @@
  #endif  // BUILDFLAG(FULL_SAFE_BROWSING)

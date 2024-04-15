@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/public/platform/platform.h.orig	2024-03-26 21:37:11.218990800 +0000
+--- third_party/blink/public/platform/platform.h.orig	2024-04-10 21:25:00.185878000 +0000
 +++ third_party/blink/public/platform/platform.h
-@@ -351,7 +351,7 @@ class BLINK_PLATFORM_EXPORT Platform {
+@@ -347,7 +347,7 @@ class BLINK_PLATFORM_EXPORT Platform {
      return nullptr;
    }
  

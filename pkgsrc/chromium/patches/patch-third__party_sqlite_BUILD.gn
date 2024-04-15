@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/sqlite/BUILD.gn.orig	2024-03-26 21:38:01.891603700 +0000
+--- third_party/sqlite/BUILD.gn.orig	2024-04-10 21:25:21.951612700 +0000
 +++ third_party/sqlite/BUILD.gn
 @@ -142,7 +142,7 @@ config("sqlite_warnings") {
        ]
