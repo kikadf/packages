@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/BUILD.gn.orig	2024-04-10 21:24:52.405258000 +0000
+--- content/common/BUILD.gn.orig	2024-04-15 20:33:57.782126000 +0000
 +++ content/common/BUILD.gn
-@@ -442,20 +442,29 @@ source_set("common") {
+@@ -444,19 +444,28 @@ source_set("common") {
    }
  
    if (is_linux || is_chromeos) {
@@ -27,7 +27,6 @@ $NetBSD$
      public_deps += [ "//sandbox/policy" ]
      deps += [
        ":sandbox_support_linux",
-       ":set_process_title_linux",
        "//media/gpu:buildflags",
        "//sandbox/linux:sandbox_services",
 -      "//sandbox/linux:seccomp_bpf",
@@ -40,13 +39,3 @@ $NetBSD$
      if (use_v4l2_codec) {
        deps += [ "//media/gpu/v4l2" ]
      }
-@@ -525,6 +534,9 @@ if (is_linux || is_chromeos) {
-     public = [ "set_process_title_linux.h" ]
-     sources = [ "set_process_title_linux.cc" ]
-     deps = [ "//base" ]
-+    if (is_bsd) {
-+      sources -= [ "set_process_title_linux.cc" ]
-+    }
-   }
- }
- 

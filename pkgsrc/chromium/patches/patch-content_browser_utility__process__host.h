@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/utility_process_host.h.orig	2024-04-10 21:24:52.337252600 +0000
+--- content/browser/utility_process_host.h.orig	2024-04-15 20:33:57.722121500 +0000
 +++ content/browser/utility_process_host.h
 @@ -39,7 +39,7 @@ namespace base {
  class Thread;
@@ -14,12 +14,12 @@ $NetBSD$
  namespace viz {
  class GpuClient;
  }  // namespace viz
-@@ -225,7 +225,7 @@ class CONTENT_EXPORT UtilityProcessHost
+@@ -228,7 +228,7 @@ class CONTENT_EXPORT UtilityProcessHost
    std::vector<RunServiceDeprecatedCallback> pending_run_service_callbacks_;
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+   bool allowed_gpu_;
    std::unique_ptr<viz::GpuClient, base::OnTaskRunnerDeleter> gpu_client_;
  #endif
- 

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-04-10 21:24:44.308612800 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-04-15 20:33:49.769537400 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view_base.cc
-@@ -703,7 +703,7 @@ void ProfileMenuViewBase::SetProfileIden
+@@ -726,7 +726,7 @@ void ProfileMenuViewBase::SetProfileIden
  
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.

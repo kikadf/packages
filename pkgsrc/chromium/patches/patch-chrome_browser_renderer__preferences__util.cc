@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2024-04-10 21:24:42.444464200 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2024-04-15 20:33:47.941403200 +0000
 +++ chrome/browser/renderer_preferences_util.cc
-@@ -38,7 +38,7 @@
+@@ -39,7 +39,7 @@
  #include "ui/views/controls/textfield/textfield.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "chrome/browser/themes/theme_service.h"
  #include "chrome/browser/themes/theme_service_factory.h"
  #include "ui/linux/linux_ui.h"
-@@ -150,7 +150,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -154,7 +154,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->caret_blink_interval = views::Textfield::GetCaretBlinkInterval();
  #endif
  
@@ -23,7 +23,7 @@ $NetBSD$
    auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile);
    if (linux_ui_theme) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
-@@ -173,7 +173,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -177,7 +177,7 @@ void UpdateFromSystemSettings(blink::Ren
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/service_manager/BUILD.gn.orig	2024-04-10 21:24:58.877773800 +0000
+--- services/service_manager/BUILD.gn.orig	2024-04-15 20:34:03.698560200 +0000
 +++ services/service_manager/BUILD.gn
 @@ -67,7 +67,7 @@ source_set("service_manager") {
      ]

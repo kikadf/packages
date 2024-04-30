@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/public/scoped_res_state.h.orig	2024-04-10 21:24:57.409656800 +0000
+--- net/dns/public/scoped_res_state.h.orig	2024-04-15 20:34:02.430467100 +0000
 +++ net/dns/public/scoped_res_state.h
 @@ -5,6 +5,7 @@
  #ifndef NET_DNS_PUBLIC_SCOPED_RES_STATE_H_

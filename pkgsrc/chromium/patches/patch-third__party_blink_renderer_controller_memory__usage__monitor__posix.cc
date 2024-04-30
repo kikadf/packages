@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2024-04-10 21:25:00.313888300 +0000
+--- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2024-04-15 20:34:05.334680600 +0000
 +++ third_party/blink/renderer/controller/memory_usage_monitor_posix.cc
 @@ -128,15 +128,17 @@ void MemoryUsageMonitorPosix::ResetFileD
  

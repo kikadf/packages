@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/stack_base_address_posix.cc.orig	2024-04-10 21:24:37.232048700 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2024-04-15 20:33:42.745021600 +0000
 +++ base/profiler/stack_base_address_posix.cc
 @@ -17,6 +17,14 @@
  #include "base/files/scoped_file.h"
@@ -20,7 +20,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -45,7 +53,21 @@ absl::optional<uintptr_t> GetAndroidMain
+@@ -45,7 +53,21 @@ std::optional<uintptr_t> GetAndroidMainT
  
  #if !BUILDFLAG(IS_LINUX)
  uintptr_t GetThreadStackBaseAddressImpl(pthread_t pthread_id) {
@@ -57,3 +57,12 @@ $NetBSD$
    const uintptr_t base_address = reinterpret_cast<uintptr_t>(address) + size;
    return base_address;
  }
+@@ -80,7 +104,7 @@ std::optional<uintptr_t> GetThreadStackB
+   // trying to work around the problem.
+   return std::nullopt;
+ #else
+-  const bool is_main_thread = id == GetCurrentProcId();
++  const bool is_main_thread = id == checked_cast<PlatformThreadId>(GetCurrentProcId());
+   if (is_main_thread) {
+ #if BUILDFLAG(IS_ANDROID)
+     // The implementation of pthread_getattr_np() in Bionic reads proc/self/maps

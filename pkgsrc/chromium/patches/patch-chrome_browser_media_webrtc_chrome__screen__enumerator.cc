@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2024-04-10 21:24:41.900421000 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2024-04-15 20:33:47.421365000 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.cc
 @@ -21,7 +21,7 @@
  #if BUILDFLAG(IS_CHROMEOS_ASH)

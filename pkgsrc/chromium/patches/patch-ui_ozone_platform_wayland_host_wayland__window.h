@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-04-10 21:25:25.419889000 +0000
+--- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-04-15 20:34:30.488527800 +0000
 +++ ui/ozone/platform/wayland/host/wayland_window.h
 @@ -40,7 +40,7 @@
  #include "ui/platform_window/platform_window_init_properties.h"
@@ -32,7 +32,7 @@ $NetBSD$
    void OnCursorLoaded(scoped_refptr<WaylandAsyncCursor> cursor,
                        scoped_refptr<BitmapCursor> bitmap_cursor);
  #endif
-@@ -569,7 +569,7 @@ class WaylandWindow : public PlatformWin
+@@ -571,7 +571,7 @@ class WaylandWindow : public PlatformWin
  
    wl::Object<zaura_surface> aura_surface_;
  

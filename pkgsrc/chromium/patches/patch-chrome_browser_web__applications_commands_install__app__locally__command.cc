@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/commands/install_app_locally_command.cc.orig	2024-04-10 21:24:44.748648000 +0000
+--- chrome/browser/web_applications/commands/install_app_locally_command.cc.orig	2024-04-15 20:33:50.177567500 +0000
 +++ chrome/browser/web_applications/commands/install_app_locally_command.cc
 @@ -75,7 +75,7 @@ void InstallAppLocallyCommand::StartWith
    options.os_hooks[OsHookType::kUninstallationViaOsSettings] =

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/include/v8config.h.orig	2024-04-10 21:26:20.032241300 +0000
+--- v8/include/v8config.h.orig	2024-04-15 20:35:27.056682000 +0000
 +++ v8/include/v8config.h
 @@ -185,6 +185,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_FUCHSIA) \

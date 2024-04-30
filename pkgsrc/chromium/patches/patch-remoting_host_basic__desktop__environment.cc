@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/basic_desktop_environment.cc.orig	2024-04-10 21:24:58.413736800 +0000
+--- remoting/host/basic_desktop_environment.cc.orig	2024-04-15 20:34:03.250527400 +0000
 +++ remoting/host/basic_desktop_environment.cc
-@@ -195,7 +195,7 @@ BasicDesktopEnvironment::CreateVideoCapt
+@@ -195,7 +195,7 @@ std::unique_ptr<DesktopCapturer> BasicDe
    scoped_refptr<base::SingleThreadTaskRunner> capture_task_runner;
  #if BUILDFLAG(IS_CHROMEOS_ASH)
    capture_task_runner = ui_task_runner_;

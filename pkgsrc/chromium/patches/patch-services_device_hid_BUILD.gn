@@ -3,14 +3,14 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/hid/BUILD.gn.orig	2024-04-10 21:24:58.697759400 +0000
+--- services/device/hid/BUILD.gn.orig	2024-04-15 20:34:03.522547500 +0000
 +++ services/device/hid/BUILD.gn
-@@ -36,7 +36,35 @@ source_set("hid") {
+@@ -36,7 +36,36 @@ source_set("hid") {
      "//services/device/public/mojom",
    ]
  
 -  if ((is_linux || is_chromeos) && use_udev) {
-+  if (is_openbsd) {
++  if (is_openbsd || is_netbsd) {
 +    sources += [
 +      "hid_connection_fido.cc",
 +      "hid_connection_fido.h",
@@ -29,14 +29,15 @@ $NetBSD$
 +    ]
 +  }
 +
-+  if (is_netbsd) {
-+    sources += [
-+      "hid_connection_netbsd.cc",
-+      "hid_connection_netbsd.h",
-+      "hid_service_netbsd.cc",
-+      "hid_service_netbsd.h",
-+    ]
-+  }
++# TODO: remove this files
++#  if (is_netbsd) {
++#    sources += [
++#      "hid_connection_netbsd.cc",
++#      "hid_connection_netbsd.h",
++#      "hid_service_netbsd.cc",
++#      "hid_service_netbsd.h",
++#    ]
++#  }
 +
 +  if ((is_linux || is_chromeos) && !is_bsd && use_udev) {
      sources += [

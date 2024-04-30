@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/sampling_profiler_thread_token.cc.orig	2024-04-10 21:24:37.232048700 +0000
+--- base/profiler/sampling_profiler_thread_token.cc.orig	2024-04-15 20:33:42.745021600 +0000
 +++ base/profiler/sampling_profiler_thread_token.cc
 @@ -6,7 +6,7 @@
  
@@ -20,6 +20,6 @@ $NetBSD$
    return {id, pthread_self()};
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   absl::optional<uintptr_t> maybe_stack_base =
+   std::optional<uintptr_t> maybe_stack_base =
        GetThreadStackBaseAddress(id, pthread_self());
    return {id, maybe_stack_base};

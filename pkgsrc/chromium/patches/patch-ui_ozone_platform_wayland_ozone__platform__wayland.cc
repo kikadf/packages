@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-04-10 21:25:25.431890000 +0000
+--- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-04-15 20:34:30.496528400 +0000
 +++ ui/ozone/platform/wayland/ozone_platform_wayland.cc
-@@ -66,13 +66,13 @@
+@@ -67,13 +67,13 @@
  #include "ui/events/ozone/layout/stub/stub_keyboard_layout_engine.h"
  #endif
  
@@ -21,7 +21,7 @@ $NetBSD$
  #include "ui/ozone/platform/wayland/host/linux_ui_delegate_wayland.h"
  #endif
  
-@@ -267,7 +267,7 @@ class OzonePlatformWayland : public Ozon
+@@ -268,7 +268,7 @@ class OzonePlatformWayland : public Ozon
  
      buffer_manager_connector_ = std::make_unique<WaylandBufferManagerConnector>(
          connection_->buffer_manager_host());
@@ -30,7 +30,7 @@ $NetBSD$
      cursor_factory_ = std::make_unique<WaylandCursorFactory>(connection_.get());
  #else
      cursor_factory_ = std::make_unique<BitmapCursorFactory>();
-@@ -277,7 +277,7 @@ class OzonePlatformWayland : public Ozon
+@@ -278,7 +278,7 @@ class OzonePlatformWayland : public Ozon
  
      supported_buffer_formats_ =
          connection_->buffer_manager_host()->GetSupportedBufferFormats();
@@ -39,7 +39,16 @@ $NetBSD$
      linux_ui_delegate_ =
          std::make_unique<LinuxUiDelegateWayland>(connection_.get());
  #endif
-@@ -522,7 +522,7 @@ class OzonePlatformWayland : public Ozon
+@@ -344,7 +344,7 @@ class OzonePlatformWayland : public Ozon
+       properties->supports_global_screen_coordinates =
+           kDefaultScreenCoordinateEnabled;
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       // TODO(crbug.com/40800718): Revisit (and maybe remove) once proper
+       // support, probably backed by org.freedesktop.portal.Screenshot.PickColor
+       // API is implemented. Note: this is restricted to Linux Desktop as Lacros
+@@ -532,7 +532,7 @@ class OzonePlatformWayland : public Ozon
    DrmRenderNodePathFinder path_finder_;
  #endif
  

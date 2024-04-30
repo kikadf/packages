@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/remote_open_url/remote_open_url_client.cc.orig	2024-04-10 21:24:58.477742000 +0000
+--- remoting/host/remote_open_url/remote_open_url_client.cc.orig	2024-04-15 20:34:03.306531700 +0000
 +++ remoting/host/remote_open_url/remote_open_url_client.cc
 @@ -18,7 +18,7 @@
  #include "remoting/host/mojom/chromoting_host_services.mojom.h"

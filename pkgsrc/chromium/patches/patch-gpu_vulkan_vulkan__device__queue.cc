@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/vulkan/vulkan_device_queue.cc.orig	2024-04-10 21:24:54.193400600 +0000
+--- gpu/vulkan/vulkan_device_queue.cc.orig	2024-04-15 20:33:59.490251300 +0000
 +++ gpu/vulkan/vulkan_device_queue.cc
 @@ -121,7 +121,7 @@ bool VulkanDeviceQueue::Initialize(
  

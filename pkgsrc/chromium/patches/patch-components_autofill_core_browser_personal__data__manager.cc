@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/autofill/core/browser/personal_data_manager.cc.orig	2024-04-10 21:24:47.932901600 +0000
+--- components/autofill/core/browser/personal_data_manager.cc.orig	2024-04-15 20:33:53.773831400 +0000
 +++ components/autofill/core/browser/personal_data_manager.cc
-@@ -2329,7 +2329,8 @@ bool PersonalDataManager::ShouldShowCard
+@@ -1063,7 +1063,8 @@ bool PersonalDataManager::ShouldShowCard
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \

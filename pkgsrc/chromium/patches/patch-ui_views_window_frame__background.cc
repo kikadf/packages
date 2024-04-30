@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/window/frame_background.cc.orig	2024-04-10 21:25:25.643906800 +0000
+--- ui/views/window/frame_background.cc.orig	2024-04-15 20:34:30.712544200 +0000
 +++ ui/views/window/frame_background.cc
 @@ -110,7 +110,7 @@ void FrameBackground::PaintMaximized(gfx
                                       int width) const {

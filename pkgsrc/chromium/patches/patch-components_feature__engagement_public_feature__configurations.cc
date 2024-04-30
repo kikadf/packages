@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2024-04-10 21:24:48.656959300 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2024-04-15 20:33:54.597892000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
-@@ -93,7 +93,7 @@ std::optional<FeatureConfig> CreateNewUs
+@@ -94,7 +94,7 @@ std::optional<FeatureConfig> CreateNewUs
  
  std::optional<FeatureConfig> GetClientSideFeatureConfig(
      const base::Feature* feature) {
@@ -14,7 +14,7 @@ $NetBSD$
  
    // The IPH bubble for link capturing has a trigger set to ANY so that it
    // always shows up. The per app specific guardrails are independently stored
-@@ -112,7 +112,7 @@ std::optional<FeatureConfig> GetClientSi
+@@ -113,7 +113,7 @@ std::optional<FeatureConfig> GetClientSi
  
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -23,7 +23,7 @@ $NetBSD$
    if (kIPHPasswordsAccountStorageFeature.name == feature->name) {
      std::optional<FeatureConfig> config = FeatureConfig();
      config->valid = true;
-@@ -1555,7 +1555,8 @@ std::optional<FeatureConfig> GetClientSi
+@@ -1393,7 +1393,8 @@ std::optional<FeatureConfig> GetClientSi
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -33,3 +33,12 @@ $NetBSD$
  
    if (kIPHAutofillExternalAccountProfileSuggestionFeature.name ==
        feature->name) {
+@@ -1965,7 +1966,7 @@ std::optional<FeatureConfig> GetClientSi
+   }
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+   if (kIPHDeepScanPromptRemovalFeature.name == feature->name) {
+     std::optional<FeatureConfig> config = FeatureConfig();
+     config->valid = true;

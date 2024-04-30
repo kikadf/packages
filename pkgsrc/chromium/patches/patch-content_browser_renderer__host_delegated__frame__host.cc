@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/delegated_frame_host.cc.orig	2024-04-10 21:24:52.137236600 +0000
+--- content/browser/renderer_host/delegated_frame_host.cc.orig	2024-04-15 20:33:57.534107700 +0000
 +++ content/browser/renderer_host/delegated_frame_host.cc
 @@ -318,7 +318,7 @@ void DelegatedFrameHost::EmbedSurface(
  

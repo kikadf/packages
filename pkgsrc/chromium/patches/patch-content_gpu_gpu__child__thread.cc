@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/gpu/gpu_child_thread.cc.orig	2024-04-10 21:24:52.437260600 +0000
+--- content/gpu/gpu_child_thread.cc.orig	2024-04-15 20:33:57.810128000 +0000
 +++ content/gpu/gpu_child_thread.cc
-@@ -59,7 +59,7 @@
+@@ -58,7 +58,7 @@
  #include "third_party/skia/include/ports/SkFontConfigInterface.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
  
-@@ -143,7 +143,8 @@ void GpuChildThread::Init(const base::Ti
+@@ -142,7 +142,8 @@ void GpuChildThread::Init(const base::Ti
  
    viz_main_.gpu_service()->set_start_time(process_start_time);
  

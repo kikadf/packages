@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-04-10 21:24:56.129554700 +0000
+--- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-04-15 20:34:01.150373200 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
 @@ -68,7 +68,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
      const base::FilePath dev_path(FILE_PATH_LITERAL(
@@ -23,7 +23,7 @@ $NetBSD$
          false;
  #endif
      if (is_intel_media_compression_enabled) {
-@@ -334,7 +334,7 @@ scoped_refptr<VideoFrame> CreateGpuMemor
+@@ -347,7 +347,7 @@ scoped_refptr<VideoFrame> CreateVideoFra
    const bool is_intel_media_compression_enabled =
  #if BUILDFLAG(IS_CHROMEOS)
        base::FeatureList::IsEnabled(features::kEnableIntelMediaCompression);

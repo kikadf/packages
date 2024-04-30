@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ipc/ipc_channel_mojo.cc.orig	2024-04-10 21:24:55.881535000 +0000
+--- ipc/ipc_channel_mojo.cc.orig	2024-04-15 20:34:00.906355400 +0000
 +++ ipc/ipc_channel_mojo.cc
 @@ -105,7 +105,7 @@ class ThreadSafeChannelProxy : public mo
  };

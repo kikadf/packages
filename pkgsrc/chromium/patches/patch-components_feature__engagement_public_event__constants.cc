@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/event_constants.cc.orig	2024-04-10 21:24:48.656959300 +0000
+--- components/feature_engagement/public/event_constants.cc.orig	2024-04-15 20:33:54.593891600 +0000
 +++ components/feature_engagement/public/event_constants.cc
 @@ -11,7 +11,7 @@ namespace feature_engagement {
  namespace events {

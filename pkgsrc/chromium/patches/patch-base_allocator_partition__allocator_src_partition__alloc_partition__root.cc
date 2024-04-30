@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2024-04-10 21:24:37.056034800 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2024-04-15 20:33:42.573009000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
 @@ -47,7 +47,7 @@
  #include "wow64apiset.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include <pthread.h>
  #endif
  
-@@ -278,7 +278,7 @@ void PartitionAllocMallocInitOnce() {
+@@ -279,7 +279,7 @@ void PartitionAllocMallocInitOnce() {
      return;
    }
  
@@ -23,16 +23,7 @@ $NetBSD$
    // When fork() is called, only the current thread continues to execute in the
    // child process. If the lock is held, but *not* by this thread when fork() is
    // called, we have a deadlock.
-@@ -377,7 +377,7 @@ static size_t PartitionPurgeSlotSpan(Par
-       (PartitionPageSize() * kMaxPartitionPagesPerRegularSlotSpan) /
-       MinPurgeableSlotSize();
- #elif BUILDFLAG(IS_APPLE) ||                           \
--    ((BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)) && \
-+    ((BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && \
-      defined(ARCH_CPU_ARM64))
-   // It's better for slot_usage to be stack-allocated and fixed-size, which
-   // demands that its size be constexpr. On IS_APPLE and Linux on arm64,
-@@ -942,7 +942,7 @@ void PartitionRoot::Init(PartitionOption
+@@ -950,7 +950,7 @@ void PartitionRoot::Init(PartitionOption
      // apple OSes.
      PA_CHECK((internal::SystemPageSize() == (size_t{1} << 12)) ||
               (internal::SystemPageSize() == (size_t{1} << 14)));

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/sampling_profiler_thread_token.h.orig	2024-04-10 21:24:37.232048700 +0000
+--- base/profiler/sampling_profiler_thread_token.h.orig	2024-04-15 20:33:42.745021600 +0000
 +++ base/profiler/sampling_profiler_thread_token.h
-@@ -12,7 +12,7 @@
+@@ -13,7 +13,7 @@
  
  #if BUILDFLAG(IS_ANDROID)
  #include <pthread.h>
@@ -14,7 +14,7 @@ $NetBSD$
  #include <stdint.h>
  #endif
  
-@@ -26,7 +26,7 @@ struct SamplingProfilerThreadToken {
+@@ -27,7 +27,7 @@ struct SamplingProfilerThreadToken {
    PlatformThreadId id;
  #if BUILDFLAG(IS_ANDROID)
    pthread_t pthread_id;

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/safe_browsing/download_protection/file_analyzer.h.orig	2024-04-10 21:24:43.064513700 +0000
+--- chrome/browser/safe_browsing/download_protection/file_analyzer.h.orig	2024-04-15 20:33:48.545447600 +0000
 +++ chrome/browser/safe_browsing/download_protection/file_analyzer.h
 @@ -18,7 +18,7 @@
  #include "components/safe_browsing/core/common/proto/csd.pb.h"

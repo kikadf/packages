@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/signin/public/base/signin_switches.h.orig	2024-04-10 21:24:50.161079200 +0000
+--- components/signin/public/base/signin_switches.h.orig	2024-04-15 20:33:55.969992900 +0000
 +++ components/signin/public/base/signin_switches.h
-@@ -119,7 +119,7 @@ bool IsExplicitBrowserSigninUIOnDesktopE
+@@ -123,7 +123,7 @@ bool IsExplicitBrowserSigninUIOnDesktopE
  
  // Controls the view mode for (history) sync screen.
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \

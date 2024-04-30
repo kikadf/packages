@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc.orig	2024-04-10 21:24:50.033069000 +0000
+--- components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc.orig	2024-04-15 20:33:55.853984400 +0000
 +++ components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc
 @@ -148,7 +148,7 @@ void CrossDeviceUserSegment::ExecuteMode
  // Check for current device type and subtract it from the device count

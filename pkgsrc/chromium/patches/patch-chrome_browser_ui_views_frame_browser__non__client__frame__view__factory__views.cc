@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2024-04-10 21:24:44.196603800 +0000
+--- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2024-04-15 20:33:49.669530200 +0000
 +++ chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc
 @@ -16,7 +16,7 @@
  #include "chrome/browser/ui/views/frame/browser_frame_view_win.h"
@@ -23,12 +23,3 @@ $NetBSD$
    auto* profile = browser_view->browser()->profile();
    auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile);
    auto* theme_service_factory = ThemeServiceFactory::GetForProfile(profile);
-@@ -85,7 +85,7 @@ std::unique_ptr<BrowserNonClientFrameVie
-   if (browser_view->browser()->is_type_picture_in_picture()) {
-     auto view =
-         std::make_unique<PictureInPictureBrowserFrameView>(frame, browser_view);
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     auto* profile = browser_view->browser()->profile();
-     auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile);
-     auto* theme_service_factory = ThemeServiceFactory::GetForProfile(profile);

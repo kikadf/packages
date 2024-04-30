@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/gpu/gpu_data_manager_impl_private.cc.orig	2024-04-10 21:24:51.969223300 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.cc.orig	2024-04-15 20:33:57.378096000 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.cc
-@@ -1807,7 +1807,7 @@ void GpuDataManagerImplPrivate::RecordCo
+@@ -1673,7 +1673,7 @@ void GpuDataManagerImplPrivate::RecordCo
    UMA_HISTOGRAM_ENUMERATION("GPU.CompositingMode", compositing_mode);
  }
  

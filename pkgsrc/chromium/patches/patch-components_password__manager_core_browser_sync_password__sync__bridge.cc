@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/sync/password_sync_bridge.cc.orig	2024-04-10 21:24:49.221004200 +0000
+--- components/password_manager/core/browser/sync/password_sync_bridge.cc.orig	2024-04-15 20:33:55.133931400 +0000
 +++ components/password_manager/core/browser/sync/password_sync_bridge.cc
 @@ -195,7 +195,7 @@ bool ShouldRecoverPasswordsDuringMerge()
  }

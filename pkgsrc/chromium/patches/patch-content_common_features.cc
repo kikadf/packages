@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/features.cc.orig	2024-04-10 21:24:52.409258400 +0000
+--- content/common/features.cc.orig	2024-04-15 20:33:57.786126100 +0000
 +++ content/common/features.cc
-@@ -166,7 +166,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO
+@@ -169,7 +169,7 @@ BASE_FEATURE(kEnableBackForwardCacheForO
               base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables error reporting for JS errors inside DevTools frontend host
@@ -14,7 +14,7 @@ $NetBSD$
  BASE_FEATURE(kEnableDevToolsJsErrorReporting,
               "EnableDevToolsJsErrorReporting",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -262,7 +262,7 @@ BASE_FEATURE(kGroupNIKByJoiningOrigin,
+@@ -272,7 +272,7 @@ BASE_FEATURE(kGroupNIKByJoiningOrigin,
  // process and having browser process handle adjusting thread properties (nice
  // value, c-group, latency sensitivity...) for children which have sandbox
  // restrictions.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2024-04-10 21:24:41.916422100 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2024-04-15 20:33:47.437366200 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
 @@ -25,10 +25,10 @@
  #include "components/webrtc_logging/browser/text_log_list.h"

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/BUILD.gn.orig	2024-04-10 21:24:37.016031700 +0000
+--- base/BUILD.gn.orig	2024-04-15 20:33:42.537006400 +0000
 +++ base/BUILD.gn
-@@ -192,7 +192,7 @@ buildflag_header("ios_cronet_buildflags"
+@@ -200,7 +200,7 @@ buildflag_header("ios_cronet_buildflags"
    flags = [ "CRONET_BUILD=$is_cronet_build" ]
  }
  
@@ -14,7 +14,7 @@ $NetBSD$
  buildflag_header("message_pump_buildflags") {
    header = "message_pump_buildflags.h"
    header_dir = "base/message_loop"
-@@ -971,7 +971,7 @@ component("base") {
+@@ -976,7 +976,7 @@ component("base") {
      #"system/sys_info_openbsd.cc",
    ]
  
@@ -23,7 +23,7 @@ $NetBSD$
      sources += [
        "posix/sysctl.cc",
        "posix/sysctl.h",
-@@ -1126,11 +1126,23 @@ component("base") {
+@@ -1131,11 +1131,23 @@ component("base") {
    # Needed for <atomic> if using newer C++ library than sysroot, except if
    # building inside the cros_sdk environment - use host_toolchain as a
    # more robust check for this.
@@ -48,7 +48,7 @@ $NetBSD$
    if (use_allocator_shim) {
      if (is_apple) {
        sources += [ "allocator/early_zone_registration_apple.h" ]
-@@ -1150,7 +1162,7 @@ component("base") {
+@@ -1155,7 +1167,7 @@ component("base") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -57,7 +57,7 @@ $NetBSD$
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -2106,6 +2118,29 @@ component("base") {
+@@ -2113,6 +2125,29 @@ component("base") {
      ]
    }
  
@@ -87,7 +87,7 @@ $NetBSD$
    # iOS
    if (is_ios) {
      sources += [
-@@ -2241,6 +2276,31 @@ component("base") {
+@@ -2249,6 +2284,33 @@ component("base") {
      }
    }
  
@@ -95,6 +95,8 @@ $NetBSD$
 +    sources -= [
 +      "files/file_path_watcher_inotify.cc",
 +      "files/scoped_file_linux.cc",
++      "process/set_process_title_linux.cc",
++      "process/set_process_title_linux.h",
 +      "system/sys_info_linux.cc",
 +      "process/process_iterator_linux.cc",
 +      "process/process_linux.cc",
@@ -119,7 +121,7 @@ $NetBSD$
    if (use_blink) {
      sources += [
        "files/file_path_watcher.cc",
-@@ -2251,7 +2311,7 @@ component("base") {
+@@ -2259,7 +2321,7 @@ component("base") {
    }
  
    if (dep_libevent) {
@@ -128,7 +130,7 @@ $NetBSD$
    }
  
    if (use_libevent) {
-@@ -3027,7 +3087,7 @@ if (is_apple) {
+@@ -3072,7 +3134,7 @@ if (is_apple) {
    }
  }
  
@@ -137,24 +139,16 @@ $NetBSD$
    # This test must compile with -fstack-protector-all
    source_set("stack_canary_linux_unittests") {
      testonly = true
-@@ -3675,14 +3735,14 @@ test("base_unittests") {
+@@ -3716,7 +3778,7 @@ test("base_unittests") {
      ]
    }
  
 -  if (is_linux || is_chromeos) {
-+  if ((is_linux || is_chromeos) && !is_bsd) {
++  if (!is_bsd && (is_linux || is_chromeos)) {
      sources += [
        "debug/proc_maps_linux_unittest.cc",
        "files/scoped_file_linux_unittest.cc",
-       "nix/mime_util_xdg_unittest.cc",
-     ]
- 
--    if (!is_nacl) {
-+    if (!is_nacl && !is_bsd) {
-       deps += [ ":stack_canary_linux_unittests" ]
-     }
-   }
-@@ -3701,7 +3761,7 @@ test("base_unittests") {
+@@ -3743,7 +3805,7 @@ test("base_unittests") {
        "posix/file_descriptor_shuffle_unittest.cc",
        "posix/unix_domain_socket_unittest.cc",
      ]
@@ -163,7 +157,7 @@ $NetBSD$
        sources += [
          "profiler/stack_base_address_posix_unittest.cc",
          "profiler/stack_copier_signal_unittest.cc",
-@@ -3712,7 +3772,7 @@ test("base_unittests") {
+@@ -3754,7 +3816,7 @@ test("base_unittests") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -172,7 +166,7 @@ $NetBSD$
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -3980,7 +4040,7 @@ test("base_unittests") {
+@@ -4022,7 +4084,7 @@ test("base_unittests") {
      }
    }
  

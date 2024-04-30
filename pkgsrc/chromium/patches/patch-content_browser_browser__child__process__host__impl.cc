@@ -3,17 +3,17 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/browser_child_process_host_impl.cc.orig	2024-04-10 21:24:51.869215300 +0000
+--- content/browser/browser_child_process_host_impl.cc.orig	2024-04-15 20:33:57.290089600 +0000
 +++ content/browser/browser_child_process_host_impl.cc
-@@ -326,6 +326,7 @@ void BrowserChildProcessHostImpl::Launch
-       switches::kDisableBestEffortTasks,
-       switches::kDisableLogging,
-       switches::kEnableLogging,
+@@ -329,6 +329,7 @@ void BrowserChildProcessHostImpl::Launch
+       switches::kMojoCoreLibraryPath,
+       switches::kPerfettoDisableInterning,
+       switches::kTraceToConsole,
 +      switches::kDisableUnveil,
-       switches::kIPCConnectionTimeout,
-       switches::kLogBestEffortTasks,
-       switches::kLogFile,
-@@ -650,7 +651,7 @@ void BrowserChildProcessHostImpl::OnProc
+   };
+   cmd_line->CopySwitchesFrom(browser_command_line, kForwardSwitches);
+ 
+@@ -644,7 +645,7 @@ void BrowserChildProcessHostImpl::OnProc
            ->child_process());
  #endif
  

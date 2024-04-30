@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/threading/platform_thread_posix.cc.orig	2024-04-10 21:24:37.348058000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2024-04-15 20:33:42.857029700 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -78,12 +78,12 @@ void* ThreadFunc(void* params) {
      if (!thread_params->joinable)
@@ -20,7 +20,16 @@ $NetBSD$
  #if BUILDFLAG(IS_APPLE)
      PlatformThread::SetCurrentThreadRealtimePeriodValue(
          delegate->GetRealtimePeriod());
-@@ -357,7 +357,7 @@ void PlatformThreadBase::Detach(Platform
+@@ -267,6 +267,8 @@ PlatformThreadId PlatformThreadBase::Cur
+   return reinterpret_cast<int32_t>(pthread_self());
+ #elif BUILDFLAG(IS_POSIX) && BUILDFLAG(IS_AIX)
+   return pthread_self();
++#elif BUILDFLAG(IS_BSD)
++  return reinterpret_cast<uint64_t>(pthread_self());
+ #elif BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_AIX)
+   return reinterpret_cast<int64_t>(pthread_self());
+ #endif
+@@ -357,7 +359,7 @@ void PlatformThreadBase::Detach(Platform
  
  // static
  bool PlatformThreadBase::CanChangeThreadType(ThreadType from, ThreadType to) {
@@ -29,7 +38,7 @@ $NetBSD$
    return false;
  #else
    if (from >= to) {
-@@ -378,6 +378,9 @@ void SetCurrentThreadTypeImpl(ThreadType
+@@ -378,6 +380,9 @@ void SetCurrentThreadTypeImpl(ThreadType
                                MessagePumpType pump_type_hint) {
  #if BUILDFLAG(IS_NACL)
    NOTIMPLEMENTED();
@@ -39,7 +48,7 @@ $NetBSD$
  #else
    if (internal::SetCurrentThreadTypeForPlatform(thread_type, pump_type_hint))
      return;
-@@ -400,7 +403,7 @@ void SetCurrentThreadTypeImpl(ThreadType
+@@ -400,7 +405,7 @@ void SetCurrentThreadTypeImpl(ThreadType
  
  // static
  ThreadPriorityForTest PlatformThreadBase::GetCurrentThreadPriorityForTest() {

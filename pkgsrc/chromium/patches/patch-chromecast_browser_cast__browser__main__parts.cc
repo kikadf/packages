@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chromecast/browser/cast_browser_main_parts.cc.orig	2024-04-10 21:24:47.036830200 +0000
+--- chromecast/browser/cast_browser_main_parts.cc.orig	2024-04-15 20:33:52.845763400 +0000
 +++ chromecast/browser/cast_browser_main_parts.cc
 @@ -90,7 +90,7 @@
  #include "ui/base/ui_base_switches.h"

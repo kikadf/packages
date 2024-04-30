@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/system/sys_info_freebsd.cc.orig	2024-04-10 21:24:37.256050800 +0000
+--- base/system/sys_info_freebsd.cc.orig	2024-04-15 20:33:42.769023400 +0000
 +++ base/system/sys_info_freebsd.cc
 @@ -9,30 +9,106 @@
  #include <sys/sysctl.h>

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/maldoca/src/maldoca/service/common/process_doc_wrapper.cc.orig	2024-04-10 21:25:20.207473800 +0000
+--- third_party/maldoca/src/maldoca/service/common/process_doc_wrapper.cc.orig	2024-04-15 20:34:25.644172000 +0000
 +++ third_party/maldoca/src/maldoca/service/common/process_doc_wrapper.cc
 @@ -7,7 +7,7 @@
  #include "build/build_config.h"

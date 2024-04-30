@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2024-04-10 21:25:01.894014100 +0000
+--- third_party/blink/renderer/platform/graphics/begin_frame_provider.cc.orig	2024-04-15 20:34:06.858792500 +0000
 +++ third_party/blink/renderer/platform/graphics/begin_frame_provider.cc
 @@ -71,8 +71,12 @@ void BeginFrameProvider::CreateComposito
  

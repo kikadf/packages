@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/debug/debugger_posix.cc.orig	2024-04-10 21:24:37.132041000 +0000
+--- base/debug/debugger_posix.cc.orig	2024-04-15 20:33:42.649014500 +0000
 +++ base/debug/debugger_posix.cc
-@@ -35,6 +35,10 @@
+@@ -36,6 +36,10 @@
  #include <sys/sysctl.h>
  #endif
  
@@ -56,7 +56,8 @@ $NetBSD$
    if (sysctl(mib, std::size(mib), NULL, &info_size, NULL, 0) < 0)
      return -1;
  
-   mib[5] = (info_size / sizeof(struct kinfo_proc));
+-  mib[5] = (info_size / sizeof(struct kinfo_proc));
++  mib[5] = static_cast<int>((info_size / sizeof(struct kinfo_proc)));
 +  if ((info = reinterpret_cast<kinfo_proc*>(malloc(info_size))) == NULL) {
 +    is_set = true;
 +    being_debugged = false;
@@ -87,11 +88,10 @@ $NetBSD$
  #if BUILDFLAG(IS_FREEBSD)
    being_debugged = (info.ki_flag & P_TRACED) != 0;
 -#elif BUILDFLAG(IS_BSD)
--  being_debugged = (info.p_flag & P_TRACED) != 0;
 +#elif BUILDFLAG(IS_OPENBSD)
 +  being_debugged = (info->p_psflags & PS_TRACED) != 0;
 +#elif BUILDFLAG(IS_NETBSD)
-+  being_debugged = (info->p_pflag & P_TRACED) != 0;
+   being_debugged = (info.p_flag & P_TRACED) != 0;
  #else
    being_debugged = (info.kp_proc.p_flag & P_TRACED) != 0;
  #endif

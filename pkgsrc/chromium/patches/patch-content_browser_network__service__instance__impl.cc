@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/network_service_instance_impl.cc.orig	2024-04-10 21:24:52.081232300 +0000
+--- content/browser/network_service_instance_impl.cc.orig	2024-04-15 20:33:57.482103800 +0000
 +++ content/browser/network_service_instance_impl.cc
 @@ -81,7 +81,7 @@
  #include "content/browser/network/network_service_process_tracker_win.h"

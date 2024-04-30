@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/base/chromoting_event.cc.orig	2024-04-10 21:24:58.205720200 +0000
+--- remoting/base/chromoting_event.cc.orig	2024-04-15 20:34:03.222525400 +0000
 +++ remoting/base/chromoting_event.cc
 @@ -192,7 +192,7 @@ void ChromotingEvent::AddSystemInfo() {
    SetString(kCpuKey, base::SysInfo::OperatingSystemArchitecture());

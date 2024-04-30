@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/BUILD.gn.orig	2024-04-10 21:25:34.652624800 +0000
+--- third_party/ffmpeg/BUILD.gn.orig	2024-04-15 20:34:38.905146000 +0000
 +++ third_party/ffmpeg/BUILD.gn
-@@ -349,7 +349,6 @@ target(link_target_type, "ffmpeg_interna
+@@ -343,7 +343,6 @@ target(link_target_type, "ffmpeg_interna
        libs += [
          "m",
          "z",

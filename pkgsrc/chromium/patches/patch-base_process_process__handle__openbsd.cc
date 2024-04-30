@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_handle_openbsd.cc.orig	2024-04-10 21:24:37.224048100 +0000
+--- base/process/process_handle_openbsd.cc.orig	2024-04-15 20:33:42.733020500 +0000
 +++ base/process/process_handle_openbsd.cc
 @@ -3,48 +3,112 @@
  // found in the LICENSE file.
@@ -77,49 +77,49 @@ $NetBSD$
 -    return FilePath(kp.p_comm);
 +  char *tokens[2];
 +  struct stat sb;
-+  FilePath *result = nullptr;
++  FilePath result;
 +
 +  int mib[] = { CTL_KERN, KERN_PROC_ARGS, process, KERN_PROC_ARGV };
 +
 +  if ((cpath = getenv("CHROME_EXE_PATH")) != NULL)
-+    *result = FilePath(cpath);
++    result = FilePath(cpath);
 +  else
-+    *result = FilePath("/usr/local/chrome/chrome");
++    result = FilePath("/usr/local/chrome/chrome");
 +
 +  if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) != -1) {
 +    retvalargs = static_cast<char**>(malloc(len));
 +    if (!retvalargs)
-+      return *result;
++      return result;
 +
 +    if (sysctl(mib, std::size(mib), retvalargs, &len, NULL, 0) < 0) {
 +      free(retvalargs);
-+      return *result;
++      return result;
 +    }
 +
 +    if ((*tokens = strtok(retvalargs[0], ":")) == NULL) {
 +      free(retvalargs);
-+      return *result;
++      return result;
 +    }
 +
 +    free(retvalargs);
 +
 +    if (tokens[0] == NULL)
-+      return *result;
++      return result;
 +
 +    if (realpath(tokens[0], retval) == NULL)
-+      return *result;
++      return result;
 +
 +    if (stat(retval, &sb) < 0)
-+      return *result;
++      return result;
 +
-+    if ((kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES,
++    if ((kd = kvm_openfiles(NULL, NULL, NULL, (int)KVM_NO_FILES,
 +         errbuf)) == NULL)
-+      return *result;
++      return result;
 +
 +    if ((files = kvm_getfiles(kd, KERN_FILE_BYPID, process,
 +        sizeof(struct kinfo_file), &cnt)) == NULL) {
 +      kvm_close(kd);
-+      return *result;
++      return result;
 +    }
 +
 +    for (int i = 0; i < cnt; i++) {
@@ -127,13 +127,13 @@ $NetBSD$
 +          files[i].va_fsid == static_cast<uint32_t>(sb.st_dev) &&
 +          files[i].va_fileid == sb.st_ino) {
 +            kvm_close(kd);
-+            *result = FilePath(retval);
++            result = FilePath(retval);
 +      }
 +    }
 +  }
  
 -  return FilePath();
-+  return *result;
++  return result;
  }
  
  }  // namespace base

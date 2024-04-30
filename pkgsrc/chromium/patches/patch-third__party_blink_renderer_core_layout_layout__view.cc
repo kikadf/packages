@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-04-10 21:25:00.893934500 +0000
+--- third_party/blink/renderer/core/layout/layout_view.cc.orig	2024-04-15 20:34:06.058733700 +0000
 +++ third_party/blink/renderer/core/layout/layout_view.cc
-@@ -71,7 +71,7 @@
+@@ -73,7 +73,7 @@
  #include "ui/gfx/geometry/quad_f.h"
  #include "ui/gfx/geometry/size_conversions.h"
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "third_party/blink/renderer/platform/fonts/font_cache.h"
  #endif
  
-@@ -811,7 +811,7 @@ void LayoutView::UpdateLayout() {
+@@ -832,7 +832,7 @@ void LayoutView::UpdateLayout() {
      intrinsic_logical_widths_ = LogicalWidth();
    }
  

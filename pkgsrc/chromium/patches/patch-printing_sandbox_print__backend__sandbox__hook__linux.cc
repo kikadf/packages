@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2024-04-10 21:24:58.185718800 +0000
+--- printing/sandbox/print_backend_sandbox_hook_linux.cc.orig	2024-04-15 20:34:03.202524000 +0000
 +++ printing/sandbox/print_backend_sandbox_hook_linux.cc
 @@ -10,20 +10,27 @@
  #include "base/path_service.h"
@@ -45,8 +45,8 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS) && BUILDFLAG(USE_CUPS)
    // Create the socket connections to the CUPS server before engaging the
    // sandbox, since new connections cannot be made after that.
-@@ -92,6 +101,7 @@ bool PrintBackendPreSandboxHook(
-       sandbox::policy::SandboxLinux::PreSandboxHook(), options);
+@@ -91,6 +100,7 @@ bool PrintBackendPreSandboxHook(
+                                GetPrintBackendFilePermissions(), options);
  
    instance->EngageNamespaceSandboxIfPossible();
 +#endif

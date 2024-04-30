@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/BUILD.gn.orig	2024-04-10 21:25:01.814007800 +0000
+--- third_party/blink/renderer/platform/BUILD.gn.orig	2024-04-15 20:34:06.782786800 +0000
 +++ third_party/blink/renderer/platform/BUILD.gn
-@@ -1939,7 +1939,7 @@ static_library("test_support") {
+@@ -1947,7 +1947,7 @@ static_library("test_support") {
    ]
  
    # fuzzed_data_provider may not work with a custom toolchain.

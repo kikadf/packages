@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- sandbox/policy/mojom/sandbox.mojom.orig	2024-04-10 21:24:58.609752400 +0000
+--- sandbox/policy/mojom/sandbox.mojom.orig	2024-04-15 20:34:03.438541200 +0000
 +++ sandbox/policy/mojom/sandbox.mojom
 @@ -77,6 +77,15 @@ enum Sandbox {
    [EnableIf=is_fuchsia]

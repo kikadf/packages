@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-04-10 21:24:56.125554600 +0000
+--- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2024-04-15 20:34:01.146373000 +0000
 +++ media/gpu/chromeos/libyuv_image_processor_backend.cc
 @@ -48,7 +48,7 @@ static constexpr struct {
  #define CONV(in, out, trans, result) \
@@ -14,7 +14,7 @@ $NetBSD$
      CONV(NV12, AR24, kConversion, Supported),
  #endif
      CONV(NV12, NV12, kConversion, Supported),
-@@ -434,7 +434,7 @@ int LibYUVImageProcessorBackend::DoConve
+@@ -436,7 +436,7 @@ int LibYUVImageProcessorBackend::DoConve
            fr->GetWritableVisibleData(VideoFrame::kUVPlane)), \
        fr->stride(VideoFrame::kUVPlane)
  
@@ -23,7 +23,7 @@ $NetBSD$
  #define ARGB_DATA(fr)                                 \
    fr->GetWritableVisibleData(VideoFrame::kARGBPlane), \
        fr->stride(VideoFrame::kARGBPlane)
-@@ -595,7 +595,7 @@ int LibYUVImageProcessorBackend::DoConve
+@@ -597,7 +597,7 @@ int LibYUVImageProcessorBackend::DoConve
      }
    }
  

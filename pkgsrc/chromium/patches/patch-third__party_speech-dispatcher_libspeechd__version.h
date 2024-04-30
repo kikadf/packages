@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/speech-dispatcher/libspeechd_version.h.orig	2024-04-15 08:14:43.615445884 +0000
+--- third_party/speech-dispatcher/libspeechd_version.h.orig	2024-04-30 14:42:42.484030266 +0000
 +++ third_party/speech-dispatcher/libspeechd_version.h
 @@ -0,0 +1,29 @@
 +/*

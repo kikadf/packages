@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-04-10 21:24:48.732965500 +0000
+--- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-04-15 20:33:54.665897000 +0000
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
-@@ -31,7 +31,7 @@
+@@ -30,7 +30,7 @@
  #include "third_party/crashpad/crashpad/snapshot/process_snapshot.h"
  #include "third_party/crashpad/crashpad/util/process/process_memory.h"
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include <signal.h>
  #elif BUILDFLAG(IS_APPLE)
  #include <mach/exception_types.h>
-@@ -91,7 +91,7 @@ bool CrashAnalyzer::GetExceptionInfo(
+@@ -90,7 +90,7 @@ bool CrashAnalyzer::GetExceptionInfo(
  
  crashpad::VMAddress CrashAnalyzer::GetAccessAddress(
      const crashpad::ExceptionSnapshot& exception) {

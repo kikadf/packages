@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/desktop_capturer_proxy.cc.orig	2024-04-10 21:24:58.425737900 +0000
+--- remoting/host/desktop_capturer_proxy.cc.orig	2024-04-15 20:34:03.258528000 +0000
 +++ remoting/host/desktop_capturer_proxy.cc
 @@ -26,7 +26,7 @@
  #include "remoting/host/chromeos/frame_sink_desktop_capturer.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #include "remoting/host/linux/wayland_desktop_capturer.h"
-@@ -89,7 +89,7 @@ void DesktopCapturerProxy::Core::CreateC
+@@ -91,7 +91,7 @@ void DesktopCapturerProxy::Core::CreateC
  
  #if BUILDFLAG(IS_CHROMEOS_ASH)
    capturer_ = std::make_unique<FrameSinkDesktopCapturer>();
@@ -23,7 +23,7 @@ $NetBSD$
    static base::nix::SessionType session_type = base::nix::SessionType::kUnset;
    if (session_type == base::nix::SessionType::kUnset) {
      std::unique_ptr<base::Environment> env = base::Environment::Create();
-@@ -293,7 +293,7 @@ void DesktopCapturerProxy::OnMetadata(we
+@@ -298,7 +298,7 @@ void DesktopCapturerProxy::OnMetadata(we
  bool DesktopCapturerProxy::SupportsFrameCallbacks() {
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
  

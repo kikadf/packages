@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/base/video_frame.h.orig	2024-04-10 21:24:55.977542600 +0000
+--- media/base/video_frame.h.orig	2024-04-15 20:34:00.994361600 +0000
 +++ media/base/video_frame.h
 @@ -44,7 +44,7 @@
  #include "base/apple/scoped_cftyperef.h"
@@ -32,7 +32,7 @@ $NetBSD$
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -593,7 +593,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -598,7 +598,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // mailbox, the caller must wait for the included sync point.
    const gpu::MailboxHolder& mailbox_holder(size_t texture_index) const;
  
@@ -41,7 +41,7 @@ $NetBSD$
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -811,7 +811,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -816,7 +816,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // GPU memory buffer, if this frame is STORAGE_GPU_MEMORY_BUFFER.
    std::unique_ptr<gfx::GpuMemoryBuffer> gpu_memory_buffer_;
  

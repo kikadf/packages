@@ -3,18 +3,18 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-04-10 21:26:14.207777000 +0000
+--- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-04-15 20:35:21.180250600 +0000
 +++ third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
-@@ -18,7 +18,7 @@
- #include "third_party/base/check.h"
+@@ -17,7 +17,7 @@
+ #include "core/fxge/fx_font.h"
+ #include "core/fxge/systemfontinfo_iface.h"
  
- #if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_FUCHSIA) && \
--    !defined(OS_ASMJS)
-+    !defined(OS_ASMJS) && !BUILDFLAG(IS_BSD)
+-#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS)
++#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS) && !BUILDFLAG(IS_BSD)
  #error "Included on the wrong platform"
  #endif
  
-@@ -166,9 +166,8 @@ class CLinuxPlatform : public CFX_GEModu
+@@ -165,9 +165,8 @@ class CLinuxPlatform : public CFX_GEModu
    std::unique_ptr<SystemFontInfoIface> CreateDefaultSystemFontInfo() override {
      auto pInfo = std::make_unique<CFX_LinuxFontInfo>();
      if (!pInfo->ParseFontCfg(CFX_GEModule::Get()->GetUserFontPaths())) {

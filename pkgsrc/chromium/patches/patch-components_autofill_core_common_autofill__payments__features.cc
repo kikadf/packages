@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2024-04-10 21:24:47.964904000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2024-04-15 20:33:53.801833600 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
-@@ -281,7 +281,7 @@ BASE_FEATURE(kAutofillEnableVirtualCards
+@@ -276,7 +276,7 @@ BASE_FEATURE(kAutofillEnableVirtualCards
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-04-10 21:24:37.024032400 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-04-15 20:33:42.541006600 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/BUILD.gn
-@@ -858,7 +858,7 @@ if (is_clang_or_gcc) {
+@@ -851,7 +851,7 @@ if (is_clang_or_gcc) {
          configs -= [ "//build/config/compiler:enable_arc" ]
        }
      }

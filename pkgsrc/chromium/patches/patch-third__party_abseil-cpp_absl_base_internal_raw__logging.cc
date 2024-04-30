@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/abseil-cpp/absl/base/internal/raw_logging.cc.orig	2024-04-10 21:24:59.237802500 +0000
+--- third_party/abseil-cpp/absl/base/internal/raw_logging.cc.orig	2024-04-15 20:34:04.198597000 +0000
 +++ third_party/abseil-cpp/absl/base/internal/raw_logging.cc
 @@ -44,7 +44,7 @@
  #if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \

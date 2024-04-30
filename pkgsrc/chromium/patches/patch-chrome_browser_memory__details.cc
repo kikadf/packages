@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/memory_details.cc.orig	2024-04-10 21:24:41.936423800 +0000
+--- chrome/browser/memory_details.cc.orig	2024-04-15 20:33:47.457367700 +0000
 +++ chrome/browser/memory_details.cc
 @@ -38,7 +38,7 @@
  #include "services/resource_coordinator/public/cpp/memory_instrumentation/memory_instrumentation.h"

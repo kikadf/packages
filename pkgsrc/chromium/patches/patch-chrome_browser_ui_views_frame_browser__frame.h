@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/browser_frame.h.orig	2024-04-10 21:24:44.188603200 +0000
+--- chrome/browser/ui/views/frame/browser_frame.h.orig	2024-04-15 20:33:49.661529500 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.h
 @@ -65,7 +65,7 @@ class BrowserFrame : public views::Widge
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2024-04-10 21:24:44.616637500 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2024-04-15 20:33:50.041557300 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards_handler.cc
 @@ -28,7 +28,7 @@
  #include "chrome/browser/ui/webui/password_manager/promo_cards/web_password_manager_promo.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/device_signals/test/signals_contract.cc.orig	2024-04-10 21:24:48.356935500 +0000
+--- components/device_signals/test/signals_contract.cc.orig	2024-04-15 20:33:54.433879900 +0000
 +++ components/device_signals/test/signals_contract.cc
 @@ -212,7 +212,7 @@ GetSignalsContract() {
        base::BindRepeating(VerifyUnset, names::kCrowdStrike);

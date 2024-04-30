@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_util_unittest.cc.orig	2024-04-10 21:24:37.148042200 +0000
+--- base/files/file_util_unittest.cc.orig	2024-04-15 20:33:42.661015300 +0000
 +++ base/files/file_util_unittest.cc
-@@ -3869,7 +3869,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
+@@ -3870,7 +3870,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -14,7 +14,7 @@ $NetBSD$
  TEST_F(FileUtilTest, ReadFileToStringWithProcFileSystem) {
    FilePath file_path("/proc/cpuinfo");
    std::string data = "temp";
-@@ -4592,7 +4592,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
+@@ -4651,7 +4651,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
                  NULL);
  #else
      size_t bytes_written =

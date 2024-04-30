@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-04-10 21:24:54.061390000 +0000
+--- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-04-15 20:33:59.370242600 +0000
 +++ gpu/command_buffer/common/gpu_memory_buffer_support.cc
 @@ -182,7 +182,7 @@ uint32_t GetPlatformSpecificTextureTarge
  #if BUILDFLAG(IS_MAC)
@@ -14,7 +14,7 @@ $NetBSD$
    return GL_TEXTURE_EXTERNAL_OES;
  #elif BUILDFLAG(IS_IOS)
    return GL_TEXTURE_2D;
-@@ -217,7 +217,7 @@ GPU_EXPORT bool NativeBufferNeedsPlatfor
+@@ -209,7 +209,7 @@ GPU_EXPORT bool NativeBufferNeedsPlatfor
      gfx::BufferFormat format,
      gfx::BufferPlane plane) {
  #if BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

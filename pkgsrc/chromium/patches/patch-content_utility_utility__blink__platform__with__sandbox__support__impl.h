@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/utility/utility_blink_platform_with_sandbox_support_impl.h.orig	2024-04-10 21:24:53.205321800 +0000
+--- content/utility/utility_blink_platform_with_sandbox_support_impl.h.orig	2024-04-15 20:33:58.558183000 +0000
 +++ content/utility/utility_blink_platform_with_sandbox_support_impl.h
 @@ -33,7 +33,7 @@ class UtilityBlinkPlatformWithSandboxSup
    blink::WebSandboxSupport* GetSandboxSupport() override;

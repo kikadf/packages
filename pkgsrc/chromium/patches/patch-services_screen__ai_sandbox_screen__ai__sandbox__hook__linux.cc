@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2024-04-10 21:24:50.097074000 +0000
-+++ components/services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc
-@@ -53,6 +53,7 @@ bool ScreenAIPreSandboxHook(sandbox::pol
+--- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2024-04-15 20:34:03.694560000 +0000
++++ services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc
+@@ -53,6 +53,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
      }
    }
  
@@ -13,9 +13,9 @@ $NetBSD$
    auto* instance = sandbox::policy::SandboxLinux::GetInstance();
  
    std::vector<BrokerFilePermission> permissions{
-@@ -75,6 +76,7 @@ bool ScreenAIPreSandboxHook(sandbox::pol
+@@ -75,6 +76,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
                              sandbox::syscall_broker::COMMAND_OPEN}),
-       permissions, sandbox::policy::SandboxLinux::PreSandboxHook(), options);
+       permissions, options);
    instance->EngageNamespaceSandboxIfPossible();
 +#endif
  

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/BUILD.gn.orig	2024-04-10 21:26:20.012239700 +0000
+--- v8/BUILD.gn.orig	2024-04-15 20:35:27.040681000 +0000
 +++ v8/BUILD.gn
-@@ -1450,6 +1450,18 @@ config("toolchain") {
+@@ -1455,6 +1455,18 @@ config("toolchain") {
    } else if (target_os == "chromeos") {
      defines += [ "V8_HAVE_TARGET_OS" ]
      defines += [ "V8_TARGET_OS_CHROMEOS" ]
@@ -24,7 +24,7 @@ $NetBSD$
    }
  
    # TODO(infra): Support v8_enable_prof on Windows.
-@@ -2348,6 +2360,23 @@ action("generate_bytecode_builtins_list"
+@@ -2367,6 +2379,23 @@ action("generate_bytecode_builtins_list"
    ]
  }
  
@@ -48,7 +48,7 @@ $NetBSD$
  # Template to generate different V8 snapshots based on different runtime flags.
  # Can be invoked with run_mksnapshot(<name>). The target will resolve to
  # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
-@@ -2366,7 +2395,11 @@ template("run_mksnapshot") {
+@@ -2385,7 +2414,11 @@ template("run_mksnapshot") {
      suffix = "_$name"
    }
    action("run_mksnapshot_" + name) {
@@ -61,7 +61,7 @@ $NetBSD$
  
      script = "tools/run.py"
  
-@@ -2423,6 +2456,12 @@ template("run_mksnapshot") {
+@@ -2442,6 +2475,12 @@ template("run_mksnapshot") {
        if (!v8_enable_builtins_profiling && v8_enable_builtins_reordering) {
          args += [ "--reorder-builtins" ]
        }
@@ -74,7 +74,7 @@ $NetBSD$
      }
  
      # This is needed to distinguish between generating code for the simulator
-@@ -4423,7 +4462,7 @@ v8_header_set("v8_internal_headers") {
+@@ -4449,7 +4488,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -83,7 +83,7 @@ $NetBSD$
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -5785,7 +5824,7 @@ v8_source_set("v8_base_without_compiler"
+@@ -5828,7 +5867,7 @@ v8_source_set("v8_base_without_compiler"
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -92,7 +92,7 @@ $NetBSD$
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -6392,7 +6431,7 @@ v8_component("v8_libbase") {
+@@ -6448,7 +6487,7 @@ v8_component("v8_libbase") {
      }
    }
  
@@ -101,7 +101,7 @@ $NetBSD$
      sources += [
        "src/base/debug/stack_trace_posix.cc",
        "src/base/platform/platform-linux.cc",
-@@ -6403,6 +6442,27 @@ v8_component("v8_libbase") {
+@@ -6459,6 +6498,27 @@ v8_component("v8_libbase") {
        "dl",
        "rt",
      ]

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2024-04-10 21:24:44.212605200 +0000
+--- chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h.orig	2024-04-15 20:33:49.681531000 +0000
 +++ chrome/browser/ui/views/frame/picture_in_picture_browser_frame_view.h
 @@ -27,7 +27,7 @@
  #include "ui/views/layout/flex_layout_view.h"
@@ -38,10 +38,10 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Sets the window frame provider so that it will be used for drawing.
-   void SetWindowFrameProvider(ui::WindowFrameProvider* window_frame_provider);
+   // Returns whether a client-side shadow should be drawn for the window.
+   bool ShouldDrawFrameShadow() const;
  
-@@ -370,7 +370,7 @@ class PictureInPictureBrowserFrameView
+@@ -368,7 +368,7 @@ class PictureInPictureBrowserFrameView
    // `top_bar_color_animation_`.
    std::optional<SkColor> current_foreground_color_;
  

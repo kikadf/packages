@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/third_party/quiche/BUILD.gn.orig	2024-04-10 21:24:57.973701700 +0000
+--- net/third_party/quiche/BUILD.gn.orig	2024-04-15 20:34:02.998509000 +0000
 +++ net/third_party/quiche/BUILD.gn
 @@ -29,7 +29,7 @@ import("//net/third_party/quiche/src/bui
  import("//testing/libfuzzer/fuzzer_test.gni")

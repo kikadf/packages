@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/serial/serial_device_enumerator.cc.orig	2024-04-10 21:24:58.717761000 +0000
+--- services/device/serial/serial_device_enumerator.cc.orig	2024-04-15 20:34:03.542549000 +0000
 +++ services/device/serial/serial_device_enumerator.cc
 @@ -12,7 +12,7 @@
  #include "build/build_config.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- sandbox/policy/sandbox.cc.orig	2024-04-10 21:24:58.609752400 +0000
+--- sandbox/policy/sandbox.cc.orig	2024-04-15 20:34:03.438541200 +0000
 +++ sandbox/policy/sandbox.cc
 @@ -18,6 +18,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"
@@ -16,7 +16,7 @@ $NetBSD$
  #if BUILDFLAG(IS_MAC)
  #include "sandbox/mac/seatbelt.h"
  #endif  // BUILDFLAG(IS_MAC)
-@@ -33,7 +37,7 @@
+@@ -32,7 +36,7 @@
  namespace sandbox {
  namespace policy {
  

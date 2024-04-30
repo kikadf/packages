@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/features/password_features.cc.orig	2024-04-10 21:24:49.177000800 +0000
+--- components/password_manager/core/browser/features/password_features.cc.orig	2024-04-15 20:33:55.089928200 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
-@@ -24,7 +24,7 @@ BASE_FEATURE(kButterOnDesktopFollowup,
+@@ -30,7 +30,7 @@ BASE_FEATURE(kButterOnDesktopFollowup,
  
  BASE_FEATURE(kClearUndecryptablePasswordsOnSync,
               "ClearUndecryptablePasswordsInSync",
@@ -14,12 +14,12 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -99,7 +99,7 @@ BASE_FEATURE(kPasswordManagerLogToTermin
-              "PasswordManagerLogToTerminal",
+@@ -99,7 +99,7 @@ BASE_FEATURE(kPasswordManualFallbackAvai
+              "PasswordManualFallbackAvailable",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kRestartToGainAccessToKeychain,
               "RestartToGainAccessToKeychain",
-              base::FEATURE_DISABLED_BY_DEFAULT);
+              base::FEATURE_ENABLED_BY_DEFAULT);

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/socket/udp_socket_unittest.cc.orig	2024-04-10 21:24:57.933698700 +0000
+--- net/socket/udp_socket_unittest.cc.orig	2024-04-15 20:34:02.958506000 +0000
 +++ net/socket/udp_socket_unittest.cc
-@@ -352,7 +352,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
+@@ -358,7 +358,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);
  }
  
@@ -14,7 +14,7 @@ $NetBSD$
  // - MacOS: requires root permissions on OSX 10.7+.
  // - Android: devices attached to testbots don't have default network, so
  // broadcasting to 255.255.255.255 returns error -109 (Address not reachable).
-@@ -663,7 +663,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
+@@ -669,7 +669,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = client.SetDoNotFragment();
@@ -23,7 +23,7 @@ $NetBSD$
      // TODO(crbug.com/945590): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
  #elif BUILDFLAG(IS_MAC)
-@@ -691,7 +691,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
+@@ -697,7 +697,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = server.SetDoNotFragment();
@@ -32,7 +32,7 @@ $NetBSD$
      // TODO(crbug.com/945590): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
  #elif BUILDFLAG(IS_MAC)
-@@ -756,7 +756,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
+@@ -762,7 +762,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
  
  // TODO(https://crbug.com/947115): failing on device on iOS 12.2.
  // TODO(https://crbug.com/1227554): flaky on Mac 11.
@@ -41,7 +41,7 @@ $NetBSD$
  #define MAYBE_SharedMulticastAddress DISABLED_SharedMulticastAddress
  #else
  #define MAYBE_SharedMulticastAddress SharedMulticastAddress
-@@ -810,7 +810,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
+@@ -816,7 +816,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
                                  NetLogSource());
    ASSERT_THAT(client_socket.Connect(send_address), IsOk());
  

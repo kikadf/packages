@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/sad_tab.cc.orig	2024-04-10 21:24:44.032590900 +0000
+--- chrome/browser/ui/sad_tab.cc.orig	2024-04-15 20:33:49.509518400 +0000
 +++ chrome/browser/ui/sad_tab.cc
 @@ -176,7 +176,7 @@ std::vector<int> SadTab::GetSubMessages(
        // Only show Incognito suggestion if not already in Incognito mode.

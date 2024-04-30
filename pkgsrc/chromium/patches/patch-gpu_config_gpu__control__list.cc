@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/config/gpu_control_list.cc.orig	2024-04-10 21:24:54.153397300 +0000
+--- gpu/config/gpu_control_list.cc.orig	2024-04-15 20:33:59.454248700 +0000
 +++ gpu/config/gpu_control_list.cc
 @@ -276,7 +276,7 @@ bool GpuControlList::More::GLVersionInfo
  GpuControlList::GLType GpuControlList::More::GetDefaultGLType() {

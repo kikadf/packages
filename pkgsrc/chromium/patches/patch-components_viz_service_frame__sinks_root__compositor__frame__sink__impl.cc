@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-04-10 21:24:51.489185000 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-04-15 20:33:57.090075000 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc
-@@ -112,7 +112,7 @@ RootCompositorFrameSinkImpl::Create(
+@@ -111,7 +111,7 @@ RootCompositorFrameSinkImpl::Create(
    output_surface->SetNeedsSwapSizeNotifications(
        params->send_swap_size_notifications);
  
@@ -14,10 +14,10 @@ $NetBSD$
    // For X11, we need notify client about swap completion after resizing, so the
    // client can use it for synchronize with X11 WM.
    output_surface->SetNeedsSwapSizeNotifications(true);
-@@ -712,7 +712,7 @@ void RootCompositorFrameSinkImpl::Displa
- #if BUILDFLAG(IS_ANDROID)
-   if (display_client_ && enable_swap_competion_callback_)
+@@ -649,7 +649,7 @@ void RootCompositorFrameSinkImpl::Displa
+   if (display_client_ && enable_swap_completion_callback_) {
      display_client_->DidCompleteSwapWithSize(pixel_size);
+   }
 -#elif BUILDFLAG(IS_LINUX) && BUILDFLAG(IS_OZONE_X11)
 +#elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(IS_OZONE_X11)
    if (display_client_ && pixel_size != last_swap_pixel_size_) {

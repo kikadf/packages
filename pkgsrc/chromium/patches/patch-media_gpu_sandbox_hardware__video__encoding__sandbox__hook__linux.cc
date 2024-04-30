@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2024-04-10 21:24:56.141555800 +0000
+--- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc.orig	2024-04-15 20:34:01.162374000 +0000
 +++ media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.cc
 @@ -18,12 +18,15 @@
  #include "media/gpu/v4l2/v4l2_device.h"
@@ -21,7 +21,7 @@ $NetBSD$
    sandbox::syscall_broker::BrokerCommandSet command_set;
    std::vector<BrokerFilePermission> permissions;
  
-@@ -122,6 +125,7 @@ bool HardwareVideoEncodingPreSandboxHook
+@@ -121,6 +124,7 @@ bool HardwareVideoEncodingPreSandboxHook
      }
    }
  #endif

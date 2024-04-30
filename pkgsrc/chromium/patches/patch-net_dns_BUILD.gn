@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/BUILD.gn.orig	2024-04-10 21:24:57.381654700 +0000
+--- net/dns/BUILD.gn.orig	2024-04-15 20:34:02.402465000 +0000
 +++ net/dns/BUILD.gn
-@@ -134,7 +134,7 @@ source_set("dns") {
+@@ -136,7 +136,7 @@ source_set("dns") {
        "dns_config_service_android.cc",
        "dns_config_service_android.h",
      ]
@@ -14,7 +14,7 @@ $NetBSD$
      sources += [
        "dns_config_service_linux.cc",
        "dns_config_service_linux.h",
-@@ -175,6 +175,7 @@ source_set("dns") {
+@@ -177,6 +177,7 @@ source_set("dns") {
      ":host_resolver_manager",
      ":mdns_client",
      "//net:net_public_deps",
@@ -22,7 +22,7 @@ $NetBSD$
    ]
  
    allow_circular_includes_from = [
-@@ -440,9 +441,9 @@ source_set("tests") {
+@@ -444,9 +445,9 @@ source_set("tests") {
  
    if (is_android) {
      sources += [ "dns_config_service_android_unittest.cc" ]

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/webui_url_constants.cc.orig	2024-04-10 21:24:44.928662300 +0000
+--- chrome/common/webui_url_constants.cc.orig	2024-04-15 20:33:50.349580000 +0000
 +++ chrome/common/webui_url_constants.cc
-@@ -512,18 +512,18 @@ const char kOsUISystemURL[] = "os://syst
+@@ -518,18 +518,18 @@ const char kOsUISystemURL[] = "os://syst
  const char kOsUIVersionURL[] = "os://version";
  #endif
  
@@ -27,7 +27,7 @@ $NetBSD$
  const char kChromeUIDiscardsHost[] = "discards";
  const char kChromeUIDiscardsURL[] = "chrome://discards/";
  #endif
-@@ -538,14 +538,14 @@ const char kChromeUILinuxProxyConfigHost
+@@ -544,14 +544,14 @@ const char kChromeUILinuxProxyConfigHost
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -44,7 +44,7 @@ $NetBSD$
  const char kChromeUIBrowserSwitchHost[] = "browser-switch";
  const char kChromeUIBrowserSwitchURL[] = "chrome://browser-switch/";
  const char kChromeUIIntroHost[] = "intro";
-@@ -564,7 +564,7 @@ const char kChromeUIProfilePickerUrl[] =
+@@ -570,7 +570,7 @@ const char kChromeUIProfilePickerUrl[] =
  const char kChromeUIProfilePickerStartupQuery[] = "startup";
  #endif
  
@@ -53,7 +53,7 @@ $NetBSD$
       defined(TOOLKIT_VIEWS)) ||                         \
      defined(USE_AURA)
  const char kChromeUITabModalConfirmDialogHost[] = "tab-modal-confirm-dialog";
-@@ -644,7 +644,7 @@ const char kCookiesSubPagePath[] = "/coo
+@@ -650,7 +650,7 @@ const char kCookiesSubPagePath[] = "/coo
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -62,7 +62,7 @@ $NetBSD$
  const char kChromeUIWebAppSettingsURL[] = "chrome://app-settings/";
  const char kChromeUIWebAppSettingsHost[] = "app-settings";
  #endif
-@@ -875,7 +875,7 @@ const char* const kChromeDebugURLs[] = {
+@@ -879,7 +879,7 @@ const char* const kChromeDebugURLs[] = {
      blink::kChromeUIGpuJavaCrashURL,
      kChromeUIJavaCrashURL,
  #endif

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/renderer/chrome_render_frame_observer.cc.orig	2024-04-10 21:24:45.024670000 +0000
+--- chrome/renderer/chrome_render_frame_observer.cc.orig	2024-04-15 20:33:50.637601100 +0000
 +++ chrome/renderer/chrome_render_frame_observer.cc
-@@ -351,7 +351,7 @@ void ChromeRenderFrameObserver::WillDeta
+@@ -358,7 +358,7 @@ void ChromeRenderFrameObserver::WillDeta
  
  void ChromeRenderFrameObserver::DraggableRegionsChanged() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

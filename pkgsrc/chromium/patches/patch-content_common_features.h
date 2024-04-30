@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/features.h.orig	2024-04-10 21:24:52.409258400 +0000
+--- content/common/features.h.orig	2024-04-15 20:33:57.786126100 +0000
 +++ content/common/features.h
-@@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
+@@ -38,7 +38,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(
      kEnableBackForwardCacheForOngoingSubframeNavigation);
@@ -14,7 +14,7 @@ $NetBSD$
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnsureAllowBindingsIsAlwaysForWebUI);
-@@ -61,7 +61,7 @@ CONTENT_EXPORT extern const base::Featur
+@@ -63,7 +63,7 @@ CONTENT_EXPORT extern const base::Featur
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGpuInfoCollectionSeparatePrefetch);
  #endif
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGroupNIKByJoiningOrigin);

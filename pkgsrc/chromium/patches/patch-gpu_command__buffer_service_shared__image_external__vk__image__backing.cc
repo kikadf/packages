@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2024-04-10 21:24:54.125395000 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2024-04-15 20:33:59.430246800 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing.cc
 @@ -50,7 +50,7 @@
  #include "ui/gl/gl_version_info.h"

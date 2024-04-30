@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/base_paths_posix.cc.orig	2024-04-10 21:24:37.116039500 +0000
+--- base/base_paths_posix.cc.orig	2024-04-15 20:33:42.633013200 +0000
 +++ base/base_paths_posix.cc
 @@ -15,6 +15,7 @@
  #include <ostream>
@@ -34,9 +34,9 @@ $NetBSD$
        return true;
 -#elif BUILDFLAG(IS_FREEBSD)
 -      int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
--      absl::optional<std::string> bin_dir = StringSysctl(name, std::size(name));
+-      std::optional<std::string> bin_dir = StringSysctl(name, std::size(name));
 +#elif BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
-+      absl::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 });
++      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 });
        if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
          NOTREACHED() << "Unable to resolve path.";
          return false;
@@ -80,7 +80,7 @@ $NetBSD$
 +        goto out;
 +      }
 +
-+      if ((kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, errbuf)) == NULL)
++      if ((kd = kvm_openfiles(NULL, NULL, NULL, (int)KVM_NO_FILES, errbuf)) == NULL)
 +        goto out;
 +
 +      if ((files = kvm_getfiles(kd, KERN_FILE_BYPID, cpid,

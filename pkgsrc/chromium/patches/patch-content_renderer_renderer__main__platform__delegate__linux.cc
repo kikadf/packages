@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2024-04-10 21:24:52.609274400 +0000
+--- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2024-04-15 20:33:57.974140000 +0000
 +++ content/renderer/renderer_main_platform_delegate_linux.cc
 @@ -44,6 +44,7 @@ bool RendererMainPlatformDelegate::Enabl
    // any renderer has been started.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/common/api/_permission_features.json.orig	2024-04-10 21:24:53.813370200 +0000
+--- extensions/common/api/_permission_features.json.orig	2024-04-15 20:33:59.134225100 +0000
 +++ extensions/common/api/_permission_features.json
 @@ -138,7 +138,7 @@
      {

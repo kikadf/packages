@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/webrtc/helpers.cc.orig	2024-04-10 21:24:56.617593800 +0000
+--- media/webrtc/helpers.cc.orig	2024-04-15 20:34:01.650410000 +0000
 +++ media/webrtc/helpers.cc
 @@ -41,14 +41,14 @@ void ConfigAutomaticGainControl(const Au
      return;
@@ -22,12 +22,3 @@ $NetBSD$
    // Use AGC2 digital and input volume controller.
    // TODO(crbug.com/1375239): Remove `kWebRtcAllowInputVolumeAdjustment` safely.
    if (kInputVolumeAdjustmentOverrideAllowed &&
-@@ -161,7 +161,7 @@ rtc::scoped_refptr<webrtc::AudioProcessi
- #endif
- #if !(BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
-       BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) ||               \
--      BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS))
-+      BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)) || BUILDFLAG(IS_BSD)
-   apm_config.transient_suppression.enabled =
-       settings.transient_noise_suppression;
- #endif

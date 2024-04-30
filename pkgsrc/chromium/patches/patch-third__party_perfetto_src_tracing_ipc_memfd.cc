@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/tracing/ipc/memfd.cc.orig	2024-04-10 21:26:08.739341300 +0000
+--- third_party/perfetto/src/tracing/ipc/memfd.cc.orig	2024-04-15 20:35:15.555837400 +0000
 +++ third_party/perfetto/src/tracing/ipc/memfd.cc
 @@ -20,7 +20,8 @@
  

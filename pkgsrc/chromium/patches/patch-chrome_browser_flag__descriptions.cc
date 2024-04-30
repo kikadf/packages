@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/flag_descriptions.cc.orig	2024-04-10 21:24:41.728407100 +0000
+--- chrome/browser/flag_descriptions.cc.orig	2024-04-15 20:33:47.261353300 +0000
 +++ chrome/browser/flag_descriptions.cc
-@@ -2936,7 +2936,7 @@ const char kCbdTimeframeRequiredDescript
+@@ -2946,7 +2946,7 @@ const char kCbdTimeframeRequiredDescript
      "value to the list.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -14,7 +14,7 @@ $NetBSD$
  const char kPolicyIndicationForManagedDefaultSearchName[] =
      "Enable policy indication for managed Default Search provider";
  const char kPolicyIndicationForManagedDefaultSearchDescription[] =
-@@ -3261,7 +3261,7 @@ const char kSiteInstanceGroupsForDataUrl
+@@ -3259,7 +3259,7 @@ const char kSiteInstanceGroupsForDataUrl
      "but in the same SiteInstanceGroup, and thus the same process.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -23,7 +23,7 @@ $NetBSD$
  const char kSiteSearchSettingsPolicyName[] = "Enable SiteSearchSettings policy";
  const char kSiteSearchSettingsPolicyDescription[] =
      "Allow site search engines to be defined by the SiteSearchSettings policy.";
-@@ -7490,7 +7490,7 @@ const char kLacrosMergeIcuDataFileDescri
+@@ -7496,7 +7496,7 @@ const char kLacrosMergeIcuDataFileDescri
      "Enables sharing common areas of icudtl.dat between Ash and Lacros.";
  #endif  // #if BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -32,7 +32,7 @@ $NetBSD$
  const char kGetAllScreensMediaName[] = "GetAllScreensMedia API";
  const char kGetAllScreensMediaDescription[] =
      "When enabled, the getAllScreensMedia API for capturing multiple screens "
-@@ -7736,7 +7736,7 @@ const char kV4L2FlatStatefulVideoDecoder
+@@ -7756,7 +7756,7 @@ const char kV4L2FlatStatefulVideoDecoder
  
  // Linux -----------------------------------------------------------------------
  
@@ -41,7 +41,7 @@ $NetBSD$
  const char kOzonePlatformHintChoiceDefault[] = "Default";
  const char kOzonePlatformHintChoiceAuto[] = "Auto";
  const char kOzonePlatformHintChoiceX11[] = "X11";
-@@ -7784,7 +7784,7 @@ const char kZeroCopyVideoCaptureDescript
+@@ -7804,7 +7804,7 @@ const char kZeroCopyVideoCaptureDescript
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -50,7 +50,7 @@ $NetBSD$
  const char kFollowingFeedSidepanelName[] = "Following feed in the sidepanel";
  const char kFollowingFeedSidepanelDescription[] =
      "Enables the following feed in the sidepanel.";
-@@ -7799,7 +7799,7 @@ const char kEnableProtoApiForClassifyUrl
+@@ -7819,7 +7819,7 @@ const char kEnableProtoApiForClassifyUrl
      "instead of JSON.";
  #endif
  
@@ -59,7 +59,7 @@ $NetBSD$
  const char kEnableNetworkServiceSandboxName[] =
      "Enable the network service sandbox.";
  const char kEnableNetworkServiceSandboxDescription[] =
-@@ -7831,7 +7831,7 @@ const char kWebBluetoothConfirmPairingSu
+@@ -7851,7 +7851,7 @@ const char kWebBluetoothConfirmPairingSu
      "Bluetooth";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -68,7 +68,7 @@ $NetBSD$
  const char kSkipUndecryptablePasswordsName[] =
      "Skip undecryptable passwords to use the available decryptable "
      "passwords.";
-@@ -7851,7 +7851,7 @@ const char kRestartToGainAccessToKeychai
+@@ -7871,7 +7871,7 @@ const char kRestartToGainAccessToKeychai
      "to restart Chrome to gain access to computer's password manager.";
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
  
@@ -77,7 +77,7 @@ $NetBSD$
  const char kAsyncDnsName[] = "Async DNS resolver";
  const char kAsyncDnsDescription[] = "Enables the built-in DNS resolver.";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-@@ -7952,7 +7952,7 @@ const char kElementCaptureDescription[] 
+@@ -7972,7 +7972,7 @@ const char kElementCaptureDescription[] 
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
@@ -86,7 +86,7 @@ $NetBSD$
  const char kUIDebugToolsName[] = "Debugging tools for UI";
  const char kUIDebugToolsDescription[] =
      "Enables additional keyboard shortcuts to help debugging.";
-@@ -8001,7 +8001,7 @@ const char kComposeTextSelectionDescript
+@@ -8021,7 +8021,7 @@ const char kComposeTextSelectionDescript
      "Enables feature for different heuristics for selecting text for Compose";
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  

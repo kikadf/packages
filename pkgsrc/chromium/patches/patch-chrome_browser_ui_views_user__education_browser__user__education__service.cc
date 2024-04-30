@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-04-10 21:24:44.404620400 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-04-15 20:33:49.853543500 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
-@@ -771,7 +771,7 @@ void MaybeRegisterChromeFeaturePromos(
+@@ -790,7 +790,7 @@ void MaybeRegisterChromeFeaturePromos(
                      FeaturePromoSpecification::AcceleratorInfo())
                      .SetBubbleArrow(HelpBubbleArrow::kTopLeft)));
  

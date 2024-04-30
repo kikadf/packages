@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/search_engines/template_url_service.cc.orig	2024-04-10 21:24:50.009067000 +0000
+--- components/search_engines/template_url_service.cc.orig	2024-04-15 20:33:55.829982500 +0000
 +++ components/search_engines/template_url_service.cc
-@@ -2925,7 +2925,7 @@ bool TemplateURLService::MatchesDefaultS
+@@ -2930,7 +2930,7 @@ bool TemplateURLService::MatchesDefaultS
  std::unique_ptr<EnterpriseSiteSearchManager>
  TemplateURLService::GetEnterpriseSiteSearchManager(PrefService* prefs) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

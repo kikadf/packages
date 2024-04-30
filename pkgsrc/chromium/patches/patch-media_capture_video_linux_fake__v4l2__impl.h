@@ -3,14 +3,14 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/capture/video/linux/fake_v4l2_impl.h.orig	2024-04-10 21:24:56.009545300 +0000
+--- media/capture/video/linux/fake_v4l2_impl.h.orig	2024-04-15 20:34:01.026364000 +0000
 +++ media/capture/video/linux/fake_v4l2_impl.h
 @@ -8,7 +8,13 @@
  #include <map>
  #include <string>
  
 +#include "build/build_config.h"
-+#if BUILDFLAG(IS_OPENBSD)
++#if BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
 +#include <sys/videoio.h>
 +typedef __uint32_t __u32;
 +#else

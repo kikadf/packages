@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/mojo_core_library_support.cc.orig	2024-04-10 21:24:52.425259600 +0000
+--- content/common/mojo_core_library_support.cc.orig	2024-04-15 20:33:57.802127400 +0000
 +++ content/common/mojo_core_library_support.cc
 @@ -15,7 +15,7 @@ bool IsMojoCoreSharedLibraryEnabled() {
  }

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ipc/ipc_message_utils.cc.orig	2024-04-10 21:24:55.885535500 +0000
+--- ipc/ipc_message_utils.cc.orig	2024-04-15 20:34:00.910355600 +0000
 +++ ipc/ipc_message_utils.cc
 @@ -394,7 +394,7 @@ void ParamTraits<unsigned int>::Log(cons
  }

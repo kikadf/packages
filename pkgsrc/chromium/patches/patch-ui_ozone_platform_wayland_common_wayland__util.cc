@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2024-04-10 21:25:25.403887700 +0000
+--- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2024-04-15 20:34:30.468526400 +0000
 +++ ui/ozone/platform/wayland/common/wayland_util.cc
-@@ -335,7 +335,7 @@ void TransformToWlArray(
+@@ -337,7 +337,7 @@ void TransformToWlArray(
  }
  
  base::TimeTicks EventMillisecondsToTimeTicks(uint32_t milliseconds) {

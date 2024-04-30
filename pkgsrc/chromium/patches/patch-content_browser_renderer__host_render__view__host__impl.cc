@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-04-10 21:24:52.229244000 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-04-15 20:33:57.614113600 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
-@@ -270,7 +270,7 @@ void RenderViewHostImpl::GetPlatformSpec
+@@ -272,7 +272,7 @@ void RenderViewHostImpl::GetPlatformSpec
        display::win::ScreenWin::GetSystemMetricsInDIP(SM_CYVSCROLL);
    prefs->arrow_bitmap_width_horizontal_scroll_bar_in_dips =
        display::win::ScreenWin::GetSystemMetricsInDIP(SM_CXHSCROLL);

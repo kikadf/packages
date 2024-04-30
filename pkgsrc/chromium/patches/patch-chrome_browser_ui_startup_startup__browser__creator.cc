@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2024-04-10 21:24:44.056592700 +0000
+--- chrome/browser/ui/startup/startup_browser_creator.cc.orig	2024-04-15 20:33:49.533520000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator.cc
 @@ -135,7 +135,7 @@
  #include "chrome/credential_provider/common/gcp_strings.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "chrome/browser/headless/headless_mode_util.h"
  #include "chrome/browser/ui/startup/web_app_info_recorder_utils.h"
  #include "components/headless/policy/headless_mode_policy.h"
-@@ -941,7 +941,7 @@ bool StartupBrowserCreator::ProcessCmdLi
+@@ -962,7 +962,7 @@ bool StartupBrowserCreator::ProcessCmdLi
    TRACE_EVENT0("startup", "StartupBrowserCreator::ProcessCmdLineImpl");
    ComputeAndRecordLaunchMode(command_line);
  
@@ -23,7 +23,7 @@ $NetBSD$
    if (headless::IsHeadlessMode() &&
        headless::HeadlessModePolicy::IsHeadlessModeDisabled(
            g_browser_process->local_state())) {
-@@ -1046,7 +1046,7 @@ bool StartupBrowserCreator::ProcessCmdLi
+@@ -1060,7 +1060,7 @@ bool StartupBrowserCreator::ProcessCmdLi
      silent_launch = true;
    }
  
@@ -32,7 +32,7 @@ $NetBSD$
    // Writes open and installed web apps to the specified file without
    // launching a new browser window or tab.
    if (base::FeatureList::IsEnabled(features::kListWebAppsSwitch) &&
-@@ -1257,7 +1257,7 @@ bool StartupBrowserCreator::ProcessCmdLi
+@@ -1270,7 +1270,7 @@ bool StartupBrowserCreator::ProcessCmdLi
      CHECK_EQ(profile_info.mode, StartupProfileMode::kBrowserWindow)
          << "Failed launch with app: couldn't pick a profile";
      std::string app_id = command_line.GetSwitchValueASCII(switches::kAppId);

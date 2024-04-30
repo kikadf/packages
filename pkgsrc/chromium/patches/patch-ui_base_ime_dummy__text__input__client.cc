@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ime/dummy_text_input_client.cc.orig	2024-04-10 21:25:24.695831300 +0000
+--- ui/base/ime/dummy_text_input_client.cc.orig	2024-04-15 20:34:29.700470000 +0000
 +++ ui/base/ime/dummy_text_input_client.cc
 @@ -159,7 +159,7 @@ bool DummyTextInputClient::ShouldDoLearn
    return false;

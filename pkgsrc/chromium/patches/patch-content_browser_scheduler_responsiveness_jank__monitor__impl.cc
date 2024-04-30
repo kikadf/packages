@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/scheduler/responsiveness/jank_monitor_impl.cc.orig	2024-04-10 21:24:52.261246700 +0000
+--- content/browser/scheduler/responsiveness/jank_monitor_impl.cc.orig	2024-04-15 20:33:57.650116200 +0000
 +++ content/browser/scheduler/responsiveness/jank_monitor_impl.cc
 @@ -340,7 +340,7 @@ void JankMonitorImpl::ThreadExecutionSta
      // in context menus, among others). Simply ignore the mismatches for now.

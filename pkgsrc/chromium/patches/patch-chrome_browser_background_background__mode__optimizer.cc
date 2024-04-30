@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/background/background_mode_optimizer.cc.orig	2024-04-10 21:24:41.104357500 +0000
+--- chrome/browser/background/background_mode_optimizer.cc.orig	2024-04-15 20:33:46.649308200 +0000
 +++ chrome/browser/background/background_mode_optimizer.cc
 @@ -31,7 +31,7 @@ std::unique_ptr<BackgroundModeOptimizer>
      return nullptr;

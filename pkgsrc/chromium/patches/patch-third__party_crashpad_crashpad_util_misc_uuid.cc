@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-04-10 21:25:18.883368300 +0000
+--- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-04-15 20:34:24.188065000 +0000
 +++ third_party/crashpad/crashpad/util/misc/uuid.cc
 @@ -102,7 +102,7 @@ bool UUID::InitializeWithNew() {
    InitializeFromBytes(uuid);

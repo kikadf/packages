@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_shm_image_pool.cc.orig	2024-04-10 21:25:24.743835200 +0000
+--- ui/base/x/x11_shm_image_pool.cc.orig	2024-04-15 20:34:29.744473200 +0000
 +++ ui/base/x/x11_shm_image_pool.cc
 @@ -16,6 +16,7 @@
  #include "base/functional/callback.h"
@@ -28,17 +28,35 @@ $NetBSD$
  }
  
  std::size_t MaxShmSegmentSize() {
-@@ -65,6 +70,9 @@ bool IsRemoteHost(const std::string& nam
+@@ -57,14 +62,19 @@ std::size_t MaxShmSegmentSize() {
  }
+ 
+ #if !BUILDFLAG(IS_CHROMEOS_ASH)
++#if !BUILDFLAG(IS_BSD)
+ bool IsRemoteHost(const std::string& name) {
+   if (name.empty())
+     return false;
+ 
+   return !net::HostStringIsLocalhost(name);
+ }
++#endif
  
  bool ShouldUseMitShm(x11::Connection* connection) {
 +#if BUILDFLAG(IS_BSD)
 +  return false;
-+#endif
++#else
    // MIT-SHM may be available on remote connetions, but it will be unusable.  Do
    // a best-effort check to see if the host is remote to disable the SHM
    // codepath.  It may be possible in contrived cases for there to be a
-@@ -183,7 +191,7 @@ bool XShmImagePool::Resize(const gfx::Si
+@@ -93,6 +103,7 @@ bool ShouldUseMitShm(x11::Connection* co
+     return false;
+ 
+   return true;
++#endif
+ }
+ #endif
+ 
+@@ -183,7 +194,7 @@ bool XShmImagePool::Resize(const gfx::Si
          shmctl(state.shmid, IPC_RMID, nullptr);
          return false;
        }
@@ -47,7 +65,7 @@ $NetBSD$
        // On Linux, a shmid can still be attached after IPC_RMID if otherwise
        // kept alive.  Detach before XShmAttach to prevent a memory leak in case
        // the process dies.
-@@ -202,7 +210,7 @@ bool XShmImagePool::Resize(const gfx::Si
+@@ -202,7 +213,7 @@ bool XShmImagePool::Resize(const gfx::Si
          return false;
        state.shmseg = shmseg;
        state.shmem_attached_to_server = true;

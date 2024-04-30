@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_handle_freebsd.cc.orig	2024-04-10 21:24:37.220048000 +0000
+--- base/process/process_handle_freebsd.cc.orig	2024-04-15 20:33:42.733020500 +0000
 +++ base/process/process_handle_freebsd.cc
 @@ -3,6 +3,7 @@
  // found in the LICENSE file.
@@ -13,7 +13,7 @@ $NetBSD$
  
  #include <limits.h>
  #include <stddef.h>
-@@ -19,12 +20,15 @@ namespace base {
+@@ -20,12 +21,15 @@ namespace base {
  
  ProcessId GetParentProcessId(ProcessHandle process) {
    struct kinfo_proc info;

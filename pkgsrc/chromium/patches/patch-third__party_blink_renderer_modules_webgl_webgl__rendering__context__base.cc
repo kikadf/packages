@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2024-04-10 21:25:01.762003700 +0000
+--- third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2024-04-15 20:34:06.734783400 +0000
 +++ third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
-@@ -6363,7 +6363,7 @@ void WebGLRenderingContextBase::TexImage
+@@ -6358,7 +6358,7 @@ void WebGLRenderingContextBase::TexImage
    constexpr bool kAllowZeroCopyImages = true;
  #endif
  

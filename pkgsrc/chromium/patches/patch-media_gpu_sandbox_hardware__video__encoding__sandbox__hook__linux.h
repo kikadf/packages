@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.h.orig	2024-04-10 21:24:56.141555800 +0000
+--- media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.h.orig	2024-04-15 20:34:01.162374000 +0000
 +++ media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.h
 @@ -5,7 +5,13 @@
  #ifndef MEDIA_GPU_SANDBOX_HARDWARE_VIDEO_ENCODING_SANDBOX_HOOK_LINUX_H_

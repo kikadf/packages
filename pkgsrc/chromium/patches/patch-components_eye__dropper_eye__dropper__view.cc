@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/eye_dropper/eye_dropper_view.cc.orig	2024-04-10 21:24:48.632957500 +0000
+--- components/eye_dropper/eye_dropper_view.cc.orig	2024-04-15 20:33:54.573890200 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
 @@ -200,7 +200,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
    // EyeDropper/WidgetDelegate.

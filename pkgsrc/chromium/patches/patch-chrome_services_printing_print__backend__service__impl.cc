@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2024-04-10 21:24:45.060672800 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2024-04-15 20:33:50.673603800 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
 @@ -49,7 +49,7 @@
  #include "printing/backend/cups_connection_pool.h"

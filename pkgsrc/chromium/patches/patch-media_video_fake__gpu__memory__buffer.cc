@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/video/fake_gpu_memory_buffer.cc.orig	2024-04-10 21:24:56.609593200 +0000
+--- media/video/fake_gpu_memory_buffer.cc.orig	2024-04-15 20:34:01.638409100 +0000
 +++ media/video/fake_gpu_memory_buffer.cc
 @@ -9,7 +9,7 @@
  #include "media/base/format_utils.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include <fcntl.h>
  #include <sys/stat.h>
  #include <sys/types.h>
-@@ -47,7 +47,7 @@ class FakeGpuMemoryBufferImpl : public g
+@@ -52,7 +52,7 @@ class FakeGpuMemoryBufferImpl : public g
  
  }  // namespace
  
@@ -23,7 +23,7 @@ $NetBSD$
  base::ScopedFD GetDummyFD() {
    base::ScopedFD fd(open("/dev/zero", O_RDWR));
    DCHECK(fd.is_valid());
-@@ -77,7 +77,7 @@ FakeGpuMemoryBuffer::FakeGpuMemoryBuffer
+@@ -82,7 +82,7 @@ FakeGpuMemoryBuffer::FakeGpuMemoryBuffer
    static base::AtomicSequenceNumber buffer_id_generator;
    handle_.id = gfx::GpuMemoryBufferId(buffer_id_generator.GetNext());
  
@@ -32,12 +32,12 @@ $NetBSD$
    for (size_t i = 0; i < VideoFrame::NumPlanes(video_pixel_format_); i++) {
      const gfx::Size plane_size_in_bytes =
          VideoFrame::PlaneSize(video_pixel_format_, i, size_);
-@@ -132,7 +132,7 @@ gfx::GpuMemoryBufferHandle FakeGpuMemory
+@@ -144,7 +144,7 @@ gfx::GpuMemoryBufferHandle FakeGpuMemory
    gfx::GpuMemoryBufferHandle handle;
    handle.type = gfx::NATIVE_PIXMAP;
    handle.id = handle_.id;
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    handle.native_pixmap_handle =
        gfx::CloneHandleForIPC(handle_.native_pixmap_handle);
  #endif

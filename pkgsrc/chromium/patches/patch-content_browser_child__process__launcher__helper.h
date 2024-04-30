@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/child_process_launcher_helper.h.orig	2024-04-10 21:24:51.889217000 +0000
+--- content/browser/child_process_launcher_helper.h.orig	2024-04-15 20:33:57.310091300 +0000
 +++ content/browser/child_process_launcher_helper.h
-@@ -271,7 +271,7 @@ class ChildProcessLauncherHelper
+@@ -293,7 +293,7 @@ class ChildProcessLauncherHelper
    std::unique_ptr<SandboxedProcessLauncherDelegate> delegate_;
    base::WeakPtr<ChildProcessLauncher> child_process_launcher_;
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-04-10 21:25:35.924726200 +0000
+--- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-04-15 20:34:40.533265400 +0000
 +++ third_party/ffmpeg/libavutil/x86/x86inc.asm
 @@ -53,6 +53,12 @@
      %endif

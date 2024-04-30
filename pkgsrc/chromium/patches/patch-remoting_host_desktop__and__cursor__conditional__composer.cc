@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/desktop_and_cursor_conditional_composer.cc.orig	2024-04-10 21:24:58.421737400 +0000
+--- remoting/host/desktop_and_cursor_conditional_composer.cc.orig	2024-04-15 20:34:03.258528000 +0000
 +++ remoting/host/desktop_and_cursor_conditional_composer.cc
 @@ -7,7 +7,7 @@
  #include "base/functional/bind.h"

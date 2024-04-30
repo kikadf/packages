@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/autofill/core/common/autofill_util.cc.orig	2024-04-10 21:24:47.964904000 +0000
+--- components/autofill/core/common/autofill_util.cc.orig	2024-04-15 20:33:53.805833800 +0000
 +++ components/autofill/core/common/autofill_util.cc
 @@ -131,7 +131,7 @@ bool SanitizedFieldIsEmpty(const std::u1
  

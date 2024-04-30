@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/browser_features.cc.orig	2024-04-10 21:24:41.120358700 +0000
+--- chrome/browser/browser_features.cc.orig	2024-04-15 20:33:46.669309600 +0000
 +++ chrome/browser/browser_features.cc
-@@ -44,7 +44,7 @@ const base::FeatureParam<bool> kSpareRen
+@@ -76,7 +76,7 @@ const base::FeatureParam<bool> kSpareRen
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
               "DestroyProfileOnBrowserClose",
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -14,7 +14,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -328,7 +328,7 @@ BASE_FEATURE(kNewTabPageTriggerForPreren
+@@ -337,7 +337,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
  BASE_FEATURE(kSupportSearchSuggestionForPrerender2,
               "SupportSearchSuggestionForPrerender2",
  #if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_CHROMEOS_LACROS) || \

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/network_context.h.orig	2024-04-10 21:24:58.769765100 +0000
+--- services/network/network_context.h.orig	2024-04-15 20:34:03.586552100 +0000
 +++ services/network/network_context.h
-@@ -663,7 +663,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
+@@ -670,7 +670,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
     public:
      explicit NetworkContextHttpAuthPreferences(NetworkService* network_service);
      ~NetworkContextHttpAuthPreferences() override;

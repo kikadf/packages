@@ -3,10 +3,10 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/tracing/service/tracing_service_impl.cc.orig	2024-04-10 21:26:08.743341700 +0000
-+++ third_party/perfetto/src/tracing/service/tracing_service_impl.cc
-@@ -3275,7 +3275,8 @@ bool TracingServiceImpl::SnapshotClocks(
- 
+--- third_party/perfetto/src/tracing/core/clock_snapshots.cc.orig	2024-04-15 20:35:15.551837200 +0000
++++ third_party/perfetto/src/tracing/core/clock_snapshots.cc
+@@ -26,7 +26,8 @@ ClockSnapshotVector CaptureClockSnapshot
+   ClockSnapshotVector snapshot_data;
  #if !PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) && \
      !PERFETTO_BUILDFLAG(PERFETTO_OS_WIN) &&   \
 -    !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL)

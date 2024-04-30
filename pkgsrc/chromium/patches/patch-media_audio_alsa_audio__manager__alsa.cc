@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2024-04-10 21:24:55.897536300 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2024-04-15 20:34:00.922356400 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
 @@ -88,7 +88,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;

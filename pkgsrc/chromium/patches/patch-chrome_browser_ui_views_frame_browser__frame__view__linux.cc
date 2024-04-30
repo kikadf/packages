@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2024-04-10 21:24:44.192603600 +0000
+--- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2024-04-15 20:33:49.665529700 +0000
 +++ chrome/browser/ui/views/frame/browser_frame_view_linux.cc
-@@ -77,7 +77,7 @@ void BrowserFrameViewLinux::OnWindowButt
+@@ -60,7 +60,7 @@ gfx::ShadowValues BrowserFrameViewLinux:
  
  void BrowserFrameViewLinux::PaintRestoredFrameBorder(
      gfx::Canvas* canvas) const {
@@ -14,7 +14,7 @@ $NetBSD$
    const bool tiled = frame()->tiled();
  #else
    const bool tiled = false;
-@@ -103,7 +103,7 @@ bool BrowserFrameViewLinux::ShouldDrawRe
+@@ -104,7 +104,7 @@ void BrowserFrameViewLinux::OnWindowButt
  }
  
  float BrowserFrameViewLinux::GetRestoredCornerRadiusDip() const {

@@ -3,10 +3,10 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/power/process_monitor.cc.orig	2024-04-10 21:24:41.956425400 +0000
+--- chrome/browser/metrics/power/process_monitor.cc.orig	2024-04-15 20:33:47.473369000 +0000
 +++ chrome/browser/metrics/power/process_monitor.cc
-@@ -65,7 +65,7 @@ ProcessMonitor::Metrics SampleMetrics(ba
- #endif
+@@ -61,7 +61,7 @@ ProcessMonitor::Metrics SampleMetrics(ba
+   metrics.cpu_usage = process_metrics.GetPlatformIndependentCPUUsage();
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_AIX)
@@ -14,8 +14,8 @@ $NetBSD$
    metrics.idle_wakeups = process_metrics.GetIdleWakeupsPerSecond();
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -81,7 +81,7 @@ void ScaleMetrics(ProcessMonitor::Metric
-   metrics->cpu_usage *= factor;
+@@ -79,7 +79,7 @@ void ScaleMetrics(ProcessMonitor::Metric
+   }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_AIX)
@@ -23,8 +23,8 @@ $NetBSD$
    metrics->idle_wakeups *= factor;
  #endif
  
-@@ -172,7 +172,7 @@ ProcessMonitor::Metrics& operator+=(Proc
-   lhs.cpu_usage += rhs.cpu_usage;
+@@ -167,7 +167,7 @@ ProcessMonitor::Metrics& operator+=(Proc
+   }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_AIX)

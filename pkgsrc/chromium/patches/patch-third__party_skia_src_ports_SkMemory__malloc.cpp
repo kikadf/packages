@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/skia/src/base/SkContainers.cpp.orig	2024-04-10 21:25:42.861279000 +0000
-+++ third_party/skia/src/base/SkContainers.cpp
-@@ -14,7 +14,8 @@
+--- third_party/skia/src/ports/SkMemory_malloc.cpp.orig	2024-04-15 20:34:48.997887100 +0000
++++ third_party/skia/src/ports/SkMemory_malloc.cpp
+@@ -15,7 +15,8 @@
  
  #if defined(SK_BUILD_FOR_MAC) || defined(SK_BUILD_FOR_IOS)
  #include <malloc/malloc.h>
@@ -15,12 +15,12 @@ $NetBSD$
  #include <malloc.h>
  #elif defined(SK_BUILD_FOR_WIN)
  #include <malloc.h>
-@@ -38,7 +39,7 @@ SkSpan<std::byte> complete_size(void* pt
+@@ -126,7 +127,7 @@ size_t sk_malloc_size(void* addr, size_t
      #elif defined(SK_BUILD_FOR_ANDROID) && __ANDROID_API__ >= 17
-         completeSize = malloc_usable_size(ptr);
+         completeSize = malloc_usable_size(addr);
          SkASSERT(completeSize >= size);
 -    #elif defined(SK_BUILD_FOR_UNIX)
 +    #elif defined(SK_BUILD_FOR_UNIX) && !defined(__OpenBSD__) && !defined(__NetBSD__)
-         completeSize = malloc_usable_size(ptr);
+         completeSize = malloc_usable_size(addr);
          SkASSERT(completeSize >= size);
      #elif defined(SK_BUILD_FOR_WIN)

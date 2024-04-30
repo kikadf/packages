@@ -3,17 +3,17 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/gpu/gpu_process_host.cc.orig	2024-04-10 21:24:51.973223700 +0000
+--- content/browser/gpu/gpu_process_host.cc.orig	2024-04-15 20:33:57.382096500 +0000
 +++ content/browser/gpu/gpu_process_host.cc
-@@ -261,6 +261,7 @@ static const char* const kSwitchNames[] 
-     switches::kEnableGpuRasterization,
-     switches::kEnableSkiaGraphite,
-     switches::kEnableLogging,
+@@ -264,6 +264,7 @@ static const char* const kSwitchNames[] 
+     switches::kEnableLowEndDeviceMode,
+     switches::kDisableSkiaGraphite,
+     switches::kDisableLowEndDeviceMode,
 +    switches::kDisableUnveil,
-     switches::kDoubleBufferCompositing,
-     switches::kHeadless,
-     switches::kLoggingLevel,
-@@ -295,7 +296,7 @@ static const char* const kSwitchNames[] 
+     switches::kProfilingAtStart,
+     switches::kProfilingFile,
+     switches::kProfilingFlush,
+@@ -290,7 +291,7 @@ static const char* const kSwitchNames[] 
      switches::kDisableExplicitDmaFences,
      switches::kOzoneDumpFile,
  #endif

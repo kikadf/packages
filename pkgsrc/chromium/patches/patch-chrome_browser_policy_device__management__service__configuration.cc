@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/policy/device_management_service_configuration.cc.orig	2024-04-10 21:24:42.244448200 +0000
+--- chrome/browser/policy/device_management_service_configuration.cc.orig	2024-04-15 20:33:47.749389200 +0000
 +++ chrome/browser/policy/device_management_service_configuration.cc
-@@ -22,7 +22,7 @@
+@@ -24,7 +24,7 @@
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) ||           \
      ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
@@ -14,7 +14,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/connectors/common.h"
  #include "chrome/browser/enterprise/connectors/connectors_service.h"
  #endif
-@@ -100,7 +100,7 @@ DeviceManagementServiceConfiguration::Ge
+@@ -102,7 +102,7 @@ DeviceManagementServiceConfiguration::Ge
      content::BrowserContext* context) const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) ||           \
      ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \

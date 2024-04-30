@@ -3,9 +3,20 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-04-10 21:25:35.908725000 +0000
+--- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-04-15 20:34:40.513264000 +0000
 +++ third_party/ffmpeg/libavutil/random_seed.c
-@@ -35,6 +35,11 @@
+@@ -20,6 +20,10 @@
+ 
+ #include "config.h"
+ 
++#if defined(__NetBSD__)
++#define _NETBSD_SOURCE 1
++#endif
++
+ #if HAVE_UNISTD_H
+ #include <unistd.h>
+ #endif
+@@ -35,6 +39,11 @@
  #elif CONFIG_OPENSSL
  #include <openssl/rand.h>
  #endif

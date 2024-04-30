@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/webui_url_constants.h.orig	2024-04-10 21:24:44.928662300 +0000
+--- chrome/common/webui_url_constants.h.orig	2024-04-15 20:33:50.349580000 +0000
 +++ chrome/common/webui_url_constants.h
-@@ -432,24 +432,24 @@ extern const char kOsUISystemURL[];
+@@ -437,24 +437,24 @@ extern const char kOsUISystemURL[];
  extern const char kOsUIVersionURL[];
  #endif
  
@@ -34,7 +34,7 @@ $NetBSD$
  extern const char kChromeUIWebAppSettingsURL[];
  extern const char kChromeUIWebAppSettingsHost[];
  #endif
-@@ -464,14 +464,14 @@ extern const char kChromeUILinuxProxyCon
+@@ -469,14 +469,14 @@ extern const char kChromeUILinuxProxyCon
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -51,7 +51,7 @@ $NetBSD$
  extern const char kChromeUIBrowserSwitchHost[];
  extern const char kChromeUIBrowserSwitchURL[];
  extern const char kChromeUIIntroHost[];
-@@ -487,7 +487,7 @@ extern const char kChromeUIProfilePicker
+@@ -492,7 +492,7 @@ extern const char kChromeUIProfilePicker
  extern const char kChromeUIProfilePickerStartupQuery[];
  #endif
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/resources/signin/signin_shared.css.orig	2024-04-10 21:24:43.020510200 +0000
+--- chrome/browser/resources/signin/signin_shared.css.orig	2024-04-15 20:33:48.505444500 +0000
 +++ chrome/browser/resources/signin/signin_shared.css
 @@ -54,7 +54,7 @@ a {
    border-radius: var(--scrollbar-width);

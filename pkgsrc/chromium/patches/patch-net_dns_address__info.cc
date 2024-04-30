@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/address_info.cc.orig	2024-04-10 21:24:57.381654700 +0000
+--- net/dns/address_info.cc.orig	2024-04-15 20:34:02.402465000 +0000
 +++ net/dns/address_info.cc
 @@ -78,8 +78,12 @@ AddressInfo::AddressInfoAndResult Addres
      // error.

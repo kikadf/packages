@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-04-10 21:26:05.643094500 +0000
+--- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-04-15 20:35:12.503613200 +0000
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
-@@ -20447,6 +20447,9 @@ SQLITE_PRIVATE int sqlite3HeapNearlyFull
+@@ -20527,6 +20527,9 @@ SQLITE_PRIVATE int sqlite3HeapNearlyFull
  ** The alloca() routine never returns NULL.  This will cause code paths
  ** that deal with sqlite3StackAlloc() failures to be unreachable.
  */
@@ -15,7 +15,7 @@ $NetBSD$
  #ifdef SQLITE_USE_ALLOCA
  # define sqlite3StackAllocRaw(D,N)   alloca(N)
  # define sqlite3StackAllocRawNN(D,N) alloca(N)
-@@ -44510,6 +44513,11 @@ static int unixRandomness(sqlite3_vfs *N
+@@ -44768,6 +44771,11 @@ static int unixRandomness(sqlite3_vfs *N
    memset(zBuf, 0, nBuf);
    randomnessPid = osGetpid(0);
  #if !defined(SQLITE_TEST) && !defined(SQLITE_OMIT_RANDOMNESS)
@@ -27,7 +27,7 @@ $NetBSD$
    {
      int fd, got;
      fd = robust_open("/dev/urandom", O_RDONLY, 0);
-@@ -44526,6 +44534,7 @@ static int unixRandomness(sqlite3_vfs *N
+@@ -44784,6 +44792,7 @@ static int unixRandomness(sqlite3_vfs *N
      }
    }
  #endif

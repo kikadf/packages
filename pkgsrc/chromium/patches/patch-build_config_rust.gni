@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/config/rust.gni.orig	2024-04-10 21:24:37.488069300 +0000
+--- build/config/rust.gni.orig	2024-04-15 20:33:42.997040000 +0000
 +++ build/config/rust.gni
-@@ -280,6 +280,10 @@ if (is_linux || is_chromeos) {
+@@ -277,6 +277,10 @@ if (is_linux || is_chromeos) {
    }
  }
  

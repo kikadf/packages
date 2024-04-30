@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc.orig	2024-04-10 21:24:44.784650800 +0000
+--- chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc.orig	2024-04-15 20:33:50.213570000 +0000
 +++ chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc
 @@ -182,7 +182,7 @@ void ShortcutSubManager::Execute(
      return;

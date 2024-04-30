@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2024-04-10 21:24:42.292452000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2024-04-15 20:33:47.793392200 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -489,18 +489,18 @@
+@@ -488,18 +488,18 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -27,7 +27,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
  
-@@ -535,7 +535,7 @@
+@@ -534,7 +534,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -36,7 +36,7 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1685,7 +1685,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1715,7 +1715,7 @@ void RegisterLocalState(PrefRegistrySimp
    registry->RegisterBooleanPref(prefs::kOopPrintDriversAllowedByPolicy, true);
  #endif
  
@@ -45,7 +45,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2031,12 +2031,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2060,12 +2060,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

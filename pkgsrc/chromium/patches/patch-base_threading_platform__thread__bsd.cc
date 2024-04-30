@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/threading/platform_thread_bsd.cc.orig	2024-04-15 08:14:41.579578569 +0000
+--- base/threading/platform_thread_bsd.cc.orig	2024-04-30 14:42:41.180375175 +0000
 +++ base/threading/platform_thread_bsd.cc
 @@ -0,0 +1,31 @@
 +// Copyright 2023 The Chromium Authors
@@ -25,9 +25,9 @@ $NetBSD$
 +  return false;
 +}
 +
-+absl::optional<ThreadPriorityForTest>
++std::optional<ThreadPriorityForTest>
 +GetCurrentThreadPriorityForPlatformForTest() {
-+  return absl::nullopt;
++  return std::nullopt;
 +}
 +}  // namespace internal
 +

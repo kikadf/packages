@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/download/download_commands.cc.orig	2024-04-10 21:24:41.348377000 +0000
+--- chrome/browser/download/download_commands.cc.orig	2024-04-15 20:33:46.885325700 +0000
 +++ chrome/browser/download/download_commands.cc
 @@ -26,7 +26,7 @@
  #include "ui/base/clipboard/scoped_clipboard_writer.h"

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_netbsd.cc.orig	2024-04-15 08:14:41.547157451 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2024-04-30 14:42:41.145041354 +0000
 +++ base/process/process_metrics_netbsd.cc
-@@ -0,0 +1,199 @@
+@@ -0,0 +1,175 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -18,8 +18,7 @@ $NetBSD$
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#include <sys/vmmeter.h>
-+
-+#include <kvm.h>
++#include <optional>
 +
 +#include "base/memory/ptr_util.h"
 +#include "base/process/process_metrics_iocounters.h"
@@ -28,8 +27,7 @@ $NetBSD$
 +
 +namespace base {
 +
-+ProcessMetrics::ProcessMetrics(ProcessHandle process)
-+    : process_(process) {}
++ProcessMetrics::ProcessMetrics(ProcessHandle process) : process_(process) {}
 +
 +// static
 +std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
@@ -37,11 +35,7 @@ $NetBSD$
 +  return WrapUnique(new ProcessMetrics(process));
 +}
 +
-+bool ProcessMetrics::GetIOCounters(IoCounters* io_counters) const {
-+  return false;
-+}
-+
-+TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
++std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
 +  struct kinfo_proc2 info;
 +  size_t length = sizeof(struct kinfo_proc2);
 +  struct timeval tv;
@@ -49,56 +43,38 @@ $NetBSD$
 +  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, process_,
 +                sizeof(struct kinfo_proc2), 1 };
 +
-+  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
-+    return TimeDelta();
++  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
++    return std::optional(TimeDelta());
++  }
 +
 +  tv.tv_sec = info.p_rtime_sec;
 +  tv.tv_usec = info.p_rtime_usec;
 +
-+  return Microseconds(TimeValToMicroseconds(tv));
++  return std::optional(Microseconds(TimeValToMicroseconds(tv)));
 +}
 +
 +size_t GetSystemCommitCharge() {
 +  int mib[] = { CTL_VM, VM_METER };
-+  int pagesize;
++  size_t pagesize;
 +  struct vmtotal vmtotal;
 +  unsigned long mem_total, mem_free, mem_inactive;
 +  size_t len = sizeof(vmtotal);
 +
-+  if (sysctl(mib, std::size(mib), &vmtotal, &len, NULL, 0) < 0)
++  if (sysctl(mib, std::size(mib), &vmtotal, &len, NULL, 0) < 0) {
 +    return 0;
++  }
 +
 +  mem_total = vmtotal.t_vm;
 +  mem_free = vmtotal.t_free;
 +  mem_inactive = vmtotal.t_vm - vmtotal.t_avm;
 +
-+  pagesize = getpagesize();
++  pagesize = checked_cast<size_t>(getpagesize());
 +
 +  return mem_total - (mem_free*pagesize) - (mem_inactive*pagesize);
 +}
 +
 +int ProcessMetrics::GetOpenFdCount() const {
-+#if 0
-+  struct kinfo_file *files;
-+  kvm_t *kd = NULL;
-+  int total_count = 0;
-+  char errbuf[_POSIX2_LINE_MAX];
-+
-+  if ((kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, errbuf)) == NULL)
-+    goto out;
-+
-+  if ((files = kvm_getfiles(kd, KERN_FILE_BYPID, process_,
-+        sizeof(struct kinfo_file), &total_count)) == NULL) {
-+	  total_count = 0;
-+	  goto out;
-+  }
-+
-+  kvm_close(kd);
-+
-+out:
-+  return total_count;
-+#endif
-+  return getdtablecount();
++  return -1;
 +}
 +
 +int ProcessMetrics::GetOpenFdSoftLimit() const {

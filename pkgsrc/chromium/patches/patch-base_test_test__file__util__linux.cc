@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/test/test_file_util_linux.cc.orig	2024-04-10 21:24:37.324056100 +0000
+--- base/test/test_file_util_linux.cc.orig	2024-04-15 20:33:42.837028300 +0000
 +++ base/test/test_file_util_linux.cc
 @@ -54,8 +54,10 @@ bool EvictFileFromSystemCache(const File
      return false;

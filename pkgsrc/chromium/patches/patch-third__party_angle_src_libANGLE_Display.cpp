@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/src/libANGLE/Display.cpp.orig	2024-04-10 21:26:13.895752200 +0000
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2024-04-15 20:35:20.512201500 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
 @@ -60,7 +60,7 @@
  #        include "libANGLE/renderer/gl/cgl/DisplayCGL.h"
@@ -41,7 +41,7 @@ $NetBSD$
  #        if defined(ANGLE_USE_GBM)
              if (platformType == EGL_PLATFORM_GBM_KHR && rx::IsVulkanGbmDisplayAvailable())
              {
-@@ -2152,7 +2152,7 @@ static ClientExtensions GenerateClientEx
+@@ -2158,7 +2158,7 @@ static ClientExtensions GenerateClientEx
      extensions.x11Visual = true;
  #endif
  

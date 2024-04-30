@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2024-04-10 21:24:44.000588200 +0000
+--- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2024-04-15 20:33:49.473515700 +0000
 +++ chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc
-@@ -2005,7 +2005,7 @@ const gfx::VectorIcon& GetSharingHubVect
+@@ -1989,7 +1989,7 @@ const gfx::VectorIcon& GetSharingHubVect
                   OmniboxFieldTrial::IsChromeRefreshActionChipIconsEnabled()
               ? omnibox::kShareWinChromeRefreshIcon
               : omnibox::kShareWinIcon;

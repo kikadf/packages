@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/swiftshader/src/System/Linux/MemFd.cpp.orig	2024-04-10 21:25:38.492931000 +0000
+--- third_party/swiftshader/src/System/Linux/MemFd.cpp.orig	2024-04-15 20:34:44.781577300 +0000
 +++ third_party/swiftshader/src/System/Linux/MemFd.cpp
 @@ -25,6 +25,7 @@
  #	define MFD_CLOEXEC 0x0001U

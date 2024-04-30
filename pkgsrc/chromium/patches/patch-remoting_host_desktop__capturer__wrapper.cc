@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/desktop_capturer_wrapper.cc.orig	2024-04-10 21:24:58.425737900 +0000
+--- remoting/host/desktop_capturer_wrapper.cc.orig	2024-04-15 20:34:03.258528000 +0000
 +++ remoting/host/desktop_capturer_wrapper.cc
 @@ -13,7 +13,7 @@
  #include "third_party/webrtc/modules/desktop_capture/desktop_capturer.h"
@@ -14,8 +14,8 @@ $NetBSD$
  #include "remoting/host/linux/wayland_desktop_capturer.h"
  #include "remoting/host/linux/wayland_utils.h"
  #endif
-@@ -32,7 +32,7 @@ void DesktopCapturerWrapper::CreateCaptu
-     const webrtc::DesktopCaptureOptions& options) {
+@@ -33,7 +33,7 @@ void DesktopCapturerWrapper::CreateCaptu
+     SourceId id) {
    DCHECK(!capturer_);
  
 -#if BUILDFLAG(IS_LINUX)
@@ -23,7 +23,7 @@ $NetBSD$
    if (IsRunningWayland()) {
      capturer_ = std::make_unique<WaylandDesktopCapturer>(options);
    } else {
-@@ -109,7 +109,7 @@ void DesktopCapturerWrapper::OnCaptureRe
+@@ -112,7 +112,7 @@ void DesktopCapturerWrapper::OnCaptureRe
  bool DesktopCapturerWrapper::SupportsFrameCallbacks() {
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
  

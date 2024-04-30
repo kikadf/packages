@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc.orig	2024-04-10 21:24:44.780650400 +0000
+--- chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc.orig	2024-04-15 20:33:50.209569700 +0000
 +++ chrome/browser/web_applications/os_integration/run_on_os_login_sub_manager.cc
 @@ -54,7 +54,7 @@ proto::RunOnOsLoginMode ConvertWebAppRun
  // different from other platforms, see web_app_run_on_os_login_manager.h for

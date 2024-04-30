@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2024-04-10 21:24:43.256528900 +0000
+--- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2024-04-15 20:33:48.725460800 +0000
 +++ chrome/browser/supervised_user/supervised_user_navigation_observer.cc
 @@ -47,7 +47,7 @@
  #include "chrome/browser/supervised_user/android/supervised_user_web_content_handler_impl.h"

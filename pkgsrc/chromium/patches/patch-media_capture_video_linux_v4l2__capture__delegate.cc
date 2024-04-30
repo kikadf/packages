@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2024-04-10 21:24:56.009545300 +0000
+--- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2024-04-15 20:34:01.026364000 +0000
 +++ media/capture/video/linux/v4l2_capture_delegate.cc
 @@ -5,8 +5,10 @@
  #include "media/capture/video/linux/v4l2_capture_delegate.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/xml/xslt_processor.h.orig	2024-04-10 21:25:01.369972500 +0000
+--- third_party/blink/renderer/core/xml/xslt_processor.h.orig	2024-04-15 20:34:06.362756000 +0000
 +++ third_party/blink/renderer/core/xml/xslt_processor.h
 @@ -77,7 +77,11 @@ class XSLTProcessor final : public Scrip
  

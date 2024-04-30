@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2024-04-10 21:24:42.016430100 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2024-04-15 20:33:47.533373000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -94,7 +94,7 @@
  
@@ -168,7 +168,7 @@ $NetBSD$
    if (!enabled) {
      g_network_service_will_allow_gssapi_library_load = true;
    }
-@@ -1062,7 +1062,7 @@ void SystemNetworkContextManager::Update
+@@ -1055,7 +1055,7 @@ void SystemNetworkContextManager::Update
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

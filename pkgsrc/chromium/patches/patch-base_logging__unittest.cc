@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/logging_unittest.cc.orig	2024-04-10 21:24:37.172044000 +0000
+--- base/logging_unittest.cc.orig	2024-04-15 20:33:42.685017000 +0000
 +++ base/logging_unittest.cc
 @@ -32,7 +32,7 @@
  #include "base/posix/eintr_wrapper.h"

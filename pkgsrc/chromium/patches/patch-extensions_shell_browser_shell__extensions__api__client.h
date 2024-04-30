@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/shell/browser/shell_extensions_api_client.h.orig	2024-04-10 21:24:53.905377600 +0000
+--- extensions/shell/browser/shell_extensions_api_client.h.orig	2024-04-15 20:33:59.222231600 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.h
 @@ -36,7 +36,7 @@ class ShellExtensionsAPIClient : public 
        const override;

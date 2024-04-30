@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/shell/browser/shell_browser_main_parts.cc.orig	2024-04-10 21:24:53.901377200 +0000
+--- extensions/shell/browser/shell_browser_main_parts.cc.orig	2024-04-15 20:33:59.222231600 +0000
 +++ extensions/shell/browser/shell_browser_main_parts.cc
 @@ -150,7 +150,7 @@ void ShellBrowserMainParts::PostCreateMa
        switches::kAppShellAllowRoaming)) {

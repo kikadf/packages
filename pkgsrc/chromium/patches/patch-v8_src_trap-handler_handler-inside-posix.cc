@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/trap-handler/handler-inside-posix.cc.orig	2024-04-10 21:26:20.752298600 +0000
+--- v8/src/trap-handler/handler-inside-posix.cc.orig	2024-04-15 20:35:27.712730200 +0000
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
  
@@ -25,7 +25,7 @@ $NetBSD$
  #else
  #error "Unsupported platform."
  #endif
-@@ -78,8 +82,12 @@ bool IsKernelGeneratedSignal(siginfo_t* 
+@@ -80,8 +84,12 @@ bool IsKernelGeneratedSignal(siginfo_t* 
    // si_code at its default of 0 for signals that don’t originate in hardware.
    // The other conditions are only relevant for Linux.
    return info->si_code > 0 && info->si_code != SI_USER &&

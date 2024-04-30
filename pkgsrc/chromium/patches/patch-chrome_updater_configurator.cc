@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/updater/configurator.cc.orig	2024-04-10 21:24:46.916820800 +0000
+--- chrome/updater/configurator.cc.orig	2024-04-15 20:33:52.729755000 +0000
 +++ chrome/updater/configurator.cc
 @@ -67,7 +67,7 @@ Configurator::Configurator(scoped_refptr
          return std::nullopt;

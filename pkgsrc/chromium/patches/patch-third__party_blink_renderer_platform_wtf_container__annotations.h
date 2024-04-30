@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/wtf/container_annotations.h.orig	2024-04-10 21:25:02.234041200 +0000
+--- third_party/blink/renderer/platform/wtf/container_annotations.h.orig	2024-04-15 20:34:07.082809000 +0000
 +++ third_party/blink/renderer/platform/wtf/container_annotations.h
 @@ -12,7 +12,7 @@
  // TODO(ochang): Remove the ARCH_CPU_X86_64 condition to enable this for X86

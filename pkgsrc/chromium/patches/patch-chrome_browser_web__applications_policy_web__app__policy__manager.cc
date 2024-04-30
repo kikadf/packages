@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2024-04-10 21:24:44.792651400 +0000
+--- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2024-04-15 20:33:50.221570500 +0000
 +++ chrome/browser/web_applications/policy/web_app_policy_manager.cc
-@@ -112,7 +112,7 @@ namespace web_app {
+@@ -111,7 +111,7 @@ namespace web_app {
  
  BASE_FEATURE(kDesktopPWAsForceUnregisterOSIntegration,
               "DesktopPWAsForceUnregisterOSIntegration",

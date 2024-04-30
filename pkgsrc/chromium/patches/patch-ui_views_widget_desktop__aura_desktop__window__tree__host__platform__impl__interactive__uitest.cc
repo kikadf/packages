@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/widget/desktop_aura/desktop_window_tree_host_platform_impl_interactive_uitest.cc.orig	2024-04-10 21:25:25.627905600 +0000
+--- ui/views/widget/desktop_aura/desktop_window_tree_host_platform_impl_interactive_uitest.cc.orig	2024-04-15 20:34:30.696543000 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform_impl_interactive_uitest.cc
-@@ -22,7 +22,7 @@
+@@ -23,7 +23,7 @@
  #include "ui/views/widget/widget_delegate.h"
  #include "ui/views/window/native_frame_view.h"
  

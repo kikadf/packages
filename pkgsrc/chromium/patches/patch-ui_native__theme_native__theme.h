@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/native_theme/native_theme.h.orig	2024-04-10 21:25:25.371885300 +0000
+--- ui/native_theme/native_theme.h.orig	2024-04-15 20:34:30.440524300 +0000
 +++ ui/native_theme/native_theme.h
 @@ -62,7 +62,7 @@ class NATIVE_THEME_EXPORT NativeTheme {
      kCheckbox,

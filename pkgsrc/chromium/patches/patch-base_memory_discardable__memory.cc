@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/memory/discardable_memory.cc.orig	2024-04-10 21:24:37.176044500 +0000
+--- base/memory/discardable_memory.cc.orig	2024-04-15 20:33:42.689017500 +0000
 +++ base/memory/discardable_memory.cc
 @@ -26,7 +26,7 @@ BASE_FEATURE(kMadvFreeDiscardableMemory,
               base::FEATURE_DISABLED_BY_DEFAULT);

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/memory_linux.cc.orig	2024-04-10 21:24:37.220048000 +0000
+--- base/process/memory_linux.cc.orig	2024-04-15 20:33:42.733020500 +0000
 +++ base/process/memory_linux.cc
 @@ -28,6 +28,7 @@ void __libc_free(void*);
  

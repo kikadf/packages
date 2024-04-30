@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc.orig	2024-04-10 21:24:41.428383400 +0000
+--- chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc.orig	2024-04-15 20:33:46.965331600 +0000
 +++ chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc
 @@ -67,8 +67,8 @@ base::flat_map<std::string, SAMLProfileA
    // TODO(crbug.com/1445072): Add actual domains with attribute names.

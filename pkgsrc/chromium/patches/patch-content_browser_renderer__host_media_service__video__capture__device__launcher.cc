@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-04-10 21:24:52.165238900 +0000
+--- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-04-15 20:33:57.558109300 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
 @@ -25,7 +25,7 @@
  #include "media/base/media_switches.h"

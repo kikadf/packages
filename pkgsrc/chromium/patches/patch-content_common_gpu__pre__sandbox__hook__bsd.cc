@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2024-04-15 08:14:42.644217823 +0000
+--- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2024-04-30 14:42:41.924563343 +0000
 +++ content/common/gpu_pre_sandbox_hook_bsd.cc
-@@ -0,0 +1,69 @@
+@@ -0,0 +1,68 @@
 +// Copyright 2023 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -32,7 +32,6 @@ $NetBSD$
 +#include "build/build_config.h"
 +#include "build/buildflag.h"
 +#include "build/chromeos_buildflags.h"
-+#include "content/common/set_process_title.h"
 +#include "content/public/common/content_switches.h"
 +#include "media/gpu/buildflags.h"
 +

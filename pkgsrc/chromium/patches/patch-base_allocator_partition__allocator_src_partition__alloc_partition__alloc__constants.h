@@ -3,24 +3,14 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2024-04-10 21:24:37.052034600 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2024-04-15 20:33:42.565008400 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
-@@ -112,7 +112,7 @@ PartitionPageShift() {
- }
- #elif (BUILDFLAG(IS_APPLE) && defined(ARCH_CPU_64_BITS)) || \
-     (BUILDFLAG(IS_ANDROID) && defined(ARCH_CPU_ARM64)) ||   \
--    (BUILDFLAG(IS_LINUX) && defined(ARCH_CPU_ARM64))
-+    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(ARCH_CPU_ARM64))
- PA_ALWAYS_INLINE PAGE_ALLOCATOR_CONSTANTS_DECLARE_CONSTEXPR size_t
- PartitionPageShift() {
-   return PageAllocationGranularityShift() + 2;
-@@ -314,7 +314,8 @@ constexpr size_t kNumPools = kMaxPoolHan
+@@ -313,7 +313,7 @@ constexpr size_t kNumPools = kMaxPoolHan
  // 8GB for each of the glued pools).
  #if BUILDFLAG(HAS_64_BIT_POINTERS)
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS) || \
 -    BUILDFLAG(ENABLE_POINTER_COMPRESSION)
-+    BUILDFLAG(ENABLE_POINTER_COMPRESSION) || \
-+    BUILDFLAG(IS_BSD)
++    BUILDFLAG(ENABLE_POINTER_COMPRESSION) || BUILDFLAG(IS_BSD)
  constexpr size_t kPoolMaxSize = 8 * kGiB;
  #else
  constexpr size_t kPoolMaxSize = 16 * kGiB;

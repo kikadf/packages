@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/signin/signin_view_controller_delegate.h.orig	2024-04-10 21:24:44.048592000 +0000
+--- chrome/browser/ui/signin/signin_view_controller_delegate.h.orig	2024-04-15 20:33:49.525519600 +0000
 +++ chrome/browser/ui/signin/signin_view_controller_delegate.h
 @@ -81,7 +81,7 @@ class SigninViewControllerDelegate {
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT) || BUILDFLAG(IS_CHROMEOS_LACROS)

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2024-04-10 21:26:07.023204600 +0000
+--- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2024-04-15 20:35:14.275743500 +0000
 +++ third_party/perfetto/include/perfetto/base/thread_utils.h
 @@ -34,6 +34,7 @@ __declspec(dllimport) unsigned long __st
  #include <sys/syscall.h>

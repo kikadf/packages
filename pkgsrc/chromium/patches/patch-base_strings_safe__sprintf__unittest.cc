@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/strings/safe_sprintf_unittest.cc.orig	2024-04-10 21:24:37.244049800 +0000
+--- base/strings/safe_sprintf_unittest.cc.orig	2024-04-15 20:33:42.757022400 +0000
 +++ base/strings/safe_sprintf_unittest.cc
 @@ -733,6 +733,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  #endif

@@ -3,19 +3,19 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/zlib/cpu_features.c.orig	2024-04-10 21:25:23.431730500 +0000
+--- third_party/zlib/cpu_features.c.orig	2024-04-15 20:34:28.536384300 +0000
 +++ third_party/zlib/cpu_features.c
-@@ -35,7 +35,8 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 
- 
+@@ -39,7 +39,8 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #ifndef CPU_NO_SIMD
  
--#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS)
-+#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS) || \
+ #if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || \
+-    defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS)
++    defined(ARMV8_OS_FUCHSIA) || defined(ARMV8_OS_IOS) || \
 +    defined(ARMV8_OS_OPENBSD) || defined(ARMV8_OS_FREEBSD)
  #include <pthread.h>
  #endif
  
-@@ -52,6 +53,10 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 
+@@ -56,6 +57,10 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #include <windows.h>
  #elif defined(ARMV8_OS_IOS)
  #include <sys/sysctl.h>
@@ -26,17 +26,17 @@ $NetBSD$
  #elif !defined(_MSC_VER)
  #include <pthread.h>
  #else
-@@ -62,7 +67,8 @@ int ZLIB_INTERNAL x86_cpu_enable_avx512 
- static void _cpu_check_features(void);
- #endif
- 
--#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_MACOS) || defined(ARMV8_OS_FUCHSIA) || defined(X86_NOT_WINDOWS) || defined(ARMV8_OS_IOS)
-+#if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || defined(ARMV8_OS_MACOS) || defined(ARMV8_OS_FUCHSIA) || defined(X86_NOT_WINDOWS) || defined(ARMV8_OS_IOS) || \
-+    defined(ARMV8_OS_OPENBSD) || defined(ARMV8_OS_FREEBSD)
+@@ -69,7 +74,8 @@ static void _cpu_check_features(void);
+ #if defined(ARMV8_OS_ANDROID) || defined(ARMV8_OS_LINUX) || \
+     defined(ARMV8_OS_MACOS) || defined(ARMV8_OS_FUCHSIA) || \
+     defined(X86_NOT_WINDOWS) || defined(ARMV8_OS_IOS) || \
+-    defined(RISCV_RVV)
++    defined(RISCV_RVV) || defined(ARMV8_OS_OPENBSD) || \
++    defined(ARMV8_OS_FREEBSD)
  #if !defined(ARMV8_OS_MACOS)
  // _cpu_check_features() doesn't need to do anything on mac/arm since all
  // features are known at build time, so don't call it.
-@@ -115,6 +121,17 @@ static void _cpu_check_features(void)
+@@ -122,6 +128,17 @@ static void _cpu_check_features(void)
      unsigned long features = getauxval(AT_HWCAP2);
      arm_cpu_enable_crc32 = !!(features & HWCAP2_CRC32);
      arm_cpu_enable_pmull = !!(features & HWCAP2_PMULL);

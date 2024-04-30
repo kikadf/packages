@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/browser/api/management/management_api.cc.orig	2024-04-10 21:24:53.721362800 +0000
+--- extensions/browser/api/management/management_api.cc.orig	2024-04-15 20:33:59.050219000 +0000
 +++ extensions/browser/api/management/management_api.cc
 @@ -280,7 +280,7 @@ bool PlatformSupportsApprovalFlowForExte
  #if BUILDFLAG(IS_CHROMEOS)

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2024-04-10 21:24:44.056592700 +0000
+--- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2024-04-15 20:33:49.533520000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
 @@ -261,7 +261,7 @@ Browser* StartupBrowserCreatorImpl::Open
      // at the state of the MessageLoop.

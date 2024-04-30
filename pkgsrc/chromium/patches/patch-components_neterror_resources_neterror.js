@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/neterror/resources/neterror.js.orig	2024-04-10 21:24:48.960983500 +0000
+--- components/neterror/resources/neterror.js.orig	2024-04-15 20:33:54.885913100 +0000
 +++ components/neterror/resources/neterror.js
 @@ -142,7 +142,7 @@ function detailsButtonClick() {
  

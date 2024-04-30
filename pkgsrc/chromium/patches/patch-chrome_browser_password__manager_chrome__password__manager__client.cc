@@ -3,9 +3,18 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-04-10 21:24:42.176442900 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-04-15 20:33:47.685384300 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
-@@ -671,7 +671,7 @@ void ChromePasswordManagerClient::Notify
+@@ -468,7 +468,7 @@ bool ChromePasswordManagerClient::ShowKe
+ 
+ bool ChromePasswordManagerClient::CanUseBiometricAuthForFilling(
+     device_reauth::DeviceAuthenticator* authenticator) {
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (!GetLocalStatePrefs() || !GetPrefs() || !authenticator) {
+     return false;
+   }
+@@ -691,7 +691,7 @@ void ChromePasswordManagerClient::Notify
  }
  
  void ChromePasswordManagerClient::NotifyKeychainError() {

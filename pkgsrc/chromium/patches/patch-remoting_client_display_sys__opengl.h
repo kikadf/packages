@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/client/display/sys_opengl.h.orig	2024-04-10 21:24:58.401736000 +0000
+--- remoting/client/display/sys_opengl.h.orig	2024-04-15 20:34:03.234526200 +0000
 +++ remoting/client/display/sys_opengl.h
 @@ -9,7 +9,7 @@
  

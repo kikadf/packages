@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_freebsd.cc.orig	2024-04-10 21:24:37.224048100 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2024-04-15 20:33:42.737021000 +0000
 +++ base/process/process_metrics_freebsd.cc
-@@ -3,20 +3,39 @@
+@@ -3,19 +3,37 @@
  // found in the LICENSE file.
  
  #include "base/process/process_metrics.h"
@@ -22,7 +22,6 @@ $NetBSD$
 +#include <libutil.h>
 +
  #include "base/memory/ptr_util.h"
- #include "base/process/process_metrics_iocounters.h"
 +#include "base/values.h"
  
  namespace base {
@@ -40,42 +39,42 @@ $NetBSD$
 +}
 +}
  
- ProcessMetrics::ProcessMetrics(ProcessHandle process)
+-ProcessMetrics::ProcessMetrics(ProcessHandle process)
 -    : process_(process),
 -      last_cpu_(0) {}
-+    : process_(process) {}
++ProcessMetrics::ProcessMetrics(ProcessHandle process) : process_(process) {}
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -24,20 +43,17 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -23,20 +41,17 @@ std::unique_ptr<ProcessMetrics> ProcessM
    return WrapUnique(new ProcessMetrics(process));
  }
  
--double ProcessMetrics::GetPlatformIndependentCPUUsage() {
-+TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
+-std::optional<double> ProcessMetrics::GetPlatformIndependentCPUUsage() {
++std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
    struct kinfo_proc info;
 -  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, process_};
 -  size_t length = sizeof(info);
 +  size_t length = sizeof(struct kinfo_proc);
 +  struct timeval tv;
- 
--  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
--    return 0;
++
 +  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, process_ };
  
--  return (info.ki_pctcpu / FSCALE) * 100.0;
--}
-+  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
-+    return TimeDelta();
+   if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
+-    return std::nullopt;
++    return std::optional(TimeDelta());
  
--TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
+-  return std::optional(double{info.ki_pctcpu} / FSCALE * 100.0);
+-}
+-
+-std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
 -  NOTREACHED();
--  return TimeDelta();
-+  return Microseconds(info.ki_runtime);
+-  return std::nullopt;
++  return std::optional(Microseconds(info.ki_runtime));
  }
  
- bool ProcessMetrics::GetIOCounters(IoCounters* io_counters) const {
-@@ -67,4 +83,228 @@ size_t GetSystemCommitCharge() {
+ size_t GetSystemCommitCharge() {
+@@ -62,4 +77,228 @@ size_t GetSystemCommitCharge() {
    return mem_total - (mem_free*pagesize) - (mem_inactive*pagesize);
  }
  
@@ -172,7 +171,7 @@ $NetBSD$
 +    kvm_close(kd);
 +    return 0;
 +  }
-+  
++
 +  size_t rss;
 +
 +  if (nproc > 0) {
@@ -198,7 +197,7 @@ $NetBSD$
 +    kvm_close(kd);
 +    return 0;
 +  }
-+  
++
 +  size_t swrss;
 +
 +  if (nproc > 0) {
@@ -248,7 +247,7 @@ $NetBSD$
 +
 +Value::Dict SystemDiskInfo::ToDict() const {
 +  Value::Dict res;
-+ 
++
 +  // Write out uint64_t variables as doubles.
 +  // Note: this may discard some precision, but for JS there's no other option.
 +  res.Set("reads", static_cast<double>(reads));
@@ -264,7 +263,7 @@ $NetBSD$
 +  res.Set("weighted_io_time", static_cast<double>(weighted_io_time));
 +
 +  NOTIMPLEMENTED();
-+ 
++
 +  return res;
 +}
 +

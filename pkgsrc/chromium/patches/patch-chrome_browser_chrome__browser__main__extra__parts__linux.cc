@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/chrome_browser_main_extra_parts_linux.cc.orig	2024-04-10 21:24:41.160362000 +0000
+--- chrome/browser/chrome_browser_main_extra_parts_linux.cc.orig	2024-04-15 20:33:46.701312000 +0000
 +++ chrome/browser/chrome_browser_main_extra_parts_linux.cc
-@@ -117,7 +117,7 @@ ChromeBrowserMainExtraPartsLinux::Chrome
+@@ -169,7 +169,7 @@ ChromeBrowserMainExtraPartsLinux::Chrome
  ChromeBrowserMainExtraPartsLinux::~ChromeBrowserMainExtraPartsLinux() = default;
  
  void ChromeBrowserMainExtraPartsLinux::PreEarlyInitialization() {

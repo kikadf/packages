@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/chrome_features.cc.orig	2024-04-10 21:24:44.868657400 +0000
+--- chrome/common/chrome_features.cc.orig	2024-04-15 20:33:50.297576200 +0000
 +++ chrome/common/chrome_features.cc
 @@ -81,7 +81,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)
@@ -23,7 +23,7 @@ $NetBSD$
  // Enables the Restart background mode optimization. When all Chrome UI is
  // closed and it goes in the background, allows to restart the browser to
  // discard memory.
-@@ -321,7 +321,7 @@ BASE_FEATURE(kDesktopPWAsEnforceWebAppSe
+@@ -302,7 +302,7 @@ BASE_FEATURE(kDesktopPWAsEnforceWebAppSe
  BASE_FEATURE(kDesktopPWAsRunOnOsLogin,
               "DesktopPWAsRunOnOsLogin",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -32,7 +32,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -360,7 +360,7 @@ BASE_FEATURE(kDesktopPWAsTabStripSetting
+@@ -341,7 +341,7 @@ BASE_FEATURE(kDesktopPWAsTabStripSetting
               base::FEATURE_DISABLED_BY_DEFAULT);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -41,7 +41,7 @@ $NetBSD$
  // Controls whether Chrome Apps are supported. See https://crbug.com/1221251.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -383,7 +383,7 @@ BASE_FEATURE(kDisruptiveNotificationPerm
+@@ -364,7 +364,7 @@ BASE_FEATURE(kDisruptiveNotificationPerm
  BASE_FEATURE(kDnsOverHttps,
               "DnsOverHttps",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -50,16 +50,16 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -399,7 +399,7 @@ const base::FeatureParam<bool> kDnsOverH
- const base::FeatureParam<bool> kDnsOverHttpsShowUiParam {
-   &kDnsOverHttps, "ShowUi",
+@@ -380,7 +380,7 @@ const base::FeatureParam<bool> kDnsOverH
+ const base::FeatureParam<bool> kDnsOverHttpsShowUiParam{&kDnsOverHttps,
+                                                         "ShowUi",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
 +    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-       true
+                                                         true
  #else
-       false
-@@ -974,7 +974,7 @@ BASE_FEATURE(kLacrosSharedComponentsDir,
+                                                         false
+@@ -918,7 +918,7 @@ BASE_FEATURE(kLacrosSharedComponentsDir,
               base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
@@ -68,7 +68,7 @@ $NetBSD$
  BASE_FEATURE(kLinuxLowMemoryMonitor,
               "LinuxLowMemoryMonitor",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -987,7 +987,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -931,7 +931,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

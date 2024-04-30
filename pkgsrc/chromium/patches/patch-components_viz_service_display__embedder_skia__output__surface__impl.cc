@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-04-10 21:24:51.485184700 +0000
+--- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-04-15 20:33:57.082074400 +0000
 +++ components/viz/service/display_embedder/skia_output_surface_impl.cc
-@@ -1519,7 +1519,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
+@@ -1526,7 +1526,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::G
              ->GetDeviceQueue()
              ->GetVulkanPhysicalDevice(),
          VK_IMAGE_TILING_OPTIMAL, vk_format, yuv_color_space, ycbcr_info);

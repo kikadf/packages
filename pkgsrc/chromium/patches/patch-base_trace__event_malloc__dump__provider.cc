@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/trace_event/malloc_dump_provider.cc.orig	2024-04-10 21:24:37.364059400 +0000
+--- base/trace_event/malloc_dump_provider.cc.orig	2024-04-15 20:33:42.873031000 +0000
 +++ base/trace_event/malloc_dump_provider.cc
-@@ -25,6 +25,8 @@
+@@ -24,6 +24,8 @@
  
  #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
@@ -14,7 +14,7 @@ $NetBSD$
  #else
  #include <malloc.h>
  #endif
-@@ -182,7 +184,7 @@ void ReportAppleAllocStats(size_t* total
+@@ -181,7 +183,7 @@ void ReportAppleAllocStats(size_t* total
  
  #if (BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && BUILDFLAG(IS_ANDROID)) || \
      (!BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && !BUILDFLAG(IS_WIN) &&    \
@@ -23,7 +23,7 @@ $NetBSD$
  void ReportMallinfoStats(ProcessMemoryDump* pmd,
                           size_t* total_virtual_size,
                           size_t* resident_size,
-@@ -353,6 +355,9 @@ bool MallocDumpProvider::OnMemoryDump(co
+@@ -366,6 +368,9 @@ bool MallocDumpProvider::OnMemoryDump(co
                       &allocated_objects_count);
  #elif BUILDFLAG(IS_FUCHSIA)
  // TODO(fuchsia): Port, see https://crbug.com/706592.

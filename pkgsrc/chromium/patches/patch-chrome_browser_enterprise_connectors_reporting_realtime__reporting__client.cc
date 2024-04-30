@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2024-04-10 21:24:41.420382700 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2024-04-15 20:33:46.953330500 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
 @@ -58,7 +58,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -23,7 +23,7 @@ $NetBSD$
  void PopulateSignals(base::Value::Dict event,
                       policy::CloudPolicyClient* client,
                       std::string name,
-@@ -427,7 +427,7 @@ void RealtimeReportingClient::ReportPast
+@@ -420,7 +420,7 @@ void RealtimeReportingClient::ReportPast
                             /*include_profile_user_name=*/false);
  }
  
@@ -32,7 +32,7 @@ $NetBSD$
  
  void AddCrowdstrikeSignalsToEvent(
      base::Value::Dict& event,
-@@ -486,7 +486,7 @@ void RealtimeReportingClient::ReportEven
+@@ -479,7 +479,7 @@ void RealtimeReportingClient::ReportEven
    if (include_profile_user_name) {
      event.Set(kKeyProfileUserName, GetProfileUserName());
    }

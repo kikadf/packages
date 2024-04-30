@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2024-04-10 21:24:44.052592500 +0000
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2024-04-15 20:33:49.525519600 +0000
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
-@@ -104,7 +104,7 @@ const char* const kBadFlags[] = {
+@@ -105,7 +105,7 @@ const char* const kBadFlags[] = {
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2024-04-10 21:24:52.397257300 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2024-04-15 20:33:57.774125300 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.h
 @@ -47,12 +47,14 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
                       base::ScopedFD* control_fd,

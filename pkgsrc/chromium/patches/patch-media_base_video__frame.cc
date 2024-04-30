@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/base/video_frame.cc.orig	2024-04-10 21:24:55.977542600 +0000
+--- media/base/video_frame.cc.orig	2024-04-15 20:34:00.994361600 +0000
 +++ media/base/video_frame.cc
 @@ -80,7 +80,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
@@ -59,7 +59,7 @@ $NetBSD$
    DCHECK(frame->dmabuf_fds_);
    // If there are any |dmabuf_fds_| plugged in, we should refer them too.
    wrapping_frame->dmabuf_fds_ = frame->dmabuf_fds_;
-@@ -1312,7 +1312,7 @@ const gpu::MailboxHolder& VideoFrame::ma
+@@ -1345,7 +1345,7 @@ const gpu::MailboxHolder& VideoFrame::ma
                          : mailbox_holders_[texture_index];
  }
  
@@ -68,7 +68,7 @@ $NetBSD$
  size_t VideoFrame::NumDmabufFds() const {
    return dmabuf_fds_->size();
  }
-@@ -1429,7 +1429,7 @@ VideoFrame::VideoFrame(const VideoFrameL
+@@ -1462,7 +1462,7 @@ VideoFrame::VideoFrame(const VideoFrameL
        storage_type_(storage_type),
        visible_rect_(Intersection(visible_rect, gfx::Rect(layout.coded_size()))),
        natural_size_(natural_size),

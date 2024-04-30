@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/util/BUILD.gn.orig	2024-04-10 21:26:14.411793200 +0000
+--- third_party/angle/util/BUILD.gn.orig	2024-04-15 20:35:21.000237200 +0000
 +++ third_party/angle/util/BUILD.gn
 @@ -311,7 +311,7 @@ foreach(is_shared_library,
      ]

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-04-10 21:24:44.364617300 +0000
+--- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-04-15 20:33:49.821541300 +0000
 +++ chrome/browser/ui/views/tabs/tab_drag_controller.cc
-@@ -94,7 +94,7 @@
+@@ -93,7 +93,7 @@
  #include "components/remote_cocoa/browser/window.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "ui/aura/client/drag_drop_client.h"
  #endif
  
-@@ -214,7 +214,7 @@ bool IsWindowDragUsingSystemDragDropAllo
+@@ -213,7 +213,7 @@ bool IsWindowDragUsingSystemDragDropAllo
  
  void UpdateSystemDnDDragImage(TabDragContext* attached_context,
                                const gfx::ImageSkia& image) {
@@ -23,16 +23,16 @@ $NetBSD$
    aura::Window* root_window =
        attached_context->GetWidget()->GetNativeWindow()->GetRootWindow();
    if (aura::client::GetDragDropClient(root_window)) {
-@@ -395,7 +395,7 @@ TabDragController::Liveness TabDragContr
+@@ -403,7 +403,7 @@ TabDragController::Liveness TabDragContr
    //     synchronous on desktop Linux, so use that.
    // - ChromeOS Ash
    //     Releasing capture on Ash cancels gestures so avoid it.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
-   can_release_capture_ = false;
+   ref->can_release_capture_ = false;
  #endif
-   start_point_in_screen_ = gfx::Point(source_view_offset, mouse_offset.y());
-@@ -1039,7 +1039,7 @@ TabDragController::DragBrowserToNewTabSt
+   ref->start_point_in_screen_ =
+@@ -1051,7 +1051,7 @@ TabDragController::DragBrowserToNewTabSt
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -41,7 +41,7 @@ $NetBSD$
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2088,7 +2088,7 @@ void TabDragController::CompleteDrag() {
+@@ -2103,7 +2103,7 @@ void TabDragController::CompleteDrag() {
        }
  
        // If source window was maximized - maximize the new window as well.
@@ -50,7 +50,7 @@ $NetBSD$
        // Keeping maximized state breaks snap to Grid on Windows when dragging
        // tabs from maximized windows. TODO:(crbug.com/727051) Explore doing this
        // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2559,7 +2559,7 @@ TabDragController::Liveness TabDragContr
+@@ -2533,7 +2533,7 @@ TabDragController::Liveness TabDragContr
    }
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/test/launcher/test_launcher.cc.orig	2024-04-10 21:24:37.312055000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2024-04-15 20:33:42.829027700 +0000
 +++ base/test/launcher/test_launcher.cc
 @@ -69,6 +69,7 @@
  #include "testing/gtest/include/gtest/gtest.h"
@@ -13,7 +13,7 @@ $NetBSD$
  #include <fcntl.h>
  
  #include "base/files/file_descriptor_watcher_posix.h"
-@@ -1798,6 +1799,10 @@ bool TestLauncher::Init(CommandLine* com
+@@ -1797,6 +1798,10 @@ bool TestLauncher::Init(CommandLine* com
    results_tracker_.AddGlobalTag("OS_OPENBSD");
  #endif
  

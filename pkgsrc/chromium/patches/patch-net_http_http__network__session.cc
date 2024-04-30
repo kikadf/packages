@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/http/http_network_session.cc.orig	2024-04-10 21:24:57.445659600 +0000
+--- net/http/http_network_session.cc.orig	2024-04-15 20:34:02.466469800 +0000
 +++ net/http/http_network_session.cc
 @@ -19,7 +19,9 @@
  #include "build/build_config.h"

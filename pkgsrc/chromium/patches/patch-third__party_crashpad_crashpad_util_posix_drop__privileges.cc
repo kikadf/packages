@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/util/posix/drop_privileges.cc.orig	2024-04-10 21:25:18.887368400 +0000
+--- third_party/crashpad/crashpad/util/posix/drop_privileges.cc.orig	2024-04-15 20:34:24.192065500 +0000
 +++ third_party/crashpad/crashpad/util/posix/drop_privileges.cc
 @@ -25,7 +25,7 @@ void DropPrivileges() {
    gid_t gid = getgid();

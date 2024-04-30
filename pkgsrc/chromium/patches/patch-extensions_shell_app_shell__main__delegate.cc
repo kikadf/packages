@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/shell/app/shell_main_delegate.cc.orig	2024-04-10 21:24:53.897377000 +0000
+--- extensions/shell/app/shell_main_delegate.cc.orig	2024-04-15 20:33:59.218231200 +0000
 +++ extensions/shell/app/shell_main_delegate.cc
 @@ -43,7 +43,7 @@
  #if BUILDFLAG(IS_WIN)
@@ -14,8 +14,8 @@ $NetBSD$
  #include "base/nix/xdg_util.h"
  #elif BUILDFLAG(IS_MAC)
  #include "base/base_paths_mac.h"
-@@ -62,7 +62,7 @@ base::FilePath GetDataPath() {
-     return cmd_line->GetSwitchValuePath(switches::kContentShellDataPath);
+@@ -63,7 +63,7 @@ base::FilePath GetDataPath() {
+   }
  
    base::FilePath data_dir;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

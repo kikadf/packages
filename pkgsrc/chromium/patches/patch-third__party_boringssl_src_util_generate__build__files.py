@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/boringssl/src/util/generate_build_files.py.orig	2024-04-10 21:25:33.192508500 +0000
+--- third_party/boringssl/src/util/generate_build_files.py.orig	2024-04-15 20:34:38.313102500 +0000
 +++ third_party/boringssl/src/util/generate_build_files.py
-@@ -798,10 +798,10 @@ def main(platforms):
+@@ -807,10 +807,10 @@ def main(platforms):
    ]
  
    # Generate err_data.c
@@ -20,7 +20,7 @@ $NetBSD$
    crypto_c_files.append('err_data.c')
    crypto_c_files.sort()
  
-@@ -812,11 +812,11 @@ def main(platforms):
+@@ -821,11 +821,11 @@ def main(platforms):
    crypto_test_files = []
    if EMBED_TEST_DATA:
      # Generate crypto_test_data.cc

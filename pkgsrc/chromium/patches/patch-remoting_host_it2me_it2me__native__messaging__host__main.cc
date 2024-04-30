@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2024-04-10 21:24:58.457740300 +0000
+--- remoting/host/it2me/it2me_native_messaging_host_main.cc.orig	2024-04-15 20:34:03.290530400 +0000
 +++ remoting/host/it2me/it2me_native_messaging_host_main.cc
 @@ -30,7 +30,7 @@
  #include "remoting/host/resources.h"

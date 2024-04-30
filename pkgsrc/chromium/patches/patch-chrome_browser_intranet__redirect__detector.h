@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/intranet_redirect_detector.h.orig	2024-04-10 21:24:41.792412300 +0000
+--- chrome/browser/intranet_redirect_detector.h.orig	2024-04-15 20:33:47.313357000 +0000
 +++ chrome/browser/intranet_redirect_detector.h
 @@ -25,7 +25,7 @@ class SimpleURLLoader;
  class PrefRegistrySimple;

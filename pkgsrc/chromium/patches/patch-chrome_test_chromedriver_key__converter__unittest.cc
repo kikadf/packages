@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/test/chromedriver/key_converter_unittest.cc.orig	2024-04-10 21:24:45.156680300 +0000
+--- chrome/test/chromedriver/key_converter_unittest.cc.orig	2024-04-15 20:33:50.761610300 +0000
 +++ chrome/test/chromedriver/key_converter_unittest.cc
 @@ -246,7 +246,7 @@ TEST(KeyConverter, ToggleModifiers) {
    CheckEventsReleaseModifiers(keys, key_events);

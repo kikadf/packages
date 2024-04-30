@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/media/router/discovery/BUILD.gn.orig	2024-04-10 21:24:41.868418500 +0000
+--- chrome/browser/media/router/discovery/BUILD.gn.orig	2024-04-15 20:33:47.393363000 +0000
 +++ chrome/browser/media/router/discovery/BUILD.gn
 @@ -81,7 +81,7 @@ static_library("discovery") {
    ]

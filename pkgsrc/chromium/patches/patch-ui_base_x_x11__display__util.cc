@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_display_util.cc.orig	2024-04-10 21:25:24.743835200 +0000
+--- ui/base/x/x11_display_util.cc.orig	2024-04-15 20:34:29.744473200 +0000
 +++ ui/base/x/x11_display_util.cc
 @@ -14,7 +14,6 @@
  
@@ -21,13 +21,16 @@ $NetBSD$
  #include "ui/gfx/x/atom_cache.h"
  #include "ui/gfx/x/connection.h"
  #include "ui/gfx/x/randr.h"
-@@ -43,86 +41,42 @@ constexpr std::pair<uint32_t, uint32_t> 
+@@ -43,89 +41,42 @@ constexpr std::pair<uint32_t, uint32_t> 
  
  constexpr const char kRandrEdidProperty[] = "EDID";
  
 -std::map<x11::RandR::Output, size_t> GetMonitors(
 -    const x11::Response<x11::RandR::GetMonitorsReply>& reply) {
 -  std::map<x11::RandR::Output, size_t> output_to_monitor;
+-  if (!reply) {
+-    return output_to_monitor;
+-  }
 -  for (size_t monitor = 0; monitor < reply->monitors.size(); monitor++) {
 -    for (x11::RandR::Output output : reply->monitors[monitor].outputs) {
 -      output_to_monitor[output] = monitor;
@@ -129,7 +132,7 @@ $NetBSD$
    };
  
    // If the work area entirely contains exactly one display, assume it's meant
-@@ -204,9 +158,14 @@ int DefaultBitsPerComponent() {
+@@ -207,9 +158,14 @@ int DefaultBitsPerComponent() {
    return visual.bits_per_rgb_value;
  }
  
@@ -147,7 +150,7 @@ $NetBSD$
    std::vector<uint8_t> edid;
    if (response && response->format == 8 && response->type != x11::Atom::None) {
      edid = std::move(response->data);
-@@ -258,8 +217,7 @@ gfx::PointF DisplayOriginPxToDip(const d
+@@ -261,8 +217,7 @@ gfx::PointF DisplayOriginPxToDip(const d
  std::vector<display::Display> GetFallbackDisplayList(
      float scale,
      size_t* primary_display_index_out) {
@@ -157,11 +160,10 @@ $NetBSD$
    gfx::Size physical_size(screen.width_in_millimeters,
                            screen.height_in_millimeters);
  
-@@ -285,10 +243,7 @@ std::vector<display::Display> GetFallbac
- 
+@@ -289,9 +244,7 @@ std::vector<display::Display> GetFallbac
    std::vector<display::Display> displays{gfx_display};
    *primary_display_index_out = 0;
--
+ 
 -  ClipWorkArea(&displays, *primary_display_index_out,
 -               GetWorkAreaSync(GetWorkAreaFuture(connection)));
 -
@@ -169,11 +171,10 @@ $NetBSD$
    return displays;
  }
  
-@@ -303,17 +258,7 @@ std::vector<display::Display> BuildDispl
-   auto& randr = connection->randr();
+@@ -307,16 +260,7 @@ std::vector<display::Display> BuildDispl
    auto x_root_window = ui::GetX11RootWindow();
    std::vector<display::Display> displays;
--
+ 
 -  auto resources_future = randr.GetScreenResourcesCurrent({x_root_window});
 -  auto output_primary_future = randr.GetOutputPrimary({x_root_window});
 -  x11::Future<x11::RandR::GetMonitorsReply> monitors_future;
@@ -188,7 +189,7 @@ $NetBSD$
    if (!resources) {
      LOG(ERROR) << "XRandR returned no displays; falling back to root window";
      return GetFallbackDisplayList(primary_scale, primary_display_index_out);
-@@ -322,65 +267,21 @@ std::vector<display::Display> BuildDispl
+@@ -325,65 +269,21 @@ std::vector<display::Display> BuildDispl
    const int depth = connection->default_screen().root_depth;
    const int bits_per_component = DefaultBitsPerComponent();
  
@@ -259,7 +260,7 @@ $NetBSD$
      if (!output_info) {
        continue;
      }
-@@ -395,16 +296,15 @@ std::vector<display::Display> BuildDispl
+@@ -398,16 +298,15 @@ std::vector<display::Display> BuildDispl
        continue;
      }
  
@@ -281,7 +282,7 @@ $NetBSD$
      auto output_32 = static_cast<uint32_t>(output_id);
      int64_t display_id =
          output_32 > 0xff ? 0 : edid_parser.GetIndexBasedDisplayId(output_32);
-@@ -459,9 +359,8 @@ std::vector<display::Display> BuildDispl
+@@ -462,9 +361,8 @@ std::vector<display::Display> BuildDispl
      }
  
      if (!display::HasForceDisplayColorProfile()) {
@@ -293,7 +294,7 @@ $NetBSD$
        gfx::ColorSpace color_space = icc_profile.GetPrimariesOnlyColorSpace();
  
        // Most folks do not have an ICC profile set up, but we still want to
-@@ -506,24 +405,63 @@ std::vector<display::Display> BuildDispl
+@@ -509,24 +407,63 @@ std::vector<display::Display> BuildDispl
      ConvertDisplayBoundsToDips(&displays, *primary_display_index_out);
    }
  

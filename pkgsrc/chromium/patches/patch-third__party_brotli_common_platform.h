@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/brotli/common/platform.h.orig	2024-04-10 21:25:18.659350400 +0000
+--- third_party/brotli/common/platform.h.orig	2024-04-15 20:34:23.976049400 +0000
 +++ third_party/brotli/common/platform.h
 @@ -28,7 +28,7 @@
  #include <brotli/port.h>

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/threading/platform_thread_internal_posix.cc.orig	2024-04-10 21:24:37.344057800 +0000
+--- base/threading/platform_thread_internal_posix.cc.orig	2024-04-15 20:33:42.857029700 +0000
 +++ base/threading/platform_thread_internal_posix.cc
 @@ -42,7 +42,7 @@ ThreadPriorityForTest NiceValueToThreadP
  }

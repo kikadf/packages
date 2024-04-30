@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics.cc.orig	2024-04-10 21:24:37.224048100 +0000
+--- base/process/process_metrics.cc.orig	2024-04-15 20:33:42.737021000 +0000
 +++ base/process/process_metrics.cc
 @@ -17,7 +17,7 @@ namespace base {
  namespace {
@@ -40,16 +40,11 @@ $NetBSD$
  double ProcessMetrics::GetPlatformIndependentCPUUsage(
      TimeDelta cumulative_cpu) {
    TimeTicks time = TimeTicks::Now();
-@@ -126,7 +125,6 @@ double ProcessMetrics::GetPlatformIndepe
- double ProcessMetrics::GetPlatformIndependentCPUUsage() {
-   return GetPlatformIndependentCPUUsage(GetCumulativeCPUUsage());
+@@ -130,10 +129,9 @@ std::optional<double> ProcessMetrics::Ge
+   }
+   return GetPlatformIndependentCPUUsage(cpu_usage.value());
  }
 -#endif
- 
- #if BUILDFLAG(IS_WIN)
- double ProcessMetrics::GetPreciseCPUUsage(TimeDelta cumulative_cpu) {
-@@ -157,7 +155,7 @@ double ProcessMetrics::GetPreciseCPUUsag
- #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_AIX)

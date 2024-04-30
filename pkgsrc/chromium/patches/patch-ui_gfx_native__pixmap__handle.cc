@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/native_pixmap_handle.cc.orig	2024-04-10 21:25:25.283878300 +0000
+--- ui/gfx/native_pixmap_handle.cc.orig	2024-04-15 20:34:30.296513800 +0000
 +++ ui/gfx/native_pixmap_handle.cc
 @@ -11,7 +11,7 @@
  #include "ui/gfx/buffer_format_util.h"

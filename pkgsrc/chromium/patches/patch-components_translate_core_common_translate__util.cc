@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/translate/core/common/translate_util.cc.orig	2024-04-10 21:24:51.297169700 +0000
+--- components/translate/core/common/translate_util.cc.orig	2024-04-15 20:33:56.874059200 +0000
 +++ components/translate/core/common/translate_util.cc
 @@ -21,7 +21,7 @@ const char kSecurityOrigin[] = "https://
  BASE_FEATURE(kTFLiteLanguageDetectionEnabled,

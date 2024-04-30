@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2024-04-10 21:24:52.225243800 +0000
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2024-04-15 20:33:57.610113100 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
-@@ -224,7 +224,7 @@
+@@ -225,7 +225,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include <sys/resource.h>
  
  #include "components/services/font/public/mojom/font_service.mojom.h"  // nogncheck
-@@ -966,7 +966,7 @@ static constexpr size_t kUnknownPlatform
+@@ -967,7 +967,7 @@ static constexpr size_t kUnknownPlatform
  // to indicate failure and std::numeric_limits<size_t>::max() to indicate
  // unlimited.
  size_t GetPlatformProcessLimit() {
@@ -23,7 +23,7 @@ $NetBSD$
    struct rlimit limit;
    if (getrlimit(RLIMIT_NPROC, &limit) != 0)
      return kUnknownPlatformProcessLimit;
-@@ -1148,7 +1148,7 @@ class RenderProcessHostImpl::IOThreadHos
+@@ -1149,7 +1149,7 @@ class RenderProcessHostImpl::IOThreadHos
    IOThreadHostImpl& operator=(const IOThreadHostImpl& other) = delete;
  
    void SetPid(base::ProcessId child_pid) {
@@ -32,7 +32,7 @@ $NetBSD$
      child_thread_type_switcher_.SetPid(child_pid);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
    }
-@@ -1165,7 +1165,7 @@ class RenderProcessHostImpl::IOThreadHos
+@@ -1166,7 +1166,7 @@ class RenderProcessHostImpl::IOThreadHos
          return;
      }
  
@@ -41,7 +41,7 @@ $NetBSD$
      if (auto font_receiver = receiver.As<font_service::mojom::FontService>()) {
        ConnectToFontService(std::move(font_receiver));
        return;
-@@ -1259,7 +1259,7 @@ class RenderProcessHostImpl::IOThreadHos
+@@ -1260,7 +1260,7 @@ class RenderProcessHostImpl::IOThreadHos
    std::unique_ptr<service_manager::BinderRegistry> binders_;
    mojo::Receiver<mojom::ChildProcessHost> receiver_{this};
  
@@ -50,7 +50,7 @@ $NetBSD$
    mojo::Remote<media::mojom::VideoEncodeAcceleratorProviderFactory>
        video_encode_accelerator_factory_remote_;
    ChildThreadTypeSwitcher child_thread_type_switcher_;
-@@ -3352,7 +3352,7 @@ void RenderProcessHostImpl::AppendRender
+@@ -3353,7 +3353,7 @@ void RenderProcessHostImpl::AppendRender
              base::TimeTicks::UnixEpoch().since_origin().InMicroseconds()));
    }
  

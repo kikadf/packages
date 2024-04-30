@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/gn/build/gen.py.orig	2024-04-10 21:36:21.708190200 +0000
+--- tools/gn/build/gen.py.orig	2024-04-15 20:45:30.000961800 +0000
 +++ tools/gn/build/gen.py
 @@ -94,6 +94,12 @@ class Platform(object):
    def is_solaris(self):
@@ -18,7 +18,7 @@ $NetBSD$
    def is_posix(self):
      return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'serenity']
  
-@@ -293,7 +299,7 @@ def WriteGenericNinja(path, static_libra
+@@ -304,7 +310,7 @@ def WriteGenericNinja(path, static_libra
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',
        'aix': 'build_aix.ninja.template',
@@ -27,7 +27,7 @@ $NetBSD$
        'haiku': 'build_haiku.ninja.template',
        'solaris': 'build_linux.ninja.template',
        'netbsd': 'build_linux.ninja.template',
-@@ -526,6 +532,9 @@ def WriteGNNinja(path, platform, host, o
+@@ -540,6 +546,9 @@ def WriteGNNinja(path, platform, host, o
      if platform.is_posix() and not platform.is_haiku():
        ldflags.append('-pthread')
  

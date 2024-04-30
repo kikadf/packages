@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h.orig	2024-04-10 21:24:41.940424000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h.orig	2024-04-15 20:33:47.457367700 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h
 @@ -28,7 +28,7 @@ class PowerMetricsReporter;
  class ProcessMonitor;

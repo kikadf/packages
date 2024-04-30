@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/font_render_params.h.orig	2024-04-10 21:25:25.255876000 +0000
+--- ui/gfx/font_render_params.h.orig	2024-04-15 20:34:30.028494000 +0000
 +++ ui/gfx/font_render_params.h
-@@ -118,7 +118,7 @@ GFX_EXPORT FontRenderParams GetFontRende
+@@ -115,7 +115,7 @@ GFX_EXPORT FontRenderParams GetFontRende
      const FontRenderParamsQuery& query,
      std::string* family_out);
  
@@ -14,7 +14,7 @@ $NetBSD$
  // Clears GetFontRenderParams()'s cache. Intended to be called by tests that are
  // changing Fontconfig's configuration.
  GFX_EXPORT void ClearFontRenderParamsCacheForTest();
-@@ -128,7 +128,7 @@ GFX_EXPORT void ClearFontRenderParamsCac
+@@ -125,7 +125,7 @@ GFX_EXPORT void ClearFontRenderParamsCac
  GFX_EXPORT float GetFontRenderParamsDeviceScaleFactor();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

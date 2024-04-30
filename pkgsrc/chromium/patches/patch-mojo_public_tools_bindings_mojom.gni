@@ -3,14 +3,19 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- mojo/public/tools/bindings/mojom.gni.orig	2024-04-10 21:24:56.729602600 +0000
+--- mojo/public/tools/bindings/mojom.gni.orig	2024-04-15 20:34:01.758417800 +0000
 +++ mojo/public/tools/bindings/mojom.gni
-@@ -748,6 +748,16 @@ template("mojom") {
+@@ -748,6 +748,21 @@ template("mojom") {
        enabled_features += [ "is_apple" ]
      }
  
 +    if (is_openbsd) {
 +      enabled_features += [ "is_openbsd" ]
++      enabled_features += [ "is_bsd" ]
++    }
++
++    if (is_netbsd) {
++      enabled_features += [ "is_netbsd" ]
 +      enabled_features += [ "is_bsd" ]
 +    }
 +
@@ -21,4 +26,4 @@ $NetBSD$
 +
      action(parser_target_name) {
        allow_remote = true
-       custom_processor = "mojom_parser"
+ 

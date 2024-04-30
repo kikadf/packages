@@ -3,12 +3,12 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-04-10 21:25:24.679830000 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-04-15 20:34:29.684468700 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_non_backed.cc
-@@ -96,7 +96,7 @@ void OSExchangeDataProviderNonBacked::Se
- }
+@@ -99,7 +99,7 @@ void OSExchangeDataProviderNonBacked::Se
  
- bool OSExchangeDataProviderNonBacked::GetString(std::u16string* data) const {
+ std::optional<std::u16string> OSExchangeDataProviderNonBacked::GetString()
+     const {
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (HasFile()) {

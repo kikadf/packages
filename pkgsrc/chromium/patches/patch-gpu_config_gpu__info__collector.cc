@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/config/gpu_info_collector.cc.orig	2024-04-10 21:24:54.157397700 +0000
+--- gpu/config/gpu_info_collector.cc.orig	2024-04-15 20:33:59.458248900 +0000
 +++ gpu/config/gpu_info_collector.cc
 @@ -364,7 +364,7 @@ void ReportWebGPUAdapterMetrics(dawn::na
  void ReportWebGPUSupportMetrics(dawn::native::Instance* instance) {
