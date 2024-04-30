@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			123.0.6312.122
+VERSION=			124.0.6367.60
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -36,7 +36,8 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
-TOOL_DEPENDS+=			yasm-[0-9]*:../../devel/yasm
+#TOOL_DEPENDS+=			yasm-[0-9]*:../../devel/yasm
+TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
@@ -61,11 +62,11 @@ ONLY_FOR_PLATFORM+=		*-*-x86_64
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 # Do not use alloca(3) in libc.
-#BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
-#BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
-#BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
-#BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
-#BUILDLINK_TRANSFORM+=		opt:-std=c++20:-std=gnu++20
+BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
+BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
+BUILDLINK_TRANSFORM+=		opt:-std=c++14:-std=gnu++14
+BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
+BUILDLINK_TRANSFORM+=		opt:-std=c++20:-std=gnu++20
 
 REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
 
@@ -77,15 +78,16 @@ SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
-SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE
+SUBST_FILES.path+=	ui/qt/qt.gni
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR
 
-REPLACE_PYTHON+=	v8/tools/run-paxctl.py
+#REPLACE_PYTHON+=	v8/tools/run-paxctl.py
 
 #.include "../../lang/llvm/version.mk"
 
 CFLAGS+=		-fno-stack-protector
 #CFLAGS+=		-isystem${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/include # third_party/zlib with clang
-CFLAGS+=		-isystem${PREFIX}/lib/clang/16/include # third_party/zlib with clang
+CFLAGS+=		-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
 # Workaround -Wl,-zrelro: 'linker' input unused in bootstrap.py
 CFLAGS+=		-Wno-error=unused-command-line-argument
 
@@ -102,7 +104,6 @@ GN_SYSTEM_LIBS=	dav1d \
 		icu \
 		libaom \
 		libevent \
-		libjpeg \
 		libpng \
 		libvpx \
 		libxml \
@@ -110,7 +111,11 @@ GN_SYSTEM_LIBS=	dav1d \
 		openh264 \
 		opus
 
-GN_ARGS+=	enable_nacl=false \
+#		libjpeg \
+#		use_system_libjpeg=true \
+
+GN_ARGS+=	is_official_build=true \
+		enable_nacl=false \
 		is_cfi=false \
 		optimize_webui=true \
 		enable_remoting=false \
@@ -119,7 +124,6 @@ GN_ARGS+=	enable_nacl=false \
 		use_kerberos=false \
 		use_cups=true \
 		use_system_libdrm=true \
-		use_system_libjpeg=true \
 		use_system_harfbuzz=true \
 		use_system_freetype=true \
 		icu_use_data_file=false \
@@ -194,9 +198,9 @@ GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\" \
 		google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
 
 NOT_PAX_MPROTECT_SAFE+=	bin/chrome
-NOT_PAX_ASLR_SAFE+=	bin/chrome
+#NOT_PAX_ASLR_SAFE+=	bin/chrome
 
-PKGSRC_COMPILER=	clang
+PKGSRC_COMPILER=	ccache clang
 PKG_CC=			clang
 PKG_CXX=		clang++
 
@@ -249,21 +253,21 @@ do-configure:
 		gen --args="${GN_ARGS}" --script-executable="${PYTHONBIN}" ${GN_VERBOSE} out/${BUILDTYPE}
 
 do-build:
-	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} \
-		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
-			mksnapshot
-.if ${OPSYS} == "NetBSD"
-	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/mksnapshot
-.endif
+#	cd ${WRKSRC} && \
+#	${SETENV} ${MAKE_ENV} \
+#		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
+#			mksnapshot
+#.if ${OPSYS} == "NetBSD"
+#	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/mksnapshot
+#.endif
 
-	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} \
-		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
-			v8_context_snapshot_generator
-.if ${OPSYS} == "NetBSD"
-	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/v8_context_snapshot_generator
-.endif
+#	cd ${WRKSRC} && \
+#	${SETENV} ${MAKE_ENV} \
+#		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
+#			v8_context_snapshot_generator
+#.if ${OPSYS} == "NetBSD"
+#	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/v8_context_snapshot_generator
+#.endif
 
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
@@ -352,12 +356,14 @@ do-install:
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
-.include "../../lang/clang/buildlink3.mk"
-.include "../../lang/compiler-rt/buildlink3.mk"
+#.include "../../lang/clang/buildlink3.mk"
+#.include "../../lang/compiler-rt/buildlink3.mk"
+.include "../../wip/clang/buildlink3.mk"
+.include "../../wip/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk" # libjpeg-turbo
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
