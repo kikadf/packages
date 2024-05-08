@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-04-15 20:34:01.150373200 +0000
+--- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-04-30 23:46:59.368067500 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
 @@ -68,7 +68,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
      const base::FilePath dev_path(FILE_PATH_LITERAL(

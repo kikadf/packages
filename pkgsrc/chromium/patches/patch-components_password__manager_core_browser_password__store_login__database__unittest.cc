@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2024-04-15 20:33:55.121930600 +0000
+--- components/password_manager/core/browser/password_store/login_database_unittest.cc.orig	2024-04-30 23:46:52.879366600 +0000
 +++ components/password_manager/core/browser/password_store/login_database_unittest.cc
 @@ -2105,7 +2105,7 @@ INSTANTIATE_TEST_SUITE_P(MigrationToVCur
                           LoginDatabaseMigrationTestBroken,

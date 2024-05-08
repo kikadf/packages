@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_cursor_factory.h.orig	2024-04-15 20:34:29.744473200 +0000
+--- ui/base/x/x11_cursor_factory.h.orig	2024-04-30 23:47:29.095277300 +0000
 +++ ui/base/x/x11_cursor_factory.h
 @@ -20,7 +20,7 @@ namespace ui {
  class X11Cursor;

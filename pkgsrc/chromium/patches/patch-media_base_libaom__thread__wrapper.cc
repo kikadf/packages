@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/base/libaom_thread_wrapper.cc.orig	2024-04-15 20:34:00.974360200 +0000
+--- media/base/libaom_thread_wrapper.cc.orig	2024-04-30 23:46:59.200049200 +0000
 +++ media/base/libaom_thread_wrapper.cc
 @@ -5,17 +5,21 @@
  #include "base/logging.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2024-04-15 20:33:59.018216600 +0000
+--- extensions/browser/api/api_browser_context_keyed_service_factories.cc.orig	2024-04-30 23:46:57.063818700 +0000
 +++ extensions/browser/api/api_browser_context_keyed_service_factories.cc
 @@ -102,7 +102,7 @@ void EnsureApiBrowserContextKeyedService
  #endif

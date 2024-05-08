@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/webstore_private/webstore_private_api.cc.orig	2024-04-15 20:33:47.117342700 +0000
+--- chrome/browser/extensions/api/webstore_private/webstore_private_api.cc.orig	2024-04-30 23:46:45.722594000 +0000
 +++ chrome/browser/extensions/api/webstore_private/webstore_private_api.cc
 @@ -934,7 +934,7 @@ void WebstorePrivateBeginInstallWithMani
  #if BUILDFLAG(IS_CHROMEOS)

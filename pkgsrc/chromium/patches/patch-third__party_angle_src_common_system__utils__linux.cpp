@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/src/common/system_utils_linux.cpp.orig	2024-04-15 20:35:20.404193600 +0000
+--- third_party/angle/src/common/system_utils_linux.cpp.orig	2024-04-30 23:48:20.860866800 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
 @@ -15,8 +15,15 @@
  

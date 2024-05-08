@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/BUILD.gn.orig	2024-04-15 20:34:00.918356200 +0000
+--- media/BUILD.gn.orig	2024-04-30 23:46:59.144043200 +0000
 +++ media/BUILD.gn
 @@ -96,6 +96,9 @@ config("media_config") {
        defines += [ "DLOPEN_PULSEAUDIO" ]

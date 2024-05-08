@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ui_base_features.cc.orig	2024-04-15 20:34:29.736472600 +0000
+--- ui/base/ui_base_features.cc.orig	2024-04-30 23:47:29.087276500 +0000
 +++ ui/base/ui_base_features.cc
-@@ -227,7 +227,7 @@ BASE_FEATURE(kExperimentalFlingAnimation
+@@ -228,7 +228,7 @@ BASE_FEATURE(kExperimentalFlingAnimation
               "ExperimentalFlingAnimation",
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -14,7 +14,7 @@ $NetBSD$
      (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_ASH) && \
       !BUILDFLAG(IS_CHROMEOS_LACROS))
               base::FEATURE_ENABLED_BY_DEFAULT
-@@ -326,7 +326,7 @@ bool IsForcedColorsEnabled() {
+@@ -327,7 +327,7 @@ bool IsForcedColorsEnabled() {
  BASE_FEATURE(kEyeDropper,
               "EyeDropper",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

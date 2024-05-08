@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2024-04-15 20:35:21.224253700 +0000
+--- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2024-04-30 23:48:22.201011700 +0000
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
 @@ -37,6 +37,11 @@ double GetLocalTZA() {
      return 0;

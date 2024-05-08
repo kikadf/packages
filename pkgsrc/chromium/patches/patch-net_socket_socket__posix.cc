@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/socket/socket_posix.cc.orig	2024-04-15 20:34:02.894501200 +0000
+--- net/socket/socket_posix.cc.orig	2024-04-30 23:47:01.076251700 +0000
 +++ net/socket/socket_posix.cc
 @@ -516,7 +516,7 @@ void SocketPosix::ReadCompleted() {
  }

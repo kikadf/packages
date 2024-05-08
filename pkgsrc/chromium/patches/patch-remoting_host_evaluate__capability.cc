@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/evaluate_capability.cc.orig	2024-04-15 20:34:03.262528400 +0000
+--- remoting/host/evaluate_capability.cc.orig	2024-04-30 23:47:01.584306700 +0000
 +++ remoting/host/evaluate_capability.cc
 @@ -55,7 +55,7 @@ base::FilePath BuildHostBinaryPath() {
    }

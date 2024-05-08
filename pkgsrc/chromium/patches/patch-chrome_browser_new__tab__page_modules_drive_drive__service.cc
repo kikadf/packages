@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/new_tab_page/modules/drive/drive_service.cc.orig	2024-04-15 20:33:47.537373500 +0000
+--- chrome/browser/new_tab_page/modules/drive/drive_service.cc.orig	2024-04-30 23:46:46.154640700 +0000
 +++ chrome/browser/new_tab_page/modules/drive/drive_service.cc
 @@ -32,7 +32,7 @@
  #include "services/network/public/cpp/resource_request.h"

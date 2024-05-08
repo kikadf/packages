@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/widevine/cdm/widevine.gni.orig	2024-04-15 20:34:28.396374200 +0000
+--- third_party/widevine/cdm/widevine.gni.orig	2024-04-30 23:47:27.443099000 +0000
 +++ third_party/widevine/cdm/widevine.gni
 @@ -28,6 +28,8 @@ library_widevine_cdm_available =
      (is_chromeos &&

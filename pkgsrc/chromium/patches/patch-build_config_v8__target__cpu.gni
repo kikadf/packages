@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/config/v8_target_cpu.gni.orig	2024-04-15 20:33:43.001040500 +0000
+--- build/config/v8_target_cpu.gni.orig	2024-04-30 23:46:41.222108100 +0000
 +++ build/config/v8_target_cpu.gni
 @@ -36,6 +36,10 @@ declare_args() {
  if (v8_target_cpu == "") {

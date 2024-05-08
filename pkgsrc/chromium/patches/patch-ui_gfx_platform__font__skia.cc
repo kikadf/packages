@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/platform_font_skia.cc.orig	2024-04-15 20:34:30.300514000 +0000
+--- ui/gfx/platform_font_skia.cc.orig	2024-04-30 23:47:29.423312700 +0000
 +++ ui/gfx/platform_font_skia.cc
 @@ -30,7 +30,7 @@
  #include "ui/gfx/system_fonts_win.h"

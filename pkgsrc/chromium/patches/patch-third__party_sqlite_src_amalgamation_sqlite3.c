@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-04-15 20:35:12.503613200 +0000
+--- third_party/sqlite/src/amalgamation/sqlite3.c.orig	2024-04-30 23:48:13.664089700 +0000
 +++ third_party/sqlite/src/amalgamation/sqlite3.c
 @@ -20527,6 +20527,9 @@ SQLITE_PRIVATE int sqlite3HeapNearlyFull
  ** The alloca() routine never returns NULL.  This will cause code paths

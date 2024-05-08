@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/boringssl/src/util/generate_build_files.py.orig	2024-04-15 20:34:38.313102500 +0000
+--- third_party/boringssl/src/util/generate_build_files.py.orig	2024-04-30 23:47:37.948233100 +0000
 +++ third_party/boringssl/src/util/generate_build_files.py
 @@ -807,10 +807,10 @@ def main(platforms):
    ]

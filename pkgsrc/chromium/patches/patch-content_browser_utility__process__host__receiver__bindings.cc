@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/utility_process_host_receiver_bindings.cc.orig	2024-04-15 20:33:57.722121500 +0000
+--- content/browser/utility_process_host_receiver_bindings.cc.orig	2024-04-30 23:46:55.751676800 +0000
 +++ content/browser/utility_process_host_receiver_bindings.cc
 @@ -10,12 +10,12 @@
  #include "content/public/browser/content_browser_client.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-04-15 20:34:30.496528400 +0000
+--- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-04-30 23:47:29.567328200 +0000
 +++ ui/ozone/platform/wayland/ozone_platform_wayland.cc
 @@ -67,13 +67,13 @@
  #include "ui/events/ozone/layout/stub/stub_keyboard_layout_engine.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/config/gpu_finch_features.cc.orig	2024-04-15 20:33:59.458248900 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2024-04-30 23:46:57.519868000 +0000
 +++ gpu/config/gpu_finch_features.cc
 @@ -145,7 +145,7 @@ const base::FeatureParam<std::string>
  BASE_FEATURE(kDefaultEnableGpuRasterization,

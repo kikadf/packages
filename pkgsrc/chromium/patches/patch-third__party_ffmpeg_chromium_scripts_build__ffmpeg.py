@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/chromium/scripts/build_ffmpeg.py.orig	2024-04-15 20:34:38.957149700 +0000
+--- third_party/ffmpeg/chromium/scripts/build_ffmpeg.py.orig	2024-04-30 23:47:39.092356700 +0000
 +++ third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
 @@ -32,7 +32,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'

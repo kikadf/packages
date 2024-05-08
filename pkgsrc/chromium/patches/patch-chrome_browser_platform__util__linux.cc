@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/platform_util_linux.cc.orig	2024-04-15 20:33:47.733388000 +0000
+--- chrome/browser/platform_util_linux.cc.orig	2024-04-30 23:46:46.374664300 +0000
 +++ chrome/browser/platform_util_linux.cc
 @@ -300,7 +300,9 @@ void OnLaunchOptionsCreated(const std::s
    argv.push_back(command);

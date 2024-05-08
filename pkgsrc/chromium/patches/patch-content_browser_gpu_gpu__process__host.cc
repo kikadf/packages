@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/gpu/gpu_process_host.cc.orig	2024-04-15 20:33:57.382096500 +0000
+--- content/browser/gpu/gpu_process_host.cc.orig	2024-04-30 23:46:55.403639300 +0000
 +++ content/browser/gpu/gpu_process_host.cc
 @@ -264,6 +264,7 @@ static const char* const kSwitchNames[] 
      switches::kEnableLowEndDeviceMode,

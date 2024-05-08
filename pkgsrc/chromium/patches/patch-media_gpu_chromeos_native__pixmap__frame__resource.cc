@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/chromeos/native_pixmap_frame_resource.cc.orig	2024-04-15 20:34:01.146373000 +0000
+--- media/gpu/chromeos/native_pixmap_frame_resource.cc.orig	2024-04-30 23:46:59.368067500 +0000
 +++ media/gpu/chromeos/native_pixmap_frame_resource.cc
 @@ -166,7 +166,7 @@ scoped_refptr<NativePixmapFrameResource>
    const bool is_intel_media_compression_enabled =

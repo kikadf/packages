@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/gpu/gpu_main.cc.orig	2024-04-15 20:33:57.810128000 +0000
+--- content/gpu/gpu_main.cc.orig	2024-04-30 23:46:55.839686400 +0000
 +++ content/gpu/gpu_main.cc
 @@ -91,10 +91,14 @@
  #include "sandbox/win/src/sandbox.h"

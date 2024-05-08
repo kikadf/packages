@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/signin/signin_view_controller.cc.orig	2024-04-15 20:33:49.525519600 +0000
+--- chrome/browser/ui/signin/signin_view_controller.cc.orig	2024-04-30 23:46:47.970836600 +0000
 +++ chrome/browser/ui/signin/signin_view_controller.cc
 @@ -255,7 +255,7 @@ void SigninViewController::ShowModalMana
      bool show_link_data_option,

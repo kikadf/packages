@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_path_watcher_kqueue.h.orig	2024-04-15 20:33:42.657015000 +0000
+--- base/files/file_path_watcher_kqueue.h.orig	2024-04-30 23:46:40.874070400 +0000
 +++ base/files/file_path_watcher_kqueue.h
 @@ -5,6 +5,7 @@
  #ifndef BASE_FILES_FILE_PATH_WATCHER_KQUEUE_H_

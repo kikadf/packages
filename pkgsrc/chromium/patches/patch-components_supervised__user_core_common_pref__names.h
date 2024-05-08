@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/supervised_user/core/common/pref_names.h.orig	2024-04-15 20:33:56.318018400 +0000
+--- components/supervised_user/core/common/pref_names.h.orig	2024-04-30 23:46:54.175506600 +0000
 +++ components/supervised_user/core/common/pref_names.h
 @@ -131,7 +131,7 @@ inline constexpr char kFirstTimeIntersti
      "profile.managed.banner_state";

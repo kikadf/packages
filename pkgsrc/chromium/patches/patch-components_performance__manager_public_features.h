@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/performance_manager/public/features.h.orig	2024-04-15 20:33:55.213937300 +0000
+--- components/performance_manager/public/features.h.orig	2024-04-30 23:46:52.971376700 +0000
 +++ components/performance_manager/public/features.h
 @@ -28,7 +28,7 @@ BASE_DECLARE_FEATURE(kRunOnDedicatedThre
  

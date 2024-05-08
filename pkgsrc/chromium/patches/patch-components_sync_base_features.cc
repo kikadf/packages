@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/sync/base/features.cc.orig	2024-04-15 20:33:56.322018600 +0000
+--- components/sync/base/features.cc.orig	2024-04-30 23:46:54.179507300 +0000
 +++ components/sync/base/features.cc
 @@ -126,7 +126,7 @@ BASE_FEATURE(kEnablePreferencesAccountSt
  BASE_FEATURE(kSyncPollImmediatelyOnEveryStartup,

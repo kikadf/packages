@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc.orig	2024-04-15 20:34:25.636171300 +0000
+--- third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc.orig	2024-04-30 23:47:24.630795200 +0000
 +++ third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc
 @@ -25,11 +25,6 @@
  #error "__APPLE__ not supported."

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics.h.orig	2024-04-15 20:33:42.737021000 +0000
+--- base/process/process_metrics.h.orig	2024-04-30 23:46:40.954079200 +0000
 +++ base/process/process_metrics.h
 @@ -38,7 +38,7 @@
  #endif

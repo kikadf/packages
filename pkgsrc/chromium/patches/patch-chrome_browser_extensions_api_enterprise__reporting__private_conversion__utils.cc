@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.cc.orig	2024-04-15 20:33:47.029336200 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.cc.orig	2024-04-30 23:46:45.630584000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/conversion_utils.cc
 @@ -8,7 +8,7 @@
  

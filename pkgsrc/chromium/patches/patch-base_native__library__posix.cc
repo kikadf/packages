@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/native_library_posix.cc.orig	2024-04-15 20:33:42.721019700 +0000
+--- base/native_library_posix.cc.orig	2024-04-30 23:46:40.938077400 +0000
 +++ base/native_library_posix.cc
 @@ -33,7 +33,7 @@ NativeLibrary LoadNativeLibraryWithOptio
    // http://crbug.com/17943, http://crbug.com/17557, http://crbug.com/36892,

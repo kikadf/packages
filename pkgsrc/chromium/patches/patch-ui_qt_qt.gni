@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/qt/qt.gni.orig	2024-04-15 20:34:30.520530200 +0000
+--- ui/qt/qt.gni.orig	2024-04-30 23:47:29.591330800 +0000
 +++ ui/qt/qt.gni
 @@ -14,7 +14,7 @@ declare_args() {
  

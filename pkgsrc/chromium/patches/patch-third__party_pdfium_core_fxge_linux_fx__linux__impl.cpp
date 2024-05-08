@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-04-15 20:35:21.180250600 +0000
+--- third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-04-30 23:48:22.076998200 +0000
 +++ third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 @@ -17,7 +17,7 @@
  #include "core/fxge/fx_font.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/ipc/service/x_util.h.orig	2024-04-15 20:33:59.486251000 +0000
+--- gpu/ipc/service/x_util.h.orig	2024-04-30 23:46:57.547870900 +0000
 +++ gpu/ipc/service/x_util.h
 @@ -12,7 +12,7 @@
  #include "gpu/ipc/service/gpu_config.h"

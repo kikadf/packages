@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- skia/ext/SkMemory_new_handler.cpp.orig	2024-04-15 20:34:03.918576500 +0000
+--- skia/ext/SkMemory_new_handler.cpp.orig	2024-04-30 23:47:02.292383200 +0000
 +++ skia/ext/SkMemory_new_handler.cpp
 @@ -19,7 +19,7 @@
  #include <windows.h>

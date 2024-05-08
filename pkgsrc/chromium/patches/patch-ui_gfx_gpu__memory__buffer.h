@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/gpu_memory_buffer.h.orig	2024-04-15 20:34:30.280512600 +0000
+--- ui/gfx/gpu_memory_buffer.h.orig	2024-04-30 23:47:29.403310500 +0000
 +++ ui/gfx/gpu_memory_buffer.h
 @@ -15,7 +15,7 @@
  #include "ui/gfx/geometry/rect.h"

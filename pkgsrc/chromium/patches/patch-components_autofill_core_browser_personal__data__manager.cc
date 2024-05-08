@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/autofill/core/browser/personal_data_manager.cc.orig	2024-04-15 20:33:53.773831400 +0000
+--- components/autofill/core/browser/personal_data_manager.cc.orig	2024-04-30 23:46:51.555223700 +0000
 +++ components/autofill/core/browser/personal_data_manager.cc
 @@ -1063,7 +1063,8 @@ bool PersonalDataManager::ShouldShowCard
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch

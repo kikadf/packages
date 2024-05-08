@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/permissions/prediction_service/prediction_common.cc.orig	2024-04-15 20:33:55.253940000 +0000
+--- components/permissions/prediction_service/prediction_common.cc.orig	2024-04-30 23:46:53.015381300 +0000
 +++ components/permissions/prediction_service/prediction_common.cc
 @@ -33,7 +33,7 @@ int BucketizeValue(int count) {
  

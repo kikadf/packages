@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/chromoting_host.h.orig	2024-04-15 20:34:03.254527800 +0000
+--- remoting/host/chromoting_host.h.orig	2024-04-30 23:47:01.572305400 +0000
 +++ remoting/host/chromoting_host.h
 @@ -32,7 +32,7 @@
  #include "remoting/protocol/session_manager.h"

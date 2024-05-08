@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/audio/audio_service.cc.orig	2024-04-15 20:33:57.266088000 +0000
+--- content/browser/audio/audio_service.cc.orig	2024-04-30 23:46:55.283626300 +0000
 +++ content/browser/audio/audio_service.cc
 @@ -34,7 +34,7 @@
  #if BUILDFLAG(ENABLE_PASSTHROUGH_AUDIO_CODECS)

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2024-04-15 20:33:47.793392200 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2024-04-30 23:46:46.438671400 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
 @@ -488,18 +488,18 @@
  #endif
@@ -36,7 +36,7 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1715,7 +1715,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1722,7 +1722,7 @@ void RegisterLocalState(PrefRegistrySimp
    registry->RegisterBooleanPref(prefs::kOopPrintDriversAllowedByPolicy, true);
  #endif
  
@@ -45,7 +45,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2060,12 +2060,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2067,12 +2067,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

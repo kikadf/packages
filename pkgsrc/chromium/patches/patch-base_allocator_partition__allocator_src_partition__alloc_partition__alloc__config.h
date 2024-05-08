@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2024-04-15 20:33:42.565008400 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2024-04-30 23:46:40.782060400 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h
 @@ -251,7 +251,7 @@ constexpr bool kUseLazyCommit = false;
  // On these platforms, lock all the partitions before fork(), and unlock after.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/channel_info_posix.cc.orig	2024-04-15 20:33:50.293576000 +0000
+--- chrome/common/channel_info_posix.cc.orig	2024-04-30 23:46:48.850932000 +0000
 +++ chrome/common/channel_info_posix.cc
 @@ -92,7 +92,7 @@ std::string GetChannelSuffixForDataDir()
    }

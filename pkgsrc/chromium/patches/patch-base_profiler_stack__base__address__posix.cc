@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/stack_base_address_posix.cc.orig	2024-04-15 20:33:42.745021600 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2024-04-30 23:46:40.962080000 +0000
 +++ base/profiler/stack_base_address_posix.cc
 @@ -17,6 +17,14 @@
  #include "base/files/scoped_file.h"

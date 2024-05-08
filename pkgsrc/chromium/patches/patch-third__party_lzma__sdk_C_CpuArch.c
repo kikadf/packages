@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/lzma_sdk/C/CpuArch.c.orig	2024-04-15 20:34:25.616170000 +0000
+--- third_party/lzma_sdk/C/CpuArch.c.orig	2024-04-30 23:47:24.614793500 +0000
 +++ third_party/lzma_sdk/C/CpuArch.c
 @@ -412,12 +412,40 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
  BoolInt CPU_IsSupported_SHA2(void) { return APPLE_CRYPTO_SUPPORT_VAL; }

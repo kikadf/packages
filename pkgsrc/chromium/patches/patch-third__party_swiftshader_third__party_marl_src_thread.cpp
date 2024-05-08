@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/swiftshader/third_party/marl/src/thread.cpp.orig	2024-04-15 20:34:52.322131200 +0000
+--- third_party/swiftshader/third_party/marl/src/thread.cpp.orig	2024-04-30 23:48:19.604731300 +0000
 +++ third_party/swiftshader/third_party/marl/src/thread.cpp
 @@ -46,6 +46,9 @@
  #include <unistd.h>

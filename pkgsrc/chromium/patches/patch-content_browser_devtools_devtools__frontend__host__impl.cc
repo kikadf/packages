@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2024-04-15 20:33:57.326092200 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2024-04-30 23:46:55.347633400 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.cc
 @@ -22,7 +22,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"

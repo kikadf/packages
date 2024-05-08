@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/common/features.cc.orig	2024-04-15 20:34:30.444524500 +0000
+--- ui/ozone/common/features.cc.orig	2024-04-30 23:47:29.515322700 +0000
 +++ ui/ozone/common/features.cc
 @@ -30,7 +30,7 @@ BASE_FEATURE(kWaylandSurfaceSubmissionIn
  // enabled.

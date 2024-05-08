@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/public/browser/service_process_host.cc.orig	2024-04-15 20:33:57.886133400 +0000
+--- content/public/browser/service_process_host.cc.orig	2024-04-30 23:46:55.919695100 +0000
 +++ content/public/browser/service_process_host.cc
 @@ -76,7 +76,7 @@ ServiceProcessHost::Options& ServiceProc
  

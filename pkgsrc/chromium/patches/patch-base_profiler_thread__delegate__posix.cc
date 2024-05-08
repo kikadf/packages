@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/thread_delegate_posix.cc.orig	2024-04-15 20:33:42.749021800 +0000
+--- base/profiler/thread_delegate_posix.cc.orig	2024-04-30 23:46:40.966080400 +0000
 +++ base/profiler/thread_delegate_posix.cc
 @@ -14,7 +14,7 @@
  #include "base/process/process_handle.h"

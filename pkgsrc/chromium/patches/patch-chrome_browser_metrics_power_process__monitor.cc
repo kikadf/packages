@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/power/process_monitor.cc.orig	2024-04-15 20:33:47.473369000 +0000
+--- chrome/browser/metrics/power/process_monitor.cc.orig	2024-04-30 23:46:46.086633200 +0000
 +++ chrome/browser/metrics/power/process_monitor.cc
 @@ -61,7 +61,7 @@ ProcessMonitor::Metrics SampleMetrics(ba
    metrics.cpu_usage = process_metrics.GetPlatformIndependentCPUUsage();

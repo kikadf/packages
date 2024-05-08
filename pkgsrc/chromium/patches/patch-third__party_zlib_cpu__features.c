@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/zlib/cpu_features.c.orig	2024-04-15 20:34:28.536384300 +0000
+--- third_party/zlib/cpu_features.c.orig	2024-04-30 23:47:27.583114000 +0000
 +++ third_party/zlib/cpu_features.c
 @@ -39,7 +39,8 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #ifndef CPU_NO_SIMD

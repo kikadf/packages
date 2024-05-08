@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/geolocation/location_arbitrator.cc.orig	2024-04-15 20:34:03.514546900 +0000
+--- services/device/geolocation/location_arbitrator.cc.orig	2024-04-30 23:47:01.844334800 +0000
 +++ services/device/geolocation/location_arbitrator.cc
 @@ -196,7 +196,7 @@ LocationArbitrator::NewNetworkLocationPr
  

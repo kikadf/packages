@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_list.h.orig	2024-04-15 20:33:54.597892000 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2024-04-30 23:46:52.323306800 +0000
 +++ components/feature_engagement/public/feature_list.h
 @@ -266,7 +266,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSOverflowMe
  #endif  // BUILDFLAG(IS_IOS)

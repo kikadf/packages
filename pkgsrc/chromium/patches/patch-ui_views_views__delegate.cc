@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/views_delegate.cc.orig	2024-04-15 20:34:30.692542800 +0000
+--- ui/views/views_delegate.cc.orig	2024-04-30 23:47:29.759349000 +0000
 +++ ui/views/views_delegate.cc
 @@ -95,7 +95,7 @@ bool ViewsDelegate::IsWindowInMetro(gfx:
    return false;

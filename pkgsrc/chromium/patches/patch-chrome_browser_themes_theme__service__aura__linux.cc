@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/themes/theme_service_aura_linux.cc.orig	2024-04-15 20:33:48.837468900 +0000
+--- chrome/browser/themes/theme_service_aura_linux.cc.orig	2024-04-30 23:46:47.398774900 +0000
 +++ chrome/browser/themes/theme_service_aura_linux.cc
 @@ -24,7 +24,7 @@ namespace {
  ui::SystemTheme ValidateSystemTheme(ui::SystemTheme system_theme) {

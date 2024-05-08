@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/browser_process_impl.cc.orig	2024-04-15 20:33:46.669309600 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2024-04-30 23:46:45.258544000 +0000
 +++ chrome/browser/browser_process_impl.cc
 @@ -220,7 +220,7 @@
  #include "chrome/browser/ui/profiles/profile_picker.h"

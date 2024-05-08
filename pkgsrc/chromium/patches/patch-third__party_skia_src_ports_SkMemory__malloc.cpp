@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/skia/src/ports/SkMemory_malloc.cpp.orig	2024-04-15 20:34:48.997887100 +0000
+--- third_party/skia/src/ports/SkMemory_malloc.cpp.orig	2024-04-30 23:48:04.391088500 +0000
 +++ third_party/skia/src/ports/SkMemory_malloc.cpp
 @@ -15,7 +15,8 @@
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/protoc_wrapper/protoc_wrapper.py.orig	2024-04-15 20:34:29.396447700 +0000
+--- tools/protoc_wrapper/protoc_wrapper.py.orig	2024-04-30 23:47:28.547218000 +0000
 +++ tools/protoc_wrapper/protoc_wrapper.py
 @@ -179,15 +179,19 @@ def main(argv):
      if not options.exclude_imports:

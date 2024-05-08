@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2024-04-15 20:33:47.765390200 +0000
+--- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2024-04-30 23:46:46.406668000 +0000
 +++ chrome/browser/policy/policy_value_and_status_aggregator.cc
 @@ -53,7 +53,7 @@
  #include "chrome/browser/policy/value_provider/extension_policies_value_provider.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/gn/bootstrap/bootstrap.py.orig	2024-04-15 20:34:28.716397500 +0000
+--- tools/gn/bootstrap/bootstrap.py.orig	2024-04-30 23:47:27.991158000 +0000
 +++ tools/gn/bootstrap/bootstrap.py
 @@ -122,7 +122,7 @@ def main(argv):
  

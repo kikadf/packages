@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/libavcodec/x86/cabac.h.orig	2024-04-15 20:34:39.729206300 +0000
+--- third_party/ffmpeg/libavcodec/x86/cabac.h.orig	2024-04-30 23:47:52.593814600 +0000
 +++ third_party/ffmpeg/libavcodec/x86/cabac.h
 @@ -31,7 +31,8 @@
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/filter/zstd_source_stream.cc.orig	2024-04-15 20:34:02.442468200 +0000
+--- net/filter/zstd_source_stream.cc.orig	2024-04-30 23:47:00.652206000 +0000
 +++ net/filter/zstd_source_stream.cc
 @@ -7,6 +7,7 @@
  #include <algorithm>

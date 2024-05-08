@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/service/display/skia_renderer.cc.orig	2024-04-15 20:33:57.070073600 +0000
+--- components/viz/service/display/skia_renderer.cc.orig	2024-04-30 23:46:54.915586700 +0000
 +++ components/viz/service/display/skia_renderer.cc
 @@ -1448,7 +1448,7 @@ void SkiaRenderer::ClearFramebuffer() {
    if (current_frame()->current_render_pass->has_transparent_background) {

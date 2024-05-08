@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/content_settings/core/browser/website_settings_registry.cc.orig	2024-04-15 20:33:54.081854000 +0000
+--- components/content_settings/core/browser/website_settings_registry.cc.orig	2024-04-30 23:46:51.875258400 +0000
 +++ components/content_settings/core/browser/website_settings_registry.cc
 @@ -67,7 +67,7 @@ const WebsiteSettingsInfo* WebsiteSettin
  #if BUILDFLAG(IS_WIN)

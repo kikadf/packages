@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/base/platform/memory.h.orig	2024-04-15 20:35:27.084684100 +0000
+--- v8/src/base/platform/memory.h.orig	2024-04-30 23:48:29.349783400 +0000
 +++ v8/src/base/platform/memory.h
 @@ -19,11 +19,11 @@
  

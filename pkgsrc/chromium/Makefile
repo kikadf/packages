@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			124.0.6367.60
+VERSION=			124.0.6367.118
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -56,10 +56,10 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 #ONLY_FOR_PLATFORM+=		*-*-arm # not yet
 #ONLY_FOR_PLATFORM+=		*-*-aarch64 # not yet
 #ONLY_FOR_PLATFORM+=		*-*-i386 # not yet
-ONLY_FOR_PLATFORM+=		*-*-x86_64
+ONLY_FOR_PLATFORM+=		NetBSD-*-x86_64
 
 # Workaround for brotli and other commands.
-BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+#BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 # Do not use alloca(3) in libc.
 BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-04-15 20:33:59.446248000 +0000
+--- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-04-30 23:46:57.507866600 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
 @@ -1255,7 +1255,7 @@ void WebGPUDecoderImpl::RequestAdapterIm
      force_fallback_adapter = true;

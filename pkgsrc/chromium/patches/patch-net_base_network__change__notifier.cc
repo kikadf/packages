@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/base/network_change_notifier.cc.orig	2024-04-15 20:34:02.146446500 +0000
+--- net/base/network_change_notifier.cc.orig	2024-04-30 23:47:00.344172700 +0000
 +++ net/base/network_change_notifier.cc
 @@ -37,7 +37,7 @@
  #include "net/base/network_change_notifier_linux.h"

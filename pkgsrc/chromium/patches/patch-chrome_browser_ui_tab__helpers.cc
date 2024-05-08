@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/tab_helpers.cc.orig	2024-04-15 20:33:49.541520600 +0000
+--- chrome/browser/ui/tab_helpers.cc.orig	2024-04-30 23:46:47.982838000 +0000
 +++ chrome/browser/ui/tab_helpers.cc
 @@ -233,7 +233,7 @@
  #endif

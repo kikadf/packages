@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/features/password_features.h.orig	2024-04-15 20:33:55.089928200 +0000
+--- components/password_manager/core/browser/features/password_features.h.orig	2024-04-30 23:46:52.843362800 +0000
 +++ components/password_manager/core/browser/features/password_features.h
 @@ -94,7 +94,7 @@ BASE_DECLARE_FEATURE(kPasswordManagerLog
  // Enables triggering password suggestions through the context menu.

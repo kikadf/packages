@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/power/process_metrics_recorder_util.cc.orig	2024-04-15 20:33:47.473369000 +0000
+--- chrome/browser/metrics/power/process_metrics_recorder_util.cc.orig	2024-04-30 23:46:46.086633200 +0000
 +++ chrome/browser/metrics/power/process_metrics_recorder_util.cc
 @@ -65,7 +65,7 @@ void RecordProcessHistograms(const char*
                               const ProcessMonitor::Metrics& metrics) {

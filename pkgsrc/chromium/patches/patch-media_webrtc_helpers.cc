@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/webrtc/helpers.cc.orig	2024-04-15 20:34:01.650410000 +0000
+--- media/webrtc/helpers.cc.orig	2024-04-30 23:46:59.848119300 +0000
 +++ media/webrtc/helpers.cc
 @@ -41,14 +41,14 @@ void ConfigAutomaticGainControl(const Au
      return;

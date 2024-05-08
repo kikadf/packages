@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/tools/run.py.orig	2024-04-15 20:35:29.192839000 +0000
+--- v8/tools/run.py.orig	2024-04-30 23:48:36.142517000 +0000
 +++ v8/tools/run.py
 @@ -9,7 +9,7 @@ scripts."""
  import subprocess

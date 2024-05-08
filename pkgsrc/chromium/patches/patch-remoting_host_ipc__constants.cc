@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/ipc_constants.cc.orig	2024-04-15 20:34:03.286530000 +0000
+--- remoting/host/ipc_constants.cc.orig	2024-04-30 23:47:01.608309300 +0000
 +++ remoting/host/ipc_constants.cc
 @@ -17,7 +17,7 @@ namespace remoting {
  

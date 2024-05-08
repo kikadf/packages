@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2024-04-15 20:33:47.401363600 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_posix.cc.orig	2024-04-30 23:46:46.010625100 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_posix.cc
 @@ -5,11 +5,12 @@
  #include "chrome/browser/media/router/discovery/discovery_network_list.h"

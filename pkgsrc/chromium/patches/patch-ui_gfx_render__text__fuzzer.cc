@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/render_text_fuzzer.cc.orig	2024-04-15 20:34:30.300514000 +0000
+--- ui/gfx/render_text_fuzzer.cc.orig	2024-04-30 23:47:29.427313000 +0000
 +++ ui/gfx/render_text_fuzzer.cc
 @@ -14,7 +14,7 @@
  #include "ui/gfx/font_util.h"

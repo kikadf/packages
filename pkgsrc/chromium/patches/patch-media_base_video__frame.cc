@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/base/video_frame.cc.orig	2024-04-15 20:34:00.994361600 +0000
+--- media/base/video_frame.cc.orig	2024-04-30 23:46:59.220051500 +0000
 +++ media/base/video_frame.cc
 @@ -80,7 +80,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";

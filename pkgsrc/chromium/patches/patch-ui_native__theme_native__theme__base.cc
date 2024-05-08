@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/native_theme/native_theme_base.cc.orig	2024-04-15 20:34:30.440524300 +0000
+--- ui/native_theme/native_theme_base.cc.orig	2024-04-30 23:47:29.511322300 +0000
 +++ ui/native_theme/native_theme_base.cc
 @@ -235,7 +235,7 @@ void NativeThemeBase::Paint(cc::PaintCan
        break;

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/util/misc/address_types.h.orig	2024-04-15 20:34:24.184064900 +0000
+--- third_party/crashpad/crashpad/util/misc/address_types.h.orig	2024-04-30 23:47:23.342656100 +0000
 +++ third_party/crashpad/crashpad/util/misc/address_types.h
 @@ -25,7 +25,7 @@
  #include <mach/mach_types.h>

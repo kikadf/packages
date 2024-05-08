@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- sandbox/policy/netbsd/sandbox_netbsd.cc.orig	2024-04-30 14:42:42.225193455 +0000
+--- sandbox/policy/netbsd/sandbox_netbsd.cc.orig	2024-05-07 14:42:07.357594944 +0000
 +++ sandbox/policy/netbsd/sandbox_netbsd.cc
 @@ -0,0 +1,245 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/system/sys_info_unittest.cc.orig	2024-04-15 20:33:42.769023400 +0000
+--- base/system/sys_info_unittest.cc.orig	2024-04-30 23:46:40.990083000 +0000
 +++ base/system/sys_info_unittest.cc
 @@ -264,12 +264,16 @@ TEST_F(SysInfoTest, GetHardwareInfo) {
    EXPECT_TRUE(IsStringUTF8(hardware_info->model));

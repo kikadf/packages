@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/socket/udp_socket_unittest.cc.orig	2024-04-15 20:34:02.958506000 +0000
+--- net/socket/udp_socket_unittest.cc.orig	2024-04-30 23:47:01.092253700 +0000
 +++ net/socket/udp_socket_unittest.cc
 @@ -358,7 +358,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);

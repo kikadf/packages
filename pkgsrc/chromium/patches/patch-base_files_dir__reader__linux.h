@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/dir_reader_linux.h.orig	2024-04-15 20:33:42.653015000 +0000
+--- base/files/dir_reader_linux.h.orig	2024-04-30 23:46:40.874070400 +0000
 +++ base/files/dir_reader_linux.h
 @@ -16,10 +16,16 @@
  #include "base/logging.h"

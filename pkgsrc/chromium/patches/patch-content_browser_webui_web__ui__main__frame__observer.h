@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-04-15 20:33:57.766124700 +0000
+--- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-04-30 23:46:55.795681700 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.h
 @@ -44,7 +44,7 @@ class CONTENT_EXPORT WebUIMainFrameObser
  

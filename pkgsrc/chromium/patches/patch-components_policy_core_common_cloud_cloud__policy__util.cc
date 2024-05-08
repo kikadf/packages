@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2024-04-15 20:33:55.281942100 +0000
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2024-04-30 23:46:53.043384600 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
 @@ -20,7 +20,7 @@
  #endif

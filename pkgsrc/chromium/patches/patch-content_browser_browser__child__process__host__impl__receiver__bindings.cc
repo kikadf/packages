@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2024-04-15 20:33:57.290089600 +0000
+--- content/browser/browser_child_process_host_impl_receiver_bindings.cc.orig	2024-04-30 23:46:55.307628900 +0000
 +++ content/browser/browser_child_process_host_impl_receiver_bindings.cc
 @@ -62,7 +62,7 @@ void BrowserChildProcessHostImpl::BindHo
      }

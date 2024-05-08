@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2024-04-15 20:33:55.785979300 +0000
+--- components/safe_browsing/content/common/file_type_policies_unittest.cc.orig	2024-04-30 23:46:53.591443500 +0000
 +++ components/safe_browsing/content/common/file_type_policies_unittest.cc
 @@ -139,7 +139,7 @@ TEST_F(FileTypePoliciesTest, UnpackResou
    EXPECT_EQ(DownloadFileType::FULL_PING, file_type.ping_setting());

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/BUILD.gn.orig	2024-04-15 20:33:46.981332500 +0000
+--- chrome/browser/extensions/BUILD.gn.orig	2024-04-30 23:46:45.582579000 +0000
 +++ chrome/browser/extensions/BUILD.gn
 @@ -1384,6 +1384,10 @@ static_library("extensions") {
      deps += [ "//chrome/services/printing/public/mojom" ]

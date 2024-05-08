@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_handle.cc.orig	2024-04-15 20:33:42.733020500 +0000
+--- base/process/process_handle.cc.orig	2024-04-30 23:46:40.954079200 +0000
 +++ base/process/process_handle.cc
 @@ -30,7 +30,7 @@ UniqueProcId GetUniqueIdForProcess() {
               : UniqueProcId(GetCurrentProcId());

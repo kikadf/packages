@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-04-15 20:33:57.622114200 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-04-30 23:46:55.651666200 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -119,7 +119,7 @@
  #include "ui/gfx/gdi_util.h"

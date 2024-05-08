@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/base/event_fd.cc.orig	2024-04-15 20:35:14.359749600 +0000
+--- third_party/perfetto/src/base/event_fd.cc.orig	2024-04-30 23:48:19.464716200 +0000
 +++ third_party/perfetto/src/base/event_fd.cc
 @@ -22,7 +22,8 @@
  #if PERFETTO_BUILDFLAG(PERFETTO_OS_WIN)

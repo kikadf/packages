@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/font_list_unittest.cc.orig	2024-04-15 20:33:57.790126300 +0000
+--- content/common/font_list_unittest.cc.orig	2024-04-30 23:46:55.819684300 +0000
 +++ content/common/font_list_unittest.cc
 @@ -47,7 +47,7 @@ TEST(FontList, GetFontList) {
          EXPECT_TRUE(HasFontWithName(fonts, "MS Gothic", "MS Gothic"));

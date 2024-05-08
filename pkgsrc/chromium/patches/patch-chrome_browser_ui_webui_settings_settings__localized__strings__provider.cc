@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2024-04-15 20:33:50.069559300 +0000
+--- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2024-04-30 23:46:48.462890000 +0000
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
 @@ -138,7 +138,7 @@
  #include "ash/webui/settings/public/constants/routes.mojom.h"

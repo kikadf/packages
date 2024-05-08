@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/hung_renderer_view.cc.orig	2024-04-15 20:33:49.689531600 +0000
+--- chrome/browser/ui/views/hung_renderer_view.cc.orig	2024-04-30 23:46:48.118852600 +0000
 +++ chrome/browser/ui/views/hung_renderer_view.cc
 @@ -406,7 +406,7 @@ void HungRendererDialogView::ForceCrashH
    content::RenderProcessHost* rph =

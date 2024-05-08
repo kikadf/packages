@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2024-04-15 20:33:50.229571000 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.h.orig	2024-04-30 23:46:48.782924400 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.h
 @@ -38,7 +38,7 @@ class ShellLinkItem;
  

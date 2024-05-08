@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/url_request/url_request_context.h.orig	2024-04-15 20:34:03.018510300 +0000
+--- net/url_request/url_request_context.h.orig	2024-04-30 23:47:01.152260000 +0000
 +++ net/url_request/url_request_context.h
 @@ -85,7 +85,7 @@ class NET_EXPORT URLRequestContext final
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is

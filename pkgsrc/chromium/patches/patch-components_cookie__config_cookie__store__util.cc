@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/cookie_config/cookie_store_util.cc.orig	2024-04-15 20:33:54.093855000 +0000
+--- components/cookie_config/cookie_store_util.cc.orig	2024-04-30 23:46:51.883259300 +0000
 +++ components/cookie_config/cookie_store_util.cc
 @@ -12,7 +12,7 @@
  namespace cookie_config {

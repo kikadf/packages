@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2024-04-15 20:34:06.170741800 +0000
+--- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2024-04-30 23:47:04.492620700 +0000
 +++ third_party/blink/renderer/core/paint/paint_layer.cc
 @@ -122,7 +122,7 @@ namespace blink {
  

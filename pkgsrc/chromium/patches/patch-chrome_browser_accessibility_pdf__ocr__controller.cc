@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/accessibility/pdf_ocr_controller.cc.orig	2024-04-15 20:33:45.669236200 +0000
+--- chrome/browser/accessibility/pdf_ocr_controller.cc.orig	2024-04-30 23:46:44.234433200 +0000
 +++ chrome/browser/accessibility/pdf_ocr_controller.cc
 @@ -111,7 +111,7 @@ void AnnounceToScreenReader(const int me
  // TODO(crbug.com/1442928): Sending announcements results in a failure in

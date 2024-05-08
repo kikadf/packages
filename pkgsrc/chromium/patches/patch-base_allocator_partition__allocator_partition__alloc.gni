@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2024-04-15 20:33:42.541006600 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2024-04-30 23:46:40.758057800 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
 @@ -33,7 +33,7 @@ if (is_nacl) {
  use_large_empty_slot_span_ring = is_mac

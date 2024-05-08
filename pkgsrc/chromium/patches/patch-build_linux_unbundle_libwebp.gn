@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/linux/unbundle/libwebp.gn.orig	2024-04-15 20:33:43.017041400 +0000
+--- build/linux/unbundle/libwebp.gn.orig	2024-04-30 23:46:41.242110300 +0000
 +++ build/linux/unbundle/libwebp.gn
 @@ -22,6 +22,8 @@ shim_headers("libwebp_shim") {
      "webp/mux.h",

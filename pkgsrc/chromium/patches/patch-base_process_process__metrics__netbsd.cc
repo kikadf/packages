@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_netbsd.cc.orig	2024-04-30 14:42:41.145041354 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2024-05-07 14:42:03.645359814 +0000
 +++ base/process/process_metrics_netbsd.cc
-@@ -0,0 +1,175 @@
+@@ -0,0 +1,174 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -21,7 +21,6 @@ $NetBSD$
 +#include <optional>
 +
 +#include "base/memory/ptr_util.h"
-+#include "base/process/process_metrics_iocounters.h"
 +#include "base/values.h"
 +#include "base/notreached.h"
 +

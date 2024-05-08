@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/base/mock_network_change_notifier.cc.orig	2024-04-15 20:34:02.146446500 +0000
+--- net/base/mock_network_change_notifier.cc.orig	2024-04-30 23:47:00.340172300 +0000
 +++ net/base/mock_network_change_notifier.cc
 @@ -103,7 +103,7 @@ MockNetworkChangeNotifier::GetCurrentCon
    return connection_cost_;

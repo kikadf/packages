@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ipcz/src/standalone/base/logging.cc.orig	2024-04-15 20:34:25.004125000 +0000
+--- third_party/ipcz/src/standalone/base/logging.cc.orig	2024-04-30 23:47:24.194748200 +0000
 +++ third_party/ipcz/src/standalone/base/logging.cc
 @@ -50,6 +50,9 @@ LogMessage::LogMessage(const char* file,
  #elif BUILDFLAG(IS_ANDROID)

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/zygote/BUILD.gn.orig	2024-04-15 20:33:58.570183800 +0000
+--- content/zygote/BUILD.gn.orig	2024-04-30 23:46:56.607769300 +0000
 +++ content/zygote/BUILD.gn
 @@ -5,7 +5,7 @@
  import("//build/config/nacl/config.gni")

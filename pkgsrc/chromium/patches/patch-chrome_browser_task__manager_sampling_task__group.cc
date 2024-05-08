@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/task_manager/sampling/task_group.cc.orig	2024-04-15 20:33:48.829468500 +0000
+--- chrome/browser/task_manager/sampling/task_group.cc.orig	2024-04-30 23:46:47.386773600 +0000
 +++ chrome/browser/task_manager/sampling/task_group.cc
 @@ -38,7 +38,7 @@ const int kBackgroundRefreshTypesMask =
  #if BUILDFLAG(IS_WIN)

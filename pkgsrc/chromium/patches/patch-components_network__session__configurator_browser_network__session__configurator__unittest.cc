@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/network_session_configurator/browser/network_session_configurator_unittest.cc.orig	2024-04-15 20:33:54.889913600 +0000
+--- components/network_session_configurator/browser/network_session_configurator_unittest.cc.orig	2024-04-30 23:46:52.623339200 +0000
 +++ components/network_session_configurator/browser/network_session_configurator_unittest.cc
 @@ -781,7 +781,7 @@ TEST_F(NetworkSessionConfiguratorTest, H
  

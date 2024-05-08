@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2024-04-15 20:33:57.974140000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2024-04-30 23:46:56.011705000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
 @@ -115,7 +115,7 @@
  

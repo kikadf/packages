@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/app/content_main_runner_impl.cc.orig	2024-04-15 20:33:57.198083000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2024-04-30 23:46:55.215619000 +0000
 +++ content/app/content_main_runner_impl.cc
 @@ -143,13 +143,13 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"

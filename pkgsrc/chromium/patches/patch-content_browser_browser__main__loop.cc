@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/browser_main_loop.cc.orig	2024-04-15 20:33:57.290089600 +0000
+--- content/browser/browser_main_loop.cc.orig	2024-04-30 23:46:55.311629300 +0000
 +++ content/browser/browser_main_loop.cc
 @@ -251,6 +251,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"

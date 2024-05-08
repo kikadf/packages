@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/features.h.orig	2024-04-15 20:33:57.786126100 +0000
+--- content/common/features.h.orig	2024-04-30 23:46:55.819684300 +0000
 +++ content/common/features.h
 @@ -38,7 +38,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);

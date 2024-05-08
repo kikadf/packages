@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/password_manager/password_reuse_manager_factory.cc.orig	2024-04-15 20:33:47.693385000 +0000
+--- chrome/browser/password_manager/password_reuse_manager_factory.cc.orig	2024-04-30 23:46:46.330659600 +0000
 +++ chrome/browser/password_manager/password_reuse_manager_factory.cc
 @@ -137,7 +137,7 @@ PasswordReuseManagerFactory::BuildServic
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch

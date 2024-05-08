@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/device_signals/core/browser/mock_signals_aggregator.h.orig	2024-04-15 20:33:54.425879500 +0000
+--- components/device_signals/core/browser/mock_signals_aggregator.h.orig	2024-04-30 23:46:51.963267800 +0000
 +++ components/device_signals/core/browser/mock_signals_aggregator.h
 @@ -17,7 +17,7 @@ class MockSignalsAggregator : public Sig
    MockSignalsAggregator();

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/media/cdm_registration.cc.orig	2024-04-15 20:33:50.337579000 +0000
+--- chrome/common/media/cdm_registration.cc.orig	2024-04-30 23:46:48.890936100 +0000
 +++ chrome/common/media/cdm_registration.cc
 @@ -26,11 +26,11 @@
  

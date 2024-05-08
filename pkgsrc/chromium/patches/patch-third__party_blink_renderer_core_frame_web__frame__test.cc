@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2024-04-15 20:34:05.846718000 +0000
+--- third_party/blink/renderer/core/frame/web_frame_test.cc.orig	2024-04-30 23:47:04.164585400 +0000
 +++ third_party/blink/renderer/core/frame/web_frame_test.cc
 @@ -6469,7 +6469,7 @@ TEST_F(WebFrameTest, DISABLED_PositionFo
  }

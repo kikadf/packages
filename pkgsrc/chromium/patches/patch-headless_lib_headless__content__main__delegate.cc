@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- headless/lib/headless_content_main_delegate.cc.orig	2024-04-15 20:33:59.502252000 +0000
+--- headless/lib/headless_content_main_delegate.cc.orig	2024-04-30 23:46:57.563872600 +0000
 +++ headless/lib/headless_content_main_delegate.cc
 @@ -362,7 +362,7 @@ void HeadlessContentMainDelegate::InitCr
    if (process_type != ::switches::kZygoteProcess) {

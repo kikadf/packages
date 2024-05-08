@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-04-15 20:34:30.488527800 +0000
+--- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-04-30 23:47:29.559327400 +0000
 +++ ui/ozone/platform/wayland/host/wayland_window.h
 @@ -40,7 +40,7 @@
  #include "ui/platform_window/platform_window_init_properties.h"

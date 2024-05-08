@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_handle_netbsd.cc.orig	2024-04-30 14:42:41.138151092 +0000
+--- base/process/process_handle_netbsd.cc.orig	2024-05-07 14:42:03.632807096 +0000
 +++ base/process/process_handle_netbsd.cc
 @@ -0,0 +1,73 @@
 +// Copyright 2011 The Chromium Authors
@@ -34,7 +34,7 @@ $NetBSD$
 +
 +  info = (struct kinfo_proc2 *)malloc(length);
 +
-+  mib[5] = (length / sizeof(struct kinfo_proc2));
++  mib[5] = static_cast<int>((length / sizeof(struct kinfo_proc2)));
 +
 +  if (sysctl(mib, std::size(mib), info, &length, NULL, 0) < 0) {
 +    ppid = -1;
@@ -60,7 +60,7 @@ $NetBSD$
 +
 +  info = (struct kinfo_proc2 *)malloc(length);
 +
-+  mib[5] = (length / sizeof(struct kinfo_proc2));
++  mib[5] = static_cast<int>((length / sizeof(struct kinfo_proc2)));
 +
 +  if (sysctl(mib, std::size(mib), info, &length, NULL, 0) < 0)
 +    goto out;

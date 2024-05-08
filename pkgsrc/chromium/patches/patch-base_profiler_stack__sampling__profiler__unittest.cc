@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/stack_sampling_profiler_unittest.cc.orig	2024-04-15 20:33:42.745021600 +0000
+--- base/profiler/stack_sampling_profiler_unittest.cc.orig	2024-04-30 23:46:40.966080400 +0000
 +++ base/profiler/stack_sampling_profiler_unittest.cc
 @@ -42,7 +42,7 @@
  #include <intrin.h>

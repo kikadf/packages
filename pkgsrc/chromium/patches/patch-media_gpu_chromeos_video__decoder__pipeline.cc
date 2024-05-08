@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-04-15 20:34:01.150373200 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-04-30 23:46:59.372068000 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -1038,7 +1038,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    }

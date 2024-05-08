@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/actions/chrome_action_id.h.orig	2024-04-15 20:33:48.893473100 +0000
+--- chrome/browser/ui/actions/chrome_action_id.h.orig	2024-04-30 23:46:47.446780200 +0000
 +++ chrome/browser/ui/actions/chrome_action_id.h
 @@ -510,7 +510,7 @@
      IDC_CONTENT_CONTEXT_QUICK_ANSWERS_INLINE_ANSWER) \

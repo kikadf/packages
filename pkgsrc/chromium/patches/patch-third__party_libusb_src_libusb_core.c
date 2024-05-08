@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/libusb/src/libusb/core.c.orig	2024-04-15 20:34:25.164136600 +0000
+--- third_party/libusb/src/libusb/core.c.orig	2024-04-30 23:47:24.362766300 +0000
 +++ third_party/libusb/src/libusb/core.c
 @@ -448,7 +448,7 @@ libusb_free_device_list(list, 1);
   * which grows when required. it can be freed once discovery has completed,

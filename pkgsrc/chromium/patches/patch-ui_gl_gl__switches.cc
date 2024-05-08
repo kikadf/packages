@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gl/gl_switches.cc.orig	2024-04-15 20:34:30.408522000 +0000
+--- ui/gl/gl_switches.cc.orig	2024-04-30 23:47:29.479318900 +0000
 +++ ui/gl/gl_switches.cc
 @@ -11,7 +11,7 @@
  #include "base/android/build_info.h"

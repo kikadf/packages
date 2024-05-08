@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/threading/platform_thread_unittest.cc.orig	2024-04-15 20:33:42.861030000 +0000
+--- base/threading/platform_thread_unittest.cc.orig	2024-04-30 23:46:41.082093000 +0000
 +++ base/threading/platform_thread_unittest.cc
 @@ -32,7 +32,7 @@
  #include "base/time/time.h"

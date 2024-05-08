@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2024-04-15 20:33:50.025556300 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2024-04-30 23:46:48.422885700 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.h
 @@ -24,14 +24,14 @@
  #include "extensions/common/extension_id.h"

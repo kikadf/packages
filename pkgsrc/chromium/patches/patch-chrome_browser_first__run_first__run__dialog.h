@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/first_run/first_run_dialog.h.orig	2024-04-15 20:33:47.253352600 +0000
+--- chrome/browser/first_run/first_run_dialog.h.orig	2024-04-30 23:46:45.862609100 +0000
 +++ chrome/browser/first_run/first_run_dialog.h
 @@ -12,7 +12,7 @@
  // Hide this function on platforms where the dialog does not exist.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/sync/chrome_sync_client.cc.orig	2024-04-15 20:33:48.733461400 +0000
+--- chrome/browser/sync/chrome_sync_client.cc.orig	2024-04-30 23:46:47.306765000 +0000
 +++ chrome/browser/sync/chrome_sync_client.cc
 @@ -112,7 +112,7 @@
  #endif  // BUILDFLAG(ENABLE_SPELLCHECK)

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/features/password_features.cc.orig	2024-04-15 20:33:55.089928200 +0000
+--- components/password_manager/core/browser/features/password_features.cc.orig	2024-04-30 23:46:52.843362800 +0000
 +++ components/password_manager/core/browser/features/password_features.cc
 @@ -30,7 +30,7 @@ BASE_FEATURE(kButterOnDesktopFollowup,
  

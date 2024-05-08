@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/browser_child_process_host_impl.cc.orig	2024-04-15 20:33:57.290089600 +0000
+--- content/browser/browser_child_process_host_impl.cc.orig	2024-04-30 23:46:55.307628900 +0000
 +++ content/browser/browser_child_process_host_impl.cc
 @@ -329,6 +329,7 @@ void BrowserChildProcessHostImpl::Launch
        switches::kMojoCoreLibraryPath,

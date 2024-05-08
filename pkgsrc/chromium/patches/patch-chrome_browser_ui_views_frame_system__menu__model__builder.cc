@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2024-04-15 20:33:49.681531000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2024-04-30 23:46:48.110851800 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -75,7 +75,7 @@ void SystemMenuModelBuilder::BuildSystem
      ui::SimpleMenuModel* model) {

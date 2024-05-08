@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2024-04-15 20:33:49.473515700 +0000
+--- chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc.orig	2024-04-30 23:46:47.926832000 +0000
 +++ chrome/browser/ui/omnibox/omnibox_pedal_implementations.cc
 @@ -1989,7 +1989,7 @@ const gfx::VectorIcon& GetSharingHubVect
                   OmniboxFieldTrial::IsChromeRefreshActionChipIconsEnabled()

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2024-04-15 20:35:27.688728600 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc.orig	2024-04-30 23:48:34.598350300 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc
 @@ -9,6 +9,10 @@
  

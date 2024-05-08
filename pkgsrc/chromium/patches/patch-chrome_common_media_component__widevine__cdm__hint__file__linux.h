@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-04-15 20:33:50.337579000 +0000
+--- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-04-30 23:46:48.890936100 +0000
 +++ chrome/common/media/component_widevine_cdm_hint_file_linux.h
 @@ -15,7 +15,7 @@
  

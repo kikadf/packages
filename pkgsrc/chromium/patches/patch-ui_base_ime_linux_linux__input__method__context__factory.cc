@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ime/linux/linux_input_method_context_factory.cc.orig	2024-04-15 20:34:29.704470200 +0000
+--- ui/base/ime/linux/linux_input_method_context_factory.cc.orig	2024-04-30 23:47:29.055273000 +0000
 +++ ui/base/ime/linux/linux_input_method_context_factory.cc
 @@ -9,7 +9,7 @@
  #include "build/build_config.h"

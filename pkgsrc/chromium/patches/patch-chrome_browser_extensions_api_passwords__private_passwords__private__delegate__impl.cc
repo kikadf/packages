@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2024-04-15 20:33:47.069339000 +0000
+--- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2024-04-30 23:46:45.674588700 +0000
 +++ chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc
 @@ -605,7 +605,7 @@ void PasswordsPrivateDelegateImpl::OnFet
  }

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2024-04-15 20:34:30.468526400 +0000
+--- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2024-04-30 23:47:29.535324800 +0000
 +++ ui/ozone/platform/headless/vulkan_implementation_headless.cc
 @@ -118,7 +118,7 @@ VulkanImplementationHeadless::ExportVkFe
  

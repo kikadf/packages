@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/socket/udp_socket_posix.cc.orig	2024-04-15 20:34:02.958506000 +0000
+--- net/socket/udp_socket_posix.cc.orig	2024-04-30 23:47:01.092253700 +0000
 +++ net/socket/udp_socket_posix.cc
 @@ -74,6 +74,32 @@ const int kActivityMonitorBytesThreshold
  const int kActivityMonitorMinimumSamplesForThroughputEstimate = 2;

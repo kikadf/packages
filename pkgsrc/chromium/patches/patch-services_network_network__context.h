@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/network_context.h.orig	2024-04-15 20:34:03.586552100 +0000
+--- services/network/network_context.h.orig	2024-04-30 23:47:01.916342500 +0000
 +++ services/network/network_context.h
 @@ -670,7 +670,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
     public:

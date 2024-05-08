@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gtk/gtk_compat.cc.orig	2024-04-15 20:34:30.416522500 +0000
+--- ui/gtk/gtk_compat.cc.orig	2024-04-30 23:47:29.487319700 +0000
 +++ ui/gtk/gtk_compat.cc
 @@ -62,27 +62,47 @@ auto DlCast(void* symbol) {
  }

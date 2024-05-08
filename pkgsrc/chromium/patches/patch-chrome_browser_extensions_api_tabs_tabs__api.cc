@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/tabs/tabs_api.cc.orig	2024-04-15 20:33:47.101341500 +0000
+--- chrome/browser/extensions/api/tabs/tabs_api.cc.orig	2024-04-30 23:46:45.706592300 +0000
 +++ chrome/browser/extensions/api/tabs/tabs_api.cc
 @@ -890,7 +890,7 @@ ExtensionFunction::ResponseAction Window
  // minimized.

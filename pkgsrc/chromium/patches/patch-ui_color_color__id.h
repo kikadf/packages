@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/color/color_id.h.orig	2024-04-15 20:34:29.840480000 +0000
+--- ui/color/color_id.h.orig	2024-04-30 23:47:29.195288200 +0000
 +++ ui/color/color_id.h
 @@ -611,7 +611,7 @@
    E_CPONLY(kColorNativeColor6) \

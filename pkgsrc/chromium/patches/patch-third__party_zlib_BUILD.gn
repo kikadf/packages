@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/zlib/BUILD.gn.orig	2024-04-15 20:34:28.532384200 +0000
+--- third_party/zlib/BUILD.gn.orig	2024-04-30 23:47:27.579113500 +0000
 +++ third_party/zlib/BUILD.gn
 @@ -128,7 +128,7 @@ if (use_arm_neon_optimizations) {
      defines = [ "CRC32_ARMV8_CRC32" ]

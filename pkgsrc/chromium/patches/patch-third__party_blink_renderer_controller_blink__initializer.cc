@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-04-15 20:34:05.334680600 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-04-30 23:47:03.812547200 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
 @@ -80,12 +80,12 @@
  #include "third_party/blink/renderer/controller/private_memory_footprint_provider.h"

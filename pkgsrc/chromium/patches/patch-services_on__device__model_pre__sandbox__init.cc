@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/on_device_model/pre_sandbox_init.cc.orig	2024-04-15 20:34:03.674558600 +0000
+--- services/on_device_model/pre_sandbox_init.cc.orig	2024-04-30 23:47:02.004352000 +0000
 +++ services/on_device_model/pre_sandbox_init.cc
 @@ -14,7 +14,7 @@
  #include "services/on_device_model/ml/chrome_ml.h"  // nogncheck

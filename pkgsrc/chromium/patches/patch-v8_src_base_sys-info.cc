@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/base/sys-info.cc.orig	2024-04-15 20:35:27.092684700 +0000
+--- v8/src/base/sys-info.cc.orig	2024-04-30 23:48:29.561806400 +0000
 +++ v8/src/base/sys-info.cc
 @@ -37,8 +37,12 @@ namespace base {
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2024-04-15 20:33:55.029923700 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2024-04-30 23:46:52.783356400 +0000
 +++ components/os_crypt/sync/os_crypt.h
 @@ -14,7 +14,7 @@
  #include "build/build_config.h"

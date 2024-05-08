@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/password_form_manager.cc.orig	2024-04-15 20:33:55.105929400 +0000
+--- components/password_manager/core/browser/password_form_manager.cc.orig	2024-04-30 23:46:52.863365000 +0000
 +++ components/password_manager/core/browser/password_form_manager.cc
 @@ -58,7 +58,7 @@
  #include "components/webauthn/android/webauthn_cred_man_delegate.h"

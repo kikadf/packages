@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/extension_status_utils.h.orig	2024-04-15 20:33:50.181567700 +0000
+--- chrome/browser/web_applications/extension_status_utils.h.orig	2024-04-30 23:46:48.742920200 +0000
 +++ chrome/browser/web_applications/extension_status_utils.h
 @@ -55,7 +55,7 @@ bool IsExternalExtensionUninstalled(cont
  bool ClearExternalExtensionUninstalled(content::BrowserContext* context,
