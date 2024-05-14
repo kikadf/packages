@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/x/xlib_support.cc.orig	2024-04-30 23:47:29.455316300 +0000
+--- ui/gfx/x/xlib_support.cc.orig	2024-05-09 21:47:31.469540400 +0000
 +++ ui/gfx/x/xlib_support.cc
 @@ -39,10 +39,18 @@ void InitXlib() {
      return;

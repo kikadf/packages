@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc.orig	2024-04-30 23:46:47.182751700 +0000
+--- chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc.orig	2024-05-09 21:46:37.425971300 +0000
 +++ chrome/browser/send_tab_to_self/send_tab_to_self_client_service.cc
 @@ -16,7 +16,7 @@
  #include "components/send_tab_to_self/send_tab_to_self_model.h"

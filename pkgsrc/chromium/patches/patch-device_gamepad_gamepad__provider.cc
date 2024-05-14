@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- device/gamepad/gamepad_provider.cc.orig	2024-04-30 23:46:56.771787200 +0000
+--- device/gamepad/gamepad_provider.cc.orig	2024-05-09 21:46:51.650910600 +0000
 +++ device/gamepad/gamepad_provider.cc
 @@ -219,7 +219,7 @@ void GamepadProvider::Initialize(std::un
  

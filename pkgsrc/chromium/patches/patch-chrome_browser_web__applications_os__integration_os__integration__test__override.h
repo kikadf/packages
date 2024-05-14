@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/os_integration/os_integration_test_override.h.orig	2024-04-30 23:46:48.766922700 +0000
+--- chrome/browser/web_applications/os_integration/os_integration_test_override.h.orig	2024-05-09 21:46:39.790127300 +0000
 +++ chrome/browser/web_applications/os_integration/os_integration_test_override.h
 @@ -92,7 +92,7 @@ class OsIntegrationTestOverride
    virtual const base::FilePath& chrome_apps_folder() = 0;

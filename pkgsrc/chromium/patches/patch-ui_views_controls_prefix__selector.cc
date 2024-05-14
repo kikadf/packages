@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/controls/prefix_selector.cc.orig	2024-04-30 23:47:29.699342500 +0000
+--- ui/views/controls/prefix_selector.cc.orig	2024-05-09 21:47:31.793561700 +0000
 +++ ui/views/controls/prefix_selector.cc
 @@ -174,7 +174,7 @@ bool PrefixSelector::ShouldDoLearning() 
    return false;

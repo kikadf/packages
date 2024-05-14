@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/address_sorter_posix.cc.orig	2024-04-30 23:47:00.608201300 +0000
+--- net/dns/address_sorter_posix.cc.orig	2024-05-09 21:47:00.363486000 +0000
 +++ net/dns/address_sorter_posix.cc
 @@ -27,6 +27,7 @@
  #include "net/dns/netinet_in_var_ios.h"

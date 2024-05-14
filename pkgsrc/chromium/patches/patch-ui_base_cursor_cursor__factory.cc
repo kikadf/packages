@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/cursor/cursor_factory.cc.orig	2024-04-30 23:47:29.031270500 +0000
+--- ui/base/cursor/cursor_factory.cc.orig	2024-05-09 21:47:31.041512300 +0000
 +++ ui/base/cursor/cursor_factory.cc
 @@ -97,7 +97,7 @@ void CursorFactory::ObserveThemeChanges(
    NOTIMPLEMENTED();

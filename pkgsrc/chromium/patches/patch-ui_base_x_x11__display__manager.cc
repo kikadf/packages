@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_display_manager.cc.orig	2024-04-30 23:47:29.095277300 +0000
+--- ui/base/x/x11_display_manager.cc.orig	2024-05-09 21:47:31.105516400 +0000
 +++ ui/base/x/x11_display_manager.cc
 @@ -16,7 +16,7 @@
  #include "ui/gfx/x/randr.h"

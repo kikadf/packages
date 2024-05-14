@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/gn/src/gn/version.h.orig	2024-04-30 23:59:52.751576200 +0000
+--- tools/gn/src/gn/version.h.orig	2024-05-09 21:58:31.985162700 +0000
 +++ tools/gn/src/gn/version.h
 @@ -22,9 +22,9 @@ class Version {
  

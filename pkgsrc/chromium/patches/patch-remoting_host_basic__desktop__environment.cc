@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/basic_desktop_environment.cc.orig	2024-04-30 23:47:01.572305400 +0000
+--- remoting/host/basic_desktop_environment.cc.orig	2024-05-09 21:47:01.531563300 +0000
 +++ remoting/host/basic_desktop_environment.cc
 @@ -195,7 +195,7 @@ std::unique_ptr<DesktopCapturer> BasicDe
    scoped_refptr<base::SingleThreadTaskRunner> capture_task_runner;

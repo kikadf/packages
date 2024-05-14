@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/watermark/watermark_view.cc.orig	2024-04-30 23:46:45.578578500 +0000
+--- chrome/browser/enterprise/watermark/watermark_view.cc.orig	2024-05-09 21:46:35.721858700 +0000
 +++ chrome/browser/enterprise/watermark/watermark_view.cc
 @@ -33,7 +33,7 @@ const gfx::Font& WatermarkFont() {
        "Segoe UI",

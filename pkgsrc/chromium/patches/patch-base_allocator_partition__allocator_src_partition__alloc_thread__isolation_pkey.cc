@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc.orig	2024-04-30 23:46:40.806063200 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc.orig	2024-05-09 21:46:25.637192700 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc
 @@ -16,7 +16,7 @@
  #include "partition_alloc/partition_alloc_check.h"

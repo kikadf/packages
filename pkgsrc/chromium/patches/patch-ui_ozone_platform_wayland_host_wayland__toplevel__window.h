@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/host/wayland_toplevel_window.h.orig	2024-04-30 23:47:29.555327000 +0000
+--- ui/ozone/platform/wayland/host/wayland_toplevel_window.h.orig	2024-05-09 21:47:31.573547400 +0000
 +++ ui/ozone/platform/wayland/host/wayland_toplevel_window.h
 @@ -265,7 +265,7 @@ class WaylandToplevelWindow : public Way
    // The display ID to switch to in case the state is `kFullscreen`.

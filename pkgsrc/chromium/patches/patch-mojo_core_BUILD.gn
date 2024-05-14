@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- mojo/core/BUILD.gn.orig	2024-04-30 23:46:59.848119300 +0000
+--- mojo/core/BUILD.gn.orig	2024-05-09 21:46:59.091402000 +0000
 +++ mojo/core/BUILD.gn
 @@ -166,7 +166,7 @@ template("core_impl_source_set") {
          ]

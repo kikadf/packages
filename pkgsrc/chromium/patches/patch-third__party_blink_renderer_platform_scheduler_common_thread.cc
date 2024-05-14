@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2024-04-30 23:47:05.352713600 +0000
+--- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2024-05-09 21:47:07.571962000 +0000
 +++ third_party/blink/renderer/platform/scheduler/common/thread.cc
 @@ -82,7 +82,7 @@ void Thread::CreateAndSetCompositorThrea
        std::make_unique<scheduler::CompositorThread>(params);

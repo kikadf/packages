@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2024-04-30 23:46:57.483863800 +0000
+--- gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc.orig	2024-05-09 21:46:52.362957700 +0000
 +++ gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.cc
 @@ -21,7 +21,7 @@ namespace {
  // TODO(penghuang): verify the scanout is the right usage for video playback.

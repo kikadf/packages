@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/web_applications/web_app_dialogs.h.orig	2024-04-30 23:46:48.294871800 +0000
+--- chrome/browser/ui/web_applications/web_app_dialogs.h.orig	2024-05-09 21:46:39.474106600 +0000
 +++ chrome/browser/ui/web_applications/web_app_dialogs.h
 @@ -22,7 +22,7 @@
  #include "ui/gfx/native_widget_types.h"

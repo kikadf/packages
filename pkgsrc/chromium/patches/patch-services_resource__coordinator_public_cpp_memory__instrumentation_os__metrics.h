@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2024-04-30 23:47:02.020353800 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2024-05-09 21:47:02.163605000 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h
 @@ -45,7 +45,7 @@ class COMPONENT_EXPORT(
                                      mojom::RawOSMemDump*);

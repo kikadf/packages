@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2024-04-30 23:46:48.782924400 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2024-05-09 21:46:39.806128500 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.cc
 @@ -127,7 +127,7 @@ std::vector<std::wstring> GetFileExtensi
  }

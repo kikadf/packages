@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/style/platform_style.cc.orig	2024-04-30 23:47:29.743347400 +0000
+--- ui/views/style/platform_style.cc.orig	2024-05-09 21:47:31.841565000 +0000
 +++ ui/views/style/platform_style.cc
 @@ -17,7 +17,7 @@
  #include "ui/views/controls/focusable_border.h"

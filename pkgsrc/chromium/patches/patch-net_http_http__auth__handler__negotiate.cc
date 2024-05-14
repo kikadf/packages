@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/http/http_auth_handler_negotiate.cc.orig	2024-04-30 23:47:00.660207000 +0000
+--- net/http/http_auth_handler_negotiate.cc.orig	2024-05-09 21:47:00.423490000 +0000
 +++ net/http/http_auth_handler_negotiate.cc
 @@ -120,7 +120,7 @@ int HttpAuthHandlerNegotiate::Factory::C
  #elif BUILDFLAG(IS_POSIX)

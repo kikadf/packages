@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/modules/ml/webnn/features.gni.orig	2024-04-30 23:47:04.900664800 +0000
+--- third_party/blink/renderer/modules/ml/webnn/features.gni.orig	2024-05-09 21:47:07.083930000 +0000
 +++ third_party/blink/renderer/modules/ml/webnn/features.gni
 @@ -6,7 +6,7 @@ import("//build/config/chrome_build.gni"
  declare_args() {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/strings/translations/app_locale_settings_bn.xtb.orig	2024-04-30 23:47:29.607332700 +0000
+--- ui/strings/translations/app_locale_settings_bn.xtb.orig	2024-05-09 21:47:31.625550700 +0000
 +++ ui/strings/translations/app_locale_settings_bn.xtb
 @@ -10,7 +10,7 @@
    <translation id="IDS_WEB_FONT_FAMILY">Vrinda</translation>

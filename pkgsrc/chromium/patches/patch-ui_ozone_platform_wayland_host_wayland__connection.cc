@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/host/wayland_connection.cc.orig	2024-04-30 23:47:29.547326000 +0000
+--- ui/ozone/platform/wayland/host/wayland_connection.cc.orig	2024-05-09 21:47:31.565546800 +0000
 +++ ui/ozone/platform/wayland/host/wayland_connection.cc
 @@ -539,7 +539,7 @@ bool WaylandConnection::ShouldUseOverlay
    // isn't present on any non-exo Wayland compositors.

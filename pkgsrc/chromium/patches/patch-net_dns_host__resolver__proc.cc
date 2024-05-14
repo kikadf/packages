@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/dns/host_resolver_proc.cc.orig	2024-04-30 23:47:00.628203400 +0000
+--- net/dns/host_resolver_proc.cc.orig	2024-05-09 21:47:00.387487600 +0000
 +++ net/dns/host_resolver_proc.cc
 @@ -15,10 +15,6 @@
  #include "net/base/net_errors.h"

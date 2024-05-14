@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/config/clang/BUILD.gn.orig	2024-04-30 23:46:41.206106200 +0000
+--- build/config/clang/BUILD.gn.orig	2024-05-09 21:46:26.045219700 +0000
 +++ build/config/clang/BUILD.gn
 @@ -203,7 +203,7 @@ template("clang_lib") {
  

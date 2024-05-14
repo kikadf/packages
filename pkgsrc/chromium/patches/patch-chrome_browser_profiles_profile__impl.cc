@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2024-04-30 23:46:46.510679000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2024-05-09 21:46:36.769928000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
 @@ -267,6 +267,10 @@
  #include "chrome/browser/spellchecker/spellcheck_service.h"

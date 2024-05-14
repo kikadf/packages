@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2024-04-30 23:47:01.644313000 +0000
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2024-05-09 21:47:01.599567700 +0000
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
 @@ -10,7 +10,7 @@
  #include "base/strings/utf_string_conversions.h"

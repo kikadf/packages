@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc.orig	2024-04-30 23:48:25.157330800 +0000
+--- third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc.orig	2024-05-09 21:48:20.608785600 +0000
 +++ third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc
 @@ -10,11 +10,15 @@
  

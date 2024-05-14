@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/devtools/protocol/system_info_handler.cc.orig	2024-04-30 23:46:55.363635000 +0000
+--- content/browser/devtools/protocol/system_info_handler.cc.orig	2024-05-09 21:46:49.790788000 +0000
 +++ content/browser/devtools/protocol/system_info_handler.cc
 @@ -50,7 +50,7 @@ std::unique_ptr<SystemInfo::Size> GfxSiz
  // 1046598, and 1153667.

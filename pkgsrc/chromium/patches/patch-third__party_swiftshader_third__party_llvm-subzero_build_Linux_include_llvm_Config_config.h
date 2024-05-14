@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h.orig	2024-04-30 23:48:19.280696400 +0000
+--- third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h.orig	2024-05-09 21:47:56.207174000 +0000
 +++ third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h
 @@ -5,8 +5,6 @@
  #include "llvm/Config/llvm-config.h"

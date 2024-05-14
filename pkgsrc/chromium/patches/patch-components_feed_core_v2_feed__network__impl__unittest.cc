@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2024-04-30 23:46:52.331307600 +0000
+--- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2024-05-09 21:46:44.286424400 +0000
 +++ components/feed/core/v2/feed_network_impl_unittest.cc
 @@ -781,8 +781,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D
  

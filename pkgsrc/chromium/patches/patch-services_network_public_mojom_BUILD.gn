@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/public/mojom/BUILD.gn.orig	2024-04-30 23:47:01.956347000 +0000
+--- services/network/public/mojom/BUILD.gn.orig	2024-05-09 21:47:02.099600800 +0000
 +++ services/network/public/mojom/BUILD.gn
 @@ -522,11 +522,11 @@ mojom("url_loader_base") {
    }

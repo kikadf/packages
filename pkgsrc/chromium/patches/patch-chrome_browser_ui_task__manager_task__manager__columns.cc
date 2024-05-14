@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/task_manager/task_manager_columns.cc.orig	2024-04-30 23:46:47.998839900 +0000
+--- chrome/browser/ui/task_manager/task_manager_columns.cc.orig	2024-05-09 21:46:39.186087400 +0000
 +++ chrome/browser/ui/task_manager/task_manager_columns.cc
 @@ -93,7 +93,7 @@ const TableColumnData kColumns[] = {
       std::size("100000") * kCharWidth, -1, true, false, false},

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/download/download_prefs.h.orig	2024-04-30 23:46:45.490568900 +0000
+--- chrome/browser/download/download_prefs.h.orig	2024-05-09 21:46:35.637853100 +0000
 +++ chrome/browser/download/download_prefs.h
 @@ -115,7 +115,7 @@ class DownloadPrefs {
    void DisableAutoOpenByUserBasedOnExtension(const base::FilePath& file_name);

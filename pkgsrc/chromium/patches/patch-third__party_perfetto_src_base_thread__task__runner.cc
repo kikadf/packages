@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/base/thread_task_runner.cc.orig	2024-04-30 23:48:19.504720400 +0000
+--- third_party/perfetto/src/base/thread_task_runner.cc.orig	2024-05-09 21:48:16.596520700 +0000
 +++ third_party/perfetto/src/base/thread_task_runner.cc
 @@ -27,8 +27,9 @@
  #include "perfetto/ext/base/thread_utils.h"

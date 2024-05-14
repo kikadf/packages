@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/gwp_asan/client/gwp_asan.cc.orig	2024-04-30 23:46:52.391314000 +0000
+--- components/gwp_asan/client/gwp_asan.cc.orig	2024-05-09 21:46:44.346428200 +0000
 +++ components/gwp_asan/client/gwp_asan.cc
 @@ -72,7 +72,7 @@ namespace {
  // ProcessSamplingBoost is the multiplier to increase the

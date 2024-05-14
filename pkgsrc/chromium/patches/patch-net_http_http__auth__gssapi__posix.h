@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/http/http_auth_gssapi_posix.h.orig	2024-04-30 23:47:00.656206600 +0000
+--- net/http/http_auth_gssapi_posix.h.orig	2024-05-09 21:47:00.423490000 +0000
 +++ net/http/http_auth_gssapi_posix.h
 @@ -21,6 +21,9 @@
  #if BUILDFLAG(IS_APPLE)

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/linux/dmabuf_uapi.h.orig	2024-04-30 23:47:29.411311400 +0000
+--- ui/gfx/linux/dmabuf_uapi.h.orig	2024-05-09 21:47:31.429537800 +0000
 +++ ui/gfx/linux/dmabuf_uapi.h
 @@ -5,12 +5,11 @@
  #ifndef UI_GFX_LINUX_DMABUF_UAPI_H_

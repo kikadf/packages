@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-04-30 23:46:47.838822400 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-05-09 21:46:39.030077200 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h
 @@ -11,7 +11,7 @@
  #include "components/autofill/core/browser/payments/payments_window_manager.h"

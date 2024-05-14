@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/new_tab_page/new_tab_page_util.cc.orig	2024-04-30 23:46:46.162641500 +0000
+--- chrome/browser/new_tab_page/new_tab_page_util.cc.orig	2024-05-09 21:46:36.437906000 +0000
 +++ chrome/browser/new_tab_page/new_tab_page_util.cc
 @@ -20,7 +20,7 @@ bool IsOsSupportedForCart() {
  }

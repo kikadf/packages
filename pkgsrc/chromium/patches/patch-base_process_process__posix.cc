@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_posix.cc.orig	2024-04-30 23:46:40.958079600 +0000
+--- base/process/process_posix.cc.orig	2024-05-09 21:46:25.789202700 +0000
 +++ base/process/process_posix.cc
 @@ -23,10 +23,15 @@
  #include "base/trace_event/base_tracing.h"

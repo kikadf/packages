@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feed/core/v2/proto_util.cc.orig	2024-04-30 23:46:52.335308000 +0000
+--- components/feed/core/v2/proto_util.cc.orig	2024-05-09 21:46:44.290424600 +0000
 +++ components/feed/core/v2/proto_util.cc
 @@ -93,8 +93,8 @@ feedwire::Version GetPlatformVersionMess
  

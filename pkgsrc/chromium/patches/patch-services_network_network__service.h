@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/network_service.h.orig	2024-04-30 23:47:01.920343000 +0000
+--- services/network/network_service.h.orig	2024-05-09 21:47:02.063598400 +0000
 +++ services/network/network_service.h
 @@ -229,7 +229,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
        mojo::PendingReceiver<mojom::NetworkServiceTest> receiver) override;

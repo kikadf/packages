@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/linux/gbm_wrapper.cc.orig	2024-04-30 23:47:29.411311400 +0000
+--- ui/gfx/linux/gbm_wrapper.cc.orig	2024-05-09 21:47:31.433538000 +0000
 +++ ui/gfx/linux/gbm_wrapper.cc
 @@ -313,7 +313,7 @@ class Device final : public ui::GbmDevic
      // of 1x1 BOs which are destroyed before creating the final BO creation used

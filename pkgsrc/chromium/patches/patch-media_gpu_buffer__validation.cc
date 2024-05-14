@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/buffer_validation.cc.orig	2024-04-30 23:46:59.364067000 +0000
+--- media/gpu/buffer_validation.cc.orig	2024-05-09 21:46:58.463360500 +0000
 +++ media/gpu/buffer_validation.cc
 @@ -16,7 +16,7 @@
  #include "ui/gfx/geometry/size.h"

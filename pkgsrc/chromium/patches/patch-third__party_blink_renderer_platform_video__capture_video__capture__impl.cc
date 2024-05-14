@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/video_capture/video_capture_impl.cc.orig	2024-04-30 23:47:05.420721000 +0000
+--- third_party/blink/renderer/platform/video_capture/video_capture_impl.cc.orig	2024-05-09 21:47:07.635966300 +0000
 +++ third_party/blink/renderer/platform/video_capture/video_capture_impl.cc
 @@ -676,7 +676,7 @@ bool VideoCaptureImpl::BindVideoFrameOnM
    }

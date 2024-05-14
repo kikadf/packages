@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/metrics/motherboard.cc.orig	2024-04-30 23:46:52.571333400 +0000
+--- components/metrics/motherboard.cc.orig	2024-05-09 21:46:44.542441100 +0000
 +++ components/metrics/motherboard.cc
 @@ -1,6 +1,7 @@
  // Copyright 2022 The Chromium Authors

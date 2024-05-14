@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/flags/flags.cc.orig	2024-04-30 23:48:34.078294000 +0000
+--- v8/src/flags/flags.cc.orig	2024-05-09 21:48:26.857198500 +0000
 +++ v8/src/flags/flags.cc
 @@ -15,6 +15,10 @@
  #include <set>

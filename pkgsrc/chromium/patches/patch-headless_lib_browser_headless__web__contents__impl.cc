@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- headless/lib/browser/headless_web_contents_impl.cc.orig	2024-04-30 23:46:57.559872200 +0000
+--- headless/lib/browser/headless_web_contents_impl.cc.orig	2024-05-09 21:46:52.442963000 +0000
 +++ headless/lib/browser/headless_web_contents_impl.cc
 @@ -60,7 +60,7 @@ namespace headless {
  namespace {

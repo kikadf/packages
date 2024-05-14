@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/audio/sndio/sndio_output.cc.orig	2024-05-07 14:42:06.772773159 +0000
+--- media/audio/sndio/sndio_output.cc.orig	2024-05-13 15:05:53.886329213 +0000
 +++ media/audio/sndio/sndio_output.cc
 @@ -0,0 +1,187 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

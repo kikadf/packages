@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/browser/password_manager.cc.orig	2024-04-30 23:46:52.867365400 +0000
+--- components/password_manager/core/browser/password_manager.cc.orig	2024-05-09 21:46:44.866462700 +0000
 +++ components/password_manager/core/browser/password_manager.cc
 @@ -363,7 +363,7 @@ void PasswordManager::RegisterProfilePre
    registry->RegisterListPref(prefs::kPasswordManagerPromoCardsList);

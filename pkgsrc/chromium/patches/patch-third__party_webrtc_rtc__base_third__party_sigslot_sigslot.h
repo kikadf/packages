@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h.orig	2024-04-30 23:48:26.265450500 +0000
+--- third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h.orig	2024-05-09 21:48:20.864802600 +0000
 +++ third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h
 @@ -178,6 +178,10 @@ class multi_threaded_local {
  #endif  // _SIGSLOT_HAS_WIN32_THREADS

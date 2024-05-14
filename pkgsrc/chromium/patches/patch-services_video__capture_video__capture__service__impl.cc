@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/video_capture/video_capture_service_impl.cc.orig	2024-04-30 23:47:02.268380600 +0000
+--- services/video_capture/video_capture_service_impl.cc.orig	2024-05-09 21:47:02.391620000 +0000
 +++ services/video_capture/video_capture_service_impl.cc
 @@ -41,7 +41,7 @@
  #include "services/video_capture/lacros/device_factory_adapter_lacros.h"

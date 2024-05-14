@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2024-04-30 23:46:48.054845800 +0000
+--- chrome/browser/ui/views/compose/compose_dialog_view.cc.orig	2024-05-09 21:46:39.242091200 +0000
 +++ chrome/browser/ui/views/compose/compose_dialog_view.cc
 @@ -159,7 +159,7 @@ void ComposeDialogView::OnBeforeBubbleWi
      views::Widget::InitParams* params,

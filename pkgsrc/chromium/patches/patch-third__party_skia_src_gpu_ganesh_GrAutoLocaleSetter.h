@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h.orig	2024-04-30 23:48:03.570999900 +0000
+--- third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h.orig	2024-05-09 21:47:53.599002000 +0000
 +++ third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h
 @@ -27,7 +27,7 @@
  #define HAVE_XLOCALE 0

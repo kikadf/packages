@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-04-30 23:46:59.836118000 +0000
+--- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-05-09 21:46:59.075401000 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
 @@ -803,7 +803,7 @@ void GpuMemoryBufferVideoFramePool::Pool
    }

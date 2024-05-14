@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/kill_posix.cc.orig	2024-04-30 23:46:40.950078700 +0000
+--- base/process/kill_posix.cc.orig	2024-05-09 21:46:25.785202500 +0000
 +++ base/process/kill_posix.cc
 @@ -157,7 +157,7 @@ void EnsureProcessTerminated(Process pro
        0, new BackgroundReaper(std::move(process), Seconds(2)));

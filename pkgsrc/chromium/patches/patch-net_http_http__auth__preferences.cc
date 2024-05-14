@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/http/http_auth_preferences.cc.orig	2024-04-30 23:47:00.660207000 +0000
+--- net/http/http_auth_preferences.cc.orig	2024-05-09 21:47:00.427490200 +0000
 +++ net/http/http_auth_preferences.cc
 @@ -39,7 +39,7 @@ std::string HttpAuthPreferences::AuthAnd
  }

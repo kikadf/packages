@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/paint_preview/browser/paint_preview_client_unittest.cc.orig	2024-04-30 23:46:52.823360700 +0000
+--- components/paint_preview/browser/paint_preview_client_unittest.cc.orig	2024-05-09 21:46:44.814459000 +0000
 +++ components/paint_preview/browser/paint_preview_client_unittest.cc
 @@ -174,8 +174,8 @@ TEST_P(PaintPreviewClientRenderViewHostT
    metadata->set_version(kPaintPreviewVersion);

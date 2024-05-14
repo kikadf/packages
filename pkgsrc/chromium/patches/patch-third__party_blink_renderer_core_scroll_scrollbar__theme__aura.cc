@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2024-04-30 23:47:04.536625400 +0000
+--- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2024-05-09 21:47:06.715905700 +0000
 +++ third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc
 @@ -149,7 +149,7 @@ bool ScrollbarThemeAura::SupportsDragSna
  // is true for at least GTK and QT apps).

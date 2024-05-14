@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			124.0.6367.118
+VERSION=			124.0.6367.201
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -56,7 +56,7 @@ DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 #ONLY_FOR_PLATFORM+=		*-*-arm # not yet
 #ONLY_FOR_PLATFORM+=		*-*-aarch64 # not yet
 #ONLY_FOR_PLATFORM+=		*-*-i386 # not yet
-ONLY_FOR_PLATFORM+=		NetBSD-*-x86_64
+ONLY_FOR_PLATFORM+=		*-*-x86_64
 
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -95,6 +95,7 @@ CFLAGS+=		-Wno-error=unused-command-line-argument
 
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
+TARGET=		chrome chromedriver
 
 # These libraries are used from the system and the build infrastructure
 # removes them from the bundled third_party directory and replaces them
@@ -111,8 +112,8 @@ GN_SYSTEM_LIBS=	dav1d \
 		openh264 \
 		opus
 
-#		libjpeg \
-#		use_system_libjpeg=true \
+#		libjpeg
+#		use_system_libjpeg=true
 
 GN_ARGS+=	is_official_build=true \
 		enable_nacl=false \
@@ -148,13 +149,6 @@ GN_ARGS+=	is_official_build=true \
 		thin_lto_enable_optimizations=true \
 		is_component_build=false
 
-# rust
-RUSTC_VERSION=	rustc -V
-MAKE_ENV+=	RUSTC_BOOTSTRAP=1
-GN_ARGS+=	enable_rust=true \
-		rust_sysroot_absolute=\"${PREFIX}\" \
-		rustc_version=\"${RUSTC_VERSION:sh}\"
-
 # flags
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		-L${X11BASE}/lib \
@@ -165,6 +159,13 @@ EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 EXTRA_CXXFLAGS=	-I${BUILDLINK_DIR}/include \
 		-I${BUILDLINK_DIR}/include/glib \
 		-I${BUILDLINK_DIR}/include/nss
+
+# rust
+RUSTC_VERSION=	rustc -V
+MAKE_ENV+=	RUSTC_BOOTSTRAP=1
+GN_ARGS+=	enable_rust=true \
+		rust_sysroot_absolute=\"${PREFIX}\" \
+		rustc_version=\"${RUSTC_VERSION:sh}\"
 
 PLIST_VARS+=		swiftshader
 .if ${MACHINE_ARCH} == "aarch64"
@@ -203,6 +204,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/chrome
 PKGSRC_COMPILER=	ccache clang
 PKG_CC=			clang
 PKG_CXX=		clang++
+UNLIMIT_RESOURCES=	datasize
 
 pre-configure:
 #	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
@@ -269,10 +271,8 @@ do-build:
 #	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/v8_context_snapshot_generator
 #.endif
 
-	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} \
-		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
-			chrome chromedriver
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} ${TARGET}
 
 .if !empty(PKG_OPTIONS:Mprofdata)
 	cd ${WRKSRC}/tools/pgo && \

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc.orig	2024-04-30 23:46:46.058630200 +0000
+--- chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc.orig	2024-05-09 21:46:36.333899000 +0000
 +++ chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc
 @@ -39,10 +39,12 @@ void MTPDeviceMapService::RegisterMTPFil
      // Note that this initializes the delegate asynchronously, but since

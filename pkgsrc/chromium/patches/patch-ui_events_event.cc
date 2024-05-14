@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/events/event.cc.orig	2024-04-30 23:47:29.247293700 +0000
+--- ui/events/event.cc.orig	2024-05-09 21:47:31.265527000 +0000
 +++ ui/events/event.cc
 @@ -438,7 +438,7 @@ std::string LocatedEvent::ToString() con
  MouseEvent::MouseEvent(const PlatformEvent& native_event)

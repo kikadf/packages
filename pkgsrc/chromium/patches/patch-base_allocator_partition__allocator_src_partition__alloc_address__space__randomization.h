@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2024-04-30 23:46:40.758057800 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2024-05-09 21:46:25.533185700 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h
 @@ -38,7 +38,7 @@ AslrMask(uintptr_t bits) {
  

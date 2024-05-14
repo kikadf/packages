@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/zygote/zygote_linux.cc.orig	2024-04-30 23:46:56.607769300 +0000
+--- content/zygote/zygote_linux.cc.orig	2024-05-09 21:46:51.486899900 +0000
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@
  // Copyright 2012 The Chromium Authors

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/traffic_annotation/network_traffic_annotation.h.orig	2024-04-30 23:47:01.148259600 +0000
+--- net/traffic_annotation/network_traffic_annotation.h.orig	2024-05-09 21:47:01.259545300 +0000
 +++ net/traffic_annotation/network_traffic_annotation.h
 @@ -373,7 +373,7 @@ struct MutablePartialNetworkTrafficAnnot
  }  // namespace net

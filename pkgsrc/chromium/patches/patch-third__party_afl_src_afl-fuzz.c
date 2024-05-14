@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/afl/src/afl-fuzz.c.orig	2024-04-30 23:47:02.748432400 +0000
+--- third_party/afl/src/afl-fuzz.c.orig	2024-05-09 21:47:03.923721300 +0000
 +++ third_party/afl/src/afl-fuzz.c
 @@ -58,7 +58,8 @@
  #include <sys/ioctl.h>

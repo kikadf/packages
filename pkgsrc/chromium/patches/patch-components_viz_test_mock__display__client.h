@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/test/mock_display_client.h.orig	2024-04-30 23:46:54.943589700 +0000
+--- components/viz/test/mock_display_client.h.orig	2024-05-09 21:46:49.490768000 +0000
 +++ components/viz/test/mock_display_client.h
 @@ -43,7 +43,7 @@ class MockDisplayClient : public mojom::
    MOCK_METHOD1(SetWideColorEnabled, void(bool enabled));

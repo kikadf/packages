@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-04-30 23:46:47.158749000 +0000
+--- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-05-09 21:46:37.401969700 +0000
 +++ chrome/browser/screen_ai/screen_ai_install_state.cc
 @@ -23,7 +23,7 @@
  #include "services/screen_ai/public/cpp/utilities.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-04-30 23:46:46.454673000 +0000
+--- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-05-09 21:46:36.713924200 +0000
 +++ chrome/browser/printing/print_backend_service_manager.cc
 @@ -34,7 +34,7 @@
  #include "printing/printing_context.h"

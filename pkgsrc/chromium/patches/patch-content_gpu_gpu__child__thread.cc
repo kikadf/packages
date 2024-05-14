@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/gpu/gpu_child_thread.cc.orig	2024-04-30 23:46:55.839686400 +0000
+--- content/gpu/gpu_child_thread.cc.orig	2024-05-09 21:46:50.554838200 +0000
 +++ content/gpu/gpu_child_thread.cc
 @@ -58,7 +58,7 @@
  #include "third_party/skia/include/ports/SkFontConfigInterface.h"

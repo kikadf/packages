@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/metrics/drive_metrics_provider_linux.cc.orig	2024-04-30 23:46:52.563332600 +0000
+--- components/metrics/drive_metrics_provider_linux.cc.orig	2024-05-09 21:46:44.530440300 +0000
 +++ components/metrics/drive_metrics_provider_linux.cc
 @@ -4,7 +4,13 @@
  

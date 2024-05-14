@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/dir_reader_posix.h.orig	2024-04-30 23:46:40.874070400 +0000
+--- base/files/dir_reader_posix.h.orig	2024-05-09 21:46:25.705197000 +0000
 +++ base/files/dir_reader_posix.h
 @@ -17,7 +17,7 @@
  // seems worse than falling back to enumerating all file descriptors so we will

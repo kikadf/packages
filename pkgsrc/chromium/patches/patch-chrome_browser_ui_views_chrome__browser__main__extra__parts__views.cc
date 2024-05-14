@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2024-04-30 23:46:48.050845400 +0000
+--- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2024-05-09 21:46:39.238091000 +0000
 +++ chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc
 @@ -38,7 +38,7 @@
  #include "ui/wm/core/wm_state.h"

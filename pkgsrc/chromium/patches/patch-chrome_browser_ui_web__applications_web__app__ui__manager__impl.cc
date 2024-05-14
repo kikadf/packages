@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-04-30 23:46:48.298872200 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-05-09 21:46:39.478106700 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
 @@ -586,7 +586,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPr
      content::WebContents* web_contents,

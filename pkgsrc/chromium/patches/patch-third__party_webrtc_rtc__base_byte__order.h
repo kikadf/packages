@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/rtc_base/byte_order.h.orig	2024-04-30 23:48:26.125435400 +0000
+--- third_party/webrtc/rtc_base/byte_order.h.orig	2024-05-09 21:48:20.820799600 +0000
 +++ third_party/webrtc/rtc_base/byte_order.h
 @@ -90,6 +90,8 @@
  #error WEBRTC_ARCH_BIG_ENDIAN or WEBRTC_ARCH_LITTLE_ENDIAN must be defined.

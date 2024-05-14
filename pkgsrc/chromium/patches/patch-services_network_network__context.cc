@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/network_context.cc.orig	2024-04-30 23:47:01.916342500 +0000
+--- services/network/network_context.cc.orig	2024-05-09 21:47:02.059598200 +0000
 +++ services/network/network_context.cc
 @@ -523,7 +523,7 @@ NetworkContext::NetworkContextHttpAuthPr
  NetworkContext::NetworkContextHttpAuthPreferences::

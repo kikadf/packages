@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/memory/platform_shared_memory_region.h.orig	2024-04-30 23:46:40.910074200 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2024-05-09 21:46:25.745199700 +0000
 +++ base/memory/platform_shared_memory_region.h
 @@ -17,7 +17,7 @@
  #include "base/unguessable_token.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/named_mojo_ipc_server/connection_info.h.orig	2024-04-30 23:46:52.615338300 +0000
+--- components/named_mojo_ipc_server/connection_info.h.orig	2024-05-09 21:46:44.590444300 +0000
 +++ components/named_mojo_ipc_server/connection_info.h
 @@ -14,7 +14,7 @@
  #include "base/win/scoped_handle.h"

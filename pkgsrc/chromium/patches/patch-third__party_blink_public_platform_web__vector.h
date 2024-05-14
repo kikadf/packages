@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/public/platform/web_vector.h.orig	2024-04-30 23:47:03.684533600 +0000
+--- third_party/blink/public/platform/web_vector.h.orig	2024-05-09 21:47:04.919787000 +0000
 +++ third_party/blink/public/platform/web_vector.h
 @@ -86,7 +86,7 @@ class WebVector {
    // The vector can be populated using reserve() and emplace_back().

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/about/about_ui.cc.orig	2024-04-30 23:46:48.302872700 +0000
+--- chrome/browser/ui/webui/about/about_ui.cc.orig	2024-05-09 21:46:39.482107000 +0000
 +++ chrome/browser/ui/webui/about/about_ui.cc
 @@ -592,7 +592,7 @@ std::string ChromeURLs(content::BrowserC
    return html;

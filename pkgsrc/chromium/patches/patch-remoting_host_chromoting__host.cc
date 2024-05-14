@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/chromoting_host.cc.orig	2024-04-30 23:47:01.572305400 +0000
+--- remoting/host/chromoting_host.cc.orig	2024-05-09 21:47:01.531563300 +0000
 +++ remoting/host/chromoting_host.cc
 @@ -129,7 +129,7 @@ void ChromotingHost::Start(const std::st
        &ChromotingHost::OnIncomingSession, base::Unretained(this)));

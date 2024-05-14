@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/child/BUILD.gn.orig	2024-04-30 23:46:55.803682600 +0000
+--- content/child/BUILD.gn.orig	2024-05-09 21:46:50.514835600 +0000
 +++ content/child/BUILD.gn
 @@ -131,6 +131,13 @@ target(link_target_type, "child") {
      ]

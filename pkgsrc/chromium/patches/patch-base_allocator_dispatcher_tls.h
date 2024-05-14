@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/dispatcher/tls.h.orig	2024-04-30 23:46:40.754057400 +0000
+--- base/allocator/dispatcher/tls.h.orig	2024-05-09 21:46:25.529185500 +0000
 +++ base/allocator/dispatcher/tls.h
 @@ -76,7 +76,7 @@ struct BASE_EXPORT MMapAllocator {
    constexpr static size_t AllocationChunkSize = 16384;

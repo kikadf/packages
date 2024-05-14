@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ime/init/input_method_initializer.cc.orig	2024-04-30 23:47:29.051272600 +0000
+--- ui/base/ime/init/input_method_initializer.cc.orig	2024-05-09 21:47:31.061513400 +0000
 +++ ui/base/ime/init/input_method_initializer.cc
 @@ -10,7 +10,7 @@
  #include "build/chromeos_buildflags.h"

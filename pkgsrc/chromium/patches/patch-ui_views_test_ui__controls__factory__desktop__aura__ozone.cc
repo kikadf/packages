@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2024-04-30 23:47:29.747347800 +0000
+--- ui/views/test/ui_controls_factory_desktop_aura_ozone.cc.orig	2024-05-09 21:47:31.845565300 +0000
 +++ ui/views/test/ui_controls_factory_desktop_aura_ozone.cc
 @@ -296,7 +296,7 @@ void UpdateDisplaySync(const std::string
  }

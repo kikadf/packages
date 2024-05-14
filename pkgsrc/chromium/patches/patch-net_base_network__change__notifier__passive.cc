@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/base/network_change_notifier_passive.cc.orig	2024-04-30 23:47:00.344172700 +0000
+--- net/base/network_change_notifier_passive.cc.orig	2024-05-09 21:47:00.023463700 +0000
 +++ net/base/network_change_notifier_passive.cc
 @@ -107,7 +107,7 @@ NetworkChangeNotifierPassive::GetAddress
  NetworkChangeNotifier::NetworkChangeCalculatorParams

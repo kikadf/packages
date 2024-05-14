@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/posix/can_lower_nice_to.cc.orig	2024-04-30 23:46:40.946078300 +0000
+--- base/posix/can_lower_nice_to.cc.orig	2024-05-09 21:46:25.777202000 +0000
 +++ base/posix/can_lower_nice_to.cc
 @@ -11,8 +11,12 @@
  

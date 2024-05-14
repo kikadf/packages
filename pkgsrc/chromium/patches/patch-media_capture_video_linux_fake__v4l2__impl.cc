@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/capture/video/linux/fake_v4l2_impl.cc.orig	2024-04-30 23:46:59.248054500 +0000
+--- media/capture/video/linux/fake_v4l2_impl.cc.orig	2024-05-09 21:46:58.263347400 +0000
 +++ media/capture/video/linux/fake_v4l2_impl.cc
 @@ -562,7 +562,7 @@ int FakeV4L2Impl::close(int fd) {
    return kSuccessReturnValue;

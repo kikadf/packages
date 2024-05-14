@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/window/dialog_delegate.cc.orig	2024-04-30 23:47:29.779351200 +0000
+--- ui/views/window/dialog_delegate.cc.orig	2024-05-09 21:47:31.877567300 +0000
 +++ ui/views/window/dialog_delegate.cc
 @@ -79,7 +79,7 @@ Widget* DialogDelegate::CreateDialogWidg
  

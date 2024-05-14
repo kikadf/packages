@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/browser_process_impl.h.orig	2024-04-30 23:46:45.262544400 +0000
+--- chrome/browser/browser_process_impl.h.orig	2024-05-09 21:46:35.409838000 +0000
 +++ chrome/browser/browser_process_impl.h
 @@ -389,7 +389,7 @@ class BrowserProcessImpl : public Browse
  

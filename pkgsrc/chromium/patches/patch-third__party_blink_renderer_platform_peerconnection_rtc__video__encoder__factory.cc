@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2024-04-30 23:47:05.340712300 +0000
+--- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2024-05-09 21:47:07.543960300 +0000
 +++ third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc
 @@ -202,12 +202,12 @@ SupportedFormats GetSupportedFormatsInte
        supported_formats.scalability_modes.push_back(profile.scalability_modes);

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2024-04-30 23:46:48.422885700 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2024-05-09 21:46:39.594114300 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
 @@ -95,7 +95,7 @@
  #include "components/policy/core/common/cloud/user_cloud_policy_manager.h"

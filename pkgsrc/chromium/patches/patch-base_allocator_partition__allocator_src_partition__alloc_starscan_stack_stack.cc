@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/starscan/stack/stack.cc.orig	2024-04-30 23:46:40.802062700 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/starscan/stack/stack.cc.orig	2024-05-09 21:46:25.633192300 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/starscan/stack/stack.cc
 @@ -18,6 +18,10 @@
  #include <pthread.h>

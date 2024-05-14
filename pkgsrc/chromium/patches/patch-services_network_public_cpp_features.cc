@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/public/cpp/features.cc.orig	2024-04-30 23:47:01.940345000 +0000
+--- services/network/public/cpp/features.cc.orig	2024-05-09 21:47:02.079599400 +0000
 +++ services/network/public/cpp/features.cc
 @@ -98,7 +98,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso
  BASE_FEATURE(kDnsOverHttpsUpgrade,

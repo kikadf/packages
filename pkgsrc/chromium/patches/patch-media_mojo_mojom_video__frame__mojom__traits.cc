@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2024-04-30 23:46:59.468078100 +0000
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2024-05-09 21:46:58.563367100 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
 @@ -22,7 +22,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/device_signals/core/browser/signals_aggregator.h.orig	2024-04-30 23:46:51.963267800 +0000
+--- components/device_signals/core/browser/signals_aggregator.h.orig	2024-05-09 21:46:44.066409800 +0000
 +++ components/device_signals/core/browser/signals_aggregator.h
 @@ -22,7 +22,7 @@ class SignalsAggregator : public KeyedSe
  

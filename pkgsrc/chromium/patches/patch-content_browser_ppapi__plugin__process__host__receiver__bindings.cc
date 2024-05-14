@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/ppapi_plugin_process_host_receiver_bindings.cc.orig	2024-04-30 23:46:55.523652300 +0000
+--- content/browser/ppapi_plugin_process_host_receiver_bindings.cc.orig	2024-05-09 21:46:49.970799700 +0000
 +++ content/browser/ppapi_plugin_process_host_receiver_bindings.cc
 @@ -8,7 +8,7 @@
  

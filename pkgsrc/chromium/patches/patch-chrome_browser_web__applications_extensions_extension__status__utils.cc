@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-04-30 23:46:48.742920200 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-05-09 21:46:39.766125700 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -25,7 +25,7 @@ namespace {
  

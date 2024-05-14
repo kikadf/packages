@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/platform_window/platform_window_delegate.cc.orig	2024-04-30 23:47:29.587330300 +0000
+--- ui/platform_window/platform_window_delegate.cc.orig	2024-05-09 21:47:31.609549800 +0000
 +++ ui/platform_window/platform_window_delegate.cc
 @@ -48,7 +48,7 @@ PlatformWindowDelegate::PlatformWindowDe
  

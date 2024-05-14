@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc.orig	2024-04-30 23:47:04.952670300 +0000
+--- third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc.orig	2024-05-09 21:47:07.131933000 +0000
 +++ third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc
 @@ -301,7 +301,7 @@ TEST_F(WebRtcAudioRendererTest, DISABLED
    SetupRenderer(kDefaultOutputDeviceId);

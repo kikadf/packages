@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/BUILD.gn.orig	2024-04-30 23:46:44.218431500 +0000
+--- chrome/browser/BUILD.gn.orig	2024-05-09 21:46:34.225760000 +0000
 +++ chrome/browser/BUILD.gn
 @@ -6554,6 +6554,13 @@ static_library("browser") {
      }

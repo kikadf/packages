@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/debug/stack_trace.cc.orig	2024-04-30 23:46:40.866069600 +0000
+--- base/debug/stack_trace.cc.orig	2024-05-09 21:46:25.701197000 +0000
 +++ base/debug/stack_trace.cc
 @@ -247,7 +247,7 @@ bool StackTrace::WillSymbolizeToStreamFo
    // Symbols are not expected to be reliable when gn args specifies

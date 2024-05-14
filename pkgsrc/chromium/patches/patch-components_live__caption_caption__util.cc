@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/live_caption/caption_util.cc.orig	2024-04-30 23:46:52.491325000 +0000
+--- components/live_caption/caption_util.cc.orig	2024-05-09 21:46:44.450435200 +0000
 +++ components/live_caption/caption_util.cc
 @@ -145,7 +145,7 @@ bool IsLiveCaptionFeatureSupported() {
      return false;

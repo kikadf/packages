@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/mojom/buffer_types_mojom_traits.cc.orig	2024-04-30 23:47:29.415311800 +0000
+--- ui/gfx/mojom/buffer_types_mojom_traits.cc.orig	2024-05-09 21:47:31.433538000 +0000
 +++ ui/gfx/mojom/buffer_types_mojom_traits.cc
 @@ -33,7 +33,7 @@ gfx::mojom::GpuMemoryBufferPlatformHandl
        return gfx::mojom::GpuMemoryBufferPlatformHandle::NewSharedMemoryHandle(

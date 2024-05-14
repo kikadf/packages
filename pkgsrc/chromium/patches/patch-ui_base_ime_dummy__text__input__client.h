@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ime/dummy_text_input_client.h.orig	2024-04-30 23:47:29.051272600 +0000
+--- ui/base/ime/dummy_text_input_client.h.orig	2024-05-09 21:47:31.061513400 +0000
 +++ ui/base/ime/dummy_text_input_client.h
 @@ -65,7 +65,7 @@ class DummyTextInputClient : public Text
    ukm::SourceId GetClientSourceForMetrics() const override;

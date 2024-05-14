@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- sandbox/linux/services/libc_interceptor.cc.orig	2024-04-30 23:47:01.744324000 +0000
+--- sandbox/linux/services/libc_interceptor.cc.orig	2024-05-09 21:47:01.703574700 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
 @@ -12,7 +12,9 @@
  #include <stddef.h>

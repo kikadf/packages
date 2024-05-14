@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_path_watcher.h.orig	2024-04-30 23:46:40.874070400 +0000
+--- base/files/file_path_watcher.h.orig	2024-05-09 21:46:25.709197500 +0000
 +++ base/files/file_path_watcher.h
 @@ -105,7 +105,7 @@ class BASE_EXPORT FilePathWatcher {
      Type type = Type::kNonRecursive;

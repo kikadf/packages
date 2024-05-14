@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/ppapi_plugin/ppapi_blink_platform_impl.cc.orig	2024-04-30 23:46:55.843686800 +0000
+--- content/ppapi_plugin/ppapi_blink_platform_impl.cc.orig	2024-05-09 21:46:50.554838200 +0000
 +++ content/ppapi_plugin/ppapi_blink_platform_impl.cc
 @@ -21,7 +21,7 @@
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/url_constants.h.orig	2024-04-30 23:46:48.902937400 +0000
+--- chrome/common/url_constants.h.orig	2024-05-09 21:46:39.926136300 +0000
 +++ chrome/common/url_constants.h
 @@ -848,7 +848,7 @@ inline constexpr char kPhoneHubPermissio
      "https://support.google.com/chromebook?p=multidevice";

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2024-04-30 23:46:48.774923600 +0000
+--- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2024-05-09 21:46:39.798128000 +0000
 +++ chrome/browser/web_applications/policy/web_app_policy_manager.cc
 @@ -111,7 +111,7 @@ namespace web_app {
  

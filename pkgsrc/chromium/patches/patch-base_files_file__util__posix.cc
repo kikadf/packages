@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_util_posix.cc.orig	2024-04-30 23:46:40.878070800 +0000
+--- base/files/file_util_posix.cc.orig	2024-05-09 21:46:25.709197500 +0000
 +++ base/files/file_util_posix.cc
 @@ -816,33 +816,34 @@ bool CreateDirectoryAndGetError(const Fi
                                  File::Error* error) {

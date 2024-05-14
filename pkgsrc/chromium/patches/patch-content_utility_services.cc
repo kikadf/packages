@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/utility/services.cc.orig	2024-04-30 23:46:56.591767500 +0000
+--- content/utility/services.cc.orig	2024-05-09 21:46:51.470898900 +0000
 +++ content/utility/services.cc
 @@ -74,7 +74,7 @@
  extern sandbox::TargetServices* g_utility_target_services;

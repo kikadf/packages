@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/base/periodic_task.cc.orig	2024-04-30 23:48:19.464716200 +0000
+--- third_party/perfetto/src/base/periodic_task.cc.orig	2024-05-09 21:48:16.588520300 +0000
 +++ third_party/perfetto/src/base/periodic_task.cc
 @@ -24,7 +24,7 @@
  #include "perfetto/base/time.h"

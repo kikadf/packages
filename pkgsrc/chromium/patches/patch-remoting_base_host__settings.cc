@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/base/host_settings.cc.orig	2024-04-30 23:47:01.364282800 +0000
+--- remoting/base/host_settings.cc.orig	2024-05-09 21:47:01.503561300 +0000
 +++ remoting/base/host_settings.cc
 @@ -7,7 +7,7 @@
  #include "base/no_destructor.h"

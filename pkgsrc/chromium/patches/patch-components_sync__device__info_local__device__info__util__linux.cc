@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/sync_device_info/local_device_info_util_linux.cc.orig	2024-04-30 23:46:54.259515800 +0000
+--- components/sync_device_info/local_device_info_util_linux.cc.orig	2024-05-09 21:46:48.806722900 +0000
 +++ components/sync_device_info/local_device_info_util_linux.cc
 @@ -9,6 +9,11 @@
  

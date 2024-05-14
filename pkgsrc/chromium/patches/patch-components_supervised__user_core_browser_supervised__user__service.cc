@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/supervised_user/core/browser/supervised_user_service.cc.orig	2024-04-30 23:46:54.171506200 +0000
+--- components/supervised_user/core/browser/supervised_user_service.cc.orig	2024-05-09 21:46:48.718717000 +0000
 +++ components/supervised_user/core/browser/supervised_user_service.cc
 @@ -170,7 +170,7 @@ FirstTimeInterstitialBannerState Supervi
      const FirstTimeInterstitialBannerState original_state) {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/web_app_helpers.cc.orig	2024-04-30 23:46:48.790925300 +0000
+--- chrome/browser/web_applications/web_app_helpers.cc.orig	2024-05-09 21:46:39.814128900 +0000
 +++ chrome/browser/web_applications/web_app_helpers.cc
 @@ -146,7 +146,7 @@ bool IsValidWebAppUrl(const GURL& app_ur
  

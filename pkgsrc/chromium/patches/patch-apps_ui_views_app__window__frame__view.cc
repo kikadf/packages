@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- apps/ui/views/app_window_frame_view.cc.orig	2024-04-30 23:46:39.405912000 +0000
+--- apps/ui/views/app_window_frame_view.cc.orig	2024-05-09 21:46:23.149028300 +0000
 +++ apps/ui/views/app_window_frame_view.cc
 @@ -148,7 +148,7 @@ gfx::Rect AppWindowFrameView::GetWindowB
    gfx::Rect window_bounds = client_bounds;

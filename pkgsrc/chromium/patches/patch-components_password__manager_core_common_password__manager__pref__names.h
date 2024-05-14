@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-04-30 23:46:52.895368600 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-05-09 21:46:44.906465300 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
 @@ -332,7 +332,7 @@ inline constexpr char kPasswordManagerPr
  inline constexpr char kPasswordSharingEnabled[] =

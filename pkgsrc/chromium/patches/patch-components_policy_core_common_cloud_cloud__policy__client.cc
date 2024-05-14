@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2024-04-30 23:46:53.039384100 +0000
+--- components/policy/core/common/cloud/cloud_policy_client.cc.orig	2024-05-09 21:46:45.086477000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_client.cc
 @@ -594,7 +594,7 @@ void CloudPolicyClient::FetchPolicy(Poli
          fetch_request->set_invalidation_payload(invalidation_payload_);

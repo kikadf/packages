@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gl/gl_fence.cc.orig	2024-04-30 23:47:29.471318000 +0000
+--- ui/gl/gl_fence.cc.orig	2024-05-09 21:47:31.489541800 +0000
 +++ ui/gl/gl_fence.cc
 @@ -20,7 +20,7 @@
  #endif

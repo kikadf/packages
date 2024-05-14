@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/media/frameless_media_interface_proxy.h.orig	2024-04-30 23:46:55.479647600 +0000
+--- content/browser/media/frameless_media_interface_proxy.h.orig	2024-05-09 21:46:49.930797000 +0000
 +++ content/browser/media/frameless_media_interface_proxy.h
 @@ -19,7 +19,7 @@
  #include "mojo/public/cpp/bindings/receiver_set.h"

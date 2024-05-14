@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/host/wayland_input_method_context.cc.orig	2024-04-30 23:47:29.551326500 +0000
+--- ui/ozone/platform/wayland/host/wayland_input_method_context.cc.orig	2024-05-09 21:47:31.569547000 +0000
 +++ ui/ozone/platform/wayland/host/wayland_input_method_context.cc
 @@ -54,7 +54,7 @@ namespace {
  // Only enable the preedit string for sequence mode (i.e. when using dead keys

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2024-04-30 23:46:46.438671400 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2024-05-09 21:46:36.693922800 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
 @@ -488,18 +488,18 @@
  #endif

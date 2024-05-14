@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.h.orig	2024-04-30 23:46:44.418453200 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.h.orig	2024-05-09 21:46:34.521779300 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.h
 @@ -39,7 +39,7 @@ content::WebContents* OpenExtensionAppli
                                                    const std::string& app_id);

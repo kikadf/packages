@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/device_signals/core/common/signals_features.h.orig	2024-04-30 23:46:51.967268200 +0000
+--- components/device_signals/core/common/signals_features.h.orig	2024-05-09 21:46:44.066409800 +0000
 +++ components/device_signals/core/common/signals_features.h
 @@ -28,7 +28,7 @@ enum class NewEvFunction { kFileSystemIn
  bool IsNewFunctionEnabled(NewEvFunction new_ev_function);

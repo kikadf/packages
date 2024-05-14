@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/service/dawn_context_provider.cc.orig	2024-04-30 23:46:57.435858700 +0000
+--- gpu/command_buffer/service/dawn_context_provider.cc.orig	2024-05-09 21:46:52.314954500 +0000
 +++ gpu/command_buffer/service/dawn_context_provider.cc
 @@ -203,7 +203,7 @@ wgpu::BackendType DawnContextProvider::G
    return base::FeatureList::IsEnabled(features::kSkiaGraphiteDawnUseD3D12)

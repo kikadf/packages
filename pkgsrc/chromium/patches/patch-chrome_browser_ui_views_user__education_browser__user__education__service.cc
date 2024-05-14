@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-04-30 23:46:48.262868200 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2024-05-09 21:46:39.446104500 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
 @@ -790,7 +790,7 @@ void MaybeRegisterChromeFeaturePromos(
                      FeaturePromoSpecification::AcceleratorInfo())

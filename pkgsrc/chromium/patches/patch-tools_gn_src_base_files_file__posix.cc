@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/gn/src/base/files/file_posix.cc.orig	2024-04-30 23:59:52.695570200 +0000
+--- tools/gn/src/base/files/file_posix.cc.orig	2024-05-09 21:58:31.933159400 +0000
 +++ tools/gn/src/base/files/file_posix.cc
 @@ -371,7 +371,7 @@ void File::DoInitialize(const FilePath& 
  bool File::Flush() {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2024-04-30 23:47:01.976349000 +0000
+--- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2024-05-09 21:47:02.119602000 +0000
 +++ services/network/shared_dictionary/shared_dictionary_writer_in_memory.h
 @@ -9,6 +9,8 @@
  #include <string>

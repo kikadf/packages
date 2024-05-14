@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/remote_open_url/remote_open_url_util.cc.orig	2024-04-30 23:47:01.632311800 +0000
+--- remoting/host/remote_open_url/remote_open_url_util.cc.orig	2024-05-09 21:47:01.591567300 +0000
 +++ remoting/host/remote_open_url/remote_open_url_util.cc
 @@ -29,7 +29,7 @@ const wchar_t kRegisteredApplicationsKey
  #endif  // BUILDFLAG(IS_WIN)

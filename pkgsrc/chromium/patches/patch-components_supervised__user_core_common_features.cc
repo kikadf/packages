@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/supervised_user/core/common/features.cc.orig	2024-04-30 23:46:54.175506600 +0000
+--- components/supervised_user/core/common/features.cc.orig	2024-05-09 21:46:48.718717000 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -63,7 +63,7 @@ BASE_FEATURE(kEnableSupervisedUserSkipPa
               "EnableSupervisedUserSkipParentApprovalToInstallExtensions",

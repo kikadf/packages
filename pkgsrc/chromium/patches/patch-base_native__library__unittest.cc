@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/native_library_unittest.cc.orig	2024-04-30 23:46:40.938077400 +0000
+--- base/native_library_unittest.cc.orig	2024-05-09 21:46:25.773201700 +0000
 +++ base/native_library_unittest.cc
 @@ -133,7 +133,7 @@ TEST(NativeLibraryTest, LoadLibrary) {
  // versions with respect to symbol resolution scope.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-04-30 23:47:29.763349500 +0000
+--- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-05-09 21:47:31.861566300 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc
 @@ -47,7 +47,7 @@
  #include "ui/wm/core/window_util.h"

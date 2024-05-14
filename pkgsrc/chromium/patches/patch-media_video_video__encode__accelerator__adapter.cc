@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/video/video_encode_accelerator_adapter.cc.orig	2024-04-30 23:46:59.844118800 +0000
+--- media/video/video_encode_accelerator_adapter.cc.orig	2024-05-09 21:46:59.087401900 +0000
 +++ media/video/video_encode_accelerator_adapter.cc
 @@ -157,7 +157,7 @@ VideoEncodeAccelerator::Config SetUpVeaC
    if (is_rgb)

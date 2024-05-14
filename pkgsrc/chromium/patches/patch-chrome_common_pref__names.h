@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/pref_names.h.orig	2024-04-30 23:46:48.894936600 +0000
+--- chrome/common/pref_names.h.orig	2024-05-09 21:46:39.914135500 +0000
 +++ chrome/common/pref_names.h
 @@ -1288,7 +1288,7 @@ inline constexpr char kUseAshProxy[] = "
  

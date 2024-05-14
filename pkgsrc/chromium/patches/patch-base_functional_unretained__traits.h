@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/functional/unretained_traits.h.orig	2024-04-30 23:46:40.890072000 +0000
+--- base/functional/unretained_traits.h.orig	2024-05-09 21:46:25.721198300 +0000
 +++ base/functional/unretained_traits.h
 @@ -93,7 +93,7 @@ struct SupportsUnretainedImpl {
  // official builds, and then in non-test code as well.

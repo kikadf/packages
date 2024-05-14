@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2024-04-30 23:47:05.020677800 +0000
+--- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2024-05-09 21:47:07.195937400 +0000
 +++ third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc
 @@ -463,7 +463,7 @@ class AudioWorkletThreadPriorityTest
  

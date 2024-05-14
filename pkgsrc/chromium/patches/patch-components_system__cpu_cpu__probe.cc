@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/system_cpu/cpu_probe.cc.orig	2024-04-30 23:46:54.271517000 +0000
+--- components/system_cpu/cpu_probe.cc.orig	2024-05-09 21:46:48.818723700 +0000
 +++ components/system_cpu/cpu_probe.cc
 @@ -30,6 +30,9 @@ std::unique_ptr<CpuProbe> CpuProbe::Crea
    return CpuProbeWin::Create();

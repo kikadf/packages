@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/video/fake_gpu_memory_buffer.cc.orig	2024-04-30 23:46:59.836118000 +0000
+--- media/video/fake_gpu_memory_buffer.cc.orig	2024-05-09 21:46:59.075401000 +0000
 +++ media/video/fake_gpu_memory_buffer.cc
 @@ -9,7 +9,7 @@
  #include "media/base/format_utils.h"

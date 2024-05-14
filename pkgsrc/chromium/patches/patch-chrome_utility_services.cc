@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/utility/services.cc.orig	2024-04-30 23:46:50.663127400 +0000
+--- chrome/utility/services.cc.orig	2024-05-09 21:46:41.914267500 +0000
 +++ chrome/utility/services.cc
 @@ -55,7 +55,7 @@
  #include "chrome/services/system_signals/mac/mac_system_signals_service.h"

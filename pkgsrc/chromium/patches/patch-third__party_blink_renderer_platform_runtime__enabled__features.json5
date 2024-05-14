@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-04-30 23:47:05.348713200 +0000
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-05-09 21:47:07.563961500 +0000
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
 @@ -313,7 +313,7 @@
        name: "AppTitle",

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/base/desktop_environment_options.cc.orig	2024-04-30 23:47:01.568305000 +0000
+--- remoting/host/base/desktop_environment_options.cc.orig	2024-05-09 21:47:01.527562900 +0000
 +++ remoting/host/base/desktop_environment_options.cc
 @@ -124,7 +124,7 @@ bool DesktopEnvironmentOptions::capture_
    // TODO(joedow): Determine whether we can migrate additional platforms to

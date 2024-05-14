@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-04-30 23:47:01.136258400 +0000
+--- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-05-09 21:47:01.243544000 +0000
 +++ net/tools/cert_verify_tool/cert_verify_tool.cc
 @@ -33,7 +33,7 @@
  #include "third_party/boringssl/src/pki/trust_store.h"

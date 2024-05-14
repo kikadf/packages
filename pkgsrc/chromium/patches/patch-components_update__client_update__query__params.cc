@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/update_client/update_query_params.cc.orig	2024-04-30 23:46:54.787572900 +0000
+--- components/update_client/update_query_params.cc.orig	2024-05-09 21:46:49.334757800 +0000
 +++ components/update_client/update_query_params.cc
 @@ -42,6 +42,10 @@ const char kOs[] =
      "fuchsia";

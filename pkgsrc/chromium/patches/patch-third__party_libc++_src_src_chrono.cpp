@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/libc++/src/src/chrono.cpp.orig	2024-04-30 23:47:45.649064800 +0000
+--- third_party/libc++/src/src/chrono.cpp.orig	2024-05-09 21:47:42.210249700 +0000
 +++ third_party/libc++/src/src/chrono.cpp
 @@ -31,7 +31,8 @@
  #  include <sys/time.h> // for gettimeofday and timeval

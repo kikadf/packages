@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/color/system_theme.h.orig	2024-04-30 23:47:29.199288600 +0000
+--- ui/color/system_theme.h.orig	2024-05-09 21:47:31.213523400 +0000
 +++ ui/color/system_theme.h
 @@ -15,7 +15,7 @@ namespace ui {
  enum class SystemTheme {

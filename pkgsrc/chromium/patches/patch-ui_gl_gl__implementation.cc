@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gl/gl_implementation.cc.orig	2024-04-30 23:47:29.475318400 +0000
+--- ui/gl/gl_implementation.cc.orig	2024-05-09 21:47:31.489541800 +0000
 +++ ui/gl/gl_implementation.cc
 @@ -276,7 +276,7 @@ GetRequestedGLImplementationFromCommandL
    *fallback_to_software_gl = false;

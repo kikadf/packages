@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_path_watcher_kqueue.cc.orig	2024-04-30 23:46:40.874070400 +0000
+--- base/files/file_path_watcher_kqueue.cc.orig	2024-05-09 21:46:25.709197500 +0000
 +++ base/files/file_path_watcher_kqueue.cc
 @@ -76,9 +76,15 @@ size_t FilePathWatcherKQueue::EventsForP
      FilePath::StringType subdir = (i != (components.end() - 1)) ? *(i + 1) : "";

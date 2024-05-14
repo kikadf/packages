@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ui_base_switches.h.orig	2024-04-30 23:47:29.087276500 +0000
+--- ui/base/ui_base_switches.h.orig	2024-05-09 21:47:31.097515800 +0000
 +++ ui/base/ui_base_switches.h
 @@ -27,11 +27,11 @@ COMPONENT_EXPORT(UI_BASE) extern const c
  COMPONENT_EXPORT(UI_BASE) extern const char kEnableResourcesFileSharing[];

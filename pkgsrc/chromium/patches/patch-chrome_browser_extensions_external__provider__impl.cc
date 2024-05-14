@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/external_provider_impl.cc.orig	2024-04-30 23:46:45.782600400 +0000
+--- chrome/browser/extensions/external_provider_impl.cc.orig	2024-05-09 21:46:35.917871700 +0000
 +++ chrome/browser/extensions/external_provider_impl.cc
 @@ -830,7 +830,7 @@ void ExternalProviderImpl::CreateExterna
    if (!profile->GetPrefs()->GetBoolean(pref_names::kBlockExternalExtensions)) {

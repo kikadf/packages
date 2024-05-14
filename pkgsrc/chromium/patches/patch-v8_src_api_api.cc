@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/api/api.cc.orig	2024-04-30 23:48:28.861730800 +0000
+--- v8/src/api/api.cc.orig	2024-05-09 21:48:26.269159600 +0000
 +++ v8/src/api/api.cc
 @@ -144,7 +144,7 @@
  #include "src/wasm/wasm-serialization.h"

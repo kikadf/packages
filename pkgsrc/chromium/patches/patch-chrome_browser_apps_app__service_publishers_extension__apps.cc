@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/apps/app_service/publishers/extension_apps.cc.orig	2024-04-30 23:46:44.394450700 +0000
+--- chrome/browser/apps/app_service/publishers/extension_apps.cc.orig	2024-05-09 21:46:34.493777500 +0000
 +++ chrome/browser/apps/app_service/publishers/extension_apps.cc
 @@ -23,7 +23,7 @@ ExtensionApps::ExtensionApps(AppServiceP
  ExtensionApps::~ExtensionApps() = default;

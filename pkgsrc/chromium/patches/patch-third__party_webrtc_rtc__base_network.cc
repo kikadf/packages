@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/rtc_base/network.cc.orig	2024-04-30 23:48:26.197443200 +0000
+--- third_party/webrtc/rtc_base/network.cc.orig	2024-05-09 21:48:20.836800800 +0000
 +++ third_party/webrtc/rtc_base/network.cc
 @@ -292,7 +292,12 @@ AdapterType GetAdapterTypeFromName(absl:
    }

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2024-04-30 23:46:46.382665200 +0000
+--- chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc.orig	2024-05-09 21:46:36.637919200 +0000
 +++ chrome/browser/policy/chrome_browser_cloud_management_controller_desktop.cc
 @@ -50,7 +50,7 @@
  #include "chrome/browser/policy/browser_dm_token_storage_mac.h"

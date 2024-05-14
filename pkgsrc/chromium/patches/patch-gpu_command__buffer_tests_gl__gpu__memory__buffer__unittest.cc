@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2024-04-30 23:46:57.507866600 +0000
+--- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2024-05-09 21:46:52.390959500 +0000
 +++ gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc
 @@ -27,7 +27,7 @@
  #include "ui/gfx/half_float.h"

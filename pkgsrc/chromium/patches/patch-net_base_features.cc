@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/base/features.cc.orig	2024-04-30 23:47:00.332171400 +0000
+--- net/base/features.cc.orig	2024-05-09 21:47:00.007462500 +0000
 +++ net/base/features.cc
 @@ -26,7 +26,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
  BASE_FEATURE(kAsyncDns,

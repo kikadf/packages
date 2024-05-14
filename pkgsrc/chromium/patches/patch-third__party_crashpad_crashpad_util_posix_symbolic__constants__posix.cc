@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2024-04-30 23:47:23.354657400 +0000
+--- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2024-05-09 21:47:24.873104800 +0000
 +++ third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc
 @@ -67,7 +67,7 @@ constexpr const char* kSignalNames[] = {
      "INFO",

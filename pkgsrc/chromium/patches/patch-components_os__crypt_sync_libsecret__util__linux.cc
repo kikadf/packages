@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/os_crypt/sync/libsecret_util_linux.cc.orig	2024-04-30 23:46:52.783356400 +0000
+--- components/os_crypt/sync/libsecret_util_linux.cc.orig	2024-05-09 21:46:44.762455700 +0000
 +++ components/os_crypt/sync/libsecret_util_linux.cc
 @@ -99,16 +99,22 @@ bool LibsecretLoader::EnsureLibsecretLoa
  

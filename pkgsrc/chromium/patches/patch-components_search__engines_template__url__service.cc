@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/search_engines/template_url_service.cc.orig	2024-04-30 23:46:53.639449000 +0000
+--- components/search_engines/template_url_service.cc.orig	2024-05-09 21:46:47.118611300 +0000
 +++ components/search_engines/template_url_service.cc
 @@ -2930,7 +2930,7 @@ bool TemplateURLService::MatchesDefaultS
  std::unique_ptr<EnterpriseSiteSearchManager>

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/process_singleton_posix.cc.orig	2024-04-30 23:46:46.494677300 +0000
+--- chrome/browser/process_singleton_posix.cc.orig	2024-05-09 21:46:36.753926800 +0000
 +++ chrome/browser/process_singleton_posix.cc
 @@ -97,7 +97,7 @@
  #include "ui/base/l10n/l10n_util.h"

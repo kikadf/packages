@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2024-04-30 23:46:54.931588400 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2024-05-09 21:46:49.478767200 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
 @@ -209,7 +209,7 @@ class VIZ_SERVICE_EXPORT RootCompositorF
    // See comments on `EvictionHandler`.

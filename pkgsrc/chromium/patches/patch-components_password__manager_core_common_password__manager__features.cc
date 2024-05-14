@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/common/password_manager_features.cc.orig	2024-04-30 23:46:52.895368600 +0000
+--- components/password_manager/core/common/password_manager_features.cc.orig	2024-05-09 21:46:44.906465300 +0000
 +++ components/password_manager/core/common/password_manager_features.cc
 @@ -18,7 +18,7 @@ BASE_FEATURE(kEnableOverwritingPlacehold
               "EnableOverwritingPlaceholderUsernames",

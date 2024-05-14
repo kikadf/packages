@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc.orig	2024-04-30 23:46:45.562576800 +0000
+--- chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc.orig	2024-05-09 21:46:35.705857500 +0000
 +++ chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc
 @@ -12,7 +12,7 @@
  #include "components/enterprise/browser/identifiers/identifiers_prefs.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/paint_preview/player/player_compositor_delegate.cc.orig	2024-04-30 23:46:52.831361500 +0000
+--- components/paint_preview/player/player_compositor_delegate.cc.orig	2024-05-09 21:46:44.826460000 +0000
 +++ components/paint_preview/player/player_compositor_delegate.cc
 @@ -455,8 +455,8 @@ void PlayerCompositorDelegate::ValidateP
    auto chrome_version = capture_result_->proto.metadata().chrome_version();

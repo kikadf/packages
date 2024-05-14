@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/task/thread_pool/environment_config_unittest.cc.orig	2024-04-30 23:46:41.010085000 +0000
+--- base/task/thread_pool/environment_config_unittest.cc.orig	2024-05-09 21:46:25.845206500 +0000
 +++ base/task/thread_pool/environment_config_unittest.cc
 @@ -15,7 +15,7 @@ TEST(ThreadPoolEnvironmentConfig, CanUse
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE)

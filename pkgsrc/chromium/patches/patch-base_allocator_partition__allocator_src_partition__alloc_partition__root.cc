@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2024-04-30 23:46:40.790061500 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2024-05-09 21:46:25.585189000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
 @@ -47,7 +47,7 @@
  #include "wow64apiset.h"

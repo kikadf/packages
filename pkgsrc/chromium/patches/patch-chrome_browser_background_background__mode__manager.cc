@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/background/background_mode_manager.cc.orig	2024-04-30 23:46:45.242542000 +0000
+--- chrome/browser/background/background_mode_manager.cc.orig	2024-05-09 21:46:35.389836800 +0000
 +++ chrome/browser/background/background_mode_manager.cc
 @@ -872,7 +872,7 @@ gfx::ImageSkia GetStatusTrayIcon() {
      return gfx::ImageSkia();

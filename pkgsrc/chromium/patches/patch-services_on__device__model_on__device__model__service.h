@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/on_device_model/on_device_model_service.h.orig	2024-04-30 23:47:02.004352000 +0000
+--- services/on_device_model/on_device_model_service.h.orig	2024-05-09 21:47:02.143603600 +0000
 +++ services/on_device_model/on_device_model_service.h
 @@ -20,6 +20,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"

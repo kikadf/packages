@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/net/system_network_context_manager.h.orig	2024-04-30 23:46:46.150640200 +0000
+--- chrome/browser/net/system_network_context_manager.h.orig	2024-05-09 21:46:36.425905200 +0000
 +++ chrome/browser/net/system_network_context_manager.h
 @@ -200,7 +200,7 @@ class SystemNetworkContextManager {
    class URLLoaderFactoryForSystem;

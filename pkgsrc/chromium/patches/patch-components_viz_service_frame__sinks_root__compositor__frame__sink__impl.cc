@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-04-30 23:46:54.931588400 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-05-09 21:46:49.478767200 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc
 @@ -111,7 +111,7 @@ RootCompositorFrameSinkImpl::Create(
    output_surface->SetNeedsSwapSizeNotifications(

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/focus/focus_manager.cc.orig	2024-04-30 23:47:29.727345500 +0000
+--- ui/views/focus/focus_manager.cc.orig	2024-05-09 21:47:31.821563700 +0000
 +++ ui/views/focus/focus_manager.cc
 @@ -579,7 +579,7 @@ bool FocusManager::RedirectAcceleratorTo
  

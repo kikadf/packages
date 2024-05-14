@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2024-04-30 23:47:03.612525700 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h.orig	2024-05-09 21:47:04.743775400 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences_mojom_traits.h
 @@ -166,7 +166,7 @@ struct BLINK_COMMON_EXPORT
      return data.send_subresource_notification;

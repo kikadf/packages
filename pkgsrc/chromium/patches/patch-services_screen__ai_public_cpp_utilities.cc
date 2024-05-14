@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/screen_ai/public/cpp/utilities.cc.orig	2024-04-30 23:47:02.024354200 +0000
+--- services/screen_ai/public/cpp/utilities.cc.orig	2024-05-09 21:47:02.167605200 +0000
 +++ services/screen_ai/public/cpp/utilities.cc
 @@ -19,7 +19,7 @@ namespace screen_ai {
  

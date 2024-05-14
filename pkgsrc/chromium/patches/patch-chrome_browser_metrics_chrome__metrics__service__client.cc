@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2024-04-30 23:46:46.074632000 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2024-05-09 21:46:36.349900200 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
 @@ -194,7 +194,7 @@
  #include "chrome/notification_helper/notification_helper_constants.h"

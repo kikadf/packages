@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.cc.orig	2024-04-30 23:48:25.161331200 +0000
+--- third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.cc.orig	2024-05-09 21:48:20.612786000 +0000
 +++ third_party/webrtc/modules/desktop_capture/linux/x11/x_server_pixel_buffer.cc
 @@ -201,6 +201,12 @@ bool XServerPixelBuffer::Init(XAtomCache
  }

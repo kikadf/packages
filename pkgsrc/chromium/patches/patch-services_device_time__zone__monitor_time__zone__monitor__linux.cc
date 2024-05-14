@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2024-04-30 23:47:01.872337800 +0000
+--- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2024-05-09 21:47:02.015595200 +0000
 +++ services/device/time_zone_monitor/time_zone_monitor_linux.cc
 @@ -131,7 +131,11 @@ class TimeZoneMonitorLinuxImpl
      // false positives are harmless, assuming the false positive rate is

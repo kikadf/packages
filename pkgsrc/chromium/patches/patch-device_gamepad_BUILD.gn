@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- device/gamepad/BUILD.gn.orig	2024-04-30 23:46:56.767786500 +0000
+--- device/gamepad/BUILD.gn.orig	2024-05-09 21:46:51.646910400 +0000
 +++ device/gamepad/BUILD.gn
 @@ -99,7 +99,7 @@ component("gamepad") {
        "hid_writer_linux.cc",

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_constants.h.orig	2024-04-30 23:46:52.323306800 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2024-05-09 21:46:44.274423600 +0000
 +++ components/feature_engagement/public/feature_constants.h
 @@ -20,7 +20,7 @@ BASE_DECLARE_FEATURE(kIPHDemoMode);
  BASE_DECLARE_FEATURE(kIPHDummyFeature);

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/settings/accessibility_main_handler.h.orig	2024-04-30 23:46:48.454889000 +0000
+--- chrome/browser/ui/webui/settings/accessibility_main_handler.h.orig	2024-05-09 21:46:39.622116300 +0000
 +++ chrome/browser/ui/webui/settings/accessibility_main_handler.h
 @@ -13,7 +13,7 @@
  #include "chrome/browser/ash/accessibility/accessibility_manager.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/webrtc/audio_processor.cc.orig	2024-04-30 23:46:59.844118800 +0000
+--- media/webrtc/audio_processor.cc.orig	2024-05-09 21:46:59.091402000 +0000
 +++ media/webrtc/audio_processor.cc
 @@ -513,7 +513,7 @@ std::optional<double> AudioProcessor::Pr
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)

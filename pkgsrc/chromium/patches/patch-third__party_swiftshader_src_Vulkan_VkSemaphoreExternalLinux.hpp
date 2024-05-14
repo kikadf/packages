@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp.orig	2024-04-30 23:47:47.937312000 +0000
+--- third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp.orig	2024-05-09 21:47:47.386591700 +0000
 +++ third_party/swiftshader/src/Vulkan/VkSemaphoreExternalLinux.hpp
 @@ -49,13 +49,17 @@ public:
  	{

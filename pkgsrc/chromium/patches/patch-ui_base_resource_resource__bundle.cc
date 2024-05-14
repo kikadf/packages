@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/resource/resource_bundle.cc.orig	2024-04-30 23:47:29.079275600 +0000
+--- ui/base/resource/resource_bundle.cc.orig	2024-05-09 21:47:31.089515200 +0000
 +++ ui/base/resource/resource_bundle.cc
 @@ -926,7 +926,7 @@ void ResourceBundle::ReloadFonts() {
  }

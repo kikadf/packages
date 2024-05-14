@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/hid/hid_service_fido.h.orig	2024-05-07 14:42:07.432693348 +0000
+--- services/device/hid/hid_service_fido.h.orig	2024-05-13 15:05:54.334486680 +0000
 +++ services/device/hid/hid_service_fido.h
 @@ -0,0 +1,65 @@
 +// Copyright 2014 The Chromium Authors

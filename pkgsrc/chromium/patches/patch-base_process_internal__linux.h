@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/internal_linux.h.orig	2024-04-30 23:46:40.950078700 +0000
+--- base/process/internal_linux.h.orig	2024-05-09 21:46:25.785202500 +0000
 +++ base/process/internal_linux.h
 @@ -138,6 +138,9 @@ TimeDelta ClockTicksToTimeDelta(int64_t 
  // arguments to the lambda.
