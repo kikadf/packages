@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.chromium
 PKG_OPTIONS_REQUIRED_GROUPS=	audio
 PKG_OPTIONS_GROUP.audio=	alsa pulseaudio
-PKG_SUPPORTED_OPTIONS+=		debug profdata
+PKG_SUPPORTED_OPTIONS+=		debug
 PKG_SUGGESTED_OPTIONS=		pulseaudio
 
 .include "../../mk/bsd.options.mk"
@@ -30,13 +30,4 @@ BUILDTYPE=		Release
 GN_ARGS+=		is_debug=false \
 			symbol_level=0
 GN_VERBOSE=		# empty
-.endif
-
-.if !empty(PKG_OPTIONS:Mprofdata)
-GN_ARGS+=			chrome_pgo_phase=1
-.else
-PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
-DISTFILES+=			${DISTNAME}${EXTRACT_SUFX} ${PROFILE_DISTFILE}
-SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
-#GN_ARGS+=			is_official_build=true
 .endif

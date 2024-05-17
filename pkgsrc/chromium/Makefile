@@ -6,12 +6,10 @@ CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
 
-#PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
-
-#DISTFILES+=			${DISTNAME}${EXTRACT_SUFX} \
-#				${PROFILE_DISTFILE}
-
-#SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
+PROFILE_DISTFILE=		chrome-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX}
+SITES.${PROFILE_DISTFILE}=	http://nerd.hu/distfiles/
+DISTFILES+=			${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=			${PROFILE_DISTFILE}
 
 MAINTAINER=			ryoon@NetBSD.org
 #MAINTAINER+=			kikadf.01@gmail.com
@@ -36,7 +34,6 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
-#TOOL_DEPENDS+=			yasm-[0-9]*:../../devel/yasm
 TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
@@ -81,15 +78,12 @@ SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR
 
-#REPLACE_PYTHON+=	v8/tools/run-paxctl.py
-
-#.include "../../lang/llvm/version.mk"
-
-CFLAGS+=		-fno-stack-protector
-#CFLAGS+=		-isystem${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/include # third_party/zlib with clang
-CFLAGS+=		-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
-# Workaround -Wl,-zrelro: 'linker' input unused in bootstrap.py
-CFLAGS+=		-Wno-error=unused-command-line-argument
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing manpage
+SUBST_FILES.man+=	chrome/app/resources/manpage.1.in
+SUBST_SED.man+=		-e 's,@@PACKAGE@@,chromium,g'
+SUBST_SED.man+=		-e 's,@@MENUNAME@@,Chromium Web Browser,g'
 
 .include "options.mk"
 
@@ -100,56 +94,60 @@ TARGET=		chrome chromedriver
 # These libraries are used from the system and the build infrastructure
 # removes them from the bundled third_party directory and replaces them
 # with hooks to use them from the system.
-GN_SYSTEM_LIBS=	dav1d \
-		fontconfig \
-		icu \
-		libaom \
-		libevent \
-		libpng \
-		libvpx \
-		libxml \
-		libxslt \
-		openh264 \
-		opus
+GN_SYSTEM_LIBS=		dav1d
+GN_SYSTEM_LIBS+=	fontconfig
+GN_SYSTEM_LIBS+=	icu
+GN_SYSTEM_LIBS+=	libaom
+GN_SYSTEM_LIBS+=	libevent
+#GN_SYSTEM_LIBS+=	libjpeg # libjpeg-turbo
+GN_SYSTEM_LIBS+=	libpng
+GN_SYSTEM_LIBS+=	libvpx
+GN_SYSTEM_LIBS+=	libxml
+GN_SYSTEM_LIBS+=	libxslt
+GN_SYSTEM_LIBS+=	openh264
+GN_SYSTEM_LIBS+=	opus
 
-#		libjpeg
-#		use_system_libjpeg=true
-
-GN_ARGS+=	is_official_build=true \
-		enable_nacl=false \
-		is_cfi=false \
-		optimize_webui=true \
-		enable_remoting=false \
-		enable_hangout_services_extension=true \
-		enable_log_error_not_reached=true \
-		use_kerberos=false \
-		use_cups=true \
-		use_system_libdrm=true \
-		use_system_harfbuzz=true \
-		use_system_freetype=true \
-		icu_use_data_file=false \
-		is_clang=true \
-		use_lld=false \
-		use_gold=false \
-		use_sysroot=false \
-		treat_warnings_as_errors=false \
-		clang_use_chrome_plugins=false \
-		use_allocator_shim=false \
-		use_partition_alloc=true \
-		use_partition_alloc_as_malloc=false \
-		enable_backup_ref_ptr_support=false \
-		disable_fieldtrial_testing_config=true \
-		fatal_linker_warnings=false \
-		use_custom_libcxx=true \
-		use_custom_libunwind=true \
-		use_udev=true \
-		use_vaapi=false \
-		v8_enable_cet_ibt=true \
-		use_thin_lto=false \
-		thin_lto_enable_optimizations=true \
-		is_component_build=false
+GN_ARGS+=	is_official_build=true
+GN_ARGS+=	enable_nacl=false
+GN_ARGS+=	is_cfi=false
+GN_ARGS+=	optimize_webui=true
+GN_ARGS+=	enable_remoting=false
+GN_ARGS+=	enable_hangout_services_extension=true
+GN_ARGS+=	enable_log_error_not_reached=true
+GN_ARGS+=	use_kerberos=false
+GN_ARGS+=	use_cups=true
+GN_ARGS+=	use_system_libdrm=true
+GN_ARGS+=	use_system_harfbuzz=true
+GN_ARGS+=	use_system_freetype=true
+GN_ARGS+=	icu_use_data_file=false
+GN_ARGS+=	is_clang=true
+GN_ARGS+=	use_lld=false
+GN_ARGS+=	use_gold=false
+GN_ARGS+=	use_sysroot=false
+GN_ARGS+=	treat_warnings_as_errors=false
+GN_ARGS+=	clang_use_chrome_plugins=false
+GN_ARGS+=	use_allocator_shim=false
+GN_ARGS+=	use_partition_alloc=true
+GN_ARGS+=	use_partition_alloc_as_malloc=false
+GN_ARGS+=	enable_backup_ref_ptr_support=false
+GN_ARGS+=	disable_fieldtrial_testing_config=true
+GN_ARGS+=	fatal_linker_warnings=false
+GN_ARGS+=	use_custom_libcxx=true
+GN_ARGS+=	use_custom_libunwind=true
+GN_ARGS+=	use_udev=true
+GN_ARGS+=	use_vaapi=false
+#GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
+GN_ARGS+=	v8_enable_cet_ibt=true
+GN_ARGS+=	use_thin_lto=false
+GN_ARGS+=	thin_lto_enable_optimizations=true
+GN_ARGS+=	is_component_build=false
 
 # flags
+CFLAGS+=	-fno-stack-protector
+CFLAGS+=	-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
+# Workaround -Wl,-zrelro: 'linker' input unused
+CFLAGS+=	-Wno-error=unused-command-line-argument
+
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		-L${X11BASE}/lib \
 		${COMPILER_RPATH_FLAG}${PREFIX}/lib \
@@ -198,8 +196,8 @@ GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\" \
 		google_default_client_id=\"74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com\" \
 		google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
 
-NOT_PAX_MPROTECT_SAFE+=	bin/chrome
-#NOT_PAX_ASLR_SAFE+=	bin/chrome
+#NOT_PAX_MPROTECT_SAFE+=	bin/chrome
+#NOT_PAX_ASLR_SAFE+=		bin/chrome
 
 PKGSRC_COMPILER=	ccache clang
 PKG_CC=			clang
@@ -274,55 +272,41 @@ do-build:
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} ${TARGET}
 
-.if !empty(PKG_OPTIONS:Mprofdata)
-	cd ${WRKSRC}/tools/pgo && \
-		${PYTHONBIN} generate_profile.py -C out/${BUILDTYPE}
-.endif
 
-
-CHROMIUM_DIR=		chrome
-INSTALLATION_DIRS+=	${CHROMIUM_DIR}
+CHROMIUM=		chrome
+BUILDDIR=		${WRKSRC}/out/${BUILDTYPE}
+INSTALLATION_DIRS+=	${CHROMIUM}
 INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	lib
+#INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${PREFIX}/share/applications
 
-ICON_SIZES=		22 24 48 64 128 256
+ICON_SIZES=		22_mono 24 48 64 128 256
 .for i in ${ICON_SIZES}
 ICONS_DIR${i}+=		share/icons/hicolor/${i}x${i}/apps
 INSTALLATION_DIRS+=	${ICONS_DIR${i}}
 .endfor
 
-CHROMIUM_PROGS+=	chrome
-CHROMIUM_SCRIPTS+=	chrome-wrapper
-
-CHROMIUM_FILES+=	chrome.1
-CHROMIUM_FILES+=	chrome_100_percent.pak
-CHROMIUM_FILES+=	chrome_200_percent.pak
-CHROMIUM_FILES+=	icudtl.dat
-CHROMIUM_FILES+=	keyboard_resources.pak
-CHROMIUM_FILES+=	resources.pak
+CHROMIUM_LIBS+=		libEGL.so
+CHROMIUM_LIBS+=		libGLESv2.so
+CHROMIUM_LIBS+=		libVkICD_mock_icd.so
+CHROMIUM_LIBS+=		libvulkan.so.1
+.if ${MACHINE_ARCH} != "aarch64"
+CHROMIUM_LIBS+=		libvk_swiftshader.so
+CHROMIUM_LIBS+=		vk_swiftshader_icd.json
+.endif
 
 do-install:
-.for i in ${CHROMIUM_PROGS}
-	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/${i} \
-		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
-.endfor
-.for i in ${CHROMIUM_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/out/${BUILDTYPE}/${i} \
-		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
-.endfor
+	${INSTALL_SCRIPT} ${FILESDIR}/${CHROMIUM} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${FILESDIR}/chromium-browser.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_PROGRAM} ${BUILDDIR}/${CHROMIUM} ${DESTDIR}${PREFIX}/${CHROMIUM}
+	${INSTALL_PROGRAM} ${BUILDDIR}/chromedriver.unstripped  ${DESTDIR}${PREFIX}/bin/chromedriver
 .for i in ${CHROMIUM_LIBS}
-	${INSTALL_LIB} ${WRKSRC}/out/${BUILDTYPE}/${i} \
-		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
+	${INSTALL_LIB} ${BUILDDIR}/${i} ${DESTDIR}${PREFIX}/${CHROMIUM}
 .endfor
-.for i in ${CHROMIUM_FILES}
-	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${i} \
-		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
-.endfor
-	cd ${DESTDIR}${PREFIX}/bin && \
-		${LN} -sf ../${CHROMIUM_DIR}/chrome .
-	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/chrome.1 \
-		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/chrome/app/resources/manpage.1.in \
+		 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/chrome.1
+	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/${CHROMIUM}
 .for i in ${ICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/theme/chromium/product_logo_${i}.png \
 		${DESTDIR}${PREFIX}/${ICONS_DIR${i}}/chrome.png
@@ -330,7 +314,7 @@ do-install:
 .for i in locales resources
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		${FIND} ${i} -type f -print | \
-		pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
+		pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
@@ -374,6 +358,7 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
 BUILDLINK_TRANSFORM+=	l:pci:pciutils
