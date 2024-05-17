@@ -76,7 +76,8 @@ SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
-SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR
+SUBST_FILES.path+=	chrome
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
@@ -202,7 +203,10 @@ GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\" \
 PKGSRC_COMPILER=	ccache clang
 PKG_CC=			clang
 PKG_CXX=		clang++
-UNLIMIT_RESOURCES=	datasize
+#UNLIMIT_RESOURCES=	datasize
+
+post-extract:
+	${CP} ${FILESDIR}/chrome ${WRKSRC}/
 
 pre-configure:
 #	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
@@ -297,7 +301,7 @@ CHROMIUM_LIBS+=		vk_swiftshader_icd.json
 .endif
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/${CHROMIUM} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${CHROMIUM} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${FILESDIR}/chromium-browser.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_PROGRAM} ${BUILDDIR}/${CHROMIUM} ${DESTDIR}${PREFIX}/${CHROMIUM}
 	${INSTALL_PROGRAM} ${BUILDDIR}/chromedriver.unstripped  ${DESTDIR}${PREFIX}/bin/chromedriver
