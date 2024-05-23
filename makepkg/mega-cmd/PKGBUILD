@@ -1,8 +1,8 @@
 # Maintainer: kikadf <kikadf.01@gmail.com>
 
 pkgname=mega-cmd
-pkgver=1.6.3
-pkgrel=2
+pkgver=1.7.0
+pkgrel=1
 pkgdesc="CLI and Scripable Application to access MEGA"
 url="https://mega.nz/cmd"
 license=('GPL3' 'BSD')
