@@ -2,11 +2,11 @@ COMMENT =		CLI and scriptable application to access MEGA
 
 GH_ACCOUNT =		meganz
 GH_PROJECT =		MEGAcmd
-GH_TAGNAME =		1.6.3_Linux
+GH_TAGNAME =		1.7.0_Linux
 PKGNAME =		${DISTNAME:S/_Linux//:L}
-_SDKV =			4.17.1d
+_SDKV =			4.31.0b
 
-SHARED_LIBS +=		mega                      0.0 # 41701.0
+SHARED_LIBS +=		mega                      0.0 # 43000.0
 
 CATEGORIES =		net
 
@@ -16,13 +16,11 @@ MAINTAINER =		kikadf <kikadf.01@gmail.com>
 PERMIT_PACKAGE =	Yes
 
 WANTLIB += ${COMPILER_LIBCXX} c cares crypto cryptopp curl curses
-WANTLIB += ereadline m nghttp2 nghttp3 ngtcp2 ngtcp2_crypto_openssl
-WANTLIB += pcre pcrecpp sodium sqlite3 ssl uv z
+WANTLIB += ereadline m nghttp2 nghttp3 ngtcp2 ngtcp2_crypto_quictls
+WANTLIB += pcre pcrecpp sodium sqlite3 ssl uv z icudata icuuc
 
-MASTER_SITES0 =		https://github.com/meganz/sdk/archive/refs/tags/
-
-DISTFILES +=		${GH_DISTFILE} \
-			meganz-sdk-{}v${_SDKV}${EXTRACT_SUFX}:0
+SITES.sdk =		https://github.com/meganz/sdk/archive/refs/tags/
+DISTFILES.sdk =		meganz-sdk-{}v${_SDKV}${EXTRACT_SUFX}
 
 COMPILER =		base-clang ports-gcc
 
@@ -33,10 +31,12 @@ LIB_DEPENDS =		databases/sqlite3 \
 			devel/readline \
 			net/curl \
 			net/libcares \
-			security/libsodium
+			security/libsodium \
+			textproc/icu4c
 
 TEST_DEPENDS =		devel/gtest
 
+USE_GMAKE=		Yes
 CONFIGURE_STYLE =	autoreconf
 AUTOCONF_VERSION =	2.69
 AUTOMAKE_VERSION =	1.16
