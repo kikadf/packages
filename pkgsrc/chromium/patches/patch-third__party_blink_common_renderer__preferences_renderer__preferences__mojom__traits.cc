@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2024-05-09 21:47:04.063730500 +0000
+--- third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc.orig	2024-05-21 22:43:08.446087000 +0000
 +++ third_party/blink/common/renderer_preferences/renderer_preferences_mojom_traits.cc
 @@ -68,7 +68,7 @@ bool StructTraits<blink::mojom::Renderer
  

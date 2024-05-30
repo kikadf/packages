@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- sandbox/linux/BUILD.gn.orig	2024-05-09 21:47:01.691573900 +0000
+--- sandbox/linux/BUILD.gn.orig	2024-05-21 22:43:07.153971700 +0000
 +++ sandbox/linux/BUILD.gn
 @@ -12,11 +12,11 @@ if (is_android) {
  }

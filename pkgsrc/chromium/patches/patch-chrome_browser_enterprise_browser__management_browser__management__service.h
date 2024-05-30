@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2024-05-09 21:46:35.665855000 +0000
+--- chrome/browser/enterprise/browser_management/browser_management_service.h.orig	2024-05-21 22:42:51.104540000 +0000
 +++ chrome/browser/enterprise/browser_management/browser_management_service.h
 @@ -28,7 +28,7 @@ class BrowserManagementMetadata {
  

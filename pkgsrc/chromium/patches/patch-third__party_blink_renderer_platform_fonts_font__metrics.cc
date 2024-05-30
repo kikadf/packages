@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/fonts/font_metrics.cc.orig	2024-05-09 21:47:07.351947500 +0000
+--- third_party/blink/renderer/platform/fonts/font_metrics.cc.orig	2024-05-21 22:43:10.558275200 +0000
 +++ third_party/blink/renderer/platform/fonts/font_metrics.cc
 @@ -39,7 +39,7 @@
  namespace blink {

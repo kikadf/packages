@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/focus/focus_manager.cc.orig	2024-05-09 21:47:31.821563700 +0000
+--- ui/views/focus/focus_manager.cc.orig	2024-05-21 22:43:36.452584700 +0000
 +++ ui/views/focus/focus_manager.cc
-@@ -579,7 +579,7 @@ bool FocusManager::RedirectAcceleratorTo
+@@ -582,7 +582,7 @@ bool FocusManager::RedirectAcceleratorTo
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -14,7 +14,7 @@ $NetBSD$
    // Processing an accelerator can delete things. Because we
    // need these objects afterwards on Linux, save widget_ as weak pointer and
    // save the close_on_deactivate property value of widget_delegate in a
-@@ -596,7 +596,7 @@ bool FocusManager::RedirectAcceleratorTo
+@@ -599,7 +599,7 @@ bool FocusManager::RedirectAcceleratorTo
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

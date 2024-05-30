@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/message_loop/message_pump_glib.cc.orig	2024-05-09 21:46:25.753200300 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2024-05-21 22:42:46.688146400 +0000
 +++ base/message_loop/message_pump_glib.cc
 @@ -8,6 +8,11 @@
  #include <glib.h>

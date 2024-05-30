@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/chrome_paths.cc.orig	2024-05-09 21:46:39.870132700 +0000
+--- chrome/common/chrome_paths.cc.orig	2024-05-21 22:42:54.540846600 +0000
 +++ chrome/common/chrome_paths.cc
 @@ -30,7 +30,7 @@
  #include "base/apple/foundation_util.h"
@@ -41,7 +41,7 @@ $NetBSD$
        if (!GetUserDownloadsDirectorySafe(&cur)) {
          return false;
        }
-@@ -544,7 +544,7 @@ bool PathProvider(int key, base::FilePat
+@@ -541,7 +541,7 @@ bool PathProvider(int key, base::FilePat
          return false;
        }
        break;
@@ -50,7 +50,7 @@ $NetBSD$
      case chrome::DIR_POLICY_FILES: {
        cur = base::FilePath(policy::kPolicyPath);
        break;
-@@ -555,7 +555,7 @@ bool PathProvider(int key, base::FilePat
+@@ -552,7 +552,7 @@ bool PathProvider(int key, base::FilePat
  #if BUILDFLAG(IS_CHROMEOS_ASH) ||                              \
      ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) && \
       BUILDFLAG(CHROMIUM_BRANDING)) ||                          \
@@ -59,7 +59,7 @@ $NetBSD$
      case chrome::DIR_USER_EXTERNAL_EXTENSIONS: {
        if (!base::PathService::Get(chrome::DIR_USER_DATA, &cur)) {
          return false;
-@@ -564,7 +564,7 @@ bool PathProvider(int key, base::FilePat
+@@ -561,7 +561,7 @@ bool PathProvider(int key, base::FilePat
        break;
      }
  #endif
@@ -68,7 +68,7 @@ $NetBSD$
      case chrome::DIR_STANDALONE_EXTERNAL_EXTENSIONS: {
        cur = base::FilePath(kFilepathSinglePrefExtensions);
        break;
-@@ -612,7 +612,7 @@ bool PathProvider(int key, base::FilePat
+@@ -609,7 +609,7 @@ bool PathProvider(int key, base::FilePat
  #endif
  
  #if BUILDFLAG(ENABLE_EXTENSIONS) && \
@@ -77,7 +77,7 @@ $NetBSD$
      case chrome::DIR_NATIVE_MESSAGING:
  #if BUILDFLAG(IS_MAC)
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
-@@ -626,6 +626,9 @@ bool PathProvider(int key, base::FilePat
+@@ -623,6 +623,9 @@ bool PathProvider(int key, base::FilePat
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        cur = base::FilePath(
            FILE_PATH_LITERAL("/etc/opt/chrome/native-messaging-hosts"));

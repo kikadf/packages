@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/management/management_ui.cc.orig	2024-05-09 21:46:39.594114300 +0000
+--- chrome/browser/ui/webui/management/management_ui.cc.orig	2024-05-21 22:42:54.288824000 +0000
 +++ chrome/browser/ui/webui/management/management_ui.cc
 @@ -98,11 +98,11 @@ content::WebUIDataSource* CreateAndAddMa
        {kManagementOnFileTransferVisibleData,

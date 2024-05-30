@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/utility_process_host.cc.orig	2024-05-09 21:46:50.334823800 +0000
+--- content/browser/utility_process_host.cc.orig	2024-05-21 22:43:01.265446400 +0000
 +++ content/browser/utility_process_host.cc
 @@ -61,7 +61,7 @@
  #include "content/browser/v8_snapshot_files.h"
@@ -41,7 +41,7 @@ $NetBSD$
        allowed_gpu_(false),
        gpu_client_(nullptr, base::OnTaskRunnerDeleter(nullptr)),
  #endif
-@@ -234,7 +234,7 @@ void UtilityProcessHost::SetPinUser32() 
+@@ -209,7 +209,7 @@ void UtilityProcessHost::SetPreloadLibra
  #endif  // BUILDFLAG(IS_WIN)
  
  void UtilityProcessHost::SetAllowGpuClient() {
@@ -50,16 +50,20 @@ $NetBSD$
    allowed_gpu_ = true;
  #endif
  }
-@@ -375,7 +375,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -349,8 +349,11 @@ bool UtilityProcessHost::StartProcess() 
+       switches::kFailAudioStreamCreation,
        switches::kMuteAudio,
        switches::kUseFileForFakeAudioCapture,
++#if BUILDFLAG(IS_BSD)
++      switches::kAudioBackend,
++#endif
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
 -    BUILDFLAG(IS_SOLARIS)
 +    BUILDFLAG(IS_SOLARIS) || BUILDFLAG(IS_NETBSD)
        switches::kAlsaInputDevice,
        switches::kAlsaOutputDevice,
  #endif
-@@ -434,7 +434,7 @@ bool UtilityProcessHost::StartProcess() 
+@@ -409,7 +412,7 @@ bool UtilityProcessHost::StartProcess() 
      file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload());
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -68,7 +72,7 @@ $NetBSD$
      // The network service should have access to the parent directories
      // necessary for its usage.
      if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -445,13 +445,13 @@ bool UtilityProcessHost::StartProcess() 
+@@ -420,13 +423,13 @@ bool UtilityProcessHost::StartProcess() 
      }
  #endif  // BUILDFLAG(IS_LINUX)
  

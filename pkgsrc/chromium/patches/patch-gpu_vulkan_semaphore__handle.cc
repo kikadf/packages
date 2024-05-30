@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/vulkan/semaphore_handle.cc.orig	2024-05-09 21:46:52.430962000 +0000
+--- gpu/vulkan/semaphore_handle.cc.orig	2024-05-21 22:43:03.077608000 +0000
 +++ gpu/vulkan/semaphore_handle.cc
 @@ -39,7 +39,7 @@ SemaphoreHandle::SemaphoreHandle(gfx::Gp
    // https://fuchsia.dev/reference/fidl/fuchsia.ui.scenic.

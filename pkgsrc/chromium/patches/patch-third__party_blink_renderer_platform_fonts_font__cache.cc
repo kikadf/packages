@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2024-05-09 21:47:07.347947400 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2024-05-21 22:43:10.554274800 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
 @@ -73,7 +73,7 @@ extern const char kNotoColorEmojiCompat[
  

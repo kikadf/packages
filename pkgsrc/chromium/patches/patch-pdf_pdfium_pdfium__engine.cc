@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- pdf/pdfium/pdfium_engine.cc.orig	2024-05-09 21:47:01.295547700 +0000
+--- pdf/pdfium/pdfium_engine.cc.orig	2024-05-21 22:43:06.793939600 +0000
 +++ pdf/pdfium/pdfium_engine.cc
 @@ -85,7 +85,7 @@
  #include "gin/public/cppgc.h"

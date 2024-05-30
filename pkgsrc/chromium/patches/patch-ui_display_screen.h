@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/display/screen.h.orig	2024-05-09 21:47:31.245525600 +0000
+--- ui/display/screen.h.orig	2024-05-21 22:43:35.940539100 +0000
 +++ ui/display/screen.h
 @@ -131,7 +131,7 @@ class DISPLAY_EXPORT Screen {
    // (both of which may or may not be `nearest_id`).

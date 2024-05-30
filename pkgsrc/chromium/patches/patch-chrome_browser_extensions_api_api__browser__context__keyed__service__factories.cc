@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2024-05-09 21:46:35.733859500 +0000
+--- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2024-05-21 22:42:51.172546400 +0000
 +++ chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc
 @@ -45,7 +45,7 @@
  #include "printing/buildflags/buildflags.h"

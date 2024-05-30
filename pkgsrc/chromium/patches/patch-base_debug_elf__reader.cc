@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/debug/elf_reader.cc.orig	2024-05-09 21:46:25.697196700 +0000
+--- base/debug/elf_reader.cc.orig	2024-05-21 22:42:46.632141400 +0000
 +++ base/debug/elf_reader.cc
 @@ -45,6 +45,10 @@ using Xword = Elf64_Xword;
  

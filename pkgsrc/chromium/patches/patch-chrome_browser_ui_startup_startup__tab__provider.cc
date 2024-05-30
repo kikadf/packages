@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2024-05-09 21:46:39.166086200 +0000
+--- chrome/browser/ui/startup/startup_tab_provider.cc.orig	2024-05-21 22:42:53.816782000 +0000
 +++ chrome/browser/ui/startup/startup_tab_provider.cc
 @@ -61,7 +61,7 @@
  #include "extensions/browser/extension_registry.h"

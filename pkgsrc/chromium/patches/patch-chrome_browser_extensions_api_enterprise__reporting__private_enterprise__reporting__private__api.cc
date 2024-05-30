@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2024-05-09 21:46:35.769862000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc.orig	2024-05-21 22:42:51.216550000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/enterprise_reporting_private_api.cc
-@@ -32,7 +32,7 @@
+@@ -33,7 +33,7 @@
  #include "components/reporting/util/statusor.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include <optional>
  
  #include "base/strings/string_util.h"
-@@ -149,7 +149,7 @@ api::enterprise_reporting_private::Conte
+@@ -150,7 +150,7 @@ api::enterprise_reporting_private::Conte
    return info;
  }
  
@@ -23,7 +23,7 @@ $NetBSD$
  
  device_signals::SignalsAggregationRequest CreateAggregationRequest(
      device_signals::SignalName signal_name) {
-@@ -210,7 +210,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
+@@ -211,7 +211,7 @@ EnterpriseReportingPrivateGetDeviceIdFun
  
  // getPersistentSecret
  
@@ -32,7 +32,7 @@ $NetBSD$
  
  EnterpriseReportingPrivateGetPersistentSecretFunction::
      EnterpriseReportingPrivateGetPersistentSecretFunction() = default;
-@@ -636,7 +636,7 @@ void EnterpriseReportingPrivateEnqueueRe
+@@ -637,7 +637,7 @@ void EnterpriseReportingPrivateEnqueueRe
  }
  #endif
  

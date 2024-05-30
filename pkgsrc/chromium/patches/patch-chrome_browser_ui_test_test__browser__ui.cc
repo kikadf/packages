@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/test/test_browser_ui.cc.orig	2024-05-09 21:46:39.186087400 +0000
+--- chrome/browser/ui/test/test_browser_ui.cc.orig	2024-05-21 22:42:53.844784500 +0000
 +++ chrome/browser/ui/test/test_browser_ui.cc
 @@ -22,7 +22,7 @@
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/public/common/content_switches.h"
  #include "ui/base/test/skia_gold_matching_algorithm.h"
 @@ -35,7 +35,7 @@
- // TODO(https://crbug.com/958242) support Mac for pixel tests.
+ // TODO(crbug.com/40625383) support Mac for pixel tests.
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_WIN) || (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))

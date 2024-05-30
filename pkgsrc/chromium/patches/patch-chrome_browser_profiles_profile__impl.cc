@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2024-05-09 21:46:36.769928000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2024-05-21 22:42:52.100629000 +0000
 +++ chrome/browser/profiles/profile_impl.cc
-@@ -267,6 +267,10 @@
+@@ -263,6 +263,10 @@
  #include "chrome/browser/spellchecker/spellcheck_service.h"
  #endif
  
@@ -16,7 +16,7 @@ $NetBSD$
  using bookmarks::BookmarkModel;
  using content::BrowserThread;
  using content::DownloadManagerDelegate;
-@@ -600,7 +604,7 @@ void ProfileImpl::LoadPrefsForNormalStar
+@@ -597,7 +601,7 @@ void ProfileImpl::LoadPrefsForNormalStar
  #else
    {
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)
@@ -25,7 +25,7 @@ $NetBSD$
      ProfileManager* profile_manager = g_browser_process->profile_manager();
      ProfileAttributesEntry* entry =
          profile_manager->GetProfileAttributesStorage()
-@@ -893,7 +897,17 @@ void ProfileImpl::DoFinalInit(CreateMode
+@@ -890,7 +894,17 @@ void ProfileImpl::DoFinalInit(CreateMode
  }
  
  base::FilePath ProfileImpl::last_selected_directory() {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/vulkan/vulkan_device_queue.h.orig	2024-05-09 21:46:52.434962500 +0000
+--- gpu/vulkan/vulkan_device_queue.h.orig	2024-05-21 22:43:03.077608000 +0000
 +++ gpu/vulkan/vulkan_device_queue.h
 @@ -169,7 +169,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanDev
    bool allow_protected_memory_ = false;

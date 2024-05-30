@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2024-05-09 21:46:49.850791700 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2024-05-21 22:43:00.893413300 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.h
-@@ -149,7 +149,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
+@@ -150,7 +150,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
    void OnDisplayMetricsChanged(const display::Display& display,
                                 uint32_t changed_metrics);
  
@@ -14,7 +14,7 @@ $NetBSD$
    bool IsGpuMemoryBufferNV12Supported();
    void SetGpuMemoryBufferNV12Supported(bool supported);
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -301,7 +301,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
+@@ -302,7 +302,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
    bool application_is_visible_ = true;
  
    bool disable_gpu_compositing_ = false;

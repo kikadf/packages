@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/memory/platform_shared_memory_region_posix.cc.orig	2024-05-09 21:46:25.745199700 +0000
+--- base/memory/platform_shared_memory_region_posix.cc.orig	2024-05-21 22:42:46.676145300 +0000
 +++ base/memory/platform_shared_memory_region_posix.cc
 @@ -55,7 +55,7 @@ bool CheckFDAccessMode(int fd, int expec
  

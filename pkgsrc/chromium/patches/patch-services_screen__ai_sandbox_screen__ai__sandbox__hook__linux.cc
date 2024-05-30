@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2024-05-09 21:47:02.167605200 +0000
+--- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2024-05-21 22:43:07.445997700 +0000
 +++ services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc
 @@ -53,6 +53,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
      }

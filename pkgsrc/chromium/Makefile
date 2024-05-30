@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			124.0.6367.201
+VERSION=			125.0.6422.76
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -76,7 +76,7 @@ SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
-SUBST_FILES.path+=	chrome
+SUBST_FILES.path+=	chrome.sh
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE
 
 SUBST_CLASSES+=		man
@@ -183,7 +183,7 @@ GN_ARGS+=	extra_cxxflags=\"${EXTRA_CXXFLAGS}\" \
 
 # Proprietary codecs are enabled.
 FFMPEG_BRAND=	Chrome
-FFMPEG_BDIR=	${WRKSRC}/build.${FFMPEG_TARGET}.${LOWER_OPSYS}/${FFMPEG_BRAND}
+FFMPEG_BDIR=	${WRKSRC}/third_party/ffmpeg/build.${FFMPEG_TARGET}.${LOWER_OPSYS}/${FFMPEG_BRAND}
 FFMPEG_CDIR=	${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${LOWER_OPSYS}/${FFMPEG_TARGET}
 
 GN_ARGS+=	proprietary_codecs=true \
@@ -197,8 +197,8 @@ GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\" \
 		google_default_client_id=\"74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com\" \
 		google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
 
-#NOT_PAX_MPROTECT_SAFE+=	bin/chrome
-#NOT_PAX_ASLR_SAFE+=		bin/chrome
+NOT_PAX_MPROTECT_SAFE+=	chrome/chrome
+#NOT_PAX_ASLR_SAFE+=		chrome/chrome
 
 PKGSRC_COMPILER=	ccache clang
 PKG_CC=			clang
@@ -206,7 +206,7 @@ PKG_CXX=		clang++
 #UNLIMIT_RESOURCES=	datasize
 
 post-extract:
-	${CP} ${FILESDIR}/chrome ${WRKSRC}/
+	${CP} ${FILESDIR}/chrome ${WRKSRC}/chrome.sh
 
 pre-configure:
 #	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
@@ -221,8 +221,8 @@ pre-configure:
 #	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
 #		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
 	# Prepare internal ffmpeg
-	cd ${WRKSRC}/third_party/ffmpeg && \
-		${PYTHONBIN} chromium/scripts/build_ffmpeg.py \
+	cd ${WRKSRC}/media/ffmpeg && \
+		${PYTHONBIN} scripts/build_ffmpeg.py \
 		${LOWER_OPSYS} ${FFMPEG_TARGET} --config-only --branding=${FFMPEG_BRAND}
 	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
 	${INSTALL_DATA_DIR} ${FFMPEG_CDIR}
@@ -301,7 +301,7 @@ CHROMIUM_LIBS+=		vk_swiftshader_icd.json
 .endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${CHROMIUM} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/chrome.sh ${DESTDIR}${PREFIX}/bin/${CHROMIUM}
 	${INSTALL_DATA} ${FILESDIR}/chromium-browser.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_PROGRAM} ${BUILDDIR}/${CHROMIUM} ${DESTDIR}${PREFIX}/${CHROMIUM}
 	${INSTALL_PROGRAM} ${BUILDDIR}/chromedriver.unstripped  ${DESTDIR}${PREFIX}/bin/chromedriver

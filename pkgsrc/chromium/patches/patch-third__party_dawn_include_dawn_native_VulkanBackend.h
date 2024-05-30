@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-05-09 21:47:53.895021400 +0000
+--- third_party/dawn/include/dawn/native/VulkanBackend.h.orig	2024-05-21 22:44:17.428239300 +0000
 +++ third_party/dawn/include/dawn/native/VulkanBackend.h
-@@ -83,7 +83,8 @@ struct ExternalImageExportInfoVk : Exter
+@@ -90,7 +90,8 @@ struct DAWN_NATIVE_EXPORT SamplerYCbCrVu
  };
  
  // Can't use DAWN_PLATFORM_IS(LINUX) since header included in both Dawn and Chrome

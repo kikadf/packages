@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_freebsd.cc.orig	2024-05-09 21:46:25.789202700 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2024-05-21 22:42:46.720149300 +0000
 +++ base/process/process_metrics_freebsd.cc
 @@ -3,19 +3,37 @@
  // found in the LICENSE file.
@@ -46,12 +46,14 @@ $NetBSD$
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -23,20 +41,17 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -23,22 +41,18 @@ std::unique_ptr<ProcessMetrics> ProcessM
    return WrapUnique(new ProcessMetrics(process));
  }
  
--std::optional<double> ProcessMetrics::GetPlatformIndependentCPUUsage() {
-+std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
+-base::expected<double, ProcessCPUUsageError>
+-ProcessMetrics::GetPlatformIndependentCPUUsage() {
++base::expected<TimeDelta, ProcessCPUUsageError>
++ProcessMetrics::GetCumulativeCPUUsage() {
    struct kinfo_proc info;
 -  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, process_};
 -  size_t length = sizeof(info);
@@ -61,20 +63,21 @@ $NetBSD$
 +  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, process_ };
  
    if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
--    return std::nullopt;
-+    return std::optional(TimeDelta());
+-    return base::unexpected(ProcessCPUUsageError::kSystemError);
++    return base::ok(TimeDelta());
  
--  return std::optional(double{info.ki_pctcpu} / FSCALE * 100.0);
+-  return base::ok(double{info.ki_pctcpu} / FSCALE * 100.0);
 -}
 -
--std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
+-base::expected<TimeDelta, ProcessCPUUsageError>
+-ProcessMetrics::GetCumulativeCPUUsage() {
 -  NOTREACHED();
--  return std::nullopt;
-+  return std::optional(Microseconds(info.ki_runtime));
+-  return base::unexpected(ProcessCPUUsageError::kNotImplemented);
++  return base::ok(Microseconds(info.ki_runtime));
  }
  
  size_t GetSystemCommitCharge() {
-@@ -62,4 +77,228 @@ size_t GetSystemCommitCharge() {
+@@ -64,4 +78,228 @@ size_t GetSystemCommitCharge() {
    return mem_total - (mem_free*pagesize) - (mem_inactive*pagesize);
  }
  

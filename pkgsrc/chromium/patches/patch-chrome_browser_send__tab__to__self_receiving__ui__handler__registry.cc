@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc.orig	2024-05-09 21:46:37.425971300 +0000
+--- chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc.orig	2024-05-21 22:42:52.852696200 +0000
 +++ chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc
 @@ -15,7 +15,7 @@
  #include "components/send_tab_to_self/features.h"

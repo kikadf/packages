@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-05-09 21:46:49.478767200 +0000
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc.orig	2024-05-21 22:43:00.609387900 +0000
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.cc
 @@ -111,7 +111,7 @@ RootCompositorFrameSinkImpl::Create(
    output_surface->SetNeedsSwapSizeNotifications(
@@ -14,7 +14,7 @@ $NetBSD$
    // For X11, we need notify client about swap completion after resizing, so the
    // client can use it for synchronize with X11 WM.
    output_surface->SetNeedsSwapSizeNotifications(true);
-@@ -649,7 +649,7 @@ void RootCompositorFrameSinkImpl::Displa
+@@ -654,7 +654,7 @@ void RootCompositorFrameSinkImpl::Displa
    if (display_client_ && enable_swap_completion_callback_) {
      display_client_->DidCompleteSwapWithSize(pixel_size);
    }

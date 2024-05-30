@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-05-09 21:46:39.910135300 +0000
+--- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-05-21 22:42:54.580850100 +0000
 +++ chrome/common/media/component_widevine_cdm_hint_file_linux.h
-@@ -15,7 +15,7 @@
+@@ -17,7 +17,7 @@
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/BUILD.gn.orig	2024-05-09 21:47:02.035596600 +0000
+--- services/network/BUILD.gn.orig	2024-05-21 22:43:07.313985800 +0000
 +++ services/network/BUILD.gn
-@@ -410,7 +410,6 @@ if (is_linux || is_chromeos) {
+@@ -412,7 +412,6 @@ if (is_linux || is_chromeos) {
      ]
      deps = [
        "//base:base",

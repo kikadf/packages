@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gtk/printing/print_dialog_gtk.cc.orig	2024-05-09 21:47:31.509543000 +0000
+--- ui/gtk/printing/print_dialog_gtk.cc.orig	2024-05-21 22:43:36.212563300 +0000
 +++ ui/gtk/printing/print_dialog_gtk.cc
 @@ -433,7 +433,7 @@ void PrintDialogGtk::ShowDialog(
    GtkPrintCapabilities cap = static_cast<GtkPrintCapabilities>(

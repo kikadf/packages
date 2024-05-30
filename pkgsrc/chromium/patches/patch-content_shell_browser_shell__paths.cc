@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/shell/browser/shell_paths.cc.orig	2024-05-09 21:46:50.766852400 +0000
+--- content/shell/browser/shell_paths.cc.orig	2024-05-21 22:43:01.565473000 +0000
 +++ content/shell/browser/shell_paths.cc
 @@ -13,7 +13,7 @@
  

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-05-09 21:47:07.563961500 +0000
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-05-21 22:43:10.874303300 +0000
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
-@@ -313,7 +313,7 @@
+@@ -323,7 +323,7 @@
        name: "AppTitle",
        status: "experimental",
        origin_trial_feature_name: "AppTitle",
@@ -14,7 +14,7 @@ $NetBSD$
        base_feature: "WebAppEnableAppTitle",
      },
      {
-@@ -1961,7 +1961,7 @@
+@@ -1928,7 +1928,7 @@
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
        origin_trial_feature_name: "FullscreenPopupWindows",
@@ -23,7 +23,7 @@ $NetBSD$
      },
      {
        name: "GamepadButtonAxisEvents",
-@@ -2882,7 +2882,7 @@
+@@ -2890,7 +2890,7 @@
        name: "PaymentHandlerMinimalHeaderUX",
        origin_trial_feature_name: "PaymentHandlerMinimalHeaderUX",
        origin_trial_allows_third_party: true,
@@ -32,7 +32,7 @@ $NetBSD$
        status: "stable",
      },
      {
-@@ -3074,7 +3074,7 @@
+@@ -3078,7 +3078,7 @@
      {
        name: "PrivateNetworkAccessPermissionPrompt",
        origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
@@ -41,7 +41,7 @@ $NetBSD$
        status: "stable",
        public: true,
        base_feature: "none",
-@@ -3942,7 +3942,7 @@
+@@ -3946,7 +3946,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -50,7 +50,7 @@ $NetBSD$
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -4102,7 +4102,7 @@
+@@ -4113,7 +4113,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",

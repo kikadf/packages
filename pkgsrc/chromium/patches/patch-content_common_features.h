@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/common/features.h.orig	2024-05-09 21:46:50.530836600 +0000
+--- content/common/features.h.orig	2024-05-21 22:43:01.333452500 +0000
 +++ content/common/features.h
-@@ -38,7 +38,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
+@@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(
      kEnableBackForwardCacheForOngoingSubframeNavigation);
@@ -14,7 +14,7 @@ $NetBSD$
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnsureAllowBindingsIsAlwaysForWebUI);
-@@ -63,7 +63,7 @@ CONTENT_EXPORT extern const base::Featur
+@@ -61,7 +61,7 @@ CONTENT_EXPORT extern const base::Featur
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGpuInfoCollectionSeparatePrefetch);
  #endif
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGroupNIKByJoiningOrigin);
@@ -22,4 +22,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kHandleChildThreadTypeChangesInBrowser);
  #endif
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kHighPriorityBeforeUnload);
+ 

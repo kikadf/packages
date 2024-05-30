@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/compositor/compositor.h.orig	2024-05-09 21:47:31.217523800 +0000
+--- ui/compositor/compositor.h.orig	2024-05-21 22:43:35.752522200 +0000
 +++ ui/compositor/compositor.h
-@@ -455,7 +455,7 @@ class COMPOSITOR_EXPORT Compositor : pub
+@@ -456,7 +456,7 @@ class COMPOSITOR_EXPORT Compositor : pub
    // base::PowerSuspendObserver:
    void OnResume() override;
  

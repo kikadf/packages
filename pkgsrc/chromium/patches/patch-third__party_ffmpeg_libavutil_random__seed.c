@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-05-09 21:47:45.266451600 +0000
+--- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-05-21 22:45:05.488525400 +0000
 +++ third_party/ffmpeg/libavutil/random_seed.c
 @@ -20,6 +20,10 @@
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-05-09 21:46:50.038804300 +0000
+--- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-05-21 22:43:01.101431800 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
 @@ -25,7 +25,7 @@
  #include "media/base/media_switches.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "content/browser/gpu/gpu_data_manager_impl.h"
  #endif
  
-@@ -172,7 +172,7 @@ void ServiceVideoCaptureDeviceLauncher::
+@@ -173,7 +173,7 @@ void ServiceVideoCaptureDeviceLauncher::
    }
  #else
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled()) {

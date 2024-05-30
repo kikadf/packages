@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/perf/chrome_telemetry_build/BUILD.gn.orig	2024-05-09 21:47:30.369467700 +0000
+--- tools/perf/chrome_telemetry_build/BUILD.gn.orig	2024-05-21 22:43:34.868443500 +0000
 +++ tools/perf/chrome_telemetry_build/BUILD.gn
 @@ -47,7 +47,7 @@ group("telemetry_chrome_test") {
      data_deps += [ "//chrome:reorder_imports" ]

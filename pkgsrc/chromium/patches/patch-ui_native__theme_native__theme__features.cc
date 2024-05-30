@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/native_theme/native_theme_features.cc.orig	2024-05-09 21:47:31.529544400 +0000
+--- ui/native_theme/native_theme_features.cc.orig	2024-05-21 22:43:36.232565200 +0000
 +++ ui/native_theme/native_theme_features.cc
 @@ -54,7 +54,7 @@ bool IsOverlayScrollbarEnabled() {
  

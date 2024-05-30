@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn.orig	2024-05-09 21:47:02.159604800 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn.orig	2024-05-21 22:43:07.441997300 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn
 @@ -29,10 +29,14 @@ component("memory_instrumentation") {
      sources += [ "os_metrics_win.cc" ]

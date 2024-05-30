@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/http/http_auth_preferences.h.orig	2024-05-09 21:47:00.427490200 +0000
+--- net/http/http_auth_preferences.h.orig	2024-05-21 22:43:06.245890600 +0000
 +++ net/http/http_auth_preferences.h
 @@ -50,7 +50,7 @@ class NET_EXPORT HttpAuthPreferences {
  #if BUILDFLAG(IS_ANDROID)

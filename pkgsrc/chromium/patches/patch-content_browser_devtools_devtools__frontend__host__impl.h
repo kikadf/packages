@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-05-09 21:46:49.778787100 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-05-21 22:43:00.841408500 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.h
-@@ -33,7 +33,7 @@ class DevToolsFrontendHostImpl : public 
+@@ -34,7 +34,7 @@ class DevToolsFrontendHostImpl : public 
  
    void BadMessageReceived() override;
  

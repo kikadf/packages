@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2024-05-09 21:46:44.502438500 +0000
+--- components/media_router/common/providers/cast/channel/cast_message_util.cc.orig	2024-05-21 22:42:58.205173500 +0000
 +++ components/media_router/common/providers/cast/channel/cast_message_util.cc
 @@ -169,7 +169,7 @@ int GetVirtualConnectPlatformValue() {
    return 4;

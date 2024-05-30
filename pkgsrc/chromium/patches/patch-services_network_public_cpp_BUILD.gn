@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/public/cpp/BUILD.gn.orig	2024-05-09 21:47:02.071598800 +0000
+--- services/network/public/cpp/BUILD.gn.orig	2024-05-21 22:43:07.349989200 +0000
 +++ services/network/public/cpp/BUILD.gn
-@@ -486,7 +486,7 @@ component("cpp_base") {
+@@ -510,7 +510,7 @@ component("cpp_base") {
      sources += [ "transferable_directory_fuchsia.cc" ]
    }
  

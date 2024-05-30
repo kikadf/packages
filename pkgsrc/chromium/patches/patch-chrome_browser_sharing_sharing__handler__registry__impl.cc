@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-05-09 21:46:37.461973700 +0000
+--- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-05-21 22:42:52.896700100 +0000
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
-@@ -23,7 +23,7 @@
+@@ -22,7 +22,7 @@
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -14,8 +14,8 @@ $NetBSD$
  #include "chrome/browser/sharing/shared_clipboard/remote_copy_message_handler.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS_LACROS)) BUILDFLAG(IS_CHROMEOS)
-@@ -78,7 +78,7 @@ SharingHandlerRegistryImpl::SharingHandl
-   }
+@@ -74,7 +74,7 @@ SharingHandlerRegistryImpl::SharingHandl
+ #endif  // !BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)

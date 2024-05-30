@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-05-09 21:46:39.030077200 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-05-21 22:42:53.648767200 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h
-@@ -11,7 +11,7 @@
+@@ -13,7 +13,7 @@
  #include "components/autofill/core/browser/payments/payments_window_manager.h"
  #include "content/public/browser/web_contents_observer.h"
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "base/scoped_observation.h"
  #include "chrome/browser/ui/browser_list.h"
  #include "chrome/browser/ui/browser_list_observer.h"
-@@ -30,7 +30,7 @@ namespace payments {
+@@ -34,7 +34,7 @@ class PaymentsWindowUserConsentDialogCon
  // WebContents of the original tab that the pop-up is created in. If there is a
  // pop-up currently present, `this` will observe the WebContents of that pop-up.
  class DesktopPaymentsWindowManager : public PaymentsWindowManager,
@@ -23,7 +23,7 @@ $NetBSD$
                                       public BrowserListObserver,
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
                                       public content::WebContentsObserver {
-@@ -47,7 +47,7 @@ class DesktopPaymentsWindowManager : pub
+@@ -51,7 +51,7 @@ class DesktopPaymentsWindowManager : pub
    // content::WebContentsObserver:
    void WebContentsDestroyed() override;
  
@@ -32,9 +32,9 @@ $NetBSD$
    // BrowserListObserver:
    void OnBrowserSetLastActive(Browser* browser) override;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-@@ -99,7 +99,7 @@ class DesktopPaymentsWindowManager : pub
-   // ContentAutofillClient that owns `this`.
-   const raw_ref<ContentAutofillClient> client_;
+@@ -118,7 +118,7 @@ class DesktopPaymentsWindowManager : pub
+   std::unique_ptr<PaymentsWindowUserConsentDialogControllerImpl>
+       payments_window_user_consent_dialog_controller_;
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

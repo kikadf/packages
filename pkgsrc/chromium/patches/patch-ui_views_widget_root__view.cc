@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/widget/root_view.cc.orig	2024-05-09 21:47:31.865566500 +0000
+--- ui/views/widget/root_view.cc.orig	2024-05-21 22:43:36.492588300 +0000
 +++ ui/views/widget/root_view.cc
 @@ -127,7 +127,7 @@ class AnnounceTextView : public View {
  #if BUILDFLAG(IS_CHROMEOS)

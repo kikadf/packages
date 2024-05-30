@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2024-05-09 21:46:36.425905200 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2024-05-21 22:42:51.744597200 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -94,7 +94,7 @@
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2024-05-09 21:47:02.159604800 +0000
+--- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2024-05-21 22:43:07.441997300 +0000
 +++ services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc
 @@ -54,7 +54,7 @@ uint32_t CalculatePrivateFootprintKb(con
                                       uint32_t shared_resident_kb) {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/host_details.cc.orig	2024-05-09 21:47:01.551564500 +0000
+--- remoting/host/host_details.cc.orig	2024-05-21 22:43:07.009958700 +0000
 +++ remoting/host/host_details.cc
 @@ -23,7 +23,7 @@ std::string GetHostOperatingSystemName()
    return "Mac";

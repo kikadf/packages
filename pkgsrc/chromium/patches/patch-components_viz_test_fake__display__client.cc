@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/viz/test/fake_display_client.cc.orig	2024-05-09 21:46:49.490768000 +0000
+--- components/viz/test/fake_display_client.cc.orig	2024-05-21 22:43:00.621389000 +0000
 +++ components/viz/test/fake_display_client.cc
 @@ -27,7 +27,7 @@ void FakeDisplayClient::AddChildWindowTo
      gpu::SurfaceHandle child_window) {}

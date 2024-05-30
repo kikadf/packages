@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/posix/unix_domain_socket_unittest.cc.orig	2024-05-09 21:46:25.781202000 +0000
+--- base/posix/unix_domain_socket_unittest.cc.orig	2024-05-21 22:42:46.712148400 +0000
 +++ base/posix/unix_domain_socket_unittest.cc
 @@ -10,6 +10,8 @@
  #include <sys/types.h>

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/chrome_paths.h.orig	2024-05-09 21:46:39.870132700 +0000
+--- chrome/common/chrome_paths.h.orig	2024-05-21 22:42:54.540846600 +0000
 +++ chrome/common/chrome_paths.h
 @@ -59,7 +59,7 @@ enum {
  #if BUILDFLAG(IS_CHROMEOS_ASH) ||                              \

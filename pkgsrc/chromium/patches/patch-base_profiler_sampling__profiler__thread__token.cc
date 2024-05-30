@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/profiler/sampling_profiler_thread_token.cc.orig	2024-05-09 21:46:25.797203300 +0000
+--- base/profiler/sampling_profiler_thread_token.cc.orig	2024-05-21 22:42:46.728150000 +0000
 +++ base/profiler/sampling_profiler_thread_token.cc
 @@ -6,7 +6,7 @@
  

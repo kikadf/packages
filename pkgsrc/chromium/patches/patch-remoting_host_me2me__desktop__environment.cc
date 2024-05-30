@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- remoting/host/me2me_desktop_environment.cc.orig	2024-05-09 21:47:01.583566700 +0000
+--- remoting/host/me2me_desktop_environment.cc.orig	2024-05-21 22:43:07.045961900 +0000
 +++ remoting/host/me2me_desktop_environment.cc
 @@ -125,7 +125,7 @@ std::string Me2MeDesktopEnvironment::Get
      capabilities += protocol::kRemoteWebAuthnCapability;
@@ -14,7 +14,7 @@ $NetBSD$
    if (!IsRunningWayland()) {
      capabilities += " ";
      capabilities += protocol::kMultiStreamCapability;
-@@ -164,7 +164,7 @@ Me2MeDesktopEnvironment::Me2MeDesktopEnv
+@@ -167,7 +167,7 @@ Me2MeDesktopEnvironment::Me2MeDesktopEnv
    // properly under Xvfb.
    mutable_desktop_capture_options()->set_use_update_notifications(true);
  
@@ -23,7 +23,7 @@ $NetBSD$
    // Setting this option to false means that the capture differ wrapper will not
    // be used when the X11 capturer is selected. This reduces the X11 capture
    // time by a few milliseconds per frame and is safe because we can rely on
-@@ -173,7 +173,7 @@ Me2MeDesktopEnvironment::Me2MeDesktopEnv
+@@ -176,7 +176,7 @@ Me2MeDesktopEnvironment::Me2MeDesktopEnv
    mutable_desktop_capture_options()->set_detect_updated_region(false);
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD$
    if (IsRunningWayland()) {
      mutable_desktop_capture_options()->set_prefer_cursor_embedded(false);
    }
-@@ -198,7 +198,7 @@ bool Me2MeDesktopEnvironment::Initialize
+@@ -201,7 +201,7 @@ bool Me2MeDesktopEnvironment::Initialize
  
    // Otherwise, if the session is shared with the local user start monitoring
    // the local input and create the in-session UI.

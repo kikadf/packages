@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/src/libANGLE/Display.cpp.orig	2024-05-09 21:48:19.628721000 +0000
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2024-05-21 22:43:58.090514700 +0000
 +++ third_party/angle/src/libANGLE/Display.cpp
 @@ -60,7 +60,7 @@
  #        include "libANGLE/renderer/gl/cgl/DisplayCGL.h"

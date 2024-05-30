@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/system/sys_info.h.orig	2024-05-09 21:46:25.825205000 +0000
+--- base/system/sys_info.h.orig	2024-05-21 22:42:46.756152400 +0000
 +++ base/system/sys_info.h
-@@ -322,6 +322,8 @@ class BASE_EXPORT SysInfo {
+@@ -325,6 +325,8 @@ class BASE_EXPORT SysInfo {
    static void ResetCpuSecurityMitigationsEnabledForTesting();
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
   private:
    friend class test::ScopedAmountOfPhysicalMemoryOverride;
    FRIEND_TEST_ALL_PREFIXES(SysInfoTest, AmountOfAvailablePhysicalMemory);
-@@ -334,7 +336,7 @@ class BASE_EXPORT SysInfo {
+@@ -337,7 +339,7 @@ class BASE_EXPORT SysInfo {
    static HardwareInfo GetHardwareInfoSync();
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

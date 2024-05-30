@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/gpu/gpu_main.cc.orig	2024-05-09 21:46:50.554838200 +0000
+--- content/gpu/gpu_main.cc.orig	2024-05-21 22:43:01.357454500 +0000
 +++ content/gpu/gpu_main.cc
-@@ -91,10 +91,14 @@
+@@ -93,10 +93,14 @@
  #include "sandbox/win/src/sandbox.h"
  #endif
  
@@ -21,7 +21,7 @@ $NetBSD$
  #include "sandbox/policy/sandbox_type.h"
  #endif
  
-@@ -114,7 +118,7 @@ namespace content {
+@@ -116,7 +120,7 @@ namespace content {
  
  namespace {
  
@@ -30,7 +30,7 @@ $NetBSD$
  bool StartSandboxLinux(gpu::GpuWatchdogThread*,
                         const gpu::GPUInfo*,
                         const gpu::GpuPreferences&);
-@@ -179,7 +183,7 @@ class ContentSandboxHelper : public gpu:
+@@ -181,7 +185,7 @@ class ContentSandboxHelper : public gpu:
    bool EnsureSandboxInitialized(gpu::GpuWatchdogThread* watchdog_thread,
                                  const gpu::GPUInfo* gpu_info,
                                  const gpu::GpuPreferences& gpu_prefs) override {
@@ -39,7 +39,7 @@ $NetBSD$
      return StartSandboxLinux(watchdog_thread, gpu_info, gpu_prefs);
  #elif BUILDFLAG(IS_WIN)
      return StartSandboxWindows(sandbox_info_);
-@@ -291,7 +295,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -293,7 +297,7 @@ int GpuMain(MainFunctionParams parameter
            std::make_unique<base::SingleThreadTaskExecutor>(
                gpu_preferences.message_pump_type);
      }
@@ -48,17 +48,17 @@ $NetBSD$
  #error "Unsupported Linux platform."
  #elif BUILDFLAG(IS_MAC)
      // Cross-process CoreAnimation requires a CFRunLoop to function at all, and
-@@ -328,7 +332,8 @@ int GpuMain(MainFunctionParams parameter
-   // before it.
-   InitializeSkia();
+@@ -315,7 +319,8 @@ int GpuMain(MainFunctionParams parameter
+ 
+   base::PlatformThread::SetName("CrGpuMain");
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +// XXX BSD
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
    // Thread type delegate of the process should be registered before
-   // first thread type change in ChildProcess constructor.
-   // It also needs to be registered before the process has multiple threads,
-@@ -436,7 +441,7 @@ int GpuMain(MainFunctionParams parameter
+   // thread type change below for the main thread and for thread pool in
+   // ChildProcess constructor.
+@@ -442,7 +447,7 @@ int GpuMain(MainFunctionParams parameter
  
  namespace {
  
@@ -67,7 +67,7 @@ $NetBSD$
  bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
                         const gpu::GPUInfo* gpu_info,
                         const gpu::GpuPreferences& gpu_prefs) {
-@@ -476,7 +481,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
+@@ -482,7 +487,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
    sandbox_options.accelerated_video_encode_enabled =
        !gpu_prefs.disable_accelerated_video_encode;
  

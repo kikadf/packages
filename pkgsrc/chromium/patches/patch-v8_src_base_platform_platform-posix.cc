@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2024-05-09 21:48:26.293161200 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2024-05-21 22:47:35.269871200 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -27,6 +27,9 @@
      defined(__NetBSD__) || defined(__OpenBSD__)
@@ -37,7 +37,7 @@ $NetBSD$
  
  #if defined(V8_OS_SOLARIS)
  #if (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE > 2) || defined(__EXTENSIONS__)
-@@ -303,6 +308,13 @@ void OS::SetRandomMmapSeed(int64_t seed)
+@@ -305,6 +310,13 @@ void OS::SetRandomMmapSeed(int64_t seed)
    }
  }
  
@@ -51,7 +51,7 @@ $NetBSD$
  // static
  void* OS::GetRandomMmapAddr() {
    uintptr_t raw_addr;
-@@ -399,6 +411,7 @@ void* OS::GetRandomMmapAddr() {
+@@ -401,6 +413,7 @@ void* OS::GetRandomMmapAddr() {
  #endif
    return reinterpret_cast<void*>(raw_addr);
  }

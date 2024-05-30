@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/aura/client/drag_drop_client.h.orig	2024-05-09 21:47:31.009510000 +0000
+--- ui/aura/client/drag_drop_client.h.orig	2024-05-21 22:43:35.552504300 +0000
 +++ ui/aura/client/drag_drop_client.h
 @@ -44,7 +44,7 @@ class AURA_EXPORT DragDropClient {
        int allowed_operations,

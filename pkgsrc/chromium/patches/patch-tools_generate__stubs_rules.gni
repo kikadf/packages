@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/generate_stubs/rules.gni.orig	2024-05-09 21:47:29.865434400 +0000
+--- tools/generate_stubs/rules.gni.orig	2024-05-21 22:43:34.592418700 +0000
 +++ tools/generate_stubs/rules.gni
 @@ -110,7 +110,6 @@ template("generate_stubs") {
        "${target_gen_dir}/${invoker.output_name}.cc",

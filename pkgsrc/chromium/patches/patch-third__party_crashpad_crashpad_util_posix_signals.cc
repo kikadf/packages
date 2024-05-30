@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/util/posix/signals.cc.orig	2024-05-09 21:47:24.873104800 +0000
+--- third_party/crashpad/crashpad/util/posix/signals.cc.orig	2024-05-21 22:43:29.655978400 +0000
 +++ third_party/crashpad/crashpad/util/posix/signals.cc
 @@ -51,7 +51,7 @@ constexpr int kCrashSignals[] = {
  #if defined(SIGEMT)

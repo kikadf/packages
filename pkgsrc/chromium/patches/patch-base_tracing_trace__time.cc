@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/tracing/trace_time.cc.orig	2024-05-09 21:46:25.953213500 +0000
+--- base/tracing/trace_time.cc.orig	2024-05-21 22:42:46.884163900 +0000
 +++ base/tracing/trace_time.cc
 @@ -8,13 +8,19 @@
  #include "build/build_config.h"

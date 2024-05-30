@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-05-09 21:46:44.350428600 +0000
+--- components/gwp_asan/crash_handler/crash_analyzer.cc.orig	2024-05-21 22:42:58.061160600 +0000
 +++ components/gwp_asan/crash_handler/crash_analyzer.cc
 @@ -30,7 +30,7 @@
  #include "third_party/crashpad/crashpad/snapshot/process_snapshot.h"

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/browser_ui_prefs.cc.orig	2024-05-09 21:46:39.050078400 +0000
+--- chrome/browser/ui/browser_ui_prefs.cc.orig	2024-05-21 22:42:53.676769500 +0000
 +++ chrome/browser/ui/browser_ui_prefs.cc
-@@ -168,7 +168,7 @@ void RegisterBrowserUserPrefs(user_prefs
+@@ -175,7 +175,7 @@ void RegisterBrowserUserPrefs(user_prefs
    registry->RegisterDictionaryPref(prefs::kHttpsUpgradeFallbacks);
    registry->RegisterDictionaryPref(prefs::kHttpsUpgradeNavigations);
    registry->RegisterBooleanPref(prefs::kHttpsOnlyModeAutoEnabled, false);

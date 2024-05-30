@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c.orig	2024-05-09 21:47:45.318455000 +0000
+--- third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c.orig	2024-05-21 22:45:54.156861000 +0000
 +++ third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c
-@@ -91,10 +91,24 @@ static int arm_get_cpu_caps(void) {
+@@ -92,10 +92,24 @@ static int arm_get_cpu_caps(void) {
    return flags;
  }
  

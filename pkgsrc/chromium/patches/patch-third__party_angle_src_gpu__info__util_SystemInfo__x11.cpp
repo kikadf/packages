@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_x11.cpp.orig	2024-05-09 21:48:19.608719600 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_x11.cpp.orig	2024-05-21 22:43:58.074513200 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_x11.cpp
 @@ -8,6 +8,10 @@
  

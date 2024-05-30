@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/task_manager/sampling/task_group_sampler.h.orig	2024-05-09 21:46:37.625984400 +0000
+--- chrome/browser/task_manager/sampling/task_group_sampler.h.orig	2024-05-21 22:42:53.100718300 +0000
 +++ chrome/browser/task_manager/sampling/task_group_sampler.h
 @@ -31,7 +31,7 @@ class TaskGroupSampler : public base::Re
    using OnCpuRefreshCallback = base::RepeatingCallback<void(double)>;

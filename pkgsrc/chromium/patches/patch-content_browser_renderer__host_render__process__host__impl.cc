@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2024-05-09 21:46:50.166812700 +0000
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2024-05-21 22:43:01.157436800 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
 @@ -225,7 +225,7 @@
  #include "third_party/blink/public/mojom/android_font_lookup/android_font_lookup.mojom.h"
@@ -23,7 +23,7 @@ $NetBSD$
    struct rlimit limit;
    if (getrlimit(RLIMIT_NPROC, &limit) != 0)
      return kUnknownPlatformProcessLimit;
-@@ -1149,7 +1149,7 @@ class RenderProcessHostImpl::IOThreadHos
+@@ -1153,7 +1153,7 @@ class RenderProcessHostImpl::IOThreadHos
    IOThreadHostImpl& operator=(const IOThreadHostImpl& other) = delete;
  
    void SetPid(base::ProcessId child_pid) {
@@ -32,7 +32,7 @@ $NetBSD$
      child_thread_type_switcher_.SetPid(child_pid);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
    }
-@@ -1166,7 +1166,7 @@ class RenderProcessHostImpl::IOThreadHos
+@@ -1170,7 +1170,7 @@ class RenderProcessHostImpl::IOThreadHos
          return;
      }
  
@@ -41,7 +41,7 @@ $NetBSD$
      if (auto font_receiver = receiver.As<font_service::mojom::FontService>()) {
        ConnectToFontService(std::move(font_receiver));
        return;
-@@ -1260,7 +1260,7 @@ class RenderProcessHostImpl::IOThreadHos
+@@ -1264,7 +1264,7 @@ class RenderProcessHostImpl::IOThreadHos
    std::unique_ptr<service_manager::BinderRegistry> binders_;
    mojo::Receiver<mojom::ChildProcessHost> receiver_{this};
  
@@ -50,7 +50,7 @@ $NetBSD$
    mojo::Remote<media::mojom::VideoEncodeAcceleratorProviderFactory>
        video_encode_accelerator_factory_remote_;
    ChildThreadTypeSwitcher child_thread_type_switcher_;
-@@ -3353,7 +3353,7 @@ void RenderProcessHostImpl::AppendRender
+@@ -3362,7 +3362,7 @@ void RenderProcessHostImpl::AppendRender
              base::TimeTicks::UnixEpoch().since_origin().InMicroseconds()));
    }
  
@@ -59,7 +59,7 @@ $NetBSD$
    // Append `kDisableVideoCaptureUseGpuMemoryBuffer` flag if there is no support
    // for NV12 GPU memory buffer.
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled() &&
-@@ -3412,6 +3412,7 @@ void RenderProcessHostImpl::PropagateBro
+@@ -3421,6 +3421,7 @@ void RenderProcessHostImpl::PropagateBro
      switches::kDisableSpeechAPI,
      switches::kDisableThreadedCompositing,
      switches::kDisableTouchDragDrop,

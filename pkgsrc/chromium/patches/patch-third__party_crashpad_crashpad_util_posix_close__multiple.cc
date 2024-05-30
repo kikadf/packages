@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2024-05-09 21:47:24.873104800 +0000
+--- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2024-05-21 22:43:29.655978400 +0000
 +++ third_party/crashpad/crashpad/util/posix/close_multiple.cc
 @@ -73,7 +73,7 @@ void CloseNowOrOnExec(int fd, bool ebadf
  // This is an advantage over looping over all possible file descriptors, because

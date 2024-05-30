@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/webrtc/helpers.cc.orig	2024-05-09 21:46:59.091402000 +0000
+--- media/webrtc/helpers.cc.orig	2024-05-21 22:43:05.441819000 +0000
 +++ media/webrtc/helpers.cc
 @@ -41,14 +41,14 @@ void ConfigAutomaticGainControl(const Au
      return;
@@ -20,5 +20,5 @@ $NetBSD$
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    // Use AGC2 digital and input volume controller.
-   // TODO(crbug.com/1375239): Remove `kWebRtcAllowInputVolumeAdjustment` safely.
-   if (kInputVolumeAdjustmentOverrideAllowed &&
+   // TODO(crbug.com/1375239): Remove `kWebRtcAllowInputVolumeAdjustment` safely
+   // and set `input_volume_controller.enabled` true.

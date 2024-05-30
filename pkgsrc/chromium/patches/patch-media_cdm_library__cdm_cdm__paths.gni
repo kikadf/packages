@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/cdm/library_cdm/cdm_paths.gni.orig	2024-05-09 21:46:58.391355800 +0000
+--- media/cdm/library_cdm/cdm_paths.gni.orig	2024-05-21 22:43:04.889769600 +0000
 +++ media/cdm/library_cdm/cdm_paths.gni
 @@ -15,7 +15,7 @@ assert(enable_library_cdms)
  # Explicitly define what we use to avoid confusion.

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/disk_cache/simple/simple_file_tracker.cc.orig	2024-05-09 21:47:00.355485400 +0000
+--- net/disk_cache/simple/simple_file_tracker.cc.orig	2024-05-21 22:43:06.189885600 +0000
 +++ net/disk_cache/simple/simple_file_tracker.cc
 @@ -29,7 +29,17 @@ void RecordFileDescripterLimiterOp(FileD
  }  // namespace

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/chrome_browser_main.cc.orig	2024-05-09 21:46:35.441840200 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2024-05-21 22:42:50.656500300 +0000
 +++ chrome/browser/chrome_browser_main.cc
 @@ -246,15 +246,15 @@
  
@@ -85,7 +85,7 @@ $NetBSD$
    metrics::DesktopSessionDurationTracker::Initialize();
    ProfileActivityMetricsRecorder::Initialize();
    TouchModeStatsTracker::Initialize(
-@@ -1328,7 +1328,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1322,7 +1322,7 @@ void ChromeBrowserMainParts::PostProfile
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -94,7 +94,7 @@ $NetBSD$
    // Delete the media history database if it still exists.
    // TODO(crbug.com/1198344): Remove this.
    base::ThreadPool::PostTask(
-@@ -1377,7 +1377,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1371,7 +1371,7 @@ void ChromeBrowserMainParts::PostProfile
        *UrlLanguageHistogramFactory::GetForBrowserContext(profile));
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
@@ -103,7 +103,7 @@ $NetBSD$
    if (headless::IsHeadlessMode()) {
      headless::ReportHeadlessActionMetrics();
    }
-@@ -1485,7 +1485,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1481,7 +1481,7 @@ int ChromeBrowserMainParts::PreMainMessa
    // In headless mode provide alternate SelectFileDialog factory overriding
    // any platform specific SelectFileDialog implementation that may have been
    // set.
@@ -112,7 +112,7 @@ $NetBSD$
    if (headless::IsHeadlessMode()) {
      headless::HeadlessSelectFileDialogFactory::SetUp();
    }
-@@ -2030,7 +2030,7 @@ bool ChromeBrowserMainParts::ProcessSing
+@@ -2026,7 +2026,7 @@ bool ChromeBrowserMainParts::ProcessSing
  
    // Drop the request if headless mode is in effect or the request is from
    // a headless Chrome process.

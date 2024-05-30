@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/libc++/src/src/filesystem/filesystem_clock.cpp.orig	2024-05-09 21:47:42.214250000 +0000
+--- third_party/libc++/src/src/filesystem/filesystem_clock.cpp.orig	2024-05-21 22:45:35.059162100 +0000
 +++ third_party/libc++/src/src/filesystem/filesystem_clock.cpp
 @@ -29,7 +29,8 @@
  #  include <sys/time.h> // for gettimeofday and timeval

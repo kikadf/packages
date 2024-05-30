@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_iterator_netbsd.cc.orig	2024-05-13 15:05:49.325578284 +0000
+--- base/process/process_iterator_netbsd.cc.orig	2024-05-30 07:27:01.266833574 +0000
 +++ base/process/process_iterator_netbsd.cc
 @@ -0,0 +1,132 @@
 +// Copyright 2013 The Chromium Authors

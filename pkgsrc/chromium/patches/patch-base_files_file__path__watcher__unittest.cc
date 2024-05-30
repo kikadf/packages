@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_path_watcher_unittest.cc.orig	2024-05-09 21:46:25.709197500 +0000
+--- base/files/file_path_watcher_unittest.cc.orig	2024-05-21 22:42:46.640142000 +0000
 +++ base/files/file_path_watcher_unittest.cc
 @@ -847,7 +847,7 @@ TEST_F(FilePathWatcherTest, WatchDirecto
    }

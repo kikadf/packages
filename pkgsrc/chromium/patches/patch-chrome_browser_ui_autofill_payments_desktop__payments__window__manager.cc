@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-05-09 21:46:39.030077200 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2024-05-21 22:42:53.648767200 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc
-@@ -25,7 +25,7 @@ namespace autofill::payments {
+@@ -44,7 +44,7 @@ gfx::Rect GetPopupSizeForVcn3ds() {
  DesktopPaymentsWindowManager::DesktopPaymentsWindowManager(
      ContentAutofillClient* client)
      : client_(CHECK_DEREF(client)) {
@@ -14,7 +14,7 @@ $NetBSD$
    scoped_observation_.Observe(BrowserList::GetInstance());
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
  }
-@@ -48,7 +48,7 @@ void DesktopPaymentsWindowManager::WebCo
+@@ -72,7 +72,7 @@ void DesktopPaymentsWindowManager::WebCo
    }
  }
  

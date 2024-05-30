@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/shell/BUILD.gn.orig	2024-05-09 21:46:50.754851600 +0000
+--- content/shell/BUILD.gn.orig	2024-05-21 22:43:01.553472000 +0000
 +++ content/shell/BUILD.gn
-@@ -1064,7 +1064,7 @@ group("content_shell_crash_test") {
+@@ -1057,7 +1057,7 @@ group("content_shell_crash_test") {
    if (is_win) {
      data_deps += [ "//build/win:copy_cdb_to_output" ]
    }

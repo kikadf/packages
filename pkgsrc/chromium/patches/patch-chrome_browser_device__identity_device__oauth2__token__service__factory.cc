@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/device_identity/device_oauth2_token_service_factory.cc.orig	2024-05-09 21:46:35.573849000 +0000
+--- chrome/browser/device_identity/device_oauth2_token_service_factory.cc.orig	2024-05-21 22:42:51.008531600 +0000
 +++ chrome/browser/device_identity/device_oauth2_token_service_factory.cc
 @@ -28,7 +28,7 @@ std::unique_ptr<DeviceOAuth2TokenStore> 
    return std::make_unique<chromeos::DeviceOAuth2TokenStoreChromeOS>(

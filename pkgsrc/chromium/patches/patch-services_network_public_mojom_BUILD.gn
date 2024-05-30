@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/public/mojom/BUILD.gn.orig	2024-05-09 21:47:02.099600800 +0000
+--- services/network/public/mojom/BUILD.gn.orig	2024-05-21 22:43:07.377991700 +0000
 +++ services/network/public/mojom/BUILD.gn
 @@ -522,11 +522,11 @@ mojom("url_loader_base") {
    }
@@ -19,7 +19,7 @@ $NetBSD$
      # TODO(crbug.com/1431866): Remove this once is_linux in the mojom IDL does
      # not include lacros.
      enabled_features += [ "use_network_interface_change_listener" ]
-@@ -1457,7 +1457,7 @@ mojom("mojom") {
+@@ -1471,7 +1471,7 @@ mojom("mojom") {
      }
    }
  

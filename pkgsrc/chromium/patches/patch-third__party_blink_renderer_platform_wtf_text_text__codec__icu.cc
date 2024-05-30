@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc.orig	2024-05-09 21:47:07.675969100 +0000
+--- third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc.orig	2024-05-21 22:43:10.986313300 +0000
 +++ third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc
 @@ -615,6 +615,7 @@ static void GbkUrlEscapedEntityCallack(
                                code_point, reason, err);

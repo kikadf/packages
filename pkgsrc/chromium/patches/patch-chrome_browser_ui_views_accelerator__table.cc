@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/accelerator_table.cc.orig	2024-05-09 21:46:39.202088600 +0000
+--- chrome/browser/ui/views/accelerator_table.cc.orig	2024-05-21 22:42:53.860786000 +0000
 +++ chrome/browser/ui/views/accelerator_table.cc
 @@ -72,11 +72,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},

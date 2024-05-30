@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/BUILD.gn.orig	2024-05-09 21:47:31.389535200 +0000
+--- ui/gfx/BUILD.gn.orig	2024-05-21 22:43:36.096552800 +0000
 +++ ui/gfx/BUILD.gn
-@@ -664,7 +664,7 @@ source_set("memory_buffer_sources") {
+@@ -663,7 +663,7 @@ source_set("memory_buffer_sources") {
      deps += [ "//build/config/linux/libdrm" ]
    }
  

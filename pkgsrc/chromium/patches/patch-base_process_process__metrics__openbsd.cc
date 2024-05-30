@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_openbsd.cc.orig	2024-05-09 21:46:25.789202700 +0000
+--- base/process/process_metrics_openbsd.cc.orig	2024-05-21 22:42:46.720149300 +0000
 +++ base/process/process_metrics_openbsd.cc
-@@ -6,36 +6,39 @@
+@@ -6,36 +6,40 @@
  
  #include <stddef.h>
  #include <stdint.h>
@@ -13,11 +13,11 @@ $NetBSD$
  #include <sys/param.h>
  #include <sys/sysctl.h>
 +#include <sys/vmmeter.h>
- #include <optional>
- 
-+#include <kvm.h>
 +
++#include <kvm.h>
+ 
  #include "base/memory/ptr_util.h"
+ #include "base/types/expected.h"
 +#include "base/values.h"
 +#include "base/notreached.h"
  
@@ -26,15 +26,16 @@ $NetBSD$
 -namespace {
 +ProcessMetrics::ProcessMetrics(ProcessHandle process) : process_(process) {}
  
--static std::optional<int> GetProcessCPU(pid_t pid) {
-+std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
+-base::expected<int, ProcessCPUUsageError> GetProcessCPU(pid_t pid) {
++base::expected<TimeDelta, ProcessCPUUsageError>
++ProcessMetrics::GetCumulativeCPUUsage() {
    struct kinfo_proc info;
 -  size_t length;
 -  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, pid,
 -                sizeof(struct kinfo_proc), 0 };
 -
 -  if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) < 0) {
--    return std::nullopt;
+-    return base::unexpected(ProcessCPUUsageError::kSystemError);
 -  }
 +  size_t length = sizeof(struct kinfo_proc);
 +  struct timeval tv;
@@ -44,46 +45,47 @@ $NetBSD$
 +                sizeof(struct kinfo_proc), 1 };
  
    if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
--    return std::nullopt;
-+    return std::optional(TimeDelta());
+     return base::unexpected(ProcessCPUUsageError::kSystemError);
    }
  
--  return std::optional(info.p_pctcpu);
+-  return base::ok(info.p_pctcpu);
 -}
 +  tv.tv_sec = info.p_rtime_sec;
 +  tv.tv_usec = info.p_rtime_usec;
  
 -}  // namespace
-+  return std::optional(Microseconds(TimeValToMicroseconds(tv)));
++  return base::ok(Microseconds(TimeValToMicroseconds(tv)));
 +}
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -43,36 +46,9 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -43,38 +47,9 @@ std::unique_ptr<ProcessMetrics> ProcessM
    return WrapUnique(new ProcessMetrics(process));
  }
  
--std::optional<double> ProcessMetrics::GetPlatformIndependentCPUUsage() {
+-base::expected<double, ProcessCPUUsageError>
+-ProcessMetrics::GetPlatformIndependentCPUUsage() {
 -  TimeTicks time = TimeTicks::Now();
 -
 -  if (last_cpu_time_.is_zero()) {
 -    // First call, just set the last values.
 -    last_cpu_time_ = time;
--    return std::optional(0.0);
+-    return base::ok(0.0);
 -  }
 -
--  const std::optional<int> cpu = GetProcessCPU(process_);
+-  const base::expected<int, ProcessCPUUsageError> cpu = GetProcessCPU(process_);
 -  if (!cpu.has_value()) {
--    return std::nullopt;
+-    return base::unexpected(cpu.error());
 -  }
 -
 -  last_cpu_time_ = time;
--  return std::optional(double{cpu.value()} / FSCALE * 100.0);
+-  return base::ok(double{cpu.value()} / FSCALE * 100.0);
 -}
 -
--std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
+-base::expected<TimeDelta, ProcessCPUUsageError>
+-ProcessMetrics::GetCumulativeCPUUsage() {
 -  NOTREACHED();
--  return std::nullopt;
+-  return base::unexpected(ProcessCPUUsageError::kNotImplemented);
 -}
 -
 -ProcessMetrics::ProcessMetrics(ProcessHandle process)
@@ -97,7 +99,7 @@ $NetBSD$
    struct vmtotal vmtotal;
    unsigned long mem_total, mem_free, mem_inactive;
    size_t len = sizeof(vmtotal);
-@@ -84,9 +60,136 @@ size_t GetSystemCommitCharge() {
+@@ -86,9 +61,136 @@ size_t GetSystemCommitCharge() {
    mem_free = vmtotal.t_free;
    mem_inactive = vmtotal.t_vm - vmtotal.t_avm;
  

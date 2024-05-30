@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/browser_process_impl.cc.orig	2024-05-09 21:46:35.409838000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2024-05-21 22:42:50.624497400 +0000
 +++ chrome/browser/browser_process_impl.cc
-@@ -220,7 +220,7 @@
+@@ -226,7 +226,7 @@
  #include "chrome/browser/ui/profiles/profile_picker.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "chrome/browser/error_reporting/chrome_js_error_report_processor.h"  // nogncheck
  #endif
  
-@@ -1253,7 +1253,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1268,7 +1268,7 @@ void BrowserProcessImpl::PreMainMessageL
  
    ApplyMetricsReportingPolicy();
  
@@ -23,7 +23,7 @@ $NetBSD$
    ChromeJsErrorReportProcessor::Create();
  #endif
  
-@@ -1533,7 +1533,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1593,7 +1593,7 @@ void BrowserProcessImpl::Unpin() {
  // Mac is currently not supported.
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.

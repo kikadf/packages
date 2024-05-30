@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/app/content_main.cc.orig	2024-05-09 21:46:49.578773700 +0000
+--- content/app/content_main.cc.orig	2024-05-21 22:43:00.713397300 +0000
 +++ content/app/content_main.cc
-@@ -207,7 +207,7 @@ RunContentProcess(ContentMainParams para
+@@ -206,7 +206,7 @@ RunContentProcess(ContentMainParams para
  #endif
      base::EnableTerminationOnOutOfMemory();
  

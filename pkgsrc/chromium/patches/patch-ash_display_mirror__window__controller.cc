@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ash/display/mirror_window_controller.cc.orig	2024-05-09 21:46:23.505051900 +0000
+--- ash/display/mirror_window_controller.cc.orig	2024-05-21 22:42:45.568046300 +0000
 +++ ash/display/mirror_window_controller.cc
 @@ -294,7 +294,11 @@ void MirrorWindowController::UpdateWindo
        if (!base::Contains(display_info_list, iter->first,

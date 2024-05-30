@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/files/file_util_posix.cc.orig	2024-05-09 21:46:25.709197500 +0000
+--- base/files/file_util_posix.cc.orig	2024-05-21 22:42:46.644142400 +0000
 +++ base/files/file_util_posix.cc
-@@ -816,33 +816,34 @@ bool CreateDirectoryAndGetError(const Fi
+@@ -810,33 +810,34 @@ bool CreateDirectoryAndGetError(const Fi
                                  File::Error* error) {
    ScopedBlockingCall scoped_blocking_call(
        FROM_HERE, BlockingType::MAY_BLOCK);  // For call to mkdir().

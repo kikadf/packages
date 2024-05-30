@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/themes/theme_service.cc.orig	2024-05-09 21:46:37.633985000 +0000
+--- chrome/browser/themes/theme_service.cc.orig	2024-05-21 22:42:53.108718900 +0000
 +++ chrome/browser/themes/theme_service.cc
 @@ -74,7 +74,7 @@
  #include "extensions/browser/extension_registry_observer.h"

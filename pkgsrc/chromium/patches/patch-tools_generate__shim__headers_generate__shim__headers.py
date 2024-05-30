@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/generate_shim_headers/generate_shim_headers.py.orig	2024-05-09 21:47:29.861434200 +0000
+--- tools/generate_shim_headers/generate_shim_headers.py.orig	2024-05-21 22:43:34.592418700 +0000
 +++ tools/generate_shim_headers/generate_shim_headers.py
 @@ -18,7 +18,7 @@ import sys
  

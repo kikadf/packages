@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-05-09 21:47:31.577547600 +0000
+--- ui/ozone/platform/wayland/host/wayland_window.h.orig	2024-05-21 22:43:36.280569300 +0000
 +++ ui/ozone/platform/wayland/host/wayland_window.h
 @@ -40,7 +40,7 @@
  #include "ui/platform_window/platform_window_init_properties.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "ui/ozone/platform/wayland/host/wayland_async_cursor.h"
  #endif
  
-@@ -251,7 +251,7 @@ class WaylandWindow : public PlatformWin
+@@ -261,7 +261,7 @@ class WaylandWindow : public PlatformWin
      bool is_snapped_primary = false;
      bool is_snapped_secondary = false;
      bool is_floated = false;
@@ -23,7 +23,7 @@ $NetBSD$
      WindowTiledEdges tiled_edges;
  #endif
  
-@@ -510,7 +510,7 @@ class WaylandWindow : public PlatformWin
+@@ -548,7 +548,7 @@ class WaylandWindow : public PlatformWin
  
    void UpdateCursorShape(scoped_refptr<BitmapCursor> cursor);
  
@@ -32,7 +32,7 @@ $NetBSD$
    void OnCursorLoaded(scoped_refptr<WaylandAsyncCursor> cursor,
                        scoped_refptr<BitmapCursor> bitmap_cursor);
  #endif
-@@ -571,7 +571,7 @@ class WaylandWindow : public PlatformWin
+@@ -618,7 +618,7 @@ class WaylandWindow : public PlatformWin
  
    wl::Object<zaura_surface> aura_surface_;
  

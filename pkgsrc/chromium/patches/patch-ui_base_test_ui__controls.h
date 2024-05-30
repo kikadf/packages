@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/test/ui_controls.h.orig	2024-05-09 21:47:31.097515800 +0000
+--- ui/base/test/ui_controls.h.orig	2024-05-21 22:43:35.632511600 +0000
 +++ ui/base/test/ui_controls.h
 @@ -186,7 +186,7 @@ bool SendTouchEventsNotifyWhenDone(int a
                                     base::OnceClosure task);

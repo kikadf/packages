@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/media_options.gni.orig	2024-05-09 21:46:58.539365500 +0000
+--- media/media_options.gni.orig	2024-05-21 22:43:05.037783000 +0000
 +++ media/media_options.gni
 @@ -190,12 +190,15 @@ declare_args() {
    # Enables runtime selection of ALSA library for audio.
@@ -22,14 +22,3 @@ $NetBSD$
        (!is_castos || (target_cpu == "x86" || target_cpu == "x64") ||
         is_cast_audio_only)) {
      use_alsa = true
-@@ -212,6 +215,10 @@ declare_args() {
-       use_pulseaudio = true
-     }
-   }
-+  if (is_openbsd) {
-+    use_sndio = true
-+    use_pulseaudio = false
-+  }
- }
- 
- # Use another declare_args() to include possible overrides of media_use_ffmpeg

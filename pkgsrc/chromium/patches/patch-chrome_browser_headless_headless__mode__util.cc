@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/headless/headless_mode_util.cc.orig	2024-05-09 21:46:36.161887600 +0000
+--- chrome/browser/headless/headless_mode_util.cc.orig	2024-05-21 22:42:51.484574000 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
 @@ -19,7 +19,7 @@
  #include "chrome/common/chrome_switches.h"

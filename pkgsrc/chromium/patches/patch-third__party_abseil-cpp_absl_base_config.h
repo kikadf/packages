@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/abseil-cpp/absl/base/config.h.orig	2024-05-09 21:47:03.395686400 +0000
+--- third_party/abseil-cpp/absl/base/config.h.orig	2024-05-21 22:43:08.130058500 +0000
 +++ third_party/abseil-cpp/absl/base/config.h
 @@ -448,7 +448,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
  #ifdef ABSL_HAVE_SCHED_YIELD

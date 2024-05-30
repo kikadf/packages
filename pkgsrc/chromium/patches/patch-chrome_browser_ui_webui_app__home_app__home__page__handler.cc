@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/app_home/app_home_page_handler.cc.orig	2024-05-09 21:46:39.486107300 +0000
+--- chrome/browser/ui/webui/app_home/app_home_page_handler.cc.orig	2024-05-21 22:42:54.176814300 +0000
 +++ chrome/browser/ui/webui/app_home/app_home_page_handler.cc
-@@ -391,7 +391,7 @@ app_home::mojom::AppInfoPtr AppHomePageH
+@@ -376,7 +376,7 @@ app_home::mojom::AppInfoPtr AppHomePageH
    app_info->start_url = start_url;
  
    bool deprecated_app = false;
@@ -14,7 +14,7 @@ $NetBSD$
    auto* context = extension_system_->extension_service()->GetBrowserContext();
    deprecated_app =
        extensions::IsExtensionUnsupportedDeprecatedApp(context, extension->id());
-@@ -454,7 +454,7 @@ void AppHomePageHandler::FillExtensionIn
+@@ -439,7 +439,7 @@ void AppHomePageHandler::FillExtensionIn
        continue;
      }
  

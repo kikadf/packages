@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/capture/video/linux/video_capture_device_linux.cc.orig	2024-05-09 21:46:58.267347600 +0000
+--- media/capture/video/linux/video_capture_device_linux.cc.orig	2024-05-21 22:43:04.861767000 +0000
 +++ media/capture/video/linux/video_capture_device_linux.cc
 @@ -15,7 +15,7 @@
  #include "build/build_config.h"

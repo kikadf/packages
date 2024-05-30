@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/defaults.cc.orig	2024-05-09 21:46:35.569848500 +0000
+--- chrome/browser/defaults.cc.orig	2024-05-21 22:42:51.004531400 +0000
 +++ chrome/browser/defaults.cc
 @@ -44,7 +44,7 @@ const bool kShowHelpMenuItemIcon = true;
  const bool kShowHelpMenuItemIcon = false;

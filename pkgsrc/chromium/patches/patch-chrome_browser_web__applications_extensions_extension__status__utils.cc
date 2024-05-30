@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-05-09 21:46:39.766125700 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-05-21 22:42:54.428836600 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -25,7 +25,7 @@ namespace {
  
@@ -14,7 +14,7 @@ $NetBSD$
  // TODO(b/268221237): Remove this allow-list.
  const char kDefaultAllowedExtensionIds[] =
      "alhngdkjgnedakdlnamimgfihgkmenbh,"
-@@ -114,7 +114,7 @@ bool ClearExternalExtensionUninstalled(c
+@@ -113,7 +113,7 @@ bool ClearExternalExtensionUninstalled(c
        extension_id);
  }
  

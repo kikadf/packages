@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc.orig	2024-05-09 21:46:47.086609100 +0000
+--- components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc.orig	2024-05-21 22:42:59.205262700 +0000
 +++ components/safe_browsing/core/browser/realtime/url_lookup_service_base.cc
 @@ -109,7 +109,7 @@ RTLookupRequest::OSType GetRTLookupReque
    return RTLookupRequest::OS_TYPE_FUCHSIA;

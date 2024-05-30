@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-05-09 21:46:39.570112700 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-05-21 22:42:54.264822000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -201,7 +201,7 @@
+@@ -205,7 +205,7 @@
  #include "chrome/browser/ui/webui/chromeos/chrome_url_disabled/chrome_url_disabled_ui.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/webui_js_error/webui_js_error_ui.h"
  #endif
  
-@@ -227,17 +227,17 @@
+@@ -231,17 +231,17 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -35,7 +35,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/connectors_internals/connectors_internals_ui.h"
  #endif
  
-@@ -389,7 +389,7 @@ bool IsAboutUI(const GURL& url) {
+@@ -385,7 +385,7 @@ bool IsAboutUI(const GURL& url) {
  #if !BUILDFLAG(IS_ANDROID)
            || url.host_piece() == chrome::kChromeUITermsHost
  #endif
@@ -44,7 +44,7 @@ $NetBSD$
            || url.host_piece() == chrome::kChromeUILinuxProxyConfigHost
  #endif
  #if BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -627,7 +627,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -608,7 +608,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    if (url.host_piece() == chrome::kChromeUIMobileSetupHost)
      return &NewWebUI<ash::cellular_setup::MobileSetupUI>;
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
@@ -53,7 +53,7 @@ $NetBSD$
    if (url.host_piece() == chrome::kChromeUIWebUIJsErrorHost)
      return &NewWebUI<WebUIJsErrorUI>;
  #endif
-@@ -683,7 +683,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -664,7 +664,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    if (url.host_piece() == chrome::kChromeUINaClHost)
      return &NewWebUI<NaClUI>;
  #endif
@@ -62,7 +62,7 @@ $NetBSD$
       defined(TOOLKIT_VIEWS)) ||                         \
      defined(USE_AURA)
    if (url.host_piece() == chrome::kChromeUITabModalConfirmDialogHost)
-@@ -738,27 +738,27 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -712,27 +712,27 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    }
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

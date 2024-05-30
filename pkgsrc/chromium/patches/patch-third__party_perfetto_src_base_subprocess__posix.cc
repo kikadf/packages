@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/base/subprocess_posix.cc.orig	2024-05-09 21:48:16.592520500 +0000
+--- third_party/perfetto/src/base/subprocess_posix.cc.orig	2024-05-21 22:46:04.757804400 +0000
 +++ third_party/perfetto/src/base/subprocess_posix.cc
 @@ -35,7 +35,8 @@
  #include <thread>

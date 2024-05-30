@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/public/browser/service_process_host.cc.orig	2024-05-09 21:46:50.634843600 +0000
+--- content/public/browser/service_process_host.cc.orig	2024-05-21 22:43:01.437461900 +0000
 +++ content/public/browser/service_process_host.cc
-@@ -76,7 +76,7 @@ ServiceProcessHost::Options& ServiceProc
+@@ -70,7 +70,7 @@ ServiceProcessHost::Options::WithPreload
  
  ServiceProcessHost::Options& ServiceProcessHost::Options::WithGpuClient(
      base::PassKey<ServiceProcessHostGpuClient> passkey) {

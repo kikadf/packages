@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/crashpad/crashpad/client/BUILD.gn.orig	2024-05-09 21:47:24.781098600 +0000
+--- third_party/crashpad/crashpad/client/BUILD.gn.orig	2024-05-21 22:43:29.387954500 +0000
 +++ third_party/crashpad/crashpad/client/BUILD.gn
 @@ -137,6 +137,13 @@ static_library("common") {
    if (crashpad_is_win) {

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/signin/public/base/signin_switches.cc.orig	2024-05-09 21:46:47.274621700 +0000
+--- components/signin/public/base/signin_switches.cc.orig	2024-05-21 22:42:59.377278000 +0000
 +++ components/signin/public/base/signin_switches.cc
-@@ -132,7 +132,7 @@ bool IsExplicitBrowserSigninUIOnDesktopE
+@@ -145,7 +145,7 @@ bool IsExplicitBrowserSigninUIOnDesktopE
  }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
@@ -14,7 +14,7 @@ $NetBSD$
  BASE_FEATURE(kMinorModeRestrictionsForHistorySyncOptIn,
               "MinorModeRestrictionsForHistorySyncOptIn",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -141,7 +141,7 @@ constexpr int kMinorModeRestrictionsFetc
+@@ -154,7 +154,7 @@ constexpr int kMinorModeRestrictionsFetc
  #if BUILDFLAG(IS_ANDROID)
      // Based on Signin.AccountCapabilities.UserVisibleLatency
      400;

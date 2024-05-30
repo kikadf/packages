@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/renderer/bindings/api_binding_util.cc.orig	2024-05-09 21:46:52.114941400 +0000
+--- extensions/renderer/bindings/api_binding_util.cc.orig	2024-05-21 22:43:02.761579800 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
 @@ -132,7 +132,7 @@ std::string GetPlatformString() {
    return "lacros";

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/public/common/content_switches.cc.orig	2024-05-09 21:46:50.650844600 +0000
+--- content/public/common/content_switches.cc.orig	2024-05-21 22:43:01.453463000 +0000
 +++ content/public/common/content_switches.cc
-@@ -366,6 +366,8 @@ const char kEnableIsolatedWebAppsInRende
+@@ -362,6 +362,8 @@ const char kEnableIsolatedWebAppsInRende
  // builds.
  const char kEnableLogging[]                 = "enable-logging";
  
@@ -14,7 +14,7 @@ $NetBSD$
  // Enables the type, downlinkMax attributes of the NetInfo API. Also, enables
  // triggering of change attribute of the NetInfo API when there is a change in
  // the connection type.
-@@ -1007,7 +1009,7 @@ const char kPreventResizingContentsForTe
+@@ -993,7 +995,7 @@ const char kPreventResizingContentsForTe
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

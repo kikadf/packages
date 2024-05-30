@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2024-05-09 21:46:39.378100200 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2024-05-21 22:42:54.060804000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h
 @@ -73,7 +73,7 @@ class SigninViewControllerDelegateViews
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT) || BUILDFLAG(IS_CHROMEOS_LACROS)
@@ -14,7 +14,7 @@ $NetBSD$
    static std::unique_ptr<views::WebView>
    CreateManagedUserNoticeConfirmationWebView(
        Browser* browser,
-@@ -138,7 +138,7 @@ class SigninViewControllerDelegateViews
+@@ -139,7 +139,7 @@ class SigninViewControllerDelegateViews
        InitializeSigninWebDialogUI initialize_signin_web_dialog_ui);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

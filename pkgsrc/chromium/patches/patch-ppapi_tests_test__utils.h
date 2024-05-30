@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ppapi/tests/test_utils.h.orig	2024-05-09 21:47:01.415555500 +0000
+--- ppapi/tests/test_utils.h.orig	2024-05-21 22:43:06.917950600 +0000
 +++ ppapi/tests/test_utils.h
 @@ -314,6 +314,8 @@ do { \
  #define PPAPI_OS_FREEBSD 1

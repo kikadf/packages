@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/gwp_asan/client/gwp_asan_features.cc.orig	2024-05-09 21:46:44.346428200 +0000
+--- components/gwp_asan/client/gwp_asan_features.cc.orig	2024-05-21 22:42:58.057160400 +0000
 +++ components/gwp_asan/client/gwp_asan_features.cc
 @@ -9,7 +9,7 @@
  namespace gwp_asan::internal {

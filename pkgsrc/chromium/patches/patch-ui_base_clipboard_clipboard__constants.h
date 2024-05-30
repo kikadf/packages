@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/clipboard/clipboard_constants.h.orig	2024-05-09 21:47:31.029511500 +0000
+--- ui/base/clipboard/clipboard_constants.h.orig	2024-05-21 22:43:35.568505800 +0000
 +++ ui/base/clipboard/clipboard_constants.h
 @@ -48,7 +48,7 @@ extern const char kMimeTypeDataTransferE
  

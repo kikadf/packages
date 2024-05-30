@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/capture/video/file_video_capture_device_factory.cc.orig	2024-05-09 21:46:58.263347400 +0000
+--- media/capture/video/file_video_capture_device_factory.cc.orig	2024-05-21 22:43:04.857766900 +0000
 +++ media/capture/video/file_video_capture_device_factory.cc
 @@ -52,7 +52,7 @@ void FileVideoCaptureDeviceFactory::GetD
        VideoCaptureApi::WIN_DIRECT_SHOW;

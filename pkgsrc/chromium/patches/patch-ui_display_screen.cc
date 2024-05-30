@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/display/screen.cc.orig	2024-05-09 21:47:31.245525600 +0000
+--- ui/display/screen.cc.orig	2024-05-21 22:43:35.940539100 +0000
 +++ ui/display/screen.cc
 @@ -85,7 +85,7 @@ void Screen::SetDisplayForNewWindows(int
    display_id_for_new_windows_ = display_id;

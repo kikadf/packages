@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/vaapi/vaapi_wrapper.cc.orig	2024-05-09 21:46:58.523364500 +0000
+--- media/gpu/vaapi/vaapi_wrapper.cc.orig	2024-05-21 22:43:05.021781400 +0000
 +++ media/gpu/vaapi/vaapi_wrapper.cc
-@@ -67,7 +67,7 @@
+@@ -70,7 +70,7 @@
  using media_gpu_vaapi::kModuleVa_prot;
  #endif
  

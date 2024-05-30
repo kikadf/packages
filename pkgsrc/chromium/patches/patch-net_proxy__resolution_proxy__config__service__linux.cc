@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-05-09 21:47:01.139537300 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-05-21 22:43:06.641925800 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
 @@ -6,7 +6,9 @@
  
@@ -22,7 +22,7 @@ $NetBSD$
 +#if !BUILDFLAG(IS_BSD)
  // Converts |value| from a decimal string to an int. If there was a failure
  // parsing, returns |default_value|.
- int StringToIntOrDefault(base::StringPiece value, int default_value) {
+ int StringToIntOrDefault(std::string_view value, int default_value) {
 @@ -1033,6 +1036,7 @@ class SettingGetterImplKDE : public Prox
    // events on.
    scoped_refptr<base::SequencedTaskRunner> file_task_runner_;

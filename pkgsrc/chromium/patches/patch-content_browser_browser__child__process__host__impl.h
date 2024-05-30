@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/browser_child_process_host_impl.h.orig	2024-05-09 21:46:49.738784300 +0000
+--- content/browser/browser_child_process_host_impl.h.orig	2024-05-21 22:43:00.801405000 +0000
 +++ content/browser/browser_child_process_host_impl.h
-@@ -34,7 +34,7 @@
+@@ -35,7 +35,7 @@
  #include "base/win/object_watcher.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "content/browser/child_thread_type_switcher_linux.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -266,7 +266,7 @@ class BrowserChildProcessHostImpl
+@@ -273,7 +273,7 @@ class BrowserChildProcessHostImpl
    std::unique_ptr<tracing::SystemTracingService> system_tracing_service_;
  #endif
  

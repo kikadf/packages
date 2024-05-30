@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-05-09 21:46:50.206815200 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-05-21 22:43:01.165437500 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
-@@ -119,7 +119,7 @@
+@@ -120,7 +120,7 @@
  #include "ui/gfx/gdi_util.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "content/browser/accessibility/browser_accessibility_auralinux.h"
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
-@@ -452,7 +452,7 @@ gfx::NativeViewAccessible RenderWidgetHo
+@@ -453,7 +453,7 @@ gfx::NativeViewAccessible RenderWidgetHo
      return ToBrowserAccessibilityWin(manager->GetBrowserAccessibilityRoot())
          ->GetCOM();
  
@@ -23,8 +23,8 @@ $NetBSD$
    BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -1705,7 +1705,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
-   return host_->delegate() && host_->delegate()->ShouldDoLearning();
+@@ -1704,7 +1704,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+   return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -32,7 +32,7 @@ $NetBSD$
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2538,7 +2538,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -2537,7 +2537,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -41,7 +41,7 @@ $NetBSD$
    return NeedsInputGrab();
  #else
    return false;
-@@ -2722,7 +2722,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -2721,7 +2721,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  

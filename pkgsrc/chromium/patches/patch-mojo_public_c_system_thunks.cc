@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- mojo/public/c/system/thunks.cc.orig	2024-05-09 21:46:59.387421600 +0000
+--- mojo/public/c/system/thunks.cc.orig	2024-05-21 22:43:05.469821500 +0000
 +++ mojo/public/c/system/thunks.cc
 @@ -25,7 +25,7 @@
  #include "mojo/public/c/system/message_pipe.h"

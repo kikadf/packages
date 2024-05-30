@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/x/x11_util.h.orig	2024-05-09 21:47:31.109516600 +0000
+--- ui/base/x/x11_util.h.orig	2024-05-21 22:43:35.648512800 +0000
 +++ ui/base/x/x11_util.h
 @@ -256,6 +256,10 @@ COMPONENT_EXPORT(UI_BASE_X) bool IsVulka
  COMPONENT_EXPORT(UI_BASE_X)

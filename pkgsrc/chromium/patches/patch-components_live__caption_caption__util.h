@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/live_caption/caption_util.h.orig	2024-05-09 21:46:44.450435200 +0000
+--- components/live_caption/caption_util.h.orig	2024-05-21 22:42:58.157169000 +0000
 +++ components/live_caption/caption_util.h
 @@ -15,7 +15,7 @@ class PrefService;
  namespace captions {

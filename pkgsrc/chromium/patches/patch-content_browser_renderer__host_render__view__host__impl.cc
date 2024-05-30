@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-05-09 21:46:50.170812800 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-05-21 22:43:01.161437000 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
 @@ -272,7 +272,7 @@ void RenderViewHostImpl::GetPlatformSpec
        display::win::ScreenWin::GetSystemMetricsInDIP(SM_CYVSCROLL);

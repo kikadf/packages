@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2024-05-09 21:46:35.673855500 +0000
+--- chrome/browser/enterprise/connectors/connectors_service.cc.orig	2024-05-21 22:42:51.116541400 +0000
 +++ chrome/browser/enterprise/connectors/connectors_service.cc
-@@ -564,7 +564,7 @@ bool ConnectorsService::ConnectorsEnable
+@@ -569,7 +569,7 @@ bool ConnectorsService::ConnectorsEnable
  
    Profile* profile = Profile::FromBrowserContext(context_);
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/vulkan_memory_allocator/include/vk_mem_alloc.h.orig	2024-05-09 21:47:47.258583000 +0000
+--- third_party/vulkan_memory_allocator/include/vk_mem_alloc.h.orig	2024-05-21 22:46:34.484451800 +0000
 +++ third_party/vulkan_memory_allocator/include/vk_mem_alloc.h
 @@ -2760,7 +2760,7 @@ void* vma_aligned_alloc(size_t alignment
  

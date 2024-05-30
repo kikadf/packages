@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/crash/core/app/crashpad_handler_main.cc.orig	2024-05-09 21:46:43.990404800 +0000
+--- components/crash/core/app/crashpad_handler_main.cc.orig	2024-05-21 22:42:57.569116800 +0000
 +++ components/crash/core/app/crashpad_handler_main.cc
 @@ -10,7 +10,7 @@
  #include "third_party/crashpad/crashpad/handler/handler_main.h"

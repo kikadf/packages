@@ -3,10 +3,10 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2024-05-09 21:46:44.274423600 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2024-05-21 22:42:57.985154000 +0000
 +++ components/feature_engagement/public/feature_list.cc
 @@ -147,7 +147,7 @@ const base::Feature* const kAllFeatures[
-     &kIPHiOSOverflowMenuCustomizationFeature,
+     &kIPHiOSInlineEnhancedSafeBrowsingPromoFeature,
  #endif  // BUILDFLAG(IS_IOS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
@@ -14,15 +14,15 @@ $NetBSD$
      &kIPHBatterySaverModeFeature,
      &kIPHCompanionSidePanelFeature,
      &kIPHCompanionSidePanelRegionSearchFeature,
-@@ -203,7 +203,7 @@ const base::Feature* const kAllFeatures[
+@@ -201,7 +201,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
+     &kIPHAutofillCreditCardBenefitFeature,
      &kIPHAutofillExternalAccountProfileSuggestionFeature,
-     &kIPHAutofillManualFallbackFeature,
 @@ -252,7 +252,7 @@ const base::Feature* const kAllFeatures[
      &kIPHScalableIphGamingFeature,
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)

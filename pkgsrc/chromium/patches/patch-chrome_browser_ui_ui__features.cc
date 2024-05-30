@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/ui_features.cc.orig	2024-05-09 21:46:39.198088200 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2024-05-21 22:42:53.856785800 +0000
 +++ chrome/browser/ui/ui_features.cc
-@@ -410,7 +410,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRen
+@@ -426,7 +426,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRen
               "TopChromeWebUIUsesSpareRenderer",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

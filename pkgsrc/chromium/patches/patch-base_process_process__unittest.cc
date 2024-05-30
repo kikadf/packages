@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_unittest.cc.orig	2024-05-09 21:46:25.793202900 +0000
+--- base/process/process_unittest.cc.orig	2024-05-21 22:42:46.724149500 +0000
 +++ base/process/process_unittest.cc
 @@ -199,7 +199,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
    // was spawned and a time recorded after it was spawned. However, since the

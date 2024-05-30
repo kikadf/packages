@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2024-05-09 21:47:42.266253500 +0000
+--- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2024-05-21 22:45:35.351188000 +0000
 +++ third_party/libc++abi/src/src/cxa_guard_impl.h
 @@ -411,7 +411,20 @@ private:
  //                         Futex Implementation

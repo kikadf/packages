@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/chrome_pages.h.orig	2024-05-09 21:46:39.050078400 +0000
+--- chrome/browser/ui/chrome_pages.h.orig	2024-05-21 22:42:53.680770000 +0000
 +++ chrome/browser/ui/chrome_pages.h
 @@ -38,7 +38,7 @@ enum class ConsentLevel;
  }  // namespace signin
@@ -14,7 +14,7 @@ $NetBSD$
  namespace web_app {
  enum class AppSettingsPageEntryPoint;
  }  // namespace web_app
-@@ -262,7 +262,7 @@ void ShowShortcutCustomizationApp(Profil
+@@ -263,7 +263,7 @@ void ShowShortcutCustomizationApp(Profil
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

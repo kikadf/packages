@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/metrics/power/process_monitor.h.orig	2024-05-09 21:46:36.365901200 +0000
+--- chrome/browser/metrics/power/process_monitor.h.orig	2024-05-21 22:42:51.688592200 +0000
 +++ chrome/browser/metrics/power/process_monitor.h
 @@ -76,7 +76,7 @@ class ProcessMonitor : public content::B
      std::optional<double> cpu_usage;

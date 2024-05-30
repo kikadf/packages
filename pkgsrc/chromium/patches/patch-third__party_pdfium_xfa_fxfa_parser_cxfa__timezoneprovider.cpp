@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/pdfium/xfa/fxfa/parser/cxfa_timezoneprovider.cpp.orig	2024-05-09 21:48:21.080817000 +0000
+--- third_party/pdfium/xfa/fxfa/parser/cxfa_timezoneprovider.cpp.orig	2024-05-21 22:45:54.100856000 +0000
 +++ third_party/pdfium/xfa/fxfa/parser/cxfa_timezoneprovider.cpp
 @@ -6,12 +6,16 @@
  

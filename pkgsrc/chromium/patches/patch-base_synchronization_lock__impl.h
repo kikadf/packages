@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/synchronization/lock_impl.h.orig	2024-05-09 21:46:25.821205000 +0000
+--- base/synchronization/lock_impl.h.orig	2024-05-21 22:42:46.752152000 +0000
 +++ base/synchronization/lock_impl.h
-@@ -107,6 +107,10 @@ void LockImpl::Unlock() {
+@@ -106,6 +106,10 @@ void LockImpl::Unlock() {
  }
  
  #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
@@ -16,7 +16,7 @@ $NetBSD$
  
  #if DCHECK_IS_ON()
  BASE_EXPORT void dcheck_trylock_result(int rv);
-@@ -127,6 +131,9 @@ void LockImpl::Unlock() {
+@@ -126,6 +130,9 @@ void LockImpl::Unlock() {
    dcheck_unlock_result(rv);
  #endif
  }

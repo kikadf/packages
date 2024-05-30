@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.h.orig	2024-05-09 21:46:39.478106700 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.h.orig	2024-05-21 22:42:54.172814000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.h
 @@ -222,7 +222,7 @@ class WebAppUiManagerImpl : public Brows
        UninstallCompleteCallback uninstall_complete_callback,

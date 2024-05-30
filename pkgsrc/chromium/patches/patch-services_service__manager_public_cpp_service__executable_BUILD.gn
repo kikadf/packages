@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2024-05-09 21:47:02.171605600 +0000
+--- services/service_manager/public/cpp/service_executable/BUILD.gn.orig	2024-05-21 22:43:07.449998000 +0000
 +++ services/service_manager/public/cpp/service_executable/BUILD.gn
 @@ -22,7 +22,7 @@ source_set("support") {
      "//services/service_manager/public/mojom",

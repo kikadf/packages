@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/network/network_sandbox_hook_linux.cc.orig	2024-05-09 21:47:02.059598200 +0000
+--- services/network/network_sandbox_hook_linux.cc.orig	2024-05-21 22:43:07.337988000 +0000
 +++ services/network/network_sandbox_hook_linux.cc
 @@ -15,11 +15,14 @@
  #include "sandbox/linux/syscall_broker/broker_file_permission.h"

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-05-09 21:46:58.471361200 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-05-21 22:43:04.969776900 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
 @@ -1038,7 +1038,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    }
@@ -14,21 +14,21 @@ $NetBSD$
    // Linux should always use a custom allocator (to allocate buffers using
    // libva) and a PlatformVideoFramePool.
    CHECK(allocator.has_value());
-@@ -1048,7 +1048,7 @@ VideoDecoderPipeline::PickDecoderOutputF
-   // to create NativePixmap-backed frames.
+@@ -1047,7 +1047,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+   // VideoFrame::StorageType of VideoFrame::STORAGE_DMABUFS.
    main_frame_pool_->AsPlatformVideoFramePool()->SetCustomFrameAllocator(
-       *allocator, VideoFrame::STORAGE_GPU_MEMORY_BUFFER);
+       *allocator, VideoFrame::STORAGE_DMABUFS);
 -#elif BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_V4L2_CODEC)
 +#elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_V4L2_CODEC)
    // Linux w/ V4L2 should not use a custom allocator
    // Only tested with video_decode_accelerator_tests
    // TODO(wenst@) Test with full Chromium Browser
-@@ -1206,7 +1206,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1205,7 +1205,7 @@ VideoDecoderPipeline::PickDecoderOutputF
               << " VideoFrames";
      auxiliary_frame_pool_->set_parent_task_runner(decoder_task_runner_);
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     // TODO(nhebert): Change the storage type argument when |allocator| switches
-     // to create NativePixmap-backed frames.
+     // The custom allocator creates frames backed by NativePixmap, which uses a
+     // VideoFrame::StorageType of VideoFrame::STORAGE_DMABUFS.
      auxiliary_frame_pool_->AsPlatformVideoFramePool()->SetCustomFrameAllocator(

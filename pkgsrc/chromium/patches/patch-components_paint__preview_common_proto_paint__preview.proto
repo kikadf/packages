@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/paint_preview/common/proto/paint_preview.proto.orig	2024-05-09 21:46:44.814459000 +0000
+--- components/paint_preview/common/proto/paint_preview.proto.orig	2024-05-21 22:42:58.481198000 +0000
 +++ components/paint_preview/common/proto/paint_preview.proto
 @@ -82,8 +82,8 @@ message PaintPreviewFrameProto {
  // Stores Chrome version.

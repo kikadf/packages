@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-05-09 21:46:47.114611100 +0000
+--- components/search_engines/search_engine_choice/search_engine_choice_service.cc.orig	2024-05-21 22:42:59.229264700 +0000
 +++ components/search_engines/search_engine_choice/search_engine_choice_service.cc
-@@ -437,7 +437,7 @@ void SearchEngineChoiceService::Preproce
+@@ -539,7 +539,7 @@ void SearchEngineChoiceService::ProcessP
  
  int SearchEngineChoiceService::GetCountryIdInternal() {
    // `country_codes::kCountryIDAtInstall` may not be set yet.

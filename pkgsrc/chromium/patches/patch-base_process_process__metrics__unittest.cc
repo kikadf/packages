@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_unittest.cc.orig	2024-05-09 21:46:25.789202700 +0000
+--- base/process/process_metrics_unittest.cc.orig	2024-05-21 22:42:46.724149500 +0000
 +++ base/process/process_metrics_unittest.cc
-@@ -56,7 +56,8 @@
+@@ -57,7 +57,8 @@
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||      \
      BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_WIN) || \

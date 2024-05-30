@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-05-09 21:47:43.442331000 +0000
+--- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-05-21 22:45:08.084756900 +0000
 +++ third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c
 @@ -99,10 +99,46 @@ static int arm_get_cpu_caps(void) {
    return flags;

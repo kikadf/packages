@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- tools/json_schema_compiler/feature_compiler.py.orig	2024-05-09 21:47:29.913437600 +0000
+--- tools/json_schema_compiler/feature_compiler.py.orig	2024-05-21 22:43:34.664425100 +0000
 +++ tools/json_schema_compiler/feature_compiler.py
-@@ -276,6 +276,9 @@ FEATURE_GRAMMAR = ({
+@@ -277,6 +277,9 @@ FEATURE_GRAMMAR = ({
                  'linux': 'Feature::LINUX_PLATFORM',
                  'mac': 'Feature::MACOSX_PLATFORM',
                  'win': 'Feature::WIN_PLATFORM',

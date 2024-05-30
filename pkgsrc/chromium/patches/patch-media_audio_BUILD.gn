@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/audio/BUILD.gn.orig	2024-05-09 21:46:58.155340200 +0000
+--- media/audio/BUILD.gn.orig	2024-05-21 22:43:04.749757000 +0000
 +++ media/audio/BUILD.gn
 @@ -270,10 +270,21 @@ source_set("audio") {
      deps += [ "//media/base/android:media_jni_headers" ]

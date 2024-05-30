@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- printing/sandbox/print_backend_sandbox_hook_linux.h.orig	2024-05-09 21:47:01.443557500 +0000
+--- printing/sandbox/print_backend_sandbox_hook_linux.h.orig	2024-05-21 22:43:06.945953100 +0000
 +++ printing/sandbox/print_backend_sandbox_hook_linux.h
 @@ -5,8 +5,13 @@
  #ifndef PRINTING_SANDBOX_PRINT_BACKEND_SANDBOX_HOOK_LINUX_H_

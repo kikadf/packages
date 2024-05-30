@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/utility/services.cc.orig	2024-05-09 21:46:51.470898900 +0000
+--- content/utility/services.cc.orig	2024-05-21 22:43:02.113522000 +0000
 +++ content/utility/services.cc
 @@ -74,7 +74,7 @@
  extern sandbox::TargetServices* g_utility_target_services;
@@ -57,7 +57,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS_ASH)
    {
  #else
-@@ -407,7 +407,7 @@ auto RunOOPArcVideoAcceleratorFactorySer
+@@ -384,7 +384,7 @@ auto RunOOPArcVideoAcceleratorFactorySer
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) && (BUILDFLAG(USE_VAAPI) ||
          // BUILDFLAG(USE_V4L2_CODEC))
  
@@ -66,7 +66,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  auto RunStableVideoDecoderFactoryProcessService(
      mojo::PendingReceiver<
-@@ -418,7 +418,7 @@ auto RunStableVideoDecoderFactoryProcess
+@@ -395,7 +395,7 @@ auto RunStableVideoDecoderFactoryProcess
  #endif  // (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)) &&
          // (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  
@@ -75,7 +75,7 @@ $NetBSD$
  auto RunVideoEncodeAcceleratorProviderFactory(
      mojo::PendingReceiver<media::mojom::VideoEncodeAcceleratorProviderFactory>
          receiver) {
-@@ -441,7 +441,7 @@ void RegisterIOThreadServices(mojo::Serv
+@@ -418,7 +418,7 @@ void RegisterIOThreadServices(mojo::Serv
    // loop of type IO that can get notified when pipes have data.
    services.Add(RunNetworkService);
  
@@ -84,7 +84,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
    if (base::FeatureList::IsEnabled(
            features::kRunStableVideoDecoderFactoryProcessServiceOnIOThread)) {
-@@ -493,7 +493,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -470,7 +470,7 @@ void RegisterMainThreadServices(mojo::Se
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) && (BUILDFLAG(USE_VAAPI) ||
          // BUILDFLAG(USE_V4L2_CODEC))
  
@@ -93,7 +93,7 @@ $NetBSD$
      (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
    if (!base::FeatureList::IsEnabled(
            features::kRunStableVideoDecoderFactoryProcessServiceOnIOThread)) {
-@@ -502,7 +502,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -479,7 +479,7 @@ void RegisterMainThreadServices(mojo::Se
  #endif  // (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)) &&
          // (BUILDFLAG(USE_VAAPI) || BUILDFLAG(USE_V4L2_CODEC))
  

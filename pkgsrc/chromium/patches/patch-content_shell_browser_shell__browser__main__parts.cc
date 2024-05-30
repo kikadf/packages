@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/shell/browser/shell_browser_main_parts.cc.orig	2024-05-09 21:46:50.762852000 +0000
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2024-05-21 22:43:01.561473000 +0000
 +++ content/shell/browser/shell_browser_main_parts.cc
 @@ -51,7 +51,7 @@
  #include "net/base/network_change_notifier.h"

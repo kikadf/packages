@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/ipc/common/gpu_memory_buffer_support.cc.orig	2024-05-09 21:46:52.414961000 +0000
+--- gpu/ipc/common/gpu_memory_buffer_support.cc.orig	2024-05-21 22:43:03.057606200 +0000
 +++ gpu/ipc/common/gpu_memory_buffer_support.cc
 @@ -26,7 +26,7 @@
  #include "ui/ozone/public/ozone_platform.h"

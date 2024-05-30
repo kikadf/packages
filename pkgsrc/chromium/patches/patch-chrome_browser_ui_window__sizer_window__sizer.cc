@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/window_sizer/window_sizer.cc.orig	2024-05-09 21:46:39.710122000 +0000
+--- chrome/browser/ui/window_sizer/window_sizer.cc.orig	2024-05-21 22:42:54.372831600 +0000
 +++ chrome/browser/ui/window_sizer/window_sizer.cc
-@@ -216,7 +216,7 @@ void WindowSizer::GetBrowserWindowBounds
+@@ -210,7 +210,7 @@ void WindowSizer::GetBrowserWindowBounds
        browser, window_bounds, show_state);
  }
  

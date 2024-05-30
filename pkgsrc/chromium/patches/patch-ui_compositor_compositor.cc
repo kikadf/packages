@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/compositor/compositor.cc.orig	2024-05-09 21:47:31.217523800 +0000
+--- ui/compositor/compositor.cc.orig	2024-05-21 22:43:35.752522200 +0000
 +++ ui/compositor/compositor.cc
-@@ -910,7 +910,7 @@ void Compositor::OnResume() {
+@@ -922,7 +922,7 @@ void Compositor::OnResume() {
      obs.ResetIfActive();
  }
  

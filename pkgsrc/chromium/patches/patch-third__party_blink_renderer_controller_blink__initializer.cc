@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-05-09 21:47:05.299812000 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-05-21 22:43:09.206154600 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
-@@ -80,12 +80,12 @@
+@@ -81,12 +81,12 @@
  #include "third_party/blink/renderer/controller/private_memory_footprint_provider.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include "third_party/blink/renderer/controller/highest_pmf_reporter.h"
  #include "third_party/blink/renderer/controller/user_level_memory_pressure_signal_generator.h"
  #endif
-@@ -255,7 +255,7 @@ void BlinkInitializer::RegisterInterface
+@@ -256,7 +256,7 @@ void BlinkInitializer::RegisterInterface
        main_thread_task_runner);
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD$
    binders.Add<mojom::blink::MemoryUsageMonitorLinux>(
        ConvertToBaseRepeatingCallback(
            CrossThreadBindRepeating(&MemoryUsageMonitorPosix::Bind)),
-@@ -294,7 +294,7 @@ void BlinkInitializer::RegisterMemoryWat
+@@ -306,7 +306,7 @@ void BlinkInitializer::RegisterMemoryWat
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

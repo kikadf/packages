@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/on_device_model/on_device_model_service.h.orig	2024-05-09 21:47:02.143603600 +0000
+--- services/on_device_model/on_device_model_service.h.orig	2024-05-21 22:43:07.425995800 +0000
 +++ services/on_device_model/on_device_model_service.h
-@@ -20,6 +20,10 @@
+@@ -22,6 +22,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"
  #endif
  
@@ -16,7 +16,7 @@ $NetBSD$
  namespace on_device_model {
  
  class COMPONENT_EXPORT(ON_DEVICE_MODEL) OnDeviceModelService
-@@ -29,7 +33,7 @@ class COMPONENT_EXPORT(ON_DEVICE_MODEL) 
+@@ -31,7 +35,7 @@ class COMPONENT_EXPORT(ON_DEVICE_MODEL) 
    // These are defined separately in pre_sandbox_init.cc for explicit security
    // review coverage.
    [[nodiscard]] static bool PreSandboxInit();

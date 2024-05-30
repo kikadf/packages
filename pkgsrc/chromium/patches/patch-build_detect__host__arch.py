@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/detect_host_arch.py.orig	2024-05-09 21:46:26.061220600 +0000
+--- build/detect_host_arch.py.orig	2024-05-21 22:42:46.988173000 +0000
 +++ build/detect_host_arch.py
 @@ -20,6 +20,8 @@ def HostArch():
      host_arch = 'ia32'

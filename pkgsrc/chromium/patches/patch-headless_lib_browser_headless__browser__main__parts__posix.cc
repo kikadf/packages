@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2024-05-09 21:46:52.442963000 +0000
+--- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2024-05-21 22:43:03.085608700 +0000
 +++ headless/lib/browser/headless_browser_main_parts_posix.cc
 @@ -21,13 +21,13 @@
  #include "content/public/browser/browser_thread.h"

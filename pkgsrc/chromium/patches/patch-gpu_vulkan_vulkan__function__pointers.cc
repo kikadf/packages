@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-05-09 21:46:52.434962500 +0000
+--- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-05-21 22:43:03.077608000 +0000
 +++ gpu/vulkan/vulkan_function_pointers.cc
 @@ -1289,7 +1289,7 @@ bool VulkanFunctionPointers::BindDeviceF
      }

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/compiler_specific.h.orig	2024-05-09 21:46:25.685196000 +0000
+--- base/compiler_specific.h.orig	2024-05-21 22:42:46.620140300 +0000
 +++ base/compiler_specific.h
 @@ -316,7 +316,8 @@
  //

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2024-05-09 21:46:39.574113100 +0000
+--- chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc.orig	2024-05-21 22:42:54.268822400 +0000
 +++ chrome/browser/ui/webui/connectors_internals/device_trust_utils.cc
 @@ -7,7 +7,7 @@
  #include "build/build_config.h"
@@ -23,7 +23,7 @@ $NetBSD$
  
  connectors_internals::mojom::KeyTrustLevel ParseTrustLevel(
      BPKUR::KeyTrustLevel trust_level) {
-@@ -189,7 +189,7 @@ connectors_internals::mojom::Certificate
+@@ -173,7 +173,7 @@ connectors_internals::mojom::Certificate
  }  // namespace
  
  connectors_internals::mojom::KeyInfoPtr GetKeyInfo() {

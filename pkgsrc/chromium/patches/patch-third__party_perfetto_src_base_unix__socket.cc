@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/src/base/unix_socket.cc.orig	2024-05-09 21:48:16.596520700 +0000
+--- third_party/perfetto/src/base/unix_socket.cc.orig	2024-05-21 22:46:04.761804600 +0000
 +++ third_party/perfetto/src/base/unix_socket.cc
 @@ -44,7 +44,7 @@
  #include <unistd.h>

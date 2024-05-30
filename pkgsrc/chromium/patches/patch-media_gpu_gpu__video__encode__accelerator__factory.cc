@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/gpu/gpu_video_encode_accelerator_factory.cc.orig	2024-05-09 21:46:58.475361300 +0000
+--- media/gpu/gpu_video_encode_accelerator_factory.cc.orig	2024-05-21 22:43:04.973777000 +0000
 +++ media/gpu/gpu_video_encode_accelerator_factory.cc
 @@ -118,7 +118,7 @@ std::vector<VEAFactoryFunction> GetVEAFa
      return vea_factory_functions;

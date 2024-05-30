@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/window/custom_frame_view.cc.orig	2024-05-09 21:47:31.877567300 +0000
+--- ui/views/window/custom_frame_view.cc.orig	2024-05-21 22:43:36.504589300 +0000
 +++ ui/views/window/custom_frame_view.cc
 @@ -266,7 +266,7 @@ int CustomFrameView::CaptionButtonY() co
    // drawn flush with the screen edge, they still obey Fitts' Law.

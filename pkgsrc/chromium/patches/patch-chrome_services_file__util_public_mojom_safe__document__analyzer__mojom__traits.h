@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/services/file_util/public/mojom/safe_document_analyzer_mojom_traits.h.orig	2024-05-09 21:46:40.090147300 +0000
+--- chrome/services/file_util/public/mojom/safe_document_analyzer_mojom_traits.h.orig	2024-05-21 22:42:54.720862600 +0000
 +++ chrome/services/file_util/public/mojom/safe_document_analyzer_mojom_traits.h
 @@ -16,7 +16,7 @@
  #include "mojo/public/cpp/bindings/struct_traits.h"

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/utility/utility_main.cc.orig	2024-05-09 21:46:51.470898900 +0000
+--- content/utility/utility_main.cc.orig	2024-05-21 22:43:02.113522000 +0000
 +++ content/utility/utility_main.cc
-@@ -37,17 +37,21 @@
+@@ -38,17 +38,21 @@
  #include "third_party/icu/source/common/unicode/unistr.h"
  #include "third_party/icu/source/i18n/unicode/timezone.h"
  
@@ -28,7 +28,7 @@ $NetBSD$
  #include "services/audio/audio_sandbox_hook_linux.h"
  #include "services/network/network_sandbox_hook_linux.h"
  // gn check is not smart enough to realize that this include only applies to
-@@ -59,10 +63,15 @@
+@@ -60,10 +64,15 @@
  #endif
  #endif
  
@@ -45,7 +45,7 @@ $NetBSD$
  #if BUILDFLAG(IS_CHROMEOS_ASH)
  #include "chromeos/ash/components/assistant/buildflags.h"
  #include "chromeos/ash/services/ime/ime_sandbox_hook.h"
-@@ -74,7 +83,7 @@
+@@ -75,7 +84,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
  #if (BUILDFLAG(ENABLE_SCREEN_AI_SERVICE) && \
@@ -54,7 +54,7 @@ $NetBSD$
  #include "services/screen_ai/public/cpp/utilities.h"  // nogncheck
  #include "services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.h"  // nogncheck
  #endif
-@@ -101,7 +110,7 @@ namespace content {
+@@ -102,7 +111,7 @@ namespace content {
  
  namespace {
  
@@ -63,7 +63,7 @@ $NetBSD$
  std::vector<std::string> GetNetworkContextsParentDirectories() {
    base::MemoryMappedFile::Region region;
    base::ScopedFD read_pipe_fd = base::FileDescriptorStore::GetInstance().TakeFD(
-@@ -127,9 +136,10 @@ std::vector<std::string> GetNetworkConte
+@@ -129,9 +138,10 @@ std::vector<std::string> GetNetworkConte
    return dirs;
  }
  
@@ -75,7 +75,7 @@ $NetBSD$
        sandbox_type == sandbox::mojom::Sandbox::kHardwareVideoDecoding ||
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
        sandbox_type == sandbox::mojom::Sandbox::kHardwareVideoEncoding;
-@@ -144,6 +154,7 @@ bool ShouldUseAmdGpuPolicy(sandbox::mojo
+@@ -146,6 +156,7 @@ bool ShouldUseAmdGpuPolicy(sandbox::mojo
  
    return false;
  }
@@ -83,16 +83,16 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN)
-@@ -252,7 +263,8 @@ int UtilityMain(MainFunctionParams param
+@@ -251,7 +262,8 @@ int UtilityMain(MainFunctionParams param
      }
    }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +// XXX BSD
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
-   // Thread type delegate of the process should be registered before
-   // first thread type change in ChildProcess constructor.
-   // It also needs to be registered before the process has multiple threads,
+   // Thread type delegate of the process should be registered before first
+   // thread type change in ChildProcess constructor. It also needs to be
+   // registered before the process has multiple threads, which may race with
 @@ -263,7 +275,7 @@ int UtilityMain(MainFunctionParams param
    }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

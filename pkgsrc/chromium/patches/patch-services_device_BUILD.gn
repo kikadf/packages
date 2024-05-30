@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/BUILD.gn.orig	2024-05-09 21:47:01.959591400 +0000
+--- services/device/BUILD.gn.orig	2024-05-21 22:43:07.233978700 +0000
 +++ services/device/BUILD.gn
 @@ -13,7 +13,7 @@ if (is_android) {
  }

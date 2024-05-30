@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/signals/device_info_fetcher_linux.cc.orig	2024-05-09 21:46:35.717858300 +0000
+--- chrome/browser/enterprise/signals/device_info_fetcher_linux.cc.orig	2024-05-21 22:42:51.156545000 +0000
 +++ chrome/browser/enterprise/signals/device_info_fetcher_linux.cc
 @@ -4,11 +4,22 @@
  

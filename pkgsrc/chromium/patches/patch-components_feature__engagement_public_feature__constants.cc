@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2024-05-09 21:46:44.274423600 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2024-05-21 22:42:57.985154000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -18,7 +18,7 @@ BASE_FEATURE(kIPHDemoMode, "IPH_DemoMode
  BASE_FEATURE(kIPHDummyFeature, "IPH_Dummy", base::FEATURE_DISABLED_BY_DEFAULT);
@@ -14,17 +14,16 @@ $NetBSD$
  BASE_FEATURE(kIPHBatterySaverModeFeature,
               "IPH_BatterySaverMode",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -584,7 +584,8 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+@@ -577,7 +577,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+ 
  #endif  // BUILDFLAG(IS_IOS)
  
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
-+    BUILDFLAG(IS_BSD)
- BASE_FEATURE(kIPHAutofillExternalAccountProfileSuggestionFeature,
-              "IPH_AutofillExternalAccountProfileSuggestion",
-              base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -712,7 +713,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
+     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
+ BASE_FEATURE(kIPHAutofillCreditCardBenefitFeature,
+              "IPH_AutofillCreditCardBenefit",
+@@ -712,7 +712,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

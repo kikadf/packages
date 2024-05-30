@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/capture/video/video_capture_buffer_tracker_factory_impl.cc.orig	2024-05-09 21:46:58.271348000 +0000
+--- media/capture/video/video_capture_buffer_tracker_factory_impl.cc.orig	2024-05-21 22:43:04.865767500 +0000
 +++ media/capture/video/video_capture_buffer_tracker_factory_impl.cc
 @@ -14,7 +14,7 @@
  #include "media/capture/video/chromeos/gpu_memory_buffer_tracker_cros.h"

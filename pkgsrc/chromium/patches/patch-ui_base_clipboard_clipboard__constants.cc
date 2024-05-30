@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/clipboard/clipboard_constants.cc.orig	2024-05-09 21:47:31.029511500 +0000
+--- ui/base/clipboard/clipboard_constants.cc.orig	2024-05-21 22:43:35.568505800 +0000
 +++ ui/base/clipboard/clipboard_constants.cc
 @@ -25,7 +25,7 @@ const char kMimeTypeOctetStream[] = "app
  // Used for window dragging on some platforms.

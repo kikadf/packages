@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/common/extensions/permissions/chrome_permission_message_rules.cc.orig	2024-05-09 21:46:39.902134700 +0000
+--- chrome/common/extensions/permissions/chrome_permission_message_rules.cc.orig	2024-05-21 22:42:54.572849500 +0000
 +++ chrome/common/extensions/permissions/chrome_permission_message_rules.cc
 @@ -285,7 +285,7 @@ int GetEnterpriseReportingPrivatePermiss
    }

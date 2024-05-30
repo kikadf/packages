@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2024-05-09 21:46:25.533185700 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2024-05-21 22:42:46.524131800 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h
 @@ -38,7 +38,7 @@ AslrMask(uintptr_t bits) {
  
@@ -14,12 +14,12 @@ $NetBSD$
  
      // We shouldn't allocate system pages at all for sanitizer builds. However,
      // we do, and if random hint addresses interfere with address ranges
-@@ -128,7 +128,7 @@ AslrMask(uintptr_t bits) {
+@@ -125,7 +125,7 @@ AslrMask(uintptr_t bits) {
          return AslrAddress(0x20000000ULL);
        }
- 
--      #elif BUILDFLAG(IS_LINUX)
-+      #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     #elif defined(ARCH_CPU_ARM64)
+-      #if BUILDFLAG(IS_LINUX)
++      #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
        // Linux on arm64 can use 39, 42, 48, or 52-bit user space, depending on
        // page size and number of levels of translation pages used. We use

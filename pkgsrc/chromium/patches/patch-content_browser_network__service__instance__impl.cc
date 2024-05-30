@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/network_service_instance_impl.cc.orig	2024-05-09 21:46:49.958799000 +0000
+--- content/browser/network_service_instance_impl.cc.orig	2024-05-21 22:43:01.013424000 +0000
 +++ content/browser/network_service_instance_impl.cc
-@@ -81,7 +81,7 @@
+@@ -82,7 +82,7 @@
  #include "content/browser/network/network_service_process_tracker_win.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "content/browser/system_dns_resolution/system_dns_resolver.h"
  #include "services/network/public/mojom/system_dns_resolution.mojom-forward.h"
  #endif
-@@ -359,7 +359,7 @@ void CreateInProcessNetworkService(
+@@ -360,7 +360,7 @@ void CreateInProcessNetworkService(
                                  std::move(receiver)));
  }
  
@@ -23,7 +23,7 @@ $NetBSD$
  // Runs a self-owned SystemDnsResolverMojoImpl. This is meant to run on a
  // high-priority thread pool.
  void RunSystemDnsResolverOnThreadPool(
-@@ -428,7 +428,7 @@ network::mojom::NetworkServiceParamsPtr 
+@@ -429,7 +429,7 @@ network::mojom::NetworkServiceParamsPtr 
    }
  #endif  // BUILDFLAG(IS_POSIX)
  

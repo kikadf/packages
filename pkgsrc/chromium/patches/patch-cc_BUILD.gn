@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- cc/BUILD.gn.orig	2024-05-09 21:46:26.113224000 +0000
+--- cc/BUILD.gn.orig	2024-05-21 22:42:47.044178000 +0000
 +++ cc/BUILD.gn
-@@ -681,7 +681,7 @@ cc_test_static_library("test_support") {
+@@ -677,7 +677,7 @@ cc_test_static_library("test_support") {
    if (enable_vulkan) {
      deps += [ "//gpu/vulkan/init" ]
    }
@@ -14,7 +14,7 @@ $NetBSD$
      data_deps = [ "//third_party/mesa_headers" ]
    }
    if (skia_use_dawn) {
-@@ -940,7 +940,6 @@ cc_test("cc_unittests") {
+@@ -936,7 +936,6 @@ cc_test("cc_unittests") {
    data = [ "//components/test/data/viz/" ]
    data_deps = [
      "//testing/buildbot/filters:cc_unittests_filters",

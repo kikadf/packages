@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/hid/hid_service_netbsd.cc.orig	2024-05-13 15:05:54.336321550 +0000
+--- services/device/hid/hid_service_netbsd.cc.orig	2024-05-30 07:27:02.270021617 +0000
 +++ services/device/hid/hid_service_netbsd.cc
 @@ -0,0 +1,395 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.

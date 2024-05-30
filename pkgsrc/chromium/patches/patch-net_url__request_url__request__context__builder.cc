@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/url_request/url_request_context_builder.cc.orig	2024-05-09 21:47:01.263545500 +0000
+--- net/url_request/url_request_context_builder.cc.orig	2024-05-21 22:43:06.761936700 +0000
 +++ net/url_request/url_request_context_builder.cc
-@@ -428,7 +428,7 @@ std::unique_ptr<URLRequestContext> URLRe
+@@ -439,7 +439,7 @@ std::unique_ptr<URLRequestContext> URLRe
    }
  
    if (!proxy_resolution_service_) {

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/download/download_commands.h.orig	2024-05-09 21:46:35.629852500 +0000
+--- chrome/browser/download/download_commands.h.orig	2024-05-21 22:42:51.068537000 +0000
 +++ chrome/browser/download/download_commands.h
-@@ -63,7 +63,7 @@ class DownloadCommands {
+@@ -66,7 +66,7 @@ class DownloadCommands {
    void ExecuteCommand(Command command);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

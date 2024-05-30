@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/toolchain/gcc_toolchain.gni.orig	2024-05-09 21:46:26.097223000 +0000
+--- build/toolchain/gcc_toolchain.gni.orig	2024-05-21 22:42:47.024176400 +0000
 +++ build/toolchain/gcc_toolchain.gni
 @@ -57,6 +57,13 @@ if (enable_resource_allowlist_generation
        "enable_resource_allowlist_generation=true does not work for target_os=$target_os")
@@ -19,7 +19,7 @@ $NetBSD$
  # This template defines a toolchain for something that works like gcc
  # (including clang).
  #
-@@ -638,9 +645,9 @@ template("single_gcc_toolchain") {
+@@ -627,9 +634,9 @@ template("single_gcc_toolchain") {
          # the "--start-group .. --end-group" feature isn't available on the aix
          # ld.
          start_group_flag = "-Wl,--start-group"
@@ -31,7 +31,7 @@ $NetBSD$
  
        # Generate a map file to be used for binary size analysis.
        # Map file adds ~10% to the link time on a z620.
-@@ -890,22 +897,12 @@ template("gcc_toolchain") {
+@@ -879,22 +886,12 @@ template("gcc_toolchain") {
  # use_gold too.
  template("clang_toolchain") {
    gcc_toolchain(target_name) {

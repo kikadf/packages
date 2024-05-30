@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2024-05-09 21:46:39.794127700 +0000
+--- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2024-05-21 22:42:54.456839000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_shortcut.cc
 @@ -65,7 +65,7 @@ namespace {
  

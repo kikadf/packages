@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/fontconfig/src/src/fccompat.c.orig	2024-05-09 21:47:42.806289200 +0000
+--- third_party/fontconfig/src/src/fccompat.c.orig	2024-05-21 22:45:03.232324100 +0000
 +++ third_party/fontconfig/src/src/fccompat.c
 @@ -184,7 +184,9 @@ FcRandom(void)
  {

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-05-09 21:47:31.861566300 +0000
+--- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-05-21 22:43:36.488587900 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc
-@@ -47,7 +47,7 @@
+@@ -48,7 +48,7 @@
  #include "ui/wm/core/window_util.h"
  #include "ui/wm/public/window_move_client.h"
  
@@ -14,16 +14,7 @@ $NetBSD$
  #include "ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone_linux.h"
  #endif
  
-@@ -272,7 +272,7 @@ void DesktopWindowTreeHostPlatform::Init
-   if (params.type == Widget::InitParams::TYPE_WINDOW)
-     GetContentWindow()->SetProperty(aura::client::kAnimationsDisabledKey, true);
- 
--#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
-+#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
-   const bool requires_accelerated_widget = params.requires_accelerated_widget;
- #else
-   const bool requires_accelerated_widget = false;
-@@ -356,7 +356,7 @@ std::unique_ptr<aura::client::DragDropCl
+@@ -362,7 +362,7 @@ std::unique_ptr<aura::client::DragDropCl
  DesktopWindowTreeHostPlatform::CreateDragDropClient() {
    ui::WmDragHandler* drag_handler = ui::GetWmDragHandler(*(platform_window()));
    std::unique_ptr<DesktopDragDropClientOzone> drag_drop_client =
@@ -32,7 +23,7 @@ $NetBSD$
        std::make_unique<DesktopDragDropClientOzoneLinux>(window(), drag_handler);
  #else
        std::make_unique<DesktopDragDropClientOzone>(window(), drag_handler);
-@@ -1117,7 +1117,7 @@ bool DesktopWindowTreeHostPlatform::Rota
+@@ -1141,7 +1141,7 @@ bool DesktopWindowTreeHostPlatform::Rota
  // DesktopWindowTreeHost:
  
  // Linux subclasses this host and adds some Linux specific bits.

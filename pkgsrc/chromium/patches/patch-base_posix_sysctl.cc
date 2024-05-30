@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/posix/sysctl.cc.orig	2024-05-09 21:46:25.781202000 +0000
+--- base/posix/sysctl.cc.orig	2024-05-21 22:42:46.712148400 +0000
 +++ base/posix/sysctl.cc
 @@ -4,6 +4,7 @@
  

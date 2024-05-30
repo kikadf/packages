@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/toolchain/toolchain.gni.orig	2024-05-09 21:46:26.097223000 +0000
+--- build/toolchain/toolchain.gni.orig	2024-05-21 22:42:47.028176500 +0000
 +++ build/toolchain/toolchain.gni
 @@ -68,7 +68,7 @@ if (host_os == "mac") {
    host_shlib_extension = ".dylib"

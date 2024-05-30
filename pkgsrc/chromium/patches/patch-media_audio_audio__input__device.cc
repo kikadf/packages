@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/audio/audio_input_device.cc.orig	2024-05-09 21:46:58.163340800 +0000
+--- media/audio/audio_input_device.cc.orig	2024-05-21 22:43:04.757758000 +0000
 +++ media/audio/audio_input_device.cc
 @@ -264,7 +264,7 @@ void AudioInputDevice::OnStreamCreated(
  // here. See comments in AliveChecker and PowerObserverHelper for details and

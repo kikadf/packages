@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/webrtc/BUILD.gn.orig	2024-05-09 21:48:18.708660100 +0000
+--- third_party/webrtc/BUILD.gn.orig	2024-05-21 22:46:49.581797800 +0000
 +++ third_party/webrtc/BUILD.gn
 @@ -217,6 +217,9 @@ config("common_inherited_config") {
    if (is_linux || is_chromeos) {

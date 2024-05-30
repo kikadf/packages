@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- build/config/linux/pkg-config.py.orig	2024-05-09 21:46:26.053220000 +0000
+--- build/config/linux/pkg-config.py.orig	2024-05-21 22:42:46.984172800 +0000
 +++ build/config/linux/pkg-config.py
 @@ -108,7 +108,7 @@ def main():
    # If this is run on non-Linux platforms, just return nothing and indicate

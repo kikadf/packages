@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/sync/sync_service_util.cc.orig	2024-05-09 21:46:37.545979300 +0000
+--- chrome/browser/sync/sync_service_util.cc.orig	2024-05-21 22:42:53.000709300 +0000
 +++ chrome/browser/sync/sync_service_util.cc
 @@ -9,7 +9,7 @@
  #include "components/sync/base/features.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "components/variations/service/variations_service.h"
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) ||
          // BUILDFLAG(IS_WIN)
-@@ -22,7 +22,7 @@ bool IsDesktopEnUSLocaleOnlySyncPollFeat
+@@ -21,7 +21,7 @@ bool IsDesktopEnUSLocaleOnlySyncPollFeat
    }
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

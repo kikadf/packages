@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2024-05-09 21:46:35.697857100 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2024-05-21 22:42:51.136543000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
 @@ -58,7 +58,7 @@
  #include "base/strings/utf_string_conversions.h"

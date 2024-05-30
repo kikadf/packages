@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/base/features.cc.orig	2024-05-09 21:47:00.007462500 +0000
+--- net/base/features.cc.orig	2024-05-21 22:43:05.925862000 +0000
 +++ net/base/features.cc
 @@ -26,7 +26,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
  BASE_FEATURE(kAsyncDns,
@@ -14,7 +14,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -504,7 +504,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
+@@ -532,7 +532,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
               "SpdyHeadersToHttpResponseUseBuilder",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -25,5 +25,5 @@ $NetBSD$
 +BASE_FEATURE(kReceiveEcn, "ReceiveEcn", base::FEATURE_DISABLED_BY_DEFAULT);
 +#endif
  
- // TODO(crbug.com/634470): Remove this feature flag in January 2024 if the new
- // limit sticks.
+ BASE_FEATURE(kUseNewAlpsCodepointHttp2,
+              "UseNewAlpsCodepointHttp2",

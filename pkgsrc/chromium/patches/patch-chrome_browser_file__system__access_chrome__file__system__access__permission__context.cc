@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2024-05-09 21:46:35.985876000 +0000
+--- chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc.orig	2024-05-21 22:42:51.440570000 +0000
 +++ chrome/browser/file_system_access/chrome_file_system_access_permission_context.cc
 @@ -317,7 +317,7 @@ const struct {
       FILE_PATH_LITERAL("Library/Mobile Documents/com~apple~CloudDocs"),

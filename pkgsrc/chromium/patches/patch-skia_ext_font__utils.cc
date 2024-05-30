@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- skia/ext/font_utils.cc.orig	2024-05-09 21:47:02.423622100 +0000
+--- skia/ext/font_utils.cc.orig	2024-05-21 22:43:07.702020400 +0000
 +++ skia/ext/font_utils.cc
 @@ -19,7 +19,7 @@
  #include "third_party/skia/include/ports/SkFontMgr_mac_ct.h"

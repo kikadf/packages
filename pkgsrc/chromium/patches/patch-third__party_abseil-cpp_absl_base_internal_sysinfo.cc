@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2024-05-09 21:47:03.399686600 +0000
+--- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2024-05-21 22:43:08.134059000 +0000
 +++ third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 @@ -30,7 +30,7 @@
  #include <sys/syscall.h>

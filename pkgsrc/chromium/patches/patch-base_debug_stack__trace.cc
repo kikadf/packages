@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/debug/stack_trace.cc.orig	2024-05-09 21:46:25.701197000 +0000
+--- base/debug/stack_trace.cc.orig	2024-05-21 22:42:46.632141400 +0000
 +++ base/debug/stack_trace.cc
-@@ -247,7 +247,7 @@ bool StackTrace::WillSymbolizeToStreamFo
+@@ -249,7 +249,7 @@ bool StackTrace::WillSymbolizeToStreamFo
    // Symbols are not expected to be reliable when gn args specifies
    // symbol_level=0.
    return false;
@@ -14,16 +14,16 @@ $NetBSD$
    // StackTrace::OutputToStream() is not implemented under uclibc, nor AIX.
    // See https://crbug.com/706728
    return false;
-@@ -291,7 +291,7 @@ std::string StackTrace::ToString() const
- }
- std::string StackTrace::ToStringWithPrefix(const char* prefix_string) const {
+@@ -311,7 +311,7 @@ std::string StackTrace::ToString() const
+ 
+ std::string StackTrace::ToStringWithPrefix(cstring_view prefix_string) const {
    std::stringstream stream;
 -#if !defined(__UCLIBC__) && !defined(_AIX)
 +#if !defined(__UCLIBC__) && !defined(_AIX) && !BUILDFLAG(IS_BSD)
-   if (ShouldSuppressOutput()) {
-     return "Backtrace suppressed.";
-   }
-@@ -301,7 +301,7 @@ std::string StackTrace::ToStringWithPref
+   OutputToStreamWithPrefix(&stream, prefix_string);
+ #endif
+   return stream.str();
+@@ -335,7 +335,7 @@ bool StackTrace::ShouldSuppressOutput() 
  }
  
  std::ostream& operator<<(std::ostream& os, const StackTrace& s) {

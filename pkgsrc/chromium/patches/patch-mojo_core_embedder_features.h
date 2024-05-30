@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- mojo/core/embedder/features.h.orig	2024-05-09 21:46:59.103402900 +0000
+--- mojo/core/embedder/features.h.orig	2024-05-21 22:43:05.449819600 +0000
 +++ mojo/core/embedder/features.h
 @@ -16,7 +16,7 @@ namespace core {
  

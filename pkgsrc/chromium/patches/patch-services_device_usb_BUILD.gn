@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/usb/BUILD.gn.orig	2024-05-09 21:47:02.015595200 +0000
+--- services/device/usb/BUILD.gn.orig	2024-05-21 22:43:07.289983700 +0000
 +++ services/device/usb/BUILD.gn
-@@ -92,15 +92,17 @@ static_library("usb") {
+@@ -91,15 +91,17 @@ static_library("usb") {
      deps += [ "//third_party/re2" ]
    }
  
@@ -32,7 +32,7 @@ $NetBSD$
  
      # These sources and deps are required for libusb.
      # TODO(https://crbug.com/1096743) Remove these sources.
-@@ -124,6 +126,13 @@ static_library("usb") {
+@@ -123,6 +125,13 @@ static_library("usb") {
      deps += [ "//third_party/libusb" ]
    }
  
@@ -46,7 +46,7 @@ $NetBSD$
    if (is_linux || is_chromeos) {
      sources += [
        "usb_device_linux.cc",
-@@ -141,7 +150,7 @@ static_library("usb") {
+@@ -140,7 +149,7 @@ static_library("usb") {
      deps += [ "//device/udev_linux" ]
    }
  

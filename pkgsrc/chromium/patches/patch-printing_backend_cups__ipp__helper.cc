@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- printing/backend/cups_ipp_helper.cc.orig	2024-05-09 21:47:01.431556700 +0000
+--- printing/backend/cups_ipp_helper.cc.orig	2024-05-21 22:43:06.929951700 +0000
 +++ printing/backend/cups_ipp_helper.cc
 @@ -215,7 +215,7 @@ void ExtractResolutions(const CupsOption
    // Provide a default DPI if no valid DPI is found.

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2024-05-09 21:46:39.042078000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2024-05-21 22:42:53.668769000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
-@@ -121,7 +121,7 @@
+@@ -124,7 +124,7 @@
  #include "components/user_manager/user_manager.h"
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
  #endif
-@@ -303,7 +303,7 @@ bool BrowserCommandController::IsReserve
+@@ -306,7 +306,7 @@ bool BrowserCommandController::IsReserve
  #endif
    }
  
@@ -23,7 +23,7 @@ $NetBSD$
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -555,7 +555,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -558,7 +558,7 @@ bool BrowserCommandController::ExecuteCo
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -32,7 +32,7 @@ $NetBSD$
      case IDC_MINIMIZE_WINDOW:
        browser_->window()->Minimize();
        break;
-@@ -567,7 +567,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -570,7 +570,7 @@ bool BrowserCommandController::ExecuteCo
        break;
  #endif
  
@@ -41,7 +41,7 @@ $NetBSD$
      case IDC_USE_SYSTEM_TITLE_BAR: {
        PrefService* prefs = profile()->GetPrefs();
        prefs->SetBoolean(prefs::kUseCustomChromeFrame,
-@@ -1231,12 +1231,12 @@ void BrowserCommandController::InitComma
+@@ -1260,12 +1260,12 @@ void BrowserCommandController::InitComma
  #endif
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

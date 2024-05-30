@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gl/BUILD.gn.orig	2024-05-09 21:47:31.473540800 +0000
+--- ui/gl/BUILD.gn.orig	2024-05-21 22:43:36.176560200 +0000
 +++ ui/gl/BUILD.gn
 @@ -153,8 +153,6 @@ component("gl") {
      defines += [ "GPU_ENABLE_SERVICE_LOGGING" ]
@@ -14,7 +14,7 @@ $NetBSD$
    all_dependent_configs = [ ":gl_config" ]
  
    public_configs = [ "//third_party/khronos:khronos_headers" ]
-@@ -172,7 +170,6 @@ component("gl") {
+@@ -171,7 +169,6 @@ component("gl") {
    ]
    public_deps = [
      "//base",
@@ -22,7 +22,7 @@ $NetBSD$
      "//ui/events/platform",
      "//ui/gfx",
      "//ui/gfx/geometry",
-@@ -379,7 +376,6 @@ component("gl") {
+@@ -378,7 +375,6 @@ component("gl") {
      data_deps += [
        "//third_party/angle:libEGL",
        "//third_party/angle:libGLESv2",
@@ -30,7 +30,7 @@ $NetBSD$
      ]
      if (enable_swiftshader) {
        data_deps += [
-@@ -579,7 +575,6 @@ test("gl_unittests") {
+@@ -578,7 +574,6 @@ test("gl_unittests") {
  
    data_deps = [
      "//testing/buildbot/filters:gl_unittests_filters",

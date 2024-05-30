@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-05-09 21:46:59.075401000 +0000
+--- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-05-21 22:43:05.433818000 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
-@@ -803,7 +803,7 @@ void GpuMemoryBufferVideoFramePool::Pool
+@@ -802,7 +802,7 @@ void GpuMemoryBufferVideoFramePool::Pool
    }
  
    bool is_software_backed_video_frame = !video_frame->HasTextures();
@@ -14,7 +14,7 @@ $NetBSD$
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1285,7 +1285,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
+@@ -1284,7 +1284,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
      }
  #endif
  
@@ -23,7 +23,7 @@ $NetBSD$
      is_webgpu_compatible = (gpu_memory_buffer != nullptr);
      if (is_webgpu_compatible) {
        is_webgpu_compatible &=
-@@ -1306,7 +1306,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
+@@ -1303,7 +1303,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
                         gpu::SHARED_IMAGE_USAGE_DISPLAY_READ |
                         gpu::SHARED_IMAGE_USAGE_SCANOUT;
  

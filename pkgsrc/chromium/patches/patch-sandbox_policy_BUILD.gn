@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- sandbox/policy/BUILD.gn.orig	2024-05-09 21:47:01.711575000 +0000
+--- sandbox/policy/BUILD.gn.orig	2024-05-21 22:43:07.173973300 +0000
 +++ sandbox/policy/BUILD.gn
 @@ -49,7 +49,7 @@ component("policy") {
        "//third_party/jni_zero",

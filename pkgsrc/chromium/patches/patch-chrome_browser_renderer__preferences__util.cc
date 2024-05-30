@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2024-05-09 21:46:36.829931700 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2024-05-21 22:42:52.164634700 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -39,7 +39,7 @@
  #include "ui/views/controls/textfield/textfield.h"

@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- mojo/public/tools/bindings/mojom.gni.orig	2024-05-09 21:46:59.495428800 +0000
+--- mojo/public/tools/bindings/mojom.gni.orig	2024-05-21 22:43:05.553829000 +0000
 +++ mojo/public/tools/bindings/mojom.gni
-@@ -748,6 +748,21 @@ template("mojom") {
+@@ -741,6 +741,21 @@ template("mojom") {
        enabled_features += [ "is_apple" ]
      }
  

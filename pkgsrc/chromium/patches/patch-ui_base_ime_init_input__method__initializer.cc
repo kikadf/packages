@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/base/ime/init/input_method_initializer.cc.orig	2024-05-09 21:47:31.061513400 +0000
+--- ui/base/ime/init/input_method_initializer.cc.orig	2024-05-21 22:43:35.600508700 +0000
 +++ ui/base/ime/init/input_method_initializer.cc
 @@ -10,7 +10,7 @@
  #include "build/chromeos_buildflags.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "ui/base/ime/linux/fake_input_method_context.h"
  #include "ui/base/ime/linux/linux_input_method_context_factory.h"
  #elif BUILDFLAG(IS_WIN)
-@@ -43,7 +43,7 @@ void RestartInputMethod() {
+@@ -33,7 +33,7 @@ void ShutdownInputMethod() {
  }
  
  void InitializeInputMethodForTesting() {
@@ -23,7 +23,7 @@ $NetBSD$
    GetInputMethodContextFactoryForTest() =
        base::BindRepeating([](LinuxInputMethodContextDelegate* delegate)
                                -> std::unique_ptr<LinuxInputMethodContext> {
-@@ -56,7 +56,7 @@ void InitializeInputMethodForTesting() {
+@@ -46,7 +46,7 @@ void InitializeInputMethodForTesting() {
  
  void ShutdownInputMethodForTesting() {
  #if !BUILDFLAG(IS_CHROMEOS_ASH) && defined(USE_AURA) && \

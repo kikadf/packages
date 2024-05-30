@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/download/download_file_picker.cc.orig	2024-05-09 21:46:35.633853000 +0000
+--- chrome/browser/download/download_file_picker.cc.orig	2024-05-21 22:42:51.068537000 +0000
 +++ chrome/browser/download/download_file_picker.cc
 @@ -18,7 +18,7 @@
  #include "content/public/browser/web_contents.h"

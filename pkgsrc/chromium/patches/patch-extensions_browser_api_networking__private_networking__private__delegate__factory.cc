@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2024-05-09 21:46:51.978932400 +0000
+--- extensions/browser/api/networking_private/networking_private_delegate_factory.cc.orig	2024-05-21 22:43:02.629568000 +0000
 +++ extensions/browser/api/networking_private/networking_private_delegate_factory.cc
 @@ -14,7 +14,7 @@
  #include "extensions/browser/api/networking_private/networking_private_chromeos.h"

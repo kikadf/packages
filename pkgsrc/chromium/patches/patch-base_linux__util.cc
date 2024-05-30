@@ -3,17 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/linux_util.cc.orig	2024-05-09 21:46:25.737199300 +0000
+--- base/linux_util.cc.orig	2024-05-21 22:42:46.668144500 +0000
 +++ base/linux_util.cc
-@@ -15,6 +15,7 @@
- 
- #include <iomanip>
- #include <memory>
-+#include <sstream>
- 
- #include "base/base_export.h"
- #include "base/files/dir_reader_posix.h"
-@@ -153,10 +154,14 @@ void SetLinuxDistro(const std::string& d
+@@ -154,10 +154,14 @@ void SetLinuxDistro(const std::string& d
  }
  
  bool GetThreadsForProcess(pid_t pid, std::vector<pid_t>* tids) {

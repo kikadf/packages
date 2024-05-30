@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2024-05-09 21:46:50.166812700 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2024-05-21 22:43:01.157436800 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
-@@ -548,7 +548,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -592,7 +592,7 @@ class CONTENT_EXPORT RenderProcessHostIm
    // Sets this RenderProcessHost to be guest only. For Testing only.
    void SetForGuestsOnlyForTesting();
  

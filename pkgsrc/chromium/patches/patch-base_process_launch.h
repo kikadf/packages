@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/launch.h.orig	2024-05-09 21:46:25.785202500 +0000
+--- base/process/launch.h.orig	2024-05-21 22:42:46.716148900 +0000
 +++ base/process/launch.h
 @@ -200,7 +200,7 @@ struct BASE_EXPORT LaunchOptions {
    bool clear_environment = false;

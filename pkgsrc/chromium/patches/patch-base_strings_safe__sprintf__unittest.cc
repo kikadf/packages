@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/strings/safe_sprintf_unittest.cc.orig	2024-05-09 21:46:25.813204300 +0000
+--- base/strings/safe_sprintf_unittest.cc.orig	2024-05-21 22:42:46.744151400 +0000
 +++ base/strings/safe_sprintf_unittest.cc
-@@ -733,6 +733,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
+@@ -735,6 +735,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  #endif
  }
  
@@ -13,7 +13,7 @@ $NetBSD$
  TEST(SafeSPrintfTest, EmitNULL) {
    char buf[40];
  #if defined(__GNUC__)
-@@ -749,6 +750,7 @@ TEST(SafeSPrintfTest, EmitNULL) {
+@@ -751,6 +752,7 @@ TEST(SafeSPrintfTest, EmitNULL) {
  #pragma GCC diagnostic pop
  #endif
  }

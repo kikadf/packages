@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2024-05-09 21:46:35.789863000 +0000
+--- chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc.orig	2024-05-21 22:42:51.232551600 +0000
 +++ chrome/browser/extensions/api/image_writer_private/removable_storage_provider.cc
 @@ -20,6 +20,7 @@ static base::LazyInstance<scoped_refptr<
  

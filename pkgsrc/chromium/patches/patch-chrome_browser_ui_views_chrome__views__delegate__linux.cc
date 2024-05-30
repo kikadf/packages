@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/chrome_views_delegate_linux.cc.orig	2024-05-09 21:46:39.238091000 +0000
+--- chrome/browser/ui/views/chrome_views_delegate_linux.cc.orig	2024-05-21 22:42:53.904790000 +0000
 +++ chrome/browser/ui/views/chrome_views_delegate_linux.cc
-@@ -23,7 +23,7 @@ bool IsDesktopEnvironmentUnity() {
+@@ -26,7 +26,7 @@ bool IsDesktopEnvironmentUnity() {
    return desktop_env == base::nix::DESKTOP_ENVIRONMENT_UNITY;
  }
  
@@ -14,7 +14,7 @@ $NetBSD$
  int GetWindowIconResourceId() {
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    switch (chrome::GetChannel()) {
-@@ -67,7 +67,7 @@ views::NativeWidget* ChromeViewsDelegate
+@@ -80,7 +80,7 @@ views::NativeWidget* ChromeViewsDelegate
                                delegate);
  }
  

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/aura/screen_ozone.cc.orig	2024-05-09 21:47:31.013510200 +0000
+--- ui/aura/screen_ozone.cc.orig	2024-05-21 22:43:35.556504700 +0000
 +++ ui/aura/screen_ozone.cc
 @@ -106,7 +106,7 @@ display::Display ScreenOzone::GetPrimary
    return platform_screen_->GetPrimaryDisplay();

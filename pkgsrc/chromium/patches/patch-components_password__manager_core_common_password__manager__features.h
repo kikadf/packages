@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/password_manager/core/common/password_manager_features.h.orig	2024-05-09 21:46:44.906465300 +0000
+--- components/password_manager/core/common/password_manager_features.h.orig	2024-05-21 22:42:58.553204500 +0000
 +++ components/password_manager/core/common/password_manager_features.h
 @@ -19,7 +19,7 @@ namespace password_manager::features {
  // alongside the definition of their values in the .cc file.

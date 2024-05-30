@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2024-05-09 21:46:44.274423600 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2024-05-21 22:42:57.985154000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -94,7 +94,7 @@ std::optional<FeatureConfig> CreateNewUs
  
@@ -23,22 +23,12 @@ $NetBSD$
    if (kIPHPasswordsAccountStorageFeature.name == feature->name) {
      std::optional<FeatureConfig> config = FeatureConfig();
      config->valid = true;
-@@ -1393,7 +1393,8 @@ std::optional<FeatureConfig> GetClientSi
+@@ -1392,7 +1392,7 @@ std::optional<FeatureConfig> GetClientSi
+ 
  #endif  // BUILDFLAG(IS_ANDROID)
  
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
-+    BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
+     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
  
-   if (kIPHAutofillExternalAccountProfileSuggestionFeature.name ==
-       feature->name) {
-@@ -1965,7 +1966,7 @@ std::optional<FeatureConfig> GetClientSi
-   }
- 
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
-   if (kIPHDeepScanPromptRemovalFeature.name == feature->name) {
-     std::optional<FeatureConfig> config = FeatureConfig();
-     config->valid = true;
+   if (kIPHAutofillCreditCardBenefitFeature.name == feature->name) {

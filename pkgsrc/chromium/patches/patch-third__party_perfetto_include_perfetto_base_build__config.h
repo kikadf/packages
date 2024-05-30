@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/perfetto/include/perfetto/base/build_config.h.orig	2024-05-09 21:48:15.860472200 +0000
+--- third_party/perfetto/include/perfetto/base/build_config.h.orig	2024-05-21 22:46:04.481779800 +0000
 +++ third_party/perfetto/include/perfetto/base/build_config.h
 @@ -27,6 +27,7 @@
  #if defined(__ANDROID__)

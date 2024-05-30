@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc.orig	2024-05-09 21:47:07.643967000 +0000
+--- third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc.orig	2024-05-21 22:43:10.954310400 +0000
 +++ third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc
 @@ -27,7 +27,7 @@ BlinkCategorizedWorkerPoolDelegate& Blin
  

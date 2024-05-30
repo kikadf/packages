@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2024-05-09 21:46:36.309897400 +0000
+--- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2024-05-21 22:42:51.632587200 +0000
 +++ chrome/browser/media/webrtc/desktop_media_picker_controller.cc
 @@ -92,7 +92,7 @@ bool DesktopMediaPickerController::IsSys
    } else {

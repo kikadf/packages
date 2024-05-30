@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/sync_device_info/local_device_info_util.cc.orig	2024-05-09 21:46:48.806722900 +0000
+--- components/sync_device_info/local_device_info_util.cc.orig	2024-05-21 22:42:59.933327700 +0000
 +++ components/sync_device_info/local_device_info_util.cc
 @@ -82,7 +82,7 @@ void OnMachineStatisticsLoaded(LocalDevi
  sync_pb::SyncEnums::DeviceType GetLocalDeviceType() {

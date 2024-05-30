@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- ui/gfx/x/generated_protos/dri3.cc.orig	2024-05-09 21:47:31.461540000 +0000
+--- ui/gfx/x/generated_protos/dri3.cc.orig	2024-05-21 22:43:36.164559000 +0000
 +++ ui/gfx/x/generated_protos/dri3.cc
 @@ -27,6 +27,8 @@
  #include <xcb/xcb.h>

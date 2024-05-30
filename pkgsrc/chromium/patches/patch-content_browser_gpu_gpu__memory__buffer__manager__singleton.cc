@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-05-09 21:46:49.854792000 +0000
+--- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-05-21 22:43:00.897413500 +0000
 +++ content/browser/gpu/gpu_memory_buffer_manager_singleton.cc
 @@ -54,7 +54,7 @@ scoped_refptr<base::SingleThreadTaskRunn
  #endif

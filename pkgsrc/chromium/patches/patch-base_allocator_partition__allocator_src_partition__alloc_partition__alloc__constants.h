@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2024-05-09 21:46:25.557187300 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h.orig	2024-05-21 22:42:46.548133900 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
-@@ -313,7 +313,7 @@ constexpr size_t kNumPools = kMaxPoolHan
+@@ -316,7 +316,7 @@ constexpr size_t kNumPools = kMaxPoolHan
  // 8GB for each of the glued pools).
  #if BUILDFLAG(HAS_64_BIT_POINTERS)
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS) || \

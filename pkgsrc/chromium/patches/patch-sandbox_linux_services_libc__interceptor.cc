@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- sandbox/linux/services/libc_interceptor.cc.orig	2024-05-09 21:47:01.703574700 +0000
+--- sandbox/linux/services/libc_interceptor.cc.orig	2024-05-21 22:43:07.161972300 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
 @@ -12,7 +12,9 @@
  #include <stddef.h>
@@ -15,7 +15,7 @@ $NetBSD$
  #include <sys/socket.h>
  #include <sys/types.h>
  #include <time.h>
-@@ -167,7 +169,7 @@ bool ReadTimeStruct(base::PickleIterator
+@@ -168,7 +170,7 @@ bool ReadTimeStruct(base::PickleIterator
    } else {
      base::AutoLock lock(g_timezones_lock.Get());
      auto ret_pair = g_timezones.Get().insert(timezone);

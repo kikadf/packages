@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/base/small-vector.h.orig	2024-05-09 21:48:26.297161300 +0000
+--- v8/src/base/small-vector.h.orig	2024-05-21 22:47:35.273871700 +0000
 +++ v8/src/base/small-vector.h
 @@ -22,7 +22,7 @@ template <typename T, size_t kSize, type
  class SmallVector {

@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- net/http/http_auth_gssapi_posix.cc.orig	2024-05-09 21:47:00.423490000 +0000
+--- net/http/http_auth_gssapi_posix.cc.orig	2024-05-21 22:43:06.241890200 +0000
 +++ net/http/http_auth_gssapi_posix.cc
 @@ -370,8 +370,9 @@ base::NativeLibrary GSSAPISharedLibrary:
      static const char* const kDefaultLibraryNames[] = {

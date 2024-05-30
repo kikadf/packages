@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_handle.h.orig	2024-05-09 21:46:25.785202500 +0000
+--- base/process/process_handle.h.orig	2024-05-21 22:42:46.720149300 +0000
 +++ base/process/process_handle.h
 @@ -86,7 +86,7 @@ BASE_EXPORT ProcessId GetCurrentProcId()
  // processes may be reused.

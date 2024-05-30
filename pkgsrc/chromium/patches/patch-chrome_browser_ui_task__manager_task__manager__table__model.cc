@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-05-09 21:46:39.186087400 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-05-21 22:42:53.844784500 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
 @@ -454,7 +454,7 @@ std::u16string TaskManagerTableModel::Ge
            ? stringifier_->backgrounded_string()
@@ -23,7 +23,7 @@ $NetBSD$
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int proc1_fd_count =
            observed_task_manager()->GetOpenFdCount(tasks_[row1]);
-@@ -799,7 +799,7 @@ void TaskManagerTableModel::UpdateRefres
+@@ -806,7 +806,7 @@ void TaskManagerTableModel::UpdateRefres
        type = REFRESH_TYPE_KEEPALIVE_COUNT;
        break;
  

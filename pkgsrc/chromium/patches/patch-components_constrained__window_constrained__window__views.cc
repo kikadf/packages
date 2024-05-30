@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/constrained_window/constrained_window_views.cc.orig	2024-05-09 21:46:43.954402400 +0000
+--- components/constrained_window/constrained_window_views.cc.orig	2024-05-21 22:42:57.533113500 +0000
 +++ components/constrained_window/constrained_window_views.cc
 @@ -324,7 +324,7 @@ bool SupportsGlobalScreenCoordinates() {
  }

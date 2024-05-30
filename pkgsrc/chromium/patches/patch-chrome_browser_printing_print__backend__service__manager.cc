@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-05-09 21:46:36.713924200 +0000
+--- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-05-21 22:42:52.040623700 +0000
 +++ chrome/browser/printing/print_backend_service_manager.cc
-@@ -34,7 +34,7 @@
+@@ -35,7 +35,7 @@
  #include "printing/printing_context.h"
  #include "printing/printing_features.h"
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "content/public/common/content_switches.h"
  #endif
  
-@@ -861,7 +861,7 @@ PrintBackendServiceManager::GetServiceFr
+@@ -862,7 +862,7 @@ PrintBackendServiceManager::GetServiceFr
          host.BindNewPipeAndPassReceiver(),
          content::ServiceProcessHost::Options()
              .WithDisplayName(IDS_UTILITY_PROCESS_PRINT_BACKEND_SERVICE_NAME)
@@ -23,7 +23,7 @@ $NetBSD$
              .WithExtraCommandLineSwitches({switches::kMessageLoopTypeUi})
  #endif
              .Pass());
-@@ -1038,7 +1038,7 @@ PrintBackendServiceManager::DetermineIdl
+@@ -1039,7 +1039,7 @@ PrintBackendServiceManager::DetermineIdl
        return kNoClientsRegisteredResetOnIdleTimeout;
  
      case ClientType::kQueryWithUi:

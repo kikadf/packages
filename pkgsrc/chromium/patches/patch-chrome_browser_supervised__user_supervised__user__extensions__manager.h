@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2024-05-09 21:46:37.533978500 +0000
+--- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2024-05-21 22:42:52.984707800 +0000
 +++ chrome/browser/supervised_user/supervised_user_extensions_manager.h
 @@ -143,7 +143,7 @@ class SupervisedUserExtensionsManager : 
    // launched.

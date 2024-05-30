@@ -3,10 +3,10 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/supervised_user/core/common/features.cc.orig	2024-05-09 21:46:48.718717000 +0000
+--- components/supervised_user/core/common/features.cc.orig	2024-05-21 22:42:59.725309100 +0000
 +++ components/supervised_user/core/common/features.cc
-@@ -63,7 +63,7 @@ BASE_FEATURE(kEnableSupervisedUserSkipPa
-              "EnableSupervisedUserSkipParentApprovalToInstallExtensions",
+@@ -62,7 +62,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExten
+              "UpdatedSupervisedUserExtensionApprovalStrings",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
@@ -14,7 +14,7 @@ $NetBSD$
  BASE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop,
               "EnableExtensionsPermissionsForSupervisedUsersOnDesktop",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -74,7 +74,7 @@ bool IsSupervisedUserSkipParentApprovalT
+@@ -73,7 +73,7 @@ bool IsSupervisedUserSkipParentApprovalT
  #if BUILDFLAG(IS_CHROMEOS)
    return base::FeatureList::IsEnabled(
        kEnableSupervisedUserSkipParentApprovalToInstallExtensions);

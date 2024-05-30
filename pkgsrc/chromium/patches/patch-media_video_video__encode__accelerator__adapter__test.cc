@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- media/video/video_encode_accelerator_adapter_test.cc.orig	2024-05-09 21:46:59.087401900 +0000
+--- media/video/video_encode_accelerator_adapter_test.cc.orig	2024-05-21 22:43:05.441819000 +0000
 +++ media/video/video_encode_accelerator_adapter_test.cc
 @@ -459,7 +459,7 @@ TEST_P(VideoEncodeAcceleratorAdapterTest
        CreateGreenFrame(large_size, pixel_format, base::Milliseconds(2));

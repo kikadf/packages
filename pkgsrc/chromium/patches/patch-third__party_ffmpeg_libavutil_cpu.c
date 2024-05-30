@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/ffmpeg/libavutil/cpu.c.orig	2024-05-09 21:47:45.230449200 +0000
+--- third_party/ffmpeg/libavutil/cpu.c.orig	2024-05-21 22:45:05.464523300 +0000
 +++ third_party/ffmpeg/libavutil/cpu.c
 @@ -38,10 +38,7 @@
  #if HAVE_GETPROCESSAFFINITYMASK || HAVE_WINRT

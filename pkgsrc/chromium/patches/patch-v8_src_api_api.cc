@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/src/api/api.cc.orig	2024-05-09 21:48:26.269159600 +0000
+--- v8/src/api/api.cc.orig	2024-05-21 22:47:35.249869600 +0000
 +++ v8/src/api/api.cc
 @@ -144,7 +144,7 @@
  #include "src/wasm/wasm-serialization.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6396,7 +6396,7 @@ bool v8::V8::Initialize(const int build_
+@@ -6393,7 +6393,7 @@ bool v8::V8::Initialize(const int build_
    return true;
  }
  

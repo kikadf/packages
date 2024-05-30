@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2024-05-09 21:46:39.342097800 +0000
+--- chrome/browser/ui/views/passwords/password_bubble_view_base.cc.orig	2024-05-21 22:42:54.024800500 +0000
 +++ chrome/browser/ui/views/passwords/password_bubble_view_base.cc
 @@ -34,7 +34,7 @@
  #include "ui/base/metadata/metadata_impl_macros.h"

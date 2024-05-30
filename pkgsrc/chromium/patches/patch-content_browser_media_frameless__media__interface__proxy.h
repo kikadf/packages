@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- content/browser/media/frameless_media_interface_proxy.h.orig	2024-05-09 21:46:49.930797000 +0000
+--- content/browser/media/frameless_media_interface_proxy.h.orig	2024-05-21 22:43:00.985421400 +0000
 +++ content/browser/media/frameless_media_interface_proxy.h
 @@ -19,7 +19,7 @@
  #include "mojo/public/cpp/bindings/receiver_set.h"
@@ -14,7 +14,7 @@ $NetBSD$
  #include "media/mojo/mojom/stable/stable_video_decoder.mojom.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -100,7 +100,7 @@ class FramelessMediaInterfaceProxy final
+@@ -105,7 +105,7 @@ class FramelessMediaInterfaceProxy final
    // Connections to the renderer.
    mojo::ReceiverSet<media::mojom::InterfaceFactory> receivers_;
  

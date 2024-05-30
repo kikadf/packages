@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/swiftshader/third_party/marl/src/memory.cpp.orig	2024-05-09 21:47:56.259177700 +0000
+--- third_party/swiftshader/third_party/marl/src/memory.cpp.orig	2024-05-21 22:48:17.625647800 +0000
 +++ third_party/swiftshader/third_party/marl/src/memory.cpp
 @@ -19,7 +19,8 @@
  

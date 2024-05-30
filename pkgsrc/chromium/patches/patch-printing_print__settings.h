@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- printing/print_settings.h.orig	2024-05-09 21:47:01.439557000 +0000
+--- printing/print_settings.h.orig	2024-05-21 22:43:06.941952700 +0000
 +++ printing/print_settings.h
 @@ -25,7 +25,7 @@
  #include "base/values.h"

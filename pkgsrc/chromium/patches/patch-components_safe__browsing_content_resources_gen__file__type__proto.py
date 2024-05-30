@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2024-05-09 21:46:47.066608000 +0000
+--- components/safe_browsing/content/resources/gen_file_type_proto.py.orig	2024-05-21 22:42:59.189261200 +0000
 +++ components/safe_browsing/content/resources/gen_file_type_proto.py
 @@ -38,6 +38,8 @@ def PlatformTypes():
          "fuchsia":

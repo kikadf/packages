@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2024-05-09 21:46:39.378100200 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2024-05-21 22:42:54.060804000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc
-@@ -55,7 +55,7 @@ namespace {
+@@ -58,7 +58,7 @@ namespace {
  
  const int kModalDialogWidth = 448;
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -13,8 +13,8 @@ $NetBSD$
 +    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  const int kManagedUserNoticeConfirmationDialogWidth = 512;
  const int kManagedUserNoticeConfirmationDialogHeight = 576;
- #endif
-@@ -182,7 +182,7 @@ SigninViewControllerDelegateViews::Creat
+ const int kManagedUserNoticeConfirmationUpdatedDialogWidth = 1024;
+@@ -187,7 +187,7 @@ SigninViewControllerDelegateViews::Creat
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT) || BUILDFLAG(IS_CHROMEOS_LACROS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -23,7 +23,7 @@ $NetBSD$
  // static
  std::unique_ptr<views::WebView>
  SigninViewControllerDelegateViews::CreateManagedUserNoticeConfirmationWebView(
-@@ -328,7 +328,7 @@ SigninViewControllerDelegateViews::Signi
+@@ -348,7 +348,7 @@ SigninViewControllerDelegateViews::Signi
    SetButtons(ui::DIALOG_BUTTON_NONE);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -32,7 +32,7 @@ $NetBSD$
    // On the local profile creation dialog, cancelling the dialog (for instance
    // through the VKEY_ESCAPE accelerator) should delete the profile.
    if (delete_profile_on_cancel) {
-@@ -418,7 +418,7 @@ void SigninViewControllerDelegateViews::
+@@ -438,7 +438,7 @@ void SigninViewControllerDelegateViews::
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -41,7 +41,7 @@ $NetBSD$
  void SigninViewControllerDelegateViews::DeleteProfileOnCancel() {
    ProfileAttributesEntry* entry =
        g_browser_process->profile_manager()
-@@ -491,7 +491,7 @@ SigninViewControllerDelegate::CreateProf
+@@ -511,7 +511,7 @@ SigninViewControllerDelegate::CreateProf
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT) || BUILDFLAG(IS_CHROMEOS_LACROS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

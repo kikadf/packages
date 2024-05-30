@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2024-05-09 21:46:39.594114300 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2024-05-21 22:42:54.292824500 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
-@@ -95,7 +95,7 @@
+@@ -96,7 +96,7 @@
  #include "components/policy/core/common/cloud/user_cloud_policy_manager.h"
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
@@ -14,7 +14,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signals/user_permission_service_factory.h"
  #include "components/device_signals/core/browser/user_permission_service.h"  // nogncheck
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -191,12 +191,12 @@ enum class ReportingType {
+@@ -192,12 +192,12 @@ enum class ReportingType {
    kLegacyTech,
  };
  
@@ -29,7 +29,7 @@ $NetBSD$
  const char kManagementDeviceSignalsDisclosure[] =
      "managementDeviceSignalsDisclosure";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -830,7 +830,7 @@ void ManagementUIHandler::AddReportingIn
+@@ -831,7 +831,7 @@ void ManagementUIHandler::AddReportingIn
               GetReportingTypeValue(report_definition.reporting_type));
      report_sources->Append(std::move(data));
    }
@@ -38,7 +38,7 @@ $NetBSD$
    // Insert the device signals consent disclosure at the end of browser
    // reporting section.
    auto* user_permission_service = GetUserPermissionService();
-@@ -1118,7 +1118,7 @@ base::Value::Dict ManagementUIHandler::G
+@@ -1107,7 +1107,7 @@ base::Value::Dict ManagementUIHandler::G
                                    kManagementOnPageVisitedVisibleData, &info);
    }
  
@@ -47,7 +47,7 @@ $NetBSD$
    if (capture_policy::IsGetAllScreensMediaAllowedForAnySite(profile)) {
      AddThreatProtectionPermission(kManagementScreenCaptureEvent,
                                    kManagementScreenCaptureData, &info);
-@@ -1202,7 +1202,7 @@ policy::PolicyService* ManagementUIHandl
+@@ -1191,7 +1191,7 @@ policy::PolicyService* ManagementUIHandl
        ->policy_service();
  }
  

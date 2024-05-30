@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/atomicops.h.orig	2024-05-09 21:46:25.681195500 +0000
+--- base/atomicops.h.orig	2024-05-21 22:42:46.612139500 +0000
 +++ base/atomicops.h
 @@ -71,7 +71,11 @@ typedef intptr_t Atomic64;
  

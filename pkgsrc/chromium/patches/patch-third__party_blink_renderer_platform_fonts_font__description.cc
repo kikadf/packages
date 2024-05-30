@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2024-05-09 21:47:07.351947500 +0000
+--- third_party/blink/renderer/platform/fonts/font_description.cc.orig	2024-05-21 22:43:10.554274800 +0000
 +++ third_party/blink/renderer/platform/fonts/font_description.cc
 @@ -39,7 +39,7 @@
  #include "third_party/blink/renderer/platform/wtf/text/string_hash.h"

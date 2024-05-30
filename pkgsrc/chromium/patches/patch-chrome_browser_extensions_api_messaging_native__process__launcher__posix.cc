@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- chrome/browser/extensions/api/messaging/native_process_launcher_posix.cc.orig	2024-05-09 21:46:35.801864000 +0000
+--- chrome/browser/extensions/api/messaging/native_process_launcher_posix.cc.orig	2024-05-21 22:42:51.244552600 +0000
 +++ chrome/browser/extensions/api/messaging/native_process_launcher_posix.cc
 @@ -84,7 +84,7 @@ bool NativeProcessLauncher::LaunchNative
  

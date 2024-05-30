@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- third_party/swiftshader/src/Reactor/Debug.cpp.orig	2024-05-09 21:47:47.366590300 +0000
+--- third_party/swiftshader/src/Reactor/Debug.cpp.orig	2024-05-21 22:48:12.061151700 +0000
 +++ third_party/swiftshader/src/Reactor/Debug.cpp
 @@ -46,7 +46,8 @@ namespace {
  
