@@ -3,9 +3,9 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/process/process_metrics_netbsd.cc.orig	2024-05-30 07:27:01.269896268 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2024-05-31 17:20:32.372267824 +0000
 +++ base/process/process_metrics_netbsd.cc
-@@ -0,0 +1,174 @@
+@@ -0,0 +1,175 @@
 +// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -18,9 +18,9 @@ $NetBSD$
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#include <sys/vmmeter.h>
-+#include <optional>
 +
 +#include "base/memory/ptr_util.h"
++#include "base/types/expected.h"
 +#include "base/values.h"
 +#include "base/notreached.h"
 +
@@ -28,13 +28,8 @@ $NetBSD$
 +
 +ProcessMetrics::ProcessMetrics(ProcessHandle process) : process_(process) {}
 +
-+// static
-+std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-+    ProcessHandle process) {
-+  return WrapUnique(new ProcessMetrics(process));
-+}
-+
-+std::optional<TimeDelta> ProcessMetrics::GetCumulativeCPUUsage() {
++base::expected<TimeDelta, ProcessCPUUsageError>
++ProcessMetrics::GetCumulativeCPUUsage() {
 +  struct kinfo_proc2 info;
 +  size_t length = sizeof(struct kinfo_proc2);
 +  struct timeval tv;
@@ -43,13 +38,19 @@ $NetBSD$
 +                sizeof(struct kinfo_proc2), 1 };
 +
 +  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
-+    return std::optional(TimeDelta());
++    return base::unexpected(ProcessCPUUsageError::kSystemError);
 +  }
 +
 +  tv.tv_sec = info.p_rtime_sec;
 +  tv.tv_usec = info.p_rtime_usec;
 +
-+  return std::optional(Microseconds(TimeValToMicroseconds(tv)));
++  return base::ok(Microseconds(TimeValToMicroseconds(tv)));
++}
++
++// static
++std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
++    ProcessHandle process) {
++  return WrapUnique(new ProcessMetrics(process));
 +}
 +
 +size_t GetSystemCommitCharge() {

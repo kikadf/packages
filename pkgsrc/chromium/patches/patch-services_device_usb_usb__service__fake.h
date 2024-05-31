@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- services/device/usb/usb_service_fake.h.orig	2024-05-30 07:27:02.278180792 +0000
+--- services/device/usb/usb_service_fake.h.orig	2024-05-31 17:20:33.832208493 +0000
 +++ services/device/usb/usb_service_fake.h
 @@ -0,0 +1,48 @@
 +// Copyright 2015 The Chromium Authors

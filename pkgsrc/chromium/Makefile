@@ -58,6 +58,9 @@ ONLY_FOR_PLATFORM+=		*-*-x86_64
 # Workaround for brotli and other commands.
 #BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
+# Let to chromium use the -Wl,-z,relro flag
+BUILDLINK_TRANSFORM+=		rm:-Wl,-zrelro
+
 # Do not use alloca(3) in libc.
 BUILDLINK_TRANSFORM+=		opt:-std=c11:-std=gnu11
 BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99
@@ -153,7 +156,7 @@ EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		-L${X11BASE}/lib \
 		${COMPILER_RPATH_FLAG}${PREFIX}/lib \
 		${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr \
-		 ${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss \
+		${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss \
 		${COMPILER_RPATH_FLAG}${X11BASE}/lib
 EXTRA_CXXFLAGS=	-I${BUILDLINK_DIR}/include \
 		-I${BUILDLINK_DIR}/include/glib \
