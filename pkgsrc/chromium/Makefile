@@ -18,6 +18,7 @@ COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
 USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
+#USE_TOOLS+=			xzcat gzip tar
 TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
@@ -69,6 +70,7 @@ BUILDLINK_TRANSFORM+=		opt:-std=c++17:-std=gnu++17
 BUILDLINK_TRANSFORM+=		opt:-std=c++20:-std=gnu++20
 
 REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
+FILES_SUBST+=		PYTHONBIN=${PYTHONBIN:Q}
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -80,7 +82,8 @@ SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	chrome.sh
-SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE
+SUBST_FILES.path+=	v8/tools/run-paxctl.py
+SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
@@ -90,6 +93,7 @@ SUBST_SED.man+=		-e 's,@@PACKAGE@@,chromium,g'
 SUBST_SED.man+=		-e 's,@@MENUNAME@@,Chromium Web Browser,g'
 
 .include "options.mk"
+.include "tests.mk"
 
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
@@ -112,6 +116,7 @@ GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
 GN_ARGS+=	is_official_build=true
+GN_ARGS+=	is_debug=false
 GN_ARGS+=	enable_nacl=false
 GN_ARGS+=	is_cfi=false
 GN_ARGS+=	optimize_webui=true
@@ -149,7 +154,6 @@ GN_ARGS+=	is_component_build=false
 # flags
 CFLAGS+=	-fno-stack-protector
 CFLAGS+=	-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
-# Workaround -Wl,-zrelro: 'linker' input unused
 CFLAGS+=	-Wno-error=unused-command-line-argument
 
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
@@ -201,9 +205,9 @@ GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\" \
 		google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
 
 NOT_PAX_MPROTECT_SAFE+=	chrome/chrome
-#NOT_PAX_ASLR_SAFE+=		chrome/chrome
+#NOT_PAX_ASLR_SAFE+=	chrome/chrome
 
-PKGSRC_COMPILER=	ccache clang
+#PKGSRC_COMPILER=	ccache clang
 PKG_CC=			clang
 PKG_CXX=		clang++
 #UNLIMIT_RESOURCES=	datasize
@@ -212,13 +216,6 @@ post-extract:
 	${CP} ${FILESDIR}/chrome ${WRKSRC}/chrome.sh
 
 pre-configure:
-#	${MKDIR} ${WRKSRC}/third_party/llvm-build/Release+Asserts/bin
-#	${LN} -sf ${PREFIX}/bin/clang++ \
-#		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/clang++
-#	${LN} -sf ${PREFIX}/bin/clang \
-#		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/clang
-#	${LN} -sf ${PREFIX}/bin/llvm-ar \
-#		${WRKSRC}/third_party/llvm-build/Release+Asserts/bin/llvm-ar
 #	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
 #		${BUILDLINK_DIR}/bin/java
 #	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
@@ -349,8 +346,6 @@ do-install:
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/compiler-rt/buildlink3.mk"
-#.include "../../wip/clang/buildlink3.mk"
-#.include "../../wip/compiler-rt/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/rust.mk"
 .include "../../misc/usbids/buildlink3.mk"

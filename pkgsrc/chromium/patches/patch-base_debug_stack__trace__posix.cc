@@ -5,11 +5,13 @@ $NetBSD$
 
 --- base/debug/stack_trace_posix.cc.orig	2024-05-21 22:42:46.632141400 +0000
 +++ base/debug/stack_trace_posix.cc
-@@ -41,7 +41,7 @@
+@@ -40,8 +40,8 @@
+ // Surprisingly, uClibc defines __GLIBC__ in some build configs, but
  // execinfo.h and backtrace(3) are really only present in glibc and in macOS
  // libc.
- #if BUILDFLAG(IS_APPLE) || \
+-#if BUILDFLAG(IS_APPLE) || \
 -    (defined(__GLIBC__) && !defined(__UCLIBC__) && !defined(__AIX))
++#if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_NETBSD) || \
 +    (defined(__GLIBC__) && !defined(__UCLIBC__) && !defined(__AIX) && !BUILDFLAG(IS_BSD))
  #define HAVE_BACKTRACE
  #include <execinfo.h>

@@ -43,7 +43,24 @@ $NetBSD$
      sources += [
        "base/network_interfaces_getifaddrs.cc",
        "base/network_interfaces_getifaddrs.h",
-@@ -2838,7 +2851,7 @@ test("net_unittests") {
+@@ -2013,7 +2026,7 @@ static_library("test_support") {
+     "url_request/url_request_test_util.h",
+   ]
+ 
+-  if (is_linux || is_chromeos || is_android) {
++  if ((is_linux || is_chromeos || is_android)  && !is_bsd) {
+     sources += [
+       "base/address_tracker_linux_test_util.cc",
+       "base/address_tracker_linux_test_util.h",
+@@ -2831,14 +2844,14 @@ test("net_unittests") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux && !is_bsd) {
+     sources += [
+       "base/network_change_notifier_linux_unittest.cc",
+       "proxy_resolution/proxy_config_service_linux_unittest.cc",
      ]
    }
  

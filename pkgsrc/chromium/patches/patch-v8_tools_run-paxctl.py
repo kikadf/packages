@@ -3,10 +3,10 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- v8/tools/run-paxctl.py.orig	2024-05-31 17:20:34.392193557 +0000
+--- v8/tools/run-paxctl.py.orig	2024-06-07 09:06:49.492078684 +0000
 +++ v8/tools/run-paxctl.py
 @@ -0,0 +1,16 @@
-+#!/usr/bin/env python
++#!@PYTHONBIN@
 +# Copyright 2014 the V8 project authors. All rights reserved.
 +# Use of this source code is governed by a BSD-style license that can be
 +# found in the LICENSE file.

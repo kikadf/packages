@@ -5,7 +5,7 @@ $NetBSD$
 
 --- third_party/crashpad/crashpad/minidump/minidump_misc_info_writer.cc.orig	2024-05-21 22:43:29.411956800 +0000
 +++ third_party/crashpad/crashpad/minidump/minidump_misc_info_writer.cc
-@@ -159,6 +159,10 @@ std::string MinidumpMiscInfoDebugBuildSt
+@@ -159,6 +159,12 @@ std::string MinidumpMiscInfoDebugBuildSt
    static constexpr char kOS[] = "win";
  #elif BUILDFLAG(IS_FUCHSIA)
    static constexpr char kOS[] = "fuchsia";
@@ -13,6 +13,8 @@ $NetBSD$
 +  static constexpr char kOS[] = "openbsd";
 +#elif defined(OS_FREEBSD)
 +  static constexpr char kOS[] = "freebsd";
++#elif defined(OS_NETBSD)
++  static constexpr char kOS[] = "netbsd";
  #else
  #error define kOS for this operating system
  #endif

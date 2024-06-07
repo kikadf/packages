@@ -24,3 +24,21 @@ $NetBSD$
  #else
    NOTIMPLEMENTED();
    return nullptr;
+@@ -520,7 +523,7 @@ const char* NetworkChangeNotifier::Conne
+   return kConnectionTypeNames[type];
+ }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ // static
+ AddressMapOwnerLinux* NetworkChangeNotifier::GetAddressMapOwner() {
+   return g_network_change_notifier
+@@ -874,7 +877,7 @@ NetworkChangeNotifier::NetworkChangeNoti
+   }
+ }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ AddressMapOwnerLinux* NetworkChangeNotifier::GetAddressMapOwnerInternal() {
+   return nullptr;
+ }

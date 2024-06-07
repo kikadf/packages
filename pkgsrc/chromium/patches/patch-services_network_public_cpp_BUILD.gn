@@ -14,3 +14,12 @@ $NetBSD$
      sources += [
        "network_interface_change_listener_mojom_traits.cc",
        "network_interface_change_listener_mojom_traits.h",
+@@ -630,7 +630,7 @@ source_set("tests") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if ((is_linux) && !is_bsd) {
+     sources += [ "network_interface_change_listener_mojom_traits_unittest.cc" ]
+   }
+ 

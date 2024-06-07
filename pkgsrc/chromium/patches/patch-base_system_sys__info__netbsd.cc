@@ -3,7 +3,7 @@ $NetBSD$
 * Part of patchset to build on NetBSD
 * Based on OpenBSD's chromium patches
 
---- base/system/sys_info_netbsd.cc.orig	2024-05-31 17:20:32.402731469 +0000
+--- base/system/sys_info_netbsd.cc.orig	2024-06-07 09:06:47.654824133 +0000
 +++ base/system/sys_info_netbsd.cc
 @@ -0,0 +1,91 @@
 +// Copyright 2011 The Chromium Authors
