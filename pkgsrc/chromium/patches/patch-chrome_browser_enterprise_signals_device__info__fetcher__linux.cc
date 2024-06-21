@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/device_info_fetcher_linux.cc.orig	2024-05-21 22:42:51.156545000 +0000
+--- chrome/browser/enterprise/signals/device_info_fetcher_linux.cc.orig	2024-06-13 23:28:47.587026400 +0000
 +++ chrome/browser/enterprise/signals/device_info_fetcher_linux.cc
 @@ -4,11 +4,22 @@
  

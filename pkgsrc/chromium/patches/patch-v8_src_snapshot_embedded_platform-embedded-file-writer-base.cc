@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc.orig	2024-05-21 22:47:35.949931900 +0000
+--- v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc.orig	2024-06-13 23:30:46.329686200 +0000
 +++ v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc
 @@ -143,6 +143,8 @@ EmbeddedTargetOs ToEmbeddedTargetOs(cons
      return EmbeddedTargetOs::kWin;

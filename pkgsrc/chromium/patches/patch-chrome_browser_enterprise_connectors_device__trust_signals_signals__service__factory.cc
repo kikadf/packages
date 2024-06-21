@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-05-21 22:42:51.136543000 +0000
+--- chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc.orig	2024-06-13 23:28:47.563024300 +0000
 +++ chrome/browser/enterprise/connectors/device_trust/signals/signals_service_factory.cc
 @@ -21,7 +21,7 @@
  #include "chrome/browser/profiles/profile.h"

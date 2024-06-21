@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/BUILD.gn.orig	2024-05-21 22:42:49.568403200 +0000
+--- chrome/browser/BUILD.gn.orig	2024-06-13 23:28:46.266908000 +0000
 +++ chrome/browser/BUILD.gn
-@@ -6630,6 +6630,13 @@ static_library("browser") {
+@@ -6708,6 +6708,13 @@ static_library("browser") {
      }
    }
  

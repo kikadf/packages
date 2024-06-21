@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_main.cc.orig	2024-05-21 22:43:07.013959200 +0000
+--- remoting/host/host_main.cc.orig	2024-06-13 23:29:04.580551900 +0000
 +++ remoting/host/host_main.cc
 @@ -50,7 +50,7 @@ int FileChooserMain();
  int RdpDesktopSessionMain();

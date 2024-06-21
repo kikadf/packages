@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_extensions_api_client.cc.orig	2024-05-21 22:43:02.793582700 +0000
+--- extensions/shell/browser/shell_extensions_api_client.cc.orig	2024-06-13 23:28:59.972138200 +0000
 +++ extensions/shell/browser/shell_extensions_api_client.cc
 @@ -58,7 +58,7 @@ ShellExtensionsAPIClient::CreateDisplayI
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

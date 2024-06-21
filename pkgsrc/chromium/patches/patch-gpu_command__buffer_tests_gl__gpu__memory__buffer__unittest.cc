@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2024-05-21 22:43:03.033604100 +0000
+--- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2024-06-13 23:29:00.208159400 +0000
 +++ gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc
 @@ -27,7 +27,7 @@
  #include "ui/gfx/half_float.h"

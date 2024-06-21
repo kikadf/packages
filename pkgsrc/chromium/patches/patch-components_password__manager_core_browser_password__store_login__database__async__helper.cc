@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2024-05-21 22:42:58.533202600 +0000
+--- components/password_manager/core/browser/password_store/login_database_async_helper.cc.orig	2024-06-13 23:28:55.787762600 +0000
 +++ components/password_manager/core/browser/password_store/login_database_async_helper.cc
 @@ -149,7 +149,7 @@ LoginsResultOrError LoginDatabaseAsyncHe
      std::vector<PasswordForm> matched_forms;

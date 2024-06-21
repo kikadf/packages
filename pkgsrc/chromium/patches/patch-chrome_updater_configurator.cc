@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/configurator.cc.orig	2024-05-21 22:42:56.216996200 +0000
+--- chrome/updater/configurator.cc.orig	2024-06-13 23:28:53.403548500 +0000
 +++ chrome/updater/configurator.cc
 @@ -67,7 +67,7 @@ Configurator::Configurator(scoped_refptr
          return std::nullopt;

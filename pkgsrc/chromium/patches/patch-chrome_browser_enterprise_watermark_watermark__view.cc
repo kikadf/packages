@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/watermark/watermark_view.cc.orig	2024-05-21 22:42:51.164545500 +0000
+--- chrome/browser/enterprise/watermark/watermark_view.cc.orig	2024-06-13 23:28:47.591026800 +0000
 +++ chrome/browser/enterprise/watermark/watermark_view.cc
 @@ -36,7 +36,7 @@ gfx::Font WatermarkFont() {
        "Segoe UI",

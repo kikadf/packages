@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_util.cc.orig	2024-05-21 22:42:57.261089300 +0000
+--- components/autofill/core/common/autofill_util.cc.orig	2024-06-13 23:28:54.515648400 +0000
 +++ components/autofill/core/common/autofill_util.cc
-@@ -131,7 +131,7 @@ bool SanitizedFieldIsEmpty(const std::u1
+@@ -132,7 +132,7 @@ bool SanitizedFieldIsEmpty(const std::u1
  
  bool ShouldAutoselectFirstSuggestionOnArrowDown() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \

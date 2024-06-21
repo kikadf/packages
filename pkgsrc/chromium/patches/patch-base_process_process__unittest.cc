@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_unittest.cc.orig	2024-05-21 22:42:46.724149500 +0000
+--- base/process/process_unittest.cc.orig	2024-06-13 23:28:43.478657500 +0000
 +++ base/process/process_unittest.cc
 @@ -199,7 +199,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
    // was spawned and a time recorded after it was spawned. However, since the

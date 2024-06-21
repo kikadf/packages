@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/prefix_selector.cc.orig	2024-05-21 22:43:36.424582200 +0000
+--- ui/views/controls/prefix_selector.cc.orig	2024-06-13 23:29:31.218943400 +0000
 +++ ui/views/controls/prefix_selector.cc
 @@ -174,7 +174,7 @@ bool PrefixSelector::ShouldDoLearning() 
    return false;

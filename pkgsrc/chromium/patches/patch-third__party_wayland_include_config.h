@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/wayland/include/config.h.orig	2024-05-21 22:43:33.784346600 +0000
+--- third_party/wayland/include/config.h.orig	2024-06-13 23:29:28.990743200 +0000
 +++ third_party/wayland/include/config.h
 @@ -9,7 +9,14 @@
  

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/video_capture_device_client.cc.orig	2024-05-21 22:43:04.865767500 +0000
+--- media/capture/video/video_capture_device_client.cc.orig	2024-06-13 23:29:02.252343000 +0000
 +++ media/capture/video/video_capture_device_client.cc
-@@ -154,7 +154,7 @@ FourccAndFlip GetFourccAndFlipFromPixelF
+@@ -164,7 +164,7 @@ FourccAndFlip GetFourccAndFlipFromPixelF
        CHECK(!is_width_odd && !is_height_odd);
        return {libyuv::FOURCC_UYVY};
      case media::PIXEL_FORMAT_RGB24:

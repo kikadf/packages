@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- tools/grit/grit/node/base.py.orig	2024-05-21 22:43:34.600419500 +0000
+--- tools/grit/grit/node/base.py.orig	2024-06-13 23:29:29.422782000 +0000
 +++ tools/grit/grit/node/base.py
 @@ -498,7 +498,8 @@ class Node:
          value = defs

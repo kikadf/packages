@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/base/features.cc.orig	2024-05-21 22:43:05.925862000 +0000
+--- net/base/features.cc.orig	2024-06-13 23:29:03.356442000 +0000
 +++ net/base/features.cc
 @@ -26,7 +26,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCross
  BASE_FEATURE(kAsyncDns,
@@ -14,15 +15,15 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -532,7 +532,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
+@@ -516,7 +516,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseU
               "SpdyHeadersToHttpResponseUseBuilder",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
 +#if BUILDFLAG(IS_OPENBSD)
 +// No IP_RECVTOS support
- BASE_FEATURE(kReceiveEcn, "ReceiveEcn", base::FEATURE_DISABLED_BY_DEFAULT);
+ BASE_FEATURE(kReportEcn, "ReportEcn", base::FEATURE_DISABLED_BY_DEFAULT);
 +#else
-+BASE_FEATURE(kReceiveEcn, "ReceiveEcn", base::FEATURE_DISABLED_BY_DEFAULT);
++BASE_FEATURE(kReportEcn, "ReportEcn", base::FEATURE_DISABLED_BY_DEFAULT);
 +#endif
  
  BASE_FEATURE(kUseNewAlpsCodepointHttp2,

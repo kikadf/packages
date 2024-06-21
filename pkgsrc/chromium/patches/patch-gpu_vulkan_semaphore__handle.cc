@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/semaphore_handle.cc.orig	2024-05-21 22:43:03.077608000 +0000
+--- gpu/vulkan/semaphore_handle.cc.orig	2024-06-13 23:29:00.248163000 +0000
 +++ gpu/vulkan/semaphore_handle.cc
 @@ -39,7 +39,7 @@ SemaphoreHandle::SemaphoreHandle(gfx::Gp
    // https://fuchsia.dev/reference/fidl/fuchsia.ui.scenic.

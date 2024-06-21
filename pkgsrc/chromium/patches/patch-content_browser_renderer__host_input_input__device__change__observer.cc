@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-05-21 22:43:01.081430000 +0000
+--- content/browser/renderer_host/input/input_device_change_observer.cc.orig	2024-06-13 23:28:58.275986000 +0000
 +++ content/browser/renderer_host/input/input_device_change_observer.cc
 @@ -9,7 +9,7 @@
  

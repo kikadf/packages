@@ -1,14 +1,15 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2024-05-21 22:42:51.632587200 +0000
+--- chrome/browser/media/webrtc/desktop_media_picker_controller.cc.orig	2024-06-13 23:28:48.051068000 +0000
 +++ chrome/browser/media/webrtc/desktop_media_picker_controller.cc
-@@ -92,7 +92,7 @@ bool DesktopMediaPickerController::IsSys
-   } else {
-     return base::FeatureList::IsEnabled(media::kMacLoopbackAudioForScreenShare);
-   }
+@@ -89,7 +89,7 @@ bool DesktopMediaPickerController::IsSys
+ #if BUILDFLAG(IS_MAC)
+  return request_source == Params::RequestSource::kCast ||
+      base::FeatureList::IsEnabled(media::kMacLoopbackAudioForScreenShare);
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (request_source == Params::RequestSource::kCast) {

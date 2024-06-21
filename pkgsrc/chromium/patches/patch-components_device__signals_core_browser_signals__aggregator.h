@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/signals_aggregator.h.orig	2024-05-21 22:42:57.645123500 +0000
+--- components/device_signals/core/browser/signals_aggregator.h.orig	2024-06-13 23:28:55.067698000 +0000
 +++ components/device_signals/core/browser/signals_aggregator.h
 @@ -22,7 +22,7 @@ class SignalsAggregator : public KeyedSe
  

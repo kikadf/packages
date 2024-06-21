@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/app/shell_main_delegate.cc.orig	2024-05-21 22:43:02.789582300 +0000
+--- extensions/shell/app/shell_main_delegate.cc.orig	2024-06-13 23:28:59.968137700 +0000
 +++ extensions/shell/app/shell_main_delegate.cc
 @@ -43,7 +43,7 @@
  #if BUILDFLAG(IS_WIN)

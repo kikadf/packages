@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/root_view.cc.orig	2024-05-21 22:43:36.492588300 +0000
+--- ui/views/widget/root_view.cc.orig	2024-06-13 23:29:31.286949400 +0000
 +++ ui/views/widget/root_view.cc
 @@ -127,7 +127,7 @@ class AnnounceTextView : public View {
  #if BUILDFLAG(IS_CHROMEOS)
@@ -11,6 +12,6 @@ $NetBSD$
      node_data->role = ax::mojom::Role::kStaticText;
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     // TODO(crbug.com/1024898): Use live regions (do not use alerts).
+     // TODO(crbug.com/40658933): Use live regions (do not use alerts).
      // May require setting kLiveStatus, kContainerLiveStatus to "polite".
      node_data->role = ax::mojom::Role::kAlert;

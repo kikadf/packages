@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-05-21 22:42:54.580850100 +0000
+--- chrome/common/media/component_widevine_cdm_hint_file_linux.h.orig	2024-06-13 23:28:51.263356400 +0000
 +++ chrome/common/media/component_widevine_cdm_hint_file_linux.h
 @@ -17,7 +17,7 @@
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
 +#if !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD))

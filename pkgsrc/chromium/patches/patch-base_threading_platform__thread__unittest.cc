@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_unittest.cc.orig	2024-05-21 22:42:46.848160500 +0000
+--- base/threading/platform_thread_unittest.cc.orig	2024-06-13 23:28:43.602668800 +0000
 +++ base/threading/platform_thread_unittest.cc
-@@ -33,7 +33,7 @@
+@@ -38,7 +38,7 @@
  #include "base/time/time.h"
  #endif
  
@@ -14,7 +15,7 @@ $NetBSD$
  #include <pthread.h>
  #include <sys/syscall.h>
  #include <sys/types.h>
-@@ -424,7 +424,7 @@ TEST(PlatformThreadTest,
+@@ -429,7 +429,7 @@ TEST(PlatformThreadTest,
  // and hardcodes what we know. Please inform scheduler-dev@chromium.org if this
  // proprerty changes for a given platform.
  TEST(PlatformThreadTest, CanChangeThreadType) {
@@ -23,7 +24,7 @@ $NetBSD$
    // On Ubuntu, RLIMIT_NICE and RLIMIT_RTPRIO are 0 by default, so we won't be
    // able to increase priority to any level unless we are root (euid == 0).
    bool kCanIncreasePriority = false;
-@@ -708,12 +708,16 @@ INSTANTIATE_TEST_SUITE_P(
+@@ -713,12 +713,16 @@ INSTANTIATE_TEST_SUITE_P(
  
  #endif  // BUILDFLAG(IS_APPLE)
  

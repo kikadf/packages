@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/posix/can_lower_nice_to.cc.orig	2024-05-21 22:42:46.712148400 +0000
+--- base/posix/can_lower_nice_to.cc.orig	2024-06-13 23:28:43.466656400 +0000
 +++ base/posix/can_lower_nice_to.cc
 @@ -11,8 +11,12 @@
  

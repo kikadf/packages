@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/resource/resource_bundle.cc.orig	2024-05-21 22:43:35.628511200 +0000
+--- ui/base/resource/resource_bundle.cc.orig	2024-06-13 23:29:30.490877900 +0000
 +++ ui/base/resource/resource_bundle.cc
-@@ -927,7 +927,7 @@ void ResourceBundle::ReloadFonts() {
+@@ -926,7 +926,7 @@ void ResourceBundle::ReloadFonts() {
  }
  
  ResourceScaleFactor ResourceBundle::GetMaxResourceScaleFactor() const {

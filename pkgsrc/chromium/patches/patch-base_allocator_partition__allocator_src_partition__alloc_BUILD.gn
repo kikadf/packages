@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-05-21 22:42:46.520131300 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-06-13 23:28:43.278639600 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/BUILD.gn
-@@ -850,7 +850,7 @@ if (is_clang_or_gcc) {
+@@ -884,7 +884,7 @@ if (is_clang_or_gcc) {
          configs -= [ "//build/config/compiler:enable_arc" ]
        }
      }

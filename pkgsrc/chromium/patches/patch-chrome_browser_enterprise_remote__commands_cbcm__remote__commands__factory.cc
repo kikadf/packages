@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc.orig	2024-05-21 22:42:51.148544000 +0000
+--- chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc.orig	2024-06-13 23:28:47.579025700 +0000
 +++ chrome/browser/enterprise/remote_commands/cbcm_remote_commands_factory.cc
 @@ -11,7 +11,7 @@
  #include "chrome/browser/profiles/profile_manager.h"

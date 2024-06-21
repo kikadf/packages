@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_features.cc.orig	2024-05-21 22:42:58.553204500 +0000
+--- components/password_manager/core/common/password_manager_features.cc.orig	2024-06-13 23:28:55.807764300 +0000
 +++ components/password_manager/core/common/password_manager_features.cc
 @@ -18,7 +18,7 @@ BASE_FEATURE(kEnableOverwritingPlacehold
               "EnableOverwritingPlaceholderUsernames",

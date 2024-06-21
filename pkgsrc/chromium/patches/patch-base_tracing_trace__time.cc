@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/tracing/trace_time.cc.orig	2024-05-21 22:42:46.884163900 +0000
+--- base/tracing/trace_time.cc.orig	2024-06-13 23:28:43.634671400 +0000
 +++ base/tracing/trace_time.cc
 @@ -8,13 +8,19 @@
  #include "build/build_config.h"

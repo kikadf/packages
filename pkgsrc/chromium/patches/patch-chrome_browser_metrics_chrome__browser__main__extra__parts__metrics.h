@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h.orig	2024-05-21 22:42:51.672591000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h.orig	2024-06-13 23:28:48.083071000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h
 @@ -28,7 +28,7 @@ class PowerMetricsReporter;
  class ProcessMonitor;

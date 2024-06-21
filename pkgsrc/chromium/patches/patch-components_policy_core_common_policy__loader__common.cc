@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/policy_loader_common.cc.orig	2024-05-21 22:42:58.713218700 +0000
+--- components/policy/core/common/policy_loader_common.cc.orig	2024-06-13 23:28:55.971779000 +0000
 +++ components/policy/core/common/policy_loader_common.cc
 @@ -46,7 +46,7 @@ const char* kSensitivePolicies[] = {
      key::kDefaultSearchProviderEnabled,

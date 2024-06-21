@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/printing/printer_query.cc.orig	2024-05-21 22:42:52.048624500 +0000
+--- chrome/browser/printing/printer_query.cc.orig	2024-06-13 23:28:48.451104000 +0000
 +++ chrome/browser/printing/printer_query.cc
 @@ -341,7 +341,7 @@ void PrinterQuery::UpdatePrintSettings(b
      crash_key = std::make_unique<crash_keys::ScopedPrinterInfo>(

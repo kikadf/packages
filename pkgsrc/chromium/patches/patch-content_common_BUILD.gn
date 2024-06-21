@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/common/BUILD.gn.orig	2024-05-21 22:43:01.325451900 +0000
+--- content/common/BUILD.gn.orig	2024-06-13 23:28:58.520007800 +0000
 +++ content/common/BUILD.gn
-@@ -444,19 +444,28 @@ source_set("common") {
+@@ -448,19 +448,28 @@ source_set("common") {
    }
  
    if (is_linux || is_chromeos) {

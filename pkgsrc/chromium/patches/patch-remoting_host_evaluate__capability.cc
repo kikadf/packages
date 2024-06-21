@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/evaluate_capability.cc.orig	2024-05-21 22:43:07.005958300 +0000
+--- remoting/host/evaluate_capability.cc.orig	2024-06-13 23:29:04.572551300 +0000
 +++ remoting/host/evaluate_capability.cc
-@@ -55,7 +55,7 @@ base::FilePath BuildHostBinaryPath() {
+@@ -56,7 +56,7 @@ base::FilePath BuildHostBinaryPath() {
    }
  #endif
  

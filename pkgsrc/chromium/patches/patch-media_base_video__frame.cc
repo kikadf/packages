@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2024-05-21 22:43:04.829764400 +0000
+--- media/base/video_frame.cc.orig	2024-06-13 23:29:02.216339600 +0000
 +++ media/base/video_frame.cc
 @@ -80,7 +80,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
@@ -32,16 +33,16 @@ $NetBSD$
  // This class allows us to embed a vector<ScopedFD> into a scoped_refptr, and
  // thus to have several VideoFrames share the same set of DMABUF FDs.
  class VideoFrame::DmabufHolder
-@@ -712,7 +712,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
-   for (size_t i = 0; i < num_planes; ++i)
+@@ -440,7 +440,7 @@ scoped_refptr<VideoFrame> VideoFrame::Cr
      planes[i].stride = gpu_memory_buffer->stride(i);
+   }
    uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (gpu_memory_buffer->GetType() == gfx::NATIVE_PIXMAP) {
      const auto gmb_handle = gpu_memory_buffer->CloneHandle();
      if (gmb_handle.is_null() ||
-@@ -758,7 +758,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -778,7 +778,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
@@ -50,7 +51,7 @@ $NetBSD$
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -977,7 +977,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -997,7 +997,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
      }
    }
  
@@ -59,7 +60,7 @@ $NetBSD$
    DCHECK(frame->dmabuf_fds_);
    // If there are any |dmabuf_fds_| plugged in, we should refer them too.
    wrapping_frame->dmabuf_fds_ = frame->dmabuf_fds_;
-@@ -1435,7 +1435,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1471,7 +1471,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
                          : shared_images_[texture_index];
  }
  
@@ -68,7 +69,7 @@ $NetBSD$
  size_t VideoFrame::NumDmabufFds() const {
    return dmabuf_fds_->size();
  }
-@@ -1552,7 +1552,7 @@ VideoFrame::VideoFrame(const VideoFrameL
+@@ -1588,7 +1588,7 @@ VideoFrame::VideoFrame(const VideoFrameL
        storage_type_(storage_type),
        visible_rect_(Intersection(visible_rect, gfx::Rect(layout.coded_size()))),
        natural_size_(natural_size),

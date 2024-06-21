@@ -1,25 +1,26 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc.orig	2024-05-21 22:42:51.144544000 +0000
+--- chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc.orig	2024-06-13 23:28:47.575025300 +0000
 +++ chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc
-@@ -12,7 +12,7 @@
+@@ -13,7 +13,7 @@
  #include "components/enterprise/browser/identifiers/identifiers_prefs.h"
  #include "components/prefs/pref_service.h"
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
  #include "components/enterprise/browser/controller/browser_dm_token_storage.h"
  #if BUILDFLAG(IS_WIN)
  #include "base/strings/utf_string_conversions.h"
-@@ -36,7 +36,7 @@ void CreateProfileGUID(PrefService* pref
+@@ -94,7 +94,7 @@ std::string ProfileIdDelegateImpl::GetDe
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
  // Gets the device ID from the BrowserDMTokenStorage.
- std::string GetId() {
+ std::string ProfileIdDelegateImpl::GetId() {
    std::string device_id =

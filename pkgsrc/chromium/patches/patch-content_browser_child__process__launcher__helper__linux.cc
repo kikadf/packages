@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_process_launcher_helper_linux.cc.orig	2024-05-21 22:43:00.821406800 +0000
+--- content/browser/child_process_launcher_helper_linux.cc.orig	2024-06-13 23:28:58.035964500 +0000
 +++ content/browser/child_process_launcher_helper_linux.cc
 @@ -22,7 +22,9 @@
  #include "content/public/common/result_codes.h"
@@ -53,7 +54,7 @@ $NetBSD$
 +#if !BUILDFLAG(IS_BSD)
    ZygoteCommunication* zygote_handle = GetZygoteForLaunch();
    if (zygote_handle) {
-     // TODO(crbug.com/569191): If chrome supported multiple zygotes they could
+     // TODO(crbug.com/40448989): If chrome supported multiple zygotes they could
 @@ -93,7 +104,6 @@ ChildProcessLauncherHelper::LaunchProces
          GetProcessType());
      *launch_result = LAUNCH_RESULT_SUCCESS;

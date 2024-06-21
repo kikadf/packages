@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2024-05-21 22:42:46.984172800 +0000
+--- build/config/rust.gni.orig	2024-06-13 23:28:43.738680800 +0000
 +++ build/config/rust.gni
 @@ -272,6 +272,10 @@ if (is_linux || is_chromeos) {
    }

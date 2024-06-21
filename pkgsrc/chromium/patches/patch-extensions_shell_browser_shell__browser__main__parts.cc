@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/shell_browser_main_parts.cc.orig	2024-05-21 22:43:02.793582700 +0000
+--- extensions/shell/browser/shell_browser_main_parts.cc.orig	2024-06-13 23:28:59.968137700 +0000
 +++ extensions/shell/browser/shell_browser_main_parts.cc
 @@ -150,7 +150,7 @@ void ShellBrowserMainParts::PostCreateMa
        switches::kAppShellAllowRoaming)) {

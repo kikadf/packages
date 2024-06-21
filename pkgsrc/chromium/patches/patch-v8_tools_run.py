@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/run.py.orig	2024-05-21 22:47:37.406061600 +0000
+--- v8/tools/run.py.orig	2024-06-13 23:30:47.813819400 +0000
 +++ v8/tools/run.py
 @@ -9,7 +9,7 @@ scripts."""
  import subprocess

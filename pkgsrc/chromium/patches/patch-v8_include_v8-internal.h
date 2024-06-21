@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8-internal.h.orig	2024-05-21 22:47:35.237868300 +0000
+--- v8/include/v8-internal.h.orig	2024-06-13 23:30:45.689628600 +0000
 +++ v8/include/v8-internal.h
-@@ -175,7 +175,7 @@ using SandboxedPointer_t = Address;
+@@ -185,7 +185,7 @@ using SandboxedPointer_t = Address;
  #ifdef V8_ENABLE_SANDBOX
  
  // Size of the sandbox, excluding the guard regions surrounding it.

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2024-05-21 22:42:54.332828000 +0000
+--- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2024-06-13 23:28:50.823316800 +0000
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
-@@ -135,7 +135,7 @@
+@@ -136,7 +136,7 @@
  #include "chrome/browser/ui/chrome_pages.h"
  #endif
  
@@ -14,7 +15,7 @@ $NetBSD$
  #include "ui/display/screen.h"
  #endif
  
-@@ -154,7 +154,7 @@
+@@ -155,7 +155,7 @@
  #include "chrome/browser/ui/webui/certificate_manager_localized_strings_provider.h"
  #endif
  
@@ -23,7 +24,7 @@ $NetBSD$
  #include "ui/linux/linux_ui_factory.h"
  #include "ui/ozone/public/ozone_platform.h"
  #endif
-@@ -267,7 +267,7 @@ void AddA11yStrings(content::WebUIDataSo
+@@ -272,7 +272,7 @@ void AddA11yStrings(content::WebUIDataSo
        {"focusHighlightLabel",
         IDS_SETTINGS_ACCESSIBILITY_FOCUS_HIGHLIGHT_DESCRIPTION},
  #endif
@@ -32,7 +33,7 @@ $NetBSD$
        {"overscrollHistoryNavigationTitle",
         IDS_SETTINGS_OVERSCROLL_HISTORY_NAVIGATION_TITLE},
        {"overscrollHistoryNavigationSubtitle",
-@@ -405,7 +405,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -412,7 +412,7 @@ void AddAppearanceStrings(content::WebUI
        {"huge", IDS_SETTINGS_HUGE_FONT_SIZE},
        {"sidePanelAlignLeft", IDS_SETTINGS_SIDE_PANEL_ALIGN_LEFT},
        {"sidePanelAlignRight", IDS_SETTINGS_SIDE_PANEL_ALIGN_RIGHT},
@@ -41,7 +42,7 @@ $NetBSD$
        {"gtkTheme", IDS_SETTINGS_GTK_THEME},
        {"useGtkTheme", IDS_SETTINGS_USE_GTK_THEME},
        {"qtTheme", IDS_SETTINGS_QT_THEME},
-@@ -415,7 +415,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -422,7 +422,7 @@ void AddAppearanceStrings(content::WebUI
  #else
        {"resetToDefaultTheme", IDS_SETTINGS_RESET_TO_DEFAULT_THEME},
  #endif
@@ -50,9 +51,9 @@ $NetBSD$
        {"showWindowDecorations", IDS_SHOW_WINDOW_DECORATIONS},
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -436,7 +436,7 @@ void AddAppearanceStrings(content::WebUI
+@@ -445,7 +445,7 @@ void AddAppearanceStrings(content::WebUI
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && !BUILDFLAG(IS_CHROMEOS_LACROS)

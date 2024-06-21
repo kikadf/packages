@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/live_caption/caption_util.cc.orig	2024-05-21 22:42:58.157169000 +0000
+--- components/live_caption/caption_util.cc.orig	2024-06-13 23:28:55.415729000 +0000
 +++ components/live_caption/caption_util.cc
 @@ -144,7 +144,7 @@ std::string GetCaptionSettingsUrl() {
    return "chrome://os-settings/audioAndCaptions";

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-05-21 22:43:06.641925800 +0000
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-06-13 23:29:04.216519000 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
 @@ -6,7 +6,9 @@
  

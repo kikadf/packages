@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/linux/dmabuf_uapi.h.orig	2024-05-21 22:43:36.136556400 +0000
+--- ui/gfx/linux/dmabuf_uapi.h.orig	2024-06-13 23:29:30.930917500 +0000
 +++ ui/gfx/linux/dmabuf_uapi.h
 @@ -5,12 +5,11 @@
  #ifndef UI_GFX_LINUX_DMABUF_UAPI_H_

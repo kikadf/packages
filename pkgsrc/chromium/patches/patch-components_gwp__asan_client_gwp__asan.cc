@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/client/gwp_asan.cc.orig	2024-05-21 22:42:58.057160400 +0000
+--- components/gwp_asan/client/gwp_asan.cc.orig	2024-06-13 23:28:55.315720000 +0000
 +++ components/gwp_asan/client/gwp_asan.cc
-@@ -74,7 +74,7 @@ namespace {
+@@ -75,7 +75,7 @@ namespace {
  // ProcessSamplingBoost is the multiplier to increase the
  // ProcessSamplingProbability in scenarios where we want to perform additional
  // testing (e.g., on canary/dev builds).

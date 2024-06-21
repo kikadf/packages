@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-05-21 22:42:52.040623700 +0000
+--- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-06-13 23:28:48.443103300 +0000
 +++ chrome/browser/printing/print_backend_service_manager.cc
 @@ -35,7 +35,7 @@
  #include "printing/printing_context.h"

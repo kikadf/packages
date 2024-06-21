@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/events/keycodes/dom/keycode_converter.cc.orig	2024-05-21 22:43:35.992543700 +0000
+--- ui/events/keycodes/dom/keycode_converter.cc.orig	2024-06-13 23:29:30.674894300 +0000
 +++ ui/events/keycodes/dom/keycode_converter.cc
-@@ -11,7 +11,7 @@
+@@ -13,7 +13,7 @@
  #include "ui/events/keycodes/dom/dom_code.h"
  #include "ui/events/keycodes/dom/dom_key.h"
  
@@ -14,7 +15,7 @@ $NetBSD$
  #include <linux/input.h>
  #endif
  
-@@ -24,7 +24,7 @@ namespace {
+@@ -26,7 +26,7 @@ namespace {
  #if BUILDFLAG(IS_WIN)
  #define DOM_CODE(usb, evdev, xkb, win, mac, code, id) \
    { usb, win, code }
@@ -23,7 +24,7 @@ $NetBSD$
  #define DOM_CODE(usb, evdev, xkb, win, mac, code, id) \
    { usb, xkb, code }
  #elif BUILDFLAG(IS_APPLE)
-@@ -63,7 +63,7 @@ struct DomKeyMapEntry {
+@@ -65,7 +65,7 @@ struct DomKeyMapEntry {
  #undef DOM_KEY_UNI
  #undef DOM_KEY_MAP_DECLARATION_END
  
@@ -32,7 +33,7 @@ $NetBSD$
  
  // The offset between XKB Keycode and evdev code.
  constexpr int kXkbKeycodeOffset = 8;
-@@ -184,7 +184,7 @@ int KeycodeConverter::DomCodeToNativeKey
+@@ -186,7 +186,7 @@ int KeycodeConverter::DomCodeToNativeKey
    return UsbKeycodeToNativeKeycode(static_cast<uint32_t>(code));
  }
  

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2024-05-21 22:42:57.997155000 +0000
+--- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2024-06-13 23:28:55.255715000 +0000
 +++ components/feed/core/v2/feed_network_impl_unittest.cc
-@@ -781,8 +781,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D
+@@ -753,8 +753,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D
  
    EXPECT_EQ(feedwire::ClientInfo::CHROME_ANDROID, client_info.app_type());
    EXPECT_EQ(feedwire::Version::RELEASE, client_info.app_version().build_type());

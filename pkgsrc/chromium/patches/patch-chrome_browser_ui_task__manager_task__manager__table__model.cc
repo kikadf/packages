@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-05-21 22:42:53.844784500 +0000
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-06-13 23:28:50.287268900 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
 @@ -454,7 +454,7 @@ std::u16string TaskManagerTableModel::Ge
            ? stringifier_->backgrounded_string()

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc.orig	2024-05-21 22:43:30.952094000 +0000
+--- third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc.orig	2024-06-13 23:29:26.254497500 +0000
 +++ third_party/maldoca/src/maldoca/base/get_runfiles_dir.cc
 @@ -25,11 +25,6 @@
  #error "__APPLE__ not supported."

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2024-05-21 22:43:10.878303800 +0000
+--- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2024-06-13 23:29:08.296885500 +0000
 +++ third_party/blink/renderer/platform/scheduler/common/thread.cc
 @@ -82,7 +82,7 @@ void Thread::CreateAndSetCompositorThrea
        std::make_unique<scheduler::CompositorThread>(params);

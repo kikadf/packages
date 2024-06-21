@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/cursor/cursor_factory.cc.orig	2024-05-21 22:43:35.580506800 +0000
+--- ui/base/cursor/cursor_factory.cc.orig	2024-06-13 23:29:30.442873500 +0000
 +++ ui/base/cursor/cursor_factory.cc
 @@ -97,7 +97,7 @@ void CursorFactory::ObserveThemeChanges(
    NOTIMPLEMENTED();

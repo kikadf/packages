@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/profiles/profile_impl.cc.orig	2024-05-21 22:42:52.100629000 +0000
+--- chrome/browser/profiles/profile_impl.cc.orig	2024-06-13 23:28:48.515109800 +0000
 +++ chrome/browser/profiles/profile_impl.cc
-@@ -263,6 +263,10 @@
+@@ -262,6 +262,10 @@
  #include "chrome/browser/spellchecker/spellcheck_service.h"
  #endif
  
@@ -16,7 +17,7 @@ $NetBSD$
  using bookmarks::BookmarkModel;
  using content::BrowserThread;
  using content::DownloadManagerDelegate;
-@@ -597,7 +601,7 @@ void ProfileImpl::LoadPrefsForNormalStar
+@@ -596,7 +600,7 @@ void ProfileImpl::LoadPrefsForNormalStar
  #else
    {
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)

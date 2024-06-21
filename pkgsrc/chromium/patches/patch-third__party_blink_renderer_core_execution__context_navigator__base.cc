@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/execution_context/navigator_base.cc.orig	2024-05-21 22:43:09.478179000 +0000
+--- third_party/blink/renderer/core/execution_context/navigator_base.cc.orig	2024-06-13 23:29:07.064775000 +0000
 +++ third_party/blink/renderer/core/execution_context/navigator_base.cc
 @@ -31,7 +31,7 @@ String GetReducedNavigatorPlatform() {
    return "Win32";

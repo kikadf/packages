@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/BUILD.gn.orig	2024-05-21 22:43:00.717397500 +0000
+--- content/browser/BUILD.gn.orig	2024-06-13 23:28:57.931955000 +0000
 +++ content/browser/BUILD.gn
-@@ -2407,6 +2407,13 @@ source_set("browser") {
+@@ -2408,6 +2408,13 @@ source_set("browser") {
      deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]
    }
  

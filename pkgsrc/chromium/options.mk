@@ -19,10 +19,11 @@ GN_ARGS+=	use_pulseaudio=true
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-BUILDTYPE=		Debug
+#BUILDTYPE=		Debug
+BUILDTYPE=		Release
 GN_ARGS+=		symbol_level=1
 #GN_BOOTSTRAP_FLAGS+=	--debug
-GN_VERBOSE=		-v
+GN_VERBOSE=		#-v
 INSTALL_UNSTRIPPED=	yes
 .else
 BUILDTYPE=		Release

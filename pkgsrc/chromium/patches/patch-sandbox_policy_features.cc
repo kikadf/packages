@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/features.cc.orig	2024-05-21 22:43:07.173973300 +0000
+--- sandbox/policy/features.cc.orig	2024-06-13 23:29:04.744566700 +0000
 +++ sandbox/policy/features.cc
 @@ -20,7 +20,11 @@ namespace sandbox::policy::features {
  // (Only causes an effect when feature kNetworkServiceInProcess is disabled.)

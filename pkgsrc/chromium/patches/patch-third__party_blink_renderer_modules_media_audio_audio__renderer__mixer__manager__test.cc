@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/media/audio/audio_renderer_mixer_manager_test.cc.orig	2024-05-21 22:43:10.226245600 +0000
+--- third_party/blink/renderer/modules/media/audio/audio_renderer_mixer_manager_test.cc.orig	2024-06-13 23:29:07.808841700 +0000
 +++ third_party/blink/renderer/modules/media/audio/audio_renderer_mixer_manager_test.cc
 @@ -813,7 +813,7 @@ TEST_F(AudioRendererMixerManagerTest, Mi
              mixer->get_output_params_for_testing().sample_rate());

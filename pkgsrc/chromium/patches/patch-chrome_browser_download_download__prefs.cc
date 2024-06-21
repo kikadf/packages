@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_prefs.cc.orig	2024-05-21 22:42:51.072537400 +0000
+--- chrome/browser/download/download_prefs.cc.orig	2024-06-13 23:28:47.507019300 +0000
 +++ chrome/browser/download/download_prefs.cc
 @@ -11,6 +11,7 @@
  #include <vector>
@@ -42,7 +43,7 @@ $NetBSD$
    should_open_pdf_in_system_reader_ =
        prefs->GetBoolean(prefs::kOpenPdfDownloadInSystemReader);
  #endif
-@@ -306,7 +311,7 @@ void DownloadPrefs::RegisterProfilePrefs
+@@ -304,7 +309,7 @@ void DownloadPrefs::RegisterProfilePrefs
    registry->RegisterFilePathPref(prefs::kSaveFileDefaultDirectory,
                                   default_download_path);
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -51,7 +52,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kOpenPdfDownloadInSystemReader, false);
  #endif
  #if BUILDFLAG(IS_ANDROID)
-@@ -473,7 +478,7 @@ void DownloadPrefs::DisableAutoOpenByUse
+@@ -469,7 +474,7 @@ void DownloadPrefs::DisableAutoOpenByUse
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -60,7 +61,7 @@ $NetBSD$
  void DownloadPrefs::SetShouldOpenPdfInSystemReader(bool should_open) {
    if (should_open_pdf_in_system_reader_ == should_open)
      return;
-@@ -505,7 +510,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
+@@ -501,7 +506,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
  
  void DownloadPrefs::ResetAutoOpenByUser() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -69,7 +70,7 @@ $NetBSD$
    SetShouldOpenPdfInSystemReader(false);
  #endif
    auto_open_by_user_.clear();
-@@ -545,7 +550,7 @@ void DownloadPrefs::SaveAutoOpenState() 
+@@ -538,7 +543,7 @@ void DownloadPrefs::SaveAutoOpenState() 
  bool DownloadPrefs::CanPlatformEnableAutoOpenForPdf() const {
  #if BUILDFLAG(IS_CHROMEOS)
    return false;  // There is no UI for auto-open on ChromeOS.
@@ -78,7 +79,7 @@ $NetBSD$
    return ShouldOpenPdfInSystemReader();
  #else
    return false;
-@@ -697,7 +702,14 @@ base::FilePath DownloadPrefs::SanitizeDo
+@@ -690,7 +695,14 @@ base::FilePath DownloadPrefs::SanitizeDo
  #else
    // If the stored download directory is an absolute path, we presume it's
    // correct; there's not really much more validation we can do here.

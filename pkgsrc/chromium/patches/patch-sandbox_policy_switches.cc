@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.cc.orig	2024-05-21 22:43:07.177973700 +0000
+--- sandbox/policy/switches.cc.orig	2024-06-13 23:29:04.748566900 +0000
 +++ sandbox/policy/switches.cc
 @@ -54,10 +54,10 @@ const char kWindowsSystemProxyResolverSa
  const char kMirroringSandbox[] = "mirroring";

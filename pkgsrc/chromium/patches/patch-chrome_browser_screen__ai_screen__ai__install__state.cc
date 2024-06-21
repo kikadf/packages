@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-05-21 22:42:52.824693700 +0000
+--- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-06-13 23:28:49.219173000 +0000
 +++ chrome/browser/screen_ai/screen_ai_install_state.cc
-@@ -23,7 +23,7 @@
+@@ -22,7 +22,7 @@
  #include "services/screen_ai/public/cpp/utilities.h"
  #include "ui/accessibility/accessibility_features.h"
  
@@ -14,12 +15,12 @@ $NetBSD$
  #include "base/cpu.h"
  #include "base/files/file_util.h"
  #endif
-@@ -35,7 +35,7 @@ const char kMinExpectedVersion[] = "123.
+@@ -32,7 +32,7 @@ const int kScreenAICleanUpDelayInDays = 
+ const char kMinExpectedVersion[] = "123.1";
+ 
  bool IsDeviceCompatible() {
-   // Check if the CPU has the required instruction set to run the Screen AI
-   // library.
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (!base::CPU().has_sse41()) {
-     return false;
-   }
+ #if defined(ARCH_CPU_X86_FAMILY)
+   // Check if the CPU has the required instruction set to run the Screen AI
+   // library.

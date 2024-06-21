@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_connection_fido.cc.orig	2024-06-07 09:06:48.794357975 +0000
+--- services/device/hid/hid_connection_fido.cc.orig	2024-06-21 06:49:08.650428780 +0000
 +++ services/device/hid/hid_connection_fido.cc
 @@ -0,0 +1,216 @@
 +// Copyright 2014 The Chromium Authors
@@ -66,7 +67,7 @@ $NetBSD$
 +    base::ScopedBlockingCall scoped_blocking_call(
 +        FROM_HERE, base::BlockingType::MAY_BLOCK);
 +
-+    auto data = buffer->front();
++    auto data = buffer->data();
 +    size_t size = buffer->size();
 +    // if report id is 0, it shouldn't be included
 +    if (data[0] == 0) {
@@ -117,7 +118,7 @@ $NetBSD$
 +
 +    auto buffer =
 +        base::MakeRefCounted<base::RefCountedBytes>(report_buffer_size_);
-+    uint8_t* data = buffer->front();
++    uint8_t* data = buffer->as_vector().data();
 +    size_t length = report_buffer_size_;
 +    if (!has_report_id_) {
 +      // Fido will not prefix the buffer with a report ID if report IDs are not
@@ -202,7 +203,7 @@ $NetBSD$
 +  DCHECK_GT(device_info()->max_feature_report_size(), 0u);
 +  auto buffer = base::MakeRefCounted<base::RefCountedBytes>(
 +      device_info()->max_feature_report_size() + 1);
-+  buffer->data()[0] = report_id;
++  buffer->as_vector().data()[0] = report_id;
 +
 +  blocking_task_runner_->PostTask(
 +      FROM_HERE, base::BindOnce(&BlockingTaskRunnerHelper::GetFeatureReport,

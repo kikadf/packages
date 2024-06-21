@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/message_center/views/message_popup_view.cc.orig	2024-05-21 22:43:36.224564300 +0000
+--- ui/message_center/views/message_popup_view.cc.orig	2024-06-13 23:29:31.018925200 +0000
 +++ ui/message_center/views/message_popup_view.cc
 @@ -135,7 +135,7 @@ void MessagePopupView::Show() {
    params.z_order = ui::ZOrderLevel::kFloatingWindow;
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

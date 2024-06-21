@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/desktop_capturer_proxy.cc.orig	2024-05-21 22:43:07.001958100 +0000
+--- remoting/host/desktop_capturer_proxy.cc.orig	2024-06-13 23:29:04.568550800 +0000
 +++ remoting/host/desktop_capturer_proxy.cc
 @@ -26,7 +26,7 @@
  #include "remoting/host/chromeos/frame_sink_desktop_capturer.h"

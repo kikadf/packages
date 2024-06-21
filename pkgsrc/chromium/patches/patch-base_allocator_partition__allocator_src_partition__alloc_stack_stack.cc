@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2024-05-21 22:42:46.564135300 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc.orig	2024-06-13 23:28:43.318643000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/stack/stack.cc
 @@ -18,6 +18,10 @@
  #include <pthread.h>

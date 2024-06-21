@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2024-05-21 22:43:01.157436800 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2024-06-13 23:28:58.347992400 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
-@@ -592,7 +592,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -599,7 +599,7 @@ class CONTENT_EXPORT RenderProcessHostIm
    // Sets this RenderProcessHost to be guest only. For Testing only.
    void SetForGuestsOnlyForTesting();
  

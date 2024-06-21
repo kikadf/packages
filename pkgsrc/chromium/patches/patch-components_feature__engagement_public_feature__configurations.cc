@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_configurations.cc.orig	2024-05-21 22:42:57.985154000 +0000
+--- components/feature_engagement/public/feature_configurations.cc.orig	2024-06-13 23:28:55.247714000 +0000
 +++ components/feature_engagement/public/feature_configurations.cc
 @@ -94,7 +94,7 @@ std::optional<FeatureConfig> CreateNewUs
  
@@ -23,7 +24,7 @@ $NetBSD$
    if (kIPHPasswordsAccountStorageFeature.name == feature->name) {
      std::optional<FeatureConfig> config = FeatureConfig();
      config->valid = true;
-@@ -1392,7 +1392,7 @@ std::optional<FeatureConfig> GetClientSi
+@@ -1498,7 +1498,7 @@ std::optional<FeatureConfig> GetClientSi
  
  #endif  // BUILDFLAG(IS_ANDROID)
  

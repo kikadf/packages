@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_connection_netbsd.h.orig	2024-06-07 09:06:48.797112229 +0000
+--- services/device/hid/hid_connection_netbsd.h.orig	2024-06-21 06:49:08.653430563 +0000
 +++ services/device/hid/hid_connection_netbsd.h
 @@ -0,0 +1,67 @@
 +// Copyright (c) 2014 The Chromium Authors. All rights reserved.

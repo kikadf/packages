@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_unittest.cc.orig	2024-05-21 22:42:46.724149500 +0000
+--- base/process/process_metrics_unittest.cc.orig	2024-06-13 23:28:43.478657500 +0000
 +++ base/process/process_metrics_unittest.cc
-@@ -57,7 +57,8 @@
+@@ -62,7 +62,8 @@
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||      \
      BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_WIN) || \

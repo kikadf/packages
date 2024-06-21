@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-05-21 22:43:03.021603000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2024-06-13 23:29:00.192158000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
 @@ -144,7 +144,7 @@ gfx::GpuMemoryBufferType GetNativeBuffer
    return gfx::GpuMemoryBufferType::IO_SURFACE_BUFFER;

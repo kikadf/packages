@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2024-05-21 22:42:52.984707800 +0000
+--- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2024-06-13 23:28:49.371186500 +0000
 +++ chrome/browser/supervised_user/supervised_user_extensions_manager.h
-@@ -143,7 +143,7 @@ class SupervisedUserExtensionsManager : 
+@@ -147,7 +147,7 @@ class SupervisedUserExtensionsManager : 
    // launched.
    bool ShouldBlockExtension(const std::string& extension_id) const;
  

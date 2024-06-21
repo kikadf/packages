@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- build/config/ozone.gni.orig	2024-05-21 22:42:46.984172800 +0000
+--- build/config/ozone.gni.orig	2024-06-13 23:28:43.734680400 +0000
 +++ build/config/ozone.gni
 @@ -84,7 +84,19 @@ declare_args() {
      } else if (is_chromeos_lacros) {

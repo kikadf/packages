@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-05-21 22:43:00.605387400 +0000
+--- components/viz/service/display_embedder/software_output_surface.cc.orig	2024-06-13 23:28:57.799943200 +0000
 +++ components/viz/service/display_embedder/software_output_surface.cc
 @@ -124,7 +124,7 @@ void SoftwareOutputSurface::SwapBuffersC
        now.SnappedToNextTick(refresh_timebase_, refresh_interval_) - now;
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
@@ -16,7 +17,7 @@ $NetBSD$
  #endif
 @@ -153,7 +153,7 @@ gfx::OverlayTransform SoftwareOutputSurf
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

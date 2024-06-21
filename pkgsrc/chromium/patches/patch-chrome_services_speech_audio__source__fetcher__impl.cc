@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2024-05-21 22:42:54.748865100 +0000
+--- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2024-06-13 23:28:51.427371000 +0000
 +++ chrome/services/speech/audio_source_fetcher_impl.cc
 @@ -132,7 +132,7 @@ void AudioSourceFetcherImpl::Start(
  
-   // TODO(crbug.com/1185978): Check implementation / sandbox policy on Mac and
+   // TODO(crbug.com/40753481): Check implementation / sandbox policy on Mac and
    // Windows.
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/defaults.cc.orig	2024-05-21 22:42:51.004531400 +0000
+--- chrome/browser/defaults.cc.orig	2024-06-13 23:28:47.439013000 +0000
 +++ chrome/browser/defaults.cc
 @@ -44,7 +44,7 @@ const bool kShowHelpMenuItemIcon = true;
  const bool kShowHelpMenuItemIcon = false;

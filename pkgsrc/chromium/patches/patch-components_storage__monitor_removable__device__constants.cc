@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/storage_monitor/removable_device_constants.cc.orig	2024-05-21 22:42:59.409280800 +0000
+--- components/storage_monitor/removable_device_constants.cc.orig	2024-06-13 23:28:56.707845200 +0000
 +++ components/storage_monitor/removable_device_constants.cc
 @@ -10,7 +10,7 @@ namespace storage_monitor {
  const char kFSUniqueIdPrefix[] = "UUID:";

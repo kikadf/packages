@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2024-05-21 22:43:36.260567700 +0000
+--- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2024-06-13 23:29:31.050928000 +0000
 +++ ui/ozone/platform/headless/vulkan_implementation_headless.cc
 @@ -118,7 +118,7 @@ VulkanImplementationHeadless::ExportVkFe
  

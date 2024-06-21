@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/tools/cert_verify_tool/cert_verify_comparision_tool.cc.orig	2024-05-21 22:43:06.745935200 +0000
+--- net/tools/cert_verify_tool/cert_verify_comparision_tool.cc.orig	2024-06-13 23:29:04.324529000 +0000
 +++ net/tools/cert_verify_tool/cert_verify_comparision_tool.cc
 @@ -36,7 +36,7 @@
  #include "net/url_request/url_request_context_builder.h"

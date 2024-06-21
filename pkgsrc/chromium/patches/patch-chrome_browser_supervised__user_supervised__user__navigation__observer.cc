@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2024-05-21 22:42:52.984707800 +0000
+--- chrome/browser/supervised_user/supervised_user_navigation_observer.cc.orig	2024-06-13 23:28:49.371186500 +0000
 +++ chrome/browser/supervised_user/supervised_user_navigation_observer.cc
 @@ -47,7 +47,7 @@
  #include "chrome/browser/supervised_user/android/supervised_user_web_content_handler_impl.h"

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/on_device_model_service.h.orig	2024-05-21 22:43:07.425995800 +0000
+--- services/on_device_model/on_device_model_service.h.orig	2024-06-13 23:29:04.988588600 +0000
 +++ services/on_device_model/on_device_model_service.h
 @@ -22,6 +22,10 @@
  #include "sandbox/policy/linux/sandbox_linux.h"
@@ -16,10 +17,10 @@ $NetBSD$
  namespace on_device_model {
  
  class COMPONENT_EXPORT(ON_DEVICE_MODEL) OnDeviceModelService
-@@ -31,7 +35,7 @@ class COMPONENT_EXPORT(ON_DEVICE_MODEL) 
-   // These are defined separately in pre_sandbox_init.cc for explicit security
-   // review coverage.
-   [[nodiscard]] static bool PreSandboxInit();
+@@ -35,7 +39,7 @@ class COMPONENT_EXPORT(ON_DEVICE_MODEL) 
+   // Must be called in the service's process after the run loop finished.
+   [[nodiscard]] static bool Shutdown();
+ 
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    static void AddSandboxLinuxOptions(

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-05-21 22:43:03.077608000 +0000
+--- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-06-13 23:29:00.252163400 +0000
 +++ gpu/vulkan/vulkan_function_pointers.cc
-@@ -1289,7 +1289,7 @@ bool VulkanFunctionPointers::BindDeviceF
+@@ -1297,7 +1297,7 @@ bool VulkanFunctionPointers::BindDeviceF
      }
    }
  
@@ -14,7 +15,7 @@ $NetBSD$
    if (gfx::HasExtension(enabled_extensions,
                          VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME)) {
      constexpr char kvkGetImageDrmFormatModifierPropertiesEXT[] =
-@@ -1489,7 +1489,7 @@ void VulkanFunctionPointers::ResetForTes
+@@ -1498,7 +1498,7 @@ void VulkanFunctionPointers::ResetForTes
    vkGetSwapchainImagesKHR = nullptr;
    vkQueuePresentKHR = nullptr;
  

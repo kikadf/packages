@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-05-21 22:43:30.388043900 +0000
+--- third_party/ipcz/src/reference_drivers/random.cc.orig	2024-06-13 23:29:25.634441900 +0000
 +++ third_party/ipcz/src/reference_drivers/random.cc
 @@ -14,7 +14,8 @@
  #include <windows.h>

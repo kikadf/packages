@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/webui/web_ui_util.cc.orig	2024-05-21 22:43:35.636511800 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2024-06-13 23:29:30.502879000 +0000
 +++ ui/base/webui/web_ui_util.cc
 @@ -39,7 +39,7 @@ namespace {
  constexpr float kMaxScaleFactor = 1000.0f;
@@ -14,9 +15,9 @@ $NetBSD$
    return "Roboto, " + GetFontFamily();
  #else
    return GetFontFamily();
-@@ -217,7 +217,7 @@ std::string GetFontFamily() {
+@@ -216,7 +216,7 @@ std::string GetFontFamily() {
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

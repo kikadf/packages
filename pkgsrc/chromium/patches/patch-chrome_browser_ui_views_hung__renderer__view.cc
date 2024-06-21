@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/hung_renderer_view.cc.orig	2024-05-21 22:42:53.980796800 +0000
+--- chrome/browser/ui/views/hung_renderer_view.cc.orig	2024-06-13 23:28:50.427281400 +0000
 +++ chrome/browser/ui/views/hung_renderer_view.cc
 @@ -406,7 +406,7 @@ void HungRendererDialogView::ForceCrashH
    content::RenderProcessHost* rph =

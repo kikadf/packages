@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/debug/elf_reader.cc.orig	2024-05-21 22:42:46.632141400 +0000
+--- base/debug/elf_reader.cc.orig	2024-06-13 23:28:43.386649400 +0000
 +++ base/debug/elf_reader.cc
-@@ -45,6 +45,10 @@ using Xword = Elf64_Xword;
+@@ -50,6 +50,10 @@ using Xword = Elf64_Xword;
  
  constexpr char kGnuNoteName[] = "GNU";
  

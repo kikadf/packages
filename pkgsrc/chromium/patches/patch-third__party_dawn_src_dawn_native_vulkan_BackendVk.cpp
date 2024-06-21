@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/dawn/src/dawn/native/vulkan/BackendVk.cpp.orig	2024-05-21 22:44:17.532248700 +0000
+--- third_party/dawn/src/dawn/native/vulkan/BackendVk.cpp.orig	2024-06-13 23:30:06.810138500 +0000
 +++ third_party/dawn/src/dawn/native/vulkan/BackendVk.cpp
 @@ -56,7 +56,7 @@ constexpr char kSwiftshaderLibName[] = "
  #endif

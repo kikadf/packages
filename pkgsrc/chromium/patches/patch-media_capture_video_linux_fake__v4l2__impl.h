@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/fake_v4l2_impl.h.orig	2024-05-21 22:43:04.857766900 +0000
+--- media/capture/video/linux/fake_v4l2_impl.h.orig	2024-06-13 23:29:02.248342500 +0000
 +++ media/capture/video/linux/fake_v4l2_impl.h
 @@ -8,7 +8,13 @@
  #include <map>

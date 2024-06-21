@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- tools/v8_context_snapshot/BUILD.gn.orig	2024-05-21 22:43:35.348486200 +0000
+--- tools/v8_context_snapshot/BUILD.gn.orig	2024-06-13 23:29:30.190851000 +0000
 +++ tools/v8_context_snapshot/BUILD.gn
-@@ -35,6 +35,24 @@ buildflag_header("buildflags") {
+@@ -36,6 +36,24 @@ buildflag_header("buildflags") {
    ]
  }
  
@@ -30,7 +31,7 @@ $NetBSD$
  if (use_v8_context_snapshot) {
    if (v8_snapshot_toolchain == current_toolchain) {
      action("generate_v8_context_snapshot") {
-@@ -51,7 +69,11 @@ if (use_v8_context_snapshot) {
+@@ -52,7 +70,11 @@ if (use_v8_context_snapshot) {
          "--output_file=$output_path",
        ]
  

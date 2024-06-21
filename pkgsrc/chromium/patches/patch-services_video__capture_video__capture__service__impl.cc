@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/video_capture/video_capture_service_impl.cc.orig	2024-05-21 22:43:07.670017700 +0000
+--- services/video_capture/video_capture_service_impl.cc.orig	2024-06-13 23:29:05.308617400 +0000
 +++ services/video_capture/video_capture_service_impl.cc
-@@ -40,7 +40,7 @@
+@@ -41,7 +41,7 @@
  #include "services/video_capture/lacros/device_factory_adapter_lacros.h"
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -14,7 +15,7 @@ $NetBSD$
  #include "media/capture/capture_switches.h"
  #include "media/capture/video/video_capture_gpu_channel_host.h"
  #include "services/viz/public/cpp/gpu/context_provider_command_buffer.h"
-@@ -108,7 +108,7 @@ class VideoCaptureServiceImpl::GpuDepend
+@@ -109,7 +109,7 @@ class VideoCaptureServiceImpl::GpuDepend
        this};
  };
  
@@ -23,7 +24,7 @@ $NetBSD$
  // Intended usage of this class is to create viz::Gpu in utility process and
  // connect to viz::GpuClient of browser process, which will call to Gpu service.
  // Also, this class holds the viz::ContextProvider to listen and monitor Gpu
-@@ -303,7 +303,7 @@ void VideoCaptureServiceImpl::LazyInitia
+@@ -311,7 +311,7 @@ void VideoCaptureServiceImpl::LazyInitia
      gpu_dependencies_context_ = std::make_unique<GpuDependenciesContext>();
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
@@ -32,7 +33,7 @@ $NetBSD$
    {
  #else
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled()) {
-@@ -415,7 +415,7 @@ void VideoCaptureServiceImpl::OnGpuInfoU
+@@ -433,7 +433,7 @@ void VideoCaptureServiceImpl::OnGpuInfoU
  }
  #endif
  

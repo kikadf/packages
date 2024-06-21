@@ -1,20 +1,21 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2024-05-21 22:42:51.744597200 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2024-06-13 23:28:48.159077600 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
-@@ -94,7 +94,7 @@
+@@ -97,7 +97,7 @@
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  #include "chrome/common/chrome_paths_internal.h"
  #include "chrome/grit/branded_strings.h"
  #include "ui/base/l10n/l10n_util.h"
-@@ -139,7 +139,7 @@ SystemNetworkContextManager* g_system_ne
+@@ -141,7 +141,7 @@ SystemNetworkContextManager* g_system_ne
  // received a failed launch for a sandboxed network service.
  bool g_previously_failed_to_launch_sandboxed_service = false;
  
@@ -23,7 +24,7 @@ $NetBSD$
  // Whether kerberos library loading will work in the network service due to the
  // sandbox.
  bool g_network_service_will_allow_gssapi_library_load = false;
-@@ -147,7 +147,7 @@ bool g_network_service_will_allow_gssapi
+@@ -149,7 +149,7 @@ bool g_network_service_will_allow_gssapi
  const char* kGssapiDesiredPref =
  #if BUILDFLAG(IS_CHROMEOS)
      prefs::kKerberosEnabled;
@@ -32,7 +33,7 @@ $NetBSD$
      prefs::kReceivedHttpAuthNegotiateHeader;
  #endif
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-@@ -193,7 +193,7 @@ network::mojom::HttpAuthDynamicParamsPtr
+@@ -195,7 +195,7 @@ network::mojom::HttpAuthDynamicParamsPtr
    auth_dynamic_params->basic_over_http_enabled =
        local_state->GetBoolean(prefs::kBasicAuthOverHttpEnabled);
  
@@ -41,7 +42,7 @@ $NetBSD$
    auth_dynamic_params->delegate_by_kdc_policy =
        local_state->GetBoolean(prefs::kAuthNegotiateDelegateByKdcPolicy);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
-@@ -208,7 +208,7 @@ network::mojom::HttpAuthDynamicParamsPtr
+@@ -210,7 +210,7 @@ network::mojom::HttpAuthDynamicParamsPtr
        local_state->GetString(prefs::kAuthAndroidNegotiateAccountType);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -50,7 +51,7 @@ $NetBSD$
    auth_dynamic_params->allow_gssapi_library_load =
        local_state->GetBoolean(kGssapiDesiredPref);
  #endif  // BUILDFLAG(IS_CHROMEOS)
-@@ -218,7 +218,7 @@ network::mojom::HttpAuthDynamicParamsPtr
+@@ -220,7 +220,7 @@ network::mojom::HttpAuthDynamicParamsPtr
  
  void OnNewHttpAuthDynamicParams(
      network::mojom::HttpAuthDynamicParamsPtr& params) {
@@ -59,7 +60,7 @@ $NetBSD$
    // The kerberos library is incompatible with the network service sandbox, so
    // if library loading is now enabled, the network service needs to be
    // restarted. It will be restarted unsandboxed because is
-@@ -260,11 +260,11 @@ NetworkSandboxState IsNetworkSandboxEnab
+@@ -262,11 +262,11 @@ NetworkSandboxState IsNetworkSandboxEnab
    if (g_previously_failed_to_launch_sandboxed_service) {
      return NetworkSandboxState::kDisabledBecauseOfFailedLaunch;
    }
@@ -73,7 +74,7 @@ $NetBSD$
    // The network service sandbox and the kerberos library are incompatible.
    // If kerberos is enabled by policy, disable the network service sandbox.
    if (g_network_service_will_allow_gssapi_library_load ||
-@@ -280,7 +280,7 @@ NetworkSandboxState IsNetworkSandboxEnab
+@@ -282,7 +282,7 @@ NetworkSandboxState IsNetworkSandboxEnab
    }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -82,7 +83,7 @@ $NetBSD$
    if (local_state &&
        local_state->HasPrefPath(prefs::kNetworkServiceSandboxEnabled)) {
      return local_state->GetBoolean(prefs::kNetworkServiceSandboxEnabled)
-@@ -510,7 +510,7 @@ void SystemNetworkContextManager::Delete
+@@ -512,7 +512,7 @@ void SystemNetworkContextManager::Delete
    g_system_network_context_manager = nullptr;
  }
  
@@ -91,7 +92,7 @@ $NetBSD$
  SystemNetworkContextManager::GssapiLibraryLoadObserver::
      GssapiLibraryLoadObserver(SystemNetworkContextManager* owner)
      : owner_(owner) {}
-@@ -568,7 +568,7 @@ SystemNetworkContextManager::SystemNetwo
+@@ -570,7 +570,7 @@ SystemNetworkContextManager::SystemNetwo
    pref_change_registrar_.Add(prefs::kAllHttpAuthSchemesAllowedForOrigins,
                               auth_pref_callback);
  
@@ -100,7 +101,7 @@ $NetBSD$
    pref_change_registrar_.Add(prefs::kAuthNegotiateDelegateByKdcPolicy,
                               auth_pref_callback);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
-@@ -582,7 +582,7 @@ SystemNetworkContextManager::SystemNetwo
+@@ -584,7 +584,7 @@ SystemNetworkContextManager::SystemNetwo
                               auth_pref_callback);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -109,7 +110,7 @@ $NetBSD$
    pref_change_registrar_.Add(kGssapiDesiredPref, auth_pref_callback);
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  
-@@ -608,7 +608,7 @@ SystemNetworkContextManager::SystemNetwo
+@@ -610,7 +610,7 @@ SystemNetworkContextManager::SystemNetwo
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -118,7 +119,7 @@ $NetBSD$
    pref_change_registrar_.Add(
        prefs::kEnforceLocalAnchorConstraintsEnabled,
        base::BindRepeating(&SystemNetworkContextManager::
-@@ -663,7 +663,7 @@ void SystemNetworkContextManager::Regist
+@@ -665,7 +665,7 @@ void SystemNetworkContextManager::Regist
    registry->RegisterBooleanPref(prefs::kKerberosEnabled, false);
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -127,7 +128,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kAuthNegotiateDelegateByKdcPolicy,
                                  false);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
-@@ -687,7 +687,7 @@ void SystemNetworkContextManager::Regist
+@@ -689,7 +689,7 @@ void SystemNetworkContextManager::Regist
    registry->RegisterIntegerPref(prefs::kMaxConnectionsPerProxy, -1);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -136,7 +137,7 @@ $NetBSD$
    // Note that the default value is not relevant because the pref is only
    // evaluated when it is managed.
    registry->RegisterBooleanPref(prefs::kEnforceLocalAnchorConstraintsEnabled,
-@@ -696,11 +696,11 @@ void SystemNetworkContextManager::Regist
+@@ -698,11 +698,11 @@ void SystemNetworkContextManager::Regist
  
    registry->RegisterListPref(prefs::kExplicitlyAllowedNetworkPorts);
  
@@ -150,7 +151,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kReceivedHttpAuthNegotiateHeader, false);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -753,7 +753,7 @@ void SystemNetworkContextManager::OnNetw
+@@ -755,7 +755,7 @@ void SystemNetworkContextManager::OnNetw
    OnNewHttpAuthDynamicParams(http_auth_dynamic_params);
    network_service->ConfigureHttpAuthPrefs(std::move(http_auth_dynamic_params));
  
@@ -159,7 +160,7 @@ $NetBSD$
    gssapi_library_loader_observer_.Install(network_service);
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -970,7 +970,7 @@ bool SystemNetworkContextManager::IsNetw
+@@ -972,7 +972,7 @@ bool SystemNetworkContextManager::IsNetw
        break;
    }
  
@@ -168,7 +169,7 @@ $NetBSD$
    if (!enabled) {
      g_network_service_will_allow_gssapi_library_load = true;
    }
-@@ -1055,7 +1055,7 @@ void SystemNetworkContextManager::Update
+@@ -1059,7 +1059,7 @@ void SystemNetworkContextManager::Update
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

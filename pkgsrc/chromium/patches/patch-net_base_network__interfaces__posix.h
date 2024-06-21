@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_interfaces_posix.h.orig	2024-05-21 22:43:05.941863500 +0000
+--- net/base/network_interfaces_posix.h.orig	2024-06-13 23:29:03.372443400 +0000
 +++ net/base/network_interfaces_posix.h
 @@ -8,6 +8,8 @@
  // This file provides some basic functionality shared between

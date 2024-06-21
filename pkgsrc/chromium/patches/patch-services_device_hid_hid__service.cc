@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service.cc.orig	2024-05-21 22:43:07.269981900 +0000
+--- services/device/hid/hid_service.cc.orig	2024-06-13 23:29:04.836574800 +0000
 +++ services/device/hid/hid_service.cc
 @@ -20,6 +20,10 @@
  

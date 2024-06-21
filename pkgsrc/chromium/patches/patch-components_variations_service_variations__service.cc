@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/variations/service/variations_service.cc.orig	2024-05-21 22:43:00.517379800 +0000
+--- components/variations/service/variations_service.cc.orig	2024-06-13 23:28:57.711935300 +0000
 +++ components/variations/service/variations_service.cc
 @@ -99,7 +99,7 @@ std::string GetPlatformString() {
    return "android";

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/platform_helpers.h.orig	2024-05-21 22:43:57.966503600 +0000
+--- third_party/angle/src/common/platform_helpers.h.orig	2024-06-13 23:29:39.463683400 +0000
 +++ third_party/angle/src/common/platform_helpers.h
 @@ -62,7 +62,7 @@ inline constexpr bool IsIOS()
  

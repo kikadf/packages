@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/mailbox_video_frame_converter.cc.orig	2024-05-21 22:43:04.965776400 +0000
+--- media/gpu/chromeos/mailbox_video_frame_converter.cc.orig	2024-06-13 23:29:02.376354000 +0000
 +++ media/gpu/chromeos/mailbox_video_frame_converter.cc
 @@ -65,7 +65,7 @@ viz::SharedImageFormat GetSharedImageFor
                      << static_cast<int>(buffer_format);

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/ipc_constants.cc.orig	2024-05-21 22:43:07.029960600 +0000
+--- remoting/host/ipc_constants.cc.orig	2024-06-13 23:29:04.600553800 +0000
 +++ remoting/host/ipc_constants.cc
 @@ -17,7 +17,7 @@ namespace remoting {
  

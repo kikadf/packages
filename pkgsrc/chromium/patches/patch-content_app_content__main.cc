@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main.cc.orig	2024-05-21 22:43:00.713397300 +0000
+--- content/app/content_main.cc.orig	2024-06-13 23:28:57.927954700 +0000
 +++ content/app/content_main.cc
 @@ -206,7 +206,7 @@ RunContentProcess(ContentMainParams para
  #endif

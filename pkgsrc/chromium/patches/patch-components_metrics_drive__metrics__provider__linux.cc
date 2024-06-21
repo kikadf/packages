@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/drive_metrics_provider_linux.cc.orig	2024-05-21 22:42:58.229175600 +0000
+--- components/metrics/drive_metrics_provider_linux.cc.orig	2024-06-13 23:28:55.487735500 +0000
 +++ components/metrics/drive_metrics_provider_linux.cc
 @@ -4,7 +4,13 @@
  

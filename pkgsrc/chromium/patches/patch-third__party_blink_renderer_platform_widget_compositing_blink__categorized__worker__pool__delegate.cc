@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc.orig	2024-05-21 22:43:10.954310400 +0000
+--- third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc.orig	2024-06-13 23:29:08.372892400 +0000
 +++ third_party/blink/renderer/platform/widget/compositing/blink_categorized_worker_pool_delegate.cc
 @@ -27,7 +27,7 @@ BlinkCategorizedWorkerPoolDelegate& Blin
  

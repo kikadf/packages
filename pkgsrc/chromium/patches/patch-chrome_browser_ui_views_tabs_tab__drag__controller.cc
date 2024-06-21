@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-05-21 22:42:54.104807900 +0000
+--- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-06-13 23:28:50.587295800 +0000
 +++ chrome/browser/ui/views/tabs/tab_drag_controller.cc
 @@ -95,7 +95,7 @@
  #include "components/remote_cocoa/browser/window.h"
@@ -34,14 +35,14 @@ $NetBSD$
    ref->start_point_in_screen_ =
 @@ -1069,7 +1069,7 @@ TabDragController::DragBrowserToNewTabSt
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
 +#if !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -2143,7 +2143,7 @@ void TabDragController::CompleteDrag() {
+@@ -2151,7 +2151,7 @@ void TabDragController::CompleteDrag() {
        }
  
        // If source window was maximized - maximize the new window as well.
@@ -50,9 +51,9 @@ $NetBSD$
        // Keeping maximized state breaks snap to Grid on Windows when dragging
        // tabs from maximized windows. TODO:(crbug.com/727051) Explore doing this
        // for other desktop OS's. kMaximizedStateRetainedOnTabDrag in
-@@ -2573,7 +2573,7 @@ TabDragController::Liveness TabDragContr
+@@ -2581,7 +2581,7 @@ TabDragController::Liveness TabDragContr
    }
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

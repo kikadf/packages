@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2024-05-21 22:42:54.456839000 +0000
+--- chrome/browser/web_applications/os_integration/web_app_shortcut.cc.orig	2024-06-13 23:28:50.947328000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_shortcut.cc
 @@ -65,7 +65,7 @@ namespace {
  
@@ -16,7 +17,7 @@ $NetBSD$
  const int kDesiredIconSizesForShortcut[] = {16, 32, 48, 128, 256, 512};
 @@ -227,7 +227,7 @@ std::unique_ptr<ShortcutInfo> BuildShort
  
- // TODO(crbug.com/1416965): Implement tests on Linux for using shortcuts_menu
+ // TODO(crbug.com/40257107): Implement tests on Linux for using shortcuts_menu
  // actions.
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

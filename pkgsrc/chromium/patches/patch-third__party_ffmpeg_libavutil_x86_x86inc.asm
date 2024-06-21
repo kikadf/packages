@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-05-21 22:45:05.500526400 +0000
+--- third_party/ffmpeg/libavutil/x86/x86inc.asm.orig	2024-06-13 23:29:42.779981100 +0000
 +++ third_party/ffmpeg/libavutil/x86/x86inc.asm
-@@ -53,6 +53,12 @@
+@@ -46,6 +46,12 @@
      %endif
  %endif
  
@@ -18,7 +19,7 @@ $NetBSD$
  %define WIN64  0
  %define UNIX64 0
  %if ARCH_X86_64
-@@ -778,6 +784,7 @@ BRANCH_INSTR jz, je, jnz, jne, jl, jle, 
+@@ -861,6 +867,7 @@ BRANCH_INSTR jz, je, jnz, jne, jl, jle, 
      %endif
      align function_align
      %2:

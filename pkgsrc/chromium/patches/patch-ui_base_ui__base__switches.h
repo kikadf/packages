@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.h.orig	2024-05-21 22:43:35.636511800 +0000
+--- ui/base/ui_base_switches.h.orig	2024-06-13 23:29:30.498878700 +0000
 +++ ui/base/ui_base_switches.h
 @@ -27,11 +27,11 @@ COMPONENT_EXPORT(UI_BASE) extern const c
  COMPONENT_EXPORT(UI_BASE) extern const char kEnableResourcesFileSharing[];

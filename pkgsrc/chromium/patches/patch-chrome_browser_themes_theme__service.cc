@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service.cc.orig	2024-05-21 22:42:53.108718900 +0000
+--- chrome/browser/themes/theme_service.cc.orig	2024-06-13 23:28:49.491197300 +0000
 +++ chrome/browser/themes/theme_service.cc
-@@ -74,7 +74,7 @@
+@@ -73,7 +73,7 @@
  #include "extensions/browser/extension_registry_observer.h"
  #endif
  
@@ -14,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #include "ui/ozone/public/ozone_platform.h"
  #endif
-@@ -330,7 +330,7 @@ CustomThemeSupplier* ThemeService::GetTh
+@@ -329,7 +329,7 @@ CustomThemeSupplier* ThemeService::GetTh
  }
  
  bool ThemeService::ShouldUseCustomFrame() const {

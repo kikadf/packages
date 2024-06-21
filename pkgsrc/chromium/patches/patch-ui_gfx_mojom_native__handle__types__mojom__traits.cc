@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2024-05-21 22:43:36.140556800 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2024-06-13 23:29:30.934917700 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.cc
 @@ -8,11 +8,11 @@
  

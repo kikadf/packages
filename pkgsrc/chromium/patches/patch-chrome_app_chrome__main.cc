@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main.cc.orig	2024-05-21 22:42:47.820247400 +0000
+--- chrome/app/chrome_main.cc.orig	2024-06-13 23:28:44.562754900 +0000
 +++ chrome/app/chrome_main.cc
 @@ -28,11 +28,11 @@
  #include "chrome/app/chrome_main_mac.h"

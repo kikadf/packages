@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/zygote/zygote_main_linux.cc.orig	2024-05-21 22:43:02.129523500 +0000
+--- content/zygote/zygote_main_linux.cc.orig	2024-06-13 23:28:59.324080000 +0000
 +++ content/zygote/zygote_main_linux.cc
 @@ -11,7 +11,9 @@
  #include <stddef.h>

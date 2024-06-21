@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2024-05-21 22:45:53.524804800 +0000
+--- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2024-06-13 23:30:36.872837000 +0000
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
 @@ -39,6 +39,11 @@ double GetLocalTZA() {
      return 0;

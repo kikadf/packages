@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-05-21 22:43:01.357454500 +0000
+--- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-06-13 23:28:58.552010800 +0000
 +++ content/ppapi_plugin/ppapi_plugin_main.cc
 @@ -54,6 +54,11 @@
  #include "gin/v8_initializer.h"

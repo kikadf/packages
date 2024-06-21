@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager_client.h.orig	2024-05-21 22:42:58.525202000 +0000
+--- components/password_manager/core/browser/password_manager_client.h.orig	2024-06-13 23:28:55.779761800 +0000
 +++ components/password_manager/core/browser/password_manager_client.h
 @@ -30,7 +30,7 @@
  #include "net/cert/cert_status_flags.h"
@@ -14,7 +15,7 @@ $NetBSD$
  #include "base/i18n/rtl.h"
  #include "components/password_manager/core/browser/password_cross_domain_confirmation_popup_controller.h"
  #include "ui/gfx/geometry/rect_f.h"
-@@ -504,7 +504,7 @@ class PasswordManagerClient {
+@@ -505,7 +505,7 @@ class PasswordManagerClient {
    virtual void RefreshPasswordManagerSettingsIfNeeded() const;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

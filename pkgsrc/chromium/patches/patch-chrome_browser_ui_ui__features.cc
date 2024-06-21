@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2024-05-21 22:42:53.856785800 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2024-06-13 23:28:50.303270000 +0000
 +++ chrome/browser/ui/ui_features.cc
-@@ -426,7 +426,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRen
+@@ -446,7 +446,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRen
               "TopChromeWebUIUsesSpareRenderer",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

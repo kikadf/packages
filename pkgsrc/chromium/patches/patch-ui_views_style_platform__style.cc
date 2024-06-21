@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/views/style/platform_style.cc.orig	2024-05-21 22:43:36.468586200 +0000
+--- ui/views/style/platform_style.cc.orig	2024-06-13 23:29:31.262947300 +0000
 +++ ui/views/style/platform_style.cc
 @@ -17,7 +17,7 @@
  #include "ui/views/controls/focusable_border.h"

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_service.cc.orig	2024-05-21 22:43:07.297984400 +0000
+--- services/device/usb/usb_service.cc.orig	2024-06-13 23:29:04.864577300 +0000
 +++ services/device/usb/usb_service.cc
-@@ -22,13 +22,17 @@
+@@ -20,12 +20,16 @@
  
  #if BUILDFLAG(IS_ANDROID)
  #include "services/device/usb/usb_service_android.h"
@@ -14,7 +15,6 @@ $NetBSD$
  #include "services/device/usb/usb_service_linux.h"
  #elif BUILDFLAG(IS_MAC)
  #include "services/device/usb/usb_service_impl.h"
- #include "services/device/usb/usb_service_mac.h"
  #elif BUILDFLAG(IS_WIN)
  #include "services/device/usb/usb_service_win.h"
 +#elif BUILDFLAG(IS_OPENBSD)
@@ -24,7 +24,7 @@ $NetBSD$
  #endif
  
  namespace device {
-@@ -51,7 +55,7 @@ constexpr base::TaskTraits UsbService::k
+@@ -48,12 +52,14 @@ constexpr base::TaskTraits UsbService::k
  std::unique_ptr<UsbService> UsbService::Create() {
  #if BUILDFLAG(IS_ANDROID)
    return base::WrapUnique(new UsbServiceAndroid());
@@ -33,10 +33,8 @@ $NetBSD$
    return base::WrapUnique(new UsbServiceLinux());
  #elif BUILDFLAG(IS_WIN)
    return base::WrapUnique(new UsbServiceWin());
-@@ -60,6 +64,8 @@ std::unique_ptr<UsbService> UsbService::
-     return base::WrapUnique(new UsbServiceMac());
-   else
-     return base::WrapUnique(new UsbServiceImpl());
+ #elif BUILDFLAG(IS_MAC)
+   return base::WrapUnique(new UsbServiceImpl());
 +#elif BUILDFLAG(IS_BSD)
 +  return base::WrapUnique(new UsbServiceImpl());
  #else

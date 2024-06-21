@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/BUILD.gn.orig	2024-05-21 22:45:04.148405800 +0000
+--- third_party/ffmpeg/BUILD.gn.orig	2024-06-13 23:29:41.091829500 +0000
 +++ third_party/ffmpeg/BUILD.gn
 @@ -343,7 +343,6 @@ target(link_target_type, "ffmpeg_interna
        libs += [

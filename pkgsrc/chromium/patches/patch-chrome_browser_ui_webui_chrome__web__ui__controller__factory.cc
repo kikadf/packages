@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-05-21 22:42:54.264822000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2024-06-13 23:28:50.755310800 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -205,7 +205,7 @@
+@@ -196,7 +196,7 @@
  #include "chrome/browser/ui/webui/chromeos/chrome_url_disabled/chrome_url_disabled_ui.h"
  #endif
  
@@ -14,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/webui_js_error/webui_js_error_ui.h"
  #endif
  
-@@ -231,17 +231,17 @@
+@@ -221,17 +221,17 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -35,7 +36,7 @@ $NetBSD$
  #include "chrome/browser/ui/webui/connectors_internals/connectors_internals_ui.h"
  #endif
  
-@@ -385,7 +385,7 @@ bool IsAboutUI(const GURL& url) {
+@@ -375,7 +375,7 @@ bool IsAboutUI(const GURL& url) {
  #if !BUILDFLAG(IS_ANDROID)
            || url.host_piece() == chrome::kChromeUITermsHost
  #endif
@@ -44,7 +45,7 @@ $NetBSD$
            || url.host_piece() == chrome::kChromeUILinuxProxyConfigHost
  #endif
  #if BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -608,7 +608,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -579,7 +579,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    if (url.host_piece() == chrome::kChromeUIMobileSetupHost)
      return &NewWebUI<ash::cellular_setup::MobileSetupUI>;
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
@@ -53,7 +54,7 @@ $NetBSD$
    if (url.host_piece() == chrome::kChromeUIWebUIJsErrorHost)
      return &NewWebUI<WebUIJsErrorUI>;
  #endif
-@@ -664,7 +664,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -635,7 +635,7 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    if (url.host_piece() == chrome::kChromeUINaClHost)
      return &NewWebUI<NaClUI>;
  #endif
@@ -62,7 +63,7 @@ $NetBSD$
       defined(TOOLKIT_VIEWS)) ||                         \
      defined(USE_AURA)
    if (url.host_piece() == chrome::kChromeUITabModalConfirmDialogHost)
-@@ -712,27 +712,27 @@ WebUIFactoryFunction GetWebUIFactoryFunc
+@@ -683,26 +683,26 @@ WebUIFactoryFunction GetWebUIFactoryFunc
    }
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -89,9 +90,8 @@ $NetBSD$
    if (url.host_piece() == chrome::kChromeUIBrowserSwitchHost)
      return &NewWebUI<BrowserSwitchUI>;
  #endif
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (url.host_piece() == chrome::kChromeUIWebAppSettingsHost)
      return &NewWebUI<WebAppSettingsUI>;
  #endif

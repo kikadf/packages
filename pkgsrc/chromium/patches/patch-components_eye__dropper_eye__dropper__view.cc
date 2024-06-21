@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/eye_dropper/eye_dropper_view.cc.orig	2024-05-21 22:42:57.961151600 +0000
+--- components/eye_dropper/eye_dropper_view.cc.orig	2024-06-13 23:28:55.219711500 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
-@@ -200,7 +200,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
+@@ -202,7 +202,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
    // EyeDropper/WidgetDelegate.
    set_owned_by_client();
    SetPreferredSize(GetSize());

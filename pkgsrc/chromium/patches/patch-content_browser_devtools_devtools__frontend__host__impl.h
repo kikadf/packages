@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-05-21 22:43:00.841408500 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.h.orig	2024-06-13 23:28:58.051965700 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.h
 @@ -34,7 +34,7 @@ class DevToolsFrontendHostImpl : public 
  

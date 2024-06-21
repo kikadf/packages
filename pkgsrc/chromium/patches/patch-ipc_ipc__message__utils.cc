@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_message_utils.cc.orig	2024-05-21 22:43:04.741756400 +0000
+--- ipc/ipc_message_utils.cc.orig	2024-06-13 23:29:02.132332000 +0000
 +++ ipc/ipc_message_utils.cc
 @@ -395,7 +395,7 @@ void ParamTraits<unsigned int>::Log(cons
  }

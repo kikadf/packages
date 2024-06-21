@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.h.orig	2024-05-21 22:43:07.177973700 +0000
+--- sandbox/policy/switches.h.orig	2024-06-13 23:29:04.748566900 +0000
 +++ sandbox/policy/switches.h
 @@ -57,10 +57,10 @@ SANDBOX_POLICY_EXPORT extern const char 
  SANDBOX_POLICY_EXPORT extern const char kMirroringSandbox[];

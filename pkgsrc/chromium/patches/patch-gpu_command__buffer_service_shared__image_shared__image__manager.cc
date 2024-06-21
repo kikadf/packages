@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2024-05-21 22:43:03.021603000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_manager.cc.orig	2024-06-13 23:29:00.192158000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_manager.cc
-@@ -572,7 +572,7 @@ bool SharedImageManager::SupportsScanout
+@@ -570,7 +570,7 @@ bool SharedImageManager::SupportsScanout
    return true;
  #elif BUILDFLAG(IS_ANDROID)
    return base::AndroidHardwareBufferCompat::IsSupportAvailable();

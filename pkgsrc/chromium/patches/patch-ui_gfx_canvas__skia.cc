@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/canvas_skia.cc.orig	2024-05-21 22:43:36.104553700 +0000
+--- ui/gfx/canvas_skia.cc.orig	2024-06-13 23:29:30.786904600 +0000
 +++ ui/gfx/canvas_skia.cc
 @@ -213,7 +213,7 @@ void Canvas::DrawStringRectWithFlags(con
      Range range = StripAcceleratorChars(flags, &adjusted_text);

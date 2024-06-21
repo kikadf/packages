@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_implementation.cc.orig	2024-05-21 22:43:36.196561800 +0000
+--- ui/gl/gl_implementation.cc.orig	2024-06-13 23:29:30.990922700 +0000
 +++ ui/gl/gl_implementation.cc
 @@ -276,7 +276,7 @@ GetRequestedGLImplementationFromCommandL
    *fallback_to_software_gl = false;

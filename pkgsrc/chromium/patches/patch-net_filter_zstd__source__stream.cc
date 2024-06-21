@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/filter/zstd_source_stream.cc.orig	2024-05-21 22:43:06.237889800 +0000
+--- net/filter/zstd_source_stream.cc.orig	2024-06-13 23:29:03.692472200 +0000
 +++ net/filter/zstd_source_stream.cc
 @@ -7,6 +7,7 @@
  #include <algorithm>

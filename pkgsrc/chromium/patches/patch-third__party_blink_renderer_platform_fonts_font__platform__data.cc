@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_platform_data.cc.orig	2024-05-21 22:43:10.558275200 +0000
+--- third_party/blink/renderer/platform/fonts/font_platform_data.cc.orig	2024-06-13 23:29:08.132870700 +0000
 +++ third_party/blink/renderer/platform/fonts/font_platform_data.cc
-@@ -48,7 +48,7 @@
+@@ -49,7 +49,7 @@
  namespace blink {
  namespace {
  
@@ -14,7 +15,7 @@ $NetBSD$
  // Getting the system font render style takes a significant amount of time on
  // Linux because looking up fonts using fontconfig can be very slow. We fetch
  // the render style for each font family and text size, while it's very
-@@ -127,7 +127,7 @@ FontPlatformData::FontPlatformData(sk_sp
+@@ -128,7 +128,7 @@ FontPlatformData::FontPlatformData(sk_sp
    style_ = WebFontRenderStyle::GetDefault();
  #if !BUILDFLAG(IS_WIN)
    WebFontRenderStyle system_style;

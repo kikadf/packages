@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2024-05-21 22:42:52.020622000 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2024-06-13 23:28:48.427101900 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -487,18 +487,18 @@
+@@ -489,18 +489,18 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -14,7 +15,7 @@ $NetBSD$
  #include "components/device_signals/core/browser/pref_names.h"  // nogncheck due to crbug.com/1125897
  #endif
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD) || \
@@ -23,11 +24,11 @@ $NetBSD$
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) 
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
  
-@@ -533,7 +533,7 @@
+@@ -535,7 +535,7 @@
  #include "chrome/browser/sessions/session_service_log.h"
  #endif
  
@@ -36,16 +37,16 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1771,7 +1771,7 @@ void RegisterLocalState(PrefRegistrySimp
-   registry->RegisterBooleanPref(prefs::kOopPrintDriversAllowedByPolicy, true);
- #endif
+@@ -1861,7 +1861,7 @@ void RegisterLocalState(PrefRegistrySimp
+                                 true);
+ #endif  // BUILDFLAG(ENABLE_PDF)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2118,12 +2118,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2213,12 +2213,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-05-21 22:43:10.990313800 +0000
+--- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-06-13 23:29:08.404895300 +0000
 +++ third_party/blink/renderer/platform/wtf/thread_specific.h
 @@ -104,7 +104,8 @@ inline bool ThreadSpecific<T>::IsSet() {
  template <typename T>

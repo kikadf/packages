@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/vaapi/vaapi_video_decoder.cc.orig	2024-05-21 22:43:05.017781000 +0000
+--- media/gpu/vaapi/vaapi_video_decoder.cc.orig	2024-06-13 23:29:02.428358800 +0000
 +++ media/gpu/vaapi/vaapi_video_decoder.cc
-@@ -774,7 +774,7 @@ void VaapiVideoDecoder::ApplyResolutionC
+@@ -775,7 +775,7 @@ void VaapiVideoDecoder::ApplyResolutionC
    const gfx::Size decoder_natural_size =
        aspect_ratio_.GetNaturalSize(decoder_visible_rect);
  

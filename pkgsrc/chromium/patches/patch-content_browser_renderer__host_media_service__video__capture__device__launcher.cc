@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-05-21 22:43:01.101431800 +0000
+--- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2024-06-13 23:28:58.295987600 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
 @@ -25,7 +25,7 @@
  #include "media/base/media_switches.h"

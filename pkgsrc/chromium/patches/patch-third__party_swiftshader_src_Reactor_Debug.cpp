@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/Reactor/Debug.cpp.orig	2024-05-21 22:48:12.061151700 +0000
+--- third_party/swiftshader/src/Reactor/Debug.cpp.orig	2024-06-13 23:29:50.676690000 +0000
 +++ third_party/swiftshader/src/Reactor/Debug.cpp
 @@ -46,7 +46,8 @@ namespace {
  

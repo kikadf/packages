@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/system_cpu/cpu_probe.cc.orig	2024-05-21 22:42:59.945328700 +0000
+--- components/system_cpu/cpu_probe.cc.orig	2024-06-13 23:28:57.143884200 +0000
 +++ components/system_cpu/cpu_probe.cc
 @@ -30,6 +30,9 @@ std::unique_ptr<CpuProbe> CpuProbe::Crea
    return CpuProbeWin::Create();

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-05-21 22:42:58.553204500 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-06-13 23:28:55.807764300 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
-@@ -320,7 +320,7 @@ inline constexpr char kPasswordManagerPr
+@@ -327,7 +327,7 @@ inline constexpr char kPasswordManagerPr
  inline constexpr char kPasswordSharingEnabled[] =
      "password_manager.password_sharing_enabled";
  

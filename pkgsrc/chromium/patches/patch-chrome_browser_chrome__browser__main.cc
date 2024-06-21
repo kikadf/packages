@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_main.cc.orig	2024-05-21 22:42:50.656500300 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2024-06-13 23:28:47.319002400 +0000
 +++ chrome/browser/chrome_browser_main.cc
-@@ -246,15 +246,15 @@
+@@ -247,15 +247,15 @@
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
@@ -24,12 +25,12 @@ $NetBSD$
  #include "base/nix/xdg_util.h"
  #endif
  
-@@ -287,14 +287,14 @@
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+@@ -288,14 +288,14 @@
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS_LACROS)
++    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/metrics/desktop_session_duration/desktop_session_duration_tracker.h"
  #include "chrome/browser/metrics/desktop_session_duration/touch_mode_stats_tracker.h"
  #include "chrome/browser/profiles/profile_activity_metrics_recorder.h"
@@ -41,7 +42,7 @@ $NetBSD$
  #include "chrome/browser/headless/headless_mode_metrics.h"  // nogncheck
  #include "chrome/browser/headless/headless_mode_util.h"     // nogncheck
  #include "components/headless/select_file_dialog/headless_select_file_dialog.h"
-@@ -361,14 +361,14 @@
+@@ -367,14 +367,14 @@
  #endif  // BUILDFLAG(IS_WIN) && BUILDFLAG(USE_BROWSER_SPELLCHECKER)
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -58,7 +59,7 @@ $NetBSD$
  constexpr base::FilePath::CharType kMediaHistoryDatabaseName[] =
      FILE_PATH_LITERAL("Media History");
  
-@@ -523,7 +523,7 @@ void ProcessSingletonNotificationCallbac
+@@ -539,7 +539,7 @@ void ProcessSingletonNotificationCallbac
    }
  #endif
  
@@ -67,7 +68,7 @@ $NetBSD$
    // Set the global activation token sent as a command line switch by another
    // browser process. This also removes the switch after use to prevent any side
    // effects of leaving it in the command line after this point.
-@@ -1089,7 +1089,7 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1100,7 +1100,7 @@ int ChromeBrowserMainParts::PreCreateThr
        browser_creator_->AddFirstRunTabs(master_prefs_->new_tabs);
      }
  
@@ -76,25 +77,25 @@ $NetBSD$
      // Create directory for user-level Native Messaging manifest files. This
      // makes it less likely that the directory will be created by third-party
      // software with incorrect owner or permission. See crbug.com/725513 .
-@@ -1137,7 +1137,7 @@ int ChromeBrowserMainParts::PreCreateThr
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+@@ -1148,7 +1148,7 @@ int ChromeBrowserMainParts::PreCreateThr
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS_LACROS)
++    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
    metrics::DesktopSessionDurationTracker::Initialize();
    ProfileActivityMetricsRecorder::Initialize();
    TouchModeStatsTracker::Initialize(
-@@ -1322,7 +1322,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1333,7 +1333,7 @@ void ChromeBrowserMainParts::PostProfile
  #endif  // BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
    // Delete the media history database if it still exists.
-   // TODO(crbug.com/1198344): Remove this.
+   // TODO(crbug.com/40177301): Remove this.
    base::ThreadPool::PostTask(
-@@ -1371,7 +1371,7 @@ void ChromeBrowserMainParts::PostProfile
+@@ -1382,7 +1382,7 @@ void ChromeBrowserMainParts::PostProfile
        *UrlLanguageHistogramFactory::GetForBrowserContext(profile));
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
@@ -103,7 +104,7 @@ $NetBSD$
    if (headless::IsHeadlessMode()) {
      headless::ReportHeadlessActionMetrics();
    }
-@@ -1481,7 +1481,7 @@ int ChromeBrowserMainParts::PreMainMessa
+@@ -1492,7 +1492,7 @@ int ChromeBrowserMainParts::PreMainMessa
    // In headless mode provide alternate SelectFileDialog factory overriding
    // any platform specific SelectFileDialog implementation that may have been
    // set.
@@ -112,7 +113,7 @@ $NetBSD$
    if (headless::IsHeadlessMode()) {
      headless::HeadlessSelectFileDialogFactory::SetUp();
    }
-@@ -2026,7 +2026,7 @@ bool ChromeBrowserMainParts::ProcessSing
+@@ -2043,7 +2043,7 @@ bool ChromeBrowserMainParts::ProcessSing
  
    // Drop the request if headless mode is in effect or the request is from
    // a headless Chrome process.

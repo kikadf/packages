@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-05-21 22:43:36.288570200 +0000
+--- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-06-13 23:29:31.082931000 +0000
 +++ ui/ozone/platform/wayland/ozone_platform_wayland.cc
-@@ -67,13 +67,13 @@
+@@ -66,13 +66,13 @@
  #include "ui/events/ozone/layout/stub/stub_keyboard_layout_engine.h"
  #endif
  
@@ -21,7 +22,7 @@ $NetBSD$
  #include "ui/ozone/platform/wayland/host/linux_ui_delegate_wayland.h"
  #endif
  
-@@ -268,7 +268,7 @@ class OzonePlatformWayland : public Ozon
+@@ -267,7 +267,7 @@ class OzonePlatformWayland : public Ozon
  
      buffer_manager_connector_ = std::make_unique<WaylandBufferManagerConnector>(
          connection_->buffer_manager_host());
@@ -30,7 +31,7 @@ $NetBSD$
      cursor_factory_ = std::make_unique<WaylandCursorFactory>(connection_.get());
  #else
      cursor_factory_ = std::make_unique<BitmapCursorFactory>();
-@@ -278,7 +278,7 @@ class OzonePlatformWayland : public Ozon
+@@ -277,7 +277,7 @@ class OzonePlatformWayland : public Ozon
  
      supported_buffer_formats_ =
          connection_->buffer_manager_host()->GetSupportedBufferFormats();
@@ -39,7 +40,7 @@ $NetBSD$
      linux_ui_delegate_ =
          std::make_unique<LinuxUiDelegateWayland>(connection_.get());
  #endif
-@@ -344,7 +344,7 @@ class OzonePlatformWayland : public Ozon
+@@ -343,7 +343,7 @@ class OzonePlatformWayland : public Ozon
        properties->supports_global_screen_coordinates =
            kDefaultScreenCoordinateEnabled;
  
@@ -48,7 +49,7 @@ $NetBSD$
        // TODO(crbug.com/40800718): Revisit (and maybe remove) once proper
        // support, probably backed by org.freedesktop.portal.Screenshot.PickColor
        // API is implemented. Note: this is restricted to Linux Desktop as Lacros
-@@ -535,7 +535,7 @@ class OzonePlatformWayland : public Ozon
+@@ -536,7 +536,7 @@ class OzonePlatformWayland : public Ozon
    DrmRenderNodePathFinder path_finder_;
  #endif
  

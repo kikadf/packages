@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2024-05-21 22:42:54.732864000 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2024-06-13 23:28:51.411369600 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
 @@ -49,7 +49,7 @@
  #include "printing/backend/cups_connection_pool.h"
@@ -21,7 +22,7 @@ $NetBSD$
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  void InstantiateLinuxUiDelegate() {
-   // TODO(crbug.com/809738)  Until a real UI can be used in a utility process,
+   // TODO(crbug.com/40561724)  Until a real UI can be used in a utility process,
    // need to use the stub version.
 @@ -85,7 +85,7 @@ void InstantiateLinuxUiDelegate() {
  #endif

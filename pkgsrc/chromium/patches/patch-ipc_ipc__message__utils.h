@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_message_utils.h.orig	2024-05-21 22:43:04.741756400 +0000
+--- ipc/ipc_message_utils.h.orig	2024-06-13 23:29:02.132332000 +0000
 +++ ipc/ipc_message_utils.h
 @@ -214,7 +214,7 @@ struct ParamTraits<unsigned int> {
  // Since we want to support Android 32<>64 bit IPC, as long as we don't have

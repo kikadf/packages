@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_attributes.cc.orig	2024-05-21 22:43:07.009958700 +0000
+--- remoting/host/host_attributes.cc.orig	2024-06-13 23:29:04.580551900 +0000
 +++ remoting/host/host_attributes.cc
-@@ -104,7 +104,7 @@ std::string GetHostAttributes() {
+@@ -105,7 +105,7 @@ std::string GetHostAttributes() {
    if (media::InitializeMediaFoundation()) {
      result.push_back("HWEncoder");
    }

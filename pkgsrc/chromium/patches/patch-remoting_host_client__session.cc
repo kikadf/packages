@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/client_session.cc.orig	2024-05-21 22:43:06.997957700 +0000
+--- remoting/host/client_session.cc.orig	2024-06-13 23:29:04.564550400 +0000
 +++ remoting/host/client_session.cc
 @@ -157,7 +157,7 @@ void ClientSession::NotifyClientResoluti
    if (desktop_environment_options_.enable_curtaining()) {

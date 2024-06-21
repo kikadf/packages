@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_openbsd.cc.orig	2024-05-21 22:42:46.720149300 +0000
+--- base/process/process_metrics_openbsd.cc.orig	2024-06-13 23:28:43.478657500 +0000
 +++ base/process/process_metrics_openbsd.cc
 @@ -6,36 +6,40 @@
  
@@ -84,7 +85,7 @@ $NetBSD$
 -
 -base::expected<TimeDelta, ProcessCPUUsageError>
 -ProcessMetrics::GetCumulativeCPUUsage() {
--  NOTREACHED();
+-  NOTREACHED_IN_MIGRATION();
 -  return base::unexpected(ProcessCPUUsageError::kNotImplemented);
 -}
 -

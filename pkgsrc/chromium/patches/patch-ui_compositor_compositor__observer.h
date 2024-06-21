@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/compositor/compositor_observer.h.orig	2024-05-21 22:43:35.752522200 +0000
+--- ui/compositor/compositor_observer.h.orig	2024-06-13 23:29:30.614889100 +0000
 +++ ui/compositor/compositor_observer.h
-@@ -46,7 +46,7 @@ class COMPOSITOR_EXPORT CompositorObserv
+@@ -52,7 +52,7 @@ class COMPOSITOR_EXPORT CompositorObserv
    // Called when a child of the compositor is resizing.
    virtual void OnCompositingChildResizing(Compositor* compositor) {}
  

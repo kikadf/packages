@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2024-05-21 22:42:51.608585100 +0000
+--- chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc.orig	2024-06-13 23:28:48.027065800 +0000
 +++ chrome/browser/media/router/discovery/discovery_network_list_wifi_linux.cc
 @@ -9,7 +9,11 @@
  #include <sys/socket.h>

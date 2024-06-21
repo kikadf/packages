@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/runtime.json.orig	2024-05-21 22:43:02.717576000 +0000
+--- extensions/common/api/runtime.json.orig	2024-06-13 23:28:59.892131000 +0000
 +++ extensions/common/api/runtime.json
 @@ -86,6 +86,8 @@
              {"name": "cros", "description": "Specifies the Chrome operating system."},

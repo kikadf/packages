@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2024-06-07 09:06:48.788103844 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2024-06-21 06:49:08.628932440 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
 @@ -0,0 +1,424 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

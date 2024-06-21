@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_request_context_manager.cc.orig	2024-05-21 22:43:03.085608700 +0000
+--- headless/lib/browser/headless_request_context_manager.cc.orig	2024-06-13 23:29:00.256163600 +0000
 +++ headless/lib/browser/headless_request_context_manager.cc
-@@ -64,7 +64,7 @@ void SetCryptKeyOnce(const base::FilePat
+@@ -66,7 +66,7 @@ void SetCryptKeyOnce(const base::FilePat
      return;
    done_once = true;
  

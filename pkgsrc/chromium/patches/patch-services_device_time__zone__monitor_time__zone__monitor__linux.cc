@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2024-05-21 22:43:07.289983700 +0000
+--- services/device/time_zone_monitor/time_zone_monitor_linux.cc.orig	2024-06-13 23:29:04.856576700 +0000
 +++ services/device/time_zone_monitor/time_zone_monitor_linux.cc
 @@ -131,7 +131,11 @@ class TimeZoneMonitorLinuxImpl
      // false positives are harmless, assuming the false positive rate is

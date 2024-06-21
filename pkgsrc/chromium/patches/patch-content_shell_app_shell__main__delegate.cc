@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/shell/app/shell_main_delegate.cc.orig	2024-05-21 22:43:01.561473000 +0000
+--- content/shell/app/shell_main_delegate.cc.orig	2024-06-13 23:28:58.752028700 +0000
 +++ content/shell/app/shell_main_delegate.cc
 @@ -281,7 +281,7 @@ void ShellMainDelegate::PreSandboxStartu
      // Reporting for sub-processes will be initialized in ZygoteForked.

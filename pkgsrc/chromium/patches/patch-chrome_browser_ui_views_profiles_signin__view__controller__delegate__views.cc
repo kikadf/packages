@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2024-05-21 22:42:54.060804000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc.orig	2024-06-13 23:28:50.535291000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.cc
 @@ -58,7 +58,7 @@ namespace {
  
@@ -13,7 +14,7 @@ $NetBSD$
 +    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  const int kManagedUserNoticeConfirmationDialogWidth = 512;
  const int kManagedUserNoticeConfirmationDialogHeight = 576;
- const int kManagedUserNoticeConfirmationUpdatedDialogWidth = 1024;
+ const int kManagedUserNoticeConfirmationUpdatedDialogWidth = 900;
 @@ -187,7 +187,7 @@ SigninViewControllerDelegateViews::Creat
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT) || BUILDFLAG(IS_CHROMEOS_LACROS)
  

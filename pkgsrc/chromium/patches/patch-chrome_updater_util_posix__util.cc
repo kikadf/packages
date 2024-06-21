@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/util/posix_util.cc.orig	2024-05-21 22:42:56.289002700 +0000
+--- chrome/updater/util/posix_util.cc.orig	2024-06-13 23:28:53.475555000 +0000
 +++ chrome/updater/util/posix_util.cc
 @@ -20,7 +20,7 @@
  #include "chrome/updater/updater_branding.h"

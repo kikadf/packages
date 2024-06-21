@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths_internal.h.orig	2024-05-21 22:42:54.540846600 +0000
+--- chrome/common/chrome_paths_internal.h.orig	2024-06-13 23:28:51.223353000 +0000
 +++ chrome/common/chrome_paths_internal.h
 @@ -43,7 +43,7 @@ void GetUserCacheDirectory(const base::F
  // Get the path to the user's documents directory.

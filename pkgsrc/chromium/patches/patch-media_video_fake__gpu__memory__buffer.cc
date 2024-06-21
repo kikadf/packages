@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/video/fake_gpu_memory_buffer.cc.orig	2024-05-21 22:43:05.429818000 +0000
+--- media/video/fake_gpu_memory_buffer.cc.orig	2024-06-13 23:29:02.868398200 +0000
 +++ media/video/fake_gpu_memory_buffer.cc
 @@ -9,7 +9,7 @@
  #include "media/base/format_utils.h"

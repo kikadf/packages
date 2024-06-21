@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2024-05-21 22:42:51.988619000 +0000
+--- chrome/browser/policy/policy_value_and_status_aggregator.cc.orig	2024-06-13 23:28:48.395099000 +0000
 +++ chrome/browser/policy/policy_value_and_status_aggregator.cc
 @@ -53,7 +53,7 @@
  #include "chrome/browser/policy/value_provider/extension_policies_value_provider.h"
@@ -14,12 +15,3 @@ $NetBSD$
  #include "components/policy/core/common/cloud/profile_cloud_policy_manager.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -99,7 +99,7 @@ std::unique_ptr<policy::PolicyStatusProv
- #else  // BUILDFLAG(IS_CHROMEOS_ASH)
-   policy::CloudPolicyManager* cloud_policy_manager =
-       profile->GetUserCloudPolicyManager();
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (!cloud_policy_manager) {
-     cloud_policy_manager = profile->GetProfileCloudPolicyManager();
-   }

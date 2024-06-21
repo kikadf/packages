@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/mem.c.orig	2024-05-21 22:45:05.480524800 +0000
+--- third_party/ffmpeg/libavutil/mem.c.orig	2024-06-13 23:29:42.759979200 +0000
 +++ third_party/ffmpeg/libavutil/mem.c
 @@ -33,9 +33,6 @@
  #include <stdlib.h>

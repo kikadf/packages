@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/strings/translations/app_locale_settings_ja.xtb.orig	2024-05-21 22:43:36.328573700 +0000
+--- ui/strings/translations/app_locale_settings_ja.xtb.orig	2024-06-13 23:29:31.130935400 +0000
 +++ ui/strings/translations/app_locale_settings_ja.xtb
 @@ -12,7 +12,7 @@
  <if expr="is_ios">

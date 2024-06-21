@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2024-05-21 22:43:10.398260800 +0000
+--- third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc.orig	2024-06-13 23:29:07.976856700 +0000
 +++ third_party/blink/renderer/modules/webaudio/audio_worklet_thread_test.cc
 @@ -463,7 +463,7 @@ class AudioWorkletThreadPriorityTest
  

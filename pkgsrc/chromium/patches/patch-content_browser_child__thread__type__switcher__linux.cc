@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/child_thread_type_switcher_linux.cc.orig	2024-05-21 22:43:00.825407300 +0000
+--- content/browser/child_thread_type_switcher_linux.cc.orig	2024-06-13 23:28:58.039964700 +0000
 +++ content/browser/child_thread_type_switcher_linux.cc
 @@ -20,6 +20,9 @@ void SetThreadTypeOnLauncherThread(base:
                                     base::ThreadType thread_type) {

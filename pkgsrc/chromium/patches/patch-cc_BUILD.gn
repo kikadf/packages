@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- cc/BUILD.gn.orig	2024-05-21 22:42:47.044178000 +0000
+--- cc/BUILD.gn.orig	2024-06-13 23:28:43.794685800 +0000
 +++ cc/BUILD.gn
 @@ -677,7 +677,7 @@ cc_test_static_library("test_support") {
    if (enable_vulkan) {

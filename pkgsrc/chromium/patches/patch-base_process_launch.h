@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/process/launch.h.orig	2024-05-21 22:42:46.716148900 +0000
+--- base/process/launch.h.orig	2024-06-13 23:28:43.470656900 +0000
 +++ base/process/launch.h
 @@ -200,7 +200,7 @@ struct BASE_EXPORT LaunchOptions {
    bool clear_environment = false;

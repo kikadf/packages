@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/system_signals/platform_delegate.cc.orig	2024-05-21 22:42:57.649124000 +0000
+--- components/device_signals/core/system_signals/platform_delegate.cc.orig	2024-06-13 23:28:55.071698200 +0000
 +++ components/device_signals/core/system_signals/platform_delegate.cc
 @@ -11,7 +11,7 @@ namespace device_signals {
  

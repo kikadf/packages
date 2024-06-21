@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2024-05-21 22:43:10.226245600 +0000
+--- third_party/blink/renderer/modules/media/audio/audio_device_factory.cc.orig	2024-06-13 23:29:07.808841700 +0000
 +++ third_party/blink/renderer/modules/media/audio/audio_device_factory.cc
 @@ -35,7 +35,7 @@ namespace {
  AudioDeviceFactory* g_factory_override = nullptr;

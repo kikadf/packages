@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2024-05-21 22:43:35.636511800 +0000
+--- ui/base/ui_base_features.cc.orig	2024-06-13 23:29:30.498878700 +0000
 +++ ui/base/ui_base_features.cc
 @@ -245,7 +245,7 @@ BASE_FEATURE(kExperimentalFlingAnimation
               "ExperimentalFlingAnimation",
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_WIN) ||                                   \
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD) ||              \

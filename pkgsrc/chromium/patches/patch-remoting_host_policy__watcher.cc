@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/policy_watcher.cc.orig	2024-05-21 22:43:07.049962300 +0000
+--- remoting/host/policy_watcher.cc.orig	2024-06-13 23:29:04.620555400 +0000
 +++ remoting/host/policy_watcher.cc
 @@ -192,7 +192,7 @@ base::Value::Dict PolicyWatcher::GetDefa
               true);

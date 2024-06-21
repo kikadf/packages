@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/frame_background.cc.orig	2024-05-21 22:43:36.504589300 +0000
+--- ui/views/window/frame_background.cc.orig	2024-06-13 23:29:31.298950400 +0000
 +++ ui/views/window/frame_background.cc
 @@ -110,7 +110,7 @@ void FrameBackground::PaintMaximized(gfx
                                       int width) const {

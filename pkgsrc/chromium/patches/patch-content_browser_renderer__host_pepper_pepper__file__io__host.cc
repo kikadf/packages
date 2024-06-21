@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/pepper/pepper_file_io_host.cc.orig	2024-05-21 22:43:01.129434300 +0000
+--- content/browser/renderer_host/pepper/pepper_file_io_host.cc.orig	2024-06-13 23:28:58.319990000 +0000
 +++ content/browser/renderer_host/pepper/pepper_file_io_host.cc
 @@ -462,7 +462,7 @@ void PepperFileIOHost::OnLocalFileOpened
      ppapi::host::ReplyMessageContext reply_context,

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/x/generated_protos/dri3.cc.orig	2024-05-21 22:43:36.164559000 +0000
+--- ui/gfx/x/generated_protos/dri3.cc.orig	2024-06-13 23:29:30.958920000 +0000
 +++ ui/gfx/x/generated_protos/dri3.cc
 @@ -27,6 +27,8 @@
  #include <xcb/xcb.h>

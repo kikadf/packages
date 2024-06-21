@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/test/BUILD.gn.orig	2024-05-21 22:43:01.569473500 +0000
+--- content/test/BUILD.gn.orig	2024-06-13 23:28:58.760029300 +0000
 +++ content/test/BUILD.gn
-@@ -1682,7 +1682,7 @@ test("content_browsertests") {
+@@ -1686,7 +1686,7 @@ test("content_browsertests") {
      "../test/url_loader_interceptor_browsertest.cc",
    ]
  

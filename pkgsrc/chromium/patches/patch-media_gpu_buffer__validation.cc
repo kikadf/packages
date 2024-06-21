@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/buffer_validation.cc.orig	2024-05-21 22:43:04.961776000 +0000
+--- media/gpu/buffer_validation.cc.orig	2024-06-13 23:29:02.372353600 +0000
 +++ media/gpu/buffer_validation.cc
 @@ -16,7 +16,7 @@
  #include "ui/gfx/geometry/size.h"

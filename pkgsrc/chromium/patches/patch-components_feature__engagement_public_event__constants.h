@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/event_constants.h.orig	2024-05-21 22:42:57.985154000 +0000
+--- components/feature_engagement/public/event_constants.h.orig	2024-06-13 23:28:55.243713600 +0000
 +++ components/feature_engagement/public/event_constants.h
 @@ -14,7 +14,7 @@ namespace events {
  

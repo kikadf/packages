@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/metrics_log.cc.orig	2024-05-21 22:42:58.233176000 +0000
+--- components/metrics/metrics_log.cc.orig	2024-06-13 23:28:55.491736000 +0000
 +++ components/metrics/metrics_log.cc
 @@ -56,7 +56,7 @@
  #include "base/win/current_module.h"

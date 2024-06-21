@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2024-05-21 22:42:54.060804000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2024-06-13 23:28:50.535291000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h
 @@ -73,7 +73,7 @@ class SigninViewControllerDelegateViews
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT) || BUILDFLAG(IS_CHROMEOS_LACROS)

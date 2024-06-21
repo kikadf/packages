@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame.h.orig	2024-05-21 22:42:53.952794300 +0000
+--- chrome/browser/ui/views/frame/browser_frame.h.orig	2024-06-13 23:28:50.399278900 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.h
 @@ -65,7 +65,7 @@ class BrowserFrame : public views::Widge
  

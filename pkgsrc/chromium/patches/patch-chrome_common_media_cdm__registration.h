@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/cdm_registration.h.orig	2024-05-21 22:42:54.580850100 +0000
+--- chrome/common/media/cdm_registration.h.orig	2024-06-13 23:28:51.259356000 +0000
 +++ chrome/common/media/cdm_registration.h
 @@ -14,7 +14,7 @@
  // Register CdmInfo for Content Decryption Modules (CDM) supported.

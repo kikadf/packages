@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-05-21 22:43:01.309450400 +0000
+--- content/browser/webui/web_ui_main_frame_observer.h.orig	2024-06-13 23:28:58.504006400 +0000
 +++ content/browser/webui/web_ui_main_frame_observer.h
 @@ -44,7 +44,7 @@ class CONTENT_EXPORT WebUIMainFrameObser
  
- // TODO(crbug.com/1129544) This is currently disabled due to Windows DLL
+ // TODO(crbug.com/40149439) This is currently disabled due to Windows DLL
  // thunking issues. Fix & re-enable.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

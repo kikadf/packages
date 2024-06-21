@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/track.cc.orig	2024-05-21 22:46:05.717889800 +0000
+--- third_party/perfetto/src/tracing/track.cc.orig	2024-06-13 23:30:31.684371200 +0000
 +++ third_party/perfetto/src/tracing/track.cc
 @@ -143,7 +143,7 @@ namespace internal {
  namespace {

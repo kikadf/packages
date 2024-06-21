@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/fake_display_client.cc.orig	2024-05-21 22:43:00.621389000 +0000
+--- components/viz/test/fake_display_client.cc.orig	2024-06-13 23:28:57.819945000 +0000
 +++ components/viz/test/fake_display_client.cc
 @@ -27,7 +27,7 @@ void FakeDisplayClient::AddChildWindowTo
      gpu::SurfaceHandle child_window) {}

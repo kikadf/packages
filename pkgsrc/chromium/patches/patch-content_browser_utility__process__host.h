@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host.h.orig	2024-05-21 22:43:01.265446400 +0000
+--- content/browser/utility_process_host.h.orig	2024-06-13 23:28:58.460002400 +0000
 +++ content/browser/utility_process_host.h
 @@ -33,7 +33,7 @@ namespace base {
  class Thread;

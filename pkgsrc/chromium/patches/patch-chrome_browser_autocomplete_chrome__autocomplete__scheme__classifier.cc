@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2024-05-21 22:42:50.572492800 +0000
+--- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2024-06-13 23:28:47.238995000 +0000
 +++ chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc
 @@ -88,7 +88,7 @@ ChromeAutocompleteSchemeClassifier::GetI
        return metrics::OmniboxInputType::QUERY;

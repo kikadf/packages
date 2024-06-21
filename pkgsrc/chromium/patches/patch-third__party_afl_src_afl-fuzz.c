@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/afl/src/afl-fuzz.c.orig	2024-05-21 22:43:08.290073000 +0000
+--- third_party/afl/src/afl-fuzz.c.orig	2024-06-13 23:29:05.760657800 +0000
 +++ third_party/afl/src/afl-fuzz.c
 @@ -58,7 +58,8 @@
  #include <sys/ioctl.h>

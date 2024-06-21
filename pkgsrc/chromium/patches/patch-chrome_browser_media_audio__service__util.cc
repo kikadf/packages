@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/audio_service_util.cc.orig	2024-05-21 22:42:51.588583500 +0000
+--- chrome/browser/media/audio_service_util.cc.orig	2024-06-13 23:28:48.007064000 +0000
 +++ chrome/browser/media/audio_service_util.cc
 @@ -21,7 +21,7 @@
  
@@ -16,7 +17,7 @@ $NetBSD$
    const policy::PolicyMap& policies =
 @@ -43,7 +43,7 @@ bool GetPolicyOrFeature(const char* poli
  bool IsAudioServiceSandboxEnabled() {
- // TODO(crbug.com/1052397): Remove !IS_CHROMEOS_LACROS once lacros starts being
+ // TODO(crbug.com/40118868): Remove !IS_CHROMEOS_LACROS once lacros starts being
  // built with OS_CHROMEOS instead of OS_LINUX.
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD) || \

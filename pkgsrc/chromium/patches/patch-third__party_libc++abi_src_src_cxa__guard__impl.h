@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2024-05-21 22:45:35.351188000 +0000
+--- third_party/libc++abi/src/src/cxa_guard_impl.h.orig	2024-06-13 23:29:44.924173600 +0000
 +++ third_party/libc++abi/src/src/cxa_guard_impl.h
-@@ -411,7 +411,20 @@ private:
+@@ -411,7 +411,31 @@ private:
  //                         Futex Implementation
  //===----------------------------------------------------------------------===//
  
@@ -22,6 +23,17 @@ $NetBSD$
 +  constexpr int WAKE = 1;
 +  __tsan_release(addr);
 +  futex((volatile uint32_t *)addr, WAKE, INT_MAX, NULL, NULL);
++}
++#elif defined(__NetBSD__)
++void PlatformFutexWait(int* addr, int expect) {
++  constexpr int WAIT = 0;
++  syscall(SYS___futex, addr, WAIT, expect, NULL, NULL, 0, 0);
++  __tsan_acquire(addr);
++}
++void PlatformFutexWake(int* addr) {
++  constexpr int WAKE = 1;
++  __tsan_release(addr);
++  syscall(SYS___futex, addr, WAKE, INT_MAX, NULL, NULL, 0, 0);
 +}
 +#elif defined(SYS_futex)
  void PlatformFutexWait(int* addr, int expect) {

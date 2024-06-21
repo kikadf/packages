@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-05-21 22:43:03.033604100 +0000
+--- gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-06-13 23:29:00.204159000 +0000
 +++ gpu/command_buffer/service/webgpu_decoder_impl.cc
-@@ -1257,7 +1257,7 @@ void WebGPUDecoderImpl::RequestAdapterIm
+@@ -1249,7 +1249,7 @@ void WebGPUDecoderImpl::RequestAdapterIm
      force_fallback_adapter = true;
    }
  
@@ -14,7 +15,7 @@ $NetBSD$
    if (!shared_context_state_->GrContextIsVulkan() &&
        !shared_context_state_->IsGraphiteDawnVulkan() &&
        use_webgpu_adapter_ != WebGPUAdapterName::kOpenGLES) {
-@@ -1925,7 +1925,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
+@@ -1915,7 +1915,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
    }
  
  #if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_APPLE) && \

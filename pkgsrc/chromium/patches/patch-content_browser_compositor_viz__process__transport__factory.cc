@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/compositor/viz_process_transport_factory.cc.orig	2024-05-21 22:43:00.829407500 +0000
+--- content/browser/compositor/viz_process_transport_factory.cc.orig	2024-06-13 23:28:58.043965000 +0000
 +++ content/browser/compositor/viz_process_transport_factory.cc
 @@ -105,7 +105,7 @@ class HostDisplayClient : public viz::Ho
    HostDisplayClient& operator=(const HostDisplayClient&) = delete;

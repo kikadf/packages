@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/swiftshader/src/WSI/libXCB.cpp.orig	2024-05-21 22:48:12.085153800 +0000
+--- third_party/swiftshader/src/WSI/libXCB.cpp.orig	2024-06-13 23:29:50.700692200 +0000
 +++ third_party/swiftshader/src/WSI/libXCB.cpp
 @@ -57,7 +57,7 @@ LibXcbExports *LibXCB::loadExports()
  		}

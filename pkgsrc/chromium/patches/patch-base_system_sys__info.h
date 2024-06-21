@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info.h.orig	2024-05-21 22:42:46.756152400 +0000
+--- base/system/sys_info.h.orig	2024-06-13 23:28:43.510660400 +0000
 +++ base/system/sys_info.h
 @@ -325,6 +325,8 @@ class BASE_EXPORT SysInfo {
    static void ResetCpuSecurityMitigationsEnabledForTesting();

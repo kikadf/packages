@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/BUILD.gn.orig	2024-05-21 22:43:02.289537700 +0000
+--- device/gamepad/BUILD.gn.orig	2024-06-13 23:28:59.472093300 +0000
 +++ device/gamepad/BUILD.gn
 @@ -99,7 +99,7 @@ component("gamepad") {
        "hid_writer_linux.cc",

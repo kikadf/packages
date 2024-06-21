@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2024-05-21 22:43:07.397993300 +0000
+--- services/network/shared_dictionary/shared_dictionary_writer_in_memory.h.orig	2024-06-13 23:29:04.960586000 +0000
 +++ services/network/shared_dictionary/shared_dictionary_writer_in_memory.h
 @@ -9,6 +9,8 @@
  #include <string>

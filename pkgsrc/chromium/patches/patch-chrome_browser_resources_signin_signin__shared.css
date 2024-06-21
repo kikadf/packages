@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/resources/signin/signin_shared.css.orig	2024-05-21 22:42:52.748686800 +0000
+--- chrome/browser/resources/signin/signin_shared.css.orig	2024-06-13 23:28:49.143166000 +0000
 +++ chrome/browser/resources/signin/signin_shared.css
 @@ -54,7 +54,7 @@ a {
    border-radius: var(--scrollbar-width);

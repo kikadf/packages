@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/cups_ipp_helper.cc.orig	2024-05-21 22:43:06.929951700 +0000
+--- printing/backend/cups_ipp_helper.cc.orig	2024-06-13 23:29:04.516546200 +0000
 +++ printing/backend/cups_ipp_helper.cc
-@@ -215,7 +215,7 @@ void ExtractResolutions(const CupsOption
+@@ -202,7 +202,7 @@ void ExtractResolutions(const CupsOption
    // Provide a default DPI if no valid DPI is found.
  #if BUILDFLAG(IS_MAC)
    constexpr gfx::Size kDefaultMissingDpi(kDefaultMacDpi, kDefaultMacDpi);

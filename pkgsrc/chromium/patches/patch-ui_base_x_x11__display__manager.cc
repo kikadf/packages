@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_display_manager.cc.orig	2024-05-21 22:43:35.644512700 +0000
+--- ui/base/x/x11_display_manager.cc.orig	2024-06-13 23:29:30.506879300 +0000
 +++ ui/base/x/x11_display_manager.cc
 @@ -16,7 +16,7 @@
  #include "ui/gfx/x/randr.h"

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2024-05-21 22:42:53.968795500 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2024-06-13 23:28:50.415280300 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.h
 @@ -115,7 +115,7 @@ class OpaqueBrowserFrameView : public Br
    void UpdateWindowControlsOverlay(

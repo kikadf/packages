@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/x_util.h.orig	2024-05-21 22:43:03.073607700 +0000
+--- gpu/ipc/service/x_util.h.orig	2024-06-13 23:29:00.244162600 +0000
 +++ gpu/ipc/service/x_util.h
 @@ -12,7 +12,7 @@
  #include "gpu/ipc/service/gpu_config.h"

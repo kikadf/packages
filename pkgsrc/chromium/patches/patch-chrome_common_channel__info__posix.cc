@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/channel_info_posix.cc.orig	2024-05-21 22:42:54.540846600 +0000
+--- chrome/common/channel_info_posix.cc.orig	2024-06-13 23:28:51.219352500 +0000
 +++ chrome/common/channel_info_posix.cc
-@@ -92,7 +92,7 @@ std::string GetChannelSuffixForDataDir()
+@@ -93,7 +93,7 @@ std::string GetChannelSuffixForDataDir()
    }
  }
  
@@ -14,9 +15,9 @@ $NetBSD$
  std::string GetChannelSuffixForExtraFlagsEnvVarName() {
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
    const auto channel_state = GetChannelImpl();
-@@ -118,7 +118,7 @@ std::string GetChannelSuffixForExtraFlag
+@@ -121,7 +121,7 @@ std::string GetChannelSuffixForExtraFlag
  
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

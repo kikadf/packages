@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.cc.orig	2024-05-21 22:42:51.464572400 +0000
+--- chrome/browser/flag_descriptions.cc.orig	2024-06-13 23:28:47.883052800 +0000
 +++ chrome/browser/flag_descriptions.cc
-@@ -2868,7 +2868,7 @@ const char kCbdTimeframeRequiredDescript
+@@ -2923,7 +2923,7 @@ const char kCbdTimeframeRequiredDescript
      "value to the list.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -14,7 +15,16 @@ $NetBSD$
  const char kPolicyIndicationForManagedDefaultSearchName[] =
      "Enable policy indication for managed Default Search provider";
  const char kPolicyIndicationForManagedDefaultSearchDescription[] =
-@@ -3171,7 +3171,7 @@ const char kSiteInstanceGroupsForDataUrl
+@@ -3220,7 +3220,7 @@ const char kShowAutofillTypePredictionsD
+     "text.";
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ const char kShowFeaturedEnterpriseSiteSearchName[] =
+     "Show featured Enterprise site search engines in Omnibox";
+ const char kShowFeaturedEnterpriseSiteSearchDescription[] =
+@@ -3245,7 +3245,7 @@ const char kSiteInstanceGroupsForDataUrl
      "but in the same SiteInstanceGroup, and thus the same process.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -23,7 +33,7 @@ $NetBSD$
  const char kSiteSearchSettingsPolicyName[] = "Enable SiteSearchSettings policy";
  const char kSiteSearchSettingsPolicyDescription[] =
      "Allow site search engines to be defined by the SiteSearchSettings policy.";
-@@ -7443,7 +7443,7 @@ const char kLacrosMergeIcuDataFileDescri
+@@ -7485,7 +7485,7 @@ const char kLacrosMergeIcuDataFileDescri
      "Enables sharing common areas of icudtl.dat between Ash and Lacros.";
  #endif  // #if BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -32,7 +42,7 @@ $NetBSD$
  const char kGetAllScreensMediaName[] = "GetAllScreensMedia API";
  const char kGetAllScreensMediaDescription[] =
      "When enabled, the getAllScreensMedia API for capturing multiple screens "
-@@ -7709,7 +7709,7 @@ const char kV4L2FlatStatefulVideoDecoder
+@@ -7753,7 +7753,7 @@ const char kV4L2FlatStatefulVideoDecoder
  
  // Linux -----------------------------------------------------------------------
  
@@ -41,25 +51,24 @@ $NetBSD$
  const char kOzonePlatformHintChoiceDefault[] = "Default";
  const char kOzonePlatformHintChoiceAuto[] = "Auto";
  const char kOzonePlatformHintChoiceX11[] = "X11";
-@@ -7757,7 +7757,7 @@ const char kZeroCopyVideoCaptureDescript
+@@ -7801,14 +7801,14 @@ const char kZeroCopyVideoCaptureDescript
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  const char kFollowingFeedSidepanelName[] = "Following feed in the sidepanel";
  const char kFollowingFeedSidepanelDescription[] =
      "Enables the following feed in the sidepanel.";
-@@ -7770,7 +7770,7 @@ const char kEnableProtoApiForClassifyUrl
-     "Calls to Classify URL RPC will use Protocol Buffer format in resposnes, "
-     "instead of JSON.";
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         //  BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  const char kEnableNetworkServiceSandboxName[] =
      "Enable the network service sandbox.";
  const char kEnableNetworkServiceSandboxDescription[] =
-@@ -7802,7 +7802,7 @@ const char kWebBluetoothConfirmPairingSu
+@@ -7840,7 +7840,7 @@ const char kWebBluetoothConfirmPairingSu
      "Bluetooth";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -68,17 +77,17 @@ $NetBSD$
  const char kSkipUndecryptablePasswordsName[] =
      "Skip undecryptable passwords to use the available decryptable "
      "passwords.";
-@@ -7918,7 +7918,7 @@ const char kElementCaptureDescription[] 
+@@ -7980,7 +7980,7 @@ const char kElementCaptureDescription[] 
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
--    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  const char kUIDebugToolsName[] = "Debugging tools for UI";
  const char kUIDebugToolsDescription[] =
      "Enables additional keyboard shortcuts to help debugging.";
-@@ -7975,7 +7975,7 @@ const char kComposeProactiveNudgeDescrip
-     "Enables proactive nudging for Compose";
+@@ -8041,7 +8041,7 @@ const char kComposeNudgeAtCursorDescript
+     "Shows the Compose proactive nudge at the cursor location";
  #endif  // BUILDFLAG(ENABLE_COMPOSE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

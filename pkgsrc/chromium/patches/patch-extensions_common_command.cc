@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/command.cc.orig	2024-05-21 22:43:02.721576200 +0000
+--- extensions/common/command.cc.orig	2024-06-13 23:28:59.896131300 +0000
 +++ extensions/common/command.cc
 @@ -283,7 +283,7 @@ std::string Command::CommandPlatform() {
    return values::kKeybindingPlatformMac;
@@ -13,4 +14,4 @@ $NetBSD$
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return values::kKeybindingPlatformLinux;
  #elif BUILDFLAG(IS_FUCHSIA)
-   // TODO(crbug.com/1312215): Change this once we decide what string should be
+   // TODO(crbug.com/40220501): Change this once we decide what string should be

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/cert/cert_verify_proc.h.orig	2024-05-21 22:43:05.957865000 +0000
+--- net/cert/cert_verify_proc.h.orig	2024-06-13 23:29:03.384444500 +0000
 +++ net/cert/cert_verify_proc.h
-@@ -174,7 +174,7 @@ class NET_EXPORT CertVerifyProc
+@@ -176,7 +176,7 @@ class NET_EXPORT CertVerifyProc
      kMaxValue = kChainLengthOne
    };
  

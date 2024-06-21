@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/video_capture/video_capture_impl.cc.orig	2024-05-21 22:43:10.946309800 +0000
+--- third_party/blink/renderer/platform/video_capture/video_capture_impl.cc.orig	2024-06-13 23:29:08.364891500 +0000
 +++ third_party/blink/renderer/platform/video_capture/video_capture_impl.cc
-@@ -676,7 +676,7 @@ bool VideoCaptureImpl::BindVideoFrameOnM
+@@ -696,7 +696,7 @@ bool VideoCaptureImpl::BindVideoFrameOnM
    }
  
    const unsigned texture_target =

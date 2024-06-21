@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_freebsd.cc.orig	2024-05-21 22:42:46.756152400 +0000
+--- base/system/sys_info_freebsd.cc.orig	2024-06-13 23:28:43.510660400 +0000
 +++ base/system/sys_info_freebsd.cc
 @@ -9,30 +9,106 @@
  #include <sys/sysctl.h>
@@ -40,9 +41,10 @@ $NetBSD$
 +    r = sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
 +
 +  if (r == -1) {
-+    NOTREACHED();
-+    return 0;
-+  }
+     NOTREACHED_IN_MIGRATION();
+     return 0;
+   }
+-  return static_cast<int64_t>(pages) * page_size;
 +
 +  return static_cast<uint64_t>(pages) * page_size;
 +}
@@ -63,10 +65,9 @@ $NetBSD$
 +    r = sysctlbyname("vm.stats.vm.v_cache_count", &pgcache, &szpg, NULL, 0);
 +
 +  if (r == -1) {
-     NOTREACHED();
-     return 0;
-   }
--  return static_cast<int64_t>(pages) * page_size;
++    NOTREACHED();
++    return 0;
++  }
 +
 +  return static_cast<uint64_t>((pgfree + pginact + pgcache) * page_size);
 +}
@@ -98,7 +99,7 @@ $NetBSD$
    size_t size = sizeof(limit);
 +
    if (sysctlbyname("kern.ipc.shmmax", &limit, &size, NULL, 0) < 0) {
-     NOTREACHED();
+     NOTREACHED_IN_MIGRATION();
      return 0;
    }
 +

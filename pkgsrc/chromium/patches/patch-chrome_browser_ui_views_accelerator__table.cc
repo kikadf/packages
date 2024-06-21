@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/accelerator_table.cc.orig	2024-05-21 22:42:53.860786000 +0000
+--- chrome/browser/ui/views/accelerator_table.cc.orig	2024-06-13 23:28:50.307270500 +0000
 +++ chrome/browser/ui/views/accelerator_table.cc
 @@ -72,11 +72,11 @@ const AcceleratorMapping kAcceleratorMap
      {ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR, IDC_SAVE_PAGE},
@@ -32,12 +33,12 @@ $NetBSD$
       IDC_SHOW_AVATAR_MENU},
  
  // Platform-specific key maps.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      {ui::VKEY_BROWSER_BACK, ui::EF_NONE, IDC_BACK},
      {ui::VKEY_BROWSER_FORWARD, ui::EF_NONE, IDC_FORWARD},
      {ui::VKEY_BROWSER_HOME, ui::EF_NONE, IDC_HOME},
-@@ -250,7 +250,7 @@ const AcceleratorMapping kAcceleratorMap
+@@ -249,7 +249,7 @@ const AcceleratorMapping kAcceleratorMap
  #endif  // !BUILDFLAG(IS_CHROMEOS)
  #endif  // !BUILDFLAG(IS_MAC)
  #if BUILDFLAG(ENABLE_SCREEN_AI_SERVICE) && \

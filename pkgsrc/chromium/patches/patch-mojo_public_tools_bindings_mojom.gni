@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/tools/bindings/mojom.gni.orig	2024-05-21 22:43:05.553829000 +0000
+--- mojo/public/tools/bindings/mojom.gni.orig	2024-06-13 23:29:02.988409000 +0000
 +++ mojo/public/tools/bindings/mojom.gni
-@@ -741,6 +741,21 @@ template("mojom") {
+@@ -746,6 +746,21 @@ template("mojom") {
        enabled_features += [ "is_apple" ]
      }
  

@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/test/skia_gold_pixel_diff.cc.orig	2024-05-21 22:43:35.632511600 +0000
+--- ui/base/test/skia_gold_pixel_diff.cc.orig	2024-06-13 23:29:30.494878300 +0000
 +++ ui/base/test/skia_gold_pixel_diff.cc
 @@ -115,7 +115,7 @@ const char* GetPlatformName() {
    return "macOS";
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

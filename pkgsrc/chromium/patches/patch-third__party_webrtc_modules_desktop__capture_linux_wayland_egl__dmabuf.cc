@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc.orig	2024-05-21 22:46:51.549973200 +0000
+--- third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc.orig	2024-06-13 23:30:34.840654600 +0000
 +++ third_party/webrtc/modules/desktop_capture/linux/wayland/egl_dmabuf.cc
 @@ -10,11 +10,15 @@
  

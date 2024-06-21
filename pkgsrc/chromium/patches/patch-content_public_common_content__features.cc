@@ -1,12 +1,13 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2024-05-21 22:43:01.449463000 +0000
+--- content/public/common/content_features.cc.orig	2024-06-13 23:28:58.640018700 +0000
 +++ content/public/common/content_features.cc
-@@ -28,7 +28,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
- // TODO(crbug.com/1052397): Remove !IS_CHROMEOS_LACROS once lacros starts being
+@@ -29,7 +29,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
+ // TODO(crbug.com/40118868): Remove !IS_CHROMEOS_LACROS once lacros starts being
  // built with OS_CHROMEOS instead of OS_LINUX.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
 -    (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS))
@@ -14,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1085,9 +1085,9 @@ BASE_FEATURE(kWebAssemblyTiering,
+@@ -1076,9 +1076,9 @@ BASE_FEATURE(kWebAssemblyTiering,
  BASE_FEATURE(kWebAssemblyTrapHandler,
               "WebAssemblyTrapHandler",
  #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
@@ -26,7 +27,7 @@ $NetBSD$
       defined(ARCH_CPU_ARM64))
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1128,7 +1128,11 @@ BASE_FEATURE(kWebUICodeCache,
+@@ -1115,7 +1115,11 @@ BASE_FEATURE(kWebUICodeCache,
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb

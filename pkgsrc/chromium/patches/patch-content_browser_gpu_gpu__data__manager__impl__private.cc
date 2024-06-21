@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_data_manager_impl_private.cc.orig	2024-05-21 22:43:00.893413300 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.cc.orig	2024-06-13 23:28:58.107971000 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.cc
-@@ -1694,7 +1694,7 @@ void GpuDataManagerImplPrivate::RecordCo
+@@ -1692,7 +1692,7 @@ void GpuDataManagerImplPrivate::RecordCo
    UMA_HISTOGRAM_ENUMERATION("GPU.CompositingMode", compositing_mode);
  }
  

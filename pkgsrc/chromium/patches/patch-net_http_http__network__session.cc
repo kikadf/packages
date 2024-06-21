@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_network_session.cc.orig	2024-05-21 22:43:06.257891700 +0000
+--- net/http/http_network_session.cc.orig	2024-06-13 23:29:03.712473900 +0000
 +++ net/http/http_network_session.cc
 @@ -19,7 +19,9 @@
  #include "build/build_config.h"

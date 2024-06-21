@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/renderer/bindings/argument_spec.cc.orig	2024-05-21 22:43:02.765580200 +0000
+--- extensions/renderer/bindings/argument_spec.cc.orig	2024-06-13 23:28:59.944135700 +0000
 +++ extensions/renderer/bindings/argument_spec.cc
 @@ -18,6 +18,8 @@
  #include "gin/data_object_builder.h"

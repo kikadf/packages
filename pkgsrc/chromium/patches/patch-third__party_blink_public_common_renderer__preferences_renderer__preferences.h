@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/common/renderer_preferences/renderer_preferences.h.orig	2024-05-21 22:43:09.022138000 +0000
+--- third_party/blink/public/common/renderer_preferences/renderer_preferences.h.orig	2024-06-13 23:29:06.464721000 +0000
 +++ third_party/blink/public/common/renderer_preferences/renderer_preferences.h
 @@ -65,7 +65,7 @@ struct BLINK_COMMON_EXPORT RendererPrefe
    UserAgentOverride user_agent_override;

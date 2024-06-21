@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/utility_process_host.cc.orig	2024-05-21 22:43:01.265446400 +0000
+--- content/browser/utility_process_host.cc.orig	2024-06-13 23:28:58.460002400 +0000
 +++ content/browser/utility_process_host.cc
 @@ -61,7 +61,7 @@
  #include "content/browser/v8_snapshot_files.h"
@@ -14,7 +15,7 @@ $NetBSD$
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
  #include "base/pickle.h"
-@@ -75,7 +75,7 @@
+@@ -74,7 +74,7 @@
  #include "services/network/public/mojom/network_service.mojom.h"
  #endif
  
@@ -23,7 +24,7 @@ $NetBSD$
  #include "base/task/sequenced_task_runner.h"
  #include "components/viz/host/gpu_client.h"
  #include "media/capture/capture_switches.h"
-@@ -86,7 +86,7 @@ namespace content {
+@@ -85,7 +85,7 @@ namespace content {
  
  namespace {
  
@@ -64,7 +65,7 @@ $NetBSD$
        switches::kAlsaOutputDevice,
  #endif
 @@ -409,7 +412,7 @@ bool UtilityProcessHost::StartProcess() 
-     file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload());
+     file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload(*cmd_line));
  #endif  // BUILDFLAG(IS_POSIX)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

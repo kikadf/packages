@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_device_queue.h.orig	2024-05-21 22:43:03.077608000 +0000
+--- gpu/vulkan/vulkan_device_queue.h.orig	2024-06-13 23:29:00.252163400 +0000
 +++ gpu/vulkan/vulkan_device_queue.h
 @@ -169,7 +169,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanDev
    bool allow_protected_memory_ = false;

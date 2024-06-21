@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/views/views_delegate.h.orig	2024-05-21 22:43:36.484587400 +0000
+--- ui/views/views_delegate.h.orig	2024-06-13 23:29:31.278948500 +0000
 +++ ui/views/views_delegate.h
 @@ -146,7 +146,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // environment.

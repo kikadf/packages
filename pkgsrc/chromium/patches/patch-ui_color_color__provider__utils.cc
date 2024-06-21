@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/color/color_provider_utils.cc.orig	2024-05-21 22:43:35.744521600 +0000
+--- ui/color/color_provider_utils.cc.orig	2024-06-13 23:29:30.610888700 +0000
 +++ ui/color/color_provider_utils.cc
-@@ -200,7 +200,7 @@ base::StringPiece SystemThemeName(ui::Sy
+@@ -186,7 +186,7 @@ std::string_view SystemThemeName(ui::Sys
    switch (system_theme) {
      case ui::SystemTheme::kDefault:
        return "kDefault";

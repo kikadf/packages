@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-05-21 22:43:35.976542200 +0000
+--- ui/events/devices/x11/device_data_manager_x11.cc.orig	2024-06-13 23:29:30.658892900 +0000
 +++ ui/events/devices/x11/device_data_manager_x11.cc
 @@ -844,6 +844,7 @@ void DeviceDataManagerX11::SetDisabledKe
  }

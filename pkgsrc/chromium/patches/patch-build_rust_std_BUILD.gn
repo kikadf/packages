@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- build/rust/std/BUILD.gn.orig	2024-05-21 22:42:47.012175300 +0000
+--- build/rust/std/BUILD.gn.orig	2024-06-13 23:28:43.762683200 +0000
 +++ build/rust/std/BUILD.gn
 @@ -90,7 +90,6 @@ if (toolchain_has_rust) {
    # don't need to pass to the C++ linker because they're used for specialized

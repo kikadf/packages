@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-05-21 22:42:54.428836600 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-06-13 23:28:50.919325600 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -25,7 +25,7 @@ namespace {
  

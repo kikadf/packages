@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2024-05-21 22:42:53.868786800 +0000
+--- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2024-06-13 23:28:50.315271400 +0000
 +++ chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc
 @@ -19,7 +19,7 @@
  #include "ui/gfx/image/image_skia.h"

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/commerce/core/commerce_feature_list.cc.orig	2024-05-21 22:42:57.501110800 +0000
+--- components/commerce/core/commerce_feature_list.cc.orig	2024-06-13 23:28:54.751669600 +0000
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -168,7 +168,7 @@ BASE_FEATURE(kPriceInsights,
               "PriceInsights",

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/common/gpu_memory_buffer_support.h.orig	2024-05-21 22:43:03.057606200 +0000
+--- gpu/ipc/common/gpu_memory_buffer_support.h.orig	2024-06-13 23:29:00.232161500 +0000
 +++ gpu/ipc/common/gpu_memory_buffer_support.h
 @@ -21,7 +21,7 @@
  #include "ui/gfx/geometry/size.h"

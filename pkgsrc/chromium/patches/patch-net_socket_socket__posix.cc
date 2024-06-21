@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/socket/socket_posix.cc.orig	2024-05-21 22:43:06.685929800 +0000
+--- net/socket/socket_posix.cc.orig	2024-06-13 23:29:04.264523500 +0000
 +++ net/socket/socket_posix.cc
 @@ -516,7 +516,7 @@ void SocketPosix::ReadCompleted() {
  }

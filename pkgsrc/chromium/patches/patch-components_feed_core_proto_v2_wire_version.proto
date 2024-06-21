@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/proto/v2/wire/version.proto.orig	2024-05-21 22:42:57.993154500 +0000
+--- components/feed/core/proto/v2/wire/version.proto.orig	2024-06-13 23:28:55.251714500 +0000
 +++ components/feed/core/proto/v2/wire/version.proto
 @@ -25,8 +25,8 @@ message Version {
      BETA = 3;

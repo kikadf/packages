@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- v8/src/flags/flags.cc.orig	2024-05-21 22:47:35.693909200 +0000
+--- v8/src/flags/flags.cc.orig	2024-06-13 23:30:46.069662800 +0000
 +++ v8/src/flags/flags.cc
 @@ -15,6 +15,10 @@
  #include <set>

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/process/kill.h.orig	2024-05-21 22:42:46.716148900 +0000
+--- base/process/kill.h.orig	2024-06-13 23:28:43.470656900 +0000
 +++ base/process/kill.h
-@@ -121,7 +121,7 @@ BASE_EXPORT TerminationStatus GetTermina
+@@ -123,7 +123,7 @@ BASE_EXPORT TerminationStatus GetTermina
  BASE_EXPORT TerminationStatus GetKnownDeadTerminationStatus(
      ProcessHandle handle, int* exit_code);
  

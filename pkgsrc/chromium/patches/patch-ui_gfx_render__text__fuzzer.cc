@@ -1,20 +1,21 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_fuzzer.cc.orig	2024-05-21 22:43:36.148557700 +0000
+--- ui/gfx/render_text_fuzzer.cc.orig	2024-06-13 23:29:30.942918500 +0000
 +++ ui/gfx/render_text_fuzzer.cc
-@@ -14,7 +14,7 @@
+@@ -17,7 +17,7 @@
+ #include "ui/gfx/canvas.h"
  #include "ui/gfx/font_util.h"
- #include "ui/gfx/render_text.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "third_party/test_fonts/fontconfig/fontconfig_util_linux.h"
  #endif
  
-@@ -37,7 +37,7 @@ struct Environment {
+@@ -40,7 +40,7 @@ struct Environment {
  
      CHECK(base::i18n::InitializeICU());
  

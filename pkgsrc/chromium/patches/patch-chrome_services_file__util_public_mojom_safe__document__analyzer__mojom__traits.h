@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/file_util/public/mojom/safe_document_analyzer_mojom_traits.h.orig	2024-05-21 22:42:54.720862600 +0000
+--- chrome/services/file_util/public/mojom/safe_document_analyzer_mojom_traits.h.orig	2024-06-13 23:28:51.399368500 +0000
 +++ chrome/services/file_util/public/mojom/safe_document_analyzer_mojom_traits.h
-@@ -16,7 +16,7 @@
+@@ -17,7 +17,7 @@
  #include "mojo/public/cpp/bindings/struct_traits.h"
  
  #if !BUILDFLAG(FULL_SAFE_BROWSING) || \

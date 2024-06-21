@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/protocol/webrtc_video_stream.cc.orig	2024-05-21 22:43:07.117968300 +0000
+--- remoting/protocol/webrtc_video_stream.cc.orig	2024-06-13 23:29:04.688561700 +0000
 +++ remoting/protocol/webrtc_video_stream.cc
 @@ -267,7 +267,7 @@ WebrtcVideoStream::WebrtcVideoStream(con
      : session_options_(session_options) {

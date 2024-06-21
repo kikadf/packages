@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments_data_manager.cc.orig	2024-05-21 22:42:57.225086000 +0000
+--- components/autofill/core/browser/payments_data_manager.cc.orig	2024-06-13 23:28:54.483645400 +0000
 +++ components/autofill/core/browser/payments_data_manager.cc
-@@ -1060,7 +1060,7 @@ bool PaymentsDataManager::ShouldShowCard
+@@ -1064,7 +1064,7 @@ bool PaymentsDataManager::ShouldShowCard
  // The feature is only for Linux, Windows, Mac, and Fuchsia.
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD) || \

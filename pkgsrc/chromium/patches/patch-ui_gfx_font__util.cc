@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/font_util.cc.orig	2024-05-21 22:43:36.112554300 +0000
+--- ui/gfx/font_util.cc.orig	2024-06-13 23:29:30.906915200 +0000
 +++ ui/gfx/font_util.cc
 @@ -6,7 +6,7 @@
  

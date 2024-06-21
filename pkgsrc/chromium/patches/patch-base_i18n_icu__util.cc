@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/i18n/icu_util.cc.orig	2024-05-21 22:42:46.660143900 +0000
+--- base/i18n/icu_util.cc.orig	2024-06-13 23:28:43.414651900 +0000
 +++ base/i18n/icu_util.cc
 @@ -52,7 +52,7 @@
  #include "third_party/icu/source/common/unicode/unistr.h"

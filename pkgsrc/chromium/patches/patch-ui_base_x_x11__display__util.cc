@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_display_util.cc.orig	2024-05-21 22:43:35.644512700 +0000
+--- ui/base/x/x11_display_util.cc.orig	2024-06-13 23:29:30.506879300 +0000
 +++ ui/base/x/x11_display_util.cc
 @@ -14,7 +14,6 @@
  
@@ -65,7 +66,7 @@ $NetBSD$
 -  if (!response || response->format != 32 || response->value_len != 4) {
 -    return gfx::Rect();
 -  }
--  const uint32_t* value = response->value->front_as<uint32_t>();
+-  const uint32_t* value = response->value->cast_to<uint32_t>();
 -  return gfx::Rect(value[0], value[1], value[2], value[3]);
 -}
 -
@@ -86,11 +87,11 @@ $NetBSD$
 -
 -gfx::ICCProfile GetIccProfileSync(x11::Future<x11::GetPropertyReply> future) {
 -  auto response = future.Sync();
--  if (!response || !response->value->size()) {
+-  if (!response || !response->value_len) {
 -    return gfx::ICCProfile();
 -  }
--  return gfx::ICCProfile::FromData(response->value->data(),
--                                   response->value->size());
+-  return gfx::ICCProfile::FromData(response->value->bytes(),
+-                                   response->value_len * response->format / 8u);
 -}
 -
 -x11::Future<x11::RandR::GetOutputPropertyReply> GetEdidFuture(
@@ -318,7 +319,7 @@ $NetBSD$
 +  if (!resources) {
 +    return kDefaultInterval;
 +  }
-   // TODO(crbug.com/726842): It might make sense here to pick the output that
+   // TODO(crbug.com/41321728): It might make sense here to pick the output that
    // the window is on. On the other hand, if compositing is enabled, all drawing
    // might be synced to the primary output anyway. Needs investigation.
 -  auto frequency = displays[primary_display_index].display_frequency();

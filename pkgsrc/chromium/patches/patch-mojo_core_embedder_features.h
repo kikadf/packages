@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- mojo/core/embedder/features.h.orig	2024-05-21 22:43:05.449819600 +0000
+--- mojo/core/embedder/features.h.orig	2024-06-13 23:29:02.888400000 +0000
 +++ mojo/core/embedder/features.h
 @@ -16,7 +16,7 @@ namespace core {
  

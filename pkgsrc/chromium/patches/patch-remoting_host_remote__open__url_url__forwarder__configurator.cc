@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2024-05-21 22:43:07.049962300 +0000
+--- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2024-06-13 23:29:04.620555400 +0000
 +++ remoting/host/remote_open_url/url_forwarder_configurator.cc
 @@ -12,7 +12,7 @@ UrlForwarderConfigurator::UrlForwarderCo
  

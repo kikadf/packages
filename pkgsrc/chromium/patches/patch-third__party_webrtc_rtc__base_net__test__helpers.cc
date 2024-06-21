@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2024-05-21 22:46:52.606067400 +0000
+--- third_party/webrtc/rtc_base/net_test_helpers.cc.orig	2024-06-13 23:30:35.124680300 +0000
 +++ third_party/webrtc/rtc_base/net_test_helpers.cc
 @@ -21,6 +21,7 @@
  #endif

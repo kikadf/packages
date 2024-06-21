@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2024-05-21 22:42:57.985154000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2024-06-13 23:28:55.247714000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -18,7 +18,7 @@ BASE_FEATURE(kIPHDemoMode, "IPH_DemoMode
  BASE_FEATURE(kIPHDummyFeature, "IPH_Dummy", base::FEATURE_DISABLED_BY_DEFAULT);
@@ -11,19 +12,20 @@ $NetBSD$
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kIPHBatterySaverModeFeature,
-              "IPH_BatterySaverMode",
-              base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -577,7 +577,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
- 
+ BASE_FEATURE(kEsbDownloadRowPromoFeature,
+              "EsbDownloadRowPromo",
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -605,7 +605,8 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
  #endif  // BUILDFLAG(IS_IOS)
  
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || \
-     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
++    BUILDFLAG(IS_BSD)
  BASE_FEATURE(kIPHAutofillCreditCardBenefitFeature,
               "IPH_AutofillCreditCardBenefit",
-@@ -712,7 +712,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -736,7 +737,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

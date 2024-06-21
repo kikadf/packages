@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/files/dir_reader_linux.h.orig	2024-05-21 22:42:46.636141800 +0000
+--- base/files/dir_reader_linux.h.orig	2024-06-13 23:28:43.394650000 +0000
 +++ base/files/dir_reader_linux.h
-@@ -16,10 +16,16 @@
+@@ -21,10 +21,16 @@
  #include "base/logging.h"
  #include "base/posix/eintr_wrapper.h"
  
@@ -22,7 +23,7 @@ $NetBSD$
  struct linux_dirent {
    uint64_t        d_ino;
    int64_t         d_off;
-@@ -27,6 +33,7 @@ struct linux_dirent {
+@@ -32,6 +38,7 @@ struct linux_dirent {
    unsigned char   d_type;
    char            d_name[0];
  };
@@ -30,7 +31,7 @@ $NetBSD$
  
  class DirReaderLinux {
   public:
-@@ -61,7 +68,11 @@ class DirReaderLinux {
+@@ -66,7 +73,11 @@ class DirReaderLinux {
      if (offset_ != size_)
        return true;
  

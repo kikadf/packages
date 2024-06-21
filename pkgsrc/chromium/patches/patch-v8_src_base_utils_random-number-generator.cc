@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/utils/random-number-generator.cc.orig	2024-05-21 22:47:35.277872000 +0000
+--- v8/src/base/utils/random-number-generator.cc.orig	2024-06-13 23:30:45.729632100 +0000
 +++ v8/src/base/utils/random-number-generator.cc
 @@ -56,7 +56,7 @@ RandomNumberGenerator::RandomNumberGener
    DCHECK_EQ(0, result);

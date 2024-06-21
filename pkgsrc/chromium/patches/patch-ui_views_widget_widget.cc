@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.cc.orig	2024-05-21 22:43:36.496588700 +0000
+--- ui/views/widget/widget.cc.orig	2024-06-13 23:29:31.286949400 +0000
 +++ ui/views/widget/widget.cc
-@@ -54,7 +54,7 @@
+@@ -57,7 +57,7 @@
  #include "ui/views/window/custom_frame_view.h"
  #include "ui/views/window/dialog_delegate.h"
  
@@ -14,7 +15,7 @@ $NetBSD$
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -2140,7 +2140,7 @@ const ui::NativeTheme* Widget::GetNative
+@@ -2152,7 +2152,7 @@ const ui::NativeTheme* Widget::GetNative
    if (parent_)
      return parent_->GetNativeTheme();
  

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/test/test_file_util_posix.cc.orig	2024-05-21 22:42:46.824158400 +0000
+--- base/test/test_file_util_posix.cc.orig	2024-06-13 23:28:43.578666400 +0000
 +++ base/test/test_file_util_posix.cc
-@@ -89,7 +89,7 @@ void SyncPageCacheToDisk() {
+@@ -91,7 +91,7 @@ void SyncPageCacheToDisk() {
  }
  
  #if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_APPLE) && \

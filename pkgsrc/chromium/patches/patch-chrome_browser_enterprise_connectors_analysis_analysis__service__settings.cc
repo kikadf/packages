@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc.orig	2024-05-21 22:42:51.104540000 +0000
+--- chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc.orig	2024-06-13 23:28:47.539022000 +0000
 +++ chrome/browser/enterprise/connectors/analysis/analysis_service_settings.cc
-@@ -150,7 +150,7 @@ AnalysisServiceSettings::AnalysisService
+@@ -151,7 +151,7 @@ AnalysisServiceSettings::AnalysisService
    const char* verification_key = kKeyWindowsVerification;
  #elif BUILDFLAG(IS_MAC)
    const char* verification_key = kKeyMacVerification;

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/nasm/config/config-linux.h.orig	2024-05-21 22:45:57.353145600 +0000
+--- third_party/nasm/config/config-linux.h.orig	2024-06-13 23:29:46.428308700 +0000
 +++ third_party/nasm/config/config-linux.h
 @@ -160,7 +160,7 @@
  

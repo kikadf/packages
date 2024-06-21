@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-05-21 22:45:08.084756900 +0000
+--- third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c.orig	2024-06-13 23:29:44.388125400 +0000
 +++ third_party/libaom/source/libaom/aom_ports/aarch64_cpudetect.c
 @@ -99,10 +99,46 @@ static int arm_get_cpu_caps(void) {
    return flags;
@@ -26,7 +27,7 @@ $NetBSD$
 +  if (sysctl(isar0_mib, 2, &cpu_id, &len, NULL, 0) < 0)
 +    return flags;
 +
-+  if (ID_AA64ISAR0_AES(cpu_id) >= ID_AA64ISAR0_CRC32_BASE)
++  if (ID_AA64ISAR0_CRC32(cpu_id) >= ID_AA64ISAR0_CRC32_BASE)
 +    flags |= HAS_ARM_CRC32;
 +
 +  return flags;

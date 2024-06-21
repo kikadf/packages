@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2024-05-21 22:46:52.614068000 +0000
+--- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2024-06-13 23:30:35.136681300 +0000
 +++ third_party/webrtc/rtc_base/platform_thread_types.cc
 @@ -11,7 +11,9 @@
  #include "rtc_base/platform_thread_types.h"

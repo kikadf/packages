@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/crc32c/BUILD.gn.orig	2024-05-21 22:43:29.667979500 +0000
+--- third_party/crc32c/BUILD.gn.orig	2024-06-13 23:29:24.878374000 +0000
 +++ third_party/crc32c/BUILD.gn
 @@ -46,7 +46,7 @@ config("crc32c_config") {
    }

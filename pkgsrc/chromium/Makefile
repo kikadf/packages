@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			125.0.6422.76
+VERSION=			126.0.6478.61
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -18,7 +18,6 @@ COMMENT=			Open source web browser
 LICENSE=			modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
 USE_TOOLS+=			bash bison flex:pkgsrc gmake pax perl pkg-config
-#USE_TOOLS+=			xzcat gzip tar
 TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
@@ -43,8 +42,6 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 #TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
 #TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
-
-#PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 
 DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 
@@ -317,8 +314,7 @@ do-install:
 .endfor
 .for i in locales resources
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
-		${FIND} ${i} -type f -print | \
-		pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM}
+		${FIND} ${i} -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"

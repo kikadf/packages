@@ -1,12 +1,13 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc.orig	2024-05-21 22:42:51.148544000 +0000
+--- chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc.orig	2024-06-13 23:28:47.579025700 +0000
 +++ chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.cc
 @@ -67,8 +67,8 @@ base::flat_map<std::string, SAMLProfileA
-   // TODO(crbug.com/1445072): Add actual domains with attribute names.
+   // TODO(crbug.com/40267996): Add actual domains with attribute names.
    profile_attributes->insert(std::make_pair(
        "supported.test",
 -      SAMLProfileAttributes("placeholderName", "placeholderDomain",

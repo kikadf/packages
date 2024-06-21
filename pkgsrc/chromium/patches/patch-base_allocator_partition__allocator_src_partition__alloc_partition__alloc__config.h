@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2024-05-21 22:42:46.548133900 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h.orig	2024-06-13 23:28:43.302641600 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_config.h
-@@ -231,7 +231,7 @@ constexpr bool kUseLazyCommit = false;
+@@ -232,7 +232,7 @@ constexpr bool kUseLazyCommit = false;
  // On these platforms, lock all the partitions before fork(), and unlock after.
  // This may be required on more platforms in the future.
  #define PA_CONFIG_HAS_ATFORK_HANDLER() \
@@ -14,7 +15,7 @@ $NetBSD$
  
  // PartitionAlloc uses PartitionRootEnumerator to acquire all
  // PartitionRoots at BeforeFork and to release at AfterFork.
-@@ -278,7 +278,7 @@ constexpr bool kUseLazyCommit = false;
+@@ -279,7 +279,7 @@ constexpr bool kUseLazyCommit = false;
  //
  // Also enabled on ARM64 macOS and iOS, as the 16kiB pages on this platform lead
  // to larger slot spans.

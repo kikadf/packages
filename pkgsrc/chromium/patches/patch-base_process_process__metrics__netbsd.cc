@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_netbsd.cc.orig	2024-06-07 09:06:47.634055625 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2024-06-21 06:49:02.315981338 +0000
 +++ base/process/process_metrics_netbsd.cc
 @@ -0,0 +1,175 @@
 +// Copyright 2013 The Chromium Authors

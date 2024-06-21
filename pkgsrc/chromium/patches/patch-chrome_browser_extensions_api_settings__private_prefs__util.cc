@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-05-21 22:42:51.276555500 +0000
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2024-06-13 23:28:47.699036400 +0000
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
-@@ -204,7 +204,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -197,7 +197,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    (*s_allowlist)[::prefs::kSidePanelHorizontalAlignment] =
        settings_api::PrefType::kBoolean;
  
@@ -14,7 +15,7 @@ $NetBSD$
    (*s_allowlist)[::prefs::kUseCustomChromeFrame] =
        settings_api::PrefType::kBoolean;
  #endif
-@@ -215,7 +215,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
+@@ -208,7 +208,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil
    // Appearance settings.
    (*s_allowlist)[::prefs::kCurrentThemeID] = settings_api::PrefType::kString;
    (*s_allowlist)[::prefs::kPolicyThemeColor] = settings_api::PrefType::kNumber;

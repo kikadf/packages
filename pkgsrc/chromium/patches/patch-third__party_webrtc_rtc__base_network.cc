@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/network.cc.orig	2024-05-21 22:46:52.606067400 +0000
+--- third_party/webrtc/rtc_base/network.cc.orig	2024-06-13 23:30:35.124680300 +0000
 +++ third_party/webrtc/rtc_base/network.cc
-@@ -292,7 +292,12 @@ AdapterType GetAdapterTypeFromName(absl:
+@@ -290,7 +290,12 @@ AdapterType GetAdapterTypeFromName(absl:
    }
  #endif
  

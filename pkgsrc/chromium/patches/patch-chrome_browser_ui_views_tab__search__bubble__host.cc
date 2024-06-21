@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tab_search_bubble_host.cc.orig	2024-05-21 22:42:54.096807000 +0000
+--- chrome/browser/ui/views/tab_search_bubble_host.cc.orig	2024-06-13 23:28:50.575294700 +0000
 +++ chrome/browser/ui/views/tab_search_bubble_host.cc
 @@ -268,7 +268,7 @@ bool TabSearchBubbleHost::ShouldTabSearc
  // Mac should have tabsearch on the right side. Windows >= Win10 has the

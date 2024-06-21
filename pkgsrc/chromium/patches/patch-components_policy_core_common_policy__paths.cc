@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/policy_paths.cc.orig	2024-05-21 22:42:58.717219000 +0000
+--- components/policy/core/common/policy_paths.cc.orig	2024-06-13 23:28:55.971779000 +0000
 +++ components/policy/core/common/policy_paths.cc
 @@ -17,6 +17,8 @@ namespace policy {
  const char kPolicyPath[] = "/etc/opt/chrome/policies";

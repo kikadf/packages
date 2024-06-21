@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/BUILD.gn.orig	2024-05-21 22:43:36.096552800 +0000
+--- ui/gfx/BUILD.gn.orig	2024-06-13 23:29:30.778903700 +0000
 +++ ui/gfx/BUILD.gn
 @@ -663,7 +663,7 @@ source_set("memory_buffer_sources") {
      deps += [ "//build/config/linux/libdrm" ]

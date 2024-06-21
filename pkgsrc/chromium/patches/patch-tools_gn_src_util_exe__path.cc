@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/util/exe_path.cc.orig	2024-05-21 23:01:30.632345700 +0000
+--- tools/gn/src/util/exe_path.cc.orig	2024-06-13 23:40:12.600521000 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@
  #include <windows.h>

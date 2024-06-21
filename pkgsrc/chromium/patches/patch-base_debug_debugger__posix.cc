@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/debug/debugger_posix.cc.orig	2024-05-21 22:42:46.632141400 +0000
+--- base/debug/debugger_posix.cc.orig	2024-06-13 23:28:43.386649400 +0000
 +++ base/debug/debugger_posix.cc
-@@ -36,6 +36,10 @@
+@@ -41,6 +41,10 @@
  #include <sys/sysctl.h>
  #endif
  
@@ -16,7 +17,7 @@ $NetBSD$
  #if BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>
  #endif
-@@ -81,6 +85,7 @@ bool BeingDebugged() {
+@@ -86,6 +90,7 @@ bool BeingDebugged() {
  
    // Initialize mib, which tells sysctl what info we want.  In this case,
    // we're looking for information about a specific process ID.
@@ -24,7 +25,7 @@ $NetBSD$
    int mib[] = {
      CTL_KERN,
      KERN_PROC,
-@@ -92,36 +97,75 @@ bool BeingDebugged() {
+@@ -97,36 +102,75 @@ bool BeingDebugged() {
      0
  #endif
    };

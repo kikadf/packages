@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/task/thread_pool/environment_config_unittest.cc.orig	2024-05-21 22:42:46.776154300 +0000
+--- base/task/thread_pool/environment_config_unittest.cc.orig	2024-06-13 23:28:43.530662300 +0000
 +++ base/task/thread_pool/environment_config_unittest.cc
 @@ -15,7 +15,7 @@ TEST(ThreadPoolEnvironmentConfig, CanUse
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE)

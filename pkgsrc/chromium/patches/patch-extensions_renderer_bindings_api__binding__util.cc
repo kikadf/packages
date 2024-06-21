@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/renderer/bindings/api_binding_util.cc.orig	2024-05-21 22:43:02.761579800 +0000
+--- extensions/renderer/bindings/api_binding_util.cc.orig	2024-06-13 23:28:59.940135200 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
 @@ -132,7 +132,7 @@ std::string GetPlatformString() {
    return "lacros";

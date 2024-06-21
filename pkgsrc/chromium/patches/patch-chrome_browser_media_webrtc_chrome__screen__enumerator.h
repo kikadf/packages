@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2024-05-21 22:42:51.632587200 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.h.orig	2024-06-13 23:28:48.047067600 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.h
 @@ -20,7 +20,7 @@ namespace aura {
  class Window;

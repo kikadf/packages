@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- remoting/client/display/sys_opengl.h.orig	2024-05-21 22:43:06.977955800 +0000
+--- remoting/client/display/sys_opengl.h.orig	2024-06-13 23:29:04.548549000 +0000
 +++ remoting/client/display/sys_opengl.h
 @@ -9,7 +9,7 @@
  

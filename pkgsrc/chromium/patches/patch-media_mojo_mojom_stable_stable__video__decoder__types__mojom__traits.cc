@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2024-05-21 22:43:05.057784600 +0000
+--- media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc.orig	2024-06-13 23:29:02.468362300 +0000
 +++ media/mojo/mojom/stable/stable_video_decoder_types_mojom_traits.cc
 @@ -837,7 +837,7 @@ const gfx::GpuMemoryBufferId& StructTrai
    return input.id;

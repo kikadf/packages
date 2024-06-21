@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/url_request/url_request_context_builder.cc.orig	2024-05-21 22:43:06.761936700 +0000
+--- net/url_request/url_request_context_builder.cc.orig	2024-06-13 23:29:04.340530400 +0000
 +++ net/url_request/url_request_context_builder.cc
 @@ -439,7 +439,7 @@ std::unique_ptr<URLRequestContext> URLRe
    }

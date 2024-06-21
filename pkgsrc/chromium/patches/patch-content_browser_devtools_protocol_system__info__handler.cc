@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/protocol/system_info_handler.cc.orig	2024-05-21 22:43:00.853409800 +0000
+--- content/browser/devtools/protocol/system_info_handler.cc.orig	2024-06-13 23:28:58.067967200 +0000
 +++ content/browser/devtools/protocol/system_info_handler.cc
 @@ -51,7 +51,7 @@ std::unique_ptr<SystemInfo::Size> GfxSiz
  // 1046598, and 1153667.

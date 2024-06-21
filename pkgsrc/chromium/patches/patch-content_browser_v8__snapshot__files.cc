@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/v8_snapshot_files.cc.orig	2024-05-21 22:43:01.265446400 +0000
+--- content/browser/v8_snapshot_files.cc.orig	2024-06-13 23:28:58.460002400 +0000
 +++ content/browser/v8_snapshot_files.cc
-@@ -13,7 +13,7 @@ namespace content {
+@@ -17,7 +17,7 @@ namespace content {
  std::map<std::string, absl::variant<base::FilePath, base::ScopedFD>>
- GetV8SnapshotFilesToPreload() {
+ GetV8SnapshotFilesToPreload(base::CommandLine& process_command_line) {
    std::map<std::string, absl::variant<base::FilePath, base::ScopedFD>> files;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

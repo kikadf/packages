@@ -1,13 +1,14 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/tab_strip_region_view.cc.orig	2024-05-21 22:42:53.968795500 +0000
+--- chrome/browser/ui/views/frame/tab_strip_region_view.cc.orig	2024-06-13 23:28:50.419280500 +0000
 +++ chrome/browser/ui/views/frame/tab_strip_region_view.cc
-@@ -196,7 +196,7 @@ TabStripRegionView::TabStripRegionView(s
+@@ -193,7 +193,7 @@ TabStripRegionView::TabStripRegionView(s
  
-     // TODO(crbug.com/1052397): Revisit the macro expression once build flag
+     // TODO(crbug.com/40118868): Revisit the macro expression once build flag
      // switch of lacros-chrome is complete.
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

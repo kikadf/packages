@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/socket/tcp_socket_posix.cc.orig	2024-05-21 22:43:06.697930800 +0000
+--- net/socket/tcp_socket_posix.cc.orig	2024-06-13 23:29:04.272524400 +0000
 +++ net/socket/tcp_socket_posix.cc
 @@ -98,6 +98,17 @@ bool SetTCPKeepAlive(int fd, bool enable
        PLOG(ERROR) << "Failed to set TCP_KEEPALIVE on fd: " << fd;

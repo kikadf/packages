@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-05-21 22:43:00.897413500 +0000
+--- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-06-13 23:28:58.107971000 +0000
 +++ content/browser/gpu/gpu_memory_buffer_manager_singleton.cc
 @@ -54,7 +54,7 @@ scoped_refptr<base::SingleThreadTaskRunn
  #endif

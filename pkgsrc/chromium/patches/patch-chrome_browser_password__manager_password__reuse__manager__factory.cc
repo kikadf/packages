@@ -1,12 +1,13 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/password_reuse_manager_factory.cc.orig	2024-05-21 22:42:51.908612000 +0000
+--- chrome/browser/password_manager/password_reuse_manager_factory.cc.orig	2024-06-13 23:28:48.323092500 +0000
 +++ chrome/browser/password_manager/password_reuse_manager_factory.cc
 @@ -137,7 +137,7 @@ PasswordReuseManagerFactory::BuildServic
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS_LACROS)

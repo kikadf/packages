@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-05-21 22:43:09.206154600 +0000
+--- third_party/blink/renderer/controller/blink_initializer.cc.orig	2024-06-13 23:29:06.792750600 +0000
 +++ third_party/blink/renderer/controller/blink_initializer.cc
 @@ -81,12 +81,12 @@
  #include "third_party/blink/renderer/controller/private_memory_footprint_provider.h"
@@ -29,7 +30,7 @@ $NetBSD$
    binders.Add<mojom::blink::MemoryUsageMonitorLinux>(
        ConvertToBaseRepeatingCallback(
            CrossThreadBindRepeating(&MemoryUsageMonitorPosix::Bind)),
-@@ -306,7 +306,7 @@ void BlinkInitializer::RegisterMemoryWat
+@@ -303,7 +303,7 @@ void BlinkInitializer::RegisterMemoryWat
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.cc.orig	2024-05-21 22:43:06.941952700 +0000
+--- printing/print_settings.cc.orig	2024-06-13 23:29:04.524546900 +0000
 +++ printing/print_settings.cc
 @@ -320,7 +320,7 @@ PrintSettings& PrintSettings::operator=(
  #endif

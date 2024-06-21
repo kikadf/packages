@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-05-21 22:43:10.974312300 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-06-13 23:29:08.392894000 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -19,6 +19,13 @@
  extern "C" void* __libc_stack_end;  // NOLINT

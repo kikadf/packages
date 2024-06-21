@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/metrics/motherboard.cc.orig	2024-05-21 22:42:58.241176600 +0000
+--- components/metrics/motherboard.cc.orig	2024-06-13 23:28:55.495736400 +0000
 +++ components/metrics/motherboard.cc
 @@ -1,6 +1,7 @@
  // Copyright 2022 The Chromium Authors

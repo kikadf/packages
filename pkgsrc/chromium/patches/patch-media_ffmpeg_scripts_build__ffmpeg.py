@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2024-05-21 22:43:04.897770400 +0000
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2024-06-13 23:29:02.292346500 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -68,16 +69,17 @@ $NetBSD$
          if target_arch == 'x64':
              if target_os == 'android':
                  configure_flags['Common'].extend([
-@@ -829,8 +831,6 @@ def ConfigureAndBuild(target_arch, targe
+@@ -828,9 +830,6 @@ def ConfigureAndBuild(target_arch, targe
+ 
                  configure_flags['Common'].extend([
                      '--target-os=linux',
-                     '--sysroot=' +
+-                    '--sysroot=' +
 -                    os.path.join(CHROMIUM_ROOT_DIR,
 -                                 'build/linux/debian_bullseye_arm64-sysroot'),
                      # See crbug.com/1467681. These could be removed eventually
                      '--disable-dotprod',
                      '--disable-i8mm',
-@@ -922,7 +922,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -922,7 +921,7 @@ def ConfigureAndBuild(target_arch, targe
          # typically be the system one, so explicitly configure use of Clang's
          # ld.lld, to ensure that things like cross-compilation and LTO work.
          # This does not work for ia32 and is always used on mac.
@@ -86,7 +88,7 @@ $NetBSD$
              configure_flags['Common'].append('--extra-ldflags=-fuse-ld=lld')
  
      # Should be run on Mac, unless we're cross-compiling on Linux.
-@@ -1034,7 +1034,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -1034,7 +1033,7 @@ def ConfigureAndBuild(target_arch, targe
              'Chrome', configure_flags['Common'] +
              configure_flags['ChromeAndroid'] + configure_args)
  

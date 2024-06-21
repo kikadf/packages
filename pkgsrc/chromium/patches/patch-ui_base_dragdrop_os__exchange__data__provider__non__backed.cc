@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-05-21 22:43:35.584507200 +0000
+--- ui/base/dragdrop/os_exchange_data_provider_non_backed.cc.orig	2024-06-13 23:29:30.446874000 +0000
 +++ ui/base/dragdrop/os_exchange_data_provider_non_backed.cc
 @@ -99,7 +99,7 @@ void OSExchangeDataProviderNonBacked::Se
  

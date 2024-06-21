@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.h.orig	2024-05-21 22:43:04.813763000 +0000
+--- media/base/media_switches.h.orig	2024-06-13 23:29:02.200338100 +0000
 +++ media/base/media_switches.h
 @@ -43,8 +43,12 @@ MEDIA_EXPORT extern const char kDisableB
  
@@ -19,7 +20,7 @@ $NetBSD$
  MEDIA_EXPORT extern const char kAlsaInputDevice[];
  MEDIA_EXPORT extern const char kAlsaOutputDevice[];
  #endif
-@@ -314,7 +318,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kPlatf
+@@ -324,13 +328,13 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kPlatf
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPlaybackSpeedButton);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPreloadMediaEngagementData);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPreloadMetadataSuspend);
@@ -28,7 +29,14 @@ $NetBSD$
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPulseaudioLoopbackForCast);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kPulseaudioLoopbackForScreenShare);
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -332,7 +336,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUnifi
+ MEDIA_EXPORT BASE_DECLARE_FEATURE(kRecordMediaEngagementScores);
+ MEDIA_EXPORT BASE_DECLARE_FEATURE(kRecordWebAudioEngagement);
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ MEDIA_EXPORT BASE_DECLARE_FEATURE(kReduceHardwareVideoDecoderBuffers);
+ #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
+ MEDIA_EXPORT BASE_DECLARE_FEATURE(kResumeBackgroundVideo);
+@@ -345,7 +349,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUnifi
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseAndroidOverlayForSecureOnly);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseDecoderStreamForWebRTC);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseFakeDeviceForMediaStream);
@@ -37,7 +45,7 @@ $NetBSD$
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVideoDecodeLinux);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVideoDecodeLinuxGL);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVideoEncodeLinux);
-@@ -351,7 +355,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapi
+@@ -364,7 +368,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapi
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVp8TemporalLayerHWEncoding);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVp9SModeHWEncoding);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -46,7 +54,7 @@ $NetBSD$
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kV4L2FlatVideoDecoder);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kV4L2FlatStatefulVideoDecoder);
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-@@ -490,7 +494,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseOu
+@@ -506,7 +510,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseOu
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseGTFOOutOfProcessVideoDecoding);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  

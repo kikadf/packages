@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_posix.cc.orig	2024-05-21 22:42:46.644142400 +0000
+--- base/files/file_util_posix.cc.orig	2024-06-13 23:28:43.398650400 +0000
 +++ base/files/file_util_posix.cc
-@@ -810,33 +810,34 @@ bool CreateDirectoryAndGetError(const Fi
+@@ -819,33 +819,34 @@ bool CreateDirectoryAndGetError(const Fi
                                  File::Error* error) {
    ScopedBlockingCall scoped_blocking_call(
        FROM_HERE, BlockingType::MAY_BLOCK);  // For call to mkdir().

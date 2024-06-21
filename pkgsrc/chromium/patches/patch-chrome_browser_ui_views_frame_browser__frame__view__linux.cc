@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2024-05-21 22:42:53.956794500 +0000
+--- chrome/browser/ui/views/frame/browser_frame_view_linux.cc.orig	2024-06-13 23:28:50.403279000 +0000
 +++ chrome/browser/ui/views/frame/browser_frame_view_linux.cc
 @@ -60,7 +60,7 @@ gfx::ShadowValues BrowserFrameViewLinux:
  

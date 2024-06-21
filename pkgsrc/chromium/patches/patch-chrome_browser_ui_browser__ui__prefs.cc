@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_ui_prefs.cc.orig	2024-05-21 22:42:53.676769500 +0000
+--- chrome/browser/ui/browser_ui_prefs.cc.orig	2024-06-13 23:28:50.107252600 +0000
 +++ chrome/browser/ui/browser_ui_prefs.cc
 @@ -175,7 +175,7 @@ void RegisterBrowserUserPrefs(user_prefs
    registry->RegisterDictionaryPref(prefs::kHttpsUpgradeFallbacks);

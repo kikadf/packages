@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2024-05-21 22:43:05.505824600 +0000
+--- mojo/public/cpp/platform/socket_utils_posix.cc.orig	2024-06-13 23:29:02.940404700 +0000
 +++ mojo/public/cpp/platform/socket_utils_posix.cc
 @@ -29,7 +29,7 @@ bool IsRecoverableError() {
  }

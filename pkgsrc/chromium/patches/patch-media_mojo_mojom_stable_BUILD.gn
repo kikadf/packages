@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/mojo/mojom/stable/BUILD.gn.orig	2024-05-21 22:43:05.057784600 +0000
+--- media/mojo/mojom/stable/BUILD.gn.orig	2024-06-13 23:29:02.468362300 +0000
 +++ media/mojo/mojom/stable/BUILD.gn
 @@ -196,7 +196,7 @@ source_set("unit_tests") {
    } else if (use_v4l2_codec) {

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2024-05-21 22:43:10.562275600 +0000
+--- third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc.orig	2024-06-13 23:29:08.136871000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_unique_name_lookup.cc
 @@ -9,7 +9,7 @@
  #if BUILDFLAG(IS_ANDROID)

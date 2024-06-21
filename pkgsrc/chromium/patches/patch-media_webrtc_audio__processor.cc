@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/audio_processor.cc.orig	2024-05-21 22:43:05.441819000 +0000
+--- media/webrtc/audio_processor.cc.orig	2024-06-13 23:29:02.880399200 +0000
 +++ media/webrtc/audio_processor.cc
 @@ -513,7 +513,7 @@ std::optional<double> AudioProcessor::Pr
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)

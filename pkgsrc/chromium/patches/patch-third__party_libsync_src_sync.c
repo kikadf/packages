@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/libsync/src/sync.c.orig	2024-05-21 22:45:49.952487000 +0000
+--- third_party/libsync/src/sync.c.orig	2024-06-13 23:30:00.741593600 +0000
 +++ third_party/libsync/src/sync.c
 @@ -17,8 +17,8 @@
   */

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/video_frame_submitter.cc.orig	2024-05-21 22:43:10.790295800 +0000
+--- third_party/blink/renderer/platform/graphics/video_frame_submitter.cc.orig	2024-06-13 23:29:08.208877600 +0000
 +++ third_party/blink/renderer/platform/graphics/video_frame_submitter.cc
 @@ -407,7 +407,7 @@ void VideoFrameSubmitter::OnBeginFrame(
        continue;

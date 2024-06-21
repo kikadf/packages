@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- net/disk_cache/simple/simple_file_tracker.cc.orig	2024-05-21 22:43:06.189885600 +0000
+--- net/disk_cache/simple/simple_file_tracker.cc.orig	2024-06-13 23:29:03.644467800 +0000
 +++ net/disk_cache/simple/simple_file_tracker.cc
 @@ -29,7 +29,17 @@ void RecordFileDescripterLimiterOp(FileD
  }  // namespace

@@ -1,16 +1,16 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/ml/webnn/features.gni.orig	2024-05-21 22:43:10.282250600 +0000
+--- third_party/blink/renderer/modules/ml/webnn/features.gni.orig	2024-06-13 23:29:07.864846700 +0000
 +++ third_party/blink/renderer/modules/ml/webnn/features.gni
-@@ -6,7 +6,7 @@ import("//build/config/chrome_build.gni"
- declare_args() {
+@@ -7,6 +7,6 @@ declare_args() {
    # This enables building WebNN with XNNPACK. Currently only available for
-   # Windows, macOS and Linux on x64, x86 and arm64.
--  build_webnn_with_xnnpack = (is_linux || is_win || is_mac) &&
-+  build_webnn_with_xnnpack = !is_bsd && (is_linux || is_win || is_mac) &&
-                              (current_cpu == "x64" || current_cpu == "x86" ||
-                               (current_cpu == "arm64" && !is_win))
+   # Windows and macOS on x64, x86 and arm64.
+   build_webnn_with_xnnpack =
+-      (is_win || is_mac) &&
++      !is_bsd && (is_win || is_mac) &&
+       (current_cpu == "x64" || current_cpu == "x86" || current_cpu == "arm64")
  }

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-05-21 22:43:04.969776900 +0000
+--- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2024-06-13 23:29:02.380354400 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
 @@ -68,7 +68,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
      const base::FilePath dev_path(FILE_PATH_LITERAL(
@@ -23,7 +24,7 @@ $NetBSD$
          false;
  #endif
      if (is_intel_media_compression_enabled) {
-@@ -349,7 +349,7 @@ scoped_refptr<VideoFrame> CreateVideoFra
+@@ -350,7 +350,7 @@ scoped_refptr<VideoFrame> CreateVideoFra
    const bool is_intel_media_compression_enabled =
  #if BUILDFLAG(IS_CHROMEOS)
        base::FeatureList::IsEnabled(features::kEnableIntelMediaCompression);

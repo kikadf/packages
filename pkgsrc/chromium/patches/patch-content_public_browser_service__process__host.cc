@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/public/browser/service_process_host.cc.orig	2024-05-21 22:43:01.437461900 +0000
+--- content/public/browser/service_process_host.cc.orig	2024-06-13 23:28:58.628017400 +0000
 +++ content/public/browser/service_process_host.cc
 @@ -70,7 +70,7 @@ ServiceProcessHost::Options::WithPreload
  

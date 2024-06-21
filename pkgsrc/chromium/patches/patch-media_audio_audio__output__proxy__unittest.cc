@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/audio/audio_output_proxy_unittest.cc.orig	2024-05-21 22:43:04.765758500 +0000
+--- media/audio/audio_output_proxy_unittest.cc.orig	2024-06-13 23:29:02.152334000 +0000
 +++ media/audio/audio_output_proxy_unittest.cc
 @@ -443,7 +443,11 @@ class AudioOutputProxyTest : public test
      // |stream| is closed at this point. Start() should reopen it again.

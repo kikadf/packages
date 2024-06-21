@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/pref_names.h.orig	2024-05-21 22:42:59.725309100 +0000
+--- components/supervised_user/core/common/pref_names.h.orig	2024-06-13 23:28:57.051876000 +0000
 +++ components/supervised_user/core/common/pref_names.h
-@@ -131,7 +131,7 @@ inline constexpr char kFirstTimeIntersti
+@@ -136,7 +136,7 @@ inline constexpr char kFirstTimeIntersti
      "profile.managed.banner_state";
  
  #if BUILDFLAG(ENABLE_EXTENSIONS)

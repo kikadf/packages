@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/memory/madv_free_discardable_memory_posix.cc.orig	2024-05-21 22:42:46.676145300 +0000
+--- base/memory/madv_free_discardable_memory_posix.cc.orig	2024-06-13 23:28:43.430653300 +0000
 +++ base/memory/madv_free_discardable_memory_posix.cc
-@@ -306,6 +306,10 @@ void MadvFreeDiscardableMemoryPosix::Set
+@@ -311,6 +311,10 @@ void MadvFreeDiscardableMemoryPosix::Set
  
  bool MadvFreeDiscardableMemoryPosix::IsResident() const {
    DFAKE_SCOPED_RECURSIVE_LOCK(thread_collision_warner_);
@@ -16,7 +17,7 @@ $NetBSD$
  #if BUILDFLAG(IS_APPLE)
    std::vector<char> vec(allocated_pages_);
  #else
-@@ -321,6 +325,7 @@ bool MadvFreeDiscardableMemoryPosix::IsR
+@@ -326,6 +330,7 @@ bool MadvFreeDiscardableMemoryPosix::IsR
        return false;
    }
    return true;

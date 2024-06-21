@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-05-21 22:45:05.488525400 +0000
+--- third_party/ffmpeg/libavutil/random_seed.c.orig	2024-06-13 23:29:42.763979700 +0000
 +++ third_party/ffmpeg/libavutil/random_seed.c
 @@ -20,6 +20,10 @@
  

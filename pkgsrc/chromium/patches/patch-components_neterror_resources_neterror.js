@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/neterror/resources/neterror.js.orig	2024-05-21 22:42:58.289181000 +0000
+--- components/neterror/resources/neterror.js.orig	2024-06-13 23:28:55.547741000 +0000
 +++ components/neterror/resources/neterror.js
 @@ -142,7 +142,7 @@ function detailsButtonClick() {
  

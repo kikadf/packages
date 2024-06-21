@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/native_library_unittest.cc.orig	2024-05-21 22:42:46.704147800 +0000
+--- base/native_library_unittest.cc.orig	2024-06-13 23:28:43.458655800 +0000
 +++ base/native_library_unittest.cc
 @@ -133,7 +133,7 @@ TEST(NativeLibraryTest, LoadLibrary) {
  // versions with respect to symbol resolution scope.

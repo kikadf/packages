@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/zlib/cpu_features.c.orig	2024-05-21 22:43:34.024368000 +0000
+--- third_party/zlib/cpu_features.c.orig	2024-06-13 23:29:29.230764900 +0000
 +++ third_party/zlib/cpu_features.c
 @@ -39,7 +39,8 @@ int ZLIB_INTERNAL riscv_cpu_enable_vclmu
  #ifndef CPU_NO_SIMD
@@ -49,7 +50,7 @@ $NetBSD$
 +    if (ID_AA64ISAR0_AES(cpu_id) >= ID_AA64ISAR0_AES_PMULL)
 +        arm_cpu_enable_pmull = 1;
 +
-+    if (ID_AA64ISAR0_AES(cpu_id) >= ID_AA64ISAR0_CRC32_BASE)
++    if (ID_AA64ISAR0_CRC32(cpu_id) >= ID_AA64ISAR0_CRC32_BASE)
 +        arm_cpu_enable_crc32 = 1;
  #elif defined(ARMV8_OS_FUCHSIA)
      uint32_t features;

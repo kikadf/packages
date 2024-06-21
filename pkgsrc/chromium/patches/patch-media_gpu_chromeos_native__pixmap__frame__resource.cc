@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/native_pixmap_frame_resource.cc.orig	2024-05-21 22:43:04.965776400 +0000
+--- media/gpu/chromeos/native_pixmap_frame_resource.cc.orig	2024-06-13 23:29:02.376354000 +0000
 +++ media/gpu/chromeos/native_pixmap_frame_resource.cc
-@@ -166,7 +166,7 @@ scoped_refptr<NativePixmapFrameResource>
+@@ -154,7 +154,7 @@ scoped_refptr<NativePixmapFrameResource>
    const bool is_intel_media_compression_enabled =
  #if BUILDFLAG(IS_CHROMEOS)
        base::FeatureList::IsEnabled(features::kEnableIntelMediaCompression);

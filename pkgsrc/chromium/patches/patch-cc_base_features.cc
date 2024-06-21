@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- cc/base/features.cc.orig	2024-05-21 22:42:47.056179000 +0000
+--- cc/base/features.cc.orig	2024-06-13 23:28:43.806686900 +0000
 +++ cc/base/features.cc
 @@ -88,7 +88,7 @@ BASE_FEATURE(kNormalPriorityImageDecodin
  // be using a separate flag to control the launch on GL.

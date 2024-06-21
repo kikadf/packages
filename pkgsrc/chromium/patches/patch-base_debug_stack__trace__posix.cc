@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace_posix.cc.orig	2024-05-21 22:42:46.632141400 +0000
+--- base/debug/stack_trace_posix.cc.orig	2024-06-13 23:28:43.390649600 +0000
 +++ base/debug/stack_trace_posix.cc
-@@ -40,8 +40,8 @@
+@@ -45,8 +45,8 @@
  // Surprisingly, uClibc defines __GLIBC__ in some build configs, but
  // execinfo.h and backtrace(3) are really only present in glibc and in macOS
  // libc.
@@ -16,7 +17,7 @@ $NetBSD$
  #define HAVE_BACKTRACE
  #include <execinfo.h>
  #endif
-@@ -59,8 +59,10 @@
+@@ -64,8 +64,10 @@
  #include <AvailabilityMacros.h>
  #endif
  
@@ -28,7 +29,7 @@ $NetBSD$
  
  #include "base/debug/proc_maps_linux.h"
  #endif
-@@ -301,7 +303,7 @@ void PrintToStderr(const char* output) {
+@@ -306,7 +308,7 @@ void PrintToStderr(const char* output) {
    std::ignore = HANDLE_EINTR(write(STDERR_FILENO, output, strlen(output)));
  }
  
@@ -37,7 +38,7 @@ $NetBSD$
  void AlarmSignalHandler(int signal, siginfo_t* info, void* void_context) {
    // We have seen rare cases on AMD linux where the default signal handler
    // either does not run or a thread (Probably an AMD driver thread) prevents
-@@ -318,7 +320,11 @@ void AlarmSignalHandler(int signal, sigi
+@@ -323,7 +325,11 @@ void AlarmSignalHandler(int signal, sigi
        "Warning: Default signal handler failed to terminate process.\n");
    PrintToStderr("Calling exit_group() directly to prevent timeout.\n");
    // See: https://man7.org/linux/man-pages/man2/exit_group.2.html
@@ -49,7 +50,7 @@ $NetBSD$
  }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -535,7 +541,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -540,7 +546,7 @@ void StackDumpSignalHandler(int signal, 
      _exit(EXIT_FAILURE);
    }
  
@@ -58,7 +59,7 @@ $NetBSD$
    // Set an alarm to trigger in case the default handler does not terminate
    // the process. See 'AlarmSignalHandler' for more details.
    struct sigaction action;
-@@ -560,6 +566,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -565,6 +571,7 @@ void StackDumpSignalHandler(int signal, 
    // signals that do not re-raise autonomously), such as signals delivered via
    // kill() and asynchronous hardware faults such as SEGV_MTEAERR, which would
    // otherwise be lost when re-raising the signal via raise().
@@ -66,7 +67,7 @@ $NetBSD$
    long retval = syscall(SYS_rt_tgsigqueueinfo, getpid(), syscall(SYS_gettid),
                          info->si_signo, info);
    if (retval == 0) {
-@@ -574,6 +581,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -579,6 +586,7 @@ void StackDumpSignalHandler(int signal, 
    if (errno != EPERM) {
      _exit(EXIT_FAILURE);
    }
@@ -74,7 +75,7 @@ $NetBSD$
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
  
-@@ -763,6 +771,7 @@ class SandboxSymbolizeHelper {
+@@ -768,6 +776,7 @@ class SandboxSymbolizeHelper {
      return -1;
    }
  
@@ -82,7 +83,7 @@ $NetBSD$
    // This class is copied from
    // third_party/crashpad/crashpad/util/linux/scoped_pr_set_dumpable.h.
    // It aims at ensuring the process is dumpable before opening /proc/self/mem.
-@@ -855,11 +864,15 @@ class SandboxSymbolizeHelper {
+@@ -860,11 +869,15 @@ class SandboxSymbolizeHelper {
        r.base = cur_base;
      }
    }
@@ -98,7 +99,7 @@ $NetBSD$
      // Reads /proc/self/maps.
      std::string contents;
      if (!ReadProcMaps(&contents)) {
-@@ -877,6 +890,7 @@ class SandboxSymbolizeHelper {
+@@ -882,6 +895,7 @@ class SandboxSymbolizeHelper {
  
      is_initialized_ = true;
      return true;

@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-05-21 22:43:29.651978000 +0000
+--- third_party/crashpad/crashpad/util/misc/uuid.cc.orig	2024-06-13 23:29:24.862372600 +0000
 +++ third_party/crashpad/crashpad/util/misc/uuid.cc
-@@ -102,7 +102,7 @@ bool UUID::InitializeWithNew() {
+@@ -110,7 +110,7 @@ bool UUID::InitializeWithNew() {
    InitializeFromBytes(uuid);
    return true;
  #elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

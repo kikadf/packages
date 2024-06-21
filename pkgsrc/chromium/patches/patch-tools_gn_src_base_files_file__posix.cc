@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/base/files/file_posix.cc.orig	2024-05-21 23:01:30.576340700 +0000
+--- tools/gn/src/base/files/file_posix.cc.orig	2024-06-13 23:40:12.544516000 +0000
 +++ tools/gn/src/base/files/file_posix.cc
 @@ -371,7 +371,7 @@ void File::DoInitialize(const FilePath& 
  bool File::Flush() {

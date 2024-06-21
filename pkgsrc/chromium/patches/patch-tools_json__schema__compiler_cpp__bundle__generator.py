@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2024-05-21 22:43:34.660425000 +0000
+--- tools/json_schema_compiler/cpp_bundle_generator.py.orig	2024-06-13 23:29:29.462785700 +0000
 +++ tools/json_schema_compiler/cpp_bundle_generator.py
 @@ -149,7 +149,7 @@ class CppBundleGenerator(object):
          # BUILDFLAG(IS_CHROMEOS) && BUILDFLAG(IS_CHROMEOS_LACROS).

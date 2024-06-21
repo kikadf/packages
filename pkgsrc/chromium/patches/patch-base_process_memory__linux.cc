@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/process/memory_linux.cc.orig	2024-05-21 22:42:46.716148900 +0000
+--- base/process/memory_linux.cc.orig	2024-06-13 23:28:43.474657300 +0000
 +++ base/process/memory_linux.cc
 @@ -28,6 +28,7 @@ void __libc_free(void*);
  
@@ -29,7 +30,7 @@ $NetBSD$
    std::set_new_handler(&ReleaseReservationOrTerminate);
    // If we're using glibc's allocator, the above functions will override
 @@ -51,8 +54,10 @@ void EnableTerminationOnOutOfMemory() {
- #if BUILDFLAG(USE_ALLOCATOR_SHIM)
+ #if PA_BUILDFLAG(USE_ALLOCATOR_SHIM)
    allocator_shim::SetCallNewHandlerOnMallocFailure(true);
  #endif
 +#endif
@@ -46,4 +47,4 @@ $NetBSD$
 +#endif
  
  bool UncheckedMalloc(size_t size, void** result) {
- #if BUILDFLAG(USE_ALLOCATOR_SHIM)
+ #if PA_BUILDFLAG(USE_ALLOCATOR_SHIM)

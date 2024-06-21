@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.cc.orig	2024-05-21 22:43:35.636511800 +0000
+--- ui/base/ui_base_switches.cc.orig	2024-06-13 23:29:30.498878700 +0000
 +++ ui/base/ui_base_switches.cc
 @@ -31,13 +31,13 @@ const char kShowMacOverlayBorders[] = "s
  const char kEnableResourcesFileSharing[] = "enable-resources-file-sharing";

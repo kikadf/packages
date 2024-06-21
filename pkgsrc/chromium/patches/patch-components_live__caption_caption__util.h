@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/live_caption/caption_util.h.orig	2024-05-21 22:42:58.157169000 +0000
+--- components/live_caption/caption_util.h.orig	2024-06-13 23:28:55.415729000 +0000
 +++ components/live_caption/caption_util.h
 @@ -15,7 +15,7 @@ class PrefService;
  namespace captions {

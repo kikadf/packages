@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.h.orig	2024-05-21 22:42:51.744597200 +0000
+--- chrome/browser/net/system_network_context_manager.h.orig	2024-06-13 23:28:48.159077600 +0000
 +++ chrome/browser/net/system_network_context_manager.h
-@@ -200,7 +200,7 @@ class SystemNetworkContextManager {
+@@ -197,7 +197,7 @@ class SystemNetworkContextManager {
    class URLLoaderFactoryForSystem;
    class NetworkProcessLaunchWatcher;
  
@@ -14,7 +15,7 @@ $NetBSD$
    class GssapiLibraryLoadObserver
        : public network::mojom::GssapiLibraryLoadObserver {
     public:
-@@ -236,7 +236,7 @@ class SystemNetworkContextManager {
+@@ -233,7 +233,7 @@ class SystemNetworkContextManager {
    void UpdateExplicitlyAllowedNetworkPorts();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -23,9 +24,9 @@ $NetBSD$
    // Applies the current value of the kEnforceLocalAnchorConstraintsEnabled
    // pref to the enforcement state.
    void UpdateEnforceLocalAnchorConstraintsEnabled();
-@@ -286,7 +286,7 @@ class SystemNetworkContextManager {
- 
+@@ -285,7 +285,7 @@ class SystemNetworkContextManager {
    std::unique_ptr<NetworkAnnotationMonitor> network_annotation_monitor_;
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

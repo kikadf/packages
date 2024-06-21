@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/utility/services.cc.orig	2024-05-21 22:43:02.113522000 +0000
+--- content/utility/services.cc.orig	2024-06-13 23:28:59.308078500 +0000
 +++ content/utility/services.cc
 @@ -74,7 +74,7 @@
  extern sandbox::TargetServices* g_utility_target_services;

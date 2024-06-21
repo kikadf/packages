@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.h.orig	2024-05-21 22:43:04.737756000 +0000
+--- ipc/ipc_channel.h.orig	2024-06-13 23:29:02.128331700 +0000
 +++ ipc/ipc_channel.h
-@@ -240,7 +240,7 @@ class COMPONENT_EXPORT(IPC) Channel : pu
+@@ -218,7 +218,7 @@ class COMPONENT_EXPORT(IPC) Channel : pu
    static std::string GenerateUniqueRandomChannelID();
  #endif
  

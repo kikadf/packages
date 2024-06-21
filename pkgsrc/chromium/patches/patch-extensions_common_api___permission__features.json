@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- extensions/common/api/_permission_features.json.orig	2024-05-21 22:43:02.709575200 +0000
+--- extensions/common/api/_permission_features.json.orig	2024-06-13 23:28:59.884130200 +0000
 +++ extensions/common/api/_permission_features.json
 @@ -138,7 +138,7 @@
      {

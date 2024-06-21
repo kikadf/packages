@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc.orig	2024-05-21 22:42:59.197262000 +0000
+--- components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc.orig	2024-06-13 23:28:56.491825800 +0000
 +++ components/safe_browsing/core/browser/db/v4_protocol_manager_util.cc
-@@ -116,7 +116,7 @@ std::ostream& operator<<(std::ostream& o
+@@ -118,7 +118,7 @@ std::ostream& operator<<(std::ostream& o
  PlatformType GetCurrentPlatformType() {
  #if BUILDFLAG(IS_WIN)
    return WINDOWS_PLATFORM;

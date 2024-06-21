@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- base/posix/unix_domain_socket.cc.orig	2024-05-21 22:42:46.712148400 +0000
+--- base/posix/unix_domain_socket.cc.orig	2024-06-13 23:28:43.466656400 +0000
 +++ base/posix/unix_domain_socket.cc
-@@ -51,7 +51,7 @@ bool CreateSocketPair(ScopedFD* one, Sco
+@@ -56,7 +56,7 @@ bool CreateSocketPair(ScopedFD* one, Sco
  
  // static
  bool UnixDomainSocket::EnableReceiveProcessId(int fd) {
@@ -14,7 +15,7 @@ $NetBSD$
    const int enable = 1;
    return setsockopt(fd, SOL_SOCKET, SO_PASSCRED, &enable, sizeof(enable)) == 0;
  #else
-@@ -77,7 +77,7 @@ bool UnixDomainSocket::SendMsg(int fd,
+@@ -82,7 +82,7 @@ bool UnixDomainSocket::SendMsg(int fd,
  
      struct cmsghdr* cmsg;
      msg.msg_control = control_buffer;
@@ -23,7 +24,7 @@ $NetBSD$
      msg.msg_controllen = checked_cast<socklen_t>(control_len);
  #else
      msg.msg_controllen = control_len;
-@@ -85,7 +85,7 @@ bool UnixDomainSocket::SendMsg(int fd,
+@@ -90,7 +90,7 @@ bool UnixDomainSocket::SendMsg(int fd,
      cmsg = CMSG_FIRSTHDR(&msg);
      cmsg->cmsg_level = SOL_SOCKET;
      cmsg->cmsg_type = SCM_RIGHTS;
@@ -32,7 +33,7 @@ $NetBSD$
      cmsg->cmsg_len = checked_cast<u_int>(CMSG_LEN(sizeof(int) * fds.size()));
  #else
      cmsg->cmsg_len = CMSG_LEN(sizeof(int) * fds.size());
-@@ -149,7 +149,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
+@@ -154,7 +154,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
  
    const size_t kControlBufferSize =
        CMSG_SPACE(sizeof(int) * kMaxFileDescriptors)
@@ -41,7 +42,7 @@ $NetBSD$
        // macOS does not support ucred.
        // macOS supports xucred, but this structure is insufficient.
        + CMSG_SPACE(sizeof(struct ucred))
-@@ -177,7 +177,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
+@@ -182,7 +182,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
          wire_fds = reinterpret_cast<int*>(CMSG_DATA(cmsg));
          wire_fds_len = payload_len / sizeof(int);
        }
@@ -50,7 +51,7 @@ $NetBSD$
        // macOS does not support SCM_CREDENTIALS.
        if (cmsg->cmsg_level == SOL_SOCKET &&
            cmsg->cmsg_type == SCM_CREDENTIALS) {
-@@ -211,6 +211,9 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
+@@ -216,6 +216,9 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
      socklen_t pid_size = sizeof(pid);
      if (getsockopt(fd, SOL_LOCAL, LOCAL_PEERPID, &pid, &pid_size) != 0)
        pid = -1;

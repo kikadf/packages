@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc.orig	2024-05-21 22:42:54.452839000 +0000
+--- chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc.orig	2024-06-13 23:28:50.943327700 +0000
 +++ chrome/browser/web_applications/os_integration/shortcut_sub_manager.cc
 @@ -182,7 +182,7 @@ void ShortcutSubManager::Execute(
      return;

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/translate/core/common/translate_util.cc.orig	2024-05-21 22:43:00.417370800 +0000
+--- components/translate/core/common/translate_util.cc.orig	2024-06-13 23:28:57.615926700 +0000
 +++ components/translate/core/common/translate_util.cc
 @@ -21,7 +21,7 @@ const char kSecurityOrigin[] = "https://
  BASE_FEATURE(kTFLiteLanguageDetectionEnabled,

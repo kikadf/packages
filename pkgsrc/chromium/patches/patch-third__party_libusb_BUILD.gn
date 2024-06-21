@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/libusb/BUILD.gn.orig	2024-05-21 22:43:30.548058000 +0000
+--- third_party/libusb/BUILD.gn.orig	2024-06-13 23:29:25.794456200 +0000
 +++ third_party/libusb/BUILD.gn
 @@ -3,7 +3,7 @@
  # found in the LICENSE file.

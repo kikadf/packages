@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser.h.orig	2024-05-21 22:42:53.664768500 +0000
+--- chrome/browser/ui/browser.h.orig	2024-06-13 23:28:50.087250700 +0000
 +++ chrome/browser/ui/browser.h
-@@ -327,7 +327,7 @@ class Browser : public TabStripModelObse
+@@ -329,7 +329,7 @@ class Browser : public TabStripModelObse
      std::optional<int64_t> display_id;
  #endif
  

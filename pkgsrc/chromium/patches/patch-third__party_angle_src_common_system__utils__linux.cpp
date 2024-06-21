@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/system_utils_linux.cpp.orig	2024-05-21 22:43:57.970503800 +0000
+--- third_party/angle/src/common/system_utils_linux.cpp.orig	2024-06-13 23:29:39.471684200 +0000
 +++ third_party/angle/src/common/system_utils_linux.cpp
 @@ -15,8 +15,15 @@
  

@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/public/features.h.orig	2024-05-21 22:42:58.625211000 +0000
+--- components/performance_manager/public/features.h.orig	2024-06-13 23:28:55.883771200 +0000
 +++ components/performance_manager/public/features.h
 @@ -28,7 +28,7 @@ BASE_DECLARE_FEATURE(kRunOnMainThreadSyn
  

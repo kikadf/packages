@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2024-05-21 22:42:52.780689700 +0000
+--- chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc.orig	2024-06-13 23:28:49.175169000 +0000
 +++ chrome/browser/safe_browsing/cloud_content_scanning/binary_upload_service.cc
 @@ -18,7 +18,7 @@
  #include "net/base/url_util.h"
@@ -14,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/connectors/analysis/local_binary_upload_service_factory.h"
  #endif
  
-@@ -423,7 +423,7 @@ BinaryUploadService* BinaryUploadService
+@@ -434,7 +434,7 @@ BinaryUploadService* BinaryUploadService
      Profile* profile,
      const enterprise_connectors::AnalysisSettings& settings) {
    // Local content analysis is supported only on desktop platforms.

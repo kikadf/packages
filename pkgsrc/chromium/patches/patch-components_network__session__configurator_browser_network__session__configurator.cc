@@ -1,11 +1,12 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/network_session_configurator/browser/network_session_configurator.cc.orig	2024-05-21 22:42:58.293181400 +0000
+--- components/network_session_configurator/browser/network_session_configurator.cc.orig	2024-06-13 23:28:55.547741000 +0000
 +++ components/network_session_configurator/browser/network_session_configurator.cc
-@@ -817,7 +817,7 @@ net::URLRequestContextBuilder::HttpCache
+@@ -825,7 +825,7 @@ net::URLRequestContextBuilder::HttpCache
    // backport, having it behave differently than in stable would be a bigger
    // problem. TODO: Does this work in later macOS releases?
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

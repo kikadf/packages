@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2024-05-21 22:43:00.893413300 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2024-06-13 23:28:58.107971000 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.h
 @@ -150,7 +150,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
    void OnDisplayMetricsChanged(const display::Display& display,

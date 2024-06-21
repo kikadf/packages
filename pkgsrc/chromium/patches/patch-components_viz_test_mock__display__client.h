@@ -1,9 +1,10 @@
 $NetBSD$
 
-* Part of patchset to build on NetBSD
-* Based on OpenBSD's chromium patches
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/mock_display_client.h.orig	2024-05-21 22:43:00.625389300 +0000
+--- components/viz/test/mock_display_client.h.orig	2024-06-13 23:28:57.819945000 +0000
 +++ components/viz/test/mock_display_client.h
 @@ -43,7 +43,7 @@ class MockDisplayClient : public mojom::
    MOCK_METHOD1(SetWideColorEnabled, void(bool enabled));
