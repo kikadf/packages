@@ -152,6 +152,7 @@ GN_ARGS+=	is_component_build=false
 CFLAGS+=	-fno-stack-protector
 CFLAGS+=	-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
 CFLAGS+=	-Wno-error=unused-command-line-argument
+CFLAGS+=	-Wno-unknown-warning-option
 
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		-L${X11BASE}/lib \
