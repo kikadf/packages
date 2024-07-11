@@ -77,6 +77,7 @@ SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
+SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	chrome.sh
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
