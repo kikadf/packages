@@ -26,10 +26,10 @@ index 7e43efa..1e2396f 100644
  [[package]]
  name = "alpm"
 -version = "2.1.0"
-+version = "3.0.5"
++version = "3.0.4"
  source = "registry+https://github.com/rust-lang/crates.io-index"
 -checksum = "fb56c7e8cb05fcc3d089ae26c14a5f44902877cb23bdc76fffd04e17c4985de0"
-+checksum = "310ec5dc25b236ee96bebf975af2d2de85e61001a7c39a0a7436a414ff3f6490"
++checksum = "ba70e959cfac8c2737c1fee48f0b3a21cb5cfcf800d71504b10578c8dbaa8519"
  dependencies = [
   "alpm-sys",
 - "bitflags",
@@ -107,7 +107,7 @@ index 2fcef96..38d51bf 100644
  
  [dependencies]
 -alpm = "^2.0"
-+alpm = "^3.0"
++alpm = { version = "^3.0", features = [ "generate" ] }
  anyhow = "^1.0"
  atty = "^0.2"
  reqwest = { version = "^0.11", default-features = false, features = ["rustls-tls-native-roots", "socks", "gzip", "brotli"] }

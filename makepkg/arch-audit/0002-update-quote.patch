@@ -1,0 +1,28 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 7e43efa..51f9223 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -704,9 +704,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "quote"
+-version = "1.0.9"
++version = "1.0.36"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "c3d0b9745dc2debf507c8422de05d7226cc1f0644216dfdfead988f9b1ab32a7"
++checksum = "0fa76aaf39101c457836aec0ce2316dbdc3ab723cdda1c6bd4e6ad4208acaca7"
+ dependencies = [
+  "proc-macro2",
+ ]
+@@ -1032,9 +1032,9 @@ checksum = "aaf86bbcfd1fa9670b7a129f64fc0c9fcbbfe4f1bc4210e9e98fe71ffc12cde2"
+ 
+ [[package]]
+ name = "strum_macros"
+-version = "0.21.1"
++version = "0.26.4"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "d06aaeeee809dbc59eb4556183dd927df67db1540de5be8d3ec0b6636358a5ec"
++checksum = "4c6bee85a5a24955dc440386795aa378cd9cf82acd5f764469152d2270e581be"
+ dependencies = [
+  "heck",
+  "proc-macro2",
