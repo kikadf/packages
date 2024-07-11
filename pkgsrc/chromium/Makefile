@@ -113,8 +113,6 @@ GN_SYSTEM_LIBS+=	libxslt
 GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
-GN_ARGS+=	is_official_build=true
-GN_ARGS+=	is_debug=false
 GN_ARGS+=	enable_nacl=false
 GN_ARGS+=	is_cfi=false
 GN_ARGS+=	optimize_webui=true
