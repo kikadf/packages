@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_shortcut_manager.cc.orig	2024-06-13 23:28:50.951328300 +0000
-+++ chrome/browser/web_applications/os_integration/web_app_shortcut_manager.cc
-@@ -441,7 +441,7 @@ std::unique_ptr<ShortcutInfo> WebAppShor
+--- chrome/browser/web_applications/os_integration/os_integration_manager.cc.orig	2024-07-24 02:44:30.404177700 +0000
++++ chrome/browser/web_applications/os_integration/os_integration_manager.cc
+@@ -651,7 +651,7 @@ std::unique_ptr<ShortcutInfo> OsIntegrat
      }
    }
  

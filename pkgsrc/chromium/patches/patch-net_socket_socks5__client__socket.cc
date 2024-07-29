@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/socks5_client_socket.cc.orig	2024-06-13 23:29:04.264523500 +0000
+--- net/socket/socks5_client_socket.cc.orig	2024-07-24 02:44:43.077405200 +0000
 +++ net/socket/socks5_client_socket.cc
-@@ -19,6 +19,9 @@
+@@ -24,6 +24,9 @@
  #include "net/log/net_log_event_type.h"
  #include "net/traffic_annotation/network_traffic_annotation.h"
  

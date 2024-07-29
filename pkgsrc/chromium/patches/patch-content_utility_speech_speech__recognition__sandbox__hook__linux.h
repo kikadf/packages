@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/speech/speech_recognition_sandbox_hook_linux.h.orig	2024-06-13 23:28:59.308078500 +0000
+--- content/utility/speech/speech_recognition_sandbox_hook_linux.h.orig	2024-07-24 02:44:38.328945400 +0000
 +++ content/utility/speech/speech_recognition_sandbox_hook_linux.h
 @@ -5,7 +5,13 @@
  #ifndef CONTENT_UTILITY_SPEECH_SPEECH_RECOGNITION_SANDBOX_HOOK_LINUX_H_

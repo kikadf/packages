@@ -4,9 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.cc.orig	2024-06-13 23:28:51.275357500 +0000
+--- chrome/common/webui_url_constants.cc.orig	2024-07-24 02:44:30.544191400 +0000
 +++ chrome/common/webui_url_constants.cc
-@@ -518,18 +518,18 @@ const char kOsUISystemURL[] = "os://syst
+@@ -259,7 +259,7 @@ const char kChromeUIVersionURL[] = "chro
+ const char kChromeUIWelcomeHost[] = "welcome";
+ const char kChromeUIWelcomeURL[] = "chrome://welcome/";
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ const char kChromeUIWhatsNewHost[] = "whats-new";
+ const char kChromeUIWhatsNewURL[] = "chrome://whats-new/";
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -523,18 +523,18 @@ const char kOsUISystemURL[] = "os://syst
  const char kOsUIVersionURL[] = "os://version";
  #endif
  
@@ -28,7 +37,7 @@ $NetBSD$
  const char kChromeUIDiscardsHost[] = "discards";
  const char kChromeUIDiscardsURL[] = "chrome://discards/";
  #endif
-@@ -544,14 +544,14 @@ const char kChromeUILinuxProxyConfigHost
+@@ -549,14 +549,14 @@ const char kChromeUILinuxProxyConfigHost
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -45,7 +54,7 @@ $NetBSD$
  const char kChromeUIBrowserSwitchHost[] = "browser-switch";
  const char kChromeUIBrowserSwitchURL[] = "chrome://browser-switch/";
  const char kChromeUIIntroHost[] = "intro";
-@@ -570,7 +570,7 @@ const char kChromeUIProfilePickerUrl[] =
+@@ -575,7 +575,7 @@ const char kChromeUIProfilePickerUrl[] =
  const char kChromeUIProfilePickerStartupQuery[] = "startup";
  #endif
  
@@ -54,7 +63,7 @@ $NetBSD$
       defined(TOOLKIT_VIEWS)) ||                         \
      defined(USE_AURA)
  const char kChromeUITabModalConfirmDialogHost[] = "tab-modal-confirm-dialog";
-@@ -649,7 +649,7 @@ const char kTrackingProtectionSubPagePat
+@@ -654,7 +654,7 @@ const char kTrackingProtectionSubPagePat
  const char kCookiesSubPagePath[] = "/cookies";
  #endif
  
@@ -63,7 +72,7 @@ $NetBSD$
  const char kChromeUIWebAppSettingsURL[] = "chrome://app-settings/";
  const char kChromeUIWebAppSettingsHost[] = "app-settings";
  #endif
-@@ -795,21 +795,21 @@ const char* const kChromeHostURLs[] = {
+@@ -802,21 +802,21 @@ const char* const kChromeHostURLs[] = {
      kChromeUIAssistantOptInHost,
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -89,7 +98,7 @@ $NetBSD$
      kChromeUISandboxHost,
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -876,7 +876,7 @@ const char* const kChromeDebugURLs[] = {
+@@ -883,7 +883,7 @@ const char* const kChromeDebugURLs[] = {
      blink::kChromeUIGpuJavaCrashURL,
      kChromeUIJavaCrashURL,
  #endif

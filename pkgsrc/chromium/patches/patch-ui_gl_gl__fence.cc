@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_fence.cc.orig	2024-06-13 23:29:30.990922700 +0000
+--- ui/gl/gl_fence.cc.orig	2024-07-24 02:45:10.680079000 +0000
 +++ ui/gl/gl_fence.cc
 @@ -20,7 +20,7 @@
  #endif

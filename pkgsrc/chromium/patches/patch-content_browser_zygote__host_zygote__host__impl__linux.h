@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2024-06-13 23:28:58.512007000 +0000
+--- content/browser/zygote_host/zygote_host_impl_linux.h.orig	2024-07-24 02:44:37.540869000 +0000
 +++ content/browser/zygote_host/zygote_host_impl_linux.h
 @@ -47,12 +47,14 @@ class CONTENT_EXPORT ZygoteHostImpl : pu
                       base::ScopedFD* control_fd,

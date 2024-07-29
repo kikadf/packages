@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2024-06-13 23:28:47.286999500 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2024-07-24 02:44:26.831831700 +0000
 +++ chrome/browser/browser_process_impl.cc
-@@ -229,7 +229,7 @@
+@@ -228,7 +228,7 @@
  #include "chrome/browser/ui/profiles/profile_picker.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/error_reporting/chrome_js_error_report_processor.h"  // nogncheck
  #endif
  
-@@ -1284,7 +1284,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1282,7 +1282,7 @@ void BrowserProcessImpl::PreMainMessageL
  
    ApplyMetricsReportingPolicy();
  
@@ -24,7 +24,7 @@ $NetBSD$
    ChromeJsErrorReportProcessor::Create();
  #endif
  
-@@ -1617,7 +1617,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1615,7 +1615,7 @@ void BrowserProcessImpl::Unpin() {
  // Mac is currently not supported.
  // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is
  // complete.

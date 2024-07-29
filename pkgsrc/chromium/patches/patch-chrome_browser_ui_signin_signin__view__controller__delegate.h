@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller_delegate.h.orig	2024-06-13 23:28:50.255266000 +0000
+--- chrome/browser/ui/signin/signin_view_controller_delegate.h.orig	2024-07-24 02:44:29.644104000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller_delegate.h
-@@ -81,7 +81,7 @@ class SigninViewControllerDelegate {
+@@ -83,7 +83,7 @@ class SigninViewControllerDelegate {
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT) || BUILDFLAG(IS_CHROMEOS_LACROS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

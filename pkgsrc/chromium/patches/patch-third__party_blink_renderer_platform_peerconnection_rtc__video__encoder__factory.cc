@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2024-06-13 23:29:08.288884900 +0000
+--- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2024-07-24 02:44:46.917777300 +0000
 +++ third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc
-@@ -285,12 +285,12 @@ SupportedFormats GetSupportedFormatsInte
+@@ -254,12 +254,12 @@ SupportedFormats GetSupportedFormatsInte
        supported_formats.scalability_modes.push_back(profile.scalability_modes);
        supported_formats.sdp_formats.push_back(std::move(*format));
  

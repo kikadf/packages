@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2024-06-13 23:29:05.008590200 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h.orig	2024-07-24 02:44:43.825477800 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h
 @@ -45,7 +45,7 @@ class COMPONENT_EXPORT(
                                      mojom::RawOSMemDump*);

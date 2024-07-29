@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame.cc.orig	2024-06-13 23:28:50.399278900 +0000
+--- chrome/browser/ui/views/frame/browser_frame.cc.orig	2024-07-24 02:44:29.772116400 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.cc
 @@ -54,7 +54,7 @@
  #include "components/user_manager/user_manager.h"

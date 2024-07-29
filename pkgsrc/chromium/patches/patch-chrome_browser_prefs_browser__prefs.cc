@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/prefs/browser_prefs.cc.orig	2024-06-13 23:28:48.427101900 +0000
+--- chrome/browser/prefs/browser_prefs.cc.orig	2024-07-24 02:44:27.983943200 +0000
 +++ chrome/browser/prefs/browser_prefs.cc
 @@ -489,18 +489,18 @@
  #endif
@@ -37,7 +37,7 @@ $NetBSD$
  #include "ui/color/system_theme.h"
  #endif
  
-@@ -1861,7 +1861,7 @@ void RegisterLocalState(PrefRegistrySimp
+@@ -1953,7 +1953,7 @@ void RegisterLocalState(PrefRegistrySimp
                                  true);
  #endif  // BUILDFLAG(ENABLE_PDF)
  
@@ -46,7 +46,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kChromeForTestingAllowed, true);
  #endif
  
-@@ -2213,12 +2213,12 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -2309,12 +2309,12 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

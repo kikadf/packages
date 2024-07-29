@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/zygote/zygote_linux.cc.orig	2024-06-13 23:28:59.324080000 +0000
+--- content/zygote/zygote_linux.cc.orig	2024-07-24 02:44:38.344946900 +0000
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@
  // Copyright 2012 The Chromium Authors
@@ -12,9 +12,9 @@ $NetBSD$
  // found in the LICENSE file.
 +#if 0
  
- #include "content/zygote/zygote_linux.h"
- 
-@@ -718,3 +719,4 @@ void Zygote::HandleReinitializeLoggingRe
+ #ifdef UNSAFE_BUFFERS_BUILD
+ // TODO(crbug.com/342213636): Remove this and spanify to fix the errors.
+@@ -723,3 +724,4 @@ void Zygote::HandleReinitializeLoggingRe
  }
  
  }  // namespace content

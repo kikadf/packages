@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-06-13 23:29:31.282949000 +0000
+--- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2024-07-24 02:45:10.964106300 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc
 @@ -48,7 +48,7 @@
  #include "ui/wm/core/window_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
        std::make_unique<DesktopDragDropClientOzoneLinux>(window(), drag_handler);
  #else
        std::make_unique<DesktopDragDropClientOzone>(window(), drag_handler);
-@@ -1142,7 +1142,7 @@ bool DesktopWindowTreeHostPlatform::Rota
+@@ -1162,7 +1162,7 @@ bool DesktopWindowTreeHostPlatform::Rota
  // DesktopWindowTreeHost:
  
  // Linux subclasses this host and adds some Linux specific bits.

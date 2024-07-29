@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.cc.orig	2024-06-13 23:28:49.479196300 +0000
+--- chrome/browser/task_manager/sampling/task_group.cc.orig	2024-07-24 02:44:29.040045500 +0000
 +++ chrome/browser/task_manager/sampling/task_group.cc
 @@ -38,7 +38,7 @@ const int kBackgroundRefreshTypesMask =
  #if BUILDFLAG(IS_WIN)

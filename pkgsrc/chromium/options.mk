@@ -4,7 +4,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.chromium
 PKG_OPTIONS_REQUIRED_GROUPS=	audio
 PKG_OPTIONS_GROUP.audio=	alsa pulseaudio
 PKG_SUPPORTED_OPTIONS+=		debug
-PKG_SUGGESTED_OPTIONS=		pulseaudio debug
+PKG_SUGGESTED_OPTIONS=		pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
@@ -21,14 +21,14 @@ GN_ARGS+=	use_pulseaudio=true
 .if !empty(PKG_OPTIONS:Mdebug)
 BUILDTYPE=		Debug
 GN_ARGS+=		is_debug=true
-GN_ARGS+=		is_component_build=false
 GN_ARGS+=		symbol_level=1
 GN_BOOTSTRAP_FLAGS+=	--debug
-GN_VERBOSE=		-v
+GN_VERBOSE=		#-v
 INSTALL_UNSTRIPPED=	yes
 .else
 BUILDTYPE=		Release
 GN_ARGS+=		is_official_build=true
+GN_ARGS+=		is_component_build=false
 GN_ARGS+=		is_debug=false
 GN_ARGS+=		blink_symbol_level=0
 GN_ARGS+=		symbol_level=0

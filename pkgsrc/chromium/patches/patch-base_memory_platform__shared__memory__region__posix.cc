@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region_posix.cc.orig	2024-06-13 23:28:43.434653500 +0000
+--- base/memory/platform_shared_memory_region_posix.cc.orig	2024-07-24 02:44:22.599421700 +0000
 +++ base/memory/platform_shared_memory_region_posix.cc
 @@ -55,7 +55,7 @@ bool CheckFDAccessMode(int fd, int expec
  

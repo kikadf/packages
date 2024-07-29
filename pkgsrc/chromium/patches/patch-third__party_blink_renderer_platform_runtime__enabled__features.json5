@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-06-13 23:29:08.292885000 +0000
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-07-24 02:44:46.921777700 +0000
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
-@@ -325,7 +325,7 @@
+@@ -324,7 +324,7 @@
        name: "AppTitle",
        status: "experimental",
        origin_trial_feature_name: "AppTitle",
@@ -15,7 +15,7 @@ $NetBSD$
        base_feature: "WebAppEnableAppTitle",
      },
      {
-@@ -1517,7 +1517,7 @@
+@@ -1528,7 +1528,7 @@
        status: "test",
        base_feature: "none",
        origin_trial_feature_name: "FedCmContinueOnBundle",
@@ -24,7 +24,7 @@ $NetBSD$
        origin_trial_allows_third_party: true,
      },
      {
-@@ -1534,7 +1534,7 @@
+@@ -1545,7 +1545,7 @@
        status: "test",
        base_feature: "none",
        origin_trial_feature_name: "FedCmButtonMode",
@@ -33,7 +33,7 @@ $NetBSD$
        origin_trial_allows_third_party: true,
      },
      {
-@@ -1579,7 +1579,7 @@
+@@ -1590,7 +1590,7 @@
        base_feature: "none",
        public: true,
        origin_trial_feature_name: "FedCmMultipleIdentityProviders",
@@ -42,7 +42,7 @@ $NetBSD$
        origin_trial_allows_third_party: true,
      },
      {
-@@ -1919,7 +1919,7 @@
+@@ -1928,7 +1928,7 @@
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
        origin_trial_feature_name: "FullscreenPopupWindows",
@@ -51,7 +51,7 @@ $NetBSD$
      },
      {
        name: "GamepadButtonAxisEvents",
-@@ -2983,7 +2983,7 @@
+@@ -3005,7 +3005,7 @@
        // Tracking bug for the implementation: https://crbug.com/1462930
        name: "PermissionElement",
        origin_trial_feature_name: "PermissionElement",
@@ -60,7 +60,7 @@ $NetBSD$
        status: "experimental",
        public: true,
        base_feature_status: "enabled",
-@@ -3118,7 +3118,7 @@
+@@ -3140,7 +3140,7 @@
      {
        name: "PrivateNetworkAccessPermissionPrompt",
        origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
@@ -69,7 +69,7 @@ $NetBSD$
        status: "stable",
        public: true,
        base_feature: "none",
-@@ -4068,7 +4068,7 @@
+@@ -4116,7 +4116,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -78,7 +78,7 @@ $NetBSD$
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -4237,7 +4237,7 @@
+@@ -4285,7 +4285,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",
@@ -87,7 +87,7 @@ $NetBSD$
        status: "experimental",
        base_feature: "none",
      },
-@@ -4280,7 +4280,7 @@
+@@ -4328,7 +4328,7 @@
        status: "experimental",
        base_feature: "none",
        origin_trial_feature_name: "WebAppUrlHandling",

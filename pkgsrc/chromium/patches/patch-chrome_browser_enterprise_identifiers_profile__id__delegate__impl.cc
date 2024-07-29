@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc.orig	2024-06-13 23:28:47.575025300 +0000
+--- chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc.orig	2024-07-24 02:44:27.127860300 +0000
 +++ chrome/browser/enterprise/identifiers/profile_id_delegate_impl.cc
 @@ -13,7 +13,7 @@
  #include "components/enterprise/browser/identifiers/identifiers_prefs.h"

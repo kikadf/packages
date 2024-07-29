@@ -4,9 +4,18 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-06-13 23:29:02.872398600 +0000
+--- media/video/gpu_memory_buffer_video_frame_pool.cc.orig	2024-07-24 02:44:41.641266000 +0000
 +++ media/video/gpu_memory_buffer_video_frame_pool.cc
-@@ -758,7 +758,7 @@ void GpuMemoryBufferVideoFramePool::Pool
+@@ -107,7 +107,7 @@ class GpuMemoryBufferVideoFramePool::Poo
+                 gpu::SHARED_IMAGE_USAGE_RASTER_READ |
+                 gpu::SHARED_IMAGE_USAGE_DISPLAY_READ |
+                 gpu::SHARED_IMAGE_USAGE_SCANOUT;
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+     // TODO(crbug.com/40194712): Always add the flag once the
+     // OzoneImageBacking is by default turned on.
+     if (base::CommandLine::ForCurrentProcess()->HasSwitch(
+@@ -802,7 +802,7 @@ void GpuMemoryBufferVideoFramePool::Pool
    }
  
    bool is_software_backed_video_frame = !video_frame->HasTextures();
@@ -15,21 +24,12 @@ $NetBSD$
    is_software_backed_video_frame &= !video_frame->HasDmaBufs();
  #endif
  
-@@ -1234,7 +1234,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
-         gpu_memory_buffer->CloneHandle().io_surface.get());
+@@ -1347,7 +1347,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
+         media::IOSurfaceIsWebGPUCompatible(handle.io_surface.get());
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      is_webgpu_compatible =
-         gpu_memory_buffer->CloneHandle()
-             .native_pixmap_handle.supports_zero_copy_webgpu_import;
-@@ -1250,7 +1250,7 @@ scoped_refptr<VideoFrame> GpuMemoryBuffe
-                        gpu::SHARED_IMAGE_USAGE_DISPLAY_READ |
-                        gpu::SHARED_IMAGE_USAGE_SCANOUT;
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
-       // TODO(crbug.com/40194712): Always add the flag once the
-       // OzoneImageBacking is by default turned on.
-       if (base::CommandLine::ForCurrentProcess()->HasSwitch(
+         handle.native_pixmap_handle.supports_zero_copy_webgpu_import;
+ #endif

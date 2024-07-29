@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/accessibility_main_handler.cc.orig	2024-06-13 23:28:50.811315800 +0000
+--- chrome/browser/ui/webui/settings/accessibility_main_handler.cc.orig	2024-07-24 02:44:30.276165200 +0000
 +++ chrome/browser/ui/webui/settings/accessibility_main_handler.cc
 @@ -19,7 +19,7 @@
  #include "content/public/browser/web_contents.h"
@@ -30,7 +30,7 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
-   if (features::IsPdfOcrEnabled()) {
+   if (features::IsPdfOcrEnabled() || features::IsMainNodeAnnotationsEnabled()) {
      CHECK(!component_ready_observer_.IsObserving());
      component_ready_observer_.Observe(
 @@ -70,14 +70,14 @@ void AccessibilityMainHandler::OnJavascr
@@ -39,7 +39,7 @@ $NetBSD$
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
-   if (features::IsPdfOcrEnabled()) {
+   if (features::IsPdfOcrEnabled() || features::IsMainNodeAnnotationsEnabled()) {
      component_ready_observer_.Reset();
    }
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2024-06-13 23:28:44.562754900 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2024-07-24 02:44:23.755533700 +0000
 +++ chrome/app/chrome_main_delegate.cc
-@@ -137,7 +137,7 @@
+@@ -138,7 +138,7 @@
  #include "components/about_ui/credit_utils.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/nacl/common/nacl_paths.h"
  #include "components/nacl/zygote/nacl_fork_delegate_linux.h"
  #endif
-@@ -180,21 +180,21 @@
+@@ -182,21 +182,21 @@
  #include "v8/include/v8.h"
  #endif
  
@@ -41,7 +41,7 @@ $NetBSD$
  #include "chrome/browser/policy/policy_path_parser.h"
  #include "components/crash/core/app/crashpad.h"
  #endif
-@@ -241,7 +241,7 @@
+@@ -243,7 +243,7 @@
  #include "base/scoped_add_feature_flags.h"
  #include "ui/base/ui_base_features.h"
  #include "ui/ozone/public/ozone_platform.h"
@@ -50,7 +50,7 @@ $NetBSD$
  #include "chrome/browser/chrome_browser_main_extra_parts_linux.h"
  #endif
  #endif  // BUILDFLAG(IS_OZONE)
-@@ -341,7 +341,7 @@ void AdjustLinuxOOMScore(const std::stri
+@@ -343,7 +343,7 @@ void AdjustLinuxOOMScore(const std::stri
  // and resources loaded.
  bool SubprocessNeedsResourceBundle(const std::string& process_type) {
    return
@@ -59,7 +59,7 @@ $NetBSD$
        // The zygote process opens the resources for the renderers.
        process_type == switches::kZygoteProcess ||
  #endif
-@@ -426,7 +426,7 @@ bool HandleVersionSwitches(const base::C
+@@ -428,7 +428,7 @@ bool HandleVersionSwitches(const base::C
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -68,7 +68,7 @@ $NetBSD$
  // Show the man page if --help or -h is on the command line.
  void HandleHelpSwitches(const base::CommandLine& command_line) {
    if (command_line.HasSwitch(switches::kHelp) ||
-@@ -472,7 +472,7 @@ void SetCrashpadUploadConsentPostLogin()
+@@ -474,7 +474,7 @@ void SetCrashpadUploadConsentPostLogin()
  }
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -77,7 +77,7 @@ $NetBSD$
  void SIGTERMProfilingShutdown(int signal) {
    content::Profiling::Stop();
    struct sigaction sigact;
-@@ -554,7 +554,7 @@ std::optional<int> AcquireProcessSinglet
+@@ -556,7 +556,7 @@ std::optional<int> AcquireProcessSinglet
    // process can be exited.
    ChromeProcessSingleton::CreateInstance(user_data_dir);
  
@@ -86,7 +86,7 @@ $NetBSD$
    // Read the xdg-activation token and set it in the command line for the
    // duration of the notification in order to ensure this is propagated to an
    // already running browser process if it exists.
-@@ -638,7 +638,7 @@ void InitializeUserDataDir(base::Command
+@@ -640,7 +640,7 @@ void InitializeUserDataDir(base::Command
    std::string process_type =
        command_line->GetSwitchValueASCII(switches::kProcessType);
  
@@ -95,7 +95,7 @@ $NetBSD$
    // On Linux, Chrome does not support running multiple copies under different
    // DISPLAYs, so the profile directory can be specified in the environment to
    // support the virtual desktop use-case.
-@@ -765,7 +765,7 @@ void RecordMainStartupMetrics(base::Time
+@@ -767,7 +767,7 @@ void RecordMainStartupMetrics(base::Time
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -104,7 +104,7 @@ $NetBSD$
    // Record the startup process creation time on supported platforms. On Android
    // this is recorded in ChromeMainDelegateAndroid.
    startup_metric_utils::GetCommon().RecordStartupProcessCreationTime(
-@@ -957,7 +957,7 @@ std::optional<int> ChromeMainDelegate::P
+@@ -959,7 +959,7 @@ std::optional<int> ChromeMainDelegate::P
  #if BUILDFLAG(IS_OZONE)
    // Initialize Ozone platform and add required feature flags as per platform's
    // properties.
@@ -113,7 +113,7 @@ $NetBSD$
    ui::SetOzonePlatformForLinuxIfNeeded(*base::CommandLine::ForCurrentProcess());
  #endif
    ui::OzonePlatform::PreEarlyInitialization();
-@@ -1150,7 +1150,7 @@ void ChromeMainDelegate::CommonEarlyInit
+@@ -1154,7 +1154,7 @@ void ChromeMainDelegate::CommonEarlyInit
    const bool is_canary_dev = IsCanaryDev();
    const bool emit_crashes =
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -122,7 +122,7 @@ $NetBSD$
        is_canary_dev;
  #else
        false;
-@@ -1305,7 +1305,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1309,7 +1309,7 @@ std::optional<int> ChromeMainDelegate::B
  
    // TODO(crbug.com/40118868): Revisit the macro expression once build flag
    // switch of lacros-chrome is complete.
@@ -131,7 +131,7 @@ $NetBSD$
    // This will directly exit if the user asked for help.
    HandleHelpSwitches(command_line);
  #endif
-@@ -1335,7 +1335,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1339,7 +1339,7 @@ std::optional<int> ChromeMainDelegate::B
  #if BUILDFLAG(IS_CHROMEOS)
    chromeos::dbus_paths::RegisterPathProvider();
  #endif
@@ -140,7 +140,7 @@ $NetBSD$
    nacl::RegisterPathProvider();
  #endif
  
-@@ -1722,7 +1722,7 @@ void ChromeMainDelegate::PreSandboxStart
+@@ -1726,7 +1726,7 @@ void ChromeMainDelegate::PreSandboxStart
      CHECK(!loaded_locale.empty()) << "Locale could not be found for " << locale;
    }
  
@@ -149,12 +149,12 @@ $NetBSD$
    // Zygote needs to call InitCrashReporter() in RunZygote().
    if (process_type != switches::kZygoteProcess) {
      if (command_line.HasSwitch(switches::kPreCrashpadCrashTest)) {
-@@ -1821,7 +1821,7 @@ absl::variant<int, content::MainFunction
- 
-   // This entry is not needed on Linux, where the NaCl loader
-   // process is launched via nacl_helper instead.
--#if BUILDFLAG(ENABLE_NACL) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(ENABLE_NACL) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_BSD)
-     {switches::kNaClLoaderProcess, NaClMain},
- #else
-     {"<invalid>", nullptr},  // To avoid constant array of size 0
+@@ -1827,7 +1827,7 @@ absl::variant<int, content::MainFunction
+       {switches::kRelauncherProcess, mac_relauncher::internal::RelauncherMain},
+       {switches::kCodeSignCloneCleanupProcess,
+        code_sign_clone_manager::internal::ChromeCodeSignCloneCleanupMain},
+-#elif BUILDFLAG(ENABLE_NACL) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
++#elif BUILDFLAG(ENABLE_NACL) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_BSD)
+       // This entry is not needed on Linux, where the NaCl loader
+       // process is launched via nacl_helper instead.
+       {switches::kNaClLoaderProcess, NaClMain},

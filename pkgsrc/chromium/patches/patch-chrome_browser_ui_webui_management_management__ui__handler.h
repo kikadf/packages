@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2024-06-13 23:28:50.779312800 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.h.orig	2024-07-24 02:44:30.100148200 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.h
 @@ -31,7 +31,7 @@ namespace policy {
  class PolicyService;

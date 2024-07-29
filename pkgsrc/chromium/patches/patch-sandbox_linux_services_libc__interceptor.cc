@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/services/libc_interceptor.cc.orig	2024-06-13 23:29:04.732565600 +0000
+--- sandbox/linux/services/libc_interceptor.cc.orig	2024-07-24 02:44:43.549450900 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
 @@ -12,7 +12,9 @@
  #include <stddef.h>

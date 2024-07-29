@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/window/custom_frame_view.cc.orig	2024-06-13 23:29:31.294950000 +0000
+--- ui/views/window/custom_frame_view.cc.orig	2024-07-24 02:45:10.980108000 +0000
 +++ ui/views/window/custom_frame_view.cc
 @@ -267,7 +267,7 @@ int CustomFrameView::CaptionButtonY() co
    // drawn flush with the screen edge, they still obey Fitts' Law.

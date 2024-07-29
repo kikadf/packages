@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-06-13 23:29:08.392894000 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-07-24 02:44:47.021787400 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -19,6 +19,13 @@
  extern "C" void* __libc_stack_end;  // NOLINT
@@ -66,7 +66,7 @@ $NetBSD$
    pthread_attr_destroy(&attr);
  #endif
  #if defined(__GLIBC__)
-@@ -149,6 +159,13 @@ void* GetStackStart() {
+@@ -150,6 +160,13 @@ void* GetStackStart() {
    ::GetCurrentThreadStackLimits(&lowLimit, &highLimit);
    return reinterpret_cast<void*>(highLimit);
  #endif

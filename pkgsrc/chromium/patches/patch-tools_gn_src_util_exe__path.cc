@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/util/exe_path.cc.orig	2024-06-13 23:40:12.600521000 +0000
+--- tools/gn/src/util/exe_path.cc.orig	2024-07-24 02:59:26.382963000 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@
  #include <windows.h>

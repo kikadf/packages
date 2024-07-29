@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/web_app_helpers.cc.orig	2024-06-13 23:28:50.967329700 +0000
+--- chrome/browser/web_applications/web_app_helpers.cc.orig	2024-07-24 02:44:30.428180000 +0000
 +++ chrome/browser/web_applications/web_app_helpers.cc
 @@ -145,7 +145,7 @@ bool IsValidWebAppUrl(const GURL& app_ur
      return false;

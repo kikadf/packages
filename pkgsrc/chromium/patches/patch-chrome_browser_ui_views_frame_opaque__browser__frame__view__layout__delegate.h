@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h.orig	2024-06-13 23:28:50.415280300 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h.orig	2024-07-24 02:44:29.788118100 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h
 @@ -10,7 +10,7 @@
  #include "build/build_config.h"

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/user_permission_service_impl.h.orig	2024-06-13 23:28:55.071698200 +0000
+--- components/device_signals/core/browser/user_permission_service_impl.h.orig	2024-07-24 02:44:33.856512000 +0000
 +++ components/device_signals/core/browser/user_permission_service_impl.h
-@@ -39,7 +39,7 @@ class UserPermissionServiceImpl : public
+@@ -38,7 +38,7 @@ class UserPermissionServiceImpl : public
  
    // UserPermissionService:
    bool ShouldCollectConsent() const override;

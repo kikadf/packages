@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_posix.cc.orig	2024-06-13 23:29:04.276524500 +0000
+--- net/socket/udp_socket_posix.cc.orig	2024-07-24 02:44:43.089406500 +0000
 +++ net/socket/udp_socket_posix.cc
-@@ -73,6 +73,32 @@ constexpr int kBindRetries = 10;
+@@ -78,6 +78,32 @@ constexpr int kBindRetries = 10;
  constexpr int kPortStart = 1024;
  constexpr int kPortEnd = 65535;
  
@@ -39,7 +39,7 @@ $NetBSD$
  int GetSocketFDHash(int fd) {
    return fd ^ 1595649551;
  }
-@@ -516,12 +542,17 @@ int UDPSocketPosix::SetRecvTos() {
+@@ -521,12 +547,17 @@ int UDPSocketPosix::SetRecvTos() {
      }
    }
  
@@ -58,7 +58,7 @@ $NetBSD$
    if (confirm) {
      sendto_flags_ |= MSG_CONFIRM;
    } else {
-@@ -542,7 +573,7 @@ int UDPSocketPosix::SetBroadcast(bool br
+@@ -547,7 +578,7 @@ int UDPSocketPosix::SetBroadcast(bool br
    DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
    int value = broadcast ? 1 : 0;
    int rv;
@@ -67,7 +67,7 @@ $NetBSD$
    // SO_REUSEPORT on OSX permits multiple processes to each receive
    // UDP multicast or broadcast datagrams destined for the bound
    // port.
-@@ -843,9 +874,17 @@ int UDPSocketPosix::SetMulticastOptions(
+@@ -848,9 +879,17 @@ int UDPSocketPosix::SetMulticastOptions(
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -85,7 +85,7 @@ $NetBSD$
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -880,7 +919,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
+@@ -885,7 +924,7 @@ int UDPSocketPosix::DoBind(const IPEndPo
  #if BUILDFLAG(IS_CHROMEOS_ASH)
    if (last_error == EINVAL)
      return ERR_ADDRESS_IN_USE;
@@ -94,7 +94,7 @@ $NetBSD$
    if (last_error == EADDRNOTAVAIL)
      return ERR_ADDRESS_IN_USE;
  #endif
-@@ -908,9 +947,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
+@@ -913,9 +952,17 @@ int UDPSocketPosix::JoinGroup(const IPAd
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -112,7 +112,7 @@ $NetBSD$
        memcpy(&mreq.imr_multiaddr, group_address.bytes().data(),
               IPAddress::kIPv4AddressSize);
        int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
-@@ -948,9 +995,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
+@@ -953,9 +1000,17 @@ int UDPSocketPosix::LeaveGroup(const IPA
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;

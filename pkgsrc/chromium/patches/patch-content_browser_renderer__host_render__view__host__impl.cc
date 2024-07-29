@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-06-13 23:28:58.351992800 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2024-07-24 02:44:37.380853400 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
-@@ -271,7 +271,7 @@ void RenderViewHostImpl::GetPlatformSpec
+@@ -273,7 +273,7 @@ void RenderViewHostImpl::GetPlatformSpec
        display::win::ScreenWin::GetSystemMetricsInDIP(SM_CYVSCROLL);
    prefs->arrow_bitmap_width_horizontal_scroll_bar_in_dips =
        display::win::ScreenWin::GetSystemMetricsInDIP(SM_CXHSCROLL);

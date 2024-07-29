@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/xfa/fxfa/parser/cxfa_timezoneprovider.cpp.orig	2024-06-13 23:30:37.104858000 +0000
+--- third_party/pdfium/xfa/fxfa/parser/cxfa_timezoneprovider.cpp.orig	2024-07-24 02:47:13.587984000 +0000
 +++ third_party/pdfium/xfa/fxfa/parser/cxfa_timezoneprovider.cpp
 @@ -6,12 +6,16 @@
  

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/strings/translations/app_locale_settings_ml.xtb.orig	2024-06-13 23:29:31.130935400 +0000
+--- ui/strings/translations/app_locale_settings_ml.xtb.orig	2024-07-24 02:45:10.812091600 +0000
 +++ ui/strings/translations/app_locale_settings_ml.xtb
 @@ -9,7 +9,7 @@
    <translation id="IDS_WEB_FONT_FAMILY">'Segoe UI',Arial,AnjaliOldLipi,Rachana,Kartika</translation>

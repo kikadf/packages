@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/base_paths_posix.cc.orig	2024-06-13 23:28:43.370648000 +0000
+--- base/base_paths_posix.cc.orig	2024-07-24 02:44:22.535415400 +0000
 +++ base/base_paths_posix.cc
 @@ -15,6 +15,7 @@
  #include <ostream>
@@ -29,54 +29,31 @@ $NetBSD$
  #elif BUILDFLAG(IS_SOLARIS) || BUILDFLAG(IS_AIX)
  #include <stdlib.h>
  #endif
-@@ -49,14 +54,44 @@ bool PathProviderPosix(int key, FilePath
+@@ -49,13 +54,21 @@ bool PathProviderPosix(int key, FilePath
        *result = bin_dir;
        return true;
  #elif BUILDFLAG(IS_FREEBSD)
 -      int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
 -      std::optional<std::string> bin_dir = StringSysctl(name, std::size(name));
 +      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 });
++      if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
++        NOTREACHED_IN_MIGRATION() << "Unable to resolve path.";
++        return false;
++      }
++      *result = FilePath(bin_dir.value());
++      return true;
++#elif BUILDFLAG(IS_NETBSD)
++      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC_ARGS, getpid(), KERN_PROC_PATHNAME });
        if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
          NOTREACHED_IN_MIGRATION() << "Unable to resolve path.";
          return false;
        }
        *result = FilePath(bin_dir.value());
++      VLOG(1) << "PathProviderPosix result: " << bin_dir.value();
        return true;
-+#elif BUILDFLAG(IS_NETBSD)
-+      struct kinfo_proc2 *info;
-+      size_t length;
-+      bool ret = false;
-+      int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, -1,
-+                    sizeof(struct kinfo_proc2), 1 };
-+
-+      if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) == -1) {
-+        NOTREACHED_IN_MIGRATION() << "Unable to resolve path.";
-+        return false;
-+      }
-+
-+      info = (struct kinfo_proc2 *)malloc(length);
-+
-+      mib[5] = static_cast<int>((length / sizeof(struct kinfo_proc2)));
-+
-+      if (sysctl(mib, std::size(mib), info, &length, NULL, 0) < 0)
-+        goto out;
-+
-+      if ((info->p_flag & P_SYSTEM) != 0)
-+        goto out;
-+
-+      if (strcmp(info->p_comm, "chrome") == 0) {
-+        *result = FilePath(info->p_comm);
-+        ret = true;
-+        goto out;
-+      }
-+
-+out:
-+      free(info);
-+      return ret;
  #elif BUILDFLAG(IS_SOLARIS)
        char bin_dir[PATH_MAX + 1];
-       if (realpath(getexecname(), bin_dir) == NULL) {
-@@ -67,13 +102,65 @@ bool PathProviderPosix(int key, FilePath
+@@ -67,13 +80,65 @@ bool PathProviderPosix(int key, FilePath
        *result = FilePath(bin_dir);
        return true;
  #elif BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_AIX)

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/aura/screen_ozone.h.orig	2024-06-13 23:29:30.418871400 +0000
+--- ui/aura/screen_ozone.h.orig	2024-07-24 02:45:10.216034000 +0000
 +++ ui/aura/screen_ozone.h
-@@ -44,7 +44,7 @@ class AURA_EXPORT ScreenOzone : public d
+@@ -45,7 +45,7 @@ class AURA_EXPORT ScreenOzone : public d
    display::Display GetDisplayMatching(
        const gfx::Rect& match_rect) const override;
    display::Display GetPrimaryDisplay() const override;
@@ -15,7 +15,7 @@ $NetBSD$
    std::unique_ptr<display::Screen::ScreenSaverSuspender> SuspendScreenSaver()
        override;
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX)
-@@ -71,7 +71,7 @@ class AURA_EXPORT ScreenOzone : public d
+@@ -74,7 +74,7 @@ class AURA_EXPORT ScreenOzone : public d
    ui::PlatformScreen* platform_screen() { return platform_screen_.get(); }
  
   private:

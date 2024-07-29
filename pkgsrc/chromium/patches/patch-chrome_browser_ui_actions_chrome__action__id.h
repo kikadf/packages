@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/actions/chrome_action_id.h.orig	2024-06-13 23:28:49.539201500 +0000
+--- chrome/browser/ui/actions/chrome_action_id.h.orig	2024-07-24 02:44:29.092050600 +0000
 +++ chrome/browser/ui/actions/chrome_action_id.h
-@@ -518,7 +518,7 @@
+@@ -515,7 +515,7 @@
      IDC_CONTENT_CONTEXT_QUICK_ANSWERS_INLINE_ANSWER) \
    E(kActionContentContextQuickAnswersInlineQuery, \
      IDC_CONTENT_CONTEXT_QUICK_ANSWERS_INLINE_QUERY)

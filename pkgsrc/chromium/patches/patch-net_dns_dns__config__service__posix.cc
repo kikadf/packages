@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/dns_config_service_posix.cc.orig	2024-06-13 23:29:03.652468700 +0000
+--- net/dns/dns_config_service_posix.cc.orig	2024-07-24 02:44:42.569356000 +0000
 +++ net/dns/dns_config_service_posix.cc
-@@ -34,6 +34,11 @@
+@@ -39,6 +39,11 @@
  #include "net/dns/dns_config_watcher_mac.h"
  #endif
  
@@ -18,7 +18,7 @@ $NetBSD$
  namespace net {
  
  namespace internal {
-@@ -131,6 +136,11 @@ class DnsConfigServicePosix::Watcher : p
+@@ -136,6 +141,11 @@ class DnsConfigServicePosix::Watcher : p
    bool Watch() override {
      CheckOnCorrectSequence();
  

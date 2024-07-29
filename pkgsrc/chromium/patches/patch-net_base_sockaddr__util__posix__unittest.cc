@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/sockaddr_util_posix_unittest.cc.orig	2024-06-13 23:29:03.380444000 +0000
+--- net/base/sockaddr_util_posix_unittest.cc.orig	2024-07-24 02:44:42.173317700 +0000
 +++ net/base/sockaddr_util_posix_unittest.cc
-@@ -83,7 +83,8 @@ TEST(FillUnixAddressTest, AbstractLinuxA
+@@ -88,7 +88,8 @@ TEST(FillUnixAddressTest, AbstractLinuxA
    size_t path_max = MaxPathLength(&storage);
    std::string path(path_max, '0');
  

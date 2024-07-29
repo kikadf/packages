@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/color/system_theme.h.orig	2024-06-13 23:29:30.610888700 +0000
+--- ui/color/system_theme.h.orig	2024-07-24 02:45:10.412052900 +0000
 +++ ui/color/system_theme.h
 @@ -15,7 +15,7 @@ namespace ui {
  enum class SystemTheme {

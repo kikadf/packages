@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_util.h.orig	2024-06-13 23:29:30.510879800 +0000
+--- ui/base/x/x11_util.h.orig	2024-07-24 02:45:10.308042800 +0000
 +++ ui/base/x/x11_util.h
 @@ -256,6 +256,10 @@ COMPONENT_EXPORT(UI_BASE_X) bool IsVulka
  COMPONENT_EXPORT(UI_BASE_X)

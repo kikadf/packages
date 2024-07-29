@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2024-06-13 23:29:04.632556700 +0000
+--- remoting/host/webauthn/remote_webauthn_extension_notifier.cc.orig	2024-07-24 02:44:43.449441200 +0000
 +++ remoting/host/webauthn/remote_webauthn_extension_notifier.cc
 @@ -24,7 +24,7 @@
  #include "base/task/thread_pool.h"

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/features.h.orig	2024-06-13 23:28:58.528008500 +0000
+--- content/common/features.h.orig	2024-07-24 02:44:37.552870000 +0000
 +++ content/common/features.h
-@@ -36,7 +36,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
+@@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDoc
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(
      kEnableBackForwardCacheForOngoingSubframeNavigation);
@@ -15,7 +15,7 @@ $NetBSD$
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEmbeddingRequiresOptIn);
-@@ -59,7 +59,7 @@ CONTENT_EXPORT extern const base::Featur
+@@ -71,7 +71,7 @@ CONTENT_EXPORT extern const base::Featur
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGpuInfoCollectionSeparatePrefetch);
  #endif
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kGroupNIKByJoiningOrigin);

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_path_watcher_kqueue.cc.orig	2024-06-13 23:28:43.394650000 +0000
+--- base/files/file_path_watcher_kqueue.cc.orig	2024-07-24 02:44:22.563418100 +0000
 +++ base/files/file_path_watcher_kqueue.cc
 @@ -81,9 +81,15 @@ size_t FilePathWatcherKQueue::EventsForP
      FilePath::StringType subdir = (i != (components.end() - 1)) ? *(i + 1) : "";

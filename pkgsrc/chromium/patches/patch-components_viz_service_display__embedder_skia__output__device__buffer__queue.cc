@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/skia_output_device_buffer_queue.cc.orig	2024-06-13 23:28:57.795942800 +0000
+--- components/viz/service/display_embedder/skia_output_device_buffer_queue.cc.orig	2024-07-24 02:44:36.812798500 +0000
 +++ components/viz/service/display_embedder/skia_output_device_buffer_queue.cc
-@@ -197,7 +197,7 @@ SkiaOutputDeviceBufferQueue::SkiaOutputD
+@@ -174,7 +174,7 @@ SkiaOutputDeviceBufferQueue::SkiaOutputD
    capabilities_.only_invalidates_damage_rect = false;
    capabilities_.number_of_buffers = 3;
  

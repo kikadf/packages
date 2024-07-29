@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/passwords/bubble_controllers/relaunch_chrome_bubble_controller.cc.orig	2024-06-13 23:28:50.211262000 +0000
+--- chrome/browser/ui/passwords/bubble_controllers/relaunch_chrome_bubble_controller.cc.orig	2024-07-24 02:44:29.608100700 +0000
 +++ chrome/browser/ui/passwords/bubble_controllers/relaunch_chrome_bubble_controller.cc
 @@ -44,7 +44,7 @@ std::u16string RelaunchChromeBubbleContr
  #if BUILDFLAG(IS_MAC)

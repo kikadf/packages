@@ -1,8 +1,7 @@
 To Do:
 
-* No html5 audio (video has no problem)
-* 'Passwords cryptographer error was encountered:' and
-  'Failed to receive encryption key from server.' errors
+service/device/hid support: OpenBSD way
+-pkgsrc: libfido2 (available)
+-pkgsrc: libudev (port libudev-openbsd?)
 
-- This package is affected by several vulnerabilities that are not actively
-  tracked here.  Usually upstream resolve them when releasing new version.
+

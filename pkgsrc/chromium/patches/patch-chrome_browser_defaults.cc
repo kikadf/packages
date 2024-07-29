@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/defaults.cc.orig	2024-06-13 23:28:47.439013000 +0000
+--- chrome/browser/defaults.cc.orig	2024-07-24 02:44:26.991847300 +0000
 +++ chrome/browser/defaults.cc
 @@ -44,7 +44,7 @@ const bool kShowHelpMenuItemIcon = true;
  const bool kShowHelpMenuItemIcon = false;

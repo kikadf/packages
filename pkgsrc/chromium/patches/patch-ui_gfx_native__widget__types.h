@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/native_widget_types.h.orig	2024-06-13 23:29:30.938918000 +0000
+--- ui/gfx/native_widget_types.h.orig	2024-07-24 02:45:10.628074000 +0000
 +++ ui/gfx/native_widget_types.h
 @@ -104,7 +104,7 @@ class SkBitmap;
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/watermark/watermark_view.cc.orig	2024-06-13 23:28:47.591026800 +0000
-+++ chrome/browser/enterprise/watermark/watermark_view.cc
-@@ -36,7 +36,7 @@ gfx::Font WatermarkFont() {
+--- components/enterprise/watermarking/watermark.cc.orig	2024-07-24 02:44:33.956521700 +0000
++++ components/enterprise/watermarking/watermark.cc
+@@ -23,7 +23,7 @@ gfx::Font WatermarkFont() {
        "Segoe UI",
  #elif BUILDFLAG(IS_MAC)
        "SF Pro Text",
@@ -15,7 +15,7 @@ $NetBSD$
        "Ubuntu",
  #elif BUILDFLAG(IS_CHROMEOS)
        "Google Sans",
-@@ -47,7 +47,7 @@ gfx::Font WatermarkFont() {
+@@ -34,7 +34,7 @@ gfx::Font WatermarkFont() {
  }
  
  gfx::Font::Weight WatermarkFontWeight() {

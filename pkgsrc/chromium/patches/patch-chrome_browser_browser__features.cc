@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2024-06-13 23:28:47.286999500 +0000
+--- chrome/browser/browser_features.cc.orig	2024-07-24 02:44:26.831831700 +0000
 +++ chrome/browser/browser_features.cc
-@@ -82,7 +82,7 @@ const base::FeatureParam<bool> kSpareRen
+@@ -61,7 +61,7 @@ BASE_FEATURE(kClosedTabCache,
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
               "DestroyProfileOnBrowserClose",
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -15,7 +15,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -354,7 +354,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
+@@ -330,7 +330,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
  BASE_FEATURE(kSupportSearchSuggestionForPrerender2,
               "SupportSearchSuggestionForPrerender2",
  #if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_CHROMEOS_LACROS) || \

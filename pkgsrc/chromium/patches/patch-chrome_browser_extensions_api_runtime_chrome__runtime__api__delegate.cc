@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2024-06-13 23:28:47.691035700 +0000
+--- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2024-07-24 02:44:27.251872300 +0000
 +++ chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
 @@ -284,7 +284,11 @@ bool ChromeRuntimeAPIDelegate::GetPlatfo
    } else if (strcmp(os, "linux") == 0) {
@@ -17,5 +17,5 @@ $NetBSD$
 +  } else if (strcmp(os, "netbsd") == 0) {
 +    info->os = extensions::api::runtime::PlatformOs::kLinux;
    } else {
-     NOTREACHED() << "Platform not supported: " << os;
+     NOTREACHED_IN_MIGRATION() << "Platform not supported: " << os;
      return false;

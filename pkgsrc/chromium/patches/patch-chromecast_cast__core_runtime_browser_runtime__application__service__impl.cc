@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc.orig	2024-06-13 23:28:53.539560800 +0000
+--- chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc.orig	2024-07-24 02:44:32.384369600 +0000
 +++ chromecast/cast_core/runtime/browser/runtime_application_service_impl.cc
-@@ -335,7 +335,7 @@ CastWebView::Scoped RuntimeApplicationSe
+@@ -336,7 +336,7 @@ CastWebView::Scoped RuntimeApplicationSe
        GetFlagEntry(feature::kCastCoreIsRemoteControlMode,
                     config_.extra_features(), /*default_value=*/false);
    params->enabled_for_dev = IsEnabledForDev();

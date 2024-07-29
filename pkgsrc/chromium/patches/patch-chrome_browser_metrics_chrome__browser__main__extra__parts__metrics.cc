@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2024-06-13 23:28:48.083071000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2024-07-24 02:44:27.619908000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
-@@ -81,8 +81,10 @@
+@@ -83,8 +83,10 @@
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -18,7 +18,7 @@ $NetBSD$
  
  #include "base/linux_util.h"
  #include "base/strings/string_split.h"
-@@ -106,7 +108,7 @@
+@@ -108,7 +110,7 @@
  #include "chromeos/crosapi/cpp/crosapi_constants.h"
  #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)
  
@@ -27,7 +27,7 @@ $NetBSD$
  #include "chrome/browser/metrics/pressure/pressure_metrics_reporter.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -115,7 +117,7 @@
+@@ -117,7 +119,7 @@
  #include "components/user_manager/user_manager.h"
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
@@ -36,7 +36,7 @@ $NetBSD$
  #include "components/power_metrics/system_power_monitor.h"
  #endif
  
-@@ -862,7 +864,7 @@ void RecordStartupMetrics() {
+@@ -864,7 +866,7 @@ void RecordStartupMetrics() {
  
    // Record whether Chrome is the default browser or not.
    // Disabled on Linux due to hanging browser tests, see crbug.com/1216328.
@@ -45,7 +45,7 @@ $NetBSD$
    shell_integration::DefaultWebClientState default_state =
        shell_integration::GetDefaultBrowser();
    base::UmaHistogramEnumeration("DefaultBrowser.State", default_state,
-@@ -1154,11 +1156,11 @@ void ChromeBrowserMainExtraPartsMetrics:
+@@ -1163,11 +1165,11 @@ void ChromeBrowserMainExtraPartsMetrics:
    }
  #endif  // !BUILDFLAG(IS_ANDROID)
  

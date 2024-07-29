@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp.orig	2024-06-13 23:29:39.611696700 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp.orig	2024-07-24 02:45:19.668949600 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_linux.cpp
 @@ -71,6 +71,24 @@ bool GetPCIDevicesWithLibPCI(std::vector
  

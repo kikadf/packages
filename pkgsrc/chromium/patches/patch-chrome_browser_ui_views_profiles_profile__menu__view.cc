@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_menu_view.cc.orig	2024-06-13 23:28:50.527290300 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_view.cc.orig	2024-07-24 02:44:29.868125700 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view.cc
 @@ -83,7 +83,7 @@
  #include "ui/strings/grit/ui_strings.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
  
-@@ -589,7 +589,7 @@ void ProfileMenuView::BuildIdentity() {
+@@ -577,7 +577,7 @@ void ProfileMenuView::BuildIdentity() {
          badge_image_model, menu_title_, menu_subtitle_, management_label);
    } else {
      std::string profile_user_display_name, profile_user_email;

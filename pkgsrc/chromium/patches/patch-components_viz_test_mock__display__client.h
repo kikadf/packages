@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/test/mock_display_client.h.orig	2024-06-13 23:28:57.819945000 +0000
+--- components/viz/test/mock_display_client.h.orig	2024-07-24 02:44:36.836800800 +0000
 +++ components/viz/test/mock_display_client.h
 @@ -43,7 +43,7 @@ class MockDisplayClient : public mojom::
    MOCK_METHOD1(SetWideColorEnabled, void(bool enabled));

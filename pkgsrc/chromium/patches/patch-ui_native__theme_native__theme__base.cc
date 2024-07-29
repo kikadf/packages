@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/native_theme_base.cc.orig	2024-06-13 23:29:31.026926000 +0000
+--- ui/native_theme/native_theme_base.cc.orig	2024-07-24 02:45:10.712082000 +0000
 +++ ui/native_theme/native_theme_base.cc
 @@ -236,7 +236,7 @@ void NativeThemeBase::Paint(cc::PaintCan
        break;

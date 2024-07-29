@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/tab_helpers.cc.orig	2024-06-13 23:28:50.271267400 +0000
+--- chrome/browser/ui/tab_helpers.cc.orig	2024-07-24 02:44:29.656105300 +0000
 +++ chrome/browser/ui/tab_helpers.cc
-@@ -241,7 +241,7 @@
+@@ -243,7 +243,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/blocked_content/framebust_block_tab_helper.h"
  #include "chrome/browser/ui/browser_finder.h"
  #include "chrome/browser/ui/hats/hats_helper.h"
-@@ -696,12 +696,12 @@ void TabHelpers::AttachTabHelpers(WebCon
+@@ -721,12 +721,12 @@ void TabHelpers::AttachTabHelpers(WebCon
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \

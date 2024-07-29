@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/eye_dropper/eye_dropper_view.cc.orig	2024-06-13 23:28:55.219711500 +0000
+--- components/eye_dropper/eye_dropper_view.cc.orig	2024-07-24 02:44:34.008526800 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
 @@ -202,7 +202,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
    // EyeDropper/WidgetDelegate.
@@ -14,4 +14,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // Use TYPE_MENU for Linux to ensure that the eye dropper view is displayed
    // above the color picker.
-   views::Widget::InitParams params(views::Widget::InitParams::TYPE_MENU);
+   views::Widget::InitParams params(

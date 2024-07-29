@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-06-13 23:28:49.287179000 +0000
+--- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2024-07-24 02:44:28.844026600 +0000
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
 @@ -22,7 +22,7 @@
  #endif  // BUILDFLAG(IS_ANDROID)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_services_client.cc.orig	2024-06-13 23:29:04.564550400 +0000
+--- remoting/host/chromoting_host_services_client.cc.orig	2024-07-24 02:44:43.377434300 +0000
 +++ remoting/host/chromoting_host_services_client.cc
 @@ -59,7 +59,7 @@ mojo::PendingRemote<mojom::ChromotingHos
  

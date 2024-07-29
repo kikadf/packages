@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/node/node.gni.orig	2024-06-13 23:29:26.482518000 +0000
+--- third_party/node/node.gni.orig	2024-07-24 02:45:05.847611000 +0000
 +++ third_party/node/node.gni
 @@ -19,7 +19,7 @@ template("node") {
  
-     # When use_remoteexec=true or use_siso=true, node actions run on remote
+     # When use_remoteexec=true, node actions may run on remote
      # Linux worker. So it should include linux node binary in inputs.
--    if (is_linux || is_chromeos || use_remoteexec || use_siso) {
-+    if ((is_linux || is_chromeos || use_remoteexec || use_siso) && !is_bsd) {
-       inputs += [
-         "//third_party/node/linux/node-linux-x64.tar.gz.sha1",
-         "//third_party/node/linux/node-linux-x64/bin/node",
+-    if (is_linux || is_chromeos || use_remoteexec) {
++    if ((is_linux || is_chromeos || use_remoteexec) && !is_bsd) {
+       inputs += [ "//third_party/node/linux/node-linux-x64/bin/node" ]
+     }
+     if (is_win && host_os == "win") {

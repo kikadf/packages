@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_process_host_impl.h.orig	2024-06-13 23:28:58.347992400 +0000
+--- content/browser/renderer_host/render_process_host_impl.h.orig	2024-07-24 02:44:37.376853000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.h
-@@ -599,7 +599,7 @@ class CONTENT_EXPORT RenderProcessHostIm
+@@ -594,7 +594,7 @@ class CONTENT_EXPORT RenderProcessHostIm
    // Sets this RenderProcessHost to be guest only. For Testing only.
    void SetForGuestsOnlyForTesting();
  

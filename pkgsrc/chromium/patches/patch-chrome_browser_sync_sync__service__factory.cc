@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2024-06-13 23:28:49.383187500 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2024-07-24 02:44:28.944036200 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
-@@ -82,7 +82,7 @@
+@@ -84,7 +84,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD$
  #include "chrome/browser/ui/tabs/saved_tab_groups/saved_tab_group_service_factory.h"
  #elif BUILDFLAG(IS_ANDROID)
  #include "chrome/browser/tab_group_sync/tab_group_sync_service_factory.h"
-@@ -133,7 +133,7 @@ std::unique_ptr<KeyedService> BuildSyncS
+@@ -135,7 +135,7 @@ std::unique_ptr<KeyedService> BuildSyncS
  // TODO(crbug.com/40118868): Reassess whether the following block needs to be
  // included in lacros-chrome once build flag switch of lacros-chrome is
  // complete.
@@ -24,7 +24,7 @@ $NetBSD$
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
    syncer::SyncPrefs prefs(profile->GetPrefs());
    local_sync_backend_enabled = prefs.IsLocalSyncEnabled();
-@@ -269,7 +269,7 @@ SyncServiceFactory::SyncServiceFactory()
+@@ -274,7 +274,7 @@ SyncServiceFactory::SyncServiceFactory()
    DependsOn(ProfilePasswordStoreFactory::GetInstance());
    DependsOn(PowerBookmarkServiceFactory::GetInstance());
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2024-06-13 23:29:07.076776000 +0000
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2024-07-24 02:44:45.661655700 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
-@@ -425,7 +425,7 @@ SkFontHinting RendererPreferencesToSkiaH
+@@ -427,7 +427,7 @@ SkFontHinting RendererPreferencesToSkiaH
      const blink::RendererPreferences& prefs) {
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.
@@ -15,7 +15,7 @@ $NetBSD$
    if (!prefs.should_antialias_text) {
      // When anti-aliasing is off, GTK maps all non-zero hinting settings to
      // 'Normal' hinting so we do the same. Otherwise, folks who have 'Slight'
-@@ -3388,7 +3388,7 @@ void WebViewImpl::UpdateFontRenderingFro
+@@ -3380,7 +3380,7 @@ void WebViewImpl::UpdateFontRenderingFro
        renderer_preferences_.use_subpixel_positioning);
  // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
  // complete.

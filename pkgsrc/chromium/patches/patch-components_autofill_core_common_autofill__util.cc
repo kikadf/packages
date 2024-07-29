@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_util.cc.orig	2024-06-13 23:28:54.515648400 +0000
+--- components/autofill/core/common/autofill_util.cc.orig	2024-07-24 02:44:33.320460000 +0000
 +++ components/autofill/core/common/autofill_util.cc
 @@ -132,7 +132,7 @@ bool SanitizedFieldIsEmpty(const std::u1
  

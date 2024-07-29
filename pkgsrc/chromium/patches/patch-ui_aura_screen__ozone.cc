@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/aura/screen_ozone.cc.orig	2024-06-13 23:29:30.418871400 +0000
+--- ui/aura/screen_ozone.cc.orig	2024-07-24 02:45:10.216034000 +0000
 +++ ui/aura/screen_ozone.cc
-@@ -106,7 +106,7 @@ display::Display ScreenOzone::GetPrimary
+@@ -107,7 +107,7 @@ display::Display ScreenOzone::GetPrimary
    return platform_screen_->GetPrimaryDisplay();
  }
  

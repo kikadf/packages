@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/fontconfig/include/config.h.orig	2024-06-13 23:29:25.094393500 +0000
+--- third_party/fontconfig/include/config.h.orig	2024-07-24 02:45:04.467477000 +0000
 +++ third_party/fontconfig/include/config.h
 @@ -13,7 +13,7 @@
  

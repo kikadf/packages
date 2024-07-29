@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/memory_linux.cc.orig	2024-06-13 23:28:43.474657300 +0000
+--- base/process/memory_linux.cc.orig	2024-07-24 02:44:22.639425500 +0000
 +++ base/process/memory_linux.cc
 @@ -28,6 +28,7 @@ void __libc_free(void*);
  
@@ -40,7 +40,7 @@ $NetBSD$
  // ScopedAllowBlocking() has private constructor and it can only be used in
  // friend classes/functions. Declaring a class is easier in this situation to
  // avoid adding more dependency to thread_restrictions.h because of the
-@@ -112,6 +117,7 @@ bool AdjustOOMScoreHelper::AdjustOOMScor
+@@ -110,6 +115,7 @@ bool AdjustOOMScoreHelper::AdjustOOMScor
  bool AdjustOOMScore(ProcessId process, int score) {
    return AdjustOOMScoreHelper::AdjustOOMScore(process, score);
  }

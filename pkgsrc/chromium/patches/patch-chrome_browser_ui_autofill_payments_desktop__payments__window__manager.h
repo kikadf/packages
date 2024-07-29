@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-06-13 23:28:50.067249000 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2024-07-24 02:44:29.500090100 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h
 @@ -14,7 +14,7 @@
  #include "components/autofill/core/browser/payments/payments_window_manager.h"
@@ -33,7 +33,7 @@ $NetBSD$
    // BrowserListObserver:
    void OnBrowserSetLastActive(Browser* browser) override;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-@@ -132,7 +132,7 @@ class DesktopPaymentsWindowManager : pub
+@@ -136,7 +136,7 @@ class DesktopPaymentsWindowManager : pub
    std::unique_ptr<PaymentsWindowUserConsentDialogControllerImpl>
        payments_window_user_consent_dialog_controller_;
  

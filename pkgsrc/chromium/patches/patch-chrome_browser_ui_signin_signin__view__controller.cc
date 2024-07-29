@@ -4,11 +4,11 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller.cc.orig	2024-06-13 23:28:50.255266000 +0000
+--- chrome/browser/ui/signin/signin_view_controller.cc.orig	2024-07-24 02:44:29.644104000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller.cc
-@@ -334,7 +334,7 @@ void SigninViewController::ShowModalMana
-     bool show_link_data_option,
-     signin::SigninChoiceCallback callback) {
+@@ -492,7 +492,7 @@ void SigninViewController::ShowModalMana
+     signin::SigninChoiceCallback process_user_choice_callback,
+     base::OnceClosure done_callback) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS_LACROS)
 +    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)

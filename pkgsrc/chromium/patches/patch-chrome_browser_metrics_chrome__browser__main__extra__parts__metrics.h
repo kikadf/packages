@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h.orig	2024-06-13 23:28:48.083071000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h.orig	2024-07-24 02:44:27.619908000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.h
-@@ -28,7 +28,7 @@ class PowerMetricsReporter;
+@@ -29,7 +29,7 @@ class PowerMetricsReporter;
  class ProcessMonitor;
  #endif
  
@@ -15,8 +15,8 @@ $NetBSD$
  class PressureMetricsReporter;
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -115,7 +115,7 @@ class ChromeBrowserMainExtraPartsMetrics
-   std::unique_ptr<BatteryDischargeReporter> battery_discharge_reporter_;
+@@ -119,7 +119,7 @@ class ChromeBrowserMainExtraPartsMetrics
+       performance_intervention_metrics_reporter_;
  #endif  // !BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX)

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2024-06-13 23:29:24.858372200 +0000
+--- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2024-07-24 02:45:04.419472500 +0000
 +++ third_party/crashpad/crashpad/util/misc/capture_context.h
 @@ -21,7 +21,8 @@
  #include <mach/mach.h>

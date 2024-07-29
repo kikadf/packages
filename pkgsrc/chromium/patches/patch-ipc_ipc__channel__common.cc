@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel_common.cc.orig	2024-06-13 23:29:02.128331700 +0000
+--- ipc/ipc_channel_common.cc.orig	2024-07-24 02:44:40.937198000 +0000
 +++ ipc/ipc_channel_common.cc
 @@ -10,7 +10,7 @@
  

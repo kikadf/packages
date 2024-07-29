@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2024-06-13 23:28:51.427371000 +0000
+--- chrome/services/speech/audio_source_fetcher_impl.cc.orig	2024-07-24 02:44:30.692205700 +0000
 +++ chrome/services/speech/audio_source_fetcher_impl.cc
 @@ -132,7 +132,7 @@ void AudioSourceFetcherImpl::Start(
  

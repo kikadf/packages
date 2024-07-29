@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/evaluate_capability.cc.orig	2024-06-13 23:29:04.572551300 +0000
+--- remoting/host/evaluate_capability.cc.orig	2024-07-24 02:44:43.385435000 +0000
 +++ remoting/host/evaluate_capability.cc
 @@ -56,7 +56,7 @@ base::FilePath BuildHostBinaryPath() {
    }

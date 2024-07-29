@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/http/http_auth_gssapi_posix.cc.orig	2024-06-13 23:29:03.700472800 +0000
+--- net/http/http_auth_gssapi_posix.cc.orig	2024-07-24 02:44:42.613360400 +0000
 +++ net/http/http_auth_gssapi_posix.cc
-@@ -370,8 +370,9 @@ base::NativeLibrary GSSAPISharedLibrary:
+@@ -375,8 +375,9 @@ base::NativeLibrary GSSAPISharedLibrary:
      static const char* const kDefaultLibraryNames[] = {
  #if BUILDFLAG(IS_APPLE)
        "/System/Library/Frameworks/GSS.framework/GSS"

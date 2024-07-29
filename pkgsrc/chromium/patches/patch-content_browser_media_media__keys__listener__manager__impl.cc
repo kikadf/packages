@@ -4,14 +4,14 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/media/media_keys_listener_manager_impl.cc.orig	2024-06-13 23:28:58.191978500 +0000
+--- content/browser/media/media_keys_listener_manager_impl.cc.orig	2024-07-24 02:44:37.220838000 +0000
 +++ content/browser/media/media_keys_listener_manager_impl.cc
-@@ -334,7 +334,7 @@ void MediaKeysListenerManagerImpl::Start
+@@ -333,7 +333,7 @@ void MediaKeysListenerManagerImpl::Start
+     return;
    }
  
- #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
--    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
-+    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+-#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || BUILDFLAG(IS_WIN)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)) || BUILDFLAG(IS_WIN)
    // Create SystemMediaControls with the SingletonHwnd.
    browser_system_media_controls_ =
        system_media_controls::SystemMediaControls::Create(

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/renderer/bindings/api_binding_util.cc.orig	2024-06-13 23:28:59.940135200 +0000
+--- extensions/renderer/bindings/api_binding_util.cc.orig	2024-07-24 02:44:38.957006200 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
 @@ -132,7 +132,7 @@ std::string GetPlatformString() {
    return "lacros";

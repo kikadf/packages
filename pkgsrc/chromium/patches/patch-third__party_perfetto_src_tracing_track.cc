@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/track.cc.orig	2024-06-13 23:30:31.684371200 +0000
+--- third_party/perfetto/src/tracing/track.cc.orig	2024-07-24 02:46:51.601854300 +0000
 +++ third_party/perfetto/src/tracing/track.cc
-@@ -143,7 +143,7 @@ namespace internal {
+@@ -155,7 +155,7 @@ namespace internal {
  namespace {
  
  uint64_t GetProcessStartTime() {

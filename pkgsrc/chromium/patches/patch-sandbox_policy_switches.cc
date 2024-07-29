@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/switches.cc.orig	2024-06-13 23:29:04.748566900 +0000
+--- sandbox/policy/switches.cc.orig	2024-07-24 02:44:43.565452600 +0000
 +++ sandbox/policy/switches.cc
 @@ -54,10 +54,10 @@ const char kWindowsSystemProxyResolverSa
  const char kMirroringSandbox[] = "mirroring";
@@ -19,7 +19,7 @@ $NetBSD$
  const char kHardwareVideoEncodingSandbox[] = "hardware_video_encoding";
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -96,7 +96,9 @@ const char kGpuSandboxFailuresFatal[] = 
+@@ -97,7 +97,9 @@ const char kGpuSandboxFailuresFatal[] = 
  // Meant to be used as a browser-level switch for testing purposes only.
  const char kNoSandbox[] = "no-sandbox";
  

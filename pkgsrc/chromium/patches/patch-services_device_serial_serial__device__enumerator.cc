@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/serial/serial_device_enumerator.cc.orig	2024-06-13 23:29:04.852576300 +0000
+--- services/device/serial/serial_device_enumerator.cc.orig	2024-07-24 02:44:43.669462700 +0000
 +++ services/device/serial/serial_device_enumerator.cc
 @@ -12,7 +12,7 @@
  #include "build/build_config.h"

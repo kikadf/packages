@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/system_signals/platform_delegate.cc.orig	2024-06-13 23:28:55.071698200 +0000
+--- components/device_signals/core/system_signals/platform_delegate.cc.orig	2024-07-24 02:44:33.860512500 +0000
 +++ components/device_signals/core/system_signals/platform_delegate.cc
 @@ -11,7 +11,7 @@ namespace device_signals {
  

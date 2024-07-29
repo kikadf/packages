@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager_switches.h.orig	2024-06-13 23:28:55.779761800 +0000
+--- components/password_manager/core/browser/password_manager_switches.h.orig	2024-07-24 02:44:34.596583800 +0000
 +++ components/password_manager/core/browser/password_manager_switches.h
 @@ -10,7 +10,7 @@
  
@@ -14,4 +14,4 @@ $NetBSD$
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  extern const char kPasswordStore[];
  extern const char kEnableEncryptionSelection[];
- #endif
+ #endif  // BUILDFLAG(IS_LINUX)

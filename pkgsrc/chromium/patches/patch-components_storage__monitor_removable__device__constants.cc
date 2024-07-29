@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/storage_monitor/removable_device_constants.cc.orig	2024-06-13 23:28:56.707845200 +0000
+--- components/storage_monitor/removable_device_constants.cc.orig	2024-07-24 02:44:35.528674100 +0000
 +++ components/storage_monitor/removable_device_constants.cc
 @@ -10,7 +10,7 @@ namespace storage_monitor {
  const char kFSUniqueIdPrefix[] = "UUID:";

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui.cc.orig	2024-06-13 23:28:50.779312800 +0000
+--- chrome/browser/ui/webui/management/management_ui.cc.orig	2024-07-24 02:44:30.096147800 +0000
 +++ chrome/browser/ui/webui/management/management_ui.cc
-@@ -99,11 +99,11 @@ content::WebUIDataSource* CreateAndAddMa
+@@ -100,11 +100,11 @@ content::WebUIDataSource* CreateAndAddMa
        {kManagementOnFileTransferVisibleData,
         IDS_MANAGEMENT_FILE_TRANSFER_VISIBLE_DATA},
  #endif  // BUILDFLAG(IS_CHROMEOS)

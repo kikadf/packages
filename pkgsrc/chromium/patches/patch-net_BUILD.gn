@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/BUILD.gn.orig	2024-06-13 23:29:03.344441000 +0000
+--- net/BUILD.gn.orig	2024-07-24 02:44:42.137314300 +0000
 +++ net/BUILD.gn
 @@ -123,7 +123,7 @@ net_configs = [
    "//build/config/compiler:wexit_time_destructors",
@@ -15,7 +15,7 @@ $NetBSD$
    net_configs += [ "//build/config/linux:libresolv" ]
  }
  
-@@ -1200,6 +1200,19 @@ component("net") {
+@@ -1212,6 +1212,19 @@ component("net") {
      ]
    }
  
@@ -35,7 +35,7 @@ $NetBSD$
    if (is_mac) {
      sources += [
        "base/network_notification_thread_mac.cc",
-@@ -1357,7 +1370,7 @@ component("net") {
+@@ -1371,7 +1384,7 @@ component("net") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.
@@ -44,7 +44,7 @@ $NetBSD$
      sources += [
        "base/network_interfaces_getifaddrs.cc",
        "base/network_interfaces_getifaddrs.h",
-@@ -2017,7 +2030,7 @@ static_library("test_support") {
+@@ -2031,7 +2044,7 @@ static_library("test_support") {
      "url_request/url_request_test_util.h",
    ]
  
@@ -53,7 +53,7 @@ $NetBSD$
      sources += [
        "base/address_tracker_linux_test_util.cc",
        "base/address_tracker_linux_test_util.h",
-@@ -2839,14 +2852,14 @@ test("net_unittests") {
+@@ -2853,14 +2866,14 @@ test("net_unittests") {
      ]
    }
  
@@ -70,7 +70,7 @@ $NetBSD$
      sources += [
        "base/address_tracker_linux_unittest.cc",
        "base/network_interfaces_linux_unittest.cc",
-@@ -2934,6 +2947,10 @@ test("net_unittests") {
+@@ -2948,6 +2961,10 @@ test("net_unittests") {
      ]
    }
  
@@ -81,7 +81,7 @@ $NetBSD$
    if (enable_websockets) {
      deps += [ "//net/server:tests" ]
    }
-@@ -2994,7 +3011,7 @@ test("net_unittests") {
+@@ -3008,7 +3025,7 @@ test("net_unittests") {
      ]
    }
  
@@ -90,7 +90,7 @@ $NetBSD$
      sources += [ "tools/quic/quic_simple_server_test.cc" ]
    }
  
-@@ -3130,7 +3147,7 @@ test("net_unittests") {
+@@ -3147,7 +3164,7 @@ test("net_unittests") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.

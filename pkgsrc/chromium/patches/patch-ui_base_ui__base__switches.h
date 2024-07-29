@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_switches.h.orig	2024-06-13 23:29:30.498878700 +0000
+--- ui/base/ui_base_switches.h.orig	2024-07-24 02:45:10.296041700 +0000
 +++ ui/base/ui_base_switches.h
 @@ -27,11 +27,11 @@ COMPONENT_EXPORT(UI_BASE) extern const c
  COMPONENT_EXPORT(UI_BASE) extern const char kEnableResourcesFileSharing[];

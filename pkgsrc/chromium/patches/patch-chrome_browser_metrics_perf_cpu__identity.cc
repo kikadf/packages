@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/perf/cpu_identity.cc.orig	2024-06-13 23:28:48.095072000 +0000
+--- chrome/browser/metrics/perf/cpu_identity.cc.orig	2024-07-24 02:44:27.631909100 +0000
 +++ chrome/browser/metrics/perf/cpu_identity.cc
-@@ -142,7 +142,7 @@ CPUIdentity GetCPUIdentity() {
+@@ -147,7 +147,7 @@ CPUIdentity GetCPUIdentity() {
    result.release =
  #if BUILDFLAG(IS_CHROMEOS_ASH)
        base::SysInfo::KernelVersion();

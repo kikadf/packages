@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.cc.orig	2024-06-13 23:28:51.223353000 +0000
+--- chrome/common/chrome_paths.cc.orig	2024-07-24 02:44:30.492186300 +0000
 +++ chrome/common/chrome_paths.cc
 @@ -30,7 +30,7 @@
  #include "base/apple/foundation_util.h"

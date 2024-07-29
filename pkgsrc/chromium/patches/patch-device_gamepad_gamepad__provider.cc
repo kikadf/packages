@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- device/gamepad/gamepad_provider.cc.orig	2024-06-13 23:28:59.476093800 +0000
+--- device/gamepad/gamepad_provider.cc.orig	2024-07-24 02:44:38.500962000 +0000
 +++ device/gamepad/gamepad_provider.cc
 @@ -219,7 +219,7 @@ void GamepadProvider::Initialize(std::un
  

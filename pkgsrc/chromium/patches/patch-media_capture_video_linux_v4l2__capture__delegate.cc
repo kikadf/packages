@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2024-06-13 23:29:02.248342500 +0000
+--- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2024-07-24 02:44:41.057209500 +0000
 +++ media/capture/video/linux/v4l2_capture_delegate.cc
 @@ -5,8 +5,10 @@
  #include "media/capture/video/linux/v4l2_capture_delegate.h"
@@ -134,7 +134,7 @@ $NetBSD$
    // Dequeue events if the driver has filled in some.
    if (device_pfd.revents & POLLPRI) {
      bool controls_changed = false;
-@@ -1097,6 +1116,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1098,6 +1117,7 @@ void V4L2CaptureDelegate::DoCapture() {
        client_->OnCaptureConfigurationChanged();
      }
    }
@@ -142,7 +142,7 @@ $NetBSD$
  
    // Deenqueue, send and reenqueue a buffer if the driver has filled one in.
    if (device_pfd.revents & POLLIN) {
-@@ -1150,7 +1170,7 @@ void V4L2CaptureDelegate::DoCapture() {
+@@ -1151,7 +1171,7 @@ void V4L2CaptureDelegate::DoCapture() {
        // workable on Linux.
  
        // See http://crbug.com/959919.
@@ -151,7 +151,7 @@ $NetBSD$
        if (use_gpu_buffer_) {
          v4l2_gpu_helper_->OnIncomingCapturedData(
              client_.get(), buffer_tracker->start(),
-@@ -1223,7 +1243,7 @@ void V4L2CaptureDelegate::SetErrorState(
+@@ -1224,7 +1244,7 @@ void V4L2CaptureDelegate::SetErrorState(
    client_->OnError(error, from_here, reason);
  }
  

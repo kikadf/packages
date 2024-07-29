@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/run.py.orig	2024-06-13 23:30:47.813819400 +0000
+--- v8/tools/run.py.orig	2024-07-24 02:47:47.827300500 +0000
 +++ v8/tools/run.py
 @@ -9,7 +9,7 @@ scripts."""
  import subprocess

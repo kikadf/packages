@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2024-06-13 23:30:30.420257800 +0000
+--- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2024-07-24 02:46:50.085707700 +0000
 +++ third_party/perfetto/include/perfetto/base/thread_utils.h
 @@ -34,6 +34,7 @@ __declspec(dllimport) unsigned long __st
  #include <sys/syscall.h>

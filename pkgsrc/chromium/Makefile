@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			126.0.6478.61
+VERSION=			127.0.6533.72
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -42,6 +42,7 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 #TOOL_DEPENDS+=			openjdk11-[0-9]*:../../lang/openjdk11
 #TOOL_DEPENDS+=			clang-[0-9]*:../../lang/clang # clang-format
+TOOL_DEPENDS+=			rust-bindgen-[0-9]*:../../devel/rust-bindgen
 
 DEPENDS+=			xdg-utils-[0-9]*:../../misc/xdg-utils
 
@@ -72,12 +73,12 @@ FILES_SUBST+=		PYTHONBIN=${PYTHONBIN:Q}
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing pathes
+SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
-SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	ui/qt/qt.gni
 SUBST_FILES.path+=	chrome.sh
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
@@ -113,45 +114,45 @@ GN_SYSTEM_LIBS+=	libxslt
 GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
-GN_ARGS+=	enable_nacl=false
-GN_ARGS+=	is_cfi=false
-GN_ARGS+=	optimize_webui=true
-GN_ARGS+=	enable_remoting=false
+GN_ARGS+=	clang_use_chrome_plugins=false
+GN_ARGS+=	disable_fieldtrial_testing_config=true
+GN_ARGS+=	enable_backup_ref_ptr_support=false
 GN_ARGS+=	enable_hangout_services_extension=true
 GN_ARGS+=	enable_log_error_not_reached=true
-GN_ARGS+=	use_kerberos=false
-GN_ARGS+=	use_cups=true
-GN_ARGS+=	use_system_libdrm=true
-GN_ARGS+=	use_system_harfbuzz=true
-GN_ARGS+=	use_system_freetype=true
-GN_ARGS+=	icu_use_data_file=false
-GN_ARGS+=	is_clang=true
-GN_ARGS+=	use_lld=false
-GN_ARGS+=	use_gold=false
-GN_ARGS+=	use_sysroot=false
-GN_ARGS+=	treat_warnings_as_errors=false
-GN_ARGS+=	clang_use_chrome_plugins=false
-GN_ARGS+=	use_allocator_shim=false
-GN_ARGS+=	use_partition_alloc=true
-GN_ARGS+=	use_partition_alloc_as_malloc=false
-GN_ARGS+=	enable_backup_ref_ptr_support=false
-GN_ARGS+=	disable_fieldtrial_testing_config=true
+GN_ARGS+=	enable_nacl=false
+GN_ARGS+=	enable_remoting=false
 GN_ARGS+=	fatal_linker_warnings=false
+GN_ARGS+=	icu_use_data_file=false
+GN_ARGS+=	is_cfi=false
+GN_ARGS+=	is_clang=true
+GN_ARGS+=	optimize_webui=true
+GN_ARGS+=	thin_lto_enable_optimizations=true
+GN_ARGS+=	treat_warnings_as_errors=false
+GN_ARGS+=	use_allocator_shim=false
+GN_ARGS+=	use_cups=true
 GN_ARGS+=	use_custom_libcxx=true
 GN_ARGS+=	use_custom_libunwind=true
-GN_ARGS+=	use_udev=true
-GN_ARGS+=	use_vaapi=false
+GN_ARGS+=	use_gold=false
+GN_ARGS+=	use_kerberos=false
+GN_ARGS+=	use_lld=false
+GN_ARGS+=	use_partition_alloc=true
+GN_ARGS+=	use_partition_alloc_as_malloc=false
+GN_ARGS+=	use_sysroot=false
+GN_ARGS+=	use_system_freetype=true
+GN_ARGS+=	use_system_harfbuzz=true
+GN_ARGS+=	use_system_libdrm=true
 #GN_ARGS+=	use_system_libjpeg=true #libjpeg-turbo
-GN_ARGS+=	v8_enable_cet_ibt=true
 GN_ARGS+=	use_thin_lto=false
-GN_ARGS+=	thin_lto_enable_optimizations=true
-GN_ARGS+=	is_component_build=false
+GN_ARGS+=	use_udev=false
+GN_ARGS+=	use_vaapi=false
+GN_ARGS+=	v8_enable_cet_ibt=true
 
 # flags
 CFLAGS+=	-fno-stack-protector
 CFLAGS+=	-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
 CFLAGS+=	-Wno-error=unused-command-line-argument
 CFLAGS+=	-Wno-unknown-warning-option
+CXXFLAGS+=	-Wno-unknown-warning-option
 
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		-L${X11BASE}/lib \
@@ -316,6 +317,9 @@ do-install:
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		${FIND} ${i} -type f -print | pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM}
 .endfor
+.for f in snapshot_blob.bin v8_context_snapshot.bin
+	${INSTALL_DATA} ${BUILDDIR}/${f} ${DESTDIR}${PREFIX}/${CHROMIUM}
+.endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
@@ -381,4 +385,5 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../mk/compiler/ccache.mk"
 .include "../../mk/bsd.pkg.mk"

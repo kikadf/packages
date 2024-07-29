@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/socket_posix.cc.orig	2024-06-13 23:29:04.264523500 +0000
+--- net/socket/socket_posix.cc.orig	2024-07-24 02:44:43.073404800 +0000
 +++ net/socket/socket_posix.cc
 @@ -516,7 +516,7 @@ void SocketPosix::ReadCompleted() {
  }

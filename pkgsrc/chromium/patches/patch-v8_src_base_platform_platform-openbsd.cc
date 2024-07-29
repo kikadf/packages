@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-openbsd.cc.orig	2024-06-13 23:30:45.721631500 +0000
+--- v8/src/base/platform/platform-openbsd.cc.orig	2024-07-24 02:47:45.503075400 +0000
 +++ v8/src/base/platform/platform-openbsd.cc
 @@ -6,6 +6,9 @@
  // POSIX-compatible parts, the implementation is in platform-posix.cc.
@@ -48,6 +48,6 @@ $NetBSD$
 +#endif
 +}
 +
- std::vector<OS::MemoryRange> OS::GetFreeMemoryRangesWithin(
+ std::optional<OS::MemoryRange> OS::GetFirstFreeMemoryRangeWithin(
      OS::Address boundary_start, OS::Address boundary_end, size_t minimum_size,
      size_t alignment) {

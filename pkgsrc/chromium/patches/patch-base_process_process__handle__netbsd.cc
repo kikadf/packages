@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle_netbsd.cc.orig	2024-06-21 06:49:02.291236535 +0000
+--- base/process/process_handle_netbsd.cc.orig	2024-07-29 09:00:04.719067283 +0000
 +++ base/process/process_handle_netbsd.cc
-@@ -0,0 +1,73 @@
+@@ -0,0 +1,55 @@
 +// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -20,6 +20,11 @@ $NetBSD$
 +#include <sys/sysctl.h>
 +#include <sys/types.h>
 +#include <unistd.h>
++
++#include <optional>
++
++#include "base/files/file_path.h"
++#include "base/posix/sysctl.h"
 +
 +namespace base {
 +
@@ -50,33 +55,10 @@ $NetBSD$
 +}
 +
 +FilePath GetProcessExecutablePath(ProcessHandle process) {
-+  struct kinfo_proc2 *info;
-+  size_t length;
-+  char *path = NULL;
-+  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, process,
-+                sizeof(struct kinfo_proc2), 1 };
++  std::optional<std::string> pathname =
++      base::StringSysctl({CTL_KERN, KERN_PROC_ARGS, process, KERN_PROC_PATHNAME});
 +
-+  if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) == -1)
-+    return FilePath();
-+
-+  info = (struct kinfo_proc2 *)malloc(length);
-+
-+  mib[5] = static_cast<int>((length / sizeof(struct kinfo_proc2)));
-+
-+  if (sysctl(mib, std::size(mib), info, &length, NULL, 0) < 0)
-+    goto out;
-+
-+  if ((info->p_flag & P_SYSTEM) != 0)
-+    goto out;
-+
-+  if (strcmp(info->p_comm, "chrome") == 0) {
-+    path = info->p_comm;
-+    goto out;
-+  }
-+
-+out:
-+  free(info);
-+  return FilePath(path);
++  return FilePath(pathname.value_or(std::string{}));
 +}
 +
 +}  // namespace base

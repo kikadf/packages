@@ -4,10 +4,10 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_device_queue.h.orig	2024-06-13 23:29:00.252163400 +0000
+--- gpu/vulkan/vulkan_device_queue.h.orig	2024-07-24 02:44:39.273036700 +0000
 +++ gpu/vulkan/vulkan_device_queue.h
-@@ -169,7 +169,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanDev
-   bool allow_protected_memory_ = false;
+@@ -179,7 +179,7 @@ class COMPONENT_EXPORT(VULKAN) VulkanDev
+ #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)

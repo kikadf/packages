@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/new_tab_page/new_tab_page_util.cc.orig	2024-06-13 23:28:48.171078700 +0000
+--- chrome/browser/new_tab_page/new_tab_page_util.cc.orig	2024-07-24 02:44:27.707916500 +0000
 +++ chrome/browser/new_tab_page/new_tab_page_util.cc
 @@ -20,7 +20,7 @@ bool IsOsSupportedForCart() {
  }

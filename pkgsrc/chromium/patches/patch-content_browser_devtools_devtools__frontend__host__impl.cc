@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2024-06-13 23:28:58.051965700 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2024-07-24 02:44:37.080824400 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.cc
-@@ -22,7 +22,7 @@
+@@ -27,7 +27,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"
  #include "ui/base/webui/resource_path.h"
  
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/crash/content/browser/error_reporting/javascript_error_report.h"  // nogncheck
  #include "components/crash/content/browser/error_reporting/js_error_report_processor.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -37,7 +37,7 @@ const char kCompatibilityScriptSourceURL
+@@ -42,7 +42,7 @@ const char kCompatibilityScriptSourceURL
      "\n//# "
      "sourceURL=devtools://devtools/bundled/devtools_compatibility.js";
  
@@ -24,7 +24,7 @@ $NetBSD$
  // Remove the pieces of the URL we don't want to send back with the error
  // reports. In particular, do not send query or fragments as those can have
  // privacy-sensitive information in them.
-@@ -107,7 +107,7 @@ DevToolsFrontendHostImpl::DevToolsFronte
+@@ -112,7 +112,7 @@ DevToolsFrontendHostImpl::DevToolsFronte
      const HandleMessageCallback& handle_message_callback)
      : web_contents_(WebContents::FromRenderFrameHost(frame_host)),
        handle_message_callback_(handle_message_callback) {
@@ -33,7 +33,7 @@ $NetBSD$
    Observe(web_contents_);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
    mojo::AssociatedRemote<blink::mojom::DevToolsFrontend> frontend;
-@@ -132,7 +132,7 @@ void DevToolsFrontendHostImpl::DispatchE
+@@ -137,7 +137,7 @@ void DevToolsFrontendHostImpl::DispatchE
    handle_message_callback_.Run(std::move(message));
  }
  

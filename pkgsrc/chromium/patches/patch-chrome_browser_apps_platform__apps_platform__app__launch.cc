@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2024-06-13 23:28:46.466925900 +0000
+--- chrome/browser/apps/platform_apps/platform_app_launch.cc.orig	2024-07-24 02:44:25.983749600 +0000
 +++ chrome/browser/apps/platform_apps/platform_app_launch.cc
 @@ -19,7 +19,7 @@
  #include "extensions/common/constants.h"

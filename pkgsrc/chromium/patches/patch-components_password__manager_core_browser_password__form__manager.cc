@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_form_manager.cc.orig	2024-06-13 23:28:55.775761400 +0000
+--- components/password_manager/core/browser/password_form_manager.cc.orig	2024-07-24 02:44:34.588583000 +0000
 +++ components/password_manager/core/browser/password_form_manager.cc
 @@ -58,7 +58,7 @@
  #include "components/webauthn/android/webauthn_cred_man_delegate.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "components/os_crypt/sync/os_crypt.h"
  #endif
  
-@@ -227,7 +227,7 @@ bool ShouldUploadCrowdsourcingVotes(cons
+@@ -229,7 +229,7 @@ bool ShouldUploadCrowdsourcingVotes(cons
    return false;
  }
  
@@ -24,7 +24,7 @@ $NetBSD$
  bool ShouldShowKeychainErrorBubble(
      std::optional<PasswordStoreBackendError> backend_error) {
    if (!backend_error.has_value()) {
-@@ -869,7 +869,7 @@ void PasswordFormManager::OnFetchComplet
+@@ -880,7 +880,7 @@ void PasswordFormManager::OnFetchComplet
          error.value().type);
    }
  

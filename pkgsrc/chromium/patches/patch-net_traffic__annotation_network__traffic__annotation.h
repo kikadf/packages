@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/traffic_annotation/network_traffic_annotation.h.orig	2024-06-13 23:29:04.340530400 +0000
+--- net/traffic_annotation/network_traffic_annotation.h.orig	2024-07-24 02:44:43.145412000 +0000
 +++ net/traffic_annotation/network_traffic_annotation.h
-@@ -373,7 +373,7 @@ struct MutablePartialNetworkTrafficAnnot
+@@ -378,7 +378,7 @@ struct MutablePartialNetworkTrafficAnnot
  }  // namespace net
  
  // Placeholder for unannotated usages.
@@ -15,7 +15,7 @@ $NetBSD$
  #define TRAFFIC_ANNOTATION_WITHOUT_PROTO(ANNOTATION_ID) \
    net::DefineNetworkTrafficAnnotation(ANNOTATION_ID, "No proto yet.")
  #endif
-@@ -387,7 +387,7 @@ struct MutablePartialNetworkTrafficAnnot
+@@ -392,7 +392,7 @@ struct MutablePartialNetworkTrafficAnnot
  // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is
  // complete.
  #if !BUILDFLAG(IS_WIN) && \

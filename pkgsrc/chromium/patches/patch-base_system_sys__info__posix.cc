@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_posix.cc.orig	2024-06-13 23:28:43.510660400 +0000
+--- base/system/sys_info_posix.cc.orig	2024-07-24 02:44:22.679429500 +0000
 +++ base/system/sys_info_posix.cc
 @@ -118,7 +118,7 @@ bool GetDiskSpaceInfo(const base::FilePa
  

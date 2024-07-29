@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/common/features.cc.orig	2024-06-13 23:28:57.743938200 +0000
+--- components/viz/common/features.cc.orig	2024-07-24 02:44:36.760793400 +0000
 +++ components/viz/common/features.cc
-@@ -251,7 +251,7 @@ BASE_FEATURE(kBufferQueueImageSetPurgeab
+@@ -263,7 +263,7 @@ BASE_FEATURE(kBufferQueueImageSetPurgeab
               "BufferQueueImageSetPurgeable",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -15,7 +15,7 @@ $NetBSD$
  // On platforms using SkiaOutputDeviceBufferQueue and not yet universally using
  // SkiaRenderer-allocated images, when this is true SkiaRenderer will allocate
  // and maintain a buffer queue of images for the root render pass, instead of
-@@ -535,7 +535,7 @@ bool ShouldOnBeginFrameThrottleVideo() {
+@@ -559,7 +559,7 @@ bool ShouldOnBeginFrameThrottleVideo() {
    return base::FeatureList::IsEnabled(features::kOnBeginFrameThrottleVideo);
  }
  

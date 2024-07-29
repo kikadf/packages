@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/commerce/core/commerce_feature_list.cc.orig	2024-06-13 23:28:54.751669600 +0000
+--- components/commerce/core/commerce_feature_list.cc.orig	2024-07-24 02:44:33.564484000 +0000
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -168,7 +168,7 @@ BASE_FEATURE(kPriceInsights,
               "PriceInsights",
@@ -15,7 +15,7 @@ $NetBSD$
  BASE_FEATURE(kPriceInsightsRegionLaunched,
               "PriceInsightsRegionLaunched",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -248,7 +248,7 @@ const base::FeatureParam<bool> kDeleteAl
+@@ -244,7 +244,7 @@ const base::FeatureParam<bool> kDeleteAl
  
  BASE_FEATURE(kShoppingList, "ShoppingList", base::FEATURE_DISABLED_BY_DEFAULT);
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \

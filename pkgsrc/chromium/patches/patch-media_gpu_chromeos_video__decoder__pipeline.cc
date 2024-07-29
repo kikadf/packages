@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-06-13 23:29:02.380354400 +0000
+--- media/gpu/chromeos/video_decoder_pipeline.cc.orig	2024-07-24 02:44:41.165220000 +0000
 +++ media/gpu/chromeos/video_decoder_pipeline.cc
-@@ -1097,7 +1097,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1098,7 +1098,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    }
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD$
    // Linux should always use a custom allocator (to allocate buffers using
    // libva) and a PlatformVideoFramePool.
    CHECK(allocator.has_value());
-@@ -1106,7 +1106,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1107,7 +1107,7 @@ VideoDecoderPipeline::PickDecoderOutputF
    // VideoFrame::StorageType of VideoFrame::STORAGE_DMABUFS.
    main_frame_pool_->AsPlatformVideoFramePool()->SetCustomFrameAllocator(
        *allocator, VideoFrame::STORAGE_DMABUFS);
@@ -24,7 +24,7 @@ $NetBSD$
    // Linux w/ V4L2 should not use a custom allocator
    // Only tested with video_decode_accelerator_tests
    // TODO(wenst@) Test with full Chromium Browser
-@@ -1294,7 +1294,7 @@ VideoDecoderPipeline::PickDecoderOutputF
+@@ -1295,7 +1295,7 @@ VideoDecoderPipeline::PickDecoderOutputF
               << " VideoFrames";
      auxiliary_frame_pool_->set_parent_task_runner(decoder_task_runner_);
  

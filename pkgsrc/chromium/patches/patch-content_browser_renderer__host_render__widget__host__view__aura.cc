@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-06-13 23:28:58.359993500 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-07-24 02:44:37.384853800 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -120,7 +120,7 @@
  #include "ui/gfx/gdi_util.h"
@@ -33,7 +33,7 @@ $NetBSD$
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2561,7 +2561,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -2558,7 +2558,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -42,7 +42,7 @@ $NetBSD$
    return NeedsInputGrab();
  #else
    return false;
-@@ -2745,7 +2745,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -2742,7 +2742,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  

@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/webgpu/gpu_queue.cc.orig	2024-06-13 23:29:08.048863200 +0000
+--- third_party/blink/renderer/modules/webgpu/gpu_queue.cc.orig	2024-07-24 02:44:46.673753500 +0000
 +++ third_party/blink/renderer/modules/webgpu/gpu_queue.cc
-@@ -807,7 +807,7 @@ bool GPUQueue::CopyFromCanvasSourceImage
+@@ -783,7 +783,7 @@ bool GPUQueue::CopyFromCanvasSourceImage
  // on linux platform.
  // TODO(crbug.com/1424119): using a webgpu mailbox texture on the OpenGLES
  // backend is failing for unknown reasons.

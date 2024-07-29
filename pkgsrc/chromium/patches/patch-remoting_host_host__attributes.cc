@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/host_attributes.cc.orig	2024-06-13 23:29:04.580551900 +0000
+--- remoting/host/host_attributes.cc.orig	2024-07-24 02:44:43.393436000 +0000
 +++ remoting/host/host_attributes.cc
 @@ -105,7 +105,7 @@ std::string GetHostAttributes() {
    if (media::InitializeMediaFoundation()) {

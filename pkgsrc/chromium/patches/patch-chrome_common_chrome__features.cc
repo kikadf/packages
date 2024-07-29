@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2024-06-13 23:28:51.223353000 +0000
+--- chrome/common/chrome_features.cc.orig	2024-07-24 02:44:30.492186300 +0000
 +++ chrome/common/chrome_features.cc
 @@ -81,7 +81,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)
@@ -24,7 +24,7 @@ $NetBSD$
  // Enables the Restart background mode optimization. When all Chrome UI is
  // closed and it goes in the background, allows to restart the browser to
  // discard memory.
-@@ -282,7 +282,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
+@@ -277,7 +277,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
  BASE_FEATURE(kDesktopPWAsRunOnOsLogin,
               "DesktopPWAsRunOnOsLogin",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD$
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -324,7 +324,7 @@ BASE_FEATURE(kDesktopPWAsTabStripSetting
+@@ -319,7 +319,7 @@ BASE_FEATURE(kDesktopPWAsTabStripSetting
               "DesktopPWAsTabStripSettings",
               base::FEATURE_DISABLED_BY_DEFAULT);
  
@@ -42,25 +42,7 @@ $NetBSD$
  // Controls whether Chrome Apps are supported. See https://crbug.com/1221251.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -346,7 +346,7 @@ BASE_FEATURE(kDisruptiveNotificationPerm
- BASE_FEATURE(kDnsOverHttps,
-              "DnsOverHttps",
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
--    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-+    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
-@@ -362,7 +362,7 @@ const base::FeatureParam<bool> kDnsOverH
- const base::FeatureParam<bool> kDnsOverHttpsShowUiParam{&kDnsOverHttps,
-                                                         "ShowUi",
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
--    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-+    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-                                                         true
- #else
-                                                         false
-@@ -887,7 +887,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
+@@ -876,7 +876,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
               "KAnonymityServiceStorage",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -69,7 +51,7 @@ $NetBSD$
  BASE_FEATURE(kLinuxLowMemoryMonitor,
               "LinuxLowMemoryMonitor",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -900,7 +900,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -889,7 +889,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

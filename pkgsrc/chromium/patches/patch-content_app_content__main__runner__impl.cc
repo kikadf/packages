@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2024-06-13 23:28:57.927954700 +0000
+--- content/app/content_main_runner_impl.cc.orig	2024-07-24 02:44:36.948811500 +0000
 +++ content/app/content_main_runner_impl.cc
-@@ -144,18 +144,20 @@
+@@ -149,18 +149,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
  #include "content/public/common/content_descriptors.h"
  
@@ -29,7 +29,7 @@ $NetBSD$
  #include "third_party/boringssl/src/include/openssl/crypto.h"
  #include "third_party/webrtc_overrides/init_webrtc.h"  // nogncheck
  
-@@ -189,6 +191,10 @@
+@@ -194,6 +196,10 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -40,7 +40,7 @@ $NetBSD$
  #if BUILDFLAG(IS_ANDROID)
  #include "base/system/sys_info.h"
  #include "content/browser/android/battery_metrics.h"
-@@ -384,7 +390,7 @@ void InitializeZygoteSandboxForBrowserPr
+@@ -389,7 +395,7 @@ void InitializeZygoteSandboxForBrowserPr
  }
  #endif  // BUILDFLAG(USE_ZYGOTE)
  
@@ -49,7 +49,7 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
  // Loads the (native) libraries but does not initialize them (i.e., does not
-@@ -422,7 +428,10 @@ void PreloadLibraryCdms() {
+@@ -427,7 +433,10 @@ void PreloadLibraryCdms() {
  
  void PreSandboxInit() {
    // Ensure the /dev/urandom is opened.
@@ -60,7 +60,7 @@ $NetBSD$
  
    // May use sysinfo(), sched_getaffinity(), and open various /sys/ and /proc/
    // files.
-@@ -434,9 +443,16 @@ void PreSandboxInit() {
+@@ -439,9 +448,16 @@ void PreSandboxInit() {
    // https://boringssl.googlesource.com/boringssl/+/HEAD/SANDBOXING.md
    CRYPTO_pre_sandbox_init();
  
@@ -77,7 +77,7 @@ $NetBSD$
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -847,11 +863,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -889,11 +905,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -91,7 +91,7 @@ $NetBSD$
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1038,6 +1053,18 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1041,6 +1056,18 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }

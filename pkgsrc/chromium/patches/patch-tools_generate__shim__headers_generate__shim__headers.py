@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/generate_shim_headers/generate_shim_headers.py.orig	2024-06-13 23:29:29.414781300 +0000
+--- tools/generate_shim_headers/generate_shim_headers.py.orig	2024-07-24 02:45:09.243939900 +0000
 +++ tools/generate_shim_headers/generate_shim_headers.py
 @@ -18,7 +18,7 @@ import sys
  

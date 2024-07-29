@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2024-06-13 23:28:51.267356600 +0000
+--- chrome/common/pref_names.h.orig	2024-07-24 02:44:30.536190500 +0000
 +++ chrome/common/pref_names.h
-@@ -1313,7 +1313,7 @@ inline constexpr char kUseAshProxy[] = "
+@@ -1340,7 +1340,7 @@ inline constexpr char kUseAshProxy[] = "
  
  // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -15,7 +15,7 @@ $NetBSD$
  // Linux specific preference on whether we should match the system theme.
  inline constexpr char kSystemTheme[] = "extensions.theme.system_theme";
  #endif
-@@ -1457,7 +1457,7 @@ inline constexpr char kShowUpdatePromoti
+@@ -1483,7 +1483,7 @@ inline constexpr char kShowUpdatePromoti
      "browser.show_update_promotion_info_bar";
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD$
  // Boolean that is false if we should show window manager decorations.  If
  // true, we draw a custom chrome frame (thicker title bar and blue border).
  inline constexpr char kUseCustomChromeFrame[] = "browser.custom_chrome_frame";
-@@ -2069,7 +2069,7 @@ inline constexpr char kDownloadDefaultDi
+@@ -2088,7 +2088,7 @@ inline constexpr char kDownloadDefaultDi
  inline constexpr char kDownloadDirUpgraded[] = "download.directory_upgrade";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -33,7 +33,7 @@ $NetBSD$
  inline constexpr char kOpenPdfDownloadInSystemReader[] =
      "download.open_pdf_in_system_reader";
  #endif
-@@ -2505,14 +2505,14 @@ inline constexpr char kMediaStorageIdSal
+@@ -2528,14 +2528,14 @@ inline constexpr char kMediaStorageIdSal
  inline constexpr char kMediaCdmOriginData[] = "media.cdm.origin_data";
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -50,7 +50,7 @@ $NetBSD$
  // Records whether the user has seen an HTTP auth "negotiate" header.
  inline constexpr char kReceivedHttpAuthNegotiateHeader[] =
      "net.received_http_auth_negotiate_headers";
-@@ -2590,7 +2590,7 @@ inline constexpr char kAmbientAuthentica
+@@ -2613,7 +2613,7 @@ inline constexpr char kAmbientAuthentica
  inline constexpr char kBasicAuthOverHttpEnabled[] =
      "auth.basic_over_http_enabled";
  
@@ -59,7 +59,7 @@ $NetBSD$
  // Boolean that specifies whether OK-AS-DELEGATE flag from KDC is respected
  // along with kAuthNegotiateDelegateAllowlist.
  inline constexpr char kAuthNegotiateDelegateByKdcPolicy[] =
-@@ -3104,7 +3104,7 @@ inline constexpr char kDeviceWeeklySched
+@@ -3133,7 +3133,7 @@ inline constexpr char kDeviceWeeklySched
  
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -68,7 +68,7 @@ $NetBSD$
  // Defines administrator-set availability of Chrome for Testing.
  inline constexpr char kChromeForTestingAllowed[] = "chrome_for_testing.allowed";
  #endif
-@@ -3673,7 +3673,7 @@ inline constexpr char kFileOrDirectoryPi
+@@ -3706,7 +3706,7 @@ inline constexpr char kFileOrDirectoryPi
  inline constexpr char kSandboxExternalProtocolBlocked[] =
      "profile.sandbox_external_protocol_blocked";
  
@@ -77,7 +77,7 @@ $NetBSD$
  // Boolean that indicates if system notifications are allowed to be used in
  // place of Chrome notifications.
  inline constexpr char kAllowSystemNotifications[] =
-@@ -3722,7 +3722,7 @@ inline constexpr char kCACertificateMana
+@@ -3755,7 +3755,7 @@ inline constexpr char kCACertificateMana
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -86,7 +86,7 @@ $NetBSD$
  inline constexpr char kEnforceLocalAnchorConstraintsEnabled[] =
      "enforce_local_anchor_constraints_enabled";
  #endif
-@@ -4021,7 +4021,7 @@ inline constexpr char kPrintingOAuth2Aut
+@@ -4063,7 +4063,7 @@ inline constexpr char kPrintingOAuth2Aut
      "printing.oauth2_authorization_servers";
  #endif
  

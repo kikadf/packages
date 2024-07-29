@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/public/cpp/features.cc.orig	2024-06-13 23:29:04.924582700 +0000
+--- services/network/public/cpp/features.cc.orig	2024-07-24 02:44:43.741469600 +0000
 +++ services/network/public/cpp/features.cc
-@@ -98,7 +98,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso
+@@ -120,7 +120,7 @@ BASE_FEATURE(kSplitAuthCacheByNetworkIso
  BASE_FEATURE(kDnsOverHttpsUpgrade,
               "DnsOverHttpsUpgrade",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

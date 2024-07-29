@@ -4,9 +4,9 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8config.h.orig	2024-06-13 23:30:45.693629000 +0000
+--- v8/include/v8config.h.orig	2024-07-24 02:47:45.475072600 +0000
 +++ v8/include/v8config.h
-@@ -185,6 +185,9 @@ path. Add it with -I<path> to the comman
+@@ -193,6 +193,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_FUCHSIA) \
    && !defined(V8_TARGET_OS_IOS) \
    && !defined(V8_TARGET_OS_LINUX) \
@@ -16,7 +16,7 @@ $NetBSD$
    && !defined(V8_TARGET_OS_MACOS) \
    && !defined(V8_TARGET_OS_WIN) \
    && !defined(V8_TARGET_OS_CHROMEOS)
-@@ -197,6 +200,9 @@ path. Add it with -I<path> to the comman
+@@ -205,6 +208,9 @@ path. Add it with -I<path> to the comman
    || defined(V8_TARGET_OS_FUCHSIA) \
    || defined(V8_TARGET_OS_IOS) \
    || defined(V8_TARGET_OS_LINUX) \
@@ -26,7 +26,7 @@ $NetBSD$
    || defined(V8_TARGET_OS_MACOS) \
    || defined(V8_TARGET_OS_WIN) \
    || defined(V8_TARGET_OS_CHROMEOS)
-@@ -220,6 +226,21 @@ path. Add it with -I<path> to the comman
+@@ -228,6 +234,21 @@ path. Add it with -I<path> to the comman
  # define V8_TARGET_OS_LINUX
  #endif
  

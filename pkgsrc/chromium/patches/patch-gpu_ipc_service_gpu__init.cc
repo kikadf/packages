@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2024-06-13 23:29:00.240162100 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2024-07-24 02:44:39.265036000 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -398,7 +398,7 @@ bool GpuInit::InitializeAndStartSandbox(
    enable_watchdog = false;
@@ -24,7 +24,7 @@ $NetBSD$
    // On Chrome OS ARM Mali, GPU driver userspace creates threads when
    // initializing a GL context, so start the sandbox early.
    // TODO(zmo): Need to collect OS version before this.
-@@ -544,7 +544,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -542,7 +542,7 @@ bool GpuInit::InitializeAndStartSandbox(
      gpu_preferences_.gr_context_type = GrContextType::kGL;
    }
  
@@ -33,7 +33,7 @@ $NetBSD$
    // The ContentSandboxHelper is currently the only one implementation of
    // GpuSandboxHelper and it has no dependency. Except on Linux where
    // VaapiWrapper checks the GL implementation to determine which display
-@@ -626,7 +626,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -624,7 +624,7 @@ bool GpuInit::InitializeAndStartSandbox(
            command_line, gpu_feature_info_,
            gpu_preferences_.disable_software_rasterizer, false);
        if (gl_use_swiftshader_) {
@@ -42,7 +42,7 @@ $NetBSD$
          VLOG(1) << "Quit GPU process launch to fallback to SwiftShader cleanly "
                  << "on Linux";
          return false;
-@@ -782,7 +782,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -780,7 +780,7 @@ bool GpuInit::InitializeAndStartSandbox(
  
    InitializePlatformOverlaySettings(&gpu_info_, gpu_feature_info_);
  
@@ -51,7 +51,7 @@ $NetBSD$
    // Driver may create a compatibility profile context when collect graphics
    // information on Linux platform. Try to collect graphics information
    // based on core profile context after disabling platform extensions.
-@@ -837,7 +837,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -835,7 +835,7 @@ bool GpuInit::InitializeAndStartSandbox(
        }
      }
    }
@@ -60,7 +60,7 @@ $NetBSD$
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1025,7 +1025,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1023,7 +1023,7 @@ void GpuInit::InitializeInProcess(base::
    }
    bool gl_disabled = gl::GetGLImplementation() == gl::kGLImplementationDisabled;
  
@@ -69,7 +69,7 @@ $NetBSD$
      (BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_CHROMEOS_DEVICE))
    if (!gl_disabled && !gl_use_swiftshader_ && std::getenv("RUNNING_UNDER_RR")) {
      // https://rr-project.org/ is a Linux-only record-and-replay debugger that
-@@ -1085,7 +1085,7 @@ void GpuInit::InitializeInProcess(base::
+@@ -1083,7 +1083,7 @@ void GpuInit::InitializeInProcess(base::
      }
    }
  
