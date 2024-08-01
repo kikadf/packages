@@ -11,7 +11,7 @@ $NetBSD$
  #include "media/capture/video/linux/v4l2_capture_delegate.h"
  
 -#if BUILDFLAG(IS_OPENBSD)
-+#if BUILDFLAG(IS_OPENBSD) || defined(OS_NETBSD)
++#if BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
  #include <sys/videoio.h>
  #else
  #include <linux/videodev2.h>

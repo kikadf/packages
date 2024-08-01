@@ -19,7 +19,7 @@ $NetBSD$
  # On Windows, the libclang.dll is beside the bindgen.exe, otherwise it is in
  # ../lib.
 -_libclang_path = rust_bindgen_root
-+_libclang_path = "@PREFIX@/lib"
++_libclang_path = "@PREFIX@"
  if (host_os == "win") {
    _libclang_path += "/bin"
  } else {

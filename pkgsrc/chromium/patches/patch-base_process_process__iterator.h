@@ -11,7 +11,7 @@ $NetBSD$
  
  #include <tlhelp32.h>
 -#elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_OPENBSD)
-+#elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_OPENBSD) || defined(OS_NETBSD)
++#elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
  #include <sys/sysctl.h>
  #elif BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>

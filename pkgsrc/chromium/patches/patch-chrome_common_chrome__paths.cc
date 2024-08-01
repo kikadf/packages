@@ -82,7 +82,7 @@ $NetBSD$
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        cur = base::FilePath(
            FILE_PATH_LITERAL("/etc/opt/chrome/native-messaging-hosts"));
-+#elif BUILDFLAG(IS_FREEBSD)
++#elif BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
 +      cur = base::FilePath(FILE_PATH_LITERAL(
 +          "@PREFIX@/etc/chromium/native-messaging-hosts"));
  #else

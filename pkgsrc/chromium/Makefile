@@ -132,7 +132,7 @@ GN_ARGS+=	use_allocator_shim=false
 GN_ARGS+=	use_cups=true
 GN_ARGS+=	use_custom_libcxx=true
 GN_ARGS+=	use_custom_libunwind=true
-GN_ARGS+=	use_gold=false
+#GN_ARGS+=	use_gold=false
 GN_ARGS+=	use_kerberos=false
 GN_ARGS+=	use_lld=false
 GN_ARGS+=	use_partition_alloc=true
@@ -152,7 +152,6 @@ CFLAGS+=	-fno-stack-protector
 CFLAGS+=	-isystem${PREFIX}/lib/clang/17/include # third_party/zlib with clang
 CFLAGS+=	-Wno-error=unused-command-line-argument
 CFLAGS+=	-Wno-unknown-warning-option
-CXXFLAGS+=	-Wno-unknown-warning-option
 
 EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		-L${X11BASE}/lib \
@@ -160,7 +159,8 @@ EXTRA_LDFLAGS=	-L${PREFIX}/lib \
 		${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr \
 		${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss \
 		${COMPILER_RPATH_FLAG}${X11BASE}/lib
-EXTRA_CXXFLAGS=	-I${BUILDLINK_DIR}/include \
+EXTRA_CXXFLAGS=	-Wno-unknown-warning-option \
+		-I${BUILDLINK_DIR}/include \
 		-I${BUILDLINK_DIR}/include/glib \
 		-I${BUILDLINK_DIR}/include/nss
 
