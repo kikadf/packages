@@ -39,6 +39,19 @@ fi
 #
 [ -z ${LANG} ] && _l=en_US.UTF-8 || _l=${LANG}
 
+#
+# Workaround to dbus
+# https://bugs.chromium.org/p/chromium/issues/detail?id=918234
+#
+[ -z ${DBUS_SESSION_BUS_ADDRESS} ] && export DBUS_SESSION_BUS_ADDRESS="autolaunch:"
+
+#
+# Workaround to pulseaudio
+# Chromium is failing to start a new pulseaudio server,
+# however can use an already started.
+#
+pgrep -x pulseaudio || pulseaudio --start --log-target=syslog --exit-idle-time=-1
+
 # Always use our versions of ffmpeg libs.
 # This also makes RPMs find the compatibly-named library symlinks.
 if [ -n "$LD_LIBRARY_PATH" ]; then

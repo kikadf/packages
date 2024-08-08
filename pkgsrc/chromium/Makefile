@@ -75,6 +75,7 @@ SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing pathes
 SUBST_FILES.path+=	build/rust/rust_bindgen.gni
 SUBST_FILES.path+=	chrome/common/chrome_paths.cc
+SUBST_FILES.path+=	components/policy/core/common/policy_paths.cc
 SUBST_FILES.path+=	sandbox/policy/openbsd/sandbox_openbsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/hid/hid_service_netbsd.cc
@@ -198,9 +199,7 @@ GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild
 
 # API key and OAuth credential for Google.
 # This is pkgsrc use only.
-GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\" \
-		google_default_client_id=\"74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com\" \
-		google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
+GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\"
 
 NOT_PAX_MPROTECT_SAFE+=	chrome/chrome
 #NOT_PAX_ASLR_SAFE+=	chrome/chrome
