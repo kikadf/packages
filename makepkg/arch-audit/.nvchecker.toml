@@ -1,0 +1,4 @@
+[arch-audit]
+source = "git"
+git = "https://gitlab.archlinux.org/archlinux/arch-audit.git"
+prefix = "v"
