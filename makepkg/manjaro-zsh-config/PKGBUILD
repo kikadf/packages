@@ -1,8 +1,8 @@
 # Maintainer: Gregor Boehl <admin@gregorboehl.com>
 
 pkgname=manjaro-zsh-config
-pkgver=0.26
-pkgrel=2
+pkgver=r77.1f9d0da
+pkgrel=1
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -18,9 +18,13 @@ depends=('zsh-autosuggestions'
 makedepends=('git')
 backup=('root/.zshrc')
 install="$pkgname.install"
-_commit=1f9d0da2c8408de895156cb65d324636d656df1c
-source=("git+${url}.git#commit=${_commit}")
+source=("${pkgname}::git+https://github.com/Chrysostomus/manjaro-zsh-config.git")
 sha256sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/$pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
 
 package() {
 	cd "$srcdir/$pkgname"
