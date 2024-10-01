@@ -1,7 +1,7 @@
 # Maintainer: Gregor Boehl <admin@gregorboehl.com>
 
 pkgname=manjaro-zsh-config
-pkgver=r77.1f9d0da
+pkgver=r77.1f9d0da2
 pkgrel=1
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
