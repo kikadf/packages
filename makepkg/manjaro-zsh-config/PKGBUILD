@@ -18,12 +18,12 @@ depends=('zsh-autosuggestions'
 makedepends=('git')
 backup=('root/.zshrc')
 install="$pkgname.install"
-source=("${pkgname}::git+https://github.com/Chrysostomus/manjaro-zsh-config.git")
+source=('git+https://github.com/Chrysostomus/manjaro-zsh-config.git')
 sha256sums=('SKIP')
 
 pkgver() {
   cd "$srcdir/$pkgname"
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=8 HEAD)"
 }
 
 package() {
